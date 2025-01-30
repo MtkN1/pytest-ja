@@ -1,0 +1,5 @@
+{
+  "tasks": {
+    "build": "pipx install tox && tox -e docs && python -Bum http.server -d doc/en/_build/html"
+  }
+}

@@ -266,6 +266,9 @@ if IS_RELEASE_ON_RTD:
 # -- Custom documentation plugin ------------------------------------------------------
 # https://www.sphinx-doc.org/en/master/development/tutorials/extending_syntax.html#the-setup-function
 
+locale_dirs = ["locale/"]
+gettext_compact = False
+
 
 def setup(app: sphinx.application.Sphinx) -> None:
     app.add_crossref_type(

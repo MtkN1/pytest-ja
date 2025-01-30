@@ -41,3 +41,9 @@ regen:
 	regendoc --update ${REGENDOC_FILES} ${REGENDOC_ARGS}
 
 .PHONY: regen
+
+gettext:
+	@$(SPHINXBUILD) -b gettext "$(SOURCEDIR)" "$(BUILDDIR)/gettext" $(SPHINXOPTS) $(O)
+
+update-po:
+	sphinx-intl update -p _build/gettext -l ja
