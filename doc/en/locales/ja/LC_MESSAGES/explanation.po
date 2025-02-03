@@ -1,0 +1,1436 @@
+# SOME DESCRIPTIVE TITLE.
+# Copyright (C) 2015, holger krekel and pytest-dev team
+# This file is distributed under the same license as the pytest package.
+# FIRST AUTHOR <EMAIL@ADDRESS>, 2025.
+#
+#, fuzzy
+msgid ""
+msgstr ""
+"Project-Id-Version: pytest 0.1.dev1\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2025-02-04 01:54+0900\n"
+"PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
+"Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
+"Language: ja\n"
+"Language-Team: ja <LL@li.org>\n"
+"Plural-Forms: nplurals=1; plural=0;\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=utf-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Generated-By: Babel 2.17.0\n"
+
+#: ../../explanation/anatomy.rst:4
+msgid "Anatomy of a test"
+msgstr ""
+
+#: ../../explanation/anatomy.rst:6
+msgid ""
+"In the simplest terms, a test is meant to look at the result of a "
+"particular behavior, and make sure that result aligns with what you would"
+" expect. Behavior is not something that can be empirically measured, "
+"which is why writing tests can be challenging."
+msgstr ""
+
+#: ../../explanation/anatomy.rst:11
+msgid ""
+"\"Behavior\" is the way in which some system **acts in response** to a "
+"particular situation and/or stimuli. But exactly *how* or *why* something"
+" is done is not quite as important as *what* was done."
+msgstr ""
+
+#: ../../explanation/anatomy.rst:15
+msgid "You can think of a test as being broken down into four steps:"
+msgstr ""
+
+#: ../../explanation/anatomy.rst:17
+msgid "**Arrange**"
+msgstr ""
+
+#: ../../explanation/anatomy.rst:18
+msgid "**Act**"
+msgstr ""
+
+#: ../../explanation/anatomy.rst:19
+msgid "**Assert**"
+msgstr ""
+
+#: ../../explanation/anatomy.rst:20
+msgid "**Cleanup**"
+msgstr ""
+
+#: ../../explanation/anatomy.rst:22
+msgid ""
+"**Arrange** is where we prepare everything for our test. This means "
+"pretty much everything except for the \"**act**\". It's lining up the "
+"dominoes so that the **act** can do its thing in one, state-changing "
+"step. This can mean preparing objects, starting/killing services, "
+"entering records into a database, or even things like defining a URL to "
+"query, generating some credentials for a user that doesn't exist yet, or "
+"just waiting for some process to finish."
+msgstr ""
+
+#: ../../explanation/anatomy.rst:29
+msgid ""
+"**Act** is the singular, state-changing action that kicks off the "
+"**behavior** we want to test. This behavior is what carries out the "
+"changing of the state of the system under test (SUT), and it's the "
+"resulting changed state that we can look at to make a judgement about the"
+" behavior. This typically takes the form of a function/method call."
+msgstr ""
+
+#: ../../explanation/anatomy.rst:35
+msgid ""
+"**Assert** is where we look at that resulting state and check if it looks"
+" how we'd expect after the dust has settled. It's where we gather "
+"evidence to say the behavior does or does not align with what we expect. "
+"The ``assert`` in our test is where we take that measurement/observation "
+"and apply our judgement to it. If something should be green, we'd say "
+"``assert thing == \"green\"``."
+msgstr ""
+
+#: ../../explanation/anatomy.rst:41
+msgid ""
+"**Cleanup** is where the test picks up after itself, so other tests "
+"aren't being accidentally influenced by it."
+msgstr ""
+
+#: ../../explanation/anatomy.rst:44
+msgid ""
+"At its core, the test is ultimately the **act** and **assert** steps, "
+"with the **arrange** step only providing the context. **Behavior** exists"
+" between **act** and **assert**."
+msgstr ""
+
+#: ../../explanation/ci.rst:4
+msgid "CI Pipelines"
+msgstr ""
+
+#: ../../explanation/ci.rst:7
+msgid "Rationale"
+msgstr ""
+
+#: ../../explanation/ci.rst:9
+msgid ""
+"The goal of testing in a CI pipeline is different from testing locally. "
+"Indeed, you can quickly edit some code and run your tests again on your "
+"computer, but it is not possible with CI pipeline. They run on a separate"
+" server and are triggered by specific actions."
+msgstr ""
+
+#: ../../explanation/ci.rst:14
+msgid ""
+"From that observation, pytest can detect when it is in a CI environment "
+"and adapt some of its behaviours."
+msgstr ""
+
+#: ../../explanation/ci.rst:18
+msgid "How CI is detected"
+msgstr ""
+
+#: ../../explanation/ci.rst:20
+msgid ""
+"Pytest knows it is in a CI environment when either one of these "
+"environment variables are set, regardless of their value:"
+msgstr ""
+
+#: ../../explanation/ci.rst:23
+msgid "`CI`: used by many CI systems."
+msgstr ""
+
+#: ../../explanation/ci.rst:24
+msgid "`BUILD_NUMBER`: used by Jenkins."
+msgstr ""
+
+#: ../../explanation/ci.rst:27
+msgid "Effects on CI"
+msgstr ""
+
+#: ../../explanation/ci.rst:29
+msgid "For now, the effects on pytest of being in a CI environment are limited."
+msgstr ""
+
+#: ../../explanation/ci.rst:31
+msgid ""
+"When a CI environment is detected, the output of the short test summary "
+"info is no longer truncated to the terminal size i.e. the entire message "
+"will be shown."
+msgstr ""
+
+#: ../../explanation/ci.rst:47
+msgid "Running this locally, without any extra options, will output:"
+msgstr ""
+
+#: ../../explanation/ci.rst:56
+msgid "*(Note the truncated text)*"
+msgstr ""
+
+#: ../../explanation/ci.rst:59
+msgid "While running this on CI will output:"
+msgstr ""
+
+#: ../../explanation/fixtures.rst:4
+msgid "About fixtures"
+msgstr ""
+
+#: ../../explanation/fixtures.rst:6
+msgid ":ref:`how-to-fixtures`"
+msgstr ""
+
+#: ../../explanation/fixtures.rst:7
+msgid ":ref:`Fixtures reference <reference-fixtures>`"
+msgstr ""
+
+#: ../../explanation/fixtures.rst:9
+msgid "pytest fixtures are designed to be explicit, modular and scalable."
+msgstr ""
+
+#: ../../explanation/fixtures.rst:12
+msgid "What fixtures are"
+msgstr ""
+
+#: ../../explanation/fixtures.rst:14
+msgid ""
+"In testing, a `fixture "
+"<https://en.wikipedia.org/wiki/Test_fixture#Software>`_ provides a "
+"defined, reliable and consistent context for the tests. This could "
+"include environment (for example a database configured with known "
+"parameters) or content (such as a dataset)."
+msgstr ""
+
+#: ../../explanation/fixtures.rst:19
+msgid ""
+"Fixtures define the steps and data that constitute the *arrange* phase of"
+" a test (see :ref:`test-anatomy`). In pytest, they are functions you "
+"define that serve this purpose. They can also be used to define a test's "
+"*act* phase; this is a powerful technique for designing more complex "
+"tests."
+msgstr ""
+
+#: ../../explanation/fixtures.rst:24
+msgid ""
+"The services, state, or other operating environments set up by fixtures "
+"are accessed by test functions through arguments. For each fixture used "
+"by a test function there is typically a parameter (named after the "
+"fixture) in the test function's definition."
+msgstr ""
+
+#: ../../explanation/fixtures.rst:29
+msgid ""
+"We can tell pytest that a particular function is a fixture by decorating "
+"it with :py:func:`@pytest.fixture <pytest.fixture>`. Here's a simple "
+"example of what a fixture in pytest might look like:"
+msgstr ""
+
+#: ../../explanation/fixtures.rst:59
+msgid ""
+"Tests don't have to be limited to a single fixture, either. They can "
+"depend on as many fixtures as you want, and fixtures can use other "
+"fixtures, as well. This is where pytest's fixture system really shines."
+msgstr ""
+
+#: ../../explanation/fixtures.rst:65
+msgid "Improvements over xUnit-style setup/teardown functions"
+msgstr ""
+
+#: ../../explanation/fixtures.rst:67
+msgid ""
+"pytest fixtures offer dramatic improvements over the classic xUnit style "
+"of setup/teardown functions:"
+msgstr ""
+
+#: ../../explanation/fixtures.rst:70
+msgid ""
+"fixtures have explicit names and are activated by declaring their use "
+"from test functions, modules, classes or whole projects."
+msgstr ""
+
+#: ../../explanation/fixtures.rst:73
+msgid ""
+"fixtures are implemented in a modular manner, as each fixture name "
+"triggers a *fixture function* which can itself use other fixtures."
+msgstr ""
+
+#: ../../explanation/fixtures.rst:76
+msgid ""
+"fixture management scales from simple unit to complex functional testing,"
+" allowing to parametrize fixtures and tests according to configuration "
+"and component options, or to reuse fixtures across function, class, "
+"module or whole test session scopes."
+msgstr ""
+
+#: ../../explanation/fixtures.rst:81
+msgid ""
+"teardown logic can be easily, and safely managed, no matter how many "
+"fixtures are used, without the need to carefully handle errors by hand or"
+" micromanage the order that cleanup steps are added."
+msgstr ""
+
+#: ../../explanation/fixtures.rst:85
+msgid ""
+"In addition, pytest continues to support :ref:`xunitsetup`.  You can mix "
+"both styles, moving incrementally from classic to new style, as you "
+"prefer.  You can also start out from existing :ref:`unittest.TestCase "
+"style <unittest.TestCase>`."
+msgstr ""
+
+#: ../../explanation/fixtures.rst:93
+msgid "Fixture errors"
+msgstr ""
+
+#: ../../explanation/fixtures.rst:95
+msgid ""
+"pytest does its best to put all the fixtures for a given test in a linear"
+" order so that it can see which fixture happens first, second, third, and"
+" so on. If an earlier fixture has a problem, though, and raises an "
+"exception, pytest will stop executing fixtures for that test and mark the"
+" test as having an error."
+msgstr ""
+
+#: ../../explanation/fixtures.rst:100
+msgid ""
+"When a test is marked as having an error, it doesn't mean the test "
+"failed, though. It just means the test couldn't even be attempted because"
+" one of the things it depends on had a problem."
+msgstr ""
+
+#: ../../explanation/fixtures.rst:104
+msgid ""
+"This is one reason why it's a good idea to cut out as many unnecessary "
+"dependencies as possible for a given test. That way a problem in "
+"something unrelated isn't causing us to have an incomplete picture of "
+"what may or may not have issues."
+msgstr ""
+
+#: ../../explanation/fixtures.rst:109
+msgid "Here's a quick example to help explain:"
+msgstr ""
+
+#: ../../explanation/fixtures.rst:140
+msgid ""
+"If, for whatever reason, ``order.append(1)`` had a bug and it raises an "
+"exception, we wouldn't be able to know if ``order.extend([2])`` or "
+"``order += [3]`` would also have problems. After ``append_first`` throws "
+"an exception, pytest won't run any more fixtures for ``test_order``, and "
+"it won't even try to run ``test_order`` itself. The only things that "
+"would've run would be ``order`` and ``append_first``."
+msgstr ""
+
+#: ../../explanation/fixtures.rst:149
+msgid "Sharing test data"
+msgstr ""
+
+#: ../../explanation/fixtures.rst:151
+msgid ""
+"If you want to make test data from files available to your tests, a good "
+"way to do this is by loading these data in a fixture for use by your "
+"tests. This makes use of the automatic caching mechanisms of pytest."
+msgstr ""
+
+#: ../../explanation/fixtures.rst:155
+msgid ""
+"Another good approach is by adding the data files in the ``tests`` "
+"folder. There are also community plugins available to help to manage this"
+" aspect of testing, e.g. :pypi:`pytest-datadir` and :pypi:`pytest-"
+"datafiles`."
+msgstr ""
+
+#: ../../explanation/fixtures.rst:162
+msgid "A note about fixture cleanup"
+msgstr ""
+
+#: ../../explanation/fixtures.rst:164
+msgid ""
+"pytest does not do any special processing for :data:`SIGTERM "
+"<signal.SIGTERM>` and ``SIGQUIT`` signals (:data:`SIGINT <signal.SIGINT>`"
+" is handled naturally by the Python runtime via "
+":class:`KeyboardInterrupt`), so fixtures that manage external resources "
+"which are important to be cleared when the Python process is terminated "
+"(by those signals) might leak resources."
+msgstr ""
+
+#: ../../explanation/fixtures.rst:169
+msgid ""
+"The reason pytest does not handle those signals to perform fixture "
+"cleanup is that signal handlers are global, and changing them might "
+"interfere with the code under execution."
+msgstr ""
+
+#: ../../explanation/fixtures.rst:172
+msgid ""
+"If fixtures in your suite need special care regarding termination in "
+"those scenarios, see :issue:`this comment <5243#issuecomment-491522595>` "
+"in the issue tracker for a possible workaround."
+msgstr ""
+
+#: ../../explanation/flaky.rst:3
+msgid "Flaky tests"
+msgstr ""
+
+#: ../../explanation/flaky.rst:5
+msgid ""
+"A \"flaky\" test is one that exhibits intermittent or sporadic failure, "
+"that seems to have non-deterministic behaviour. Sometimes it passes, "
+"sometimes it fails, and it's not clear why. This page discusses pytest "
+"features that can help and other general strategies for identifying, "
+"fixing or mitigating them."
+msgstr ""
+
+#: ../../explanation/flaky.rst:8
+msgid "Why flaky tests are a problem"
+msgstr ""
+
+#: ../../explanation/flaky.rst:10
+msgid ""
+"Flaky tests are particularly troublesome when a continuous integration "
+"(CI) server is being used, so that all tests must pass before a new code "
+"change can be merged. If the test result is not a reliable signal -- that"
+" a test failure means the code change broke the test -- developers can "
+"become mistrustful of the test results, which can lead to overlooking "
+"genuine failures. It is also a source of wasted time as developers must "
+"re-run test suites and investigate spurious failures."
+msgstr ""
+
+#: ../../explanation/flaky.rst:14
+msgid "Potential root causes"
+msgstr ""
+
+#: ../../explanation/flaky.rst:17
+msgid "System state"
+msgstr ""
+
+#: ../../explanation/flaky.rst:19
+msgid ""
+"Broadly speaking, a flaky test indicates that the test relies on some "
+"system state that is not being appropriately controlled - the test "
+"environment is not sufficiently isolated. Higher level tests are more "
+"likely to be flaky as they rely on more state."
+msgstr ""
+
+#: ../../explanation/flaky.rst:21
+msgid ""
+"Flaky tests sometimes appear when a test suite is run in parallel (such "
+"as use of `pytest-xdist`_). This can indicate a test is reliant on test "
+"ordering."
+msgstr ""
+
+#: ../../explanation/flaky.rst:23
+msgid ""
+"Perhaps a different test is failing to clean up after itself and leaving "
+"behind data which causes the flaky test to fail."
+msgstr ""
+
+#: ../../explanation/flaky.rst:24
+msgid ""
+"The flaky test is reliant on data from a previous test that doesn't clean"
+" up after itself, and in parallel runs that previous test is not always "
+"present"
+msgstr ""
+
+#: ../../explanation/flaky.rst:25
+msgid "Tests that modify global state typically cannot be run in parallel."
+msgstr ""
+
+#: ../../explanation/flaky.rst:29
+msgid "Overly strict assertion"
+msgstr ""
+
+#: ../../explanation/flaky.rst:31
+msgid ""
+"Overly strict assertions can cause problems with floating point "
+"comparison as well as timing issues. :func:`pytest.approx` is useful "
+"here."
+msgstr ""
+
+#: ../../explanation/flaky.rst:34
+msgid "Thread safety"
+msgstr ""
+
+#: ../../explanation/flaky.rst:36
+msgid ""
+"pytest is single-threaded, executing its tests always in the same thread,"
+" sequentially, never spawning any threads itself."
+msgstr ""
+
+#: ../../explanation/flaky.rst:38
+msgid ""
+"Even in case of plugins which run tests in parallel, for example `pytest-"
+"xdist`_, usually work by spawning multiple *processes* and running tests "
+"in batches, without using multiple threads."
+msgstr ""
+
+#: ../../explanation/flaky.rst:40
+msgid ""
+"It is of course possible (and common) for tests and fixtures to spawn "
+"threads themselves as part of their testing workflow (for example, a "
+"fixture that starts a server thread in the background, or a test which "
+"executes production code that spawns threads), but some care must be "
+"taken:"
+msgstr ""
+
+#: ../../explanation/flaky.rst:42
+msgid ""
+"Make sure to eventually wait on any spawned threads -- for example at the"
+" end of a test, or during the teardown of a fixture."
+msgstr ""
+
+#: ../../explanation/flaky.rst:43
+msgid ""
+"Avoid using primitives provided by pytest (:func:`pytest.warns`, "
+":func:`pytest.raises`, etc) from multiple threads, as they are not "
+"thread-safe."
+msgstr ""
+
+#: ../../explanation/flaky.rst:45
+msgid ""
+"If your test suite uses threads and your are seeing flaky test results, "
+"do not discount the possibility that the test is implicitly using global "
+"state in pytest itself."
+msgstr ""
+
+#: ../../explanation/flaky.rst:48
+msgid "Related features"
+msgstr ""
+
+#: ../../explanation/flaky.rst:51
+msgid "Xfail strict"
+msgstr ""
+
+#: ../../explanation/flaky.rst:53
+msgid ""
+":ref:`pytest.mark.xfail ref` with ``strict=False`` can be used to mark a "
+"test so that its failure does not cause the whole build to break. This "
+"could be considered like a manual quarantine, and is rather dangerous to "
+"use permanently."
+msgstr ""
+
+#: ../../explanation/flaky.rst:57
+msgid "PYTEST_CURRENT_TEST"
+msgstr ""
+
+#: ../../explanation/flaky.rst:59
+msgid ""
+":envvar:`PYTEST_CURRENT_TEST` may be useful for figuring out \"which test"
+" got stuck\". See :ref:`pytest current test env` for more details."
+msgstr ""
+
+#: ../../explanation/flaky.rst:64
+msgid "Plugins"
+msgstr ""
+
+#: ../../explanation/flaky.rst:66
+msgid ""
+"Rerunning any failed tests can mitigate the negative effects of flaky "
+"tests by giving them additional chances to pass, so that the overall "
+"build does not fail. Several pytest plugins support this:"
+msgstr ""
+
+#: ../../explanation/flaky.rst:68
+msgid ""
+"`pytest-rerunfailures <https://github.com/pytest-dev/pytest-"
+"rerunfailures>`_"
+msgstr ""
+
+#: ../../explanation/flaky.rst:69
+msgid ""
+"`pytest-replay <https://github.com/ESSS/pytest-replay>`_: This plugin "
+"helps to reproduce locally crashes or flaky tests observed during CI "
+"runs."
+msgstr ""
+
+#: ../../explanation/flaky.rst:70
+msgid ""
+"`pytest-flakefinder <https://github.com/dropbox/pytest-flakefinder>`_ - "
+"`blog post <https://blogs.dropbox.com/tech/2016/03/open-sourcing-pytest-"
+"tools/>`_"
+msgstr ""
+
+#: ../../explanation/flaky.rst:72
+msgid ""
+"Plugins to deliberately randomize tests can help expose tests with state "
+"problems:"
+msgstr ""
+
+#: ../../explanation/flaky.rst:74
+msgid "`pytest-random-order <https://github.com/jbasko/pytest-random-order>`_"
+msgstr ""
+
+#: ../../explanation/flaky.rst:75
+msgid "`pytest-randomly <https://github.com/pytest-dev/pytest-randomly>`_"
+msgstr ""
+
+#: ../../explanation/flaky.rst:79
+msgid "Other general strategies"
+msgstr ""
+
+#: ../../explanation/flaky.rst:82
+msgid "Split up test suites"
+msgstr ""
+
+#: ../../explanation/flaky.rst:84
+msgid ""
+"It can be common to split a single test suite into two, such as unit vs "
+"integration, and only use the unit test suite as a CI gate. This also "
+"helps keep build times manageable as high level tests tend to be slower. "
+"However, it means it does become possible for code that breaks the build "
+"to be merged, so extra vigilance is needed for monitoring the integration"
+" test results."
+msgstr ""
+
+#: ../../explanation/flaky.rst:88
+msgid "Video/screenshot on failure"
+msgstr ""
+
+#: ../../explanation/flaky.rst:90
+msgid ""
+"For UI tests these are important for understanding what the state of the "
+"UI was when the test failed. pytest-splinter can be used with plugins "
+"like pytest-bdd and can `save a screenshot on test failure <https"
+"://pytest-splinter.readthedocs.io/en/latest/#automatic-screenshots-on-"
+"test-failure>`_, which can help to isolate the cause."
+msgstr ""
+
+#: ../../explanation/flaky.rst:94
+msgid "Delete or rewrite the test"
+msgstr ""
+
+#: ../../explanation/flaky.rst:96
+msgid ""
+"If the functionality is covered by other tests, perhaps the test can be "
+"removed. If not, perhaps it can be rewritten at a lower level which will "
+"remove the flakiness or make its source more apparent."
+msgstr ""
+
+#: ../../explanation/flaky.rst:100
+msgid "Quarantine"
+msgstr ""
+
+#: ../../explanation/flaky.rst:102
+msgid ""
+"Mark Lapierre discusses the `Pros and Cons of Quarantined Tests "
+"<https://dev.to/mlapierre/pros-and-cons-of-quarantined-tests-2emj>`_ in a"
+" post from 2018."
+msgstr ""
+
+#: ../../explanation/flaky.rst:107
+msgid "CI tools that rerun on failure"
+msgstr ""
+
+#: ../../explanation/flaky.rst:109
+msgid ""
+"Azure Pipelines (the Azure cloud CI/CD tool, formerly Visual Studio Team "
+"Services or VSTS) has a feature to `identify flaky tests "
+"<https://docs.microsoft.com/en-us/previous-"
+"versions/azure/devops/2017/dec-11-vsts?view=tfs-2017#identify-flaky-"
+"tests>`_ and rerun failed tests."
+msgstr ""
+
+#: ../../explanation/flaky.rst:114
+msgid "Research"
+msgstr ""
+
+#: ../../explanation/flaky.rst:116
+msgid ""
+"This is a limited list, please submit an issue or pull request to expand "
+"it!"
+msgstr ""
+
+#: ../../explanation/flaky.rst:118
+msgid ""
+"Gao, Zebao, Yalan Liang, Myra B. Cohen, Atif M. Memon, and Zhen Wang. "
+"\"Making system user interactive tests repeatable: When and what should "
+"we control?.\" In *Software Engineering (ICSE), 2015 IEEE/ACM 37th IEEE "
+"International Conference on*, vol. 1, pp. 55-65. IEEE, 2015.  `PDF "
+"<http://www.cs.umd.edu/~atif/pubs/gao-icse15.pdf>`__"
+msgstr ""
+
+#: ../../explanation/flaky.rst:119
+msgid ""
+"Palomba, Fabio, and Andy Zaidman. \"Does refactoring of test smells "
+"induce fixing flaky tests?.\" In *Software Maintenance and Evolution "
+"(ICSME), 2017 IEEE International Conference on*, pp. 1-12. IEEE, 2017. "
+"`PDF in Google Drive <https://drive.google.com/file/d"
+"/10HdcCQiuQVgW3yYUJD-TSTq1NbYEprl0/view>`__"
+msgstr ""
+
+#: ../../explanation/flaky.rst:120
+msgid ""
+"Bell, Jonathan, Owolabi Legunsen, Michael Hilton, Lamyaa Eloussi, Tifany "
+"Yung, and Darko Marinov. \"DeFlaker: Automatically detecting flaky "
+"tests.\" In *Proceedings of the 2018 International Conference on Software"
+" Engineering*. 2018. `PDF "
+"<https://www.jonbell.net/icse18-deflaker.pdf>`__"
+msgstr ""
+
+#: ../../explanation/flaky.rst:121
+msgid ""
+"Dutta, Saikat and Shi, August and Choudhary, Rutvik and Zhang, Zhekun and"
+" Jain, Aryaman and Misailovic, Sasa. \"Detecting flaky tests in "
+"probabilistic and machine learning applications.\" In *Proceedings of the"
+" 29th ACM SIGSOFT International Symposium on Software Testing and "
+"Analysis (ISSTA)*, pp. 211-224. ACM, 2020. `PDF "
+"<https://www.cs.cornell.edu/~saikatd/papers/flash-issta20.pdf>`__"
+msgstr ""
+
+#: ../../explanation/flaky.rst:124
+msgid "Resources"
+msgstr ""
+
+#: ../../explanation/flaky.rst:126
+msgid ""
+"`Eradicating Non-Determinism in Tests "
+"<https://martinfowler.com/articles/nonDeterminism.html>`_ by Martin "
+"Fowler, 2011"
+msgstr ""
+
+#: ../../explanation/flaky.rst:127
+msgid ""
+"`No more flaky tests on the Go team "
+"<https://www.thoughtworks.com/insights/blog/no-more-flaky-tests-go-"
+"team>`_ by Pavan Sudarshan, 2012"
+msgstr ""
+
+#: ../../explanation/flaky.rst:128
+msgid ""
+"`The Build That Cried Broken: Building Trust in your Continuous "
+"Integration Tests <https://www.youtube.com/embed/VotJqV4n8ig>`_ talk "
+"(video) by `Angie Jones <https://angiejones.tech/>`_ at SeleniumConf "
+"Austin 2017"
+msgstr ""
+
+#: ../../explanation/flaky.rst:129
+msgid ""
+"`Test and Code Podcast: Flaky Tests and How to Deal with Them "
+"<https://testandcode.com/50>`_ by Brian Okken and Anthony Shaw, 2018"
+msgstr ""
+
+#: ../../explanation/flaky.rst:130
+msgid "Microsoft:"
+msgstr ""
+
+#: ../../explanation/flaky.rst:132
+msgid ""
+"`How we approach testing VSTS to enable continuous delivery "
+"<https://blogs.msdn.microsoft.com/bharry/2017/06/28/testing-in-a-cloud-"
+"delivery-cadence/>`_ by Brian Harry MS, 2017"
+msgstr ""
+
+#: ../../explanation/flaky.rst:133
+msgid ""
+"`Eliminating Flaky Tests <https://docs.microsoft.com/en-"
+"us/azure/devops/learn/devops-at-microsoft/eliminating-flaky-tests>`_ blog"
+" and talk (video) by Munil Shah, 2017"
+msgstr ""
+
+#: ../../explanation/flaky.rst:135
+msgid "Google:"
+msgstr ""
+
+#: ../../explanation/flaky.rst:137
+msgid ""
+"`Flaky Tests at Google and How We Mitigate Them "
+"<https://testing.googleblog.com/2016/05/flaky-tests-at-google-and-how-"
+"we.html>`_ by John Micco, 2016"
+msgstr ""
+
+#: ../../explanation/flaky.rst:138
+msgid ""
+"`Where do Google's flaky tests come from? "
+"<https://testing.googleblog.com/2017/04/where-do-our-flaky-tests-come-"
+"from.html>`_  by Jeff Listfield, 2017"
+msgstr ""
+
+#: ../../explanation/goodpractices.rst:5
+msgid "Good Integration Practices"
+msgstr ""
+
+#: ../../explanation/goodpractices.rst:8
+msgid "Install package with pip"
+msgstr ""
+
+#: ../../explanation/goodpractices.rst:10
+msgid ""
+"For development, we recommend you use :mod:`venv` for virtual "
+"environments and :doc:`pip:index` for installing your application and any"
+" dependencies, as well as the ``pytest`` package itself. This ensures "
+"your code and dependencies are isolated from your system Python "
+"installation."
+msgstr ""
+
+#: ../../explanation/goodpractices.rst:15
+msgid ""
+"Create a ``pyproject.toml`` file in the root of your repository as "
+"described in :doc:`packaging:tutorials/packaging-projects`. The first few"
+" lines should look like this:"
+msgstr ""
+
+#: ../../explanation/goodpractices.rst:29
+msgid ""
+"where ``PACKAGENAME`` and ``PACKAGEVERSION`` are the name and version of "
+"your package respectively."
+msgstr ""
+
+#: ../../explanation/goodpractices.rst:31
+msgid ""
+"You can then install your package in \"editable\" mode by running from "
+"the same directory:"
+msgstr ""
+
+#: ../../explanation/goodpractices.rst:37
+msgid ""
+"which lets you change your source code (both tests and application) and "
+"rerun tests at will."
+msgstr ""
+
+#: ../../explanation/goodpractices.rst:43
+msgid "Conventions for Python test discovery"
+msgstr ""
+
+#: ../../explanation/goodpractices.rst:45
+msgid "``pytest`` implements the following standard test discovery:"
+msgstr ""
+
+#: ../../explanation/goodpractices.rst:47
+msgid ""
+"If no arguments are specified then collection starts from "
+":confval:`testpaths` (if configured) or the current directory. "
+"Alternatively, command line arguments can be used in any combination of "
+"directories, file names or node ids."
+msgstr ""
+
+#: ../../explanation/goodpractices.rst:50
+msgid "Recurse into directories, unless they match :confval:`norecursedirs`."
+msgstr ""
+
+#: ../../explanation/goodpractices.rst:51
+msgid ""
+"In those directories, search for ``test_*.py`` or ``*_test.py`` files, "
+"imported by their `test package name`_."
+msgstr ""
+
+#: ../../explanation/goodpractices.rst:52
+msgid "From those files, collect test items:"
+msgstr ""
+
+#: ../../explanation/goodpractices.rst:54
+msgid "``test`` prefixed test functions or methods outside of class."
+msgstr ""
+
+#: ../../explanation/goodpractices.rst:55
+msgid ""
+"``test`` prefixed test functions or methods inside ``Test`` prefixed test"
+" classes (without an ``__init__`` method). Methods decorated with "
+"``@staticmethod`` and ``@classmethods`` are also considered."
+msgstr ""
+
+#: ../../explanation/goodpractices.rst:57
+msgid ""
+"For examples of how to customize your test discovery "
+":doc:`/example/pythoncollection`."
+msgstr ""
+
+#: ../../explanation/goodpractices.rst:59
+msgid ""
+"Within Python modules, ``pytest`` also discovers tests using the standard"
+" :ref:`unittest.TestCase <unittest.TestCase>` subclassing technique."
+msgstr ""
+
+#: ../../explanation/goodpractices.rst:66
+msgid "Choosing a test layout"
+msgstr ""
+
+#: ../../explanation/goodpractices.rst:68
+msgid "``pytest`` supports two common test layouts:"
+msgstr ""
+
+#: ../../explanation/goodpractices.rst:71
+msgid "Tests outside application code"
+msgstr ""
+
+#: ../../explanation/goodpractices.rst:73
+msgid ""
+"Putting tests into an extra directory outside your actual application "
+"code might be useful if you have many functional tests or for other "
+"reasons want to keep tests separate from actual application code (often a"
+" good idea):"
+msgstr ""
+
+#: ../../explanation/goodpractices.rst:90
+msgid "This has the following benefits:"
+msgstr ""
+
+#: ../../explanation/goodpractices.rst:92
+msgid ""
+"Your tests can run against an installed version after executing ``pip "
+"install .``."
+msgstr ""
+
+#: ../../explanation/goodpractices.rst:93
+msgid ""
+"Your tests can run against the local copy with an editable install after "
+"executing ``pip install --editable .``."
+msgstr ""
+
+#: ../../explanation/goodpractices.rst:95
+msgid ""
+"For new projects, we recommend to use ``importlib`` :ref:`import mode "
+"<import-modes>` (see which-import-mode_ for a detailed explanation). To "
+"this end, add the following to your ``pyproject.toml``:"
+msgstr ""
+
+#: ../../explanation/goodpractices.rst:108
+msgid ""
+"Generally, but especially if you use the default import mode ``prepend``,"
+" it is **strongly** suggested to use a ``src`` layout. Here, your "
+"application root package resides in a sub-directory of your root, i.e. "
+"``src/mypkg/`` instead of ``mypkg``."
+msgstr ""
+
+#: ../../explanation/goodpractices.rst:113
+msgid ""
+"This layout prevents a lot of common pitfalls and has many benefits, "
+"which are better explained in this excellent `blog post`_ by Ionel "
+"Cristian Mărieș."
+msgstr ""
+
+#: ../../explanation/goodpractices.rst:120
+msgid ""
+"If you do not use an editable install and use the ``src`` layout as above"
+" you need to extend the Python's search path for module files to execute "
+"the tests against the local copy directly. You can do it in an ad-hoc "
+"manner by setting the ``PYTHONPATH`` environment variable:"
+msgstr ""
+
+#: ../../explanation/goodpractices.rst:128
+msgid ""
+"or in a permanent manner by using the :confval:`pythonpath` configuration"
+" variable and adding the following to your ``pyproject.toml``:"
+msgstr ""
+
+#: ../../explanation/goodpractices.rst:138
+msgid ""
+"If you do not use an editable install and not use the ``src`` layout "
+"(``mypkg`` directly in the root directory) you can rely on the fact that "
+"Python by default puts the current directory in ``sys.path`` to import "
+"your package and run ``python -m pytest`` to execute the tests against "
+"the local copy directly."
+msgstr ""
+
+#: ../../explanation/goodpractices.rst:142
+msgid ""
+"See :ref:`pytest vs python -m pytest` for more information about the "
+"difference between calling ``pytest`` and ``python -m pytest``."
+msgstr ""
+
+#: ../../explanation/goodpractices.rst:146
+msgid "Tests as part of application code"
+msgstr ""
+
+#: ../../explanation/goodpractices.rst:148
+msgid ""
+"Inlining test directories into your application package is useful if you "
+"have direct relation between tests and application modules and want to "
+"distribute them along with your application:"
+msgstr ""
+
+#: ../../explanation/goodpractices.rst:165
+msgid ""
+"In this scheme, it is easy to run your tests using the ``--pyargs`` "
+"option:"
+msgstr ""
+
+#: ../../explanation/goodpractices.rst:171
+msgid ""
+"``pytest`` will discover where ``mypkg`` is installed and collect tests "
+"from there."
+msgstr ""
+
+#: ../../explanation/goodpractices.rst:173
+msgid ""
+"Note that this layout also works in conjunction with the ``src`` layout "
+"mentioned in the previous section."
+msgstr ""
+
+#: ../../explanation/goodpractices.rst:178
+msgid ""
+"You can use namespace packages (PEP420) for your application but pytest "
+"will still perform `test package name`_ discovery based on the presence "
+"of ``__init__.py`` files.  If you use one of the two recommended file "
+"system layouts above but leave away the ``__init__.py`` files from your "
+"directories, it should just work.  From \"inlined tests\", however, you "
+"will need to use absolute imports for getting at your application code."
+msgstr ""
+
+#: ../../explanation/goodpractices.rst:190
+msgid ""
+"In ``prepend`` and ``append`` import-modes, if pytest finds a "
+"``\"a/b/test_module.py\"`` test file while recursing into the filesystem "
+"it determines the import name as follows:"
+msgstr ""
+
+#: ../../explanation/goodpractices.rst:194
+msgid ""
+"determine ``basedir``: this is the first \"upward\" (towards the root) "
+"directory not containing an ``__init__.py``.  If e.g. both ``a`` and "
+"``b`` contain an ``__init__.py`` file then the parent directory of ``a`` "
+"will become the ``basedir``."
+msgstr ""
+
+#: ../../explanation/goodpractices.rst:199
+msgid ""
+"perform ``sys.path.insert(0, basedir)`` to make the test module "
+"importable under the fully qualified import name."
+msgstr ""
+
+#: ../../explanation/goodpractices.rst:202
+msgid ""
+"``import a.b.test_module`` where the path is determined by converting "
+"path separators ``/`` into \".\" characters.  This means you must follow "
+"the convention of having directory and file names map directly to the "
+"import names."
+msgstr ""
+
+#: ../../explanation/goodpractices.rst:207
+msgid ""
+"The reason for this somewhat evolved importing technique is that in "
+"larger projects multiple test modules might import from each other and "
+"thus deriving a canonical import name helps to avoid surprises such as a "
+"test module getting imported twice."
+msgstr ""
+
+#: ../../explanation/goodpractices.rst:212
+msgid ""
+"With ``--import-mode=importlib`` things are less convoluted because "
+"pytest doesn't need to change ``sys.path``, making things much less "
+"surprising."
+msgstr ""
+
+#: ../../explanation/goodpractices.rst:220
+msgid "Choosing an import mode"
+msgstr ""
+
+#: ../../explanation/goodpractices.rst:222
+msgid ""
+"For historical reasons, pytest defaults to the ``prepend`` :ref:`import "
+"mode <import-modes>` instead of the ``importlib`` import mode we "
+"recommend for new projects. The reason lies in the way the ``prepend`` "
+"mode works:"
+msgstr ""
+
+#: ../../explanation/goodpractices.rst:226
+msgid ""
+"Since there are no packages to derive a full package name from, "
+"``pytest`` will import your test files as *top-level* modules. The test "
+"files in the first example (:ref:`src layout <src-layout>`) would be "
+"imported as ``test_app`` and ``test_view`` top-level modules by adding "
+"``tests/`` to ``sys.path``."
+msgstr ""
+
+#: ../../explanation/goodpractices.rst:231
+msgid ""
+"This results in a drawback compared to the import mode ``importlib``: "
+"your test files must have **unique names**."
+msgstr ""
+
+#: ../../explanation/goodpractices.rst:234
+msgid ""
+"If you need to have test modules with the same name, as a workaround you "
+"might add ``__init__.py`` files to your ``tests`` folder and subfolders, "
+"changing them to packages:"
+msgstr ""
+
+#: ../../explanation/goodpractices.rst:252
+msgid ""
+"Now pytest will load the modules as ``tests.foo.test_view`` and "
+"``tests.bar.test_view``, allowing you to have modules with the same name."
+" But now this introduces a subtle problem: in order to load the test "
+"modules from the ``tests`` directory, pytest prepends the root of the "
+"repository to ``sys.path``, which adds the side-effect that now ``mypkg``"
+" is also importable."
+msgstr ""
+
+#: ../../explanation/goodpractices.rst:259
+msgid ""
+"This is problematic if you are using a tool like tox_ to test your "
+"package in a virtual environment, because you want to test the "
+"*installed* version of your package, not the local code from the "
+"repository."
+msgstr ""
+
+#: ../../explanation/goodpractices.rst:263
+msgid ""
+"The ``importlib`` import mode does not have any of the drawbacks above, "
+"because ``sys.path`` is not changed when importing test modules."
+msgstr ""
+
+#: ../../explanation/goodpractices.rst:272
+msgid "tox"
+msgstr ""
+
+#: ../../explanation/goodpractices.rst:274
+msgid ""
+"Once you are done with your work and want to make sure that your actual "
+"package passes all tests you may want to look into :doc:`tox "
+"<tox:index>`, the virtualenv test automation tool. ``tox`` helps you to "
+"setup virtualenv environments with pre-defined dependencies and then "
+"executing a pre-configured test command with options.  It will run tests "
+"against the installed package and not against your source code checkout, "
+"helping to detect packaging glitches."
+msgstr ""
+
+#: ../../explanation/goodpractices.rst:284
+msgid "Do not run via setuptools"
+msgstr ""
+
+#: ../../explanation/goodpractices.rst:286
+msgid ""
+"Integration with setuptools is **not recommended**, i.e. you should not "
+"be using ``python setup.py test`` or ``pytest-runner``, and may stop "
+"working in the future."
+msgstr ""
+
+#: ../../explanation/goodpractices.rst:290
+msgid ""
+"This is deprecated since it depends on deprecated features of setuptools "
+"and relies on features that break security mechanisms in pip. For example"
+" 'setup_requires' and 'tests_require' bypass ``pip --require-hashes``. "
+"For more information and migration instructions, see the `pytest-runner "
+"notice <https://github.com/pytest-dev/pytest-runner#deprecation-"
+"notice>`_. See also `pypa/setuptools#1684 "
+"<https://github.com/pypa/setuptools/issues/1684>`_."
+msgstr ""
+
+#: ../../explanation/goodpractices.rst:297
+msgid ""
+"setuptools intends to `remove the test command "
+"<https://github.com/pypa/setuptools/issues/931>`_."
+msgstr ""
+
+#: ../../explanation/goodpractices.rst:301
+msgid "Checking with flake8-pytest-style"
+msgstr ""
+
+#: ../../explanation/goodpractices.rst:303
+msgid ""
+"In order to ensure that pytest is being used correctly in your project, "
+"it can be helpful to use the `flake8-pytest-style "
+"<https://github.com/m-burst/flake8-pytest-style>`_ flake8 plugin."
+msgstr ""
+
+#: ../../explanation/goodpractices.rst:306
+msgid ""
+"flake8-pytest-style checks for common mistakes and coding style "
+"violations in pytest code, such as incorrect use of fixtures, test "
+"function names, and markers. By using this plugin, you can catch these "
+"errors early in the development process and ensure that your pytest code "
+"is consistent and easy to maintain."
+msgstr ""
+
+#: ../../explanation/goodpractices.rst:311
+msgid ""
+"A list of the lints detected by flake8-pytest-style can be found on its "
+"`PyPI page <https://pypi.org/project/flake8-pytest-style/>`_."
+msgstr ""
+
+#: ../../explanation/goodpractices.rst:315
+msgid ""
+"flake8-pytest-style is not an official pytest project. Some of the rules "
+"enforce certain style choices, such as using `@pytest.fixture()` over "
+"`@pytest.fixture`, but you can configure the plugin to fit your preferred"
+" style."
+msgstr ""
+
+#: ../../explanation/index.rst:6
+msgid "Explanation"
+msgstr ""
+
+#: ../../explanation/pythonpath.rst:4
+msgid "pytest import mechanisms and ``sys.path``/``PYTHONPATH``"
+msgstr ""
+
+#: ../../explanation/pythonpath.rst:9
+msgid "Import modes"
+msgstr ""
+
+#: ../../explanation/pythonpath.rst:11
+msgid ""
+"pytest as a testing framework that needs to import test modules and "
+"``conftest.py`` files for execution."
+msgstr ""
+
+#: ../../explanation/pythonpath.rst:13
+msgid ""
+"Importing files in Python is a non-trivial process, so aspects of the "
+"import process can be controlled through the ``--import-mode`` command-"
+"line flag, which can assume these values:"
+msgstr ""
+
+#: ../../explanation/pythonpath.rst:19
+msgid ""
+"``prepend`` (default): The directory path containing each module will be "
+"inserted into the *beginning* of :py:data:`sys.path` if not already "
+"there, and then imported with the :func:`importlib.import_module "
+"<importlib.import_module>` function."
+msgstr ""
+
+#: ../../explanation/pythonpath.rst:23
+msgid ""
+"It is highly recommended to arrange your test modules as packages by "
+"adding ``__init__.py`` files to your directories containing tests. This "
+"will make the tests part of a proper Python package, allowing pytest to "
+"resolve their full name (for example ``tests.core.test_core`` for "
+"``test_core.py`` inside the ``tests.core`` package)."
+msgstr ""
+
+#: ../../explanation/pythonpath.rst:27
+msgid ""
+"If the test directory tree is not arranged as packages, then each test "
+"file needs to have a unique name compared to the other test files, "
+"otherwise pytest will raise an error if it finds two tests with the same "
+"name."
+msgstr ""
+
+#: ../../explanation/pythonpath.rst:30
+msgid ""
+"This is the classic mechanism, dating back from the time Python 2 was "
+"still supported."
+msgstr ""
+
+#: ../../explanation/pythonpath.rst:34
+msgid ""
+"``append``: the directory containing each module is appended to the end "
+"of :py:data:`sys.path` if not already there, and imported with "
+":func:`importlib.import_module <importlib.import_module>`."
+msgstr ""
+
+#: ../../explanation/pythonpath.rst:37
+msgid ""
+"This better allows users to run test modules against installed versions "
+"of a package even if the package under test has the same import root. For"
+" example:"
+msgstr ""
+
+#: ../../explanation/pythonpath.rst:46
+msgid ""
+"the tests will run against the installed version of ``pkg_under_test`` "
+"when ``--import-mode=append`` is used whereas with ``prepend``, they "
+"would pick up the local version. This kind of confusion is why we "
+"advocate for using :ref:`src-layouts <src-layout>`."
+msgstr ""
+
+#: ../../explanation/pythonpath.rst:51
+msgid ""
+"Same as ``prepend``, requires test module names to be unique when the "
+"test directory tree is not arranged in packages, because the modules will"
+" put in :py:data:`sys.modules` after importing."
+msgstr ""
+
+#: ../../explanation/pythonpath.rst:56
+msgid ""
+"``importlib``: this mode uses more fine control mechanisms provided by "
+":mod:`importlib` to import test modules, without changing "
+":py:data:`sys.path`."
+msgstr ""
+
+#: ../../explanation/pythonpath.rst:58
+msgid "Advantages of this mode:"
+msgstr ""
+
+#: ../../explanation/pythonpath.rst:60
+msgid "pytest will not change :py:data:`sys.path` at all."
+msgstr ""
+
+#: ../../explanation/pythonpath.rst:61
+msgid ""
+"Test module names do not need to be unique -- pytest will generate a "
+"unique name automatically based on the ``rootdir``."
+msgstr ""
+
+#: ../../explanation/pythonpath.rst:63
+msgid "Disadvantages:"
+msgstr ""
+
+#: ../../explanation/pythonpath.rst:65
+msgid "Test modules can't import each other."
+msgstr ""
+
+#: ../../explanation/pythonpath.rst:66
+msgid ""
+"Testing utility modules in the tests directories (for example a "
+"``tests.helpers`` module containing test-related functions/classes) are "
+"not importable. The recommendation in this case it to place testing "
+"utility modules together with the application/library code, for example "
+"``app.testing.helpers``."
+msgstr ""
+
+#: ../../explanation/pythonpath.rst:70
+msgid ""
+"Important: by \"test utility modules\", we mean functions/classes which "
+"are imported by other tests directly; this does not include fixtures, "
+"which should be placed in ``conftest.py`` files, along with the test "
+"modules, and are discovered automatically by pytest."
+msgstr ""
+
+#: ../../explanation/pythonpath.rst:74
+msgid "It works like this:"
+msgstr ""
+
+#: ../../explanation/pythonpath.rst:76
+msgid ""
+"Given a certain module path, for example ``tests/core/test_models.py``, "
+"derives a canonical name like ``tests.core.test_models`` and tries to "
+"import it."
+msgstr ""
+
+#: ../../explanation/pythonpath.rst:79
+msgid ""
+"For non-test modules, this will work if they are accessible via "
+":py:data:`sys.path`. So for example, ``.env/lib/site-"
+"packages/app/core.py`` will be importable as ``app.core``. This is "
+"happens when plugins import non-test modules (for example doctesting)."
+msgstr ""
+
+#: ../../explanation/pythonpath.rst:83
+msgid "If this step succeeds, the module is returned."
+msgstr ""
+
+#: ../../explanation/pythonpath.rst:85
+msgid ""
+"For test modules, unless they are reachable from :py:data:`sys.path`, "
+"this step will fail."
+msgstr ""
+
+#: ../../explanation/pythonpath.rst:87
+msgid ""
+"If the previous step fails, we import the module directly using "
+"``importlib`` facilities, which lets us import it without changing "
+":py:data:`sys.path`."
+msgstr ""
+
+#: ../../explanation/pythonpath.rst:90
+msgid ""
+"Because Python requires the module to also be available in "
+":py:data:`sys.modules`, pytest derives a unique name for it based on its "
+"relative location from the ``rootdir``, and adds the module to "
+":py:data:`sys.modules`."
+msgstr ""
+
+#: ../../explanation/pythonpath.rst:93
+msgid ""
+"For example, ``tests/core/test_models.py`` will end up being imported as "
+"the module ``tests.core.test_models``."
+msgstr ""
+
+#: ../../explanation/pythonpath.rst:99
+msgid ""
+"Initially we intended to make ``importlib`` the default in future "
+"releases, however it is clear now that it has its own set of drawbacks so"
+" the default will remain ``prepend`` for the foreseeable future."
+msgstr ""
+
+#: ../../explanation/pythonpath.rst:104
+msgid ""
+"By default, pytest will not attempt to resolve namespace packages "
+"automatically, but that can be changed via the "
+":confval:`consider_namespace_packages` configuration variable."
+msgstr ""
+
+#: ../../explanation/pythonpath.rst:109
+msgid "The :confval:`pythonpath` configuration variable."
+msgstr ""
+
+#: ../../explanation/pythonpath.rst:111
+msgid "The :confval:`consider_namespace_packages` configuration variable."
+msgstr ""
+
+#: ../../explanation/pythonpath.rst:113
+msgid ":ref:`test layout`."
+msgstr ""
+
+#: ../../explanation/pythonpath.rst:117
+msgid "``prepend`` and ``append`` import modes scenarios"
+msgstr ""
+
+#: ../../explanation/pythonpath.rst:119
+msgid ""
+"Here's a list of scenarios when using ``prepend`` or ``append`` import "
+"modes where pytest needs to change :py:data:`sys.path` in order to import"
+" test modules or ``conftest.py`` files, and the issues users might "
+"encounter because of that."
+msgstr ""
+
+#: ../../explanation/pythonpath.rst:124
+msgid "Test modules / ``conftest.py`` files inside packages"
+msgstr ""
+
+#: ../../explanation/pythonpath.rst:126 ../../explanation/pythonpath.rst:161
+msgid "Consider this file and directory layout::"
+msgstr ""
+
+#: ../../explanation/pythonpath.rst:139 ../../explanation/pythonpath.rst:171
+msgid "When executing:"
+msgstr ""
+
+#: ../../explanation/pythonpath.rst:145
+msgid ""
+"pytest will find ``foo/bar/tests/test_foo.py`` and realize it is part of "
+"a package given that there's an ``__init__.py`` file in the same folder. "
+"It will then search upwards until it can find the last folder which still"
+" contains an ``__init__.py`` file in order to find the package *root* (in"
+" this case ``foo/``). To load the module, it will insert ``root/``  to "
+"the front of :py:data:`sys.path` (if not there already) in order to load "
+"``test_foo.py`` as the *module* ``foo.bar.tests.test_foo``."
+msgstr ""
+
+#: ../../explanation/pythonpath.rst:152
+msgid ""
+"The same logic applies to the ``conftest.py`` file: it will be imported "
+"as ``foo.conftest`` module."
+msgstr ""
+
+#: ../../explanation/pythonpath.rst:154
+msgid ""
+"Preserving the full package name is important when tests live in a "
+"package to avoid problems and allow test modules to have duplicated "
+"names. This is also discussed in details in :ref:`test discovery`."
+msgstr ""
+
+#: ../../explanation/pythonpath.rst:159
+msgid "Standalone test modules / ``conftest.py`` files"
+msgstr ""
+
+#: ../../explanation/pythonpath.rst:177
+msgid ""
+"pytest will find ``foo/bar/tests/test_foo.py`` and realize it is NOT part"
+" of a package given that there's no ``__init__.py`` file in the same "
+"folder. It will then add ``root/foo/bar/tests`` to :py:data:`sys.path` in"
+" order to import ``test_foo.py`` as the *module* ``test_foo``. The same "
+"is done with the ``conftest.py`` file by adding ``root/foo`` to "
+":py:data:`sys.path` to import it as ``conftest``."
+msgstr ""
+
+#: ../../explanation/pythonpath.rst:182
+msgid ""
+"For this reason this layout cannot have test modules with the same name, "
+"as they all will be imported in the global import namespace."
+msgstr ""
+
+#: ../../explanation/pythonpath.rst:185
+msgid "This is also discussed in details in :ref:`test discovery`."
+msgstr ""
+
+#: ../../explanation/pythonpath.rst:190
+msgid "Invoking ``pytest`` versus ``python -m pytest``"
+msgstr ""
+
+#: ../../explanation/pythonpath.rst:192
+msgid ""
+"Running pytest with ``pytest [...]`` instead of ``python -m pytest "
+"[...]`` yields nearly equivalent behaviour, except that the latter will "
+"add the current directory to :py:data:`sys.path`, which is standard "
+"``python`` behavior."
+msgstr ""
+
+#: ../../explanation/pythonpath.rst:196
+msgid "See also :ref:`invoke-python`."
+msgstr ""
+
