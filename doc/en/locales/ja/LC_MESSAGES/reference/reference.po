@@ -21,756 +21,756 @@ msgstr ""
 
 #: ../../reference/reference.rst:6
 msgid "API Reference"
-msgstr ""
+msgstr "API リファレンス"
 
 #: ../../reference/reference.rst:8
 msgid "This page contains the full reference to pytest's API."
-msgstr ""
+msgstr "このページには pytest の API に関する完全なリファレンスが含まれています。"
 
 #: ../../reference/reference.rst:12
 msgid "Constants"
-msgstr ""
+msgstr "定数"
 
 #: ../../reference/reference.rst:15
 msgid "pytest.__version__"
-msgstr ""
+msgstr "pytest.__version__"
 
 #: ../../reference/reference.rst:17
 msgid "The current pytest version, as a string::"
-msgstr ""
+msgstr "現在の pytest のバージョンを文字列として::"
 
 #: ../../reference/reference.rst:27
 msgid "pytest.version_tuple"
-msgstr ""
+msgstr "pytest.version_tuple"
 
 #: ../../reference/reference.rst:31
 msgid "The current pytest version, as a tuple::"
-msgstr ""
+msgstr "現在の pytest のバージョンをタプルとして::"
 
 #: ../../reference/reference.rst:37
 msgid "For pre-releases, the last component will be a string with the prerelease version::"
-msgstr ""
+msgstr "プレリリースの場合、最後の要素はプレリリースバージョンの文字列になります::"
 
 #: ../../reference/reference.rst:45
 msgid "Functions"
-msgstr ""
+msgstr "関数"
 
 #: ../../reference/reference.rst:48
 msgid "pytest.approx"
-msgstr ""
+msgstr "pytest.approx"
 
 #: _pytest.python_api.approx:1 of
 msgid "Assert that two numbers (or two ordered sequences of numbers) are equal to each other within some tolerance."
-msgstr ""
+msgstr "2 つの数値 (または順序付けられた数値のシーケンス) がある許容範囲内で互いに等しいことをアサートします。"
 
 #: _pytest.python_api.approx:4 of
 msgid "Due to the :doc:`python:tutorial/floatingpoint`, numbers that we would intuitively expect to be equal are not always so::"
-msgstr ""
+msgstr ":doc:`python:tutorial/floatingpoint` により、直感的に等しいと期待される数値が常にそうであるとは限りません::"
 
 #: _pytest.python_api.approx:10 of
 msgid "This problem is commonly encountered when writing tests, e.g. when making sure that floating-point values are what you expect them to be.  One way to deal with this problem is to assert that two floating-point numbers are equal to within some appropriate tolerance::"
-msgstr ""
+msgstr "この問題はテストを書くときによく遭遇します。 例えば、浮動小数点値が期待通りであることを確認する場合です。 この問題に対処する方法の一つは、2 つの浮動小数点数が適切な許容範囲内で等しいことをアサートすることです::"
 
 #: _pytest.python_api.approx:18 of
 msgid "However, comparisons like this are tedious to write and difficult to understand.  Furthermore, absolute comparisons like the one above are usually discouraged because there's no tolerance that works well for all situations.  ``1e-6`` is good for numbers around ``1``, but too small for very big numbers and too big for very small ones.  It's better to express the tolerance as a fraction of the expected value, but relative comparisons like that are even more difficult to write correctly and concisely."
-msgstr ""
+msgstr "しかし、このような比較は書くのが面倒で理解しにくいです。 さらに、上記のような絶対比較は通常推奨されません。 なぜなら、すべての状況にうまく適用できる許容範囲がないからです。 ``1e-6`` は ``1`` の周りの数値には良いですが、非常に大きな数値には小さすぎ、非常に小さな数値には大きすぎます。 許容範囲を期待値の分数として表現する方が良いですが、そのような相対比較は正確かつ簡潔に書くのがさらに難しいです。"
 
 #: _pytest.python_api.approx:26 of
 msgid "The ``approx`` class performs floating-point comparisons using a syntax that's as intuitive as possible::"
-msgstr ""
+msgstr "``approx`` クラスは、できるだけ直感的な構文を使用して浮動小数点の比較を行います::"
 
 #: _pytest.python_api.approx:33 of
 msgid "The same syntax also works for ordered sequences of numbers::"
-msgstr ""
+msgstr "同じ構文は、順序付けられた数値のシーケンスにも適用されます::"
 
 #: _pytest.python_api.approx:38 of
 msgid "``numpy`` arrays::"
-msgstr ""
+msgstr "``numpy`` 配列::"
 
 #: _pytest.python_api.approx:44 of
 msgid "And for a ``numpy`` array against a scalar::"
-msgstr ""
+msgstr "そして、スカラーに対する ``numpy`` 配列::"
 
 #: _pytest.python_api.approx:50 of
 msgid "Only ordered sequences are supported, because ``approx`` needs to infer the relative position of the sequences without ambiguity. This means ``sets`` and other unordered sequences are not supported."
-msgstr ""
+msgstr "``approx`` はシーケンスの相対位置を曖昧さなく推測する必要があるため、順序付けられたシーケンスのみがサポートされます。 これは、``sets`` や他の順序付けられていないシーケンスはサポートされないことを意味します。"
 
 #: _pytest.python_api.approx:54 of
 msgid "Finally, dictionary *values* can also be compared::"
-msgstr ""
+msgstr "最後に、辞書の *値* も比較できます::"
 
 #: _pytest.python_api.approx:59 of
 msgid "The comparison will be true if both mappings have the same keys and their respective values match the expected tolerances."
-msgstr ""
+msgstr "両方のマッピングが同じキーを持ち、それぞれの値が期待される許容範囲に一致する場合、比較は真となります。"
 
 #: _pytest.python_api.approx:62 of
 msgid "**Tolerances**"
-msgstr ""
+msgstr "**許容範囲**"
 
 #: _pytest.python_api.approx:64 of
 msgid "By default, ``approx`` considers numbers within a relative tolerance of ``1e-6`` (i.e. one part in a million) of its expected value to be equal. This treatment would lead to surprising results if the expected value was ``0.0``, because nothing but ``0.0`` itself is relatively close to ``0.0``. To handle this case less surprisingly, ``approx`` also considers numbers within an absolute tolerance of ``1e-12`` of its expected value to be equal.  Infinity and NaN are special cases.  Infinity is only considered equal to itself, regardless of the relative tolerance.  NaN is not considered equal to anything by default, but you can make it be equal to itself by setting the ``nan_ok`` argument to True.  (This is meant to facilitate comparing arrays that use NaN to mean \"no data\".)"
-msgstr ""
+msgstr "デフォルトでは、``approx`` は期待値の ``1e-6`` (すなわち百万分の一) の相対許容範囲内の数値を等しいと見なします。 この処理は、期待値が ``0.0`` の場合に驚くべき結果をもたらします。 なぜなら、``0.0`` 自体以外は ``0.0`` に相対的に近いものはないからです。 このケースを驚かせないように処理するために、``approx`` は期待値の ``1e-12`` の絶対許容範囲内の数値も等しいと見なします。 無限大と NaN は特別なケースです。 無限大は相対許容範囲に関係なく、それ自体としか等しく見なされません。 NaN はデフォルトでは何とも等しく見なされませんが、``nan_ok`` 引数を True に設定することでそれ自体と等しく見なすことができます。 (これは、NaN を「データなし」を意味するために使用する配列を比較するのを容易にすることを目的としています。)"
 
 #: _pytest.python_api.approx:76 of
 msgid "Both the relative and absolute tolerances can be changed by passing arguments to the ``approx`` constructor::"
-msgstr ""
+msgstr "相対許容範囲と絶対許容範囲の両方は、``approx`` コンストラクタに引数を渡すことで変更できます::"
 
 #: _pytest.python_api.approx:86 of
 msgid "If you specify ``abs`` but not ``rel``, the comparison will not consider the relative tolerance at all.  In other words, two numbers that are within the default relative tolerance of ``1e-6`` will still be considered unequal if they exceed the specified absolute tolerance.  If you specify both ``abs`` and ``rel``, the numbers will be considered equal if either tolerance is met::"
-msgstr ""
+msgstr "``abs`` を指定して ``rel`` を指定しない場合、比較は相対許容範囲を全く考慮しません。 言い換えれば、デフォルトの相対許容範囲 ``1e-6`` 内にある 2 つの数値は、指定された絶対許容範囲を超える場合、依然として等しくないと見なされます。 ``abs`` と ``rel`` の両方を指定した場合、いずれかの許容範囲が満たされれば数値は等しいと見なされます::"
 
 #: _pytest.python_api.approx:100 of
 msgid "You can also use ``approx`` to compare nonnumeric types, or dicts and sequences containing nonnumeric types, in which case it falls back to strict equality. This can be useful for comparing dicts and sequences that can contain optional values::"
-msgstr ""
+msgstr "``approx`` を使用して非数値型、または非数値型を含む辞書やシーケンスを比較することもできます。 その場合、厳密な等価性に戻ります。 これは、オプションの値を含む可能性のある辞書やシーケンスを比較するのに役立ちます::"
 
 #: _pytest.python_api.approx:112 of
 msgid "If you're thinking about using ``approx``, then you might want to know how it compares to other good ways of comparing floating-point numbers.  All of these algorithms are based on relative and absolute tolerances and should agree for the most part, but they do have meaningful differences:"
-msgstr ""
+msgstr "``approx`` を使用することを考えている場合、浮動小数点数を比較する他の良い方法とどのように比較されるかを知りたいかもしれません。 これらのアルゴリズムはすべて相対許容範囲と絶対許容範囲に基づいており、ほとんどの場合一致するはずですが、意味のある違いがあります:"
 
 #: _pytest.python_api.approx:117 of
 msgid "``math.isclose(a, b, rel_tol=1e-9, abs_tol=0.0)``:  True if the relative tolerance is met w.r.t. either ``a`` or ``b`` or if the absolute tolerance is met.  Because the relative tolerance is calculated w.r.t. both ``a`` and ``b``, this test is symmetric (i.e.  neither ``a`` nor ``b`` is a \"reference value\").  You have to specify an absolute tolerance if you want to compare to ``0.0`` because there is no tolerance by default.  More information: :py:func:`math.isclose`."
-msgstr ""
+msgstr "``math.isclose(a, b, rel_tol=1e-9, abs_tol=0.0)``: 相対許容範囲が ``a`` または ``b`` のいずれかに対して満たされるか、絶対許容範囲が満たされる場合に True です。 相対許容範囲は ``a`` と ``b`` の両方に対して計算されるため、このテストは対称的です (つまり、``a`` も ``b`` も「基準値」ではありません)。 ``0.0`` と比較する場合は、絶対許容範囲を指定する必要があります。 デフォルトでは許容範囲がないためです。 詳細情報: :py:func:`math.isclose`."
 
 #: _pytest.python_api.approx:125 of
 msgid "``numpy.isclose(a, b, rtol=1e-5, atol=1e-8)``: True if the difference between ``a`` and ``b`` is less that the sum of the relative tolerance w.r.t. ``b`` and the absolute tolerance.  Because the relative tolerance is only calculated w.r.t. ``b``, this test is asymmetric and you can think of ``b`` as the reference value.  Support for comparing sequences is provided by :py:func:`numpy.allclose`.  More information: :std:doc:`numpy:reference/generated/numpy.isclose`."
-msgstr ""
+msgstr "``numpy.isclose(a, b, rtol=1e-5, atol=1e-8)``: ``a`` と ``b`` の差が ``b`` に対する相対許容範囲と絶対許容範囲の合計より小さい場合に True です。 相対許容範囲は ``b`` に対してのみ計算されるため、このテストは非対称であり、``b`` を基準値と見なすことができます。 シーケンスの比較のサポートは :py:func:`numpy.allclose` によって提供されます。 詳細情報: :std:doc:`numpy:reference/generated/numpy.isclose`."
 
 #: _pytest.python_api.approx:133 of
 msgid "``unittest.TestCase.assertAlmostEqual(a, b)``: True if ``a`` and ``b`` are within an absolute tolerance of ``1e-7``.  No relative tolerance is considered , so this function is not appropriate for very large or very small numbers.  Also, it's only available in subclasses of ``unittest.TestCase`` and it's ugly because it doesn't follow PEP8.  More information: :py:meth:`unittest.TestCase.assertAlmostEqual`."
-msgstr ""
+msgstr "``unittest.TestCase.assertAlmostEqual(a, b)``: ``a`` と ``b`` が絶対許容範囲 ``1e-7`` 内にある場合に True です。 相対許容範囲は考慮されないため、この関数は非常に大きな数値や非常に小さな数値には適していません。 また、``unittest.TestCase`` のサブクラスでのみ利用可能であり、PEP8 に従っていないため見た目が悪いです。 詳細情報: :py:meth:`unittest.TestCase.assertAlmostEqual`."
 
 #: _pytest.python_api.approx:140 of
 msgid "``a == pytest.approx(b, rel=1e-6, abs=1e-12)``: True if the relative tolerance is met w.r.t. ``b`` or if the absolute tolerance is met. Because the relative tolerance is only calculated w.r.t. ``b``, this test is asymmetric and you can think of ``b`` as the reference value.  In the special case that you explicitly specify an absolute tolerance but not a relative tolerance, only the absolute tolerance is considered."
-msgstr ""
+msgstr "``a == pytest.approx(b, rel=1e-6, abs=1e-12)``: 相対許容範囲が ``b`` に対して満たされるか、絶対許容範囲が満たされる場合に True です。 相対許容範囲は ``b`` に対してのみ計算されるため、このテストは非対称であり、``b`` を基準値と見なすことができます。 絶対許容範囲を明示的に指定し、相対許容範囲を指定しない特別な場合には、絶対許容範囲のみが考慮されます。"
 
 #: _pytest.python_api.approx:149 of
 msgid "``approx`` can handle numpy arrays, but we recommend the specialised test helpers in :std:doc:`numpy:reference/routines.testing` if you need support for comparisons, NaNs, or ULP-based tolerances."
-msgstr ""
+msgstr "``approx`` は numpy 配列を処理できますが、比較、NaN、または ULP ベースの許容範囲のサポートが必要な場合は、:std:doc:`numpy:reference/routines.testing` の専門のテストヘルパーをお勧めします。"
 
 #: _pytest.python_api.approx:153 of
 msgid "To match strings using regex, you can use `Matches <https://github.com/asottile/re-assert#re_assertmatchespattern-str-args-kwargs>`_ from the `re_assert package <https://github.com/asottile/re-assert>`_."
-msgstr ""
+msgstr "正規表現を使用して文字列を一致させるには、`re_assert パッケージ <https://github.com/asottile/re-assert>`_ の `Matches <https://github.com/asottile/re-assert#re_assertmatchespattern-str-args-kwargs>`_ を使用できます。"
 
 #: _pytest.python_api.approx:162 of
 msgid "In order to avoid inconsistent behavior, :py:exc:`TypeError` is raised for ``>``, ``>=``, ``<`` and ``<=`` comparisons. The example below illustrates the problem::"
-msgstr ""
+msgstr "一貫性のない動作を避けるために、``>``, ``>=``, ``<`` および ``<=`` 比較では :py:exc:`TypeError` が発生します。 以下の例は問題を示しています::"
 
 #: _pytest.python_api.approx:169 of
 msgid "In the second example one expects ``approx(0.1).__le__(0.1 + 1e-10)`` to be called. But instead, ``approx(0.1).__lt__(0.1 + 1e-10)`` is used to comparison. This is because the call hierarchy of rich comparisons follows a fixed behavior. More information: :py:meth:`object.__ge__`"
-msgstr ""
+msgstr "2 番目の例では ``approx(0.1).__le__(0.1 + 1e-10)`` が呼び出されることを期待します。 しかし、代わりに ``approx(0.1).__lt__(0.1 + 1e-10)`` が比較に使用されます。 これは、リッチ比較の呼び出し階層が固定された動作に従うためです。 詳細情報: :py:meth:`object.__ge__`"
 
 #: _pytest.python_api.approx:174 of
 msgid "``approx`` raises ``TypeError`` when it encounters a dict value or sequence element of nonnumeric type."
-msgstr ""
+msgstr "``approx`` は、非数値型の辞書値またはシーケンス要素に遭遇した場合に ``TypeError`` を発生させます。"
 
 #: _pytest.python_api.approx:178 of
 msgid "``approx`` falls back to strict equality for nonnumeric types instead of raising ``TypeError``."
-msgstr ""
+msgstr "``approx`` は ``TypeError`` を発生させる代わりに、非数値型に対して厳密な等価性に戻ります。"
 
 #: ../../reference/reference.rst:53
 msgid "pytest.fail"
-msgstr ""
+msgstr "pytest.fail"
 
 #: ../../reference/reference.rst:55
 msgid "**Tutorial**: :ref:`skipping`"
-msgstr ""
+msgstr "**チュートリアル**: :ref:`skipping`"
 
 #: _pytest.outcomes.fail:1 of
 msgid "Explicitly fail an executing test with the given message."
-msgstr ""
+msgstr "指定されたメッセージで実行中のテストを明示的に失敗させます。"
 
 #: ../../reference/reference.rst _pytest.config.PytestPluginManager.register
 #: _pytest.config.argparsing.Parser.addini
 #: _pytest.config.argparsing.Parser.addoption
 #: _pytest.config.argparsing.Parser.getgroup of
 msgid "Parameters"
-msgstr ""
+msgstr "パラメータ"
 
 #: _pytest.outcomes.fail:3 of
 msgid "The message to show the user as reason for the failure."
-msgstr ""
+msgstr "失敗の理由としてユーザーに表示するメッセージ。"
 
 #: _pytest.outcomes.fail:6 of
 msgid "If False, msg represents the full failure information and no python traceback will be reported."
-msgstr ""
+msgstr "False の場合、msg は完全な失敗情報を表し、Python のトレースバックは報告されません。"
 
-#: ../../reference/reference.rst
+#: ../../reference.reference.rst
 msgid "Raises"
-msgstr ""
+msgstr "例外"
 
 #: _pytest.outcomes.exit:10 _pytest.outcomes.fail:10 _pytest.outcomes.skip:18
 #: _pytest.outcomes.xfail:16 of
 msgid "The exception that is raised."
-msgstr ""
+msgstr "発生する例外。"
 
 #: ../../reference/reference.rst:61
 msgid "The exception raised by :func:`pytest.fail`."
-msgstr ""
+msgstr ":func:`pytest.fail` によって発生する例外。"
 
 #: ../../reference/reference.rst:64
 msgid "pytest.skip"
-msgstr ""
+msgstr "pytest.skip"
 
 #: _pytest.outcomes.skip:1 of
 msgid "Skip an executing test with the given message."
-msgstr ""
+msgstr "指定されたメッセージで実行中のテストをスキップします。"
 
 #: _pytest.outcomes.skip:3 of
 msgid "This function should be called only during testing (setup, call or teardown) or during collection by using the ``allow_module_level`` flag.  This function can be called in doctests as well."
-msgstr ""
+msgstr "この関数はテスト中 (セットアップ、コール、またはティアダウン) または ``allow_module_level`` フラグを使用してコレクション中にのみ呼び出す必要があります。 この関数は doctests でも呼び出すことができます。"
 
 #: _pytest.outcomes.skip:7 of
 msgid "The message to show the user as reason for the skip."
-msgstr ""
+msgstr "スキップの理由としてユーザーに表示するメッセージ。"
 
 #: _pytest.outcomes.skip:10 of
 msgid "Allows this function to be called at module level. Raising the skip exception at module level will stop the execution of the module and prevent the collection of all tests in the module, even those defined before the `skip` call.  Defaults to False."
-msgstr ""
+msgstr "この関数をモジュールレベルで呼び出すことを許可します。 モジュールレベルでスキップ例外を発生させると、モジュールの実行が停止し、`skip` 呼び出しの前に定義されたテストも含めて、モジュール内のすべてのテストの収集が防止されます。 デフォルトは False です。"
 
 #: _pytest.outcomes.skip:11 of
 msgid "Allows this function to be called at module level. Raising the skip exception at module level will stop the execution of the module and prevent the collection of all tests in the module, even those defined before the `skip` call."
-msgstr ""
+msgstr "この関数をモジュールレベルで呼び出すことを許可します。 モジュールレベルでスキップ例外を発生させると、モジュールの実行が停止し、`skip` 呼び出しの前に定義されたテストも含めて、モジュール内のすべてのテストの収集が防止されます。"
 
 #: _pytest.outcomes.skip:16 of
 msgid "Defaults to False."
-msgstr ""
+msgstr "デフォルトは False です。"
 
 #: _pytest.outcomes.skip:22 of
 msgid "It is better to use the :ref:`pytest.mark.skipif ref` marker when possible to declare a test to be skipped under certain conditions like mismatching platforms or dependencies. Similarly, use the ``# doctest: +SKIP`` directive (see :py:data:`doctest.SKIP`) to skip a doctest statically."
-msgstr ""
+msgstr "プラットフォームや依存関係が一致しないなどの特定の条件下でテストをスキップすることを宣言するには、可能な限り :ref:`pytest.mark.skipif ref` マーカーを使用する方が良いです。 同様に、doctest を静的にスキップするには ``# doctest: +SKIP`` ディレクティブを使用します (:py:data:`doctest.SKIP` を参照)。"
 
 #: ../../reference/reference.rst:70
 msgid "The exception raised by :func:`pytest.skip`."
-msgstr ""
+msgstr ":func:`pytest.skip` によって発生する例外。"
 
 #: ../../reference/reference.rst:75
 msgid "pytest.importorskip"
-msgstr ""
+msgstr "pytest.importorskip"
 
 #: _pytest.outcomes.importorskip:1 of
 msgid "Import and return the requested module ``modname``, or skip the current test if the module cannot be imported."
-msgstr ""
+msgstr "要求されたモジュール ``modname`` をインポートして返すか、モジュールをインポートできない場合は現在のテストをスキップします。"
 
 #: _pytest.outcomes.importorskip:4 of
 msgid "The name of the module to import."
-msgstr ""
+msgstr "インポートするモジュールの名前。"
 
 #: _pytest.outcomes.importorskip:6 of
 msgid "If given, the imported module's ``__version__`` attribute must be at least this minimal version, otherwise the test is still skipped."
-msgstr ""
+msgstr "指定された場合、インポートされたモジュールの ``__version__`` 属性は少なくともこの最小バージョンでなければなりません。 そうでない場合、テストはスキップされます。"
 
 #: _pytest.outcomes.importorskip:9 of
 msgid "If given, this reason is shown as the message when the module cannot be imported."
-msgstr ""
+msgstr "指定された場合、モジュールをインポートできないときにこの理由がメッセージとして表示されます。"
 
 #: _pytest.outcomes.importorskip:12 of
 msgid "The exception that should be captured in order to skip modules. Must be :py:class:`ImportError` or a subclass.  If the module can be imported but raises :class:`ImportError`, pytest will issue a warning to the user, as often users expect the module not to be found (which would raise :class:`ModuleNotFoundError` instead).  This warning can be suppressed by passing ``exc_type=ImportError`` explicitly.  See :ref:`import-or-skip-import-error` for details."
-msgstr ""
+msgstr "モジュールをスキップするためにキャプチャする必要がある例外。 :py:class:`ImportError` またはそのサブクラスでなければなりません。 モジュールをインポートできても :class:`ImportError` が発生した場合、pytest はユーザーに警告を発します。 多くの場合、ユーザーはモジュールが見つからないことを期待しています (この場合は :class:`ModuleNotFoundError` が発生します)。 この警告は ``exc_type=ImportError`` を明示的に渡すことで抑制できます。 詳細は :ref:`import-or-skip-import-error` を参照してください。"
 
 #: _pytest.outcomes.importorskip:13 of
 msgid "The exception that should be captured in order to skip modules. Must be :py:class:`ImportError` or a subclass."
-msgstr ""
+msgstr "モジュールをスキップするためにキャプチャする必要がある例外。 :py:class:`ImportError` またはそのサブクラスでなければなりません。"
 
 #: _pytest.outcomes.importorskip:16 of
 msgid "If the module can be imported but raises :class:`ImportError`, pytest will issue a warning to the user, as often users expect the module not to be found (which would raise :class:`ModuleNotFoundError` instead)."
-msgstr ""
+msgstr "モジュールをインポートできても :class:`ImportError` が発生した場合、pytest はユーザーに警告を発します。 多くの場合、ユーザーはモジュールが見つからないことを期待しています (この場合は :class:`ModuleNotFoundError` が発生します)。"
 
 #: _pytest.outcomes.importorskip:20 of
 msgid "This warning can be suppressed by passing ``exc_type=ImportError`` explicitly."
-msgstr ""
+msgstr "この警告は ``exc_type=ImportError`` を明示的に渡すことで抑制できます。"
 
 #: _pytest.outcomes.importorskip:22 of
 msgid "See :ref:`import-or-skip-import-error` for details."
-msgstr ""
+msgstr "詳細は :ref:`import-or-skip-import-error` を参照してください。"
 
 #: ../../reference/reference.rst _pytest.config.PytestPluginManager.register
 #: _pytest.config.argparsing.Parser.getgroup of
 msgid "Returns"
-msgstr ""
+msgstr "戻り値"
 
 #: _pytest.outcomes.importorskip:25 of
 msgid "The imported module. This should be assigned to its canonical name."
-msgstr ""
+msgstr "インポートされたモジュール。 これはその標準名に割り当てる必要があります。"
 
 #: _pytest.outcomes.importorskip:28 of
 msgid "If the module cannot be imported."
-msgstr ""
+msgstr "モジュールをインポートできない場合。"
 
 #: ../../reference/reference.rst _pytest.config.PytestPluginManager.register
 #: _pytest.config.argparsing.Parser.getgroup of
 msgid "Return type"
-msgstr ""
+msgstr "戻り値の型"
 
 #: _pytest.fixtures.pytestconfig:4 _pytest.junitxml.record_property:9
 #: _pytest.mark.structures.MarkGenerator:4 _pytest.outcomes.importorskip:31 of
 msgid "Example::"
-msgstr ""
+msgstr "例::"
 
 #: _pytest.outcomes.importorskip:37 of
 msgid "The ``exc_type`` parameter."
-msgstr ""
+msgstr "``exc_type`` パラメータ。"
 
 #: ../../reference/reference.rst:80
 msgid "pytest.xfail"
-msgstr ""
+msgstr "pytest.xfail"
 
 #: _pytest.outcomes.xfail:1 of
 msgid "Imperatively xfail an executing test or setup function with the given reason."
-msgstr ""
+msgstr "指定された理由で実行中のテストまたはセットアップ関数を強制的に xfail します。"
 
 #: _pytest.outcomes.xfail:3 of
 msgid "This function should be called only during testing (setup, call or teardown)."
-msgstr ""
+msgstr "この関数はテスト中 (セットアップ、コール、またはティアダウン) にのみ呼び出す必要があります。"
 
 #: _pytest.outcomes.xfail:5 of
 msgid "No other code is executed after using ``xfail()`` (it is implemented internally by raising an exception)."
-msgstr ""
+msgstr "``xfail()`` を使用した後、他のコードは実行されません (これは内部的に例外を発生させることで実装されています)。"
 
 #: _pytest.outcomes.xfail:8 of
 msgid "The message to show the user as reason for the xfail."
-msgstr ""
+msgstr "xfail の理由としてユーザーに表示するメッセージ。"
 
 #: _pytest.outcomes.xfail:12 of
 msgid "It is better to use the :ref:`pytest.mark.xfail ref` marker when possible to declare a test to be xfailed under certain conditions like known bugs or missing features."
-msgstr ""
+msgstr "既知のバグや欠落している機能などの特定の条件下でテストを xfail することを宣言するには、可能な限り :ref:`pytest.mark.xfail ref` マーカーを使用する方が良いです。"
 
 #: ../../reference/reference.rst:86
 msgid "The exception raised by :func:`pytest.xfail`."
-msgstr ""
+msgstr ":func:`pytest.xfail` によって発生する例外。"
 
 #: ../../reference/reference.rst:89
 msgid "pytest.exit"
-msgstr ""
+msgstr "pytest.exit"
 
 #: _pytest.outcomes.exit:1 of
 msgid "Exit testing process."
-msgstr ""
+msgstr "テストプロセスを終了します。"
 
 #: _pytest.outcomes.exit:3 of
 msgid "The message to show as the reason for exiting pytest.  reason has a default value only because `msg` is deprecated."
-msgstr ""
+msgstr "pytest を終了する理由として表示するメッセージ。 reason は `msg` が非推奨であるためにのみデフォルト値を持ちます。"
 
 #: _pytest.outcomes.exit:7 of
 msgid "Return code to be used when exiting pytest. None means the same as ``0`` (no error), same as :func:`sys.exit`."
-msgstr ""
+msgstr "pytest を終了するときに使用されるリターンコード。 None は ``0`` (エラーなし) と同じ意味です。 :func:`sys.exit` と同じです。"
 
 #: ../../reference/reference.rst:95
 msgid "The exception raised by :func:`pytest.exit`."
-msgstr ""
+msgstr ":func:`pytest.exit` によって発生する例外。"
 
 #: ../../reference/reference.rst:98
 msgid "pytest.main"
-msgstr ""
+msgstr "pytest.main"
 
 #: ../../reference/reference.rst:100
 msgid "**Tutorial**: :ref:`pytest.main-usage`"
-msgstr ""
+msgstr "**チュートリアル**: :ref:`pytest.main-usage`"
 
 #: _pytest.config.main:1 of
 msgid "Perform an in-process test run."
-msgstr ""
+msgstr "インプロセステストを実行します。"
 
 #: _pytest.config.main:3 of
 msgid "List of command line arguments. If `None` or not given, defaults to reading arguments directly from the process command line (:data:`sys.argv`)."
-msgstr ""
+msgstr "コマンドライン引数のリスト。 `None` または指定されていない場合、プロセスのコマンドライン (:data:`sys.argv`) から直接引数を読み取るのがデフォルトです。"
 
 #: _pytest.config.main:6 of
 msgid "List of plugin objects to be auto-registered during initialization."
-msgstr ""
+msgstr "初期化中に自動登録されるプラグインオブジェクトのリスト。"
 
 #: _pytest.config.main:8 of
 msgid "An exit code."
-msgstr ""
+msgstr "終了コード。"
 
 #: ../../reference/reference.rst:105
 msgid "pytest.param"
-msgstr ""
+msgstr "pytest.param"
 
 #: _pytest.mark.param:1 of
 msgid "Specify a parameter in `pytest.mark.parametrize`_ calls or :ref:`parametrized fixtures <fixture-parametrize-marks>`."
-msgstr ""
+msgstr "`pytest.mark.parametrize`_ 呼び出しや :ref:`parametrized fixtures <fixture-parametrize-marks>` でパラメータを指定します。"
 
 #: _pytest.mark.param:16 of
 msgid "Variable args of the values of the parameter set, in order."
-msgstr ""
+msgstr "パラメータセットの値の可変引数を順番に。"
 
 #: _pytest.mark.param:17 of
 msgid "A single mark or a list of marks to be applied to this parameter set."
-msgstr ""
+msgstr "このパラメータセットに適用される単一のマークまたはマークのリスト。"
 
 #: _pytest.mark.param:18 of
 msgid "The id to attribute to this parameter set."
-msgstr ""
+msgstr "このパラメータセットに付与する ID。"
 
 #: ../../reference/reference.rst:110
 msgid "pytest.raises"
-msgstr ""
+msgstr "pytest.raises"
 
 #: ../../reference/reference.rst:112
 msgid "**Tutorial**: :ref:`assertraises`"
-msgstr ""
+msgstr "**チュートリアル**: :ref:`assertraises`"
 
 #: _pytest.python_api.raises:1 of
 msgid "Assert that a code block/function call raises an exception type, or one of its subclasses."
-msgstr ""
+msgstr "コードブロック/関数呼び出しが例外タイプまたはそのサブクラスのいずれかを発生させることをアサートします。"
 
 #: _pytest.python_api.raises:3 of
 msgid "The expected exception type, or a tuple if one of multiple possible exception types are expected. Note that subclasses of the passed exceptions will also match."
-msgstr ""
+msgstr "期待される例外タイプ、または複数の可能な例外タイプのいずれかが期待される場合はタプル。 渡された例外のサブクラスも一致することに注意してください。"
 
 #: _pytest.python_api.raises:8 of
 msgid "If specified, a string containing a regular expression, or a regular expression object, that is tested against the string representation of the exception and its :pep:`678` `__notes__` using :func:`re.search`.  To match a literal string that may contain :ref:`special characters <re-syntax>`, the pattern can first be escaped with :func:`re.escape`.  (This is only used when ``pytest.raises`` is used as a context manager, and passed through to the function otherwise. When using ``pytest.raises`` as a function, you can use: ``pytest.raises(Exc, func, match=\"passed on\").match(\"my pattern\")``.)"
-msgstr ""
+msgstr "指定された場合、正規表現を含む文字列、または正規表現オブジェクトが例外の文字列表現およびその :pep:`678` `__notes__` に対して :func:`re.search` を使用してテストされます。 :ref:`special characters <re-syntax>` を含む可能性のあるリテラル文字列に一致させるには、最初にパターンを :func:`re.escape` でエスケープできます。 (これは ``pytest.raises`` がコンテキストマネージャとして使用される場合にのみ使用され、そうでない場合は関数に渡されます。 関数として ``pytest.raises`` を使用する場合は、``pytest.raises(Exc, func, match=\"passed on\").match(\"my pattern\")`` を使用できます。)"
 
 #: _pytest.python_api.raises:9 of
 msgid "If specified, a string containing a regular expression, or a regular expression object, that is tested against the string representation of the exception and its :pep:`678` `__notes__` using :func:`re.search`."
-msgstr ""
+msgstr "指定された場合、正規表現を含む文字列、または正規表現オブジェクトが例外の文字列表現およびその :pep:`678` `__notes__` に対して :func:`re.search` を使用してテストされます。"
 
 #: _pytest._code.code.ExceptionInfo.group_contains:13
 #: _pytest.python_api.raises:14 of
 msgid "To match a literal string that may contain :ref:`special characters <re-syntax>`, the pattern can first be escaped with :func:`re.escape`."
-msgstr ""
+msgstr ":ref:`special characters <re-syntax>` を含む可能性のあるリテラル文字列に一致させるには、最初にパターンを :func:`re.escape` でエスケープできます。"
 
 #: _pytest.python_api.raises:17 of
 msgid "(This is only used when ``pytest.raises`` is used as a context manager, and passed through to the function otherwise. When using ``pytest.raises`` as a function, you can use: ``pytest.raises(Exc, func, match=\"passed on\").match(\"my pattern\")``.)"
-msgstr ""
+msgstr "(これは ``pytest.raises`` がコンテキストマネージャとして使用される場合にのみ使用され、そうでない場合は関数に渡されます。 関数として ``pytest.raises`` を使用する場合は、``pytest.raises(Exc, func, match=\"passed on\").match(\"my pattern\")`` を使用できます。)"
 
 #: _pytest.python_api.raises:22 of
 msgid "Use ``pytest.raises`` as a context manager, which will capture the exception of the given type, or any of its subclasses::"
-msgstr ""
+msgstr "コンテキストマネージャとして ``pytest.raises`` を使用すると、指定されたタイプの例外またはそのサブクラスのいずれかをキャプチャします::"
 
 #: _pytest.python_api.raises:29 of
 msgid "If the code block does not raise the expected exception (:class:`ZeroDivisionError` in the example above), or no exception at all, the check will fail instead."
-msgstr ""
+msgstr "コードブロックが期待される例外 (:class:`ZeroDivisionError` 上記の例) を発生させない場合、またはまったく例外を発生させない場合、チェックは失敗します。"
 
 #: _pytest.python_api.raises:32 of
 msgid "You can also use the keyword argument ``match`` to assert that the exception matches a text or regex::"
-msgstr ""
+msgstr "キーワード引数 ``match`` を使用して、例外がテキストまたは正規表現に一致することをアサートすることもできます::"
 
 #: _pytest.python_api.raises:41 of
 msgid "The ``match`` argument searches the formatted exception string, which includes any `PEP-678 <https://peps.python.org/pep-0678/>`__ ``__notes__``:"
-msgstr ""
+msgstr "``match`` 引数は、フォーマットされた例外文字列を検索します。 これには、`PEP-678 <https://peps.python.org/pep-0678/>`__ ``__notes__`` が含まれます。"
 
 #: _pytest.python_api.raises:49 of
 msgid "The context manager produces an :class:`ExceptionInfo` object which can be used to inspect the details of the captured exception::"
-msgstr ""
+msgstr "コンテキストマネージャは :class:`ExceptionInfo` オブジェクトを生成し、キャプチャされた例外の詳細を調査するために使用できます。"
 
 #: _pytest.python_api.raises:59 of
 msgid "Given that ``pytest.raises`` matches subclasses, be wary of using it to match :class:`Exception` like this::"
-msgstr ""
+msgstr "``pytest.raises`` はサブクラスに一致するため、次のように :class:`Exception` に一致させる場合は注意してください。"
 
 #: _pytest.python_api.raises:64 of
 msgid "Because :class:`Exception` is the base class of almost all exceptions, it is easy for this to hide real bugs, where the user wrote this expecting a specific exception, but some other exception is being raised due to a bug introduced during a refactoring."
-msgstr ""
+msgstr ":class:`Exception` はほとんどすべての例外の基底クラスであるため、特定の例外を期待してこれを書いたユーザーが、リファクタリング中に導入されたバグにより他の例外が発生している場合に、これが実際のバグを隠すことが容易です。"
 
 #: _pytest.python_api.raises:68 of
 msgid "Avoid using ``pytest.raises`` to catch :class:`Exception` unless certain that you really want to catch **any** exception raised."
-msgstr ""
+msgstr "**任意の** 例外をキャッチしたいと確信している場合を除き、:class:`Exception` をキャッチするために ``pytest.raises`` を使用することは避けてください。"
 
 #: _pytest.python_api.raises:73 of
 msgid "When using ``pytest.raises`` as a context manager, it's worthwhile to note that normal context manager rules apply and that the exception raised *must* be the final line in the scope of the context manager. Lines of code after that, within the scope of the context manager will not be executed. For example::"
-msgstr ""
+msgstr "``pytest.raises`` をコンテキストマネージャとして使用する場合、通常のコンテキストマネージャのルールが適用され、発生した例外はコンテキストマネージャのスコープ内の最後の行でなければならないことに注意する価値があります。 その後のコード行はコンテキストマネージャのスコープ内では実行されません。 例えば::"
 
 #: _pytest.python_api.raises:85 of
 msgid "Instead, the following approach must be taken (note the difference in scope)::"
-msgstr ""
+msgstr "代わりに、次のアプローチを取る必要があります (スコープの違いに注意)::"
 
 #: _pytest.python_api.raises:94 _pytest.recwarn.warns:33 of
 msgid "**Using with** ``pytest.mark.parametrize``"
-msgstr ""
+msgstr "``pytest.mark.parametrize`` **を使用する**"
 
 #: _pytest.python_api.raises:96 of
 msgid "When using :ref:`pytest.mark.parametrize ref` it is possible to parametrize tests such that some runs raise an exception and others do not."
-msgstr ""
+msgstr ":ref:`pytest.mark.parametrize ref` を使用する場合、いくつかの実行で例外を発生させ、他の実行では発生させないようにテストをパラメータ化することが可能です。"
 
 #: _pytest.python_api.raises:100 of
 msgid "See :ref:`parametrizing_conditional_raising` for an example."
-msgstr ""
+msgstr "例については :ref:`parametrizing_conditional_raising` を参照してください。"
 
 #: _pytest.python_api.raises:104 of
 msgid ":ref:`assertraises` for more examples and detailed discussion."
-msgstr ""
+msgstr "詳細な議論と他の例については :ref:`assertraises` を参照してください。"
 
 #: _pytest.python_api.raises:106 of
 msgid "**Legacy form**"
-msgstr ""
+msgstr "**レガシーフォーム**"
 
 #: _pytest.python_api.raises:108 of
 msgid "It is possible to specify a callable by passing a to-be-called lambda::"
-msgstr ""
+msgstr "呼び出されるラムダを渡すことで、呼び出し可能なものを指定することができます::"
 
 #: _pytest.python_api.raises:113 of
 msgid "or you can specify an arbitrary callable with arguments::"
-msgstr ""
+msgstr "または、引数付きの任意の呼び出し可能なものを指定することもできます::"
 
 #: _pytest.python_api.raises:122 of
 msgid "The form above is fully supported but discouraged for new code because the context manager form is regarded as more readable and less error-prone."
-msgstr ""
+msgstr "上記の形式は完全にサポートされていますが、新しいコードには推奨されません。 コンテキストマネージャ形式の方が読みやすく、エラーが発生しにくいと考えられているためです。"
 
 #: _pytest.python_api.raises:126 of
 msgid "Similar to caught exception objects in Python, explicitly clearing local references to returned ``ExceptionInfo`` objects can help the Python interpreter speed up its garbage collection."
-msgstr ""
+msgstr "Python でキャッチされた例外オブジェクトと同様に、返された ``ExceptionInfo`` オブジェクトへのローカル参照を明示的にクリアすることで、Python インタープリタがガベージコレクションを高速化するのに役立ちます。"
 
 #: _pytest.python_api.raises:130 of
 msgid "Clearing those references breaks a reference cycle (``ExceptionInfo`` --> caught exception --> frame stack raising the exception --> current frame stack --> local variables --> ``ExceptionInfo``) which makes Python keep all objects referenced from that cycle (including all local variables in the current frame) alive until the next cyclic garbage collection run. More detailed information can be found in the official Python documentation for :ref:`the try statement <python:try>`."
-msgstr ""
+msgstr "これらの参照をクリアすることで、参照サイクル (``ExceptionInfo`` --> キャッチされた例外 --> 例外を発生させるフレームスタック --> 現在のフレームスタック --> ローカル変数 --> ``ExceptionInfo``) が破壊され、Python がそのサイクルから参照されるすべてのオブジェクト (現在のフレームのすべてのローカル変数を含む) を次の循環ガベージコレクション実行まで生きている状態に保ちます。 詳細な情報は、公式の Python ドキュメントの :ref:`the try statement <python:try>` にあります。"
 
 #: ../../reference/reference.rst:118
 msgid "pytest.deprecated_call"
-msgstr ""
+msgstr "pytest.deprecated_call"
 
 #: ../../reference/reference.rst:120
 msgid "**Tutorial**: :ref:`ensuring_function_triggers`"
-msgstr ""
+msgstr "**チュートリアル**: :ref:`ensuring_function_triggers`"
 
 #: _pytest.recwarn.deprecated_call:1 of
 msgid "Assert that code produces a ``DeprecationWarning`` or ``PendingDeprecationWarning`` or ``FutureWarning``."
-msgstr ""
+msgstr "コードが ``DeprecationWarning`` または ``PendingDeprecationWarning`` または ``FutureWarning`` を生成することをアサートします。"
 
 #: _pytest.recwarn.deprecated_call:3 _pytest.recwarn.warns:11 of
 msgid "This function can be used as a context manager::"
-msgstr ""
+msgstr "この関数はコンテキストマネージャとして使用できます::"
 
 #: _pytest.recwarn.deprecated_call:14 of
 msgid "It can also be used by passing a function and ``*args`` and ``**kwargs``, in which case it will ensure calling ``func(*args, **kwargs)`` produces one of the warnings types above. The return value is the return value of the function."
-msgstr ""
+msgstr "関数と ``*args`` および ``**kwargs`` を渡すことで使用することもできます。 この場合、``func(*args, **kwargs)`` を呼び出すと、上記のいずれかの警告タイプが生成されることを保証します。 戻り値は関数の戻り値です。"
 
 #: _pytest.recwarn.deprecated_call:18 of
 msgid "In the context manager form you may use the keyword argument ``match`` to assert that the warning matches a text or regex."
-msgstr ""
+msgstr "コンテキストマネージャ形式では、キーワード引数 ``match`` を使用して、警告がテキストまたは正規表現に一致することをアサートできます。"
 
 #: _pytest.recwarn.deprecated_call:21 of
 msgid "The context manager produces a list of :class:`warnings.WarningMessage` objects, one for each warning raised."
-msgstr ""
+msgstr "コンテキストマネージャは、発生した警告ごとに 1 つの :class:`warnings.WarningMessage` オブジェクトのリストを生成します。"
 
 #: ../../reference/reference.rst:126
 msgid "pytest.register_assert_rewrite"
-msgstr ""
+msgstr "pytest.register_assert_rewrite"
 
 #: ../../reference/reference.rst:128
 msgid "**Tutorial**: :ref:`assertion-rewriting`"
-msgstr ""
+msgstr "**チュートリアル**: :ref:`assertion-rewriting`"
 
 #: _pytest.assertion.register_assert_rewrite:1 of
 msgid "Register one or more module names to be rewritten on import."
-msgstr ""
+msgstr "インポート時に書き換えられる 1 つ以上のモジュール名を登録します。"
 
 #: _pytest.assertion.register_assert_rewrite:3 of
 msgid "This function will make sure that this module or all modules inside the package will get their assert statements rewritten. Thus you should make sure to call this before the module is actually imported, usually in your __init__.py if you are a plugin using a package."
-msgstr ""
+msgstr "この関数は、このモジュールまたはパッケージ内のすべてのモジュールがアサートステートメントが書き換えられるようにします。 したがって、通常はパッケージを使用するプラグインの __init__.py で実際にモジュールがインポートされる前にこれを呼び出すようにしてください。"
 
 #: _pytest.assertion.register_assert_rewrite:9 of
 msgid "The module names to register."
-msgstr ""
+msgstr "登録するモジュール名。"
 
 #: ../../reference/reference.rst:133
 msgid "pytest.warns"
-msgstr ""
+msgstr "pytest.warns"
 
 #: ../../reference/reference.rst:135
 msgid "**Tutorial**: :ref:`assertwarnings`"
-msgstr ""
+msgstr "**チュートリアル**: :ref:`assertwarnings`"
 
 #: _pytest.recwarn.warns:1 of
 msgid "Assert that code raises a particular class of warning."
-msgstr ""
+msgstr "コードが特定のクラスの警告を発生させることをアサートします。"
 
 #: _pytest.recwarn.warns:3 of
 msgid "Specifically, the parameter ``expected_warning`` can be a warning class or tuple of warning classes, and the code inside the ``with`` block must issue at least one warning of that class or classes."
-msgstr ""
+msgstr "具体的には、パラメータ ``expected_warning`` は警告クラスまたは警告クラスのタプルであり、``with`` ブロック内のコードは、そのクラスまたはクラスの少なくとも 1 つの警告を発行する必要があります。"
 
 #: _pytest.recwarn.warns:7 of
 msgid "This helper produces a list of :class:`warnings.WarningMessage` objects, one for each warning emitted (regardless of whether it is an ``expected_warning`` or not). Since pytest 8.0, unmatched warnings are also re-emitted when the context closes."
-msgstr ""
+msgstr "このヘルパーは、発行された警告ごとに 1 つの :class:`warnings.WarningMessage` オブジェクトのリストを生成します (``expected_warning`` であるかどうかに関係なく)。 pytest 8.0 以降、一致しない警告もコンテキストが閉じると再発行されます。"
 
 #: _pytest.recwarn.warns:17 of
 msgid "In the context manager form you may use the keyword argument ``match`` to assert that the warning matches a text or regex::"
-msgstr ""
+msgstr "コンテキストマネージャ形式では、キーワード引数 ``match`` を使用して、警告がテキストまたは正規表現に一致することをアサートできます::"
 
 #: _pytest.recwarn.warns:35 of
 msgid "When using :ref:`pytest.mark.parametrize ref` it is possible to parametrize tests such that some runs raise a warning and others do not."
-msgstr ""
+msgstr ":ref:`pytest.mark.parametrize ref` を使用すると、いくつかの実行で警告を発生させ、他の実行では発生させないようにテストをパラメータ化することが可能です。"
 
 #: _pytest.recwarn.warns:38 of
 msgid "This could be achieved in the same way as with exceptions, see :ref:`parametrizing_conditional_raising` for an example."
-msgstr ""
+msgstr "これは例外と同じ方法で達成できます。 例については :ref:`parametrizing_conditional_raising` を参照してください。"
 
 #: ../../reference/reference.rst:141
 msgid "pytest.freeze_includes"
-msgstr ""
+msgstr "pytest.freeze_includes"
 
 #: ../../reference/reference.rst:143
 msgid "**Tutorial**: :ref:`freezing-pytest`"
-msgstr ""
+msgstr "**チュートリアル**: :ref:`freezing-pytest`"
 
 #: _pytest.freeze_support.freeze_includes:1 of
 msgid "Return a list of module names used by pytest that should be included by cx_freeze."
-msgstr ""
+msgstr "cx_freeze によって含まれるべき pytest で使用されるモジュール名のリストを返します。"
 
 #: ../../reference/reference.rst:150
 msgid "Marks"
-msgstr ""
+msgstr "マーク"
 
 #: ../../reference/reference.rst:152
 msgid "Marks can be used to apply metadata to *test functions* (but not fixtures), which can then be accessed by fixtures or plugins."
-msgstr ""
+msgstr "マークは、*テスト関数* (ただしフィクスチャではない) にメタデータを適用するために使用でき、その後フィクスチャやプラグインからアクセスできます。"
 
 #: ../../reference/reference.rst:161
 msgid "pytest.mark.filterwarnings"
-msgstr ""
+msgstr "pytest.mark.filterwarnings"
 
 #: ../../reference/reference.rst:163
 msgid "**Tutorial**: :ref:`filterwarnings`"
-msgstr ""
+msgstr "**チュートリアル**: :ref:`filterwarnings`"
 
 #: ../../reference/reference.rst:165
 msgid "Add warning filters to marked test items."
-msgstr ""
+msgstr "マークされたテスト項目に警告フィルタを追加します。"
 
 #: ../../reference/reference.rst:169
 msgid "A *warning specification string*, which is composed of contents of the tuple ``(action, message, category, module, lineno)`` as specified in :ref:`python:warning-filter` section of the Python documentation, separated by ``\":\"``. Optional fields can be omitted. Module names passed for filtering are not regex-escaped.  For example:  .. code-block:: python      @pytest.mark.filterwarnings(\"ignore:.*usage will be deprecated.*:DeprecationWarning\")     def test_foo(): ..."
-msgstr ""
+msgstr "*警告仕様文字列* は、Python ドキュメントの :ref:`python:warning-filter` セクションで指定されている ``(action, message, category, module, lineno)`` のタプルの内容で構成され、``\":\"`` で区切られます。 オプションのフィールドは省略できます。 フィルタリングに渡されるモジュール名は正規表現でエスケープされません。  例:  .. code-block:: python      @pytest.mark.filterwarnings(\"ignore:.*usage will be deprecated.*:DeprecationWarning\")     def test_foo(): ..."
 
 #: ../../reference/reference.rst:170
 msgid "A *warning specification string*, which is composed of contents of the tuple ``(action, message, category, module, lineno)`` as specified in :ref:`python:warning-filter` section of the Python documentation, separated by ``\":\"``. Optional fields can be omitted. Module names passed for filtering are not regex-escaped."
-msgstr ""
+msgstr "*警告仕様文字列* は、Python ドキュメントの :ref:`python:warning-filter` セクションで指定されている ``(action, message, category, module, lineno)`` のタプルの内容で構成され、``\":\"`` で区切られます。 オプションのフィールドは省略できます。 フィルタリングに渡されるモジュール名は正規表現でエスケープされません。"
 
 #: ../../reference/reference.rst:175 ../../reference/reference.rst:287
 #: _pytest.monkeypatch.MonkeyPatch.setattr:3 of
 msgid "For example:"
-msgstr ""
+msgstr "例:"
 
 #: ../../reference/reference.rst:186
 msgid "pytest.mark.parametrize"
-msgstr ""
+msgstr "pytest.mark.parametrize"
 
 #: ../../reference/reference.rst:188
 msgid "**Tutorial**: :ref:`parametrize`"
-msgstr ""
+msgstr "**チュートリアル**: :ref:`parametrize`"
 
 #: ../../reference/reference.rst:190
 msgid "This mark has the same signature as :py:meth:`pytest.Metafunc.parametrize`; see there."
-msgstr ""
+msgstr "このマークは :py:meth:`pytest.Metafunc.parametrize` と同じシグネチャを持っています。 そちらを参照してください。"
 
 #: ../../reference/reference.rst:196
 msgid "pytest.mark.skip"
-msgstr ""
+msgstr "pytest.mark.skip"
 
 #: ../../reference/reference.rst:198
 msgid "**Tutorial**: :ref:`skip`"
-msgstr ""
+msgstr "**チュートリアル**: :ref:`skip`"
 
 #: ../../reference/reference.rst:200
 msgid "Unconditionally skip a test function."
-msgstr ""
+msgstr "テスト関数を無条件でスキップします。"
 
 #: ../../reference/reference.rst:204 ../../reference/reference.rst:220
 msgid "Reason why the test function is being skipped."
-msgstr ""
+msgstr "テスト関数がスキップされる理由。"
 
 #: ../../reference/reference.rst:210
 msgid "pytest.mark.skipif"
-msgstr ""
+msgstr "pytest.mark.skipif"
 
 #: ../../reference/reference.rst:212
 msgid "**Tutorial**: :ref:`skipif`"
-msgstr ""
+msgstr "**チュートリアル**: :ref:`skipif`"
 
 #: ../../reference/reference.rst:214
 msgid "Skip a test function if a condition is ``True``."
-msgstr ""
+msgstr "条件が ``True`` の場合、テスト関数をスキップします。"
 
 #: ../../reference/reference.rst:219
 msgid "``True/False`` if the condition should be skipped or a :ref:`condition string <string conditions>`."
-msgstr ""
+msgstr "条件がスキップされるべきかどうかの ``True/False`` または :ref:`condition string <string conditions>`。"
 
 #: ../../reference/reference.rst:226
 msgid "pytest.mark.usefixtures"
-msgstr ""
+msgstr "pytest.mark.usefixtures"
 
 #: ../../reference/reference.rst:228
 msgid "**Tutorial**: :ref:`usefixtures`"
-msgstr ""
+msgstr "**チュートリアル**: :ref:`usefixtures`"
 
 #: ../../reference/reference.rst:230
 msgid "Mark a test function as using the given fixture names."
-msgstr ""
+msgstr "テスト関数を指定されたフィクスチャ名を使用するようにマークします。"
 
 #: ../../reference/reference.rst:234
 msgid "The names of the fixture to use, as strings."
-msgstr ""
+msgstr "フィクスチャの名前。 文字列として。"
 
 #: ../../reference/reference.rst:238
 msgid "When using `usefixtures` in hooks, it can only load fixtures when applied to a test function before test setup (for example in the `pytest_collection_modifyitems` hook)."
-msgstr ""
+msgstr "フックで `usefixtures` を使用する場合、テストセットアップ前のテスト関数に適用されるときのみフィクスチャをロードできます (たとえば `pytest_collection_modifyitems` フックで)。"
 
 #: ../../reference/reference.rst:241
 msgid "Also note that this mark has no effect when applied to **fixtures**."
-msgstr ""
+msgstr "また、このマークは **フィクスチャ** に適用された場合には効果がありません。"
 
 #: ../../reference/reference.rst:248
 msgid "pytest.mark.xfail"
-msgstr ""
+msgstr "pytest.mark.xfail"
 
 #: ../../reference/reference.rst:250
 msgid "**Tutorial**: :ref:`xfail`"
-msgstr ""
+msgstr "**チュートリアル**: :ref:`xfail`"
 
 #: ../../reference/reference.rst:252
 msgid "Marks a test function as *expected to fail*."
-msgstr ""
+msgstr "テスト関数を *失敗することが期待される* としてマークします。"
 
 #: ../../reference/reference.rst:256
 msgid "Condition for marking the test function as xfail (``True/False`` or a :ref:`condition string <string conditions>`). If a ``bool``, you also have to specify ``reason`` (see :ref:`condition string <string conditions>`)."
-msgstr ""
+msgstr "テスト関数を xfail としてマークする条件 (``True/False`` または :ref:`condition string <string conditions>`)。 ``bool`` の場合は ``reason`` も指定する必要があります (:ref:`condition string <string conditions>` を参照)。"
 
 #: ../../reference/reference.rst:260
 msgid "Reason why the test function is marked as xfail."
-msgstr ""
+msgstr "テスト関数が xfail としてマークされる理由。"
 
 #: ../../reference/reference.rst:262
 msgid "Exception class (or tuple of classes) expected to be raised by the test function; other exceptions will fail the test. Note that subclasses of the classes passed will also result in a match (similar to how the ``except`` statement works)."
-msgstr ""
+msgstr "テスト関数によって発生することが期待される例外クラス (またはクラスのタプル)。 他の例外はテストに失敗します。 渡されたクラスのサブクラスも一致する結果になることに注意してください (``except`` ステートメントの動作と同様)。"
 
 #: ../../reference/reference.rst:267
 msgid "Whether the test function should actually be executed. If ``False``, the function will always xfail and will not be executed (useful if a function is segfaulting)."
-msgstr ""
+msgstr "テスト関数が実際に実行されるべきかどうか。 ``False`` の場合、関数は常に xfail となり、実行されません (関数がセグフォルトしている場合に便利です)。"
 
 #: ../../reference/reference.rst:270
 msgid "* If ``False`` the function will be shown in the terminal output as ``xfailed`` if it fails   and as ``xpass`` if it passes. In both cases this will not cause the test suite to fail as a whole. This   is particularly useful to mark *flaky* tests (tests that fail at random) to be tackled later. * If ``True``, the function will be shown in the terminal output as ``xfailed`` if it fails, but if it   unexpectedly passes then it will **fail** the test suite. This is particularly useful to mark functions   that are always failing and there should be a clear indication if they unexpectedly start to pass (for example   a new release of a library fixes a known bug).  Defaults to :confval:`xfail_strict`, which is ``False`` by default."
-msgstr ""
+msgstr "* ``False`` の場合、関数はターミナル出力に ``xfailed`` として表示され、失敗した場合は ``xpass`` として表示されます。  どちらの場合も、これはテストスイート全体を失敗させることはありません。  これは、後で対処するために *flaky* テスト (ランダムに失敗するテスト) をマークするのに特に便利です。 * ``True`` の場合、関数は失敗した場合に ``xfailed`` としてターミナル出力に表示されますが、  予期せずにパスした場合はテストスイートを **失敗** させます。  これは、常に失敗する関数をマークし、予期せずにパスし始めた場合には明確な指示があるべきである関数をマークするのに特に便利です (たとえば、新しいリリースで既知のバグが修正された場合)。  デフォルトは :confval:`xfail_strict` で、デフォルトは ``False`` です。"
 
 #: ../../reference/reference.rst:271
 msgid "If ``False`` the function will be shown in the terminal output as ``xfailed`` if it fails and as ``xpass`` if it passes. In both cases this will not cause the test suite to fail as a whole. This is particularly useful to mark *flaky* tests (tests that fail at random) to be tackled later."
-msgstr ""
+msgstr "``False`` の場合、関数はターミナル出力に ``xfailed`` として表示され、失敗した場合は ``xpass`` として表示されます。 どちらの場合も、これはテストスイート全体を失敗させることはありません。 これは、後で対処するために *flaky* テスト (ランダムに失敗するテスト) をマークするのに特に便利です。"
 
 #: ../../reference/reference.rst:274
 msgid "If ``True``, the function will be shown in the terminal output as ``xfailed`` if it fails, but if it unexpectedly passes then it will **fail** the test suite. This is particularly useful to mark functions that are always failing and there should be a clear indication if they unexpectedly start to pass (for example a new release of a library fixes a known bug)."
-msgstr ""
+msgstr "``True`` の場合、関数は失敗した場合に ``xfailed`` としてターミナル出力に表示されますが、予期せずにパスした場合はテストスイートを **失敗** させます。 これは、常に失敗する関数をマークし、予期せずにパスし始めた場合には明確な指示があるべきである関数をマークするのに特に便利です (たとえば、新しいリリースで既知のバグが修正された場合)。"
 
 #: ../../reference/reference.rst:279
 msgid "Defaults to :confval:`xfail_strict`, which is ``False`` by default."
-msgstr ""
+msgstr "デフォルトは :confval:`xfail_strict` で、デフォルトは ``False`` です。"
 
 #: ../../reference/reference.rst:283
 msgid "Custom marks"
-msgstr ""
+msgstr "カスタムマーク"
 
 #: ../../reference/reference.rst:285
 msgid "Marks are created dynamically using the factory object ``pytest.mark`` and applied as a decorator."
-msgstr ""
+msgstr "マークは、ファクトリオブジェクト ``pytest.mark`` を使用して動的に作成され、デコレータとして適用されます。"
 
 #: ../../reference/reference.rst:294
 msgid "Will create and attach a :class:`Mark <pytest.Mark>` object to the collected :class:`Item <pytest.Item>`, which can then be accessed by fixtures or hooks with :meth:`Node.iter_markers <_pytest.nodes.Node.iter_markers>`. The ``mark`` object will have the following attributes:"
-msgstr ""
+msgstr "収集された :class:`Item <pytest.Item>` に :class:`Mark <pytest.Mark>` オブジェクトを作成してアタッチし、その後、フィクスチャやフックで :meth:`Node.iter_markers <_pytest.nodes.Node.iter_markers>` を使用してアクセスできます。 ``mark`` オブジェクトには以下の属性があります:"
 
 #: ../../reference/reference.rst:303
 msgid "Example for using multiple custom markers:"
-msgstr ""
+msgstr "複数のカスタムマーカーを使用する例:"
 
 #: ../../reference/reference.rst:311
 msgid "When :meth:`Node.iter_markers <_pytest.nodes.Node.iter_markers>` or :meth:`Node.iter_markers_with_node <_pytest.nodes.Node.iter_markers_with_node>` is used with multiple markers, the marker closest to the function will be iterated over first. The above example will result in ``@pytest.mark.slow`` followed by ``@pytest.mark.timeout(...)``."
-msgstr ""
+msgstr ":meth:`Node.iter_markers <_pytest.nodes.Node.iter_markers>` または :meth:`Node.iter_markers_with_node <_pytest.nodes.Node.iter_markers_with_node>` が複数のマーカーで使用されると、関数に最も近いマーカーが最初に反復されます。 上記の例では、``@pytest.mark.slow`` が最初に続いて ``@pytest.mark.timeout(...)`` になります。"
 
 #: ../../reference/reference.rst:316
 msgid "Fixtures"
@@ -4873,55 +4873,55 @@ msgstr ""
 
 #: _pytest.python.Metafunc.parametrize:1 of
 msgid "Add new invocations to the underlying test function using the list of argvalues for the given argnames. Parametrization is performed during the collection phase. If you need to setup expensive resources see about setting indirect to do it rather than at test setup time."
-msgstr ""
+msgstr "指定された argnames に対して argvalues のリストを使用して基になるテスト関数に新しい呼び出しを追加します。 パラメータ化は収集フェーズ中に実行されます。 高価なリソースをセットアップする必要がある場合は、テストのセットアップ時ではなく、それを行うために indirect を設定することについて調べてください。"
 
 #: _pytest.python.Metafunc.parametrize:6 of
 msgid "Can be called multiple times per test function (but only on different argument names), in which case each call parametrizes all previous parametrizations, e.g."
-msgstr ""
+msgstr "テスト関数ごとに複数回呼び出すことができます (ただし、異なる引数名のみ) 、この場合、各呼び出しはすべての前のパラメータ化をパラメータ化します。 例："
 
 #: _pytest.python.Metafunc.parametrize:16 of
 msgid "A comma-separated string denoting one or more argument names, or a list/tuple of argument strings."
-msgstr ""
+msgstr "1 つ以上の引数名を示すカンマ区切りの文字列、または引数文字列のリスト/タプル。"
 
 #: _pytest.python.Metafunc.parametrize:20 of
 msgid "The list of argvalues determines how often a test is invoked with different argument values.  If only one argname was specified argvalues is a list of values. If N argnames were specified, argvalues must be a list of N-tuples, where each tuple-element specifies a value for its respective argname."
-msgstr ""
+msgstr "argvalues のリストは、テストが異なる引数値で呼び出される回数を決定します。 1 つの argname のみが指定された場合、argvalues は値のリストです。  N 個の argnames が指定された場合、argvalues は N-タプルのリストでなければなりません。 各タプル要素は、それぞれの argname の値を指定します。"
 
 #: _pytest.python.Metafunc.parametrize:21 of
 msgid "The list of argvalues determines how often a test is invoked with different argument values."
-msgstr ""
+msgstr "argvalues のリストは、テストが異なる引数値で呼び出される回数を決定します。"
 
 #: _pytest.python.Metafunc.parametrize:24 of
 msgid "If only one argname was specified argvalues is a list of values. If N argnames were specified, argvalues must be a list of N-tuples, where each tuple-element specifies a value for its respective argname."
-msgstr ""
+msgstr "1 つの argname のみが指定された場合、argvalues は値のリストです。 N 個の argnames が指定された場合、argvalues は N-タプルのリストでなければなりません。 各タプル要素は、それぞれの argname の値を指定します。"
 
 #: _pytest.python.Metafunc.parametrize:29 of
 msgid "A list of arguments' names (subset of argnames) or a boolean. If True the list contains all names from the argnames. Each argvalue corresponding to an argname in this list will be passed as request.param to its respective argname fixture function so that it can perform more expensive setups during the setup phase of a test rather than at collection time."
-msgstr ""
+msgstr "引数名のリスト (argnames の部分集合) またはブール値。 True の場合、リストには argnames のすべての名前が含まれます。 このリスト内の argname に対応する各 argvalue は、それぞれの argname フィクスチャ関数に request.param として渡されるため、テストのセットアップフェーズではなく収集時により高価なセットアップを行うことができます。"
 
 #: _pytest.python.Metafunc.parametrize:37 of
 msgid "Sequence of (or generator for) ids for ``argvalues``, or a callable to return part of the id for each argvalue.  With sequences (and generators like ``itertools.count()``) the returned ids should be of type ``string``, ``int``, ``float``, ``bool``, or ``None``. They are mapped to the corresponding index in ``argvalues``. ``None`` means to use the auto-generated id.  If it is a callable it will be called for each entry in ``argvalues``, and the return value is used as part of the auto-generated id for the whole set (where parts are joined with dashes (\"-\")). This is useful to provide more specific ids for certain items, e.g. dates.  Returning ``None`` will use an auto-generated id.  If no ids are provided they will be generated automatically from the argvalues."
-msgstr ""
+msgstr "``argvalues`` の id のシーケンス (またはジェネレータ) または各 argvalue の id の一部を返すための呼び出し可能オブジェクト。 シーケンス (および ``itertools.count()`` のようなジェネレータ) の場合、返される id は ``string``、``int``、``float``、``bool``、または ``None`` の型である必要があります。 これらは ``argvalues`` の対応するインデックスにマップされます。 ``None`` は自動生成された id を使用することを意味します。 呼び出し可能オブジェクトの場合、``argvalues`` の各エントリに対して呼び出され、返された値は、セット全体の自動生成された id の一部として使用されます (部分はダッシュ (\"-\") で結合されます) 。 これは、特定のアイテムに対してより具体的な id を提供するために便利です。 たとえば、日付。 ``None`` を返すと、自動生成された id が使用されます。 id が提供されていない場合、argvalues から自動的に生成されます。"
 
 #: _pytest.python.Metafunc.parametrize:38 of
 msgid "Sequence of (or generator for) ids for ``argvalues``, or a callable to return part of the id for each argvalue."
-msgstr ""
+msgstr "``argvalues`` の id のシーケンス (またはジェネレータ) または各 argvalue の id の一部を返すための呼び出し可能オブジェクト。"
 
 #: _pytest.python.Metafunc.parametrize:41 of
 msgid "With sequences (and generators like ``itertools.count()``) the returned ids should be of type ``string``, ``int``, ``float``, ``bool``, or ``None``. They are mapped to the corresponding index in ``argvalues``. ``None`` means to use the auto-generated id."
-msgstr ""
+msgstr "シーケンス (および ``itertools.count()`` のようなジェネレータ) の場合、返される id は ``string``、``int``、``float``、``bool``、または ``None`` の型である必要があります。 これらは ``argvalues`` の対応するインデックスにマップされます。 ``None`` は自動生成された id を使用することを意味します。"
 
 #: _pytest.python.Metafunc.parametrize:47 of
 msgid "If it is a callable it will be called for each entry in ``argvalues``, and the return value is used as part of the auto-generated id for the whole set (where parts are joined with dashes (\"-\")). This is useful to provide more specific ids for certain items, e.g. dates.  Returning ``None`` will use an auto-generated id."
-msgstr ""
+msgstr "呼び出し可能オブジェクトの場合、``argvalues`` の各エントリに対して呼び出され、返された値は、セット全体の自動生成された id の一部として使用されます (部分はダッシュ (\"-\") で結合されます) 。 これは、特定のアイテムに対してより具体的な id を提供するために便利です。 たとえば、日付。 ``None`` を返すと、自動生成された id が使用されます。"
 
 #: _pytest.python.Metafunc.parametrize:54 of
 msgid "If no ids are provided they will be generated automatically from the argvalues."
-msgstr ""
+msgstr "id が提供されていない場合、argvalues から自動的に生成されます。"
 
 #: _pytest.python.Metafunc.parametrize:57 of
 msgid "If specified it denotes the scope of the parameters. The scope is used for grouping tests by parameter instances. It will also override any fixture-function defined scope, allowing to set a dynamic scope using test context or configuration."
-msgstr ""
+msgstr "指定されている場合、パラメータのスコープを示します。 スコープは、パラメータインスタンスごとにテストをグループ化するために使用されます。 これは、フィクスチャ関数で定義されたスコープを上書きし、テストコンテキストや構成を使用して動的スコープを設定することができます。"
 
 #: ../../reference/reference.rst:997
 msgid "Parser"
