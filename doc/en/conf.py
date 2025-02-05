@@ -299,3 +299,9 @@ def setup(app: sphinx.application.Sphinx) -> None:
     # legacypath.py monkey-patches pytest.Testdir in. Import the file so
     # that autodoc can discover references to it.
     import _pytest.legacypath  # noqa: F401
+
+# -- Options for internationalisation ----------------------------------------
+# https://www.sphinx-doc.org/en/master/usage/configuration.html#options-for-internationalisation
+
+locale_dirs = ["locales/"]
+gettext_compact = False
