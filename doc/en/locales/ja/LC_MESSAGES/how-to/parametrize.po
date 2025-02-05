@@ -45,7 +45,7 @@ msgstr "``@pytest.mark.parametrize``：テスト関数のパラメータ化"
 
 #: ../../how-to/parametrize.rst:36
 msgid "The builtin :ref:`pytest.mark.parametrize ref` decorator enables parametrization of arguments for a test function.  Here is a typical example of a test function that implements checking that a certain input leads to an expected output:"
-msgstr "組み込みの :ref:`pytest.mark.parametrize ref` デコレータを使用すると、テスト関数の引数をパラメータ化できます。以下は、特定の入力が期待される出力をもたらすことを確認するテスト関数の典型的な例です："
+msgstr "組み込みの :ref:`pytest.mark.parametrize ref` デコレータを使用すると、テスト関数の引数をパラメータ化できます。 以下は、特定の入力が期待される出力をもたらすことを確認するテスト関数の典型的な例です："
 
 #: ../../how-to/parametrize.rst:51
 msgid "Here, the ``@parametrize`` decorator defines three different ``(test_input,expected)`` tuples so that the ``test_eval`` function will run three times using them in turn:"
@@ -61,7 +61,7 @@ msgstr "例えば、リストや辞書をパラメータ値として渡し、テ
 
 #: ../../how-to/parametrize.rst:91
 msgid "pytest by default escapes any non-ascii characters used in unicode strings for the parametrization because it has several downsides. If however you would like to use unicode strings in parametrization and see them in the terminal as is (non-escaped), use this option in your ``pytest.ini``:"
-msgstr "pytest はデフォルトでパラメータ化に使用されるユニコード文字列の非ASCII文字をエスケープしますが、これはいくつかの欠点があります。ただし、パラメータ化でユニコード文字列を使用し、ターミナルでそのまま (エスケープされずに) 表示したい場合は、``pytest.ini`` にこのオプションを使用してください："
+msgstr "pytest はデフォルトでパラメータ化に使用されるユニコード文字列の非ASCII文字をエスケープしますが、これはいくつかの欠点があります。 ただし、パラメータ化でユニコード文字列を使用し、ターミナルでそのまま (エスケープされずに) 表示したい場合は、``pytest.ini`` にこのオプションを使用してください："
 
 #: ../../how-to/parametrize.rst:102
 msgid "Keep in mind however that this might cause unwanted side effects and even bugs depending on the OS used and plugins currently installed, so use it at your own risk."
@@ -69,11 +69,11 @@ msgstr "ただし、これにより使用するOSや現在インストールさ�
 
 #: ../../how-to/parametrize.rst:107
 msgid "As designed in this example, only one pair of input/output values fails the simple test function.  And as usual with test function arguments, you can see the ``input`` and ``output`` values in the traceback."
-msgstr "この例で設計されているように、入力/出力値のペアのうち1つだけが単純なテスト関数に失敗します。そして、通常のテスト関数の引数と同様に、トレースバックで ``input`` と ``output`` の値を確認できます。"
+msgstr "この例で設計されているように、入力/出力値のペアのうち1つだけが単純なテスト関数に失敗します。 そして、通常のテスト関数の引数と同様に、トレースバックで ``input`` と ``output`` の値を確認できます。"
 
 #: ../../how-to/parametrize.rst:111
 msgid "Note that you could also use the parametrize marker on a class or a module (see :ref:`mark`) which would invoke several functions with the argument sets, for instance:"
-msgstr "クラスやモジュールにパラメータ化マーカーを使用することもでき (:ref:`mark` を参照) 、引数セットで複数の関数を呼び出すことができます。例えば："
+msgstr "クラスやモジュールにパラメータ化マーカーを使用することもでき (:ref:`mark` を参照) 、引数セットで複数の関数を呼び出すことができます。 例えば："
 
 #: ../../how-to/parametrize.rst:130
 msgid "To parametrize all tests in a module, you can assign to the :globalvar:`pytestmark` global variable:"
@@ -81,7 +81,7 @@ msgstr "モジュール内のすべてのテストをパラメータ化するに
 
 #: ../../how-to/parametrize.rst:148
 msgid "It is also possible to mark individual test instances within parametrize, for example with the builtin ``mark.xfail``:"
-msgstr "また、パラメータ化内で個々のテストインスタンスにマークを付けることも可能です。例えば、組み込みの ``mark.xfail`` を使用します："
+msgstr "また、パラメータ化内で個々のテストインスタンスにマークを付けることも可能です。 例えば、組み込みの ``mark.xfail`` を使用します："
 
 #: ../../how-to/parametrize.rst:164
 msgid "Let's run this:"
@@ -109,11 +109,11 @@ msgstr "基本的な ``pytest_generate_tests`` の例"
 
 #: ../../how-to/parametrize.rst:206
 msgid "Sometimes you may want to implement your own parametrization scheme or implement some dynamism for determining the parameters or scope of a fixture.   For this, you can use the ``pytest_generate_tests`` hook which is called when collecting a test function.  Through the passed in ``metafunc`` object you can inspect the requesting test context and, most importantly, you can call ``metafunc.parametrize()`` to cause parametrization."
-msgstr "場合によっては、独自のパラメータ化スキームを実装したり、フィクスチャのパラメータやスコープを決定するための動的な要素を実装したりすることがあるかもしれません。そのためには、テスト関数を収集する際に呼び出される ``pytest_generate_tests`` フックを使用できます。渡された ``metafunc`` オブジェクトを通じて、要求されたテストコンテキストを検査し、最も重要なこととして、``metafunc.parametrize()`` を呼び出してパラメータ化を引き起こすことができます。"
+msgstr "場合によっては、独自のパラメータ化スキームを実装したり、フィクスチャのパラメータやスコープを決定するための動的な要素を実装したりすることがあるかもしれません。 そのためには、テスト関数を収集する際に呼び出される ``pytest_generate_tests`` フックを使用できます。 渡された ``metafunc`` オブジェクトを通じて、要求されたテストコンテキストを検査し、最も重要なこととして、``metafunc.parametrize()`` を呼び出してパラメータ化を引き起こすことができます。"
 
 #: ../../how-to/parametrize.rst:214
 msgid "For example, let's say we want to run a test taking string inputs which we want to set via a new ``pytest`` command line option.  Let's first write a simple test accepting a ``stringinput`` fixture function argument:"
-msgstr "例えば、新しい ``pytest`` コマンドラインオプションを介して設定したい文字列入力を受け取るテストを実行したいとしましょう。まず、``stringinput`` フィクスチャ関数引数を受け入れる簡単なテストを書いてみましょう："
+msgstr "例えば、新しい ``pytest`` コマンドラインオプションを介して設定したい文字列入力を受け取るテストを実行したいとしましょう。 まず、``stringinput`` フィクスチャ関数引数を受け入れる簡単なテストを書いてみましょう："
 
 #: ../../how-to/parametrize.rst:226
 msgid "Now we add a ``conftest.py`` file containing the addition of a command line option and the parametrization of our test function:"
@@ -137,7 +137,7 @@ msgstr "stringinput を指定しない場合、``metafunc.parametrize()`` が空
 
 #: ../../how-to/parametrize.rst:291
 msgid "Note that when calling ``metafunc.parametrize`` multiple times with different parameter sets, all parameter names across those sets cannot be duplicated, otherwise an error will be raised."
-msgstr "異なるパラメータセットで ``metafunc.parametrize`` を複数回呼び出す場合、それらのセット全体でパラメータ名を重複させることはできません。そうしないとエラーが発生します。"
+msgstr "異なるパラメータセットで ``metafunc.parametrize`` を複数回呼び出す場合、それらのセット全体でパラメータ名を重複させることはできません。 そうしないとエラーが発生します。"
 
 #: ../../how-to/parametrize.rst:295
 msgid "More examples"

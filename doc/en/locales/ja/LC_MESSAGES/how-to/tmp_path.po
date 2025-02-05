@@ -33,15 +33,15 @@ msgstr "``tmp_path`` フィクスチャを使用すると、各テスト関数�
 
 #: ../../how-to/tmp_path.rst:14
 msgid "``tmp_path`` is a :class:`pathlib.Path` object. Here is an example test usage:"
-msgstr "``tmp_path`` は :class:`pathlib.Path` オブジェクトです。以下はテスト使用例です："
+msgstr "``tmp_path`` は :class:`pathlib.Path` オブジェクトです。 以下はテスト使用例です："
 
 #: ../../how-to/tmp_path.rst:31
 msgid "Running this would result in a passed test except for the last ``assert 0`` line which we use to look at values:"
-msgstr "これを実行すると、最後の ``assert 0`` 行を除いてテストは合格します。これは値を確認するために使用します："
+msgstr "これを実行すると、最後の ``assert 0`` 行を除いてテストは合格します。 これは値を確認するために使用します："
 
 #: ../../how-to/tmp_path.rst:64
 msgid "By default, ``pytest`` retains the temporary directory for the last 3 ``pytest`` invocations. Concurrent invocations of the same test function are supported by configuring the base temporary directory to be unique for each concurrent run. See `temporary directory location and retention`_ for details."
-msgstr "デフォルトでは、``pytest`` は最後の 3 回の ``pytest`` 呼び出しのために一時ディレクトリを保持します。同じテスト関数の同時呼び出しは、各同時実行のためにベースの一時ディレクトリを一意に設定することでサポートされます。詳細は `temporary directory location and retention`_ を参照してください。"
+msgstr "デフォルトでは、``pytest`` は最後の 3 回の ``pytest`` 呼び出しのために一時ディレクトリを保持します。 同じテスト関数の同時呼び出しは、各同時実行のためにベースの一時ディレクトリを一意に設定することでサポートされます。 詳細は `temporary directory location and retention`_ を参照してください。"
 
 #: ../../how-to/tmp_path.rst:72
 msgid "The ``tmp_path_factory`` fixture"
@@ -53,7 +53,7 @@ msgstr "``tmp_path_factory`` はセッションスコープのフィクスチャ
 
 #: ../../how-to/tmp_path.rst:77
 msgid "For example, suppose your test suite needs a large image on disk, which is generated procedurally. Instead of computing the same image for each test that uses it into its own ``tmp_path``, you can generate it once per-session to save time:"
-msgstr "例えば、テストスイートがディスク上に大きな画像を必要とし、それが手続き的に生成されるとします。同じ画像を各テストで ``tmp_path`` に計算する代わりに、セッションごとに一度生成して時間を節約できます："
+msgstr "例えば、テストスイートがディスク上に大きな画像を必要とし、それが手続き的に生成されるとします。 同じ画像を各テストで ``tmp_path`` に計算する代わりに、セッションごとに一度生成して時間を節約できます："
 
 #: ../../how-to/tmp_path.rst:101
 msgid "See :ref:`tmp_path_factory API <tmp_path_factory factory api>` for details."
@@ -77,7 +77,7 @@ msgstr "古いコードベースを最新化するために、legacypath プラ�
 
 #: ../../how-to/tmp_path.rst:123
 msgid "This will trigger errors on tests using the legacy paths. It can also be permanently set as part of the :confval:`addopts` parameter in the config file."
-msgstr "これにより、レガシーパスを使用するテストでエラーが発生します。また、設定ファイルの :confval:`addopts` パラメータの一部として永続的に設定することもできます。"
+msgstr "これにより、レガシーパスを使用するテストでエラーが発生します。 また、設定ファイルの :confval:`addopts` パラメータの一部として永続的に設定することもできます。"
 
 #: ../../how-to/tmp_path.rst:127
 msgid "See :fixture:`tmpdir <tmpdir>` :fixture:`tmpdir_factory <tmpdir_factory>` API for details."
@@ -102,7 +102,7 @@ msgstr "ここで："
 #: ../../how-to/tmp_path.rst:150
 #, python-brace-format
 msgid "``{temproot}`` is the system temporary directory as determined by :py:func:`tempfile.gettempdir`. It can be overridden by the :envvar:`PYTEST_DEBUG_TEMPROOT` environment variable."
-msgstr "``{temproot}`` は :py:func:`tempfile.gettempdir` によって決定されるシステムの一時ディレクトリです。これは :envvar:`PYTEST_DEBUG_TEMPROOT` 環境変数で上書きできます。"
+msgstr "``{temproot}`` は :py:func:`tempfile.gettempdir` によって決定されるシステムの一時ディレクトリです。 これは :envvar:`PYTEST_DEBUG_TEMPROOT` 環境変数で上書きできます。"
 
 #: ../../how-to/tmp_path.rst:153
 #, python-brace-format
@@ -122,7 +122,7 @@ msgstr "``{testname}`` は :py:attr:`現在のテストの名前 <_pytest.nodes.
 #: ../../how-to/tmp_path.rst:157
 #, python-brace-format
 msgid "The auto-incrementing ``{num}`` placeholder provides a basic retention feature and avoids that existing results of previous test runs are blindly removed. By default, the last 3 temporary directories are kept, but this behavior can be configured with :confval:`tmp_path_retention_count` and :confval:`tmp_path_retention_policy`."
-msgstr "自動インクリメントされる ``{num}`` プレースホルダーは基本的な保持機能を提供し、以前のテスト実行の既存の結果が盲目的に削除されるのを防ぎます。デフォルトでは、最後の 3 つの一時ディレクトリが保持されますが、この動作は :confval:`tmp_path_retention_count` および :confval:`tmp_path_retention_policy` で構成できます。"
+msgstr "自動インクリメントされる ``{num}`` プレースホルダーは基本的な保持機能を提供し、以前のテスト実行の既存の結果が盲目的に削除されるのを防ぎます。 デフォルトでは、最後の 3 つの一時ディレクトリが保持されますが、この動作は :confval:`tmp_path_retention_count` および :confval:`tmp_path_retention_policy` で構成できます。"
 
 #: ../../how-to/tmp_path.rst:163
 msgid "When the ``--basetemp`` option is used (e.g. ``pytest --basetemp=mydir``), it will be used directly as base temporary directory:"
@@ -130,7 +130,7 @@ msgstr "``--basetemp`` オプションが使用される場合 (例：``pytest -
 
 #: ../../how-to/tmp_path.rst:170
 msgid "Note that there is no retention feature in this case: only the results of the most recent run will be kept."
-msgstr "この場合、保持機能はありません。最新の実行結果のみが保持されます。"
+msgstr "この場合、保持機能はありません。 最新の実行結果のみが保持されます。"
 
 #: ../../how-to/tmp_path.rst:175
 msgid "The directory given to ``--basetemp`` will be cleared blindly before each test run, so make sure to use a directory for that purpose only."

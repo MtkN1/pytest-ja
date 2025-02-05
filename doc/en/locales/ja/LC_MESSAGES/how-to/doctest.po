@@ -25,11 +25,11 @@ msgstr "doctest を実行する方法"
 
 #: ../../how-to/doctest.rst:6
 msgid "By default, all files matching the ``test*.txt`` pattern will be run through the python standard :mod:`doctest` module.  You can change the pattern by issuing:"
-msgstr "デフォルトでは、``test*.txt`` パターンに一致するすべてのファイルが Python 標準の :mod:`doctest` モジュールを通じて実行されます。パターンを変更するには、次のコマンドを発行します:"
+msgstr "デフォルトでは、``test*.txt`` パターンに一致するすべてのファイルが Python 標準の :mod:`doctest` モジュールを通じて実行されます。 パターンを変更するには、次のコマンドを発行します:"
 
 #: ../../how-to/doctest.rst:14
 msgid "on the command line. ``--doctest-glob`` can be given multiple times in the command-line."
-msgstr "コマンドラインで。``--doctest-glob`` はコマンドラインで複数回指定できます。"
+msgstr "コマンドラインで。 ``--doctest-glob`` はコマンドラインで複数回指定できます。"
 
 #: ../../how-to/doctest.rst:16
 msgid "If you then have a text file like this:"
@@ -65,7 +65,7 @@ msgstr "'doctest' オプションの使用"
 
 #: ../../how-to/doctest.rst:98
 msgid "Python's standard :mod:`doctest` module provides some :ref:`options <python:option-flags-and-directives>` to configure the strictness of doctest tests. In pytest, you can enable those flags using the configuration file."
-msgstr "Python の標準 :mod:`doctest` モジュールは、doctest テストの厳密さを構成するためのいくつかの :ref:`options <python:option-flags-and-directives>` を提供します。pytest では、構成ファイルを使用してこれらのフラグを有効にできます。"
+msgstr "Python の標準 :mod:`doctest` モジュールは、doctest テストの厳密さを構成するためのいくつかの :ref:`options <python:option-flags-and-directives>` を提供します。 pytest では、構成ファイルを使用してこれらのフラグを有効にできます。"
 
 #: ../../how-to/doctest.rst:102
 msgid "For example, to make pytest ignore trailing whitespaces and ignore lengthy exception stack traces you can just write:"
@@ -81,7 +81,7 @@ msgstr "pytest には新しいオプションも導入されています:"
 
 #: ../../how-to/doctest.rst:121
 msgid "``ALLOW_UNICODE``: when enabled, the ``u`` prefix is stripped from unicode strings in expected doctest output. This allows doctests to run in Python 2 and Python 3 unchanged."
-msgstr "``ALLOW_UNICODE``: 有効にすると、予期される doctest 出力の Unicode 文字列から ``u`` プレフィックスが削除されます。これにより、doctest は Python 2 および Python 3 で変更なしで実行できます。"
+msgstr "``ALLOW_UNICODE``: 有効にすると、予期される doctest 出力の Unicode 文字列から ``u`` プレフィックスが削除されます。 これにより、doctest は Python 2 および Python 3 で変更なしで実行できます。"
 
 #: ../../how-to/doctest.rst:125
 msgid "``ALLOW_BYTES``: similarly, the ``b`` prefix is stripped from byte strings in expected doctest output."
@@ -89,11 +89,11 @@ msgstr "``ALLOW_BYTES``: 同様に、予期される doctest 出力のバイト�
 
 #: ../../how-to/doctest.rst:128
 msgid "``NUMBER``: when enabled, floating-point numbers only need to match as far as the precision you have written in the expected doctest output. The numbers are compared using :func:`pytest.approx` with relative tolerance equal to the precision. For example, the following output would only need to match to 2 decimal places when comparing ``3.14`` to ``pytest.approx(math.pi, rel=10**-2)``::"
-msgstr "``NUMBER``: 有効にすると、浮動小数点数は予期される doctest 出力に記述された精度まで一致する必要があります。数値は、精度と等しい相対許容誤差を持つ :func:`pytest.approx` を使用して比較されます。たとえば、次の出力は、``3.14`` を ``pytest.approx(math.pi, rel=10**-2)`` と比較するときに小数点以下 2 桁まで一致する必要があります::"
+msgstr "``NUMBER``: 有効にすると、浮動小数点数は予期される doctest 出力に記述された精度まで一致する必要があります。 数値は、精度と等しい相対許容誤差を持つ :func:`pytest.approx` を使用して比較されます。 たとえば、次の出力は、``3.14`` を ``pytest.approx(math.pi, rel=10**-2)`` と比較するときに小数点以下 2 桁まで一致する必要があります::"
 
 #: ../../how-to/doctest.rst:138
 msgid "If you wrote ``3.1416`` then the actual output would need to match to approximately 4 decimal places; and so on."
-msgstr "``3.1416`` と記述した場合、実際の出力は約小数点以下 4 桁まで一致する必要があります。などなど。"
+msgstr "``3.1416`` と記述した場合、実際の出力は約小数点以下 4 桁まで一致する必要があります。 などなど。"
 
 #: ../../how-to/doctest.rst:141
 msgid "This avoids false positives caused by limited floating-point precision, like this::"
@@ -101,7 +101,7 @@ msgstr "これにより、次のような浮動小数点精度の制限によっ
 
 #: ../../how-to/doctest.rst:149
 msgid "``NUMBER`` also supports lists of floating-point numbers -- in fact, it matches floating-point numbers appearing anywhere in the output, even inside a string! This means that it may not be appropriate to enable globally in ``doctest_optionflags`` in your configuration file."
-msgstr "``NUMBER`` は浮動小数点数のリストもサポートしています。実際、出力内のどこにでも表示される浮動小数点数と一致します。文字列内でも同様です！これは、構成ファイルの ``doctest_optionflags`` でグローバルに有効にするのが適切でない場合があることを意味します。"
+msgstr "``NUMBER`` は浮動小数点数のリストもサポートしています。 実際、出力内のどこにでも表示される浮動小数点数と一致します。 文字列内でも同様です！これは、構成ファイルの ``doctest_optionflags`` でグローバルに有効にするのが適切でない場合があることを意味します。"
 
 #: ../../how-to/doctest.rst:158
 msgid "Continue on failure"
@@ -109,7 +109,7 @@ msgstr "失敗時に続行"
 
 #: ../../how-to/doctest.rst:160
 msgid "By default, pytest would report only the first failure for a given doctest. If you want to continue the test even when you have failures, do:"
-msgstr "デフォルトでは、pytest は指定された doctest の最初の失敗のみを報告します。失敗があってもテストを続行したい場合は、次のようにします:"
+msgstr "デフォルトでは、pytest は指定された doctest の最初の失敗のみを報告します。 失敗があってもテストを続行したい場合は、次のようにします:"
 
 #: ../../how-to/doctest.rst:169
 msgid "Output format"
@@ -125,7 +125,7 @@ msgstr "pytest 固有の機能"
 
 #: ../../how-to/doctest.rst:188
 msgid "Some features are provided to make writing doctests easier or with better integration with your existing test suite. Keep in mind however that by using those features you will make your doctests incompatible with the standard ``doctests`` module."
-msgstr "いくつかの機能が提供されており、doctest の記述を容易にしたり、既存のテストスイートとの統合を向上させたりします。ただし、これらの機能を使用すると、doctest が標準の ``doctests`` モジュールと互換性がなくなることに注意してください。"
+msgstr "いくつかの機能が提供されており、doctest の記述を容易にしたり、既存のテストスイートとの統合を向上させたりします。 ただし、これらの機能を使用すると、doctest が標準の ``doctests`` モジュールと互換性がなくなることに注意してください。"
 
 #: ../../how-to/doctest.rst:193
 msgid "Using fixtures"
@@ -137,7 +137,7 @@ msgstr "``getfixture`` ヘルパーを使用してフィクスチャを使用す
 
 #: ../../how-to/doctest.rst:204
 msgid "Note that the fixture needs to be defined in a place visible by pytest, for example, a `conftest.py` file or plugin; normal python files containing docstrings are not normally scanned for fixtures unless explicitly configured by :confval:`python_files`."
-msgstr "フィクスチャは pytest から見える場所に定義する必要があることに注意してください。たとえば、`conftest.py` ファイルやプラグインです。docstring を含む通常の Python ファイルは、:confval:`python_files` で明示的に構成されていない限り、通常はフィクスチャのスキャン対象にはなりません。"
+msgstr "フィクスチャは pytest から見える場所に定義する必要があることに注意してください。 たとえば、`conftest.py` ファイルやプラグインです。 docstring を含む通常の Python ファイルは、:confval:`python_files` で明示的に構成されていない限り、通常はフィクスチャのスキャン対象にはなりません。"
 
 #: ../../how-to/doctest.rst:208
 msgid "Also, the :ref:`usefixtures <usefixtures>` mark and fixtures marked as :ref:`autouse <autouse>` are supported when executing text doctest files."
@@ -149,7 +149,7 @@ msgstr "'doctest_namespace' フィクスチャ"
 
 #: ../../how-to/doctest.rst:217
 msgid "The ``doctest_namespace`` fixture can be used to inject items into the namespace in which your doctests run. It is intended to be used within your own fixtures to provide the tests that use them with context."
-msgstr "``doctest_namespace`` フィクスチャを使用して、doctest が実行される名前空間にアイテムを挿入できます。これは、独自のフィクスチャ内で使用して、それらを使用するテストにコンテキストを提供することを目的としています。"
+msgstr "``doctest_namespace`` フィクスチャを使用して、doctest が実行される名前空間にアイテムを挿入できます。 これは、独自のフィクスチャ内で使用して、それらを使用するテストにコンテキストを提供することを目的としています。"
 
 #: ../../how-to/doctest.rst:221
 msgid "``doctest_namespace`` is a standard ``dict`` object into which you place the objects you want to appear in the doctest namespace:"
@@ -161,7 +161,7 @@ msgstr "次に、doctest で直接使用できます:"
 
 #: ../../how-to/doctest.rst:247
 msgid "Note that like the normal ``conftest.py``, the fixtures are discovered in the directory tree conftest is in. Meaning that if you put your doctest with your source code, the relevant conftest.py needs to be in the same directory tree. Fixtures will not be discovered in a sibling directory tree!"
-msgstr "通常の ``conftest.py`` と同様に、フィクスチャは conftest が存在するディレクトリツリーで検出されることに注意してください。つまり、doctest をソースコードと一緒に配置する場合、関連する conftest.py は同じディレクトリツリーにある必要があります。フィクスチャは兄弟ディレクトリツリーでは検出されません！"
+msgstr "通常の ``conftest.py`` と同様に、フィクスチャは conftest が存在するディレクトリツリーで検出されることに注意してください。 つまり、doctest をソースコードと一緒に配置する場合、関連する conftest.py は同じディレクトリツリーにある必要があります。 フィクスチャは兄弟ディレクトリツリーでは検出されません！"
 
 #: ../../how-to/doctest.rst:252
 msgid "Skipping tests"
@@ -181,7 +181,7 @@ msgstr "これにより、最初のチェックはスキップされますが、
 
 #: ../../how-to/doctest.rst:273
 msgid "pytest also allows using the standard pytest functions :func:`pytest.skip` and :func:`pytest.xfail` inside doctests, which might be useful because you can then skip/xfail tests based on external conditions:"
-msgstr "pytest では、標準の pytest 関数 :func:`pytest.skip` および :func:`pytest.xfail` を doctest 内で使用することもできます。これにより、外部条件に基づいてテストをスキップ/xfail できるため、役立つ場合があります:"
+msgstr "pytest では、標準の pytest 関数 :func:`pytest.skip` および :func:`pytest.xfail` を doctest 内で使用することもできます。 これにより、外部条件に基づいてテストをスキップ/xfail できるため、役立つ場合があります:"
 
 #: ../../how-to/doctest.rst:287
 msgid "However using those functions is discouraged because it reduces the readability of the docstring."

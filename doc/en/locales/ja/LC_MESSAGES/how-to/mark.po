@@ -25,7 +25,7 @@ msgstr "テスト関数に属性をマークする方法"
 
 #: ../../how-to/mark.rst:6
 msgid "By using the ``pytest.mark`` helper you can easily set metadata on your test functions. You can find the full list of builtin markers in the :ref:`API Reference<marks ref>`. Or you can list all the markers, including builtin and custom, using the CLI - :code:`pytest --markers`."
-msgstr "``pytest.mark`` ヘルパーを使用することで、テスト関数に簡単にメタデータを設定できます。組み込みマーカーの完全なリストは :ref:`API Reference<marks ref>` で確認できます。また、CLI を使用して組み込みおよびカスタムのすべてのマーカーをリストすることもできます - :code:`pytest --markers`."
+msgstr "``pytest.mark`` ヘルパーを使用することで、テスト関数に簡単にメタデータを設定できます。 組み込みマーカーの完全なリストは :ref:`API Reference<marks ref>` で確認できます。 また、CLI を使用して組み込みおよびカスタムのすべてのマーカーをリストすることもできます - :code:`pytest --markers`."
 
 #: ../../how-to/mark.rst:11
 msgid "Here are some of the builtin markers:"
@@ -57,7 +57,7 @@ msgstr ":ref:`parametrize <parametrizemark>` - 同じテスト関数を複数回
 
 #: ../../how-to/mark.rst:22
 msgid "It's easy to create custom markers or to apply markers to whole test classes or modules. Those markers can be used by plugins, and also are commonly used to :ref:`select tests <mark run>` on the command-line with the ``-m`` option."
-msgstr "カスタムマーカーを作成したり、マーカーをテストクラスやモジュール全体に適用したりするのは簡単です。これらのマーカーはプラグインで使用でき、また、コマンドラインで ``-m`` オプションを使用して :ref:`select tests <mark run>` するためによく使用されます。"
+msgstr "カスタムマーカーを作成したり、マーカーをテストクラスやモジュール全体に適用したりするのは簡単です。 これらのマーカーはプラグインで使用でき、また、コマンドラインで ``-m`` オプションを使用して :ref:`select tests <mark run>` するためによく使用されます。"
 
 #: ../../how-to/mark.rst:26
 msgid "See :ref:`mark examples` for examples which also serve as documentation."
@@ -89,7 +89,7 @@ msgstr "または、:ref:`pytest_configure <initialization-hooks>` フックで�
 
 #: ../../how-to/mark.rst:69
 msgid "Registered marks appear in pytest's help text and do not emit warnings (see the next section). It is recommended that third-party plugins always :ref:`register their markers <registering-markers>`."
-msgstr "登録されたマーカーは pytest のヘルプテキストに表示され、警告を発しません (次のセクションを参照) 。サードパーティプラグインは常に :ref:`register their markers <registering-markers>` することをお勧めします。"
+msgstr "登録されたマーカーは pytest のヘルプテキストに表示され、警告を発しません (次のセクションを参照) 。 サードパーティプラグインは常に :ref:`register their markers <registering-markers>` することをお勧めします。"
 
 #: ../../how-to/mark.rst:75
 msgid "Raising errors on unknown marks"
@@ -97,9 +97,9 @@ msgstr "不明なマークに対するエラーの発生"
 
 #: ../../how-to/mark.rst:77
 msgid "Unregistered marks applied with the ``@pytest.mark.name_of_the_mark`` decorator will always emit a warning in order to avoid silently doing something surprising due to mistyped names. As described in the previous section, you can disable the warning for custom marks by registering them in your ``pytest.ini`` file or using a custom ``pytest_configure`` hook."
-msgstr "``@pytest.mark.name_of_the_mark`` デコレータで適用された未登録のマークは、名前のタイプミスによる予期しない動作を避けるために常に警告を発します。前のセクションで説明したように、カスタムマークを ``pytest.ini`` ファイルに登録するか、カスタム ``pytest_configure`` フックを使用して警告を無効にすることができます。"
+msgstr "``@pytest.mark.name_of_the_mark`` デコレータで適用された未登録のマークは、名前のタイプミスによる予期しない動作を避けるために常に警告を発します。 前のセクションで説明したように、カスタムマークを ``pytest.ini`` ファイルに登録するか、カスタム ``pytest_configure`` フックを使用して警告を無効にすることができます。"
 
 #: ../../how-to/mark.rst:83
 msgid "When the ``--strict-markers`` command-line flag is passed, any unknown marks applied with the ``@pytest.mark.name_of_the_mark`` decorator will trigger an error. You can enforce this validation in your project by adding ``--strict-markers`` to ``addopts``:"
-msgstr "``--strict-markers`` コマンドラインフラグが渡されると、``@pytest.mark.name_of_the_mark`` デコレータで適用された不明なマークはエラーを引き起こします。プロジェクトに ``--strict-markers`` を ``addopts`` に追加することで、この検証を強制できます。"
+msgstr "``--strict-markers`` コマンドラインフラグが渡されると、``@pytest.mark.name_of_the_mark`` デコレータで適用された不明なマークはエラーを引き起こします。 プロジェクトに ``--strict-markers`` を ``addopts`` に追加することで、この検証を強制できます。"
 

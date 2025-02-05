@@ -25,7 +25,7 @@ msgstr "モジュールや環境をモンキーパッチ/モックする方法"
 
 #: ../../how-to/monkeypatch.rst:8
 msgid "Sometimes tests need to invoke functionality which depends on global settings or which invokes code which cannot be easily tested such as network access.  The ``monkeypatch`` fixture helps you to safely set/delete an attribute, dictionary item or environment variable, or to modify ``sys.path`` for importing."
-msgstr "テストでは、グローバル設定に依存する機能や、ネットワークアクセスなど簡単にテストできないコードを呼び出す必要がある場合があります。``monkeypatch`` フィクスチャは、属性、辞書アイテム、環境変数を安全に設定/削除したり、インポートのために ``sys.path`` を変更したりするのに役立ちます。"
+msgstr "テストでは、グローバル設定に依存する機能や、ネットワークアクセスなど簡単にテストできないコードを呼び出す必要がある場合があります。 ``monkeypatch`` フィクスチャは、属性、辞書アイテム、環境変数を安全に設定/削除したり、インポートのために ``sys.path`` を変更したりするのに役立ちます。"
 
 #: ../../how-to/monkeypatch.rst:14
 msgid "The ``monkeypatch`` fixture provides these helper methods for safely patching and mocking functionality in tests:"
@@ -69,7 +69,7 @@ msgstr ":meth:`monkeypatch.context() <pytest.MonkeyPatch.context>`"
 
 #: ../../how-to/monkeypatch.rst:28
 msgid "All modifications will be undone after the requesting test function or fixture has finished. The ``raising`` parameter determines if a ``KeyError`` or ``AttributeError`` will be raised if the target of the set/deletion operation does not exist."
-msgstr "すべての変更は、要求されたテスト関数またはフィクスチャが終了した後に元に戻されます。``raising`` パラメータは、設定/削除操作のターゲットが存在しない場合に ``KeyError`` または ``AttributeError`` が発生するかどうかを決定します。"
+msgstr "すべての変更は、要求されたテスト関数またはフィクスチャが終了した後に元に戻されます。 ``raising`` パラメータは、設定/削除操作のターゲットが存在しない場合に ``KeyError`` または ``AttributeError`` が発生するかどうかを決定します。"
 
 #: ../../how-to/monkeypatch.rst:33
 msgid "Consider the following scenarios:"
@@ -77,15 +77,15 @@ msgstr "次のシナリオを考えてみましょう:"
 
 #: ../../how-to/monkeypatch.rst:35
 msgid "1. Modifying the behavior of a function or the property of a class for a test e.g. there is an API call or database connection you will not make for a test but you know what the expected output should be. Use :py:meth:`monkeypatch.setattr <MonkeyPatch.setattr>` to patch the function or property with your desired testing behavior. This can include your own functions. Use :py:meth:`monkeypatch.delattr <MonkeyPatch.delattr>` to remove the function or property for the test."
-msgstr "1\. テストのために関数の動作やクラスのプロパティを変更する。例えば、テストのために行わない API 呼び出しやデータベース接続があるが、期待される出力がわかっている場合。:py:meth:`monkeypatch.setattr <MonkeyPatch.setattr>` を使用して、関数やプロパティを希望するテスト動作でパッチします。これには独自の関数を含めることができます。:py:meth:`monkeypatch.delattr <MonkeyPatch.delattr>` を使用して、テストのために関数やプロパティを削除します。"
+msgstr "1\. テストのために関数の動作やクラスのプロパティを変更する。 例えば、テストのために行わない API 呼び出しやデータベース接続があるが、期待される出力がわかっている場合。 :py:meth:`monkeypatch.setattr <MonkeyPatch.setattr>` を使用して、関数やプロパティを希望するテスト動作でパッチします。 これには独自の関数を含めることができます。 :py:meth:`monkeypatch.delattr <MonkeyPatch.delattr>` を使用して、テストのために関数やプロパティを削除します。"
 
 #: ../../how-to/monkeypatch.rst:41
 msgid "2. Modifying the values of dictionaries e.g. you have a global configuration that you want to modify for certain test cases. Use :py:meth:`monkeypatch.setitem <MonkeyPatch.setitem>` to patch the dictionary for the test. :py:meth:`monkeypatch.delitem <MonkeyPatch.delitem>` can be used to remove items."
-msgstr "2\. 辞書の値を変更する。例えば、特定のテストケースのために変更したいグローバル設定がある場合。:py:meth:`monkeypatch.setitem <MonkeyPatch.setitem>` を使用して、テストのために辞書をパッチします。:py:meth:`monkeypatch.delitem <MonkeyPatch.delitem>` を使用してアイテムを削除できます。"
+msgstr "2\. 辞書の値を変更する。 例えば、特定のテストケースのために変更したいグローバル設定がある場合。 :py:meth:`monkeypatch.setitem <MonkeyPatch.setitem>` を使用して、テストのために辞書をパッチします。 :py:meth:`monkeypatch.delitem <MonkeyPatch.delitem>` を使用してアイテムを削除できます。"
 
 #: ../../how-to/monkeypatch.rst:45
 msgid "3. Modifying environment variables for a test e.g. to test program behavior if an environment variable is missing, or to set multiple values to a known variable. :py:meth:`monkeypatch.setenv <MonkeyPatch.setenv>` and :py:meth:`monkeypatch.delenv <MonkeyPatch.delenv>` can be used for these patches."
-msgstr "3\. テストのために環境変数を変更する。例えば、環境変数が欠落している場合のプログラムの動作をテストするため、または既知の変数に複数の値を設定するため。:py:meth:`monkeypatch.setenv <MonkeyPatch.setenv>` および :py:meth:`monkeypatch.delenv <MonkeyPatch.delenv>` を使用してこれらのパッチを行います。"
+msgstr "3\. テストのために環境変数を変更する。 例えば、環境変数が欠落している場合のプログラムの動作をテストするため、または既知の変数に複数の値を設定するため。 :py:meth:`monkeypatch.setenv <MonkeyPatch.setenv>` および :py:meth:`monkeypatch.delenv <MonkeyPatch.delenv>` を使用してこれらのパッチを行います。"
 
 #: ../../how-to/monkeypatch.rst:50
 msgid "4. Use ``monkeypatch.setenv(\"PATH\", value, prepend=os.pathsep)`` to modify ``$PATH``, and :py:meth:`monkeypatch.chdir <MonkeyPatch.chdir>` to change the context of the current working directory during a test."
@@ -109,11 +109,11 @@ msgstr "関数のモンキーパッチ"
 
 #: ../../how-to/monkeypatch.rst:68
 msgid "Consider a scenario where you are working with user directories. In the context of testing, you do not want your test to depend on the running user. ``monkeypatch`` can be used to patch functions dependent on the user to always return a specific value."
-msgstr "ユーザーディレクトリを操作するシナリオを考えてみましょう。テストの文脈では、テストが実行中のユーザーに依存しないようにしたいものです。``monkeypatch`` を使用して、ユーザーに依存する関数をパッチして常に特定の値を返すようにすることができます。"
+msgstr "ユーザーディレクトリを操作するシナリオを考えてみましょう。 テストの文脈では、テストが実行中のユーザーに依存しないようにしたいものです。 ``monkeypatch`` を使用して、ユーザーに依存する関数をパッチして常に特定の値を返すようにすることができます。"
 
 #: ../../how-to/monkeypatch.rst:73
 msgid "In this example, :py:meth:`monkeypatch.setattr <MonkeyPatch.setattr>` is used to patch ``Path.home`` so that the known testing path ``Path(\"/abc\")`` is always used when the test is run. This removes any dependency on the running user for testing purposes. :py:meth:`monkeypatch.setattr <MonkeyPatch.setattr>` must be called before the function which will use the patched function is called. After the test function finishes the ``Path.home`` modification will be undone."
-msgstr "この例では、:py:meth:`monkeypatch.setattr <MonkeyPatch.setattr>` を使用して ``Path.home`` をパッチし、テストが実行されるときに既知のテストパス ``Path(\"/abc\")`` が常に使用されるようにします。これにより、テスト目的で実行中のユーザーへの依存がなくなります。:py:meth:`monkeypatch.setattr <MonkeyPatch.setattr>` は、パッチされた関数を使用する関数が呼び出される前に呼び出す必要があります。テスト関数が終了すると、``Path.home`` の変更は元に戻されます。"
+msgstr "この例では、:py:meth:`monkeypatch.setattr <MonkeyPatch.setattr>` を使用して ``Path.home`` をパッチし、テストが実行されるときに既知のテストパス ``Path(\"/abc\")`` が常に使用されるようにします。 これにより、テスト目的で実行中のユーザーへの依存がなくなります。 :py:meth:`monkeypatch.setattr <MonkeyPatch.setattr>` は、パッチされた関数を使用する関数が呼び出される前に呼び出す必要があります。 テスト関数が終了すると、``Path.home`` の変更は元に戻されます。"
 
 #: ../../how-to/monkeypatch.rst:107
 msgid "Monkeypatching returned objects: building mock classes"
@@ -121,19 +121,19 @@ msgstr "返されたオブジェクトのモンキーパッチ: モッククラ�
 
 #: ../../how-to/monkeypatch.rst:109
 msgid ":py:meth:`monkeypatch.setattr <MonkeyPatch.setattr>` can be used in conjunction with classes to mock returned objects from functions instead of values. Imagine a simple function to take an API url and return the json response."
-msgstr ":py:meth:`monkeypatch.setattr <MonkeyPatch.setattr>` は、クラスと組み合わせて使用して、値の代わりに関数から返されるオブジェクトをモックすることができます。API URL を受け取り、JSON レスポンスを返す単純な関数を想像してみてください。"
+msgstr ":py:meth:`monkeypatch.setattr <MonkeyPatch.setattr>` は、クラスと組み合わせて使用して、値の代わりに関数から返されるオブジェクトをモックすることができます。 API URL を受け取り、JSON レスポンスを返す単純な関数を想像してみてください。"
 
 #: ../../how-to/monkeypatch.rst:124
 msgid "We need to mock ``r``, the returned response object for testing purposes. The mock of ``r`` needs a ``.json()`` method which returns a dictionary. This can be done in our test file by defining a class to represent ``r``."
-msgstr "テスト目的で返されたレスポンスオブジェクト ``r`` をモックする必要があります。``r`` のモックには、辞書を返す ``.json()`` メソッドが必要です。これは、``r`` を表すクラスを定義することでテストファイル内で行うことができます。"
+msgstr "テスト目的で返されたレスポンスオブジェクト ``r`` をモックする必要があります。 ``r`` のモックには、辞書を返す ``.json()`` メソッドが必要です。 これは、``r`` を表すクラスを定義することでテストファイル内で行うことができます。"
 
 #: ../../how-to/monkeypatch.rst:162
 msgid "``monkeypatch`` applies the mock for ``requests.get`` with our ``mock_get`` function. The ``mock_get`` function returns an instance of the ``MockResponse`` class, which has a ``json()`` method defined to return a known testing dictionary and does not require any outside API connection."
-msgstr "``monkeypatch`` は、``requests.get`` のモックを ``mock_get`` 関数で適用します。``mock_get`` 関数は、既知のテスト辞書を返すように定義された ``json()`` メソッドを持つ ``MockResponse`` クラスのインスタンスを返し、外部 API 接続を必要としません。"
+msgstr "``monkeypatch`` は、``requests.get`` のモックを ``mock_get`` 関数で適用します。 ``mock_get`` 関数は、既知のテスト辞書を返すように定義された ``json()`` メソッドを持つ ``MockResponse`` クラスのインスタンスを返し、外部 API 接続を必要としません。"
 
 #: ../../how-to/monkeypatch.rst:167
 msgid "You can build the ``MockResponse`` class with the appropriate degree of complexity for the scenario you are testing. For instance, it could include an ``ok`` property that always returns ``True``, or return different values from the ``json()`` mocked method based on input strings."
-msgstr "テストしているシナリオに適した複雑さで ``MockResponse`` クラスを構築できます。例えば、常に ``True`` を返す ``ok`` プロパティを含めたり、入力文字列に基づいて ``json()`` モックメソッドから異なる値を返したりすることができます。"
+msgstr "テストしているシナリオに適した複雑さで ``MockResponse`` クラスを構築できます。 例えば、常に ``True`` を返す ``ok`` プロパティを含めたり、入力文字列に基づいて ``json()`` モックメソッドから異なる値を返したりすることができます。"
 
 #: ../../how-to/monkeypatch.rst:172
 msgid "This mock can be shared across tests using a ``fixture``:"
@@ -157,7 +157,7 @@ msgstr "この autouse フィクスチャは各テスト関数に対して実行
 
 #: ../../how-to/monkeypatch.rst:236
 msgid "Be advised that it is not recommended to patch builtin functions such as ``open``, ``compile``, etc., because it might break pytest's internals. If that's unavoidable, passing ``--tb=native``, ``--assert=plain`` and ``--capture=no`` might help although there's no guarantee."
-msgstr "``open``、``compile`` などの組み込み関数をパッチすることは、pytest の内部を壊す可能性があるため推奨されません。それが避けられない場合は、``--tb=native``、``--assert=plain``、``--capture=no`` を渡すと役立つかもしれませんが、保証はありません。"
+msgstr "``open``、``compile`` などの組み込み関数をパッチすることは、pytest の内部を壊す可能性があるため推奨されません。 それが避けられない場合は、``--tb=native``、``--assert=plain``、``--capture=no`` を渡すと役立つかもしれませんが、保証はありません。"
 
 #: ../../how-to/monkeypatch.rst:243
 msgid "Mind that patching ``stdlib`` functions and some third-party libraries used by pytest might break pytest itself, therefore in those cases it is recommended to use :meth:`MonkeyPatch.context` to limit the patching to the block you want tested:"
@@ -173,11 +173,11 @@ msgstr "環境変数のモンキーパッチ"
 
 #: ../../how-to/monkeypatch.rst:263
 msgid "If you are working with environment variables you often need to safely change the values or delete them from the system for testing purposes. ``monkeypatch`` provides a mechanism to do this using the ``setenv`` and ``delenv`` method. Our example code to test:"
-msgstr "環境変数を操作する場合、テスト目的で値を安全に変更したり、システムから削除したりする必要があることがよくあります。``monkeypatch`` は、``setenv`` および ``delenv`` メソッドを使用してこれを行うためのメカニズムを提供します。テストするためのサンプルコード:"
+msgstr "環境変数を操作する場合、テスト目的で値を安全に変更したり、システムから削除したりする必要があることがよくあります。 ``monkeypatch`` は、``setenv`` および ``delenv`` メソッドを使用してこれを行うためのメカニズムを提供します。 テストするためのサンプルコード:"
 
 #: ../../how-to/monkeypatch.rst:283
 msgid "There are two potential paths. First, the ``USER`` environment variable is set to a value. Second, the ``USER`` environment variable does not exist. Using ``monkeypatch`` both paths can be safely tested without impacting the running environment:"
-msgstr "2 つの可能なパスがあります。まず、``USER`` 環境変数が値に設定されます。次に、``USER`` 環境変数が存在しません。``monkeypatch`` を使用すると、実行環境に影響を与えることなく、両方のパスを安全にテストできます:"
+msgstr "2 つの可能なパスがあります。 まず、``USER`` 環境変数が値に設定されます。 次に、``USER`` 環境変数が存在しません。 ``monkeypatch`` を使用すると、実行環境に影響を与えることなく、両方のパスを安全にテストできます:"
 
 #: ../../how-to/monkeypatch.rst:306
 msgid "This behavior can be moved into ``fixture`` structures and shared across tests:"
@@ -189,7 +189,7 @@ msgstr "辞書のモンキーパッチ"
 
 #: ../../how-to/monkeypatch.rst:337
 msgid ":py:meth:`monkeypatch.setitem <MonkeyPatch.setitem>` can be used to safely set the values of dictionaries to specific values during tests. Take this simplified connection string example:"
-msgstr ":py:meth:`monkeypatch.setitem <MonkeyPatch.setitem>` を使用して、テスト中に辞書の値を特定の値に安全に設定できます。この簡略化された接続文字列の例を見てみましょう:"
+msgstr ":py:meth:`monkeypatch.setitem <MonkeyPatch.setitem>` を使用して、テスト中に辞書の値を特定の値に安全に設定できます。 この簡略化された接続文字列の例を見てみましょう:"
 
 #: ../../how-to/monkeypatch.rst:351
 msgid "For testing purposes we can patch the ``DEFAULT_CONFIG`` dictionary to specific values."

@@ -25,7 +25,7 @@ msgstr "例とカスタマイズのコツ"
 
 #: ../../example/index.rst:7
 msgid "Here is a (growing) list of examples. :ref:`Contact <contact>` us if you need more examples or have questions. Also take a look at the :ref:`comprehensive documentation <toc>` which contains many example snippets as well.  Also, `pytest on stackoverflow.com <http://stackoverflow.com/search?q=pytest>`_ often comes with example answers."
-msgstr "ここに (増え続ける) 例のリストがあります。 さらに例が必要な場合や質問がある場合は、:ref:`Contact <contact>` までご連絡ください。また、多くの例のスニペットを含む :ref:`comprehensive documentation <toc>` もご覧ください。また、`stackoverflow.com <http://stackoverflow.com/search?q=pytest>`_ の pytest にはしばしば例の回答が含まれています。"
+msgstr "ここに (増え続ける) 例のリストがあります。 さらに例が必要な場合や質問がある場合は、:ref:`Contact <contact>` までご連絡ください。 また、多くの例のスニペットを含む :ref:`comprehensive documentation <toc>` もご覧ください。 また、`stackoverflow.com <http://stackoverflow.com/search?q=pytest>`_ の pytest にはしばしば例の回答が含まれています。"
 
 #: ../../example/index.rst:14
 msgid "For basic examples, see"

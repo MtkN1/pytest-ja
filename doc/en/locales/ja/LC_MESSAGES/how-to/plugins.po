@@ -25,7 +25,7 @@ msgstr "プラグインのインストールと使用方法"
 
 #: ../../how-to/plugins.rst:8
 msgid "This section talks about installing and using third party plugins. For writing your own plugins, please refer to :ref:`writing-plugins`."
-msgstr "このセクションでは、サードパーティプラグインのインストールと使用について説明します。独自のプラグインを作成するには、:ref:`writing-plugins` を参照してください。"
+msgstr "このセクションでは、サードパーティプラグインのインストールと使用について説明します。 独自のプラグインを作成するには、:ref:`writing-plugins` を参照してください。"
 
 #: ../../how-to/plugins.rst:11
 msgid "Installing a third party plugin can be easily done with ``pip``:"
@@ -33,7 +33,7 @@ msgstr "サードパーティプラグインのインストールは ``pip`` で
 
 #: ../../how-to/plugins.rst:18
 msgid "If a plugin is installed, ``pytest`` automatically finds and integrates it, there is no need to activate it."
-msgstr "プラグインがインストールされている場合、``pytest`` は自動的にそれを見つけて統合します。アクティブ化する必要はありません。"
+msgstr "プラグインがインストールされている場合、``pytest`` は自動的にそれを見つけて統合します。 アクティブ化する必要はありません。"
 
 #: ../../how-to/plugins.rst:21
 msgid "Here is a little annotated list for some popular plugins:"
@@ -101,7 +101,7 @@ msgstr "テストモジュールまたは conftest プラグインが読み込�
 
 #: ../../how-to/plugins.rst:82
 msgid "Requiring plugins using a ``pytest_plugins`` variable in non-root ``conftest.py`` files is deprecated. See :ref:`full explanation <requiring plugins in non-root conftests>` in the Writing plugins section."
-msgstr "非ルート ``conftest.py`` ファイルで ``pytest_plugins`` 変数を使用してプラグインを要求することは非推奨です。プラグイン作成セクションの :ref:`full explanation <requiring plugins in non-root conftests>` を参照してください。"
+msgstr "非ルート ``conftest.py`` ファイルで ``pytest_plugins`` 変数を使用してプラグインを要求することは非推奨です。 プラグイン作成セクションの :ref:`full explanation <requiring plugins in non-root conftests>` を参照してください。"
 
 #: ../../how-to/plugins.rst:88
 msgid "The name ``pytest_plugins`` is reserved and should not be used as a name for a custom plugin module."
@@ -117,7 +117,7 @@ msgstr "環境でアクティブなプラグインを見つけたい場合は、
 
 #: ../../how-to/plugins.rst:104
 msgid "and will get an extended test header which shows activated plugins and their names. It will also print local plugins aka :ref:`conftest.py <conftest.py plugins>` files when they are loaded."
-msgstr "アクティブなプラグインとその名前を表示する拡張テストヘッダーが表示されます。また、ローカルプラグイン、つまり :ref:`conftest.py <conftest.py plugins>` ファイルが読み込まれたときにそれらを表示します。"
+msgstr "アクティブなプラグインとその名前を表示する拡張テストヘッダーが表示されます。 また、ローカルプラグイン、つまり :ref:`conftest.py <conftest.py plugins>` ファイルが読み込まれたときにそれらを表示します。"
 
 #: ../../how-to/plugins.rst:111
 msgid "Deactivating / unregistering a plugin by name"

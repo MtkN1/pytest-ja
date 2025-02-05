@@ -29,7 +29,7 @@ msgstr "このセクションでは、モジュール/クラス/関数ごとに�
 
 #: ../../how-to/xunit_setup.rst:14
 msgid "While these setup/teardown methods are simple and familiar to those coming from a ``unittest`` or ``nose`` background, you may also consider using pytest's more powerful :ref:`fixture mechanism <fixture>` which leverages the concept of dependency injection, allowing for a more modular and more scalable approach for managing test state, especially for larger projects and for functional testing.  You can mix both fixture mechanisms in the same file but test methods of ``unittest.TestCase`` subclasses cannot receive fixture arguments."
-msgstr "これらのセットアップ/ティアダウンメソッドはシンプルで、``unittest`` や ``nose`` の背景を持つ人には馴染み深いものですが、pytest のより強力な :ref:`fixture mechanism <fixture>` を使用することも検討してください。これは依存性注入の概念を活用し、特に大規模なプロジェクトや機能テストにおいて、テスト状態を管理するためのよりモジュール化され、よりスケーラブルなアプローチを可能にします。同じファイル内で両方のフィクスチャメカニズムを混在させることができますが、``unittest.TestCase`` サブクラスのテストメソッドはフィクスチャ引数を受け取ることができません。"
+msgstr "これらのセットアップ/ティアダウンメソッドはシンプルで、``unittest`` や ``nose`` の背景を持つ人には馴染み深いものですが、pytest のより強力な :ref:`fixture mechanism <fixture>` を使用することも検討してください。 これは依存性注入の概念を活用し、特に大規模なプロジェクトや機能テストにおいて、テスト状態を管理するためのよりモジュール化され、よりスケーラブルなアプローチを可能にします。 同じファイル内で両方のフィクスチャメカニズムを混在させることができますが、``unittest.TestCase`` サブクラスのテストメソッドはフィクスチャ引数を受け取ることができません。"
 
 #: ../../how-to/xunit_setup.rst:26
 msgid "Module level setup/teardown"
@@ -37,7 +37,7 @@ msgstr "モジュールレベルのセットアップ/ティアダウン"
 
 #: ../../how-to/xunit_setup.rst:28
 msgid "If you have multiple test functions and test classes in a single module you can optionally implement the following fixture methods which will usually be called once for all the functions:"
-msgstr "単一のモジュールに複数のテスト関数とテストクラスがある場合、次のフィクスチャメソッドをオプションで実装できます。これらは通常、すべての関数に対して一度だけ呼び出されます。"
+msgstr "単一のモジュールに複数のテスト関数とテストクラスがある場合、次のフィクスチャメソッドをオプションで実装できます。 これらは通常、すべての関数に対して一度だけ呼び出されます。"
 
 #: ../../how-to/xunit_setup.rst:43
 msgid "As of pytest-3.0, the ``module`` parameter is optional."

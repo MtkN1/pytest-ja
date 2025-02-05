@@ -77,7 +77,7 @@ msgstr "次に、``--ff`` オプションを使用して実行すると、すべ
 
 #: ../../how-to/cache.rst:172
 msgid "New ``--nf``, ``--new-first`` options: run new tests first followed by the rest of the tests, in both cases tests are also sorted by the file modified time, with more recent files coming first."
-msgstr "新しい ``--nf``, ``--new-first`` オプション: 新しいテストを最初に実行し、その後に残りのテストを実行します。どちらの場合も、テストはファイルの変更時間でソートされ、最新のファイルが最初に表示されます。"
+msgstr "新しい ``--nf``, ``--new-first`` オプション: 新しいテストを最初に実行し、その後に残りのテストを実行します。 どちらの場合も、テストはファイルの変更時間でソートされ、最新のファイルが最初に表示されます。"
 
 #: ../../how-to/cache.rst:177
 msgid "Behavior when no tests failed in the last run"
@@ -85,7 +85,7 @@ msgstr "前回の実行でテストが失敗しなかった場合の動作"
 
 #: ../../how-to/cache.rst:179
 msgid "The ``--lfnf/--last-failed-no-failures`` option governs the behavior of ``--last-failed``. Determines whether to execute tests when there are no previously (known) failures or when no cached ``lastfailed`` data was found."
-msgstr "``--lfnf/--last-failed-no-failures`` オプションは ``--last-failed`` の動作を制御します。以前に (既知の) 失敗がない場合や、キャッシュされた ``lastfailed`` データが見つからなかった場合にテストを実行するかどうかを決定します。"
+msgstr "``--lfnf/--last-failed-no-failures`` オプションは ``--last-failed`` の動作を制御します。 以前に (既知の) 失敗がない場合や、キャッシュされた ``lastfailed`` データが見つからなかった場合にテストを実行するかどうかを決定します。"
 
 #: ../../how-to/cache.rst:183
 msgid "There are two options:"
@@ -93,7 +93,7 @@ msgstr "2 つのオプションがあります:"
 
 #: ../../how-to/cache.rst:185
 msgid "``all``:  when there are no known test failures, runs all tests (the full test suite). This is the default."
-msgstr "``all``: 既知のテスト失敗がない場合、すべてのテスト (完全なテストスイート) を実行します。これがデフォルトです。"
+msgstr "``all``: 既知のテスト失敗がない場合、すべてのテスト (完全なテストスイート) を実行します。 これがデフォルトです。"
 
 #: ../../how-to/cache.rst:186
 msgid "``none``: when there are no known test failures, just emits a message stating this and exit successfully."
@@ -109,7 +109,7 @@ msgstr "新しい config.cache オブジェクト"
 
 #: ../../how-to/cache.rst:200
 msgid "Plugins or conftest.py support code can get a cached value using the pytest ``config`` object.  Here is a basic example plugin which implements a :ref:`fixture <fixture>` which re-uses previously created state across pytest invocations:"
-msgstr "プラグインや conftest.py サポートコードは、pytest ``config`` オブジェクトを使用してキャッシュされた値を取得できます。ここに、pytest 呼び出し間で以前に作成された状態を再利用する :ref:`fixture <fixture>` を実装する基本的な例のプラグインがあります:"
+msgstr "プラグインや conftest.py サポートコードは、pytest ``config`` オブジェクトを使用してキャッシュされた値を取得できます。 ここに、pytest 呼び出し間で以前に作成された状態を再利用する :ref:`fixture <fixture>` を実装する基本的な例のプラグインがあります:"
 
 #: ../../how-to/cache.rst:228
 msgid "If you run this command for the first time, you can see the print statement:"
@@ -153,4 +153,4 @@ msgstr "ステップワイズ"
 
 #: ../../how-to/cache.rst:335
 msgid "As an alternative to ``--lf -x``, especially for cases where you expect a large part of the test suite will fail, ``--sw``, ``--stepwise`` allows you to fix them one at a time. The test suite will run until the first failure and then stop. At the next invocation, tests will continue from the last failing test and then run until the next failing test. You may use the ``--stepwise-skip`` option to ignore one failing test and stop the test execution on the second failing test instead. This is useful if you get stuck on a failing test and just want to ignore it until later.  Providing ``--stepwise-skip`` will also enable ``--stepwise`` implicitly."
-msgstr "``--lf -x`` の代替として、特にテストスイートの大部分が失敗すると予想される場合、``--sw``, ``--stepwise`` を使用すると、1 つずつ修正できます。テストスイートは最初の失敗まで実行され、その後停止します。次の呼び出しでは、テストは最後の失敗したテストから続行され、次の失敗したテストまで実行されます。``--stepwise-skip`` オプションを使用して、1 つの失敗したテストを無視し、2 番目の失敗したテストでテスト実行を停止することができます。これは、失敗したテストで行き詰まり、それを後回しにしたい場合に便利です。``--stepwise-skip`` を指定すると、``--stepwise`` も暗黙的に有効になります。"
+msgstr "``--lf -x`` の代替として、特にテストスイートの大部分が失敗すると予想される場合、``--sw``, ``--stepwise`` を使用すると、1 つずつ修正できます。 テストスイートは最初の失敗まで実行され、その後停止します。 次の呼び出しでは、テストは最後の失敗したテストから続行され、次の失敗したテストまで実行されます。 ``--stepwise-skip`` オプションを使用して、1 つの失敗したテストを無視し、2 番目の失敗したテストでテスト実行を停止することができます。 これは、失敗したテストで行き詰まり、それを後回しにしたい場合に便利です。 ``--stepwise-skip`` を指定すると、``--stepwise`` も暗黙的に有効になります。"

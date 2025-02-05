@@ -37,7 +37,7 @@ msgstr "pytest を使用して既存のテストスイートを実行する"
 
 #: ../../how-to/existingtestsuite.rst:15
 msgid "Say you want to contribute to an existing repository somewhere. After pulling the code into your development space using some flavor of version control and (optionally) setting up a virtualenv you will want to run:"
-msgstr "既存のリポジトリに貢献したいとします。バージョン管理のいずれかのフレーバーを使用してコードを開発スペースにプルし、（オプションで）仮想環境を設定した後、次のコマンドを実行します。"
+msgstr "既存のリポジトリに貢献したいとします。 バージョン管理のいずれかのフレーバーを使用してコードを開発スペースにプルし、(オプションで) 仮想環境を設定した後、次のコマンドを実行します。"
 
 #: ../../how-to/existingtestsuite.rst:26
 msgid "in your project root.  This will set up a symlink to your code in site-packages, allowing you to edit your code while your tests run against it as if it were installed."

@@ -29,7 +29,7 @@ msgstr ":ref:`pytest コマンドラインフラグの完全なリファレン�
 
 #: ../../how-to/usage.rst:9
 msgid "In general, pytest is invoked with the command ``pytest`` (see below for :ref:`other ways to invoke pytest <invoke-other>`). This will execute all tests in all files whose names follow the form ``test_*.py`` or ``\\*_test.py`` in the current directory and its subdirectories. More generally, pytest follows :ref:`standard test discovery rules <test discovery>`."
-msgstr "一般的に、pytest は ``pytest`` コマンドで呼び出されます (:ref:`pytest の他の呼び出し方法 <invoke-other>` については以下を参照) 。これにより、現在のディレクトリおよびそのサブディレクトリ内の名前が ``test_*.py`` または ``\\*_test.py`` の形式に従うすべてのファイルのすべてのテストが実行されます。より一般的には、pytest は :ref:`標準のテスト検出ルール <test discovery>` に従います。"
+msgstr "一般的に、pytest は ``pytest`` コマンドで呼び出されます (:ref:`pytest の他の呼び出し方法 <invoke-other>` については以下を参照) 。 これにより、現在のディレクトリおよびそのサブディレクトリ内の名前が ``test_*.py`` または ``\\*_test.py`` の形式に従うすべてのファイルのすべてのテストが実行されます。 より一般的には、pytest は :ref:`標準のテスト検出ルール <test discovery>` に従います。"
 
 #: ../../how-to/usage.rst:18
 msgid "Specifying which tests to run"
@@ -53,7 +53,7 @@ msgstr "**キーワード式でテストを実行する**"
 
 #: ../../how-to/usage.rst:41
 msgid "This will run tests which contain names that match the given *string expression* (case-insensitive), which can include Python operators that use filenames, class names and function names as variables. The example above will run ``TestMyClass.test_something``  but not ``TestMyClass.test_method_simple``. Use ``\"\"`` instead of ``''`` in expression when running this on Windows"
-msgstr "これにより、指定された *文字列式* (大文字小文字を区別しない) に一致する名前を含むテストが実行されます。これには、ファイル名、クラス名、および関数名を変数として使用する Python 演算子を含めることができます。上記の例では、``TestMyClass.test_something`` は実行されますが、``TestMyClass.test_method_simple`` は実行されません。Windows でこれを実行する場合は、式内で ``''`` の代わりに ``\"\"`` を使用してください。"
+msgstr "これにより、指定された *文字列式* (大文字小文字を区別しない) に一致する名前を含むテストが実行されます。 これには、ファイル名、クラス名、および関数名を変数として使用する Python 演算子を含めることができます。 上記の例では、``TestMyClass.test_something`` は実行されますが、``TestMyClass.test_method_simple`` は実行されません。 Windows でこれを実行する場合は、式内で ``''`` の代わりに ``\"\"`` を使用してください。"
 
 #: ../../how-to/usage.rst:48
 msgid "**Run tests by collection arguments**"
@@ -113,7 +113,7 @@ msgstr "上記のすべては、``@`` プレフィックスを使用してファ
 
 #: ../../how-to/usage.rst:115
 msgid "where ``tests_to_run.txt`` contains an entry per line, e.g.:"
-msgstr "ここで、``tests_to_run.txt`` には 1 行ごとにエントリが含まれます。例:"
+msgstr "ここで、``tests_to_run.txt`` には 1 行ごとにエントリが含まれます。 例:"
 
 #: ../../how-to/usage.rst:124
 msgid "This file can also be generated using ``pytest --collect-only -q`` and modified as needed."
@@ -149,15 +149,15 @@ msgstr "プラグイン (内部および外部) をコマンドラインで ``-p
 
 #: ../../how-to/usage.rst:162
 msgid "The option receives a ``name`` parameter, which can be:"
-msgstr "このオプションは ``name`` パラメータを受け取ります。これは次のようになります:"
+msgstr "このオプションは ``name`` パラメータを受け取ります。 これは次のようになります:"
 
 #: ../../how-to/usage.rst:164
 msgid "A full module dotted name, for example ``myproject.plugins``. This dotted name must be importable."
-msgstr "完全なモジュールのドット名、例えば ``myproject.plugins``。このドット名はインポート可能でなければなりません。"
+msgstr "完全なモジュールのドット名、例えば ``myproject.plugins``。 このドット名はインポート可能でなければなりません。"
 
 #: ../../how-to/usage.rst:165
 msgid "The entry-point name of a plugin. This is the name passed to ``importlib`` when the plugin is registered. For example to early-load the :pypi:`pytest-cov` plugin you can use::"
-msgstr "プラグインのエントリーポイント名。これはプラグインが登録されるときに ``importlib`` に渡される名前です。例えば、:pypi:`pytest-cov` プラグインを早期読み込みするには、次のように使用できます::"
+msgstr "プラグインのエントリーポイント名。 これはプラグインが登録されるときに ``importlib`` に渡される名前です。 例えば、:pypi:`pytest-cov` プラグインを早期読み込みするには、次のように使用できます::"
 
 #: ../../how-to/usage.rst:172
 msgid "Disabling plugins"
@@ -197,7 +197,7 @@ msgstr "Python コードから直接 ``pytest`` を呼び出すことができ�
 
 #: ../../how-to/usage.rst:216
 msgid "this acts as if you would call \"pytest\" from the command line. It will not raise :class:`SystemExit` but return the :ref:`exit code <exit-codes>` instead. If you don't pass it any arguments, ``main`` reads the arguments from the command line arguments of the process (:data:`sys.argv`), which may be undesirable. You can pass in options and arguments explicitly:"
-msgstr "これは、コマンドラインから \"pytest\" を呼び出すかのように動作します。:class:`SystemExit` を発生させるのではなく、代わりに :ref:`終了コード <exit-codes>` を返します。引数を渡さない場合、``main`` はプロセスのコマンドライン引数 (:data:`sys.argv`) から引数を読み取りますが、これは望ましくない場合があります。オプションと引数を明示的に渡すことができます:"
+msgstr "これは、コマンドラインから \"pytest\" を呼び出すかのように動作します。 :class:`SystemExit` を発生させるのではなく、代わりに :ref:`終了コード <exit-codes>` を返します。 引数を渡さない場合、``main`` はプロセスのコマンドライン引数 (:data:`sys.argv`) から引数を読み取りますが、これは望ましくない場合があります。 オプションと引数を明示的に渡すことができます:"
 
 #: ../../how-to/usage.rst:225
 msgid "You can specify additional plugins to ``pytest.main``:"
@@ -209,5 +209,5 @@ msgstr "これを実行すると、``MyPlugin`` が追加され、そのフッ�
 
 #: ../../how-to/usage.rst:254
 msgid "Calling ``pytest.main()`` will result in importing your tests and any modules that they import. Due to the caching mechanism of python's import system, making subsequent calls to ``pytest.main()`` from the same process will not reflect changes to those files between the calls. For this reason, making multiple calls to ``pytest.main()`` from the same process (in order to re-run tests, for example) is not recommended."
-msgstr "``pytest.main()`` を呼び出すと、テストおよびそれらがインポートするモジュールがインポートされます。Python のインポートシステムのキャッシュメカニズムのため、同じプロセスから ``pytest.main()`` を後続で呼び出しても、呼び出し間のこれらのファイルの変更は反映されません。このため、同じプロセスから ``pytest.main()`` を複数回呼び出すこと (例えば、テストを再実行するため) は推奨されません。"
+msgstr "``pytest.main()`` を呼び出すと、テストおよびそれらがインポートするモジュールがインポートされます。 Python のインポートシステムのキャッシュメカニズムのため、同じプロセスから ``pytest.main()`` を後続で呼び出しても、呼び出し間のこれらのファイルの変更は反映されません。 このため、同じプロセスから ``pytest.main()`` を複数回呼び出すこと (例えば、テストを再実行するため) は推奨されません。"
 

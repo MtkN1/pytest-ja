@@ -25,7 +25,7 @@ msgstr "bash 補完の設定方法"
 
 #: ../../how-to/bash-completion.rst:7
 msgid "When using bash as your shell, ``pytest`` can use argcomplete (https://kislyuk.github.io/argcomplete/) for auto-completion. For this ``argcomplete`` needs to be installed **and** enabled."
-msgstr "シェルとして bash を使用している場合、``pytest`` は argcomplete (https://kislyuk.github.io/argcomplete/) を使用して自動補完を行うことができます。これには ``argcomplete`` をインストールして **そして** 有効化する必要があります。"
+msgstr "シェルとして bash を使用している場合、``pytest`` は argcomplete (https://kislyuk.github.io/argcomplete/) を使用して自動補完を行うことができます。 これには ``argcomplete`` をインストールして **そして** 有効化する必要があります。"
 
 #: ../../how-to/bash-completion.rst:11
 msgid "Install argcomplete using:"

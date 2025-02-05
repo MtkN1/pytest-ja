@@ -81,7 +81,7 @@ msgstr "実行するには:"
 
 #: ../../index.rst:91
 msgid "Due to ``pytest``'s detailed assertion introspection, only plain ``assert`` statements are used. See :ref:`Get started <getstarted>` for a basic introduction to using pytest."
-msgstr "``pytest`` の詳細なアサーションイントロスペクションにより、単純な ``assert`` ステートメントのみが使用されます。pytest の基本的な使い方については :ref:`Get started <getstarted>` を参照してください。"
+msgstr "``pytest`` の詳細なアサーションイントロスペクションにより、単純な ``assert`` ステートメントのみが使用されます。 pytest の基本的な使い方については :ref:`Get started <getstarted>` を参照してください。"
 
 #: ../../index.rst:96
 msgid "Features"
@@ -145,7 +145,7 @@ msgstr "pytest をサポートする"
 
 #: ../../index.rst:129
 msgid "`Open Collective`_ is an online funding platform for open and transparent communities. It provides tools to raise money and share your finances in full transparency."
-msgstr "`Open Collective`_ は、オープンで透明なコミュニティのためのオンライン資金調達プラットフォームです。資金を集め、財務を完全に透明に共有するためのツールを提供します。"
+msgstr "`Open Collective`_ は、オープンで透明なコミュニティのためのオンライン資金調達プラットフォームです。 資金を集め、財務を完全に透明に共有するためのツールを提供します。"
 
 #: ../../index.rst:132
 msgid "It is the platform of choice for individuals and companies that want to make one-time or monthly donations directly to the project."
@@ -165,7 +165,7 @@ msgstr "Tidelift サブスクリプションの一部として利用可能です
 
 #: ../../index.rst:146
 msgid "The maintainers of pytest and thousands of other packages are working with Tidelift to deliver commercial support and maintenance for the open source dependencies you use to build your applications. Save time, reduce risk, and improve code health, while paying the maintainers of the exact dependencies you use."
-msgstr "pytest および他の数千のパッケージのメンテナーは、Tidelift と協力して、アプリケーションの構築に使用するオープンソース依存関係の商業サポートとメンテナンスを提供しています。時間を節約し、リスクを軽減し、コードの健全性を向上させながら、使用する正確な依存関係のメンテナーに支払います。"
+msgstr "pytest および他の数千のパッケージのメンテナーは、Tidelift と協力して、アプリケーションの構築に使用するオープンソース依存関係の商業サポートとメンテナンスを提供しています。 時間を節約し、リスクを軽減し、コードの健全性を向上させながら、使用する正確な依存関係のメンテナーに支払います。"
 
 #: ../../index.rst:150
 msgid "`Learn more. <https://tidelift.com/subscription/pkg/pypi-pytest?utm_source=pypi-pytest&utm_medium=referral&utm_campaign=enterprise&utm_term=repo>`_"
@@ -177,5 +177,5 @@ msgstr "セキュリティ"
 
 #: ../../index.rst:155
 msgid "pytest has never been associated with a security vulnerability, but in any case, to report a security vulnerability please use the `Tidelift security contact <https://tidelift.com/security>`_. Tidelift will coordinate the fix and disclosure."
-msgstr "pytest はこれまでセキュリティ脆弱性と関連付けられたことはありませんが、いずれにせよ、セキュリティ脆弱性を報告するには `Tidelift セキュリティ連絡先 <https://tidelift.com/security>`_ を使用してください。Tidelift は修正と開示を調整します。"
+msgstr "pytest はこれまでセキュリティ脆弱性と関連付けられたことはありませんが、いずれにせよ、セキュリティ脆弱性を報告するには `Tidelift セキュリティ連絡先 <https://tidelift.com/security>`_ を使用してください。 Tidelift は修正と開示を調整します。"
 
