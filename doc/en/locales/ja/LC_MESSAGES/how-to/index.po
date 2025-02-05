@@ -21,7 +21,7 @@ msgstr ""
 
 #: ../../how-to/index.rst:6
 msgid "How-to guides"
-msgstr "ハウツーガイド"
+msgstr "ハウツー"
 
 #: ../../how-to/index.rst:9
 msgid "Core pytest functionality"

@@ -21,7 +21,7 @@ msgstr ""
 
 #: ../../getting-started.rst:4
 msgid "Get Started"
-msgstr "始めましょう"
+msgstr "はじめに"
 
 #: ../../getting-started.rst:10
 msgid "Install ``pytest``"
