@@ -21,181 +21,181 @@ msgstr ""
 
 #: ../../how-to/unittest.rst:6
 msgid "How to use ``unittest``-based tests with pytest"
-msgstr ""
+msgstr "pytest で ``unittest`` ベースのテストを使用する方法"
 
 #: ../../how-to/unittest.rst:8
 msgid "``pytest`` supports running Python ``unittest``-based tests out of the box. It's meant for leveraging existing ``unittest``-based test suites to use pytest as a test runner and also allow to incrementally adapt the test suite to take full advantage of pytest's features."
-msgstr ""
+msgstr "``pytest`` は Python の ``unittest`` ベースのテストをすぐに実行できます。これは、既存の ``unittest`` ベースのテストスイートを活用して pytest をテストランナーとして使用し、pytest の機能を最大限に活用するためにテストスイートを段階的に適応させることを目的としています。"
 
 #: ../../how-to/unittest.rst:13
 msgid "To run an existing ``unittest``-style test suite using ``pytest``, type:"
-msgstr ""
+msgstr "既存の ``unittest`` スタイルのテストスイートを ``pytest`` で実行するには、次のように入力します:"
 
 #: ../../how-to/unittest.rst:20
 msgid "pytest will automatically collect ``unittest.TestCase`` subclasses and their ``test`` methods in ``test_*.py`` or ``*_test.py`` files."
-msgstr ""
+msgstr "pytest は ``test_*.py`` または ``*_test.py`` ファイル内の ``unittest.TestCase`` サブクラスとその ``test`` メソッドを自動的に収集します。"
 
 #: ../../how-to/unittest.rst:23
 msgid "Almost all ``unittest`` features are supported:"
-msgstr ""
+msgstr "ほとんどすべての ``unittest`` 機能がサポートされています:"
 
 #: ../../how-to/unittest.rst:25
 msgid "``@unittest.skip`` style decorators;"
-msgstr ""
+msgstr "``@unittest.skip`` スタイルのデコレータ;"
 
 #: ../../how-to/unittest.rst:26
 msgid "``setUp/tearDown``;"
-msgstr ""
+msgstr "``setUp/tearDown``;"
 
 #: ../../how-to/unittest.rst:27
 msgid "``setUpClass/tearDownClass``;"
-msgstr ""
+msgstr "``setUpClass/tearDownClass``;"
 
 #: ../../how-to/unittest.rst:28
 msgid "``setUpModule/tearDownModule``;"
-msgstr ""
+msgstr "``setUpModule/tearDownModule``;"
 
 #: ../../how-to/unittest.rst:33
 msgid "Additionally, :ref:`subtests <python:subtests>` are supported by the `pytest-subtests`_ plugin."
-msgstr ""
+msgstr "さらに、:ref:`subtests <python:subtests>` は `pytest-subtests`_ プラグインによってサポートされています。"
 
 #: ../../how-to/unittest.rst:36
 msgid "Up to this point pytest does not have support for the following features:"
-msgstr ""
+msgstr "現時点では、pytest は次の機能をサポートしていません:"
 
 #: ../../how-to/unittest.rst:38
 msgid "`load_tests protocol`_;"
-msgstr ""
+msgstr "`load_tests プロトコル`_;"
 
 #: ../../how-to/unittest.rst:41
 msgid "Benefits out of the box"
-msgstr ""
+msgstr "すぐに使える利点"
 
 #: ../../how-to/unittest.rst:43
 msgid "By running your test suite with pytest you can make use of several features, in most cases without having to modify existing code:"
-msgstr ""
+msgstr "pytest でテストスイートを実行することで、既存のコードをほとんど変更することなく、いくつかの機能を利用できます:"
 
 #: ../../how-to/unittest.rst:46
 msgid "Obtain :ref:`more informative tracebacks <tbreportdemo>`;"
-msgstr ""
+msgstr ":ref:`より有益なトレースバック <tbreportdemo>` を取得する;"
 
 #: ../../how-to/unittest.rst:47
 msgid ":ref:`stdout and stderr <captures>` capturing;"
-msgstr ""
+msgstr ":ref:`stdout と stderr <captures>` のキャプチャ;"
 
 #: ../../how-to/unittest.rst:48
 msgid ":ref:`Test selection options <select-tests>` using ``-k`` and ``-m`` flags;"
-msgstr ""
+msgstr "``-k`` および ``-m`` フラグを使用した :ref:`テスト選択オプション <select-tests>`;"
 
 #: ../../how-to/unittest.rst:49
 msgid ":ref:`maxfail`;"
-msgstr ""
+msgstr ":ref:`maxfail`;"
 
 #: ../../how-to/unittest.rst:50
 msgid ":ref:`--pdb <pdb-option>` command-line option for debugging on test failures (see :ref:`note <pdb-unittest-note>` below);"
-msgstr ""
+msgstr "テスト失敗時のデバッグ用の :ref:`--pdb <pdb-option>` コマンドラインオプション (以下の :ref:`note <pdb-unittest-note>` を参照);"
 
 #: ../../how-to/unittest.rst:52
 msgid "Distribute tests to multiple CPUs using the :pypi:`pytest-xdist` plugin;"
-msgstr ""
+msgstr ":pypi:`pytest-xdist` プラグインを使用してテストを複数の CPU に分散する;"
 
 #: ../../how-to/unittest.rst:53
 msgid "Use :ref:`plain assert-statements <assert>` instead of ``self.assert*`` functions (:pypi:`unittest2pytest` is immensely helpful in this);"
-msgstr ""
+msgstr "``self.assert*`` 関数の代わりに :ref:`プレーンな assert 文 <assert>` を使用する (:pypi:`unittest2pytest` が非常に役立ちます);"
 
 #: ../../how-to/unittest.rst:58
 msgid "pytest features in ``unittest.TestCase`` subclasses"
-msgstr ""
+msgstr "``unittest.TestCase`` サブクラスでの pytest 機能"
 
 #: ../../how-to/unittest.rst:60
 msgid "The following pytest features work in ``unittest.TestCase`` subclasses:"
-msgstr ""
+msgstr "次の pytest 機能は ``unittest.TestCase`` サブクラスで動作します:"
 
 #: ../../how-to/unittest.rst:62
 msgid ":ref:`Marks <mark>`: :ref:`skip <skip>`, :ref:`skipif <skipif>`, :ref:`xfail <xfail>`;"
-msgstr ""
+msgstr ":ref:`マーク <mark>`: :ref:`skip <skip>`, :ref:`skipif <skipif>`, :ref:`xfail <xfail>`;"
 
 #: ../../how-to/unittest.rst:63
 msgid ":ref:`Auto-use fixtures <mixing-fixtures>`;"
-msgstr ""
+msgstr ":ref:`自動使用フィクスチャ <mixing-fixtures>`;"
 
 #: ../../how-to/unittest.rst:65
 msgid "The following pytest features **do not** work, and probably never will due to different design philosophies:"
-msgstr ""
+msgstr "次の pytest 機能は動作しませんし、設計哲学の違いによりおそらく今後も動作しないでしょう:"
 
 #: ../../how-to/unittest.rst:68
 msgid ":ref:`Fixtures <fixture>` (except for ``autouse`` fixtures, see :ref:`below <mixing-fixtures>`);"
-msgstr ""
+msgstr ":ref:`フィクスチャ <fixture>` (``autouse`` フィクスチャを除く、以下の :ref:`mixing-fixtures` を参照);"
 
 #: ../../how-to/unittest.rst:69
 msgid ":ref:`Parametrization <parametrize>`;"
-msgstr ""
+msgstr ":ref:`パラメータ化 <parametrize>`;"
 
 #: ../../how-to/unittest.rst:70
 msgid ":ref:`Custom hooks <writing-plugins>`;"
-msgstr ""
+msgstr ":ref:`カスタムフック <writing-plugins>`;"
 
 #: ../../how-to/unittest.rst:73
 msgid "Third party plugins may or may not work well, depending on the plugin and the test suite."
-msgstr ""
+msgstr "サードパーティのプラグインは、プラグインとテストスイートによってはうまく動作する場合としない場合があります。"
 
 #: ../../how-to/unittest.rst:78
 msgid "Mixing pytest fixtures into ``unittest.TestCase`` subclasses using marks"
-msgstr ""
+msgstr "マークを使用して ``unittest.TestCase`` サブクラスに pytest フィクスチャを混在させる"
 
 #: ../../how-to/unittest.rst:80
 msgid "Running your unittest with ``pytest`` allows you to use its :ref:`fixture mechanism <fixture>` with ``unittest.TestCase`` style tests.  Assuming you have at least skimmed the pytest fixture features, let's jump-start into an example that integrates a pytest ``db_class`` fixture, setting up a class-cached database object, and then reference it from a unittest-style test:"
-msgstr ""
+msgstr "``pytest`` で unittest を実行すると、``unittest.TestCase`` スタイルのテストで :ref:`フィクスチャメカニズム <fixture>` を使用できます。pytest のフィクスチャ機能を少なくともざっと読んだと仮定して、クラスキャッシュされたデータベースオブジェクトを設定し、unittest スタイルのテストからそれを参照する pytest ``db_class`` フィクスチャを統合する例を見てみましょう:"
 
 #: ../../how-to/unittest.rst:105
 msgid "This defines a fixture function ``db_class`` which - if used - is called once for each test class and which sets the class-level ``db`` attribute to a ``DummyDB`` instance.  The fixture function achieves this by receiving a special ``request`` object which gives access to :ref:`the requesting test context <request-context>` such as the ``cls`` attribute, denoting the class from which the fixture is used.  This architecture de-couples fixture writing from actual test code and allows reuse of the fixture by a minimal reference, the fixture name.  So let's write an actual ``unittest.TestCase`` class using our fixture definition:"
-msgstr ""
+msgstr "これは、使用されると各テストクラスごとに一度呼び出され、クラスレベルの ``db`` 属性を ``DummyDB`` インスタンスに設定するフィクスチャ関数 ``db_class`` を定義します。フィクスチャ関数は、``cls`` 属性などの :ref:`要求されたテストコンテキスト <request-context>` へのアクセスを提供する特別な ``request`` オブジェクトを受け取ることでこれを実現します。このアーキテクチャは、フィクスチャの記述を実際のテストコードから分離し、フィクスチャ名という最小限の参照によってフィクスチャを再利用できるようにします。それでは、フィクスチャ定義を使用して実際の ``unittest.TestCase`` クラスを書いてみましょう:"
 
 #: ../../how-to/unittest.rst:134
 msgid "The ``@pytest.mark.usefixtures(\"db_class\")`` class-decorator makes sure that the pytest fixture function ``db_class`` is called once per class. Due to the deliberately failing assert statements, we can take a look at the ``self.db`` values in the traceback:"
-msgstr ""
+msgstr "``@pytest.mark.usefixtures(\"db_class\")`` クラスデコレータは、pytest フィクスチャ関数 ``db_class`` がクラスごとに一度呼び出されることを保証します。意図的に失敗する assert 文のおかげで、トレースバックで ``self.db`` の値を確認できます:"
 
 #: ../../how-to/unittest.rst:176
 msgid "This default pytest traceback shows that the two test methods share the same ``self.db`` instance which was our intention when writing the class-scoped fixture function above."
-msgstr ""
+msgstr "このデフォルトの pytest トレースバックは、2つのテストメソッドが同じ ``self.db`` インスタンスを共有していることを示しており、これは上記のクラススコープのフィクスチャ関数を記述したときの意図でした。"
 
 #: ../../how-to/unittest.rst:182
 msgid "Using autouse fixtures and accessing other fixtures"
-msgstr ""
+msgstr "autouse フィクスチャを使用して他のフィクスチャにアクセスする"
 
 #: ../../how-to/unittest.rst:184
 msgid "Although it's usually better to explicitly declare use of fixtures you need for a given test, you may sometimes want to have fixtures that are automatically used in a given context.  After all, the traditional style of unittest-setup mandates the use of this implicit fixture writing and chances are, you are used to it or like it."
-msgstr ""
+msgstr "特定のテストに必要なフィクスチャの使用を明示的に宣言する方が通常は良いですが、特定のコンテキストで自動的に使用されるフィクスチャが欲しい場合もあります。結局のところ、従来の unittest セットアップスタイルでは、この暗黙のフィクスチャ記述の使用が義務付けられており、慣れているか好きである可能性があります。"
 
 #: ../../how-to/unittest.rst:190
 msgid "You can flag fixture functions with ``@pytest.fixture(autouse=True)`` and define the fixture function in the context where you want it used. Let's look at an ``initdir`` fixture which makes all test methods of a ``TestCase`` class execute in a temporary directory with a pre-initialized ``samplefile.ini``.  Our ``initdir`` fixture itself uses the pytest builtin :fixture:`tmp_path` fixture to delegate the creation of a per-test temporary directory:"
-msgstr ""
+msgstr "フィクスチャ関数に ``@pytest.fixture(autouse=True)`` フラグを付けて、使用したいコンテキストでフィクスチャ関数を定義できます。事前に初期化された ``samplefile.ini`` を持つ一時ディレクトリで ``TestCase`` クラスのすべてのテストメソッドを実行する ``initdir`` フィクスチャを見てみましょう。私たちの ``initdir`` フィクスチャ自体は、pytest 組み込みの :fixture:`tmp_path` フィクスチャを使用して、テストごとの一時ディレクトリの作成を委任します:"
 
 #: ../../how-to/unittest.rst:217
 msgid "Due to the ``autouse`` flag the ``initdir`` fixture function will be used for all methods of the class where it is defined.  This is a shortcut for using a ``@pytest.mark.usefixtures(\"initdir\")`` marker on the class like in the previous example."
-msgstr ""
+msgstr "``autouse`` フラグのおかげで、``initdir`` フィクスチャ関数は定義されているクラスのすべてのメソッドに対して使用されます。これは、前の例のようにクラスに ``@pytest.mark.usefixtures(\"initdir\")`` マーカーを使用するためのショートカットです。"
 
 #: ../../how-to/unittest.rst:222
 msgid "Running this test module ...:"
-msgstr ""
+msgstr "このテストモジュールを実行すると ...:"
 
 #: ../../how-to/unittest.rst:230
 msgid "... gives us one passed test because the ``initdir`` fixture function was executed ahead of the ``test_method``."
-msgstr ""
+msgstr "... ``initdir`` フィクスチャ関数が ``test_method`` の前に実行されたため、1つのテストが合格しました。"
 
 #: ../../how-to/unittest.rst:235
 msgid "``unittest.TestCase`` methods cannot directly receive fixture arguments as implementing that is likely to inflict on the ability to run general unittest.TestCase test suites."
-msgstr ""
+msgstr "``unittest.TestCase`` メソッドは、一般的な unittest.TestCase テストスイートを実行する能力に影響を与える可能性があるため、フィクスチャ引数を直接受け取ることはできません。"
 
 #: ../../how-to/unittest.rst:239
 msgid "The above ``usefixtures`` and ``autouse`` examples should help to mix in pytest fixtures into unittest suites."
-msgstr ""
+msgstr "上記の ``usefixtures`` および ``autouse`` の例は、pytest フィクスチャを unittest スイートに混在させるのに役立つはずです。"
 
 #: ../../how-to/unittest.rst:242
 msgid "You can also gradually move away from subclassing from ``unittest.TestCase`` to *plain asserts* and then start to benefit from the full pytest feature set step by step."
-msgstr ""
+msgstr "また、``unittest.TestCase`` のサブクラス化から徐々に離れて *プレーンなアサーション* に移行し、段階的に pytest の完全な機能セットの恩恵を受け始めることもできます。"
 
 #: ../../how-to/unittest.rst:249
 msgid "Due to architectural differences between the two frameworks, setup and teardown for ``unittest``-based tests is performed during the ``call`` phase of testing instead of in ``pytest``'s standard ``setup`` and ``teardown`` stages. This can be important to understand in some situations, particularly when reasoning about errors. For example, if a ``unittest``-based suite exhibits errors during setup, ``pytest`` will report no errors during its ``setup`` phase and will instead raise the error during ``call``."
-msgstr ""
+msgstr "2つのフレームワークのアーキテクチャの違いにより、``unittest`` ベースのテストのセットアップとティアダウンは、``pytest`` の標準的な ``setup`` および ``teardown`` ステージではなく、テストの ``call`` フェーズ中に実行されます。これは、特にエラーについて推論する際に、いくつかの状況で理解することが重要です。たとえば、``unittest`` ベースのスイートがセットアップ中にエラーを示した場合、``pytest`` はその ``setup`` フェーズ中にエラーを報告せず、代わりに ``call`` 中にエラーを発生させます。"
 

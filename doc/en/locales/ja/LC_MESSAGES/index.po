@@ -57,7 +57,7 @@ msgstr "また、:doc:`以前の講演とブログ投稿 <talks>` も参照し�
 
 #: ../../index.rst:10
 msgid "pytest: helps you write better programs"
-msgstr "pytest: より良いプログラムを書くのに役立ちます"
+msgstr "pytest: プログラムをもっと良いものに"
 
 #: ../../index.rst:44
 msgid "The ``pytest`` framework makes it easy to write small, readable tests, and can scale to support complex functional testing for applications and libraries."

@@ -21,33 +21,33 @@ msgstr ""
 
 #: ../../how-to/existingtestsuite.rst:4
 msgid "How to use pytest with an existing test suite"
-msgstr ""
+msgstr "既存のテストスイートで pytest を使用する方法"
 
 #: ../../how-to/existingtestsuite.rst:6
 msgid "Pytest can be used with most existing test suites, but its behavior differs from other test runners such as Python's default unittest framework."
-msgstr ""
+msgstr "Pytest はほとんどの既存のテストスイートで使用できますが、その動作は Python のデフォルトの unittest フレームワークなどの他のテストランナーとは異なります。"
 
 #: ../../how-to/existingtestsuite.rst:10
 msgid "Before using this section you will want to :ref:`install pytest <getstarted>`."
-msgstr ""
+msgstr "このセクションを使用する前に :ref:`pytest をインストールする <getstarted>` 必要があります。"
 
 #: ../../how-to/existingtestsuite.rst:13
 msgid "Running an existing test suite with pytest"
-msgstr ""
+msgstr "pytest を使用して既存のテストスイートを実行する"
 
 #: ../../how-to/existingtestsuite.rst:15
 msgid "Say you want to contribute to an existing repository somewhere. After pulling the code into your development space using some flavor of version control and (optionally) setting up a virtualenv you will want to run:"
-msgstr ""
+msgstr "既存のリポジトリに貢献したいとします。バージョン管理のいずれかのフレーバーを使用してコードを開発スペースにプルし、（オプションで）仮想環境を設定した後、次のコマンドを実行します。"
 
 #: ../../how-to/existingtestsuite.rst:26
 msgid "in your project root.  This will set up a symlink to your code in site-packages, allowing you to edit your code while your tests run against it as if it were installed."
-msgstr ""
+msgstr "これにより、site-packages にコードへのシンボリックリンクが設定され、コードを編集しながら、テストがインストールされているかのように実行されます。"
 
 #: ../../how-to/existingtestsuite.rst:30
 msgid "Setting up your project in development mode lets you avoid having to reinstall every time you want to run your tests, and is less brittle than mucking about with sys.path to point your tests at local code."
-msgstr ""
+msgstr "開発モードでプロジェクトを設定すると、テストを実行するたびに再インストールする必要がなくなり、sys.path をローカルコードを指すように設定するよりも壊れやすくなります。"
 
 #: ../../how-to/existingtestsuite.rst:34
 msgid "Also consider using :ref:`tox <use tox>`."
-msgstr ""
+msgstr ":ref:`tox <use tox>` を使用することも検討してください。"
 
