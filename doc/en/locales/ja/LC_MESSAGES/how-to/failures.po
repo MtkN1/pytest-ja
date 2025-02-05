@@ -45,7 +45,7 @@ msgstr "Python には :doc:`pdb <python:library/pdb>` という組み込みの P
 
 #: ../../how-to/failures.rst:34
 msgid "This will invoke the Python debugger on every failure (or KeyboardInterrupt). Often you might only want to do this for the first failing test to understand a certain failure situation:"
-msgstr "これにより、すべての失敗（または KeyboardInterrupt）で Python デバッガーが呼び出されます。多くの場合、特定の失敗状況を理解するために、最初の失敗したテストに対してのみこれを行いたい場合があります:"
+msgstr "これにより、すべての失敗 (または KeyboardInterrupt) で Python デバッガーが呼び出されます。多くの場合、特定の失敗状況を理解するために、最初の失敗したテストに対してのみこれを行いたい場合があります:"
 
 #: ../../how-to/failures.rst:43
 msgid "Note that on any failure the exception information is stored on ``sys.last_value``, ``sys.last_type`` and ``sys.last_traceback``. In interactive use, this allows one to drop into postmortem debugging with any debug tool. One can also manually access the exception information, for example::"
@@ -81,7 +81,7 @@ msgstr "既にキャプチャされた以前のテスト出力は、そのまま
 
 #: ../../how-to/failures.rst:82
 msgid "Output capture gets resumed when ending the debugger session (via the ``continue`` command)."
-msgstr "デバッガーセッションを終了すると（``continue`` コマンドを介して）、出力キャプチャが再開されます。"
+msgstr "デバッガーセッションを終了すると (``continue`` コマンドを介して) 、出力キャプチャが再開されます。"
 
 #: ../../how-to/failures.rst:89
 msgid "Using the builtin breakpoint function"
@@ -121,7 +121,7 @@ msgstr "コマンドラインで ``-p no:faulthandler`` が指定されない限
 
 #: ../../how-to/failures.rst:113
 msgid "Also the :confval:`faulthandler_timeout=X<faulthandler_timeout>` configuration option can be used to dump the traceback of all threads if a test takes longer than ``X`` seconds to finish (not available on Windows)."
-msgstr "また、テストが終了するまでに ``X`` 秒以上かかる場合、:confval:`faulthandler_timeout=X<faulthandler_timeout>` 構成オプションを使用してすべてのスレッドのトレースバックをダンプできます（Windows では使用できません）。"
+msgstr "また、テストが終了するまでに ``X`` 秒以上かかる場合、:confval:`faulthandler_timeout=X<faulthandler_timeout>` 構成オプションを使用してすべてのスレッドのトレースバックをダンプできます (Windows では使用できません) 。"
 
 #: ../../how-to/failures.rst:119
 msgid "This functionality has been integrated from the external `pytest-faulthandler <https://github.com/pytest-dev/pytest-faulthandler>`__ plugin, with two small differences:"
@@ -153,7 +153,7 @@ msgstr "両方のタイプの例外は通常バグと見なされますが、プ
 
 #: ../../how-to/failures.rst:149
 msgid "The plugins are automatically enabled for pytest runs, unless the ``-p no:unraisableexception`` (for unraisable exceptions) and ``-p no:threadexception`` (for thread exceptions) options are given on the command-line."
-msgstr "コマンドラインで ``-p no:unraisableexception``（発生しない例外用）および ``-p no:threadexception``（スレッド例外用）オプションが指定されない限り、プラグインは pytest 実行時に自動的に有効になります。"
+msgstr "コマンドラインで ``-p no:unraisableexception`` (発生しない例外用) および ``-p no:threadexception`` (スレッド例外用) オプションが指定されない限り、プラグインは pytest 実行時に自動的に有効になります。"
 
 #: ../../how-to/failures.rst:154
 msgid "The warnings may be silenced selectively using the :ref:`pytest.mark.filterwarnings ref` mark. The warning categories are :class:`pytest.PytestUnraisableExceptionWarning` and :class:`pytest.PytestUnhandledThreadExceptionWarning`."

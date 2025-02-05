@@ -105,7 +105,7 @@ msgstr "``and``、``or``、``not`` および括弧を使用できます。"
 
 #: ../../example/markers.rst:228
 msgid "In addition to the test's name, ``-k`` also matches the names of the test's parents (usually, the name of the file and class it's in), attributes set on the test function, markers applied to it or its parents and any :attr:`extra keywords <_pytest.nodes.Node.extra_keyword_matches>` explicitly added to it or its parents."
-msgstr "テストの名前に加えて、``-k`` はテストの親の名前（通常はファイルとクラスの名前）、テスト関数に設定された属性、それに適用されたマーカーまたはその親、およびその親に明示的に追加された任意の :attr:`extra keywords <_pytest.nodes.Node.extra_keyword_matches>` にも一致します。"
+msgstr "テストの名前に加えて、``-k`` はテストの親の名前 (通常はファイルとクラスの名前) 、テスト関数に設定された属性、それに適用されたマーカーまたはその親、およびその親に明示的に追加された任意の :attr:`extra keywords <_pytest.nodes.Node.extra_keyword_matches>` にも一致します。"
 
 #: ../../example/markers.rst:234
 msgid "Registering markers"
@@ -217,7 +217,7 @@ msgstr "カスタムマーカーは、呼び出し可能なものとして呼び
 
 #: ../../example/markers.rst:492
 msgid "However, if there is a callable as the single positional argument with no keyword arguments, using the ``pytest.mark.MARKER_NAME(c)`` will not pass ``c`` as a positional argument but decorate ``c`` with the custom marker (see :ref:`MarkDecorator <mark>`). Fortunately, ``pytest.mark.MARKER_NAME.with_args`` comes to the rescue:"
-msgstr "ただし、キーワード引数なしで単一の位置引数として呼び出し可能なものがある場合、``pytest.mark.MARKER_NAME(c)`` を使用すると、``c`` を位置引数として渡すのではなく、カスタムマーカーで ``c`` をデコレートします（詳細は :ref:`MarkDecorator <mark>` を参照）。幸いなことに、``pytest.mark.MARKER_NAME.with_args`` が救済します："
+msgstr "ただし、キーワード引数なしで単一の位置引数として呼び出し可能なものがある場合、``pytest.mark.MARKER_NAME(c)`` を使用すると、``c`` を位置引数として渡すのではなく、カスタムマーカーで ``c`` をデコレートします (詳細は :ref:`MarkDecorator <mark>` を参照) 。幸いなことに、``pytest.mark.MARKER_NAME.with_args`` が救済します："
 
 #: ../../example/markers.rst:508
 msgid "The output is as follows:"

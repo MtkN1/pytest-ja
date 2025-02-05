@@ -37,7 +37,7 @@ msgstr "コマンドラインに応じたパラメータの組み合わせの生
 
 #: ../../example/parametrize.rst:18
 msgid "Let's say we want to execute a test with different computation parameters and the parameter range shall be determined by a command line argument.  Let's first write a simple (do-nothing) computation test:"
-msgstr "異なる計算パラメータでテストを実行し、パラメータ範囲をコマンドライン引数で決定したいとします。まず、簡単な（何もしない）計算テストを書いてみましょう："
+msgstr "異なる計算パラメータでテストを実行し、パラメータ範囲をコマンドライン引数で決定したいとします。まず、簡単な (何もしない) 計算テストを書いてみましょう："
 
 #: ../../example/parametrize.rst:30
 msgid "Now we add a test configuration like this:"
@@ -185,7 +185,7 @@ msgstr "``obj``: ダンプ/ロードされるオブジェクト"
 
 #: ../../example/parametrize.rst:501
 msgid "Running it results in some skips if we don't have all the python interpreters installed and otherwise runs all combinations (3 interpreters times 3 interpreters times 3 objects to serialize/deserialize):"
-msgstr "すべてのPythonインタープリタがインストールされていない場合、実行するといくつかのスキップが発生し、それ以外の場合はすべての組み合わせ（3つのインタープリタ×3つのインタープリタ×3つのシリアル化/デシリアル化するオブジェクト）が実行されます："
+msgstr "すべてのPythonインタープリタがインストールされていない場合、実行するといくつかのスキップが発生し、それ以外の場合はすべての組み合わせ (3つのインタープリタ×3つのインタープリタ×3つのシリアル化/デシリアル化するオブジェクト) が実行されます："
 
 #: ../../example/parametrize.rst:513
 msgid "Parametrization of optional implementations/imports"
@@ -193,7 +193,7 @@ msgstr "オプションの実装/インポートのパラメータ化"
 
 #: ../../example/parametrize.rst:515
 msgid "If you want to compare the outcomes of several implementations of a given API, you can write test functions that receive the already imported implementations and get skipped in case the implementation is not importable/available.  Let's say we have a \"base\" implementation and the other (possibly optimized ones) need to provide similar results:"
-msgstr "特定のAPIの複数の実装の結果を比較したい場合、すでにインポートされた実装を受け取り、実装がインポートできない/利用できない場合にスキップされるテスト関数を書くことができます。たとえば、「ベース」実装があり、他の（おそらく最適化された）実装が同様の結果を提供する必要があるとします："
+msgstr "特定のAPIの複数の実装の結果を比較したい場合、すでにインポートされた実装を受け取り、実装がインポートできない/利用できない場合にスキップされるテスト関数を書くことができます。たとえば、「ベース」実装があり、他の (おそらく最適化された) 実装が同様の結果を提供する必要があるとします："
 
 #: ../../example/parametrize.rst:537
 msgid "And then a base implementation of a simple function:"
@@ -281,7 +281,7 @@ msgstr ":func:`pytest.raises` を :ref:`pytest.mark.parametrize ref` デコレ�
 
 #: ../../example/parametrize.rst:660
 msgid "``contextlib.nullcontext`` can be used to test cases that are not expected to raise exceptions but that should result in some value. The value is given as the ``enter_result`` parameter, which will be available as the ``with`` statement’s target (``e`` in the example below)."
-msgstr "``contextlib.nullcontext`` を使用して、例外が発生しないが何らかの値を返すべきテストケースをテストできます。値は ``enter_result`` パラメータとして指定され、``with`` ステートメントのターゲット（以下の例では ``e``）として使用できます。"
+msgstr "``contextlib.nullcontext`` を使用して、例外が発生しないが何らかの値を返すべきテストケースをテストできます。値は ``enter_result`` パラメータとして指定され、``with`` ステートメントのターゲット (以下の例では ``e``) として使用できます。"
 
 #: ../../example/parametrize.rst:665
 msgid "For example:"

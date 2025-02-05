@@ -41,7 +41,7 @@ msgstr "次に、``pytest`` を直接呼び出すことができます:"
 
 #: ../../how-to/doctest.rst:41
 msgid "By default, pytest will collect ``test*.txt`` files looking for doctest directives, but you can pass additional globs using the ``--doctest-glob`` option (multi-allowed)."
-msgstr "デフォルトでは、pytest は doctest ディレクティブを探して ``test*.txt`` ファイルを収集しますが、``--doctest-glob`` オプションを使用して追加のグロブを渡すことができます（複数指定可能）。"
+msgstr "デフォルトでは、pytest は doctest ディレクティブを探して ``test*.txt`` ファイルを収集しますが、``--doctest-glob`` オプションを使用して追加のグロブを渡すことができます (複数指定可能) 。"
 
 #: ../../how-to/doctest.rst:44
 msgid "In addition to text files, you can also execute doctests directly from docstrings of your classes and functions, including from test modules:"
@@ -117,7 +117,7 @@ msgstr "出力形式"
 
 #: ../../how-to/doctest.rst:171
 msgid "You can change the diff output format on failure for your doctests by using one of standard doctest modules format in options (see :data:`python:doctest.REPORT_UDIFF`, :data:`python:doctest.REPORT_CDIFF`, :data:`python:doctest.REPORT_NDIFF`, :data:`python:doctest.REPORT_ONLY_FIRST_FAILURE`):"
-msgstr "オプションで標準の doctest モジュール形式のいずれかを使用して、doctest の失敗時の diff 出力形式を変更できます（:data:`python:doctest.REPORT_UDIFF`、:data:`python:doctest.REPORT_CDIFF`、:data:`python:doctest.REPORT_NDIFF`、:data:`python:doctest.REPORT_ONLY_FIRST_FAILURE` を参照）。"
+msgstr "オプションで標準の doctest モジュール形式のいずれかを使用して、doctest の失敗時の diff 出力形式を変更できます (:data:`python:doctest.REPORT_UDIFF`、:data:`python:doctest.REPORT_CDIFF`、:data:`python:doctest.REPORT_NDIFF`、:data:`python:doctest.REPORT_ONLY_FIRST_FAILURE` を参照) 。"
 
 #: ../../how-to/doctest.rst:186
 msgid "pytest-specific features"
@@ -189,11 +189,11 @@ msgstr "ただし、これらの関数を使用することは、docstring の�
 
 #: ../../how-to/doctest.rst:292
 msgid ":func:`pytest.skip` and :func:`pytest.xfail` behave differently depending if the doctests are in a Python file (in docstrings) or a text file containing doctests intermingled with text:"
-msgstr ":func:`pytest.skip` および :func:`pytest.xfail` は、doctest が Python ファイル（docstring 内）にあるか、テキストと混在する doctest を含むテキストファイルにあるかによって動作が異なります:"
+msgstr ":func:`pytest.skip` および :func:`pytest.xfail` は、doctest が Python ファイル (docstring 内) にあるか、テキストと混在する doctest を含むテキストファイルにあるかによって動作が異なります:"
 
 #: ../../how-to/doctest.rst:296
 msgid "Python modules (docstrings): the functions only act in that specific docstring, letting the other docstrings in the same module execute as normal."
-msgstr "Python モジュール（docstring）: 関数はその特定の docstring 内でのみ動作し、同じモジュール内の他の docstring を通常どおり実行させます。"
+msgstr "Python モジュール (docstring) : 関数はその特定の docstring 内でのみ動作し、同じモジュール内の他の docstring を通常どおり実行させます。"
 
 #: ../../how-to/doctest.rst:299
 msgid "Text files: the functions will skip/xfail the checks for the rest of the entire file."

@@ -89,11 +89,11 @@ msgstr "一時ディレクトリの場所と保持"
 
 #: ../../how-to/tmp_path.rst:136
 msgid "The temporary directories, as returned by the :fixture:`tmp_path` and (now deprecated) :fixture:`tmpdir` fixtures, are automatically created under a base temporary directory, in a structure that depends on the ``--basetemp`` option:"
-msgstr ":fixture:`tmp_path` および（現在は非推奨の） :fixture:`tmpdir` フィクスチャによって返される一時ディレクトリは、``--basetemp`` オプションに依存する構造で、ベースの一時ディレクトリの下に自動的に作成されます："
+msgstr ":fixture:`tmp_path` および (現在は非推奨の) :fixture:`tmpdir` フィクスチャによって返される一時ディレクトリは、``--basetemp`` オプションに依存する構造で、ベースの一時ディレクトリの下に自動的に作成されます："
 
 #: ../../how-to/tmp_path.rst:141
 msgid "By default (when the ``--basetemp`` option is not set), the temporary directories will follow this template:"
-msgstr "デフォルトでは（``--basetemp`` オプションが設定されていない場合）、一時ディレクトリは次のテンプレートに従います："
+msgstr "デフォルトでは (``--basetemp`` オプションが設定されていない場合) 、一時ディレクトリは次のテンプレートに従います："
 
 #: ../../how-to/tmp_path.rst:148
 msgid "where:"
@@ -126,7 +126,7 @@ msgstr "自動インクリメントされる ``{num}`` プレースホルダー�
 
 #: ../../how-to/tmp_path.rst:163
 msgid "When the ``--basetemp`` option is used (e.g. ``pytest --basetemp=mydir``), it will be used directly as base temporary directory:"
-msgstr "``--basetemp`` オプションが使用される場合（例：``pytest --basetemp=mydir``）、それがベースの一時ディレクトリとして直接使用されます："
+msgstr "``--basetemp`` オプションが使用される場合 (例：``pytest --basetemp=mydir``) 、それがベースの一時ディレクトリとして直接使用されます："
 
 #: ../../how-to/tmp_path.rst:170
 msgid "Note that there is no retention feature in this case: only the results of the most recent run will be kept."

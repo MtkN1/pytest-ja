@@ -53,7 +53,7 @@ msgstr "警告がリスト内の複数のオプションに一致する場合、
 
 #: ../../how-to/capture-warnings.rst:114
 msgid "The ``-W`` flag and the ``filterwarnings`` ini option use warning filters that are similar in structure, but each configuration option interprets its filter differently. For example, *message* in ``filterwarnings`` is a string containing a regular expression that the start of the warning message must match, case-insensitively, while *message* in ``-W`` is a literal string that the start of the warning message must contain (case-insensitively), ignoring any whitespace at the start or end of message. Consult the `warning filter`_ documentation for more details."
-msgstr "``-W`` フラグと ``filterwarnings`` ini オプションは、構造が似た警告フィルタを使用しますが、各構成オプションはフィルタを異なる方法で解釈します。たとえば、``filterwarnings`` の *message* は、警告メッセージの先頭が一致する必要がある正規表現を含む文字列（大文字と小文字を区別しない）ですが、``-W`` の *message* は、警告メッセージの先頭に含まれる必要があるリテラル文字列（大文字と小文字を区別しない）であり、メッセージの先頭または末尾の空白を無視します。詳細については、`warning filter`_ ドキュメントを参照してください。"
+msgstr "``-W`` フラグと ``filterwarnings`` ini オプションは、構造が似た警告フィルタを使用しますが、各構成オプションはフィルタを異なる方法で解釈します。たとえば、``filterwarnings`` の *message* は、警告メッセージの先頭が一致する必要がある正規表現を含む文字列 (大文字と小文字を区別しない) ですが、``-W`` の *message* は、警告メッセージの先頭に含まれる必要があるリテラル文字列 (大文字と小文字を区別しない) であり、メッセージの先頭または末尾の空白を無視します。詳細については、`warning filter`_ ドキュメントを参照してください。"
 
 #: ../../how-to/capture-warnings.rst:127
 msgid "``@pytest.mark.filterwarnings``"
@@ -81,11 +81,11 @@ msgstr ":ref:`filterwarnings <pytest.mark.filterwarnings ref>` マークをク�
 
 #: ../../how-to/capture-warnings.rst:184
 msgid "If you want to apply multiple filters (by assigning a list of :ref:`filterwarnings <pytest.mark.filterwarnings ref>` mark to :globalvar:`pytestmark`), you must use the traditional :py:func:`warnings.filterwarnings` ordering approach (later filters take precedence), which is the reverse of the decorator approach mentioned above."
-msgstr "複数のフィルタを適用する場合（:ref:`filterwarnings <pytest.mark.filterwarnings ref>` マークのリストを :globalvar:`pytestmark` に割り当てることによって）、従来の :py:func:`warnings.filterwarnings` の順序付けアプローチ（後のフィルタが優先される）を使用する必要があります。これは、上記のデコレータアプローチの逆です。"
+msgstr "複数のフィルタを適用する場合 (:ref:`filterwarnings <pytest.mark.filterwarnings ref>` マークのリストを :globalvar:`pytestmark` に割り当てることによって) 、従来の :py:func:`warnings.filterwarnings` の順序付けアプローチ (後のフィルタが優先される) を使用する必要があります。これは、上記のデコレータアプローチの逆です。"
 
 #: ../../how-to/capture-warnings.rst:190
 msgid "*Credits go to Florian Schulze for the reference implementation in the* `pytest-warnings`_ *plugin.*"
-msgstr "*`pytest-warnings`_ プラグインのリファレンス実装に対する Florian Schulze の功績に感謝します。*"
+msgstr "`pytest-warnings`_ *プラグインのリファレンス実装に対する Florian Schulze の功績に感謝します。*"
 
 #: ../../how-to/capture-warnings.rst:196
 msgid "Disabling warnings summary"
@@ -121,7 +121,7 @@ msgstr "ただし、ユーザーがテストで :func:`pytest.warns`、:func:`py
 
 #: ../../how-to/capture-warnings.rst:228
 msgid "Sometimes it is useful to hide some specific deprecation warnings that happen in code that you have no control over (such as third-party libraries), in which case you might use the warning filters options (ini or marks) to ignore those warnings."
-msgstr "コード内で発生する特定の非推奨警告（サードパーティライブラリなど）を非表示にすることが有用な場合があります。その場合、警告フィルタオプション（ini またはマーク）を使用してそれらの警告を無視することができます。"
+msgstr "コード内で発生する特定の非推奨警告 (サードパーティライブラリなど) を非表示にすることが有用な場合があります。その場合、警告フィルタオプション (ini またはマーク) を使用してそれらの警告を無視することができます。"
 
 #: ../../how-to/capture-warnings.rst:232
 msgid "For example:"
@@ -141,7 +141,7 @@ msgstr "警告がインタープリターレベルで構成されている場合
 
 #: ../../how-to/capture-warnings.rst:253
 msgid "Also pytest doesn't follow :pep:`506` suggestion of resetting all warning filters because it might break test suites that configure warning filters themselves by calling :func:`warnings.simplefilter` (see :issue:`2430` for an example of that)."
-msgstr "また、pytest はすべての警告フィルタをリセットするという :pep:`506` の提案に従いません。これは、:func:`warnings.simplefilter` を呼び出して警告フィルタを自分で構成するテストスイートを壊す可能性があるためです（その例については :issue:`2430` を参照してください）。"
+msgstr "また、pytest はすべての警告フィルタをリセットするという :pep:`506` の提案に従いません。これは、:func:`warnings.simplefilter` を呼び出して警告フィルタを自分で構成するテストスイートを壊す可能性があるためです (その例については :issue:`2430` を参照してください) 。"
 
 #: ../../how-to/capture-warnings.rst:263
 msgid "Ensuring code triggers a deprecation warning"
@@ -161,7 +161,7 @@ msgstr "warns 関数を使用して警告をアサートする"
 
 #: ../../how-to/capture-warnings.rst:295
 msgid "You can check that code raises a particular warning using :func:`pytest.warns`, which works in a similar manner to :ref:`raises <assertraises>` (except that :ref:`raises <assertraises>` does not capture all exceptions, only the ``expected_exception``):"
-msgstr ":func:`pytest.warns` を使用してコードが特定の警告を発生させることを確認できます。これは :ref:`raises <assertraises>` と同様の方法で動作します（ただし、:ref:`raises <assertraises>` はすべての例外をキャプチャするわけではなく、``expected_exception`` のみをキャプチャします）:"
+msgstr ":func:`pytest.warns` を使用してコードが特定の警告を発生させることを確認できます。これは :ref:`raises <assertraises>` と同様の方法で動作します (ただし、:ref:`raises <assertraises>` はすべての例外をキャプチャするわけではなく、``expected_exception`` のみをキャプチャします) :"
 
 #: ../../how-to/capture-warnings.rst:311
 msgid "The test will fail if the warning in question is not raised. Use the keyword argument ``match`` to assert that the warning matches a text or regex. To match a literal string that may contain regular expression metacharacters like ``(`` or ``.``, the pattern can first be escaped with ``re.escape``."
@@ -177,11 +177,11 @@ msgstr "関数またはコード文字列に対して :func:`pytest.warns` を�
 
 #: ../../how-to/capture-warnings.rst:347
 msgid "The function also returns a list of all raised warnings (as ``warnings.WarningMessage`` objects), which you can query for additional information:"
-msgstr "関数は、発生したすべての警告のリスト（``warnings.WarningMessage`` オブジェクトとして）も返します。これにより、追加情報を照会できます:"
+msgstr "関数は、発生したすべての警告のリスト (``warnings.WarningMessage`` オブジェクトとして) も返します。これにより、追加情報を照会できます:"
 
 #: ../../how-to/capture-warnings.rst:361
 msgid "Alternatively, you can examine raised warnings in detail using the :fixture:`recwarn` fixture (see :ref:`below <recwarn>`)."
-msgstr "または、:fixture:`recwarn` フィクスチャを使用して発生した警告を詳細に調べることができます（:ref:`below <recwarn>` を参照）。"
+msgstr "または、:fixture:`recwarn` フィクスチャを使用して発生した警告を詳細に調べることができます (:ref:`below <recwarn>` を参照) 。"
 
 #: ../../how-to/capture-warnings.rst:365
 msgid "The :fixture:`recwarn` fixture automatically ensures to reset the warnings filter at the end of the test, so no global state is leaked."
@@ -277,7 +277,7 @@ msgstr ":mod:`tracemalloc` モジュールが有効になっている場合、py
 
 #: ../../how-to/capture-warnings.rst:525
 msgid "One convenient way to enable :mod:`tracemalloc` when running tests is to set the :envvar:`PYTHONTRACEMALLOC` to a large enough number of frames (say ``20``, but that number is application dependent)."
-msgstr "テストを実行するときに :mod:`tracemalloc` を有効にする便利な方法の1つは、:envvar:`PYTHONTRACEMALLOC` を十分な数のフレーム（たとえば ``20``、ただしその数はアプリケーションに依存します）に設定することです。"
+msgstr "テストを実行するときに :mod:`tracemalloc` を有効にする便利な方法の1つは、:envvar:`PYTHONTRACEMALLOC` を十分な数のフレーム (たとえば ``20``、ただしその数はアプリケーションに依存します) に設定することです。"
 
 #: ../../how-to/capture-warnings.rst:528
 msgid "For more information, consult the `Python Development Mode <https://docs.python.org/3/library/devmode.html>`__ section in the Python documentation."

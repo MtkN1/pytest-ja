@@ -141,7 +141,7 @@ msgstr "特定の例外のみを非表示にしたい場合は、``__tracebackhi
 
 #: ../../example/simple.rst:396
 msgid "This will avoid hiding the exception traceback on unrelated exceptions (i.e. bugs in assertion helpers)."
-msgstr "これにより、無関係な例外（つまり、アサーションヘルパーのバグ）で例外トレースバックが非表示になるのを防ぎます。"
+msgstr "これにより、無関係な例外 (つまり、アサーションヘルパーのバグ) で例外トレースバックが非表示になるのを防ぎます。"
 
 #: ../../example/simple.rst:401
 msgid "Detect if running from within a pytest run"
@@ -209,7 +209,7 @@ msgstr "``test_modification`` が失敗したため、``test_deletion`` が実�
 
 #: ../../example/simple.rst:657
 msgid "Package/Directory-level fixtures (setups)"
-msgstr "パッケージ/ディレクトリレベルのフィクスチャ（セットアップ）"
+msgstr "パッケージ/ディレクトリレベルのフィクスチャ (セットアップ) "
 
 #: ../../example/simple.rst:659
 msgid "If you have nested test directories, you can have per-directory fixture scopes by placing fixture functions in a ``conftest.py`` file in that directory. You can use all types of fixtures including :ref:`autouse fixtures <autouse fixtures>` which are the equivalent of xUnit's setup/teardown concept.  It's however recommended to have explicit fixture references in your tests or test classes rather than relying on implicitly executing setup/teardown functions, especially if they are far away from the actual tests."
@@ -237,7 +237,7 @@ msgstr "これを実行できます:"
 
 #: ../../example/simple.rst:769
 msgid "The two test modules in the ``a`` directory see the same ``db`` fixture instance while the one test in the sister-directory ``b`` doesn't see it.  We could of course also define a ``db`` fixture in that sister directory's ``conftest.py`` file. Note that each fixture is only instantiated if there is a test actually needing it (unless you use \"autouse\" fixture which are always executed ahead of the first test executing)."
-msgstr "``a`` ディレクトリ内の2つのテストモジュールは同じ ``db`` フィクスチャインスタンスを参照しますが、姉妹ディレクトリ ``b`` 内の1つのテストはそれを参照しません。もちろん、姉妹ディレクトリの ``conftest.py`` ファイルに ``db`` フィクスチャを定義することもできます。各フィクスチャは、実際に必要なテストがある場合にのみインスタンス化されることに注意してください（「autouse」フィクスチャを使用しない限り、最初のテスト実行の前に常に実行されます）。"
+msgstr "``a`` ディレクトリ内の2つのテストモジュールは同じ ``db`` フィクスチャインスタンスを参照しますが、姉妹ディレクトリ ``b`` 内の1つのテストはそれを参照しません。もちろん、姉妹ディレクトリの ``conftest.py`` ファイルに ``db`` フィクスチャを定義することもできます。各フィクスチャは、実際に必要なテストがある場合にのみインスタンス化されることに注意してください (「autouse」フィクスチャを使用しない限り、最初のテスト実行の前に常に実行されます) 。"
 
 #: ../../example/simple.rst:778
 msgid "Post-process test reports / failures"
@@ -281,7 +281,7 @@ msgstr "``PYTEST_CURRENT_TEST`` 環境変数"
 
 #: ../../example/simple.rst:993
 msgid "Sometimes a test session might get stuck and there might be no easy way to figure out which test got stuck, for example if pytest was run in quiet mode (``-q``) or you don't have access to the console output. This is particularly a problem if the problem happens only sporadically, the famous \"flaky\" kind of tests."
-msgstr "テストセッションがスタックすることがあり、どのテストがスタックしたのかを簡単に把握する方法がない場合があります。例えば、pytestが静かなモード（``-q``）で実行された場合や、コンソール出力にアクセスできない場合です。これは特に、問題が断続的にしか発生しない場合、有名な「不安定な」テストの種類で問題になります。"
+msgstr "テストセッションがスタックすることがあり、どのテストがスタックしたのかを簡単に把握する方法がない場合があります。例えば、pytestが静かなモード (``-q``) で実行された場合や、コンソール出力にアクセスできない場合です。これは特に、問題が断続的にしか発生しない場合、有名な「不安定な」テストの種類で問題になります。"
 
 #: ../../example/simple.rst:997
 msgid "``pytest`` sets the :envvar:`PYTEST_CURRENT_TEST` environment variable when running tests, which can be inspected by process monitoring utilities or libraries like :pypi:`psutil` to discover which test got stuck if necessary:"
@@ -289,7 +289,7 @@ msgstr "``pytest`` はテストを実行する際に :envvar:`PYTEST_CURRENT_TES
 
 #: ../../example/simple.rst:1009
 msgid "During the test session pytest will set ``PYTEST_CURRENT_TEST`` to the current test :ref:`nodeid <nodeids>` and the current stage, which can be ``setup``, ``call``, or ``teardown``."
-msgstr "テストセッション中、pytestは ``PYTEST_CURRENT_TEST`` を現在のテスト :ref:`nodeid <nodeids>` と現在のステージ（``setup``、``call``、または ``teardown``）に設定します。"
+msgstr "テストセッション中、pytestは ``PYTEST_CURRENT_TEST`` を現在のテスト :ref:`nodeid <nodeids>` と現在のステージ (``setup``、``call``、または ``teardown``) に設定します。"
 
 #: ../../example/simple.rst:1013
 msgid "For example, when running a single test function named ``test_foo`` from ``foo_module.py``, ``PYTEST_CURRENT_TEST`` will be set to:"
@@ -313,7 +313,7 @@ msgstr "その順序で。"
 
 #: ../../example/simple.rst:1024
 msgid "The contents of ``PYTEST_CURRENT_TEST`` is meant to be human readable and the actual format can be changed between releases (even bug fixes) so it shouldn't be relied on for scripting or automation."
-msgstr "``PYTEST_CURRENT_TEST`` の内容は人間が読める形式を意図しており、リリース間（バグ修正を含む）で実際の形式が変更される可能性があるため、スクリプトや自動化には依存しないでください。"
+msgstr "``PYTEST_CURRENT_TEST`` の内容は人間が読める形式を意図しており、リリース間 (バグ修正を含む) で実際の形式が変更される可能性があるため、スクリプトや自動化には依存しないでください。"
 
 #: ../../example/simple.rst:1031
 msgid "Freezing pytest"
@@ -329,7 +329,7 @@ msgstr "幸いなことに、最近の ``PyInstaller`` リリースにはすで�
 
 #: ../../example/simple.rst:1047
 msgid "Instead of freezing the pytest runner as a separate executable, you can make your frozen program work as the pytest runner by some clever argument handling during program startup. This allows you to have a single executable, which is usually more convenient. Please note that the mechanism for plugin discovery used by pytest (:ref:`entry points <pip-installable plugins>`) doesn't work with frozen executables so pytest can't find any third party plugins automatically. To include third party plugins like ``pytest-timeout`` they must be imported explicitly and passed on to pytest.main."
-msgstr "pytestランナーを別の実行可能ファイルとしてフリーズする代わりに、プログラムの起動時に巧妙な引数処理を行うことで、フローズンプログラムをpytestランナーとして機能させることができます。これにより、通常はより便利な単一の実行可能ファイルを持つことができます。ただし、pytestが使用するプラグイン検出メカニズム（:ref:`entry points <pip-installable plugins>`）はフローズン実行可能ファイルでは機能しないため、pytestはサードパーティプラグインを自動的に見つけることができません。``pytest-timeout`` のようなサードパーティプラグインを含めるには、それらを明示的にインポートし、pytest.mainに渡す必要があります。"
+msgstr "pytestランナーを別の実行可能ファイルとしてフリーズする代わりに、プログラムの起動時に巧妙な引数処理を行うことで、フローズンプログラムをpytestランナーとして機能させることができます。これにより、通常はより便利な単一の実行可能ファイルを持つことができます。ただし、pytestが使用するプラグイン検出メカニズム (:ref:`entry points <pip-installable plugins>`) はフローズン実行可能ファイルでは機能しないため、pytestはサードパーティプラグインを自動的に見つけることができません。``pytest-timeout`` のようなサードパーティプラグインを含めるには、それらを明示的にインポートし、pytest.mainに渡す必要があります。"
 
 #: ../../example/simple.rst:1073
 msgid "This allows you to execute tests using the frozen application with standard ``pytest`` command-line options:"

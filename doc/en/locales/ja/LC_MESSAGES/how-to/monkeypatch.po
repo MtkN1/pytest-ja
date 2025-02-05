@@ -77,27 +77,27 @@ msgstr "次のシナリオを考えてみましょう:"
 
 #: ../../how-to/monkeypatch.rst:35
 msgid "1. Modifying the behavior of a function or the property of a class for a test e.g. there is an API call or database connection you will not make for a test but you know what the expected output should be. Use :py:meth:`monkeypatch.setattr <MonkeyPatch.setattr>` to patch the function or property with your desired testing behavior. This can include your own functions. Use :py:meth:`monkeypatch.delattr <MonkeyPatch.delattr>` to remove the function or property for the test."
-msgstr "1. テストのために関数の動作やクラスのプロパティを変更する。例えば、テストのために行わない API 呼び出しやデータベース接続があるが、期待される出力がわかっている場合。:py:meth:`monkeypatch.setattr <MonkeyPatch.setattr>` を使用して、関数やプロパティを希望するテスト動作でパッチします。これには独自の関数を含めることができます。:py:meth:`monkeypatch.delattr <MonkeyPatch.delattr>` を使用して、テストのために関数やプロパティを削除します。"
+msgstr "1\. テストのために関数の動作やクラスのプロパティを変更する。例えば、テストのために行わない API 呼び出しやデータベース接続があるが、期待される出力がわかっている場合。:py:meth:`monkeypatch.setattr <MonkeyPatch.setattr>` を使用して、関数やプロパティを希望するテスト動作でパッチします。これには独自の関数を含めることができます。:py:meth:`monkeypatch.delattr <MonkeyPatch.delattr>` を使用して、テストのために関数やプロパティを削除します。"
 
 #: ../../how-to/monkeypatch.rst:41
 msgid "2. Modifying the values of dictionaries e.g. you have a global configuration that you want to modify for certain test cases. Use :py:meth:`monkeypatch.setitem <MonkeyPatch.setitem>` to patch the dictionary for the test. :py:meth:`monkeypatch.delitem <MonkeyPatch.delitem>` can be used to remove items."
-msgstr "2. 辞書の値を変更する。例えば、特定のテストケースのために変更したいグローバル設定がある場合。:py:meth:`monkeypatch.setitem <MonkeyPatch.setitem>` を使用して、テストのために辞書をパッチします。:py:meth:`monkeypatch.delitem <MonkeyPatch.delitem>` を使用してアイテムを削除できます。"
+msgstr "2\. 辞書の値を変更する。例えば、特定のテストケースのために変更したいグローバル設定がある場合。:py:meth:`monkeypatch.setitem <MonkeyPatch.setitem>` を使用して、テストのために辞書をパッチします。:py:meth:`monkeypatch.delitem <MonkeyPatch.delitem>` を使用してアイテムを削除できます。"
 
 #: ../../how-to/monkeypatch.rst:45
 msgid "3. Modifying environment variables for a test e.g. to test program behavior if an environment variable is missing, or to set multiple values to a known variable. :py:meth:`monkeypatch.setenv <MonkeyPatch.setenv>` and :py:meth:`monkeypatch.delenv <MonkeyPatch.delenv>` can be used for these patches."
-msgstr "3. テストのために環境変数を変更する。例えば、環境変数が欠落している場合のプログラムの動作をテストするため、または既知の変数に複数の値を設定するため。:py:meth:`monkeypatch.setenv <MonkeyPatch.setenv>` および :py:meth:`monkeypatch.delenv <MonkeyPatch.delenv>` を使用してこれらのパッチを行います。"
+msgstr "3\. テストのために環境変数を変更する。例えば、環境変数が欠落している場合のプログラムの動作をテストするため、または既知の変数に複数の値を設定するため。:py:meth:`monkeypatch.setenv <MonkeyPatch.setenv>` および :py:meth:`monkeypatch.delenv <MonkeyPatch.delenv>` を使用してこれらのパッチを行います。"
 
 #: ../../how-to/monkeypatch.rst:50
 msgid "4. Use ``monkeypatch.setenv(\"PATH\", value, prepend=os.pathsep)`` to modify ``$PATH``, and :py:meth:`monkeypatch.chdir <MonkeyPatch.chdir>` to change the context of the current working directory during a test."
-msgstr "4. ``monkeypatch.setenv(\"PATH\", value, prepend=os.pathsep)`` を使用して ``$PATH`` を変更し、:py:meth:`monkeypatch.chdir <MonkeyPatch.chdir>` を使用してテスト中に現在の作業ディレクトリのコンテキストを変更します。"
+msgstr "4\. ``monkeypatch.setenv(\"PATH\", value, prepend=os.pathsep)`` を使用して ``$PATH`` を変更し、:py:meth:`monkeypatch.chdir <MonkeyPatch.chdir>` を使用してテスト中に現在の作業ディレクトリのコンテキストを変更します。"
 
 #: ../../how-to/monkeypatch.rst:54
 msgid "5. Use :py:meth:`monkeypatch.syspath_prepend <MonkeyPatch.syspath_prepend>` to modify ``sys.path`` which will also call ``pkg_resources.fixup_namespace_packages`` and :py:func:`importlib.invalidate_caches`."
-msgstr "5. :py:meth:`monkeypatch.syspath_prepend <MonkeyPatch.syspath_prepend>` を使用して ``sys.path`` を変更し、``pkg_resources.fixup_namespace_packages`` および :py:func:`importlib.invalidate_caches` を呼び出します。"
+msgstr "5\. :py:meth:`monkeypatch.syspath_prepend <MonkeyPatch.syspath_prepend>` を使用して ``sys.path`` を変更し、``pkg_resources.fixup_namespace_packages`` および :py:func:`importlib.invalidate_caches` を呼び出します。"
 
 #: ../../how-to/monkeypatch.rst:57
 msgid "6. Use :py:meth:`monkeypatch.context <MonkeyPatch.context>` to apply patches only in a specific scope, which can help control teardown of complex fixtures or patches to the stdlib."
-msgstr "6. :py:meth:`monkeypatch.context <MonkeyPatch.context>` を使用して特定のスコープ内でのみパッチを適用し、複雑なフィクスチャや stdlib へのパッチのテアダウンを制御するのに役立ちます。"
+msgstr "6\. :py:meth:`monkeypatch.context <MonkeyPatch.context>` を使用して特定のスコープ内でのみパッチを適用し、複雑なフィクスチャや stdlib へのパッチのテアダウンを制御するのに役立ちます。"
 
 #: ../../how-to/monkeypatch.rst:60
 msgid "See the `monkeypatch blog post`_ for some introduction material and a discussion of its motivation."

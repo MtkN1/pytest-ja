@@ -29,7 +29,7 @@ msgstr "デフォルトの stdout/stderr/stdin キャプチャ動作"
 
 #: ../../how-to/capture-stdout-stderr.rst:10
 msgid "During test execution any output sent to ``stdout`` and ``stderr`` is captured.  If a test or a setup method fails its according captured output will usually be shown along with the failure traceback. (this behavior can be configured by the ``--show-capture`` command-line option)."
-msgstr "テスト実行中に ``stdout`` および ``stderr`` に送信された出力はすべてキャプチャされます。テストまたはセットアップメソッドが失敗した場合、そのキャプチャされた出力は通常、失敗のトレースバックと共に表示されます（この動作は ``--show-capture`` コマンドラインオプションで構成できます）。"
+msgstr "テスト実行中に ``stdout`` および ``stderr`` に送信された出力はすべてキャプチャされます。テストまたはセットアップメソッドが失敗した場合、そのキャプチャされた出力は通常、失敗のトレースバックと共に表示されます (この動作は ``--show-capture`` コマンドラインオプションで構成できます) 。"
 
 #: ../../how-to/capture-stdout-stderr.rst:15
 msgid "In addition, ``stdin`` is set to a \"null\" object which will fail on attempts to read from it because it is rarely desired to wait for interactive input when running automated tests."
@@ -49,7 +49,7 @@ msgstr "``pytest`` がキャプチャを実行する方法は 3 つあります:
 
 #: ../../how-to/capture-stdout-stderr.rst:31
 msgid "``fd`` (file descriptor) level capturing (default): All writes going to the operating system file descriptors 1 and 2 will be captured."
-msgstr "``fd``（ファイルディスクリプタ）レベルのキャプチャ（デフォルト）: オペレーティングシステムのファイルディスクリプタ 1 および 2 に送られるすべての書き込みがキャプチャされます。"
+msgstr "``fd`` (ファイルディスクリプタ) レベルのキャプチャ (デフォルト) : オペレーティングシステムのファイルディスクリプタ 1 および 2 に送られるすべての書き込みがキャプチャされます。"
 
 #: ../../how-to/capture-stdout-stderr.rst:34
 msgid "``sys`` level capturing: Only writes to Python files ``sys.stdout`` and ``sys.stderr`` will be captured.  No capturing of writes to filedescriptors is performed."
@@ -57,7 +57,7 @@ msgstr "``sys`` レベルのキャプチャ: Python ファイル ``sys.stdout`` 
 
 #: ../../how-to/capture-stdout-stderr.rst:38
 msgid "``tee-sys`` capturing: Python writes to ``sys.stdout`` and ``sys.stderr`` will be captured, however the writes will also be passed-through to the actual ``sys.stdout`` and ``sys.stderr``. This allows output to be 'live printed' and captured for plugin use, such as junitxml (new in pytest 5.4)."
-msgstr "``tee-sys`` キャプチャ: Python の ``sys.stdout`` および ``sys.stderr`` への書き込みがキャプチャされますが、書き込みは実際の ``sys.stdout`` および ``sys.stderr`` にもパススルーされます。これにより、出力が「ライブ印刷」され、junitxml などのプラグインで使用するためにキャプチャされます（pytest 5.4 の新機能）。"
+msgstr "``tee-sys`` キャプチャ: Python の ``sys.stdout`` および ``sys.stderr`` への書き込みがキャプチャされますが、書き込みは実際の ``sys.stdout`` および ``sys.stderr`` にもパススルーされます。これにより、出力が「ライブ印刷」され、junitxml などのプラグインで使用するためにキャプチャされます (pytest 5.4 の新機能) 。"
 
 #: ../../how-to/capture-stdout-stderr.rst:45
 msgid "You can influence output capturing mechanisms from the command line:"
@@ -97,11 +97,11 @@ msgstr "``readouterr`` の戻り値は、``out`` と ``err`` の 2 つの属性�
 
 #: ../../how-to/capture-stdout-stderr.rst:136
 msgid "If the code under test writes non-textual data (``bytes``), you can capture this using the :fixture:`capsysbinary` fixture which instead returns ``bytes`` from the ``readouterr`` method."
-msgstr "テスト対象のコードが非テキストデータ（``bytes``）を書き込む場合、:fixture:`capsysbinary` フィクスチャを使用してこれをキャプチャできます。これは ``readouterr`` メソッドから ``bytes`` を返します。"
+msgstr "テスト対象のコードが非テキストデータ (``bytes``) を書き込む場合、:fixture:`capsysbinary` フィクスチャを使用してこれをキャプチャできます。これは ``readouterr`` メソッドから ``bytes`` を返します。"
 
 #: ../../how-to/capture-stdout-stderr.rst:140
 msgid "If you want to capture at the file descriptor level you can use the :fixture:`capfd` fixture which offers the exact same interface but allows to also capture output from libraries or subprocesses that directly write to operating system level output streams (FD1 and FD2). Similarly to :fixture:`capsysbinary`, :fixture:`capfdbinary` can be used to capture ``bytes`` at the file descriptor level."
-msgstr "ファイルディスクリプタレベルでキャプチャしたい場合は、:fixture:`capfd` フィクスチャを使用できます。これはまったく同じインターフェースを提供しますが、オペレーティングシステムレベルの出力ストリーム（FD1 および FD2）に直接書き込むライブラリやサブプロセスからの出力もキャプチャできます。:fixture:`capsysbinary` と同様に、:fixture:`capfdbinary` を使用してファイルディスクリプタレベルで ``bytes`` をキャプチャできます。"
+msgstr "ファイルディスクリプタレベルでキャプチャしたい場合は、:fixture:`capfd` フィクスチャを使用できます。これはまったく同じインターフェースを提供しますが、オペレーティングシステムレベルの出力ストリーム (FD1 および FD2) に直接書き込むライブラリやサブプロセスからの出力もキャプチャできます。:fixture:`capsysbinary` と同様に、:fixture:`capfdbinary` を使用してファイルディスクリプタレベルで ``bytes`` をキャプチャできます。"
 
 #: ../../how-to/capture-stdout-stderr.rst:148
 msgid "To temporarily disable capture within a test, the capture fixtures have a ``disabled()`` method that can be used as a context manager, disabling capture inside the ``with`` block:"

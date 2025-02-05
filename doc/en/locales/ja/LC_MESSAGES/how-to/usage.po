@@ -29,7 +29,7 @@ msgstr ":ref:`pytest コマンドラインフラグの完全なリファレン�
 
 #: ../../how-to/usage.rst:9
 msgid "In general, pytest is invoked with the command ``pytest`` (see below for :ref:`other ways to invoke pytest <invoke-other>`). This will execute all tests in all files whose names follow the form ``test_*.py`` or ``\\*_test.py`` in the current directory and its subdirectories. More generally, pytest follows :ref:`standard test discovery rules <test discovery>`."
-msgstr "一般的に、pytest は ``pytest`` コマンドで呼び出されます（:ref:`pytest の他の呼び出し方法 <invoke-other>` については以下を参照）。これにより、現在のディレクトリおよびそのサブディレクトリ内の名前が ``test_*.py`` または ``\\*_test.py`` の形式に従うすべてのファイルのすべてのテストが実行されます。より一般的には、pytest は :ref:`標準のテスト検出ルール <test discovery>` に従います。"
+msgstr "一般的に、pytest は ``pytest`` コマンドで呼び出されます (:ref:`pytest の他の呼び出し方法 <invoke-other>` については以下を参照) 。これにより、現在のディレクトリおよびそのサブディレクトリ内の名前が ``test_*.py`` または ``\\*_test.py`` の形式に従うすべてのファイルのすべてのテストが実行されます。より一般的には、pytest は :ref:`標準のテスト検出ルール <test discovery>` に従います。"
 
 #: ../../how-to/usage.rst:18
 msgid "Specifying which tests to run"
@@ -37,7 +37,7 @@ msgstr "実行するテストの指定"
 
 #: ../../how-to/usage.rst:20
 msgid "Pytest supports several ways to run and select tests from the command-line or from a file (see below for :ref:`reading arguments from file <args-from-file>`)."
-msgstr "Pytest は、コマンドラインまたはファイルからテストを実行および選択するためのいくつかの方法をサポートしています（:ref:`ファイルから引数を読み取る <args-from-file>` については以下を参照）。"
+msgstr "Pytest は、コマンドラインまたはファイルからテストを実行および選択するためのいくつかの方法をサポートしています (:ref:`ファイルから引数を読み取る <args-from-file>` については以下を参照) 。"
 
 #: ../../how-to/usage.rst:23
 msgid "**Run tests in a module**"
@@ -53,7 +53,7 @@ msgstr "**キーワード式でテストを実行する**"
 
 #: ../../how-to/usage.rst:41
 msgid "This will run tests which contain names that match the given *string expression* (case-insensitive), which can include Python operators that use filenames, class names and function names as variables. The example above will run ``TestMyClass.test_something``  but not ``TestMyClass.test_method_simple``. Use ``\"\"`` instead of ``''`` in expression when running this on Windows"
-msgstr "これにより、指定された *文字列式* （大文字小文字を区別しない）に一致する名前を含むテストが実行されます。これには、ファイル名、クラス名、および関数名を変数として使用する Python 演算子を含めることができます。上記の例では、``TestMyClass.test_something`` は実行されますが、``TestMyClass.test_method_simple`` は実行されません。Windows でこれを実行する場合は、式内で ``''`` の代わりに ``\"\"`` を使用してください。"
+msgstr "これにより、指定された *文字列式* (大文字小文字を区別しない) に一致する名前を含むテストが実行されます。これには、ファイル名、クラス名、および関数名を変数として使用する Python 演算子を含めることができます。上記の例では、``TestMyClass.test_something`` は実行されますが、``TestMyClass.test_method_simple`` は実行されません。Windows でこれを実行する場合は、式内で ``''`` の代わりに ``\"\"`` を使用してください。"
 
 #: ../../how-to/usage.rst:48
 msgid "**Run tests by collection arguments**"
@@ -133,7 +133,7 @@ msgstr "1.0 秒以上の最も遅い 10 件のテスト時間のリストを取�
 
 #: ../../how-to/usage.rst:149
 msgid "By default, pytest will not show test durations that are too small (<0.005s) unless ``-vv`` is passed on the command-line."
-msgstr "デフォルトでは、pytest はコマンドラインで ``-vv`` が渡されない限り、非常に短いテスト時間（<0.005 秒）を表示しません。"
+msgstr "デフォルトでは、pytest はコマンドラインで ``-vv`` が渡されない限り、非常に短いテスト時間 (<0.005 秒) を表示しません。"
 
 #: ../../how-to/usage.rst:153
 msgid "Managing loading of plugins"
@@ -145,7 +145,7 @@ msgstr "プラグインの早期読み込み"
 
 #: ../../how-to/usage.rst:158
 msgid "You can early-load plugins (internal and external) explicitly in the command-line with the ``-p`` option::"
-msgstr "プラグイン（内部および外部）をコマンドラインで ``-p`` オプションを使用して明示的に早期読み込みできます::"
+msgstr "プラグイン (内部および外部) をコマンドラインで ``-p`` オプションを使用して明示的に早期読み込みできます::"
 
 #: ../../how-to/usage.rst:162
 msgid "The option receives a ``name`` parameter, which can be:"
@@ -209,5 +209,5 @@ msgstr "これを実行すると、``MyPlugin`` が追加され、そのフッ�
 
 #: ../../how-to/usage.rst:254
 msgid "Calling ``pytest.main()`` will result in importing your tests and any modules that they import. Due to the caching mechanism of python's import system, making subsequent calls to ``pytest.main()`` from the same process will not reflect changes to those files between the calls. For this reason, making multiple calls to ``pytest.main()`` from the same process (in order to re-run tests, for example) is not recommended."
-msgstr "``pytest.main()`` を呼び出すと、テストおよびそれらがインポートするモジュールがインポートされます。Python のインポートシステムのキャッシュメカニズムのため、同じプロセスから ``pytest.main()`` を後続で呼び出しても、呼び出し間のこれらのファイルの変更は反映されません。このため、同じプロセスから ``pytest.main()`` を複数回呼び出すこと（例えば、テストを再実行するため）は推奨されません。"
+msgstr "``pytest.main()`` を呼び出すと、テストおよびそれらがインポートするモジュールがインポートされます。Python のインポートシステムのキャッシュメカニズムのため、同じプロセスから ``pytest.main()`` を後続で呼び出しても、呼び出し間のこれらのファイルの変更は反映されません。このため、同じプロセスから ``pytest.main()`` を複数回呼び出すこと (例えば、テストを再実行するため) は推奨されません。"
 

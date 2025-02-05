@@ -37,7 +37,7 @@ msgstr "関数が特定の値を返すことをアサートします。このア
 
 #: ../../how-to/assert.rst:51
 msgid "``pytest`` has support for showing the values of the most common subexpressions including calls, attributes, comparisons, and binary and unary operators. (See :ref:`tbreportdemo`).  This allows you to use the idiomatic python constructs without boilerplate code while not losing introspection information."
-msgstr "``pytest`` は、呼び出し、属性、比較、および二項演算子と単項演算子を含む最も一般的な部分式の値を表示するサポートを提供します（:ref:`tbreportdemo` を参照）。これにより、ボイラープレートコードを使用せずに慣用的な Python 構文を使用しながら、イントロスペクション情報を失うことはありません。"
+msgstr "``pytest`` は、呼び出し、属性、比較、および二項演算子と単項演算子を含む最も一般的な部分式の値を表示するサポートを提供します (:ref:`tbreportdemo` を参照) 。これにより、ボイラープレートコードを使用せずに慣用的な Python 構文を使用しながら、イントロスペクション情報を失うことはありません。"
 
 #: ../../how-to/assert.rst:57
 msgid "If a message is specified with the assertion like this:"
@@ -69,7 +69,7 @@ msgstr "``excinfo`` は :class:`~pytest.ExceptionInfo` インスタンスであ�
 
 #: ../../how-to/assert.rst:101
 msgid "Note that ``pytest.raises`` will match the exception type or any subclasses (like the standard ``except`` statement). If you want to check if a block of code is raising an exact exception type, you need to check that explicitly:"
-msgstr "``pytest.raises`` は例外タイプまたはそのサブクラス（標準の ``except`` ステートメントのように）に一致することに注意してください。コードブロックが正確な例外タイプを発生させているかどうかを確認する場合は、それを明示的に確認する必要があります:"
+msgstr "``pytest.raises`` は例外タイプまたはそのサブクラス (標準の ``except`` ステートメントのように) に一致することに注意してください。コードブロックが正確な例外タイプを発生させているかどうかを確認する場合は、それを明示的に確認する必要があります:"
 
 #: ../../how-to/assert.rst:115
 msgid "The :func:`pytest.raises` call will succeed, even though the function raises :class:`NotImplementedError`, because :class:`NotImplementedError` is a subclass of :class:`RuntimeError`; however the following `assert` statement will catch the problem."
@@ -81,7 +81,7 @@ msgstr "例外メッセージの一致"
 
 #: ../../how-to/assert.rst:122
 msgid "You can pass a ``match`` keyword parameter to the context-manager to test that a regular expression matches on the string representation of an exception (similar to the ``TestCase.assertRaisesRegex`` method from ``unittest``):"
-msgstr "コンテキストマネージャに ``match`` キーワードパラメータを渡して、正規表現が例外の文字列表現に一致するかどうかをテストできます（``unittest`` の ``TestCase.assertRaisesRegex`` メソッドに似ています）:"
+msgstr "コンテキストマネージャに ``match`` キーワードパラメータを渡して、正規表現が例外の文字列表現に一致するかどうかをテストできます (``unittest`` の ``TestCase.assertRaisesRegex`` メソッドに似ています) :"
 
 #: ../../how-to/assert.rst:139
 msgid "Notes:"
@@ -113,7 +113,7 @@ msgstr "デフォルトでは、``group_contains()`` はネストされた ``Exc
 
 #: ../../how-to/assert.rst:198
 msgid "Alternate form (legacy)"
-msgstr "代替形式（レガシー）"
+msgstr "代替形式 (レガシー) "
 
 #: ../../how-to/assert.rst:200
 msgid "There is an alternate form where you pass a function that will be executed, along ``*args`` and ``**kwargs``, and :func:`pytest.raises` will execute the function with the arguments and assert that the given exception is raised:"
@@ -125,7 +125,7 @@ msgstr "レポーターは、*例外なし* や *間違った例外* などの�
 
 #: ../../how-to/assert.rst:216
 msgid "This form was the original :func:`pytest.raises` API, developed before the ``with`` statement was added to the Python language. Nowadays, this form is rarely used, with the context-manager form (using ``with``) being considered more readable. Nonetheless, this form is fully supported and not deprecated in any way."
-msgstr "この形式は、Python 言語に ``with`` ステートメントが追加される前に開発された元の :func:`pytest.raises` API でした。現在では、この形式はほとんど使用されておらず、コンテキストマネージャ形式（``with`` を使用）がより読みやすいと考えられています。それにもかかわらず、この形式は完全にサポートされており、非推奨ではありません。"
+msgstr "この形式は、Python 言語に ``with`` ステートメントが追加される前に開発された元の :func:`pytest.raises` API でした。現在では、この形式はほとんど使用されておらず、コンテキストマネージャ形式 (``with`` を使用) がより読みやすいと考えられています。それにもかかわらず、この形式は完全にサポートされており、非推奨ではありません。"
 
 #: ../../how-to/assert.rst:222
 msgid "xfail mark and pytest.raises"
@@ -141,11 +141,11 @@ msgstr "これは、テストが ``IndexError`` またはそのサブクラス�
 
 #: ../../how-to/assert.rst:241
 msgid "Using :ref:`pytest.mark.xfail <pytest.mark.xfail ref>` with the ``raises`` parameter is probably better for something like documenting unfixed bugs (where the test describes what \"should\" happen) or bugs in dependencies."
-msgstr "``raises`` パラメータを使用した :ref:`pytest.mark.xfail <pytest.mark.xfail ref>` の使用は、おそらく未修正のバグ（テストが「起こるべきこと」を説明する場合）や依存関係のバグを文書化するようなものに適しています。"
+msgstr "``raises`` パラメータを使用した :ref:`pytest.mark.xfail <pytest.mark.xfail ref>` の使用は、おそらく未修正のバグ (テストが「起こるべきこと」を説明する場合) や依存関係のバグを文書化するようなものに適しています。"
 
 #: ../../how-to/assert.rst:244
 msgid "Using :func:`pytest.raises` is likely to be better for cases where you are testing exceptions your own code is deliberately raising, which is the majority of cases."
-msgstr ":func:`pytest.raises` を使用する方が、自分のコードが意図的に発生させている例外をテストする場合（ほとんどの場合）に適している可能性があります。"
+msgstr ":func:`pytest.raises` を使用する方が、自分のコードが意図的に発生させている例外をテストする場合 (ほとんどの場合) に適している可能性があります。"
 
 #: ../../how-to/assert.rst:251
 msgid "Assertions about expected warnings"
@@ -253,7 +253,7 @@ msgstr "失敗したアサーションに関する詳細を報告するには、
 
 #: ../../how-to/assert.rst:395
 msgid "You can manually enable assertion rewriting for an imported module by calling :ref:`register_assert_rewrite <assertion-rewriting>` before you import it (a good place to do that is in your root ``conftest.py``)."
-msgstr "インポートする前に :ref:`register_assert_rewrite <assertion-rewriting>` を呼び出すことで、インポートされたモジュールのアサーション書き換えを手動で有効にできます（それを行うのに適した場所は、ルートの ``conftest.py`` です）。"
+msgstr "インポートする前に :ref:`register_assert_rewrite <assertion-rewriting>` を呼び出すことで、インポートされたモジュールのアサーション書き換えを手動で有効にできます (それを行うのに適した場所は、ルートの ``conftest.py`` です) 。"
 
 #: ../../how-to/assert.rst:399
 msgid "For further information, Benjamin Peterson wrote up `Behind the scenes of pytest's new assertion rewriting <http://pybites.blogspot.com/2011/07/behind-scenes-of-pytests-new-assertion.html>`_."
@@ -265,7 +265,7 @@ msgstr "アサーション書き換えはディスク上にファイルをキャ
 
 #: ../../how-to/assert.rst:404
 msgid "``pytest`` will write back the rewritten modules to disk for caching. You can disable this behavior (for example to avoid leaving stale ``.pyc`` files around in projects that move files around a lot) by adding this to the top of your ``conftest.py`` file:"
-msgstr "``pytest`` は、書き換えられたモジュールをキャッシュのためにディスクに書き戻します。この動作を無効にするには（たとえば、ファイルを頻繁に移動するプロジェクトで古い ``.pyc`` ファイルを残さないようにするため）、これを ``conftest.py`` ファイルの先頭に追加します:"
+msgstr "``pytest`` は、書き換えられたモジュールをキャッシュのためにディスクに書き戻します。この動作を無効にするには (たとえば、ファイルを頻繁に移動するプロジェクトで古い ``.pyc`` ファイルを残さないようにするため) 、これを ``conftest.py`` ファイルの先頭に追加します:"
 
 #: ../../how-to/assert.rst:414
 msgid "Note that you still get the benefits of assertion introspection, the only change is that the ``.pyc`` files won't be cached on disk."
@@ -273,7 +273,7 @@ msgstr "アサーションイントロスペクションの利点は引き続き
 
 #: ../../how-to/assert.rst:417
 msgid "Additionally, rewriting will silently skip caching if it cannot write new ``.pyc`` files, i.e. in a read-only filesystem or a zipfile."
-msgstr "さらに、新しい ``.pyc`` ファイルを書き込めない場合（読み取り専用ファイルシステムや zip ファイル内など）、書き換えはキャッシュを静かにスキップします。"
+msgstr "さらに、新しい ``.pyc`` ファイルを書き込めない場合 (読み取り専用ファイルシステムや zip ファイル内など) 、書き換えはキャッシュを静かにスキップします。"
 
 #: ../../how-to/assert.rst:422
 msgid "Disabling assert rewriting"

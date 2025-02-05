@@ -54,7 +54,7 @@ msgstr "特定のロガーは ``--log-disable={logger_name}`` を介して無効
 
 #: ../../how-to/logging.rst:65
 msgid "Further it is possible to disable reporting of captured content (stdout, stderr and logs) on failed tests completely with:"
-msgstr "さらに、次のオプションを使用して、失敗したテストでキャプチャされたコンテンツ（stdout、stderr、およびログ）のレポートを完全に無効にすることができます:"
+msgstr "さらに、次のオプションを使用して、失敗したテストでキャプチャされたコンテンツ (stdout、stderr、およびログ) のレポートを完全に無効にすることができます:"
 
 #: ../../how-to/logging.rst:74
 msgid "caplog fixture"

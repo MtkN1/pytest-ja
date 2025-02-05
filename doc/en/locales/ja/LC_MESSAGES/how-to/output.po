@@ -33,7 +33,7 @@ msgstr "トレースバック印刷を変更する例:"
 
 #: ../../how-to/output.rst:33
 msgid "The ``--full-trace`` causes very long traces to be printed on error (longer than ``--tb=long``). It also ensures that a stack trace is printed on **KeyboardInterrupt** (Ctrl+C). This is very useful if the tests are taking too long and you interrupt them with Ctrl+C to find out where the tests are *hanging*. By default no output will be shown (because KeyboardInterrupt is caught by pytest). By using this option you make sure a trace is shown."
-msgstr "``--full-trace`` は、エラー時に非常に長いトレースを印刷します（``--tb=long`` よりも長い）。また、**KeyboardInterrupt** (Ctrl+C) でスタックトレースが印刷されることを保証します。これは、テストに時間がかかりすぎて Ctrl+C で中断し、テストがどこで *ハング* しているかを確認する場合に非常に便利です。デフォルトでは、出力は表示されません（KeyboardInterrupt は pytest によってキャッチされるため）。このオプションを使用すると、トレースが表示されることを確認できます。"
+msgstr "``--full-trace`` は、エラー時に非常に長いトレースを印刷します (``--tb=long`` よりも長い) 。また、**KeyboardInterrupt** (Ctrl+C) でスタックトレースが印刷されることを保証します。これは、テストに時間がかかりすぎて Ctrl+C で中断し、テストがどこで *ハング* しているかを確認する場合に非常に便利です。デフォルトでは、出力は表示されません (KeyboardInterrupt は pytest によってキャッチされるため) 。このオプションを使用すると、トレースが表示されることを確認できます。"
 
 #: ../../how-to/output.rst:43
 msgid "Verbosity"
@@ -53,7 +53,7 @@ msgstr "この簡単なファイルを考えてみましょう:"
 
 #: ../../how-to/output.rst:85
 msgid "Executing pytest normally gives us this output (we are skipping the header to focus on the rest):"
-msgstr "通常、pytest を実行すると次の出力が得られます（ヘッダーをスキップして残りに焦点を当てています）:"
+msgstr "通常、pytest を実行すると次の出力が得られます (ヘッダーをスキップして残りに焦点を当てています) :"
 
 #: ../../how-to/output.rst:138
 msgid "Notice that:"
@@ -73,7 +73,7 @@ msgstr "``test_numbers_fail`` が失敗し、辞書アイテムの左右の違�
 
 #: ../../how-to/output.rst:143
 msgid "``test_long_text_fail`` failed, and the right hand side of the ``in`` statement is truncated using ``...``` because it is longer than an internal threshold (240 characters currently)."
-msgstr "``test_long_text_fail`` が失敗し、``in`` ステートメントの右側が内部しきい値（現在は 240 文字）よりも長いため、``...``` を使用して切り捨てられます。"
+msgstr "``test_long_text_fail`` が失敗し、``in`` ステートメントの右側が内部しきい値 (現在は 240 文字) よりも長いため、``...``` を使用して切り捨てられます。"
 
 #: ../../how-to/output.rst:146
 msgid "Now we can increase pytest's verbosity:"
@@ -97,7 +97,7 @@ msgstr "``test_numbers_fail`` は、2 つの辞書のテキスト差分を切り
 
 #: ../../how-to/output.rst:215
 msgid "``test_long_text_fail`` no longer truncates the right hand side of the ``in`` statement, because the internal threshold for truncation is larger now (2400 characters currently)."
-msgstr "``test_long_text_fail`` は、切り捨ての内部しきい値が現在は大きいため（現在は 2400 文字）、``in`` ステートメントの右側を切り捨てなくなりました。"
+msgstr "``test_long_text_fail`` は、切り捨ての内部しきい値が現在は大きいため (現在は 2400 文字) 、``in`` ステートメントの右側を切り捨てなくなりました。"
 
 #: ../../how-to/output.rst:218
 msgid "Now if we increase verbosity even more:"
@@ -121,7 +121,7 @@ msgstr "これらは、冗長性が通常のテストセッション出力にど
 
 #: ../../how-to/output.rst:351
 msgid "Using higher verbosity levels (``-vvv``, ``-vvvv``, ...) is supported, but has no effect in pytest itself at the moment, however some plugins might make use of higher verbosity."
-msgstr "より高い冗長性レベル（``-vvv``、``-vvvv`` など）の使用はサポートされていますが、現在のところ pytest 自体には影響はありませんが、一部のプラグインはより高い冗長性を利用する場合があります。"
+msgstr "より高い冗長性レベル (``-vvv``、``-vvvv`` など) の使用はサポートされていますが、現在のところ pytest 自体には影響はありませんが、一部のプラグインはより高い冗長性を利用する場合があります。"
 
 #: ../../how-to/output.rst:357
 msgid "Fine-grained verbosity"
@@ -165,15 +165,15 @@ msgstr "使用できる文字の完全なリストは次のとおりです:"
 
 #: ../../how-to/output.rst:461
 msgid "``f`` - failed"
-msgstr "``f`` - 失敗"
+msgstr "``f`` - failed"
 
 #: ../../how-to/output.rst:462
 msgid "``E`` - error"
-msgstr "``E`` - エラー"
+msgstr "``E`` - error"
 
 #: ../../how-to/output.rst:463
 msgid "``s`` - skipped"
-msgstr "``s`` - スキップ"
+msgstr "``s`` - skipped"
 
 #: ../../how-to/output.rst:464
 msgid "``x`` - xfailed"
@@ -185,15 +185,15 @@ msgstr "``X`` - xpassed"
 
 #: ../../how-to/output.rst:466
 msgid "``p`` - passed"
-msgstr "``p`` - 合格"
+msgstr "``p`` - passed"
 
 #: ../../how-to/output.rst:467
 msgid "``P`` - passed with output"
-msgstr "``P`` - 出力付きで合格"
+msgstr "``P`` - 出力付きで passed"
 
 #: ../../how-to/output.rst:469
 msgid "Special characters for (de)selection of groups:"
-msgstr "グループの（非）選択のための特殊文字:"
+msgstr "グループの (非) 選択のための特殊文字:"
 
 #: ../../how-to/output.rst:471
 msgid "``a`` - all except ``pP``"
@@ -205,7 +205,7 @@ msgstr "``A`` - すべて"
 
 #: ../../how-to/output.rst:473
 msgid "``N`` - none, this can be used to display nothing (since ``fE`` is the default)"
-msgstr "``N`` - なし、これは何も表示しないために使用できます（``fE`` がデフォルトであるため）"
+msgstr "``N`` - なし、これは何も表示しないために使用できます (``fE`` がデフォルトであるため) "
 
 #: ../../how-to/output.rst:475
 msgid "More than one character can be used, so for example to only see failed and skipped tests, you can execute:"
@@ -309,7 +309,7 @@ msgstr "``record_xml_attribute`` は実験的な機能であり、そのイン�
 
 #: ../../how-to/output.rst:709
 msgid "Using this over ``record_xml_property`` can help when using ci tools to parse the xml report. However, some parsers are quite strict about the elements and attributes that are allowed. Many tools use an xsd schema (like the example below) to validate incoming xml. Make sure you are using attribute names that are allowed by your parser."
-msgstr "これを ``record_xml_property`` の代わりに使用すると、CI ツールを使用して XML レポートを解析する際に役立ちます。ただし、一部のパーサーは、許可される要素と属性について非常に厳格です。多くのツールは、受信 XML を検証するために xsd スキーマ（以下の例のようなもの）を使用します。パーサーで許可されている属性名を使用していることを確認してください。"
+msgstr "これを ``record_xml_property`` の代わりに使用すると、CI ツールを使用して XML レポートを解析する際に役立ちます。ただし、一部のパーサーは、許可される要素と属性について非常に厳格です。多くのツールは、受信 XML を検証するために xsd スキーマ (以下の例のようなもの) を使用します。パーサーで許可されている属性名を使用していることを確認してください。"
 
 #: ../../how-to/output.rst:714
 msgid "Below is the Scheme used by Jenkins to validate the XML report:"

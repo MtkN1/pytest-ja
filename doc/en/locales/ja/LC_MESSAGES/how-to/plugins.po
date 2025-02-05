@@ -137,7 +137,7 @@ msgstr "プロジェクトのプラグインを無条件に無効にしたい場
 
 #: ../../how-to/plugins.rst:130
 msgid "Alternatively to disable it only in certain environments (for example in a CI server), you can set ``PYTEST_ADDOPTS`` environment variable to ``-p no:name``."
-msgstr "または、特定の環境（たとえば CI サーバー）でのみ無効にするには、``PYTEST_ADDOPTS`` 環境変数を ``-p no:name`` に設定できます。"
+msgstr "または、特定の環境 (たとえば CI サーバー) でのみ無効にするには、``PYTEST_ADDOPTS`` 環境変数を ``-p no:name`` に設定できます。"
 
 #: ../../how-to/plugins.rst:134
 msgid "See :ref:`findpluginname` for how to obtain the name of a plugin."

@@ -89,7 +89,7 @@ msgstr "または、:ref:`pytest_configure <initialization-hooks>` フックで�
 
 #: ../../how-to/mark.rst:69
 msgid "Registered marks appear in pytest's help text and do not emit warnings (see the next section). It is recommended that third-party plugins always :ref:`register their markers <registering-markers>`."
-msgstr "登録されたマーカーは pytest のヘルプテキストに表示され、警告を発しません（次のセクションを参照）。サードパーティプラグインは常に :ref:`register their markers <registering-markers>` することをお勧めします。"
+msgstr "登録されたマーカーは pytest のヘルプテキストに表示され、警告を発しません (次のセクションを参照) 。サードパーティプラグインは常に :ref:`register their markers <registering-markers>` することをお勧めします。"
 
 #: ../../how-to/mark.rst:75
 msgid "Raising errors on unknown marks"

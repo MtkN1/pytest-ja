@@ -29,11 +29,11 @@ msgstr "特定のプラットフォームで実行できない、または失敗
 
 #: ../../how-to/skipping.rst:12
 msgid "A **skip** means that you expect your test to pass only if some conditions are met, otherwise pytest should skip running the test altogether. Common examples are skipping windows-only tests on non-windows platforms, or skipping tests that depend on an external resource which is not available at the moment (for example a database)."
-msgstr "**skip** とは、いくつかの条件が満たされた場合にのみテストが合格すると予想されることを意味します。そうでなければ、pytest はテストの実行を完全にスキップする必要があります。一般的な例としては、非 Windows プラットフォームでの Windows 専用テストのスキップや、現在利用できない外部リソース（たとえばデータベース）に依存するテストのスキップがあります。"
+msgstr "**skip** とは、いくつかの条件が満たされた場合にのみテストが合格すると予想されることを意味します。そうでなければ、pytest はテストの実行を完全にスキップする必要があります。一般的な例としては、非 Windows プラットフォームでの Windows 専用テストのスキップや、現在利用できない外部リソース (たとえばデータベース) に依存するテストのスキップがあります。"
 
 #: ../../how-to/skipping.rst:17
 msgid "An **xfail** means that you expect a test to fail for some reason. A common example is a test for a feature not yet implemented, or a bug not yet fixed. When a test passes despite being expected to fail (marked with ``pytest.mark.xfail``), it's an **xpass** and will be reported in the test summary."
-msgstr "**xfail** とは、何らかの理由でテストが失敗すると予想されることを意味します。一般的な例としては、まだ実装されていない機能のテストや、まだ修正されていないバグのテストがあります。失敗すると予想されるにもかかわらずテストが合格した場合（``pytest.mark.xfail`` でマークされている）、それは **xpass** であり、テストの概要に報告されます。"
+msgstr "**xfail** とは、何らかの理由でテストが失敗すると予想されることを意味します。一般的な例としては、まだ実装されていない機能のテストや、まだ修正されていないバグのテストがあります。失敗すると予想されるにもかかわらずテストが合格した場合 (``pytest.mark.xfail`` でマークされている) 、それは **xpass** であり、テストの概要に報告されます。"
 
 #: ../../how-to/skipping.rst:22
 msgid "``pytest`` counts and lists *skip* and *xfail* tests separately. Detailed information about skipped/xfailed tests is not shown by default to avoid cluttering the output.  You can use the ``-r`` option to see details corresponding to the \"short\" letters shown in the test progress:"
@@ -45,7 +45,7 @@ msgstr "``-r`` オプションの詳細については、``pytest -h`` を実行
 
 #: ../../how-to/skipping.rst:33
 msgid "(See :ref:`how to change command line options defaults`)"
-msgstr "（:ref:`コマンドラインオプションのデフォルトを変更する方法` を参照）"
+msgstr " (:ref:`コマンドラインオプションのデフォルトを変更する方法` を参照) "
 
 #: ../../how-to/skipping.rst:40
 msgid "Skipping test functions"
@@ -109,7 +109,7 @@ msgstr "クラスまたはモジュールのすべてのテスト関数をスキ
 
 #: ../../how-to/skipping.rst:140
 msgid "You can use the ``skipif`` marker (as any other marker) on classes:"
-msgstr "クラスに ``skipif`` マーカー（他のマーカーと同様）を使用できます:"
+msgstr "クラスに ``skipif`` マーカー (他のマーカーと同様) を使用できます:"
 
 #: ../../how-to/skipping.rst:149
 msgid "If the condition is ``True``, this marker will produce a skip result for each of the test methods of that class."
@@ -177,7 +177,7 @@ msgstr "テストが失敗すると予想されることを示すために ``xfa
 
 #: ../../how-to/skipping.rst:233
 msgid "This test will run but no traceback will be reported when it fails. Instead, terminal reporting will list it in the \"expected to fail\" (``XFAIL``) or \"unexpectedly passing\" (``XPASS``) sections."
-msgstr "このテストは実行されますが、失敗した場合にトレースバックは報告されません。代わりに、ターミナルレポートには「失敗することが予想される」（``XFAIL``）または「予期せず合格する」（``XPASS``）セクションにリストされます。"
+msgstr "このテストは実行されますが、失敗した場合にトレースバックは報告されません。代わりに、ターミナルレポートには「失敗することが予想される」 (``XFAIL``) または「予期せず合格する」 (``XPASS``) セクションにリストされます。"
 
 #: ../../how-to/skipping.rst:237
 msgid "Alternatively, you can also mark a test as ``XFAIL`` from within the test or its setup function imperatively:"
@@ -205,7 +205,7 @@ msgstr "テストが特定の条件下でのみ失敗すると予想される場
 
 #: ../../how-to/skipping.rst:275
 msgid "Note that you have to pass a reason as well (see the parameter description at :ref:`pytest.mark.xfail ref`)."
-msgstr "理由も渡す必要があることに注意してください（パラメータの説明については :ref:`pytest.mark.xfail ref` を参照）。"
+msgstr "理由も渡す必要があることに注意してください (パラメータの説明については :ref:`pytest.mark.xfail ref` を参照) 。"
 
 #: ../../how-to/skipping.rst:279
 msgid "``reason`` parameter"
@@ -249,7 +249,7 @@ msgstr "``XFAIL`` と ``XPASS`` の両方は、デフォルトではテストス
 
 #: ../../how-to/skipping.rst:331
 msgid "This will make ``XPASS`` (\"unexpectedly passing\") results from this test to fail the test suite."
-msgstr "これにより、このテストからの ``XPASS``（「予期せず合格」）結果がテストスイートに失敗するようになります。"
+msgstr "これにより、このテストからの ``XPASS`` (「予期せず合格」) 結果がテストスイートに失敗するようになります。"
 
 #: ../../how-to/skipping.rst:333
 msgid "You can change the default value of the ``strict`` parameter using the ``xfail_strict`` ini option:"

@@ -41,7 +41,7 @@ msgstr "``--ff``, ``--failed-first`` - 失敗を最初に実行し、その後�
 
 #: ../../how-to/cache.rst:20
 msgid "For cleanup (usually not needed), a ``--cache-clear`` option allows to remove all cross-session cache contents ahead of a test run."
-msgstr "クリーンアップのために（通常は不要）、``--cache-clear`` オプションを使用すると、テスト実行前にすべてのセッション間キャッシュ内容を削除できます。"
+msgstr "クリーンアップのために (通常は不要) 、``--cache-clear`` オプションを使用すると、テスト実行前にすべてのセッション間キャッシュ内容を削除できます。"
 
 #: ../../how-to/cache.rst:23
 msgid "Other plugins may access the `config.cache`_ object to set/get **json encodable** values between ``pytest`` invocations."
@@ -49,7 +49,7 @@ msgstr "他のプラグインは、``pytest`` 呼び出し間で **json エン�
 
 #: ../../how-to/cache.rst:28
 msgid "This plugin is enabled by default, but can be disabled if needed: see :ref:`cmdunregister` (the internal name for this plugin is ``cacheprovider``)."
-msgstr "このプラグインはデフォルトで有効になっていますが、必要に応じて無効にすることができます: :ref:`cmdunregister` を参照してください（このプラグインの内部名は ``cacheprovider`` です）。"
+msgstr "このプラグインはデフォルトで有効になっていますが、必要に応じて無効にすることができます: :ref:`cmdunregister` を参照してください (このプラグインの内部名は ``cacheprovider`` です) 。"
 
 #: ../../how-to/cache.rst:34
 msgid "Rerunning only failures or failures first"
@@ -69,11 +69,11 @@ msgstr "次に、``--lf`` を使用して実行すると:"
 
 #: ../../how-to/cache.rst:124
 msgid "You have run only the two failing tests from the last run, while the 48 passing tests have not been run (\"deselected\")."
-msgstr "前回の実行から失敗した 2 つのテストのみを実行し、48 の合格したテストは実行されていません（「選択解除」）。"
+msgstr "前回の実行から失敗した 2 つのテストのみを実行し、48 の合格したテストは実行されていません (「選択解除」) 。"
 
 #: ../../how-to/cache.rst:127
 msgid "Now, if you run with the ``--ff`` option, all tests will be run but the first previous failures will be executed first (as can be seen from the series of ``FF`` and dots):"
-msgstr "次に、``--ff`` オプションを使用して実行すると、すべてのテストが実行されますが、最初の以前の失敗が最初に実行されます（``FF`` とドットの一連の表示からわかるように）。"
+msgstr "次に、``--ff`` オプションを使用して実行すると、すべてのテストが実行されますが、最初の以前の失敗が最初に実行されます (``FF`` とドットの一連の表示からわかるように) 。"
 
 #: ../../how-to/cache.rst:172
 msgid "New ``--nf``, ``--new-first`` options: run new tests first followed by the rest of the tests, in both cases tests are also sorted by the file modified time, with more recent files coming first."
@@ -85,7 +85,7 @@ msgstr "前回の実行でテストが失敗しなかった場合の動作"
 
 #: ../../how-to/cache.rst:179
 msgid "The ``--lfnf/--last-failed-no-failures`` option governs the behavior of ``--last-failed``. Determines whether to execute tests when there are no previously (known) failures or when no cached ``lastfailed`` data was found."
-msgstr "``--lfnf/--last-failed-no-failures`` オプションは ``--last-failed`` の動作を制御します。以前に（既知の）失敗がない場合や、キャッシュされた ``lastfailed`` データが見つからなかった場合にテストを実行するかどうかを決定します。"
+msgstr "``--lfnf/--last-failed-no-failures`` オプションは ``--last-failed`` の動作を制御します。以前に (既知の) 失敗がない場合や、キャッシュされた ``lastfailed`` データが見つからなかった場合にテストを実行するかどうかを決定します。"
 
 #: ../../how-to/cache.rst:183
 msgid "There are two options:"
@@ -93,7 +93,7 @@ msgstr "2 つのオプションがあります:"
 
 #: ../../how-to/cache.rst:185
 msgid "``all``:  when there are no known test failures, runs all tests (the full test suite). This is the default."
-msgstr "``all``: 既知のテスト失敗がない場合、すべてのテスト（完全なテストスイート）を実行します。これがデフォルトです。"
+msgstr "``all``: 既知のテスト失敗がない場合、すべてのテスト (完全なテストスイート) を実行します。これがデフォルトです。"
 
 #: ../../how-to/cache.rst:186
 msgid "``none``: when there are no known test failures, just emits a message stating this and exit successfully."
