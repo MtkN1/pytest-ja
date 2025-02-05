@@ -21,282 +21,282 @@ msgstr ""
 
 #: ../../how-to/writing_plugins.rst:5
 msgid "Writing plugins"
-msgstr ""
+msgstr "プラグインの作成"
 
 #: ../../how-to/writing_plugins.rst:7
 msgid "It is easy to implement `local conftest plugins`_ for your own project or `pip-installable plugins`_ that can be used throughout many projects, including third party projects.  Please refer to :ref:`using plugins` if you only want to use but not write plugins."
-msgstr ""
+msgstr "自分のプロジェクト用の `ローカル conftest プラグイン`_ や、サードパーティプロジェクトを含む多くのプロジェクトで使用できる `pip インストール可能なプラグイン`_ を簡単に実装できます。プラグインを使用するだけで作成しない場合は、:ref:`using plugins` を参照してください。"
 
 #: ../../how-to/writing_plugins.rst:12
 msgid "A plugin contains one or multiple hook functions. :ref:`Writing hooks <writinghooks>` explains the basics and details of how you can write a hook function yourself. ``pytest`` implements all aspects of configuration, collection, running and reporting by calling :ref:`well specified hooks <hook-reference>` of the following plugins:"
-msgstr ""
+msgstr "プラグインには1つまたは複数のフック関数が含まれます。:ref:`Writing hooks <writinghooks>` では、フック関数を自分で書く方法の基本と詳細を説明しています。``pytest`` は、次のプラグインの :ref:`well specified hooks <hook-reference>` を呼び出すことで、設定、収集、実行、およびレポートのすべての側面を実装します。"
 
 #: ../../how-to/writing_plugins.rst:17
 msgid "builtin plugins: loaded from pytest's internal ``_pytest`` directory."
-msgstr ""
+msgstr "組み込みプラグイン: pytest の内部 ``_pytest`` ディレクトリから読み込まれます。"
 
 #: ../../how-to/writing_plugins.rst:19
 msgid ":ref:`external plugins <extplugins>`: installed third-party modules discovered through :ref:`entry points <pip-installable plugins>` in their packaging metadata"
-msgstr ""
+msgstr ":ref:`external plugins <extplugins>`: パッケージメタデータの :ref:`entry points <pip-installable plugins>` を通じて発見されたインストール済みのサードパーティモジュール"
 
 #: ../../how-to/writing_plugins.rst:22
 msgid "`conftest.py plugins`_: modules auto-discovered in test directories"
-msgstr ""
+msgstr "`conftest.py plugins`_: テストディレクトリで自動的に発見されるモジュール"
 
 #: ../../how-to/writing_plugins.rst:24
 msgid "In principle, each hook call is a ``1:N`` Python function call where ``N`` is the number of registered implementation functions for a given specification. All specifications and implementations follow the ``pytest_`` prefix naming convention, making them easy to distinguish and find."
-msgstr ""
+msgstr "原則として、各フック呼び出しは ``1:N`` の Python 関数呼び出しであり、``N`` は特定の仕様に対して登録された実装関数の数です。すべての仕様と実装は ``pytest_`` プレフィックス命名規則に従っているため、区別して見つけやすくなっています。"
 
 #: ../../how-to/writing_plugins.rst:32
 msgid "Plugin discovery order at tool startup"
-msgstr ""
+msgstr "ツール起動時のプラグイン発見順序"
 
 #: ../../how-to/writing_plugins.rst:34
 msgid "``pytest`` loads plugin modules at tool startup in the following way:"
-msgstr ""
+msgstr "``pytest`` はツール起動時に次の方法でプラグインモジュールを読み込みます:"
 
 #: ../../how-to/writing_plugins.rst:36
 msgid "by scanning the command line for the ``-p no:name`` option and *blocking* that plugin from being loaded (even builtin plugins can be blocked this way). This happens before normal command-line parsing."
-msgstr ""
+msgstr "コマンドラインをスキャンして ``-p no:name`` オプションを探し、そのプラグインの読み込みを*ブロック*します（組み込みプラグインでもこの方法でブロックできます）。これは通常のコマンドライン解析の前に行われます。"
 
 #: ../../how-to/writing_plugins.rst:40
 msgid "by loading all builtin plugins."
-msgstr ""
+msgstr "すべての組み込みプラグインを読み込みます。"
 
 #: ../../how-to/writing_plugins.rst:42
 msgid "by scanning the command line for the ``-p name`` option and loading the specified plugin. This happens before normal command-line parsing."
-msgstr ""
+msgstr "コマンドラインをスキャンして ``-p name`` オプションを探し、指定されたプラグインを読み込みます。これは通常のコマンドライン解析の前に行われます。"
 
 #: ../../how-to/writing_plugins.rst:45
 msgid "by loading all plugins registered through installed third-party package :ref:`entry points <pip-installable plugins>`, unless the :envvar:`PYTEST_DISABLE_PLUGIN_AUTOLOAD` environment variable is set."
-msgstr ""
+msgstr ":envvar:`PYTEST_DISABLE_PLUGIN_AUTOLOAD` 環境変数が設定されていない限り、インストールされたサードパーティパッケージの :ref:`entry points <pip-installable plugins>` を通じて登録されたすべてのプラグインを読み込みます。"
 
 #: ../../how-to/writing_plugins.rst:49
 msgid "by loading all plugins specified through the :envvar:`PYTEST_PLUGINS` environment variable."
-msgstr ""
+msgstr ":envvar:`PYTEST_PLUGINS` 環境変数を通じて指定されたすべてのプラグインを読み込みます。"
 
 #: ../../how-to/writing_plugins.rst:51
 msgid "by loading all \"initial \":file:`conftest.py` files:"
-msgstr ""
+msgstr "すべての \"initial \":file:`conftest.py` ファイルを読み込みます:"
 
 #: ../../how-to/writing_plugins.rst:53
 msgid "determine the test paths: specified on the command line, otherwise in :confval:`testpaths` if defined and running from the rootdir, otherwise the current dir"
-msgstr ""
+msgstr "テストパスを決定します: コマンドラインで指定された場合、または :confval:`testpaths` に定義されている場合は rootdir から実行し、それ以外の場合は現在のディレクトリ"
 
 #: ../../how-to/writing_plugins.rst:56
 msgid "for each test path, load ``conftest.py`` and ``test*/conftest.py`` relative to the directory part of the test path, if exist. Before a ``conftest.py`` file is loaded, load ``conftest.py`` files in all of its parent directories. After a ``conftest.py`` file is loaded, recursively load all plugins specified in its :globalvar:`pytest_plugins` variable if present."
-msgstr ""
+msgstr "各テストパスに対して、テストパスのディレクトリ部分に相対的な ``conftest.py`` および ``test*/conftest.py`` を読み込みます（存在する場合）。``conftest.py`` ファイルが読み込まれる前に、その親ディレクトリ内のすべての ``conftest.py`` ファイルを読み込みます。``conftest.py`` ファイルが読み込まれた後、その :globalvar:`pytest_plugins` 変数に指定されたすべてのプラグインを再帰的に読み込みます（存在する場合）。"
 
 #: ../../how-to/writing_plugins.rst:68
 msgid "conftest.py: local per-directory plugins"
-msgstr ""
+msgstr "conftest.py: ディレクトリごとのローカルプラグイン"
 
 #: ../../how-to/writing_plugins.rst:70
 msgid "Local ``conftest.py`` plugins contain directory-specific hook implementations.  Hook Session and test running activities will invoke all hooks defined in ``conftest.py`` files closer to the root of the filesystem.  Example of implementing the ``pytest_runtest_setup`` hook so that is called for tests in the ``a`` sub directory but not for other directories::"
-msgstr ""
+msgstr "ローカルの ``conftest.py`` プラグインには、ディレクトリ固有のフック実装が含まれています。フックセッションおよびテスト実行アクティビティは、ファイルシステムのルートに近い ``conftest.py`` ファイルに定義されたすべてのフックを呼び出します。``a`` サブディレクトリのテストに対してのみ呼び出され、他のディレクトリには呼び出されない ``pytest_runtest_setup`` フックの実装例::"
 
 #: ../../how-to/writing_plugins.rst:90
 msgid "Here is how you might run it::"
-msgstr ""
+msgstr "次のように実行できます::"
 
 #: ../../how-to/writing_plugins.rst:96
 msgid "If you have ``conftest.py`` files which do not reside in a python package directory (i.e. one containing an ``__init__.py``) then \"import conftest\" can be ambiguous because there might be other ``conftest.py`` files as well on your ``PYTHONPATH`` or ``sys.path``. It is thus good practice for projects to either put ``conftest.py`` under a package scope or to never import anything from a ``conftest.py`` file."
-msgstr ""
+msgstr "``conftest.py`` ファイルが Python パッケージディレクトリ（つまり、``__init__.py`` を含むディレクトリ）に存在しない場合、「import conftest」は曖昧になる可能性があります。なぜなら、``PYTHONPATH`` や ``sys.path`` に他の ``conftest.py`` ファイルが存在する可能性があるからです。したがって、プロジェクトでは ``conftest.py`` をパッケージスコープに置くか、``conftest.py`` ファイルから何もインポートしないことが良いプラクティスです。"
 
 #: ../../how-to/writing_plugins.rst:104
 msgid "See also: :ref:`pythonpath`."
-msgstr ""
+msgstr "参照: :ref:`pythonpath`。"
 
 #: ../../how-to/writing_plugins.rst:107
 msgid "Some hooks cannot be implemented in conftest.py files which are not :ref:`initial <pluginorder>` due to how pytest discovers plugins during startup. See the documentation of each hook for details."
-msgstr ""
+msgstr "pytest が起動時にプラグインを発見する方法のため、:ref:`initial <pluginorder>` でない conftest.py ファイルでは実装できないフックもあります。詳細は各フックのドキュメントを参照してください。"
 
 #: ../../how-to/writing_plugins.rst:112
 msgid "Writing your own plugin"
-msgstr ""
+msgstr "独自のプラグインの作成"
 
 #: ../../how-to/writing_plugins.rst:114
 msgid "If you want to write a plugin, there are many real-life examples you can copy from:"
-msgstr ""
+msgstr "プラグインを作成したい場合、コピーできる実際の例がたくさんあります:"
 
 #: ../../how-to/writing_plugins.rst:117
 msgid "a custom collection example plugin: :ref:`yaml plugin`"
-msgstr ""
+msgstr "カスタムコレクションの例プラグイン: :ref:`yaml plugin`"
 
 #: ../../how-to/writing_plugins.rst:118
 msgid "builtin plugins which provide pytest's own functionality"
-msgstr ""
+msgstr "pytest の独自機能を提供する組み込みプラグイン"
 
 #: ../../how-to/writing_plugins.rst:119
 msgid "many :ref:`external plugins <plugin-list>` providing additional features"
-msgstr ""
+msgstr "追加機能を提供する多くの :ref:`external plugins <plugin-list>`"
 
 #: ../../how-to/writing_plugins.rst:121
 msgid "All of these plugins implement :ref:`hooks <hook-reference>` and/or :ref:`fixtures <fixture>` to extend and add functionality."
-msgstr ""
+msgstr "これらのプラグインはすべて、機能を拡張および追加するために :ref:`hooks <hook-reference>` および/または :ref:`fixtures <fixture>` を実装しています。"
 
 #: ../../how-to/writing_plugins.rst:125
 msgid "Make sure to check out the excellent `cookiecutter-pytest-plugin <https://github.com/pytest-dev/cookiecutter-pytest-plugin>`_ project, which is a `cookiecutter template <https://github.com/audreyr/cookiecutter>`_ for authoring plugins."
-msgstr ""
+msgstr "プラグイン作成のための `cookiecutter template <https://github.com/audreyr/cookiecutter>`_ である、優れた `cookiecutter-pytest-plugin <https://github.com/pytest-dev/cookiecutter-pytest-plugin>`_ プロジェクトをぜひチェックしてください。"
 
 #: ../../how-to/writing_plugins.rst:130
 msgid "The template provides an excellent starting point with a working plugin, tests running with tox, a comprehensive README file as well as a pre-configured entry-point."
-msgstr ""
+msgstr "このテンプレートは、動作するプラグイン、tox で実行されるテスト、包括的な README ファイル、および事前に設定されたエントリーポイントを備えた優れた出発点を提供します。"
 
 #: ../../how-to/writing_plugins.rst:134
 msgid "Also consider :ref:`contributing your plugin to pytest-dev<submitplugin>` once it has some happy users other than yourself."
-msgstr ""
+msgstr "自分以外に満足しているユーザーがいる場合は、:ref:`contributing your plugin to pytest-dev<submitplugin>` も検討してください。"
 
 #: ../../how-to/writing_plugins.rst:142
 msgid "Making your plugin installable by others"
-msgstr ""
+msgstr "他の人がプラグインをインストールできるようにする"
 
 #: ../../how-to/writing_plugins.rst:144
 msgid "If you want to make your plugin externally available, you may define a so-called entry point for your distribution so that ``pytest`` finds your plugin module. Entry points are a feature that is provided by :std:doc:`packaging tools <packaging:specifications/entry-points>`."
-msgstr ""
+msgstr "プラグインを外部で利用可能にしたい場合、ディストリビューションのエントリーポイントを定義して、``pytest`` がプラグインモジュールを見つけられるようにすることができます。エントリーポイントは :std:doc:`packaging tools <packaging:specifications/entry-points>` によって提供される機能です。"
 
 #: ../../how-to/writing_plugins.rst:150
 msgid "pytest looks up the ``pytest11`` entrypoint to discover its plugins, thus you can make your plugin available by defining it in your ``pyproject.toml`` file."
-msgstr ""
+msgstr "pytest は ``pytest11`` エントリーポイントを調べてプラグインを発見するため、``pyproject.toml`` ファイルに定義することでプラグインを利用可能にできます。"
 
 #: ../../how-to/writing_plugins.rst:170
 msgid "If a package is installed this way, ``pytest`` will load ``myproject.pluginmodule`` as a plugin which can define :ref:`hooks <hook-reference>`. Confirm registration with ``pytest --trace-config``"
-msgstr ""
+msgstr "この方法でパッケージがインストールされると、``pytest`` は ``myproject.pluginmodule`` をプラグインとして読み込み、:ref:`hooks <hook-reference>` を定義できます。``pytest --trace-config`` で登録を確認してください。"
 
 #: ../../how-to/writing_plugins.rst:176
 msgid "Make sure to include ``Framework :: Pytest`` in your list of `PyPI classifiers <https://pypi.org/classifiers/>`_ to make it easy for users to find your plugin."
-msgstr ""
+msgstr "ユーザーがプラグインを見つけやすくするために、`PyPI classifiers <https://pypi.org/classifiers/>`_ のリストに ``Framework :: Pytest`` を含めるようにしてください。"
 
 #: ../../how-to/writing_plugins.rst:184
 msgid "Assertion Rewriting"
-msgstr ""
+msgstr "アサーションの書き換え"
 
 #: ../../how-to/writing_plugins.rst:186
 msgid "One of the main features of ``pytest`` is the use of plain assert statements and the detailed introspection of expressions upon assertion failures.  This is provided by \"assertion rewriting\" which modifies the parsed AST before it gets compiled to bytecode.  This is done via a :pep:`302` import hook which gets installed early on when ``pytest`` starts up and will perform this rewriting when modules get imported.  However, since we do not want to test different bytecode from what you will run in production, this hook only rewrites test modules themselves (as defined by the :confval:`python_files` configuration option), and any modules which are part of plugins. Any other imported module will not be rewritten and normal assertion behaviour will happen."
-msgstr ""
+msgstr "``pytest`` の主な機能の1つは、単純なアサート文の使用と、アサーション失敗時の式の詳細な内省です。これは「アサーションの書き換え」によって提供され、解析された AST をバイトコードにコンパイルする前に修正します。これは :pep:`302` インポートフックを介して行われ、``pytest`` が起動すると早期にインストールされ、モジュールがインポートされるときにこの書き換えを実行します。ただし、実運用で実行するバイトコードとは異なるものをテストしたくないため、このフックはテストモジュール自体（:confval:`python_files` 設定オプションで定義されている）およびプラグインの一部であるモジュールのみを書き換えます。他のインポートされたモジュールは書き換えられず、通常のアサーション動作が行われます。"
 
 #: ../../how-to/writing_plugins.rst:199
 msgid "If you have assertion helpers in other modules where you would need assertion rewriting to be enabled you need to ask ``pytest`` explicitly to rewrite this module before it gets imported."
-msgstr ""
+msgstr "他のモジュールにアサーションヘルパーがあり、アサーションの書き換えを有効にする必要がある場合は、インポートされる前に ``pytest`` に明示的にこのモジュールを書き換えるように依頼する必要があります。"
 
 #: _pytest.assertion.register_assert_rewrite:1 of
 msgid "Register one or more module names to be rewritten on import."
-msgstr ""
+msgstr "インポート時に書き換えるモジュール名を1つ以上登録します。"
 
 #: _pytest.assertion.register_assert_rewrite:3 of
 msgid "This function will make sure that this module or all modules inside the package will get their assert statements rewritten. Thus you should make sure to call this before the module is actually imported, usually in your __init__.py if you are a plugin using a package."
-msgstr ""
+msgstr "この関数は、このモジュールまたはパッケージ内のすべてのモジュールのアサート文が書き換えられることを保証します。したがって、モジュールが実際にインポートされる前に、通常はパッケージを使用するプラグインの __init__.py でこれを呼び出すようにしてください。"
 
 #: ../../how-to/writing_plugins.rst
 msgid "Parameters"
-msgstr ""
+msgstr "パラメータ"
 
 #: _pytest.assertion.register_assert_rewrite:9 of
 msgid "The module names to register."
-msgstr ""
+msgstr "登録するモジュール名。"
 
 #: ../../how-to/writing_plugins.rst:206
 msgid "This is especially important when you write a pytest plugin which is created using a package.  The import hook only treats ``conftest.py`` files and any modules which are listed in the ``pytest11`` entrypoint as plugins.  As an example consider the following package::"
-msgstr ""
+msgstr "これは、パッケージを使用して作成された pytest プラグインを書くときに特に重要です。インポートフックは ``conftest.py`` ファイルと、``pytest11`` エントリーポイントにプラグインとしてリストされているモジュールのみを扱います。例として、次のパッケージを考えてみましょう::"
 
 #: ../../how-to/writing_plugins.rst:215
 msgid "With the following typical ``setup.py`` extract:"
-msgstr ""
+msgstr "次の典型的な ``setup.py`` 抜粋を使用します:"
 
 #: ../../how-to/writing_plugins.rst:221
 msgid "In this case only ``pytest_foo/plugin.py`` will be rewritten.  If the helper module also contains assert statements which need to be rewritten it needs to be marked as such, before it gets imported. This is easiest by marking it for rewriting inside the ``__init__.py`` module, which will always be imported first when a module inside a package is imported.  This way ``plugin.py`` can still import ``helper.py`` normally.  The contents of ``pytest_foo/__init__.py`` will then need to look like this:"
-msgstr ""
+msgstr "この場合、``pytest_foo/plugin.py`` のみが書き換えられます。ヘルパーモジュールにも書き換えが必要なアサート文が含まれている場合は、インポートされる前にそのようにマークする必要があります。これは、パッケージ内のモジュールがインポートされるときに常に最初にインポートされる ``__init__.py`` モジュール内で書き換え用にマークするのが最も簡単です。この方法で ``plugin.py`` は通常通り ``helper.py`` をインポートできます。``pytest_foo/__init__.py`` の内容は次のようになります:"
 
 #: ../../how-to/writing_plugins.rst:238
 msgid "Requiring/Loading plugins in a test module or conftest file"
-msgstr ""
+msgstr "テストモジュールまたは conftest ファイルでのプラグインの要求/読み込み"
 
 #: ../../how-to/writing_plugins.rst:240
 msgid "You can require plugins in a test module or a ``conftest.py`` file using :globalvar:`pytest_plugins`:"
-msgstr ""
+msgstr ":globalvar:`pytest_plugins` を使用して、テストモジュールまたは ``conftest.py`` ファイルでプラグインを要求できます:"
 
 #: ../../how-to/writing_plugins.rst:246
 msgid "When the test module or conftest plugin is loaded the specified plugins will be loaded as well. Any module can be blessed as a plugin, including internal application modules:"
-msgstr ""
+msgstr "テストモジュールまたは conftest プラグインが読み込まれると、指定されたプラグインも読み込まれます。内部アプリケーションモジュールを含む任意のモジュールをプラグインとして祝福できます:"
 
 #: ../../how-to/writing_plugins.rst:254
 msgid ":globalvar:`pytest_plugins` are processed recursively, so note that in the example above if ``myapp.testsupport.myplugin`` also declares :globalvar:`pytest_plugins`, the contents of the variable will also be loaded as plugins, and so on."
-msgstr ""
+msgstr ":globalvar:`pytest_plugins` は再帰的に処理されるため、上記の例で ``myapp.testsupport.myplugin`` も :globalvar:`pytest_plugins` を宣言している場合、その変数の内容もプラグインとして読み込まれることに注意してください。"
 
 #: ../../how-to/writing_plugins.rst:261
 msgid "Requiring plugins using :globalvar:`pytest_plugins` variable in non-root ``conftest.py`` files is deprecated."
-msgstr ""
+msgstr "ルート以外の ``conftest.py`` ファイルで :globalvar:`pytest_plugins` 変数を使用してプラグインを要求することは非推奨です。"
 
 #: ../../how-to/writing_plugins.rst:264
 msgid "This is important because ``conftest.py`` files implement per-directory hook implementations, but once a plugin is imported, it will affect the entire directory tree. In order to avoid confusion, defining :globalvar:`pytest_plugins` in any ``conftest.py`` file which is not located in the tests root directory is deprecated, and will raise a warning."
-msgstr ""
+msgstr "これは重要です。なぜなら、``conftest.py`` ファイルはディレクトリごとのフック実装を行いますが、一度プラグインがインポートされると、ディレクトリツリー全体に影響を与えるからです。混乱を避けるために、テストのルートディレクトリにない ``conftest.py`` ファイルで :globalvar:`pytest_plugins` を定義することは非推奨であり、警告が発生します。"
 
 #: ../../how-to/writing_plugins.rst:270
 msgid "This mechanism makes it easy to share fixtures within applications or even external applications without the need to create external plugins using the :std:doc:`entry point packaging metadata <packaging:guides/creating-and-discovering-plugins>` technique."
-msgstr ""
+msgstr "このメカニズムにより、:std:doc:`entry point packaging metadata <packaging:guides/creating-and-discovering-plugins>` 技術を使用して外部プラグインを作成する必要なく、アプリケーション内または外部アプリケーション内でフィクスチャを簡単に共有できます。"
 
 #: ../../how-to/writing_plugins.rst:275
 msgid "Plugins imported by :globalvar:`pytest_plugins` will also automatically be marked for assertion rewriting (see :func:`pytest.register_assert_rewrite`). However for this to have any effect the module must not be imported already; if it was already imported at the time the :globalvar:`pytest_plugins` statement is processed, a warning will result and assertions inside the plugin will not be rewritten.  To fix this you can either call :func:`pytest.register_assert_rewrite` yourself before the module is imported, or you can arrange the code to delay the importing until after the plugin is registered."
-msgstr ""
+msgstr ":globalvar:`pytest_plugins` によってインポートされたプラグインも、自動的にアサーション書き換えの対象としてマークされます（:func:`pytest.register_assert_rewrite` を参照）。ただし、これが効果を発揮するためには、モジュールがすでにインポートされていない必要があります。:globalvar:`pytest_plugins` ステートメントが処理された時点でモジュールがすでにインポートされていた場合、警告が発生し、プラグイン内のアサーションは書き換えられません。これを修正するには、モジュールがインポートされる前に自分で :func:`pytest.register_assert_rewrite` を呼び出すか、プラグインが登録されるまでインポートを遅らせるようにコードを調整することができます。"
 
 #: ../../how-to/writing_plugins.rst:287
 msgid "Accessing another plugin by name"
-msgstr ""
+msgstr "名前で他のプラグインにアクセスする"
 
 #: ../../how-to/writing_plugins.rst:289
 msgid "If a plugin wants to collaborate with code from another plugin it can obtain a reference through the plugin manager like this:"
-msgstr ""
+msgstr "プラグインが他のプラグインのコードと協力したい場合、次のようにプラグインマネージャーを通じて参照を取得できます:"
 
 #: ../../how-to/writing_plugins.rst:297
 msgid "If you want to look at the names of existing plugins, use the ``--trace-config`` option."
-msgstr ""
+msgstr "既存のプラグインの名前を確認したい場合は、``--trace-config`` オプションを使用してください。"
 
 #: ../../how-to/writing_plugins.rst:304
 msgid "Registering custom markers"
-msgstr ""
+msgstr "カスタムマーカーの登録"
 
 #: ../../how-to/writing_plugins.rst:306
 msgid "If your plugin uses any markers, you should register them so that they appear in pytest's help text and do not :ref:`cause spurious warnings <unknown-marks>`. For example, the following plugin would register ``cool_marker`` and ``mark_with`` for all users:"
-msgstr ""
+msgstr "プラグインがマーカーを使用する場合、それらを登録して pytest のヘルプテキストに表示され、:ref:`cause spurious warnings <unknown-marks>` を引き起こさないようにする必要があります。たとえば、次のプラグインはすべてのユーザーに対して ``cool_marker`` と ``mark_with`` を登録します:"
 
 #: ../../how-to/writing_plugins.rst:321
 msgid "Testing plugins"
-msgstr ""
+msgstr "プラグインのテスト"
 
 #: ../../how-to/writing_plugins.rst:323
 msgid "pytest comes with a plugin named ``pytester`` that helps you write tests for your plugin code. The plugin is disabled by default, so you will have to enable it before you can use it."
-msgstr ""
+msgstr "pytest には ``pytester`` という名前のプラグインが付属しており、プラグインコードのテストを書くのに役立ちます。このプラグインはデフォルトで無効になっているため、使用する前に有効にする必要があります。"
 
 #: ../../how-to/writing_plugins.rst:327
 msgid "You can do so by adding the following line to a ``conftest.py`` file in your testing directory:"
-msgstr ""
+msgstr "テストディレクトリの ``conftest.py`` ファイルに次の行を追加することでこれを行うことができます:"
 
 #: ../../how-to/writing_plugins.rst:336
 msgid "Alternatively you can invoke pytest with the ``-p pytester`` command line option."
-msgstr ""
+msgstr "あるいは、``-p pytester`` コマンドラインオプションを使用して pytest を呼び出すこともできます。"
 
 #: ../../how-to/writing_plugins.rst:339
 msgid "This will allow you to use the :py:class:`pytester <pytest.Pytester>` fixture for testing your plugin code."
-msgstr ""
+msgstr "これにより、プラグインコードをテストするために :py:class:`pytester <pytest.Pytester>` フィクスチャを使用できるようになります。"
 
 #: ../../how-to/writing_plugins.rst:342
 #, python-brace-format
 msgid "Let's demonstrate what you can do with the plugin with an example. Imagine we developed a plugin that provides a fixture ``hello`` which yields a function and we can invoke this function with one optional parameter. It will return a string value of ``Hello World!`` if we do not supply a value or ``Hello {value}!`` if we do supply a string value."
-msgstr ""
+msgstr "プラグインで何ができるかを例で示しましょう。フィクスチャ ``hello`` を提供するプラグインを開発したと想像してください。このフィクスチャは関数を生成し、この関数を1つのオプションパラメータで呼び出すことができます。値を指定しない場合は ``Hello World!`` という文字列値を返し、値を指定した場合は ``Hello {value}!`` という文字列値を返します。"
 
 #: ../../how-to/writing_plugins.rst:376
 msgid "Now the ``pytester`` fixture provides a convenient API for creating temporary ``conftest.py`` files and test files. It also allows us to run the tests and return a result object, with which we can assert the tests' outcomes."
-msgstr ""
+msgstr "現在、``pytester`` フィクスチャは、一時的な ``conftest.py`` ファイルおよびテストファイルを作成するための便利な API を提供しています。また、テストを実行して結果オブジェクトを返すこともでき、その結果を使用してテストの結果をアサートできます。"
 
 #: ../../how-to/writing_plugins.rst:418
 msgid "Additionally it is possible to copy examples to the ``pytester``'s isolated environment before running pytest on it. This way we can abstract the tested logic to separate files, which is especially useful for longer tests and/or longer ``conftest.py`` files."
-msgstr ""
+msgstr "さらに、pytest を実行する前に例を ``pytester`` の分離された環境にコピーすることも可能です。この方法で、テストされるロジックを別々のファイルに抽象化することができ、特に長いテストや長い ``conftest.py`` ファイルに役立ちます。"
 
 #: ../../how-to/writing_plugins.rst:422
 msgid "Note that for ``pytester.copy_example`` to work we need to set `pytester_example_dir` in our ``pytest.ini`` to tell pytest where to look for example files."
-msgstr ""
+msgstr "``pytester.copy_example`` を機能させるには、``pytest.ini`` に `pytester_example_dir` を設定して、pytest に例ファイルの場所を知らせる必要があることに注意してください。"
 
 #: ../../how-to/writing_plugins.rst:458
 msgid "For more information about the result object that ``runpytest()`` returns, and the methods that it provides please check out the :py:class:`RunResult <_pytest.pytester.RunResult>` documentation."
-msgstr ""
+msgstr "``runpytest()`` が返す結果オブジェクトおよびそれが提供するメソッドの詳細については、:py:class:`RunResult <_pytest.pytester.RunResult>` ドキュメントを参照してください。"
 
