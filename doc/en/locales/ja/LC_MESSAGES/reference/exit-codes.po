@@ -77,7 +77,7 @@ msgstr "テストが収集されませんでした"
 
 #: ../../reference/exit-codes.rst:15
 msgid "They are represented by the :class:`pytest.ExitCode` enum. The exit codes being a part of the public API can be imported and accessed directly using:"
-msgstr ":class:`pytest.ExitCode` 列挙型で表されます。終了コードはパブリック API の一部であり、次のようにインポートして直接アクセスできます:"
+msgstr ":class:`pytest.ExitCode` 列挙型で表されます。 終了コードはパブリック API の一部であり、次のようにインポートして直接アクセスできます:"
 
 #: ../../reference/exit-codes.rst:23
 msgid "If you would like to customize the exit code in some scenarios, specially when no tests are collected, consider using the `pytest-custom_exit_code <https://github.com/yashtodi94/pytest-custom_exit_code>`__ plugin."

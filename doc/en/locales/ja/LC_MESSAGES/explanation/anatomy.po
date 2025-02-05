@@ -21,53 +21,53 @@ msgstr ""
 
 #: ../../explanation/anatomy.rst:4
 msgid "Anatomy of a test"
-msgstr ""
+msgstr "テストの構造"
 
 #: ../../explanation/anatomy.rst:6
 msgid "In the simplest terms, a test is meant to look at the result of a particular behavior, and make sure that result aligns with what you would expect. Behavior is not something that can be empirically measured, which is why writing tests can be challenging."
-msgstr ""
+msgstr "最も簡単に言えば、テストは特定の振る舞いの結果を確認し、その結果が期待通りであることを確認することを目的としています。 振る舞いは経験的に測定できるものではないため、テストを書くことは難しいことがあります。"
 
 #: ../../explanation/anatomy.rst:11
 msgid "\"Behavior\" is the way in which some system **acts in response** to a particular situation and/or stimuli. But exactly *how* or *why* something is done is not quite as important as *what* was done."
-msgstr ""
+msgstr "「振る舞い」とは、特定の状況や刺激に対してシステムが **反応する方法** のことです。 しかし、何かがどのように、またはなぜ行われたかは、それが *何を* 行ったかほど重要ではありません。"
 
 #: ../../explanation/anatomy.rst:15
 msgid "You can think of a test as being broken down into four steps:"
-msgstr ""
+msgstr "テストは次の4つのステップに分けられると考えることができます:"
 
 #: ../../explanation/anatomy.rst:17
 msgid "**Arrange**"
-msgstr ""
+msgstr "**Arrange** (準備)"
 
 #: ../../explanation/anatomy.rst:18
 msgid "**Act**"
-msgstr ""
+msgstr "**Act** (実行)"
 
 #: ../../explanation/anatomy.rst:19
 msgid "**Assert**"
-msgstr ""
+msgstr "**Assert** (検証)"
 
 #: ../../explanation/anatomy.rst:20
 msgid "**Cleanup**"
-msgstr ""
+msgstr "**Cleanup** (後片付け)"
 
 #: ../../explanation/anatomy.rst:22
 msgid "**Arrange** is where we prepare everything for our test. This means pretty much everything except for the \"**act**\". It's lining up the dominoes so that the **act** can do its thing in one, state-changing step. This can mean preparing objects, starting/killing services, entering records into a database, or even things like defining a URL to query, generating some credentials for a user that doesn't exist yet, or just waiting for some process to finish."
-msgstr ""
+msgstr "**Arrange** はテストのためにすべてを準備する段階です。 これは **Act** 以外のほぼすべてを意味します。 ドミノを並べて、実行が一つの状態変更ステップでその役割を果たせるようにすることです。 これには、オブジェクトの準備、サービスの開始/停止、データベースへのレコードの入力、クエリする URL の定義、まだ存在しないユーザーの資格情報の生成、またはプロセスの完了を待つことなどが含まれます。"
 
 #: ../../explanation/anatomy.rst:29
 msgid "**Act** is the singular, state-changing action that kicks off the **behavior** we want to test. This behavior is what carries out the changing of the state of the system under test (SUT), and it's the resulting changed state that we can look at to make a judgement about the behavior. This typically takes the form of a function/method call."
-msgstr ""
+msgstr "**Act** は、テストしたい振る舞いを開始する単一の状態変更アクションです。 この振る舞いは、テスト対象システム (SUT) の状態を変更するものであり、その結果としての変更された状態を見て、振る舞いについて判断することができます。 これは通常、関数/メソッド呼び出しの形を取ります。"
 
 #: ../../explanation/anatomy.rst:35
 msgid "**Assert** is where we look at that resulting state and check if it looks how we'd expect after the dust has settled. It's where we gather evidence to say the behavior does or does not align with what we expect. The ``assert`` in our test is where we take that measurement/observation and apply our judgement to it. If something should be green, we'd say ``assert thing == \"green\"``."
-msgstr ""
+msgstr "**Assert** は、その結果の状態を見て、期待通りかどうかを確認する段階です。 ここで、振る舞いが期待通りであるかどうかを判断するための証拠を集めます。 テストの ``assert`` は、その測定/観察を行い、それに対して判断を適用する場所です。 何かが緑であるべき場合、``assert thing == \"green\"`` と言います。"
 
 #: ../../explanation/anatomy.rst:41
 msgid "**Cleanup** is where the test picks up after itself, so other tests aren't being accidentally influenced by it."
-msgstr ""
+msgstr "**Cleanup** は、他のテストがそれによって偶然に影響を受けないように、テストが自分自身を片付ける段階です。"
 
 #: ../../explanation/anatomy.rst:44
 msgid "At its core, the test is ultimately the **act** and **assert** steps, with the **arrange** step only providing the context. **Behavior** exists between **act** and **assert**."
-msgstr ""
+msgstr "本質的に、テストは最終的に **Act** と **Assert** のステップであり、**Arrange** のステップはコンテキストを提供するだけです。 「振る舞い」は **Act** と **Assert** の間に存在します。"
 
