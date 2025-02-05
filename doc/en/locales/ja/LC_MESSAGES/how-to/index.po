@@ -21,25 +21,25 @@ msgstr ""
 
 #: ../../how-to/index.rst:6
 msgid "How-to guides"
-msgstr ""
+msgstr "ハウツーガイド"
 
 #: ../../how-to/index.rst:9
 msgid "Core pytest functionality"
-msgstr ""
+msgstr "pytest のコア機能"
 
 #: ../../how-to/index.rst:25
 msgid "Test output and outcomes"
-msgstr ""
+msgstr "テストの出力と結果"
 
 #: ../../how-to/index.rst:38
 msgid "Plugins"
-msgstr ""
+msgstr "プラグイン"
 
 #: ../../how-to/index.rst:48
 msgid "pytest and other test systems"
-msgstr ""
+msgstr "pytest と他のテストシステム"
 
 #: ../../how-to/index.rst:58
 msgid "pytest development environment"
-msgstr ""
+msgstr "pytest 開発環境"
 

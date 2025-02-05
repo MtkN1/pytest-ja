@@ -21,122 +21,122 @@ msgstr ""
 
 #: ../../how-to/tmp_path.rst:6
 msgid "How to use temporary directories and files in tests"
-msgstr ""
+msgstr "テストで一時ディレクトリとファイルを使用する方法"
 
 #: ../../how-to/tmp_path.rst:9
 msgid "The ``tmp_path`` fixture"
-msgstr ""
+msgstr "``tmp_path`` フィクスチャ"
 
 #: ../../how-to/tmp_path.rst:11
 msgid "You can use the ``tmp_path`` fixture which will provide a temporary directory unique to each test function."
-msgstr ""
+msgstr "``tmp_path`` フィクスチャを使用すると、各テスト関数に固有の一時ディレクトリが提供されます。"
 
 #: ../../how-to/tmp_path.rst:14
 msgid "``tmp_path`` is a :class:`pathlib.Path` object. Here is an example test usage:"
-msgstr ""
+msgstr "``tmp_path`` は :class:`pathlib.Path` オブジェクトです。以下はテスト使用例です："
 
 #: ../../how-to/tmp_path.rst:31
 msgid "Running this would result in a passed test except for the last ``assert 0`` line which we use to look at values:"
-msgstr ""
+msgstr "これを実行すると、最後の ``assert 0`` 行を除いてテストは合格します。これは値を確認するために使用します："
 
 #: ../../how-to/tmp_path.rst:64
 msgid "By default, ``pytest`` retains the temporary directory for the last 3 ``pytest`` invocations. Concurrent invocations of the same test function are supported by configuring the base temporary directory to be unique for each concurrent run. See `temporary directory location and retention`_ for details."
-msgstr ""
+msgstr "デフォルトでは、``pytest`` は最後の 3 回の ``pytest`` 呼び出しのために一時ディレクトリを保持します。同じテスト関数の同時呼び出しは、各同時実行のためにベースの一時ディレクトリを一意に設定することでサポートされます。詳細は `temporary directory location and retention`_ を参照してください。"
 
 #: ../../how-to/tmp_path.rst:72
 msgid "The ``tmp_path_factory`` fixture"
-msgstr ""
+msgstr "``tmp_path_factory`` フィクスチャ"
 
 #: ../../how-to/tmp_path.rst:74
 msgid "The ``tmp_path_factory`` is a session-scoped fixture which can be used to create arbitrary temporary directories from any other fixture or test."
-msgstr ""
+msgstr "``tmp_path_factory`` はセッションスコープのフィクスチャで、他のフィクスチャやテストから任意の一時ディレクトリを作成するために使用できます。"
 
 #: ../../how-to/tmp_path.rst:77
 msgid "For example, suppose your test suite needs a large image on disk, which is generated procedurally. Instead of computing the same image for each test that uses it into its own ``tmp_path``, you can generate it once per-session to save time:"
-msgstr ""
+msgstr "例えば、テストスイートがディスク上に大きな画像を必要とし、それが手続き的に生成されるとします。同じ画像を各テストで ``tmp_path`` に計算する代わりに、セッションごとに一度生成して時間を節約できます："
 
 #: ../../how-to/tmp_path.rst:101
 msgid "See :ref:`tmp_path_factory API <tmp_path_factory factory api>` for details."
-msgstr ""
+msgstr "詳細は :ref:`tmp_path_factory API <tmp_path_factory factory api>` を参照してください。"
 
 #: ../../how-to/tmp_path.rst:107
 msgid "The ``tmpdir`` and ``tmpdir_factory`` fixtures"
-msgstr ""
+msgstr "``tmpdir`` および ``tmpdir_factory`` フィクスチャ"
 
 #: ../../how-to/tmp_path.rst:109
 msgid "The ``tmpdir`` and ``tmpdir_factory`` fixtures are similar to ``tmp_path`` and ``tmp_path_factory``, but use/return legacy `py.path.local`_ objects rather than standard :class:`pathlib.Path` objects."
-msgstr ""
+msgstr "``tmpdir`` および ``tmpdir_factory`` フィクスチャは ``tmp_path`` および ``tmp_path_factory`` に似ていますが、標準の :class:`pathlib.Path` オブジェクトではなく、レガシーな `py.path.local`_ オブジェクトを使用/返します。"
 
 #: ../../how-to/tmp_path.rst:114
 msgid "These days, it is preferred to use ``tmp_path`` and ``tmp_path_factory``."
-msgstr ""
+msgstr "最近では、``tmp_path`` および ``tmp_path_factory`` を使用することが推奨されています。"
 
 #: ../../how-to/tmp_path.rst:116
 msgid "In order to help modernize old code bases, one can run pytest with the legacypath plugin disabled:"
-msgstr ""
+msgstr "古いコードベースを最新化するために、legacypath プラグインを無効にして pytest を実行できます："
 
 #: ../../how-to/tmp_path.rst:123
 msgid "This will trigger errors on tests using the legacy paths. It can also be permanently set as part of the :confval:`addopts` parameter in the config file."
-msgstr ""
+msgstr "これにより、レガシーパスを使用するテストでエラーが発生します。また、設定ファイルの :confval:`addopts` パラメータの一部として永続的に設定することもできます。"
 
 #: ../../how-to/tmp_path.rst:127
 msgid "See :fixture:`tmpdir <tmpdir>` :fixture:`tmpdir_factory <tmpdir_factory>` API for details."
-msgstr ""
+msgstr "詳細は :fixture:`tmpdir <tmpdir>` :fixture:`tmpdir_factory <tmpdir_factory>` API を参照してください。"
 
 #: ../../how-to/tmp_path.rst:134
 msgid "Temporary directory location and retention"
-msgstr ""
+msgstr "一時ディレクトリの場所と保持"
 
 #: ../../how-to/tmp_path.rst:136
 msgid "The temporary directories, as returned by the :fixture:`tmp_path` and (now deprecated) :fixture:`tmpdir` fixtures, are automatically created under a base temporary directory, in a structure that depends on the ``--basetemp`` option:"
-msgstr ""
+msgstr ":fixture:`tmp_path` および（現在は非推奨の） :fixture:`tmpdir` フィクスチャによって返される一時ディレクトリは、``--basetemp`` オプションに依存する構造で、ベースの一時ディレクトリの下に自動的に作成されます："
 
 #: ../../how-to/tmp_path.rst:141
 msgid "By default (when the ``--basetemp`` option is not set), the temporary directories will follow this template:"
-msgstr ""
+msgstr "デフォルトでは（``--basetemp`` オプションが設定されていない場合）、一時ディレクトリは次のテンプレートに従います："
 
 #: ../../how-to/tmp_path.rst:148
 msgid "where:"
-msgstr ""
+msgstr "ここで："
 
 #: ../../how-to/tmp_path.rst:150
 #, python-brace-format
 msgid "``{temproot}`` is the system temporary directory as determined by :py:func:`tempfile.gettempdir`. It can be overridden by the :envvar:`PYTEST_DEBUG_TEMPROOT` environment variable."
-msgstr ""
+msgstr "``{temproot}`` は :py:func:`tempfile.gettempdir` によって決定されるシステムの一時ディレクトリです。これは :envvar:`PYTEST_DEBUG_TEMPROOT` 環境変数で上書きできます。"
 
 #: ../../how-to/tmp_path.rst:153
 #, python-brace-format
 msgid "``{user}`` is the user name running the tests,"
-msgstr ""
+msgstr "``{user}`` はテストを実行しているユーザー名です。"
 
 #: ../../how-to/tmp_path.rst:154
 #, python-brace-format
 msgid "``{num}`` is a number that is incremented with each test suite run"
-msgstr ""
+msgstr "``{num}`` は各テストスイートの実行ごとに増加する番号です。"
 
 #: ../../how-to/tmp_path.rst:155
 #, python-brace-format
 msgid "``{testname}`` is a sanitized version of :py:attr:`the name of the current test <_pytest.nodes.Node.name>`."
-msgstr ""
+msgstr "``{testname}`` は :py:attr:`現在のテストの名前 <_pytest.nodes.Node.name>` のサニタイズされたバージョンです。"
 
 #: ../../how-to/tmp_path.rst:157
 #, python-brace-format
 msgid "The auto-incrementing ``{num}`` placeholder provides a basic retention feature and avoids that existing results of previous test runs are blindly removed. By default, the last 3 temporary directories are kept, but this behavior can be configured with :confval:`tmp_path_retention_count` and :confval:`tmp_path_retention_policy`."
-msgstr ""
+msgstr "自動インクリメントされる ``{num}`` プレースホルダーは基本的な保持機能を提供し、以前のテスト実行の既存の結果が盲目的に削除されるのを防ぎます。デフォルトでは、最後の 3 つの一時ディレクトリが保持されますが、この動作は :confval:`tmp_path_retention_count` および :confval:`tmp_path_retention_policy` で構成できます。"
 
 #: ../../how-to/tmp_path.rst:163
 msgid "When the ``--basetemp`` option is used (e.g. ``pytest --basetemp=mydir``), it will be used directly as base temporary directory:"
-msgstr ""
+msgstr "``--basetemp`` オプションが使用される場合（例：``pytest --basetemp=mydir``）、それがベースの一時ディレクトリとして直接使用されます："
 
 #: ../../how-to/tmp_path.rst:170
 msgid "Note that there is no retention feature in this case: only the results of the most recent run will be kept."
-msgstr ""
+msgstr "この場合、保持機能はありません。最新の実行結果のみが保持されます。"
 
 #: ../../how-to/tmp_path.rst:175
 msgid "The directory given to ``--basetemp`` will be cleared blindly before each test run, so make sure to use a directory for that purpose only."
-msgstr ""
+msgstr "``--basetemp`` に指定されたディレクトリは、各テスト実行前に盲目的にクリアされるため、その目的のみに使用するディレクトリを使用してください。"
 
 #: ../../how-to/tmp_path.rst:178
 msgid "When distributing tests on the local machine using ``pytest-xdist``, care is taken to automatically configure a `basetemp` directory for the sub processes such that all temporary data lands below a single per-test run temporary directory."
-msgstr ""
+msgstr "``pytest-xdist`` を使用してローカルマシンでテストを分散する場合、すべての一時データが単一のテスト実行ごとの一時ディレクトリの下に配置されるように、サブプロセスの `basetemp` ディレクトリが自動的に構成されるように注意が払われます。"
 
