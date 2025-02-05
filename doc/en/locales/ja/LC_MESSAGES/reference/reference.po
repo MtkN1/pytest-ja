@@ -5633,419 +5633,419 @@ msgstr ""
 
 #: ../../reference/reference.rst:1255
 msgid "Configuration Options"
-msgstr ""
+msgstr "設定オプション"
 
 #: ../../reference/reference.rst:1257
 msgid "Here is a list of builtin configuration options that may be written in a ``pytest.ini`` (or ``.pytest.ini``), ``pyproject.toml``, ``tox.ini``, or ``setup.cfg`` file, usually located at the root of your repository."
-msgstr ""
+msgstr "ここに、通常リポジトリのルートに配置される ``pytest.ini`` (または ``.pytest.ini``)、``pyproject.toml``、``tox.ini``、``setup.cfg`` ファイルに記述できる組み込みの設定オプションのリストがあります。"
 
 #: ../../reference/reference.rst:1260
 msgid "To see each file format in details, see :ref:`config file formats`."
-msgstr ""
+msgstr "各ファイル形式の詳細については、:ref:`config file formats` を参照してください。"
 
 #: ../../reference/reference.rst:1263
 msgid "Usage of ``setup.cfg`` is not recommended except for very simple use cases. ``.cfg`` files use a different parser than ``pytest.ini`` and ``tox.ini`` which might cause hard to track down problems. When possible, it is recommended to use the latter files, or ``pyproject.toml``, to hold your pytest configuration."
-msgstr ""
+msgstr "非常に単純な使用例を除いて、``setup.cfg`` の使用は推奨されません。 ``.cfg`` ファイルは ``pytest.ini`` や ``tox.ini`` とは異なるパーサーを使用するため、問題の追跡が困難になる可能性があります。 可能であれば、後者のファイルや ``pyproject.toml`` を使用して pytest の設定を保持することをお勧めします。"
 
 #: ../../reference/reference.rst:1268
 msgid "Configuration options may be overwritten in the command-line by using ``-o/--override-ini``, which can also be passed multiple times. The expected format is ``name=value``. For example::"
-msgstr ""
+msgstr "設定オプションは、コマンドラインで ``-o/--override-ini`` を使用して上書きすることができ、複数回渡すこともできます。 期待される形式は ``name=value`` です。 例えば::"
 
 #: ../../reference/reference.rst:1276
 msgid "Add the specified ``OPTS`` to the set of command line arguments as if they had been specified by the user. Example: if you have this ini file content:"
-msgstr ""
+msgstr "指定された ``OPTS`` をコマンドライン引数のセットに追加します。 ユーザーが指定したかのように。 例: この ini ファイルの内容がある場合:"
 
 #: ../../reference/reference.rst:1285
 msgid "issuing ``pytest test_hello.py`` actually means:"
-msgstr ""
+msgstr "``pytest test_hello.py`` を発行することは実際には次の意味です:"
 
 #: ../../reference/reference.rst:1291
 msgid "Default is to add no options."
-msgstr ""
+msgstr "デフォルトではオプションを追加しません。"
 
 #: ../../reference/reference.rst:1296
 msgid "Sets the directory where the cache plugin's content is stored. Default directory is ``.pytest_cache`` which is created in :ref:`rootdir <rootdir>`. Directory may be relative or absolute path. If setting relative path, then directory is created relative to :ref:`rootdir <rootdir>`. Additionally, a path may contain environment variables, that will be expanded. For more information about cache plugin please refer to :ref:`cache_provider`."
-msgstr ""
+msgstr "キャッシュプラグインの内容が保存されるディレクトリを設定します。 デフォルトのディレクトリは :ref:`rootdir <rootdir>` に作成される ``.pytest_cache`` です。 ディレクトリは相対パスまたは絶対パスで指定できます。 相対パスを設定する場合、ディレクトリは :ref:`rootdir <rootdir>` に対して相対的に作成されます。 さらに、パスには環境変数を含めることができ、展開されます。 キャッシュプラグインの詳細については、:ref:`cache_provider` を参照してください。"
 
 #: ../../reference/reference.rst:1305
 msgid "Controls if pytest should attempt to identify `namespace packages <https://packaging.python.org/en/latest/guides/packaging-namespace-packages>`__ when collecting Python modules. Default is ``False``."
-msgstr ""
+msgstr "Python モジュールを収集する際に pytest が `namespace packages <https://packaging.python.org/en/latest/guides/packaging-namespace-packages>`__ を識別しようとするかどうかを制御します。 デフォルトは ``False`` です。"
 
 #: ../../reference/reference.rst:1308
 msgid "Set to ``True`` if the package you are testing is part of a namespace package."
-msgstr ""
+msgstr "テストしているパッケージがネームスペースパッケージの一部である場合は ``True`` に設定します。"
 
 #: ../../reference/reference.rst:1310
 msgid "Only `native namespace packages <https://packaging.python.org/en/latest/guides/packaging-namespace-packages/#native-namespace-packages>`__ are supported, with no plans to support `legacy namespace packages <https://packaging.python.org/en/latest/guides/packaging-namespace-packages/#legacy-namespace-packages>`__."
-msgstr ""
+msgstr "サポートされているのは `native namespace packages <https://packaging.python.org/en/latest/guides/packaging-namespace-packages/#native-namespace-packages>`__ のみであり、`legacy namespace packages <https://packaging.python.org/en/latest/guides/packaging-namespace-packages/#legacy-namespace-packages>`__ をサポートする予定はありません。"
 
 #: ../../reference/reference.rst:1317
 msgid "Sets the console output style while running tests:"
-msgstr ""
+msgstr "テスト実行中のコンソール出力スタイルを設定します:"
 
 #: ../../reference/reference.rst:1319
 msgid "``classic``: classic pytest output."
-msgstr ""
+msgstr "``classic``: クラシックな pytest 出力。"
 
 #: ../../reference/reference.rst:1320
 msgid "``progress``: like classic pytest output, but with a progress indicator."
-msgstr ""
+msgstr "``progress``: クラシックな pytest 出力に似ていますが、進行状況インジケーターが追加されています。"
 
 #: ../../reference/reference.rst:1321
 msgid "``progress-even-when-capture-no``: allows the use of the progress indicator even when ``capture=no``."
-msgstr ""
+msgstr "``progress-even-when-capture-no``: ``capture=no`` の場合でも進行状況インジケーターの使用を許可します。"
 
 #: ../../reference/reference.rst:1322
 msgid "``count``: like progress, but shows progress as the number of tests completed instead of a percent."
-msgstr ""
+msgstr "``count``: 進行状況に似ていますが、パーセントではなく完了したテストの数として進行状況を表示します。"
 
 #: ../../reference/reference.rst:1324
 msgid "The default is ``progress``, but you can fallback to ``classic`` if you prefer or the new mode is causing unexpected problems:"
-msgstr ""
+msgstr "デフォルトは ``progress`` ですが、好みに応じて、または新しいモードが予期しない問題を引き起こしている場合は ``classic`` に戻すことができます:"
 
 #: ../../reference/reference.rst:1338
 msgid "Default encoding to use to decode text files with docstrings. :ref:`See how pytest handles doctests <doctest>`."
-msgstr ""
+msgstr "ドックストリングを含むテキストファイルをデコードするために使用するデフォルトのエンコーディング。 :ref:`See how pytest handles doctests <doctest>` を参照してください。"
 
 #: ../../reference/reference.rst:1344
 msgid "One or more doctest flag names from the standard ``doctest`` module. :ref:`See how pytest handles doctests <doctest>`."
-msgstr ""
+msgstr "標準の ``doctest`` モジュールからの 1 つ以上のドックテストフラグ名。 :ref:`See how pytest handles doctests <doctest>` を参照してください。"
 
 #: ../../reference/reference.rst:1352
 msgid "Allows to pick the action for empty parametersets in parameterization"
-msgstr ""
+msgstr "パラメータ化で空のパラメータセットに対するアクションを選択できます"
 
 #: ../../reference/reference.rst:1354
 msgid "``skip`` skips tests with an empty parameterset (default)"
-msgstr ""
+msgstr "``skip`` は空のパラメータセットを持つテストをスキップします (デフォルト)"
 
 #: ../../reference/reference.rst:1355
 msgid "``xfail`` marks tests with an empty parameterset as xfail(run=False)"
-msgstr ""
+msgstr "``xfail`` は空のパラメータセットを持つテストを xfail(run=False) としてマークします"
 
 #: ../../reference/reference.rst:1356
 msgid "``fail_at_collect`` raises an exception if parametrize collects an empty parameter set"
-msgstr ""
+msgstr "``fail_at_collect`` は、パラメータ化が空のパラメータセットを収集した場合に例外を発生させます"
 
 #: ../../reference/reference.rst:1366
 msgid "The default value of this option is planned to change to ``xfail`` in future releases as this is considered less error prone, see :issue:`3155` for more details."
-msgstr ""
+msgstr "このオプションのデフォルト値は、将来のリリースで ``xfail`` に変更される予定です。 これはエラーが発生しにくいと考えられるためです。 詳細については :issue:`3155` を参照してください。"
 
 #: ../../reference/reference.rst:1372
 msgid "Dumps the tracebacks of all threads if a test takes longer than ``X`` seconds to run (including fixture setup and teardown). Implemented using the :func:`faulthandler.dump_traceback_later` function, so all caveats there apply."
-msgstr ""
+msgstr "テストの実行に ``X`` 秒以上かかる場合 (フィクスチャのセットアップとティアダウンを含む)、すべてのスレッドのトレースバックをダンプします。 :func:`faulthandler.dump_traceback_later` 関数を使用して実装されているため、そこにあるすべての注意事項が適用されます。"
 
 #: ../../reference/reference.rst:1382
 msgid "For more information please refer to :ref:`faulthandler`."
-msgstr ""
+msgstr "詳細については :ref:`faulthandler` を参照してください。"
 
 #: ../../reference/reference.rst:1388
 msgid "Sets a list of filters and actions that should be taken for matched warnings. By default all warnings emitted during the test session will be displayed in a summary at the end of the test session."
-msgstr ""
+msgstr "一致する警告に対して実行されるフィルターとアクションのリストを設定します。 デフォルトでは、テストセッション中に発生したすべての警告がテストセッションの最後に要約として表示されます。"
 
 #: ../../reference/reference.rst:1400
 msgid "This tells pytest to ignore deprecation warnings and turn all other warnings into errors. For more information please refer to :ref:`warnings`."
-msgstr ""
+msgstr "これは pytest に非推奨警告を無視し、他のすべての警告をエラーに変えるように指示します。 詳細については :ref:`warnings` を参照してください。"
 
 #: ../../reference/reference.rst:1408
 msgid "Configures how durations are recorded into the JUnit XML report:"
-msgstr ""
+msgstr "JUnit XML レポートに期間が記録される方法を設定します:"
 
 #: ../../reference/reference.rst:1410
 msgid "``total`` (the default): duration times reported include setup, call, and teardown times."
-msgstr ""
+msgstr "``total`` (デフォルト): 報告される期間にはセットアップ、呼び出し、およびティアダウンの時間が含まれます。"
 
 #: ../../reference/reference.rst:1411
 msgid "``call``: duration times reported include only call times, excluding setup and teardown."
-msgstr ""
+msgstr "``call``: 報告される期間にはセットアップとティアダウンを除く呼び出し時間のみが含まれます。"
 
 #: ../../reference/reference.rst:1422
 msgid "Default changed to ``xunit2``."
-msgstr ""
+msgstr "デフォルトが ``xunit2`` に変更されました。"
 
 #: ../../reference/reference.rst:1425
 msgid "Configures the format of the generated JUnit XML file. The possible options are:"
-msgstr ""
+msgstr "生成された JUnit XML ファイルの形式を設定します。 可能なオプションは次のとおりです:"
 
 #: ../../reference/reference.rst:1427
 msgid "``xunit1`` (or ``legacy``): produces old style output, compatible with the xunit 1.0 format."
-msgstr ""
+msgstr "``xunit1`` (または ``legacy``): xunit 1.0 形式と互換性のある古いスタイルの出力を生成します。"
 
 #: ../../reference/reference.rst:1428
 msgid "``xunit2``: produces `xunit 2.0 style output <https://github.com/jenkinsci/xunit-plugin/blob/xunit-2.3.2/src/main/resources/org/jenkinsci/plugins/xunit/types/model/xsd/junit-10.xsd>`__, which should be more compatible with latest Jenkins versions.  **This is the default**."
-msgstr ""
+msgstr "``xunit2``: `xunit 2.0 スタイルの出力 <https://github.com/jenkinsci/xunit-plugin/blob/xunit-2.3.2/src/main/resources/org/jenkinsci/plugins/xunit/types/model/xsd/junit-10.xsd>`__ を生成します。 これは最新の Jenkins バージョンとより互換性があるはずです。 **これがデフォルトです**。"
 
 #: ../../reference/reference.rst:1439
 msgid "``log``, ``all``, ``out-err`` options added."
-msgstr ""
+msgstr "``log``、``all``、``out-err`` オプションが追加されました。"
 
 #: ../../reference/reference.rst:1442
 msgid "Configures if captured output should be written to the JUnit XML file. Valid values are:"
-msgstr ""
+msgstr "キャプチャされた出力を JUnit XML ファイルに書き込むかどうかを設定します。 有効な値は次のとおりです:"
 
 #: ../../reference/reference.rst:1444
 msgid "``log``: write only ``logging`` captured output."
-msgstr ""
+msgstr "``log``: ``logging`` キャプチャされた出力のみを書き込みます。"
 
 #: ../../reference/reference.rst:1445
 msgid "``system-out``: write captured ``stdout`` contents."
-msgstr ""
+msgstr "``system-out``: キャプチャされた ``stdout`` の内容を書き込みます。"
 
 #: ../../reference/reference.rst:1446
 msgid "``system-err``: write captured ``stderr`` contents."
-msgstr ""
+msgstr "``system-err``: キャプチャされた ``stderr`` の内容を書き込みます。"
 
 #: ../../reference/reference.rst:1447
 msgid "``out-err``: write both captured ``stdout`` and ``stderr`` contents."
-msgstr ""
+msgstr "``out-err``: キャプチャされた ``stdout`` と ``stderr`` の両方の内容を書き込みます。"
 
 #: ../../reference/reference.rst:1448
 msgid "``all``: write captured ``logging``, ``stdout`` and ``stderr`` contents."
-msgstr ""
+msgstr "``all``: キャプチャされた ``logging``、``stdout``、``stderr`` の内容を書き込みます。"
 
 #: ../../reference/reference.rst:1449
 msgid "``no`` (the default): no captured output is written."
-msgstr ""
+msgstr "``no`` (デフォルト): キャプチャされた出力は書き込まれません。"
 
 #: ../../reference/reference.rst:1461
 msgid "If ``junit_logging != \"no\"``, configures if the captured output should be written to the JUnit XML file for **passing** tests. Default is ``True``."
-msgstr ""
+msgstr "``junit_logging != \"no\"`` の場合、**成功した** テストのキャプチャされた出力を JUnit XML ファイルに書き込むかどうかを設定します。 デフォルトは ``True`` です。"
 
 #: ../../reference/reference.rst:1472
 msgid "To set the name of the root test suite xml item, you can configure the ``junit_suite_name`` option in your config file:"
-msgstr ""
+msgstr "ルートテストスイート xml アイテムの名前を設定するには、設定ファイルで ``junit_suite_name`` オプションを設定できます:"
 
 #: ../../reference/reference.rst:1481
 msgid "Allow selective auto-indentation of multiline log messages."
-msgstr ""
+msgstr "複数行のログメッセージの選択的な自動インデントを許可します。"
 
 #: ../../reference/reference.rst:1483
 msgid "Supports command line option ``--log-auto-indent [value]`` and config option ``log_auto_indent = [value]`` to set the auto-indentation behavior for all logging."
-msgstr ""
+msgstr "すべてのログの自動インデント動作を設定するためのコマンドラインオプション ``--log-auto-indent [value]`` および設定オプション ``log_auto_indent = [value]`` をサポートします。"
 
 #: ../../reference/reference.rst:1487
 msgid "``[value]`` can be:"
-msgstr ""
+msgstr "``[value]`` は次の値にすることができます:"
 
 #: ../../reference/reference.rst:1488
 msgid "True or \"On\" - Dynamically auto-indent multiline log messages"
-msgstr ""
+msgstr "True または \"On\" - 複数行のログメッセージを動的に自動インデントします。"
 
 #: ../../reference/reference.rst:1489
 msgid "False or \"Off\" or 0 - Do not auto-indent multiline log messages (the default behavior)"
-msgstr ""
+msgstr "False または \"Off\" または 0 - 複数行のログメッセージを自動インデントしない (デフォルトの動作)"
 
 #: ../../reference/reference.rst:1490
 msgid "[positive integer] - auto-indent multiline log messages by [value] spaces"
-msgstr ""
+msgstr "[正の整数] - 複数行のログメッセージを [value] スペースで自動インデント"
 
 #: ../../reference/reference.rst:1497
 #, python-brace-format
 msgid "Supports passing kwarg ``extra={\"auto_indent\": [value]}`` to calls to ``logging.log()`` to specify auto-indentation behavior for a specific entry in the log. ``extra`` kwarg overrides the value specified on the command line or in the config."
-msgstr ""
+msgstr "ログに特定のエントリの自動インデント動作を指定するために ``logging.log()`` への呼び出しに kwarg ``extra={\"auto_indent\": [value]}`` を渡すことをサポートします。 ``extra`` kwarg はコマンドラインまたは設定で指定された値を上書きします。"
 
 #: ../../reference/reference.rst:1504
 msgid "Enable log display during test run (also known as :ref:`\"live logging\" <live_logs>`). The default is ``False``."
-msgstr ""
+msgstr "テスト実行中にログ表示を有効にします (:ref:`\"live logging\" <live_logs>` とも呼ばれます)。 デフォルトは ``False`` です。"
 
 #: ../../reference/reference.rst:1516
 msgid "Sets a :py:func:`time.strftime`-compatible string that will be used when formatting dates for live logging."
-msgstr ""
+msgstr "ライブロギングの日付をフォーマットする際に使用される :py:func:`time.strftime` 互換の文字列を設定します。"
 
 #: ../../reference/reference.rst:1523 ../../reference/reference.rst:1536
 #: ../../reference/reference.rst:1551
 msgid "For more information, see :ref:`live_logs`."
-msgstr ""
+msgstr "詳細については、:ref:`live_logs` を参照してください。"
 
 #: ../../reference/reference.rst:1529
 msgid "Sets a :py:mod:`logging`-compatible string used to format live logging messages."
-msgstr ""
+msgstr "ライブロギングメッセージをフォーマットするために使用される :py:mod:`logging` 互換の文字列を設定します。"
 
 #: ../../reference/reference.rst:1543
 msgid "Sets the minimum log message level that should be captured for live logging. The integer value or the names of the levels can be used."
-msgstr ""
+msgstr "ライブロギングのためにキャプチャされる最小のログメッセージレベルを設定します。 整数値またはレベルの名前を使用できます。"
 
 #: ../../reference/reference.rst:1558
 msgid "Sets a :py:func:`time.strftime`-compatible string that will be used when formatting dates for logging capture."
-msgstr ""
+msgstr "ログキャプチャの日付をフォーマットする際に使用される :py:func:`time.strftime` 互換の文字列を設定します。"
 
 #: ../../reference/reference.rst:1565 ../../reference/reference.rst:1580
 #: ../../reference/reference.rst:1594 ../../reference/reference.rst:1607
 #: ../../reference/reference.rst:1621 ../../reference/reference.rst:1635
 #: ../../reference/reference.rst:1650
 msgid "For more information, see :ref:`logging`."
-msgstr ""
+msgstr "詳細については、:ref:`logging` を参照してください。"
 
 #: ../../reference/reference.rst:1572
 msgid "Sets a file name relative to the current working directory where log messages should be written to, in addition to the other logging facilities that are active."
-msgstr ""
+msgstr "現在の作業ディレクトリに対して相対的なファイル名を設定し、ログメッセージを他のアクティブなロギング機能に加えてそのファイルに書き込みます。"
 
 #: ../../reference/reference.rst:1587
 msgid "Sets a :py:func:`time.strftime`-compatible string that will be used when formatting dates for the logging file."
-msgstr ""
+msgstr "ログファイルの日付をフォーマットする際に使用される :py:func:`time.strftime` 互換の文字列を設定します。"
 
 #: ../../reference/reference.rst:1600
 msgid "Sets a :py:mod:`logging`-compatible string used to format logging messages redirected to the logging file."
-msgstr ""
+msgstr "ログファイルにリダイレクトされたログメッセージをフォーマットするために使用される :py:mod:`logging` 互換の文字列を設定します。"
 
 #: ../../reference/reference.rst:1613
 msgid "Sets the minimum log message level that should be captured for the logging file. The integer value or the names of the levels can be used."
-msgstr ""
+msgstr "ログファイルにキャプチャされる最小のログメッセージレベルを設定します。 整数値またはレベルの名前を使用できます。"
 
 #: ../../reference/reference.rst:1628
 msgid "Sets a :py:mod:`logging`-compatible string used to format captured logging messages."
-msgstr ""
+msgstr "キャプチャされたログメッセージをフォーマットするために使用される :py:mod:`logging` 互換の文字列を設定します。"
 
 #: ../../reference/reference.rst:1642
 msgid "Sets the minimum log message level that should be captured for logging capture. The integer value or the names of the levels can be used."
-msgstr ""
+msgstr "ログキャプチャにキャプチャされる最小のログメッセージレベルを設定します。 整数値またはレベルの名前を使用できます。"
 
 #: ../../reference/reference.rst:1655
 msgid "When the ``--strict-markers`` or ``--strict`` command-line arguments are used, only known markers - defined in code by core pytest or some plugin - are allowed."
-msgstr ""
+msgstr "``--strict-markers`` または ``--strict`` コマンドライン引数が使用されている場合、コア pytest またはプラグインによってコードで定義された既知のマーカーのみが許可されます。"
 
 #: ../../reference/reference.rst:1658
 msgid "You can list additional markers in this setting to add them to the whitelist, in which case you probably want to add ``--strict-markers`` to ``addopts`` to avoid future regressions:"
-msgstr ""
+msgstr "この設定で追加のマーカーをリストすることで、それらをホワイトリストに追加できます。 この場合、将来のリグレッションを避けるために ``--strict-markers`` を ``addopts`` に追加することをお勧めします:"
 
 #: ../../reference/reference.rst:1671
 msgid "The use of ``--strict-markers`` is highly preferred. ``--strict`` was kept for backward compatibility only and may be confusing for others as it only applies to markers and not to other options."
-msgstr ""
+msgstr "``--strict-markers`` の使用が強く推奨されます。 ``--strict`` は後方互換性のために保持されており、他のオプションには適用されず、マーカーにのみ適用されるため、他の人にとって混乱を招く可能性があります。"
 
 #: ../../reference/reference.rst:1677
 msgid "Specifies a minimal pytest version required for running tests."
-msgstr ""
+msgstr "テストを実行するために必要な最小の pytest バージョンを指定します。"
 
 #: ../../reference/reference.rst:1688
 msgid "Set the directory basename patterns to avoid when recursing for test discovery.  The individual (fnmatch-style) patterns are applied to the basename of a directory to decide if to recurse into it. Pattern matching characters::"
-msgstr ""
+msgstr "テスト検出のために再帰する際に避けるべきディレクトリのベース名パターンを設定します。 個々の (fnmatch スタイル) パターンは、再帰するかどうかを決定するためにディレクトリのベース名に適用されます。 パターンマッチング文字::"
 
 #: ../../reference/reference.rst:1698
 #, python-brace-format
 msgid "Default patterns are ``'*.egg'``, ``'.*'``, ``'_darcs'``, ``'build'``, ``'CVS'``, ``'dist'``, ``'node_modules'``, ``'venv'``, ``'{arch}'``. Setting a ``norecursedirs`` replaces the default.  Here is an example of how to avoid certain directories:"
-msgstr ""
+msgstr "デフォルトのパターンは ``'*.egg'``, ``'.*'``, ``'_darcs'``, ``'build'``, ``'CVS'``, ``'dist'``, ``'node_modules'``, ``'venv'``, ``'{arch}'`` です。 ``norecursedirs`` を設定するとデフォルトが置き換えられます。 ここに特定のディレクトリを避ける方法の例を示します:"
 
 #: ../../reference/reference.rst:1708
 msgid "This would tell ``pytest`` to not look into typical subversion or sphinx-build directories or into any ``tmp`` prefixed directory."
-msgstr ""
+msgstr "これは ``pytest`` に典型的なサブバージョンまたは sphinx-build ディレクトリや ``tmp`` プレフィックスのディレクトリを見ないように指示します。"
 
 #: ../../reference/reference.rst:1711
 msgid "Additionally, ``pytest`` will attempt to intelligently identify and ignore a virtualenv.  Any directory deemed to be the root of a virtual environment will not be considered during test collection unless ``--collect-in-virtualenv`` is given.  Note also that ``norecursedirs`` takes precedence over ``--collect-in-virtualenv``; e.g. if you intend to run tests in a virtualenv with a base directory that matches ``'.*'`` you *must* override ``norecursedirs`` in addition to using the ``--collect-in-virtualenv`` flag."
-msgstr ""
+msgstr "さらに、``pytest`` は仮想環境のルートと見なされるディレクトリを自動的に識別して無視しようとします。 仮想環境のルートと見なされるディレクトリは、``--collect-in-virtualenv`` が指定されない限り、テスト収集中に考慮されません。 また、``norecursedirs`` は ``--collect-in-virtualenv`` よりも優先されます。 例えば、ベースディレクトリが ``'.*'`` に一致する仮想環境でテストを実行する場合、``--collect-in-virtualenv`` フラグを使用するだけでなく、``norecursedirs`` を上書きする必要があります。"
 
 #: ../../reference/reference.rst:1723
 msgid "One or more name prefixes or glob-style patterns determining which classes are considered for test collection. Search for multiple glob patterns by adding a space between patterns. By default, pytest will consider any class prefixed with ``Test`` as a test collection.  Here is an example of how to collect tests from classes that end in ``Suite``:"
-msgstr ""
+msgstr "テスト収集のために考慮されるクラスを決定するための 1 つ以上の名前プレフィックスまたはグロブスタイルのパターン。 パターン間にスペースを追加することで複数のグロブパターンを検索します。 デフォルトでは、pytest は ``Test`` で始まるクラスをテスト収集として考慮します。 ここに ``Suite`` で終わるクラスからテストを収集する方法の例を示します:"
 
 #: ../../reference/reference.rst:1734
 msgid "Note that ``unittest.TestCase`` derived classes are always collected regardless of this option, as ``unittest``'s own collection framework is used to collect those tests."
-msgstr ""
+msgstr "``unittest.TestCase`` から派生したクラスは、このオプションに関係なく常に収集されます。 これは ``unittest`` の独自の収集フレームワークを使用してこれらのテストを収集するためです。"
 
 #: ../../reference/reference.rst:1741
 msgid "One or more Glob-style file patterns determining which python files are considered as test modules. Search for multiple glob patterns by adding a space between patterns:"
-msgstr ""
+msgstr "テストモジュールとして考慮される Python ファイルを決定するための 1 つ以上のグロブスタイルのファイルパターン。 パターン間にスペースを追加することで複数のグロブパターンを検索します:"
 
 #: ../../reference/reference.rst:1750
 msgid "Or one per line:"
-msgstr ""
+msgstr "または 1 行ごと:"
 
 #: ../../reference/reference.rst:1760
 msgid "By default, files matching ``test_*.py`` and ``*_test.py`` will be considered test modules."
-msgstr ""
+msgstr "デフォルトでは、``test_*.py`` および ``*_test.py`` に一致するファイルがテストモジュールとして考慮されます。"
 
 #: ../../reference/reference.rst:1766
 msgid "One or more name prefixes or glob-patterns determining which test functions and methods are considered tests. Search for multiple glob patterns by adding a space between patterns. By default, pytest will consider any function prefixed with ``test`` as a test.  Here is an example of how to collect test functions and methods that end in ``_test``:"
-msgstr ""
+msgstr "テスト関数およびメソッドとして考慮されるテスト関数およびメソッドを決定するための 1 つ以上の名前プレフィックスまたはグロブパターン。 パターン間にスペースを追加することで複数のグロブパターンを検索します。 デフォルトでは、pytest は ``test`` で始まる関数をテストとして考慮します。 ここに ``_test`` で終わるテスト関数およびメソッドを収集する方法の例を示します:"
 
 #: ../../reference/reference.rst:1777
 msgid "Note that this has no effect on methods that live on a ``unittest.TestCase`` derived class, as ``unittest``'s own collection framework is used to collect those tests."
-msgstr ""
+msgstr "これは ``unittest.TestCase`` から派生したクラスのメソッドには影響しません。 これは ``unittest`` の独自の収集フレームワークを使用してこれらのテストを収集するためです。"
 
 #: ../../reference/reference.rst:1781
 msgid "See :ref:`change naming conventions` for more detailed examples."
-msgstr ""
+msgstr "詳細な例については、:ref:`change naming conventions` を参照してください。"
 
 #: ../../reference/reference.rst:1786
 msgid "Sets list of directories that should be added to the python search path. Directories will be added to the head of :data:`sys.path`. Similar to the :envvar:`PYTHONPATH` environment variable, the directories will be included in where Python will look for imported modules. Paths are relative to the :ref:`rootdir <rootdir>` directory. Directories remain in path for the duration of the test session."
-msgstr ""
+msgstr "Python の検索パスに追加するディレクトリのリストを設定します。 ディレクトリは :data:`sys.path` の先頭に追加されます。 :envvar:`PYTHONPATH` 環境変数と同様に、ディレクトリは Python がインポートされたモジュールを探す場所に含まれます。 パスは :ref:`rootdir <rootdir>` ディレクトリに対して相対的です。 ディレクトリはテストセッションの期間中パスに残ります。"
 
 #: ../../reference/reference.rst:1800
 msgid "``pythonpath`` does not affect some imports that happen very early, most notably plugins loaded using the ``-p`` command line option."
-msgstr ""
+msgstr "``pythonpath`` は、特に ``-p`` コマンドラインオプションを使用してロードされるプラグインなど、非常に早い段階で発生する一部のインポートには影響しません。"
 
 #: ../../reference/reference.rst:1806
 msgid "A space separated list of plugins that must be present for pytest to run. Plugins can be listed with or without version specifiers directly following their name. Whitespace between different version specifiers is not allowed. If any one of the plugins is not found, emit an error."
-msgstr ""
+msgstr "pytest を実行するために存在しなければならないプラグインのスペース区切りリスト。 プラグインはバージョン指定子を名前の直後に付けてリストすることができます。 異なるバージョン指定子間に空白は許可されません。 プラグインのいずれかが見つからない場合、エラーを発生させます。"
 
 #: ../../reference/reference.rst:1819
 msgid "Sets list of directories that should be searched for tests when no specific directories, files or test ids are given in the command line when executing pytest from the :ref:`rootdir <rootdir>` directory. File system paths may use shell-style wildcards, including the recursive ``**`` pattern."
-msgstr ""
+msgstr "pytest を :ref:`rootdir <rootdir>` ディレクトリから実行する際に、コマンドラインで特定のディレクトリ、ファイル、またはテスト ID が指定されていない場合にテストを検索するディレクトリのリストを設定します。 ファイルシステムパスはシェルスタイルのワイルドカードを使用できます。 再帰的な ``**`` パターンを含みます。"
 
 #: ../../reference/reference.rst:1825
 msgid "Useful when all project tests are in a known location to speed up test collection and to avoid picking up undesired tests by accident."
-msgstr ""
+msgstr "プロジェクトのすべてのテストが既知の場所にある場合、テスト収集を高速化し、誤って不要なテストを拾うのを避けるために便利です。"
 
 #: ../../reference/reference.rst:1833
 msgid "This configuration means that executing:"
-msgstr ""
+msgstr "この構成は、次のコマンドを実行することを意味します:"
 
 #: ../../reference/reference.rst:1839
 msgid "has the same practical effects as executing:"
-msgstr ""
+msgstr "次のコマンドを実行するのと同じ実際の効果があります:"
 
 #: ../../reference/reference.rst:1850
 msgid "How many sessions should we keep the `tmp_path` directories, according to `tmp_path_retention_policy`."
-msgstr ""
+msgstr "`tmp_path_retention_policy` に従って `tmp_path` ディレクトリをいくつのセッション保持するか。"
 
 #: ../../reference/reference.rst:1858
 msgid "Default: ``3``"
-msgstr ""
+msgstr "デフォルト: ``3``"
 
 #: ../../reference/reference.rst:1865
 msgid "Controls which directories created by the `tmp_path` fixture are kept around, based on test outcome."
-msgstr ""
+msgstr "`tmp_path` フィクスチャによって作成されたディレクトリをテスト結果に基づいて保持するかどうかを制御します。"
 
 #: ../../reference/reference.rst:1868
 msgid "`all`: retains directories for all tests, regardless of the outcome."
-msgstr ""
+msgstr "`all`: テスト結果に関係なく、すべてのテストのディレクトリを保持します。"
 
 #: ../../reference/reference.rst:1869
 msgid "`failed`: retains directories only for tests with outcome `error` or `failed`."
-msgstr ""
+msgstr "`failed`: 結果が `error` または `failed` のテストのみディレクトリを保持します。"
 
 #: ../../reference/reference.rst:1870
 msgid "`none`: directories are always removed after each test ends, regardless of the outcome."
-msgstr ""
+msgstr "`none`: 結果に関係なく、各テスト終了後にディレクトリは常に削除されます。"
 
 #: ../../reference/reference.rst:1877
 msgid "Default: ``all``"
-msgstr ""
+msgstr "デフォルト: ``all``"
 
 #: ../../reference/reference.rst:1882
 msgid "List of fixtures that will be applied to all test functions; this is semantically the same to apply the ``@pytest.mark.usefixtures`` marker to all test functions."
-msgstr ""
+msgstr "すべてのテスト関数に適用されるフィクスチャのリスト。 これは、すべてのテスト関数に ``@pytest.mark.usefixtures`` マーカーを適用するのと同じ意味です。"
 
 #: ../../reference/reference.rst:1895
 msgid "Set a verbosity level specifically for assertion related output, overriding the application wide level."
-msgstr ""
+msgstr "アサーション関連の出力に対して特定の詳細レベルを設定し、アプリケーション全体のレベルを上書きします。"
 
 #: ../../reference/reference.rst:1902 ../../reference/reference.rst:1915
 msgid "Defaults to application wide verbosity level (via the ``-v`` command-line option). A special value of \"auto\" can be used to explicitly use the global verbosity level."
-msgstr ""
+msgstr "デフォルトはアプリケーション全体の詳細レベル (``-v`` コマンドラインオプションを介して) です。 特別な値 ``auto`` を使用して、グローバルな詳細レベルを明示的に使用することができます。"
 
 #: ../../reference/reference.rst:1908
 msgid "Set a verbosity level specifically for test case execution related output, overriding the application wide level."
-msgstr ""
+msgstr "テストケース実行関連の出力に対して特定の詳細レベルを設定し、アプリケーション全体のレベルを上書きします。"
 
 #: ../../reference/reference.rst:1921
 msgid "If set to ``True``, tests marked with ``@pytest.mark.xfail`` that actually succeed will by default fail the test suite. For more information, see :ref:`xfail strict tutorial`."
-msgstr ""
+msgstr "``True`` に設定すると、実際に成功した ``@pytest.mark.xfail`` でマークされたテストはデフォルトでテストスイートに失敗します。 詳細については、:ref:`xfail strict tutorial` を参照してください。"
 
 #: ../../reference/reference.rst:1935
 msgid "Command-line Flags"
-msgstr ""
+msgstr "コマンドラインフラグ"
 
 #: ../../reference/reference.rst:1937
 msgid "All the command-line flags can be obtained by running ``pytest --help``::"
-msgstr ""
+msgstr "すべてのコマンドラインフラグは ``pytest --help`` を実行することで取得できます::"
 
