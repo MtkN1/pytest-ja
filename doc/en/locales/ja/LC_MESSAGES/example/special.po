@@ -21,17 +21,17 @@ msgstr ""
 
 #: ../../example/special.rst:2
 msgid "A session-fixture which can look at all collected tests"
-msgstr ""
+msgstr "収集されたすべてのテストを確認できるセッションフィクスチャ"
 
 #: ../../example/special.rst:4
 msgid "A session-scoped fixture effectively has access to all collected test items.  Here is an example of a fixture function which walks all collected tests and looks if their test class defines a ``callme`` method and calls it:"
-msgstr ""
+msgstr "セッションスコープのフィクスチャは、収集されたすべてのテスト項目にアクセスできます。 ここに、収集されたすべてのテストを巡回し、そのテストクラスが ``callme`` メソッドを定義しているかどうかを確認し、それを呼び出すフィクスチャ関数の例があります。"
 
 #: ../../example/special.rst:29
 msgid "test classes may now define a ``callme`` method which will be called ahead of running any tests:"
-msgstr ""
+msgstr "テストクラスは、テストを実行する前に呼び出される ``callme`` メソッドを定義できるようになりました。"
 
 #: ../../example/special.rst:70
 msgid "If you run this without output capturing:"
-msgstr ""
+msgstr "出力キャプチャなしでこれを実行すると:"
 

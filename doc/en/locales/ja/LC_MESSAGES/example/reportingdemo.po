@@ -21,9 +21,9 @@ msgstr ""
 
 #: ../../example/reportingdemo.rst:4
 msgid "Demo of Python failure reports with pytest"
-msgstr ""
+msgstr "pytest による Python の失敗レポートのデモ"
 
 #: ../../example/reportingdemo.rst:6
 msgid "Here is a nice run of several failures and how ``pytest`` presents things:"
-msgstr ""
+msgstr "いくつかの失敗の実行と ``pytest`` がどのように表示するかを示します:"
 
