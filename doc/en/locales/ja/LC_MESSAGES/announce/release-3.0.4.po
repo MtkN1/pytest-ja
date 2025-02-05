@@ -1,0 +1,93 @@
+# SOME DESCRIPTIVE TITLE.
+# Copyright (C) 2015, holger krekel and pytest-dev team
+# This file is distributed under the same license as the pytest package.
+# FIRST AUTHOR <EMAIL@ADDRESS>, 2025.
+#
+#, fuzzy
+msgid ""
+msgstr ""
+"Project-Id-Version: pytest 0.1.dev16209\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2025-02-05 00:52+0900\n"
+"PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
+"Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
+"Language: ja\n"
+"Language-Team: ja <LL@li.org>\n"
+"Plural-Forms: nplurals=1; plural=0;\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=utf-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Generated-By: Babel 2.17.0\n"
+
+#: ../../announce/release-3.0.4.rst:2
+msgid "pytest-3.0.4"
+msgstr ""
+
+#: ../../announce/release-3.0.4.rst:4
+msgid "pytest 3.0.4 has just been released to PyPI."
+msgstr ""
+
+#: ../../announce/release-3.0.4.rst:6
+msgid "This release fixes some regressions and bugs reported in the last version, being a drop-in replacement. To upgrade::"
+msgstr ""
+
+#: ../../announce/release-3.0.4.rst:11
+msgid "The changelog is available at http://doc.pytest.org/en/stable/changelog.html."
+msgstr ""
+
+#: ../../announce/release-3.0.4.rst:13
+msgid "Thanks to all who contributed to this release, among them:"
+msgstr ""
+
+#: ../../announce/release-3.0.4.rst:15
+msgid "Bruno Oliveira"
+msgstr ""
+
+#: ../../announce/release-3.0.4.rst:16
+msgid "Dan Wandschneider"
+msgstr ""
+
+#: ../../announce/release-3.0.4.rst:17
+msgid "Florian Bruhin"
+msgstr ""
+
+#: ../../announce/release-3.0.4.rst:18
+msgid "Georgy Dyuldin"
+msgstr ""
+
+#: ../../announce/release-3.0.4.rst:19
+msgid "Grigorii Eremeev"
+msgstr ""
+
+#: ../../announce/release-3.0.4.rst:20
+msgid "Jason R. Coombs"
+msgstr ""
+
+#: ../../announce/release-3.0.4.rst:21
+msgid "Manuel Jacob"
+msgstr ""
+
+#: ../../announce/release-3.0.4.rst:22
+msgid "Mathieu Clabaut"
+msgstr ""
+
+#: ../../announce/release-3.0.4.rst:23
+msgid "Michael Seifert"
+msgstr ""
+
+#: ../../announce/release-3.0.4.rst:24
+msgid "Nikolaus Rath"
+msgstr ""
+
+#: ../../announce/release-3.0.4.rst:25
+msgid "Ronny Pfannschmidt"
+msgstr ""
+
+#: ../../announce/release-3.0.4.rst:26
+msgid "Tom V"
+msgstr ""
+
+#: ../../announce/release-3.0.4.rst:28
+msgid "Happy testing, The pytest Development Team"
+msgstr ""
+

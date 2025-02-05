@@ -1,0 +1,421 @@
+# SOME DESCRIPTIVE TITLE.
+# Copyright (C) 2015, holger krekel and pytest-dev team
+# This file is distributed under the same license as the pytest package.
+# FIRST AUTHOR <EMAIL@ADDRESS>, 2025.
+#
+#, fuzzy
+msgid ""
+msgstr ""
+"Project-Id-Version: pytest 0.1.dev16209\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2025-02-05 00:52+0900\n"
+"PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
+"Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
+"Language: ja\n"
+"Language-Team: ja <LL@li.org>\n"
+"Plural-Forms: nplurals=1; plural=0;\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=utf-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Generated-By: Babel 2.17.0\n"
+
+#: ../../reference/fixtures.rst:9
+msgid "Fixtures reference"
+msgstr ""
+
+#: ../../reference/fixtures.rst:11
+msgid ":ref:`about-fixtures`"
+msgstr ""
+
+#: ../../reference/fixtures.rst:12
+msgid ":ref:`how-to-fixtures`"
+msgstr ""
+
+#: ../../reference/fixtures.rst:18
+msgid "Built-in fixtures"
+msgstr ""
+
+#: ../../reference/fixtures.rst:20
+msgid ":ref:`Fixtures <fixtures-api>` are defined using the :ref:`@pytest.fixture <pytest.fixture-api>` decorator. Pytest has several useful built-in fixtures:"
+msgstr ""
+
+#: ../../reference/fixtures.rst:23
+msgid ":fixture:`capfd`"
+msgstr ""
+
+#: ../../reference/fixtures.rst:24
+msgid "Capture, as text, output to file descriptors ``1`` and ``2``."
+msgstr ""
+
+#: ../../reference/fixtures.rst:26
+msgid ":fixture:`capfdbinary`"
+msgstr ""
+
+#: ../../reference/fixtures.rst:27
+msgid "Capture, as bytes, output to file descriptors ``1`` and ``2``."
+msgstr ""
+
+#: ../../reference/fixtures.rst:29
+msgid ":fixture:`caplog`"
+msgstr ""
+
+#: ../../reference/fixtures.rst:30
+msgid "Control logging and access log entries."
+msgstr ""
+
+#: ../../reference/fixtures.rst:32
+msgid ":fixture:`capsys`"
+msgstr ""
+
+#: ../../reference/fixtures.rst:33
+msgid "Capture, as text, output to ``sys.stdout`` and ``sys.stderr``."
+msgstr ""
+
+#: ../../reference/fixtures.rst:35
+msgid ":fixture:`capsysbinary`"
+msgstr ""
+
+#: ../../reference/fixtures.rst:36
+msgid "Capture, as bytes, output to ``sys.stdout`` and ``sys.stderr``."
+msgstr ""
+
+#: ../../reference/fixtures.rst:38
+msgid ":fixture:`cache`"
+msgstr ""
+
+#: ../../reference/fixtures.rst:39
+msgid "Store and retrieve values across pytest runs."
+msgstr ""
+
+#: ../../reference/fixtures.rst:41
+msgid ":fixture:`doctest_namespace`"
+msgstr ""
+
+#: ../../reference/fixtures.rst:42
+msgid "Provide a dict injected into the doctests namespace."
+msgstr ""
+
+#: ../../reference/fixtures.rst:44
+msgid ":fixture:`monkeypatch`"
+msgstr ""
+
+#: ../../reference/fixtures.rst:45
+msgid "Temporarily modify classes, functions, dictionaries, ``os.environ``, and other objects."
+msgstr ""
+
+#: ../../reference/fixtures.rst:48
+msgid ":fixture:`pytestconfig`"
+msgstr ""
+
+#: ../../reference/fixtures.rst:49
+msgid "Access to configuration values, pluginmanager and plugin hooks."
+msgstr ""
+
+#: ../../reference/fixtures.rst:51
+msgid ":fixture:`record_property`"
+msgstr ""
+
+#: ../../reference/fixtures.rst:52
+msgid "Add extra properties to the test."
+msgstr ""
+
+#: ../../reference/fixtures.rst:54
+msgid ":fixture:`record_testsuite_property`"
+msgstr ""
+
+#: ../../reference/fixtures.rst:55
+msgid "Add extra properties to the test suite."
+msgstr ""
+
+#: ../../reference/fixtures.rst:57
+msgid ":fixture:`recwarn`"
+msgstr ""
+
+#: ../../reference/fixtures.rst:58
+msgid "Record warnings emitted by test functions."
+msgstr ""
+
+#: ../../reference/fixtures.rst:60
+msgid ":fixture:`request`"
+msgstr ""
+
+#: ../../reference/fixtures.rst:61
+msgid "Provide information on the executing test function."
+msgstr ""
+
+#: ../../reference/fixtures.rst:63
+msgid ":fixture:`testdir`"
+msgstr ""
+
+#: ../../reference/fixtures.rst:64
+msgid "Provide a temporary test directory to aid in running, and testing, pytest plugins."
+msgstr ""
+
+#: ../../reference/fixtures.rst:67
+msgid ":fixture:`tmp_path`"
+msgstr ""
+
+#: ../../reference/fixtures.rst:68
+msgid "Provide a :class:`pathlib.Path` object to a temporary directory which is unique to each test function."
+msgstr ""
+
+#: ../../reference/fixtures.rst:71
+msgid ":fixture:`tmp_path_factory`"
+msgstr ""
+
+#: ../../reference/fixtures.rst:72
+msgid "Make session-scoped temporary directories and return :class:`pathlib.Path` objects."
+msgstr ""
+
+#: ../../reference/fixtures.rst:75
+msgid ":fixture:`tmpdir`"
+msgstr ""
+
+#: ../../reference/fixtures.rst:76
+msgid "Provide a `py.path.local <https://py.readthedocs.io/en/latest/path.html>`_ object to a temporary directory which is unique to each test function; replaced by :fixture:`tmp_path`."
+msgstr ""
+
+#: ../../reference/fixtures.rst:80
+msgid ":fixture:`tmpdir_factory`"
+msgstr ""
+
+#: ../../reference/fixtures.rst:81
+msgid "Make session-scoped temporary directories and return ``py.path.local`` objects; replaced by :fixture:`tmp_path_factory`."
+msgstr ""
+
+#: ../../reference/fixtures.rst:90
+msgid "Fixture availability"
+msgstr ""
+
+#: ../../reference/fixtures.rst:92
+msgid "Fixture availability is determined from the perspective of the test. A fixture is only available for tests to request if they are in the scope that fixture is defined in. If a fixture is defined inside a class, it can only be requested by tests inside that class. But if a fixture is defined inside the global scope of the module, then every test in that module, even if it's defined inside a class, can request it."
+msgstr ""
+
+#: ../../reference/fixtures.rst:99
+msgid "Similarly, a test can also only be affected by an autouse fixture if that test is in the same scope that autouse fixture is defined in (see :ref:`autouse order`)."
+msgstr ""
+
+#: ../../reference/fixtures.rst:103
+msgid "A fixture can also request any other fixture, no matter where it's defined, so long as the test requesting them can see all fixtures involved."
+msgstr ""
+
+#: ../../reference/fixtures.rst:106
+msgid "For example, here's a test file with a fixture (``outer``) that requests a fixture (``inner``) from a scope it wasn't defined in:"
+msgstr ""
+
+#: ../../reference/fixtures.rst:111
+msgid "From the tests' perspectives, they have no problem seeing each of the fixtures they're dependent on:"
+msgstr ""
+
+#: ../../reference/fixtures.rst:117
+msgid "So when they run, ``outer`` will have no problem finding ``inner``, because pytest searched from the tests' perspectives."
+msgstr ""
+
+#: ../../reference/fixtures.rst:121
+msgid "The scope a fixture is defined in has no bearing on the order it will be instantiated in: the order is mandated by the logic described :ref:`here <fixture order>`."
+msgstr ""
+
+#: ../../reference/fixtures.rst:126
+msgid "``conftest.py``: sharing fixtures across multiple files"
+msgstr ""
+
+#: ../../reference/fixtures.rst:128
+msgid "The ``conftest.py`` file serves as a means of providing fixtures for an entire directory. Fixtures defined in a ``conftest.py`` can be used by any test in that package without needing to import them (pytest will automatically discover them)."
+msgstr ""
+
+#: ../../reference/fixtures.rst:133
+msgid "You can have multiple nested directories/packages containing your tests, and each directory can have its own ``conftest.py`` with its own fixtures, adding on to the ones provided by the ``conftest.py`` files in parent directories."
+msgstr ""
+
+#: ../../reference/fixtures.rst:137
+msgid "For example, given a test file structure like this:"
+msgstr ""
+
+#: ../../reference/fixtures.rst:189
+msgid "The boundaries of the scopes can be visualized like this:"
+msgstr ""
+
+#: ../../reference/fixtures.rst:194
+msgid "The directories become their own sort of scope where fixtures that are defined in a ``conftest.py`` file in that directory become available for that whole scope."
+msgstr ""
+
+#: ../../reference/fixtures.rst:198
+msgid "Tests are allowed to search upward (stepping outside a circle) for fixtures, but can never go down (stepping inside a circle) to continue their search. So ``tests/subpackage/test_subpackage.py::test_order`` would be able to find the ``innermost`` fixture defined in ``tests/subpackage/test_subpackage.py``, but the one defined in ``tests/test_top.py`` would be unavailable to it because it would have to step down a level (step inside a circle) to find it."
+msgstr ""
+
+#: ../../reference/fixtures.rst:205
+msgid "The first fixture the test finds is the one that will be used, so :ref:`fixtures can be overridden <override fixtures>` if you need to change or extend what one does for a particular scope."
+msgstr ""
+
+#: ../../reference/fixtures.rst:209
+msgid "You can also use the ``conftest.py`` file to implement :ref:`local per-directory plugins <conftest.py plugins>`."
+msgstr ""
+
+#: ../../reference/fixtures.rst:213
+msgid "Fixtures from third-party plugins"
+msgstr ""
+
+#: ../../reference/fixtures.rst:215
+msgid "Fixtures don't have to be defined in this structure to be available for tests, though. They can also be provided by third-party plugins that are installed, and this is how many pytest plugins operate. As long as those plugins are installed, the fixtures they provide can be requested from anywhere in your test suite."
+msgstr ""
+
+#: ../../reference/fixtures.rst:220
+msgid "Because they're provided from outside the structure of your test suite, third-party plugins don't really provide a scope like `conftest.py` files and the directories in your test suite do. As a result, pytest will search for fixtures stepping out through scopes as explained previously, only reaching fixtures defined in plugins *last*."
+msgstr ""
+
+#: ../../reference/fixtures.rst:226
+msgid "For example, given the following file structure:"
+msgstr ""
+
+#: ../../reference/fixtures.rst:263
+msgid "If ``plugin_a`` is installed and provides the fixture ``a_fix``, and ``plugin_b`` is installed and provides the fixture ``b_fix``, then this is what the test's search for fixtures would look like:"
+msgstr ""
+
+#: ../../reference/fixtures.rst:270
+msgid "pytest will only search for ``a_fix`` and ``b_fix`` in the plugins after searching for them first in the scopes inside ``tests/``."
+msgstr ""
+
+#: ../../reference/fixtures.rst:285
+msgid "Fixture instantiation order"
+msgstr ""
+
+#: ../../reference/fixtures.rst:287
+msgid "When pytest wants to execute a test, once it knows what fixtures will be executed, it has to figure out the order they'll be executed in. To do this, it considers 3 factors:"
+msgstr ""
+
+#: ../../reference/fixtures.rst:291
+msgid "scope"
+msgstr ""
+
+#: ../../reference/fixtures.rst:292
+msgid "dependencies"
+msgstr ""
+
+#: ../../reference/fixtures.rst:293
+msgid "autouse"
+msgstr ""
+
+#: ../../reference/fixtures.rst:295
+msgid "Names of fixtures or tests, where they're defined, the order they're defined in, and the order fixtures are requested in have no bearing on execution order beyond coincidence. While pytest will try to make sure coincidences like these stay consistent from run to run, it's not something that should be depended on. If you want to control the order, it's safest to rely on these 3 things and make sure dependencies are clearly established."
+msgstr ""
+
+#: ../../reference/fixtures.rst:303
+msgid "Higher-scoped fixtures are executed first"
+msgstr ""
+
+#: ../../reference/fixtures.rst:305
+msgid "Within a function request for fixtures, those of higher-scopes (such as ``session``) are executed before lower-scoped fixtures (such as ``function`` or ``class``)."
+msgstr ""
+
+#: ../../reference/fixtures.rst:309
+msgid "Here's an example:"
+msgstr ""
+
+#: ../../reference/fixtures.rst:313
+msgid "The test will pass because the larger scoped fixtures are executing first."
+msgstr ""
+
+#: ../../reference/fixtures.rst:315
+msgid "The order breaks down to this:"
+msgstr ""
+
+#: ../../reference/fixtures.rst:321
+msgid "Fixtures of the same order execute based on dependencies"
+msgstr ""
+
+#: ../../reference/fixtures.rst:323
+msgid "When a fixture requests another fixture, the other fixture is executed first. So if fixture ``a`` requests fixture ``b``, fixture ``b`` will execute first, because ``a`` depends on ``b`` and can't operate without it. Even if ``a`` doesn't need the result of ``b``, it can still request ``b`` if it needs to make sure it is executed after ``b``."
+msgstr ""
+
+#: ../../reference/fixtures.rst:329
+msgid "For example:"
+msgstr ""
+
+#: ../../reference/fixtures.rst:333
+msgid "If we map out what depends on what, we get something that looks like this:"
+msgstr ""
+
+#: ../../reference/fixtures.rst:338
+msgid "The rules provided by each fixture (as to what fixture(s) each one has to come after) are comprehensive enough that it can be flattened to this:"
+msgstr ""
+
+#: ../../reference/fixtures.rst:344
+msgid "Enough information has to be provided through these requests in order for pytest to be able to figure out a clear, linear chain of dependencies, and as a result, an order of operations for a given test. If there's any ambiguity, and the order of operations can be interpreted more than one way, you should assume pytest could go with any one of those interpretations at any point."
+msgstr ""
+
+#: ../../reference/fixtures.rst:350
+msgid "For example, if ``d`` didn't request ``c``, i.e.the graph would look like this:"
+msgstr ""
+
+#: ../../reference/fixtures.rst:355
+msgid "Because nothing requested ``c`` other than ``g``, and ``g`` also requests ``f``, it's now unclear if ``c`` should go before/after ``f``, ``e``, or ``d``. The only rules that were set for ``c`` is that it must execute after ``b`` and before ``g``."
+msgstr ""
+
+#: ../../reference/fixtures.rst:360
+msgid "pytest doesn't know where ``c`` should go in the case, so it should be assumed that it could go anywhere between ``g`` and ``b``."
+msgstr ""
+
+#: ../../reference/fixtures.rst:363
+msgid "This isn't necessarily bad, but it's something to keep in mind. If the order they execute in could affect the behavior a test is targeting, or could otherwise influence the result of a test, then the order should be defined explicitly in a way that allows pytest to linearize/\"flatten\" that order."
+msgstr ""
+
+#: ../../reference/fixtures.rst:371
+msgid "Autouse fixtures are executed first within their scope"
+msgstr ""
+
+#: ../../reference/fixtures.rst:373
+msgid "Autouse fixtures are assumed to apply to every test that could reference them, so they are executed before other fixtures in that scope. Fixtures that are requested by autouse fixtures effectively become autouse fixtures themselves for the tests that the real autouse fixture applies to."
+msgstr ""
+
+#: ../../reference/fixtures.rst:378
+msgid "So if fixture ``a`` is autouse and fixture ``b`` is not, but fixture ``a`` requests fixture ``b``, then fixture ``b`` will effectively be an autouse fixture as well, but only for the tests that ``a`` applies to."
+msgstr ""
+
+#: ../../reference/fixtures.rst:382
+msgid "In the last example, the graph became unclear if ``d`` didn't request ``c``. But if ``c`` was autouse, then ``b`` and ``a`` would effectively also be autouse because ``c`` depends on them. As a result, they would all be shifted above non-autouse fixtures within that scope."
+msgstr ""
+
+#: ../../reference/fixtures.rst:387
+msgid "So if the test file looked like this:"
+msgstr ""
+
+#: ../../reference/fixtures.rst:391
+msgid "the graph would look like this:"
+msgstr ""
+
+#: ../../reference/fixtures.rst:396
+msgid "Because ``c`` can now be put above ``d`` in the graph, pytest can once again linearize the graph to this:"
+msgstr ""
+
+#: ../../reference/fixtures.rst:402
+msgid "In this example, ``c`` makes ``b`` and ``a`` effectively autouse fixtures as well."
+msgstr ""
+
+#: ../../reference/fixtures.rst:405
+msgid "Be careful with autouse, though, as an autouse fixture will automatically execute for every test that can reach it, even if they don't request it. For example, consider this file:"
+msgstr ""
+
+#: ../../reference/fixtures.rst:411
+msgid "Even though nothing in ``TestClassWithoutC1Request`` is requesting ``c1``, it still is executed for the tests inside it anyway:"
+msgstr ""
+
+#: ../../reference/fixtures.rst:417
+msgid "But just because one autouse fixture requested a non-autouse fixture, that doesn't mean the non-autouse fixture becomes an autouse fixture for all contexts that it can apply to. It only effectively becomes an autouse fixture for the contexts the real autouse fixture (the one that requested the non-autouse fixture) can apply to."
+msgstr ""
+
+#: ../../reference/fixtures.rst:423
+msgid "For example, take a look at this test file:"
+msgstr ""
+
+#: ../../reference/fixtures.rst:427
+msgid "It would break down to something like this:"
+msgstr ""
+
+#: ../../reference/fixtures.rst:432
+msgid "For ``test_req`` and ``test_no_req`` inside ``TestClassWithAutouse``, ``c3`` effectively makes ``c2`` an autouse fixture, which is why ``c2`` and ``c3`` are executed for both tests, despite not being requested, and why ``c2`` and ``c3`` are executed before ``c1`` for ``test_req``."
+msgstr ""
+
+#: ../../reference/fixtures.rst:437
+msgid "If this made ``c2`` an *actual* autouse fixture, then ``c2`` would also execute for the tests inside ``TestClassWithoutAutouse``, since they can reference ``c2`` if they wanted to. But it doesn't, because from the perspective of the ``TestClassWithoutAutouse`` tests, ``c2`` isn't an autouse fixture, since they can't see ``c3``."
+msgstr ""
+

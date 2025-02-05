@@ -1,0 +1,181 @@
+# SOME DESCRIPTIVE TITLE.
+# Copyright (C) 2015, holger krekel and pytest-dev team
+# This file is distributed under the same license as the pytest package.
+# FIRST AUTHOR <EMAIL@ADDRESS>, 2025.
+#
+#, fuzzy
+msgid ""
+msgstr ""
+"Project-Id-Version: pytest 0.1.dev16209\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2025-02-05 00:52+0900\n"
+"PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
+"Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
+"Language: ja\n"
+"Language-Team: ja <LL@li.org>\n"
+"Plural-Forms: nplurals=1; plural=0;\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=utf-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Generated-By: Babel 2.17.0\n"
+
+#: ../../announce/release-8.1.0.rst:2
+msgid "pytest-8.1.0"
+msgstr ""
+
+#: ../../announce/release-8.1.0.rst:4
+msgid "The pytest team is proud to announce the 8.1.0 release!"
+msgstr ""
+
+#: ../../announce/release-8.1.0.rst:6
+msgid "This release contains new features, improvements, and bug fixes, the full list of changes is available in the changelog:"
+msgstr ""
+
+#: ../../announce/release-8.1.0.rst:9
+msgid "https://docs.pytest.org/en/stable/changelog.html"
+msgstr ""
+
+#: ../../announce/release-8.1.0.rst:11
+msgid "For complete documentation, please visit:"
+msgstr ""
+
+#: ../../announce/release-8.1.0.rst:13
+msgid "https://docs.pytest.org/en/stable/"
+msgstr ""
+
+#: ../../announce/release-8.1.0.rst:15
+msgid "As usual, you can upgrade from PyPI via:"
+msgstr ""
+
+#: ../../announce/release-8.1.0.rst:17
+msgid "pip install -U pytest"
+msgstr ""
+
+#: ../../announce/release-8.1.0.rst:19
+msgid "Thanks to all of the contributors to this release:"
+msgstr ""
+
+#: ../../announce/release-8.1.0.rst:21
+msgid "Ben Brown"
+msgstr ""
+
+#: ../../announce/release-8.1.0.rst:22
+msgid "Ben Leith"
+msgstr ""
+
+#: ../../announce/release-8.1.0.rst:23
+msgid "Bruno Oliveira"
+msgstr ""
+
+#: ../../announce/release-8.1.0.rst:24
+msgid "Clément Robert"
+msgstr ""
+
+#: ../../announce/release-8.1.0.rst:25
+msgid "Dave Hall"
+msgstr ""
+
+#: ../../announce/release-8.1.0.rst:26
+msgid "Dương Quốc Khánh"
+msgstr ""
+
+#: ../../announce/release-8.1.0.rst:27
+msgid "Eero Vaher"
+msgstr ""
+
+#: ../../announce/release-8.1.0.rst:28
+msgid "Eric Larson"
+msgstr ""
+
+#: ../../announce/release-8.1.0.rst:29
+msgid "Fabian Sturm"
+msgstr ""
+
+#: ../../announce/release-8.1.0.rst:30
+msgid "Faisal Fawad"
+msgstr ""
+
+#: ../../announce/release-8.1.0.rst:31
+msgid "Florian Bruhin"
+msgstr ""
+
+#: ../../announce/release-8.1.0.rst:32
+msgid "Franck Charras"
+msgstr ""
+
+#: ../../announce/release-8.1.0.rst:33
+msgid "Joachim B Haga"
+msgstr ""
+
+#: ../../announce/release-8.1.0.rst:34
+msgid "John Litborn"
+msgstr ""
+
+#: ../../announce/release-8.1.0.rst:35
+msgid "Loïc Estève"
+msgstr ""
+
+#: ../../announce/release-8.1.0.rst:36
+msgid "Marc Bresson"
+msgstr ""
+
+#: ../../announce/release-8.1.0.rst:37
+msgid "Patrick Lannigan"
+msgstr ""
+
+#: ../../announce/release-8.1.0.rst:38
+msgid "Pierre Sassoulas"
+msgstr ""
+
+#: ../../announce/release-8.1.0.rst:39
+msgid "Ran Benita"
+msgstr ""
+
+#: ../../announce/release-8.1.0.rst:40
+msgid "Reagan Lee"
+msgstr ""
+
+#: ../../announce/release-8.1.0.rst:41
+msgid "Ronny Pfannschmidt"
+msgstr ""
+
+#: ../../announce/release-8.1.0.rst:42
+msgid "Russell Martin"
+msgstr ""
+
+#: ../../announce/release-8.1.0.rst:43
+msgid "clee2000"
+msgstr ""
+
+#: ../../announce/release-8.1.0.rst:44
+msgid "donghui"
+msgstr ""
+
+#: ../../announce/release-8.1.0.rst:45
+msgid "faph"
+msgstr ""
+
+#: ../../announce/release-8.1.0.rst:46
+msgid "jakkdl"
+msgstr ""
+
+#: ../../announce/release-8.1.0.rst:47
+msgid "mrbean-bremen"
+msgstr ""
+
+#: ../../announce/release-8.1.0.rst:48
+msgid "robotherapist"
+msgstr ""
+
+#: ../../announce/release-8.1.0.rst:49
+msgid "whysage"
+msgstr ""
+
+#: ../../announce/release-8.1.0.rst:50
+msgid "woutdenolf"
+msgstr ""
+
+#: ../../announce/release-8.1.0.rst:53
+msgid "Happy testing, The pytest Development Team"
+msgstr ""
+

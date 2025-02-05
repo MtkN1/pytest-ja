@@ -1,0 +1,201 @@
+# SOME DESCRIPTIVE TITLE.
+# Copyright (C) 2015, holger krekel and pytest-dev team
+# This file is distributed under the same license as the pytest package.
+# FIRST AUTHOR <EMAIL@ADDRESS>, 2025.
+#
+#, fuzzy
+msgid ""
+msgstr ""
+"Project-Id-Version: pytest 0.1.dev16209\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2025-02-05 00:52+0900\n"
+"PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
+"Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
+"Language: ja\n"
+"Language-Team: ja <LL@li.org>\n"
+"Plural-Forms: nplurals=1; plural=0;\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=utf-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Generated-By: Babel 2.17.0\n"
+
+#: ../../how-to/unittest.rst:6
+msgid "How to use ``unittest``-based tests with pytest"
+msgstr ""
+
+#: ../../how-to/unittest.rst:8
+msgid "``pytest`` supports running Python ``unittest``-based tests out of the box. It's meant for leveraging existing ``unittest``-based test suites to use pytest as a test runner and also allow to incrementally adapt the test suite to take full advantage of pytest's features."
+msgstr ""
+
+#: ../../how-to/unittest.rst:13
+msgid "To run an existing ``unittest``-style test suite using ``pytest``, type:"
+msgstr ""
+
+#: ../../how-to/unittest.rst:20
+msgid "pytest will automatically collect ``unittest.TestCase`` subclasses and their ``test`` methods in ``test_*.py`` or ``*_test.py`` files."
+msgstr ""
+
+#: ../../how-to/unittest.rst:23
+msgid "Almost all ``unittest`` features are supported:"
+msgstr ""
+
+#: ../../how-to/unittest.rst:25
+msgid "``@unittest.skip`` style decorators;"
+msgstr ""
+
+#: ../../how-to/unittest.rst:26
+msgid "``setUp/tearDown``;"
+msgstr ""
+
+#: ../../how-to/unittest.rst:27
+msgid "``setUpClass/tearDownClass``;"
+msgstr ""
+
+#: ../../how-to/unittest.rst:28
+msgid "``setUpModule/tearDownModule``;"
+msgstr ""
+
+#: ../../how-to/unittest.rst:33
+msgid "Additionally, :ref:`subtests <python:subtests>` are supported by the `pytest-subtests`_ plugin."
+msgstr ""
+
+#: ../../how-to/unittest.rst:36
+msgid "Up to this point pytest does not have support for the following features:"
+msgstr ""
+
+#: ../../how-to/unittest.rst:38
+msgid "`load_tests protocol`_;"
+msgstr ""
+
+#: ../../how-to/unittest.rst:41
+msgid "Benefits out of the box"
+msgstr ""
+
+#: ../../how-to/unittest.rst:43
+msgid "By running your test suite with pytest you can make use of several features, in most cases without having to modify existing code:"
+msgstr ""
+
+#: ../../how-to/unittest.rst:46
+msgid "Obtain :ref:`more informative tracebacks <tbreportdemo>`;"
+msgstr ""
+
+#: ../../how-to/unittest.rst:47
+msgid ":ref:`stdout and stderr <captures>` capturing;"
+msgstr ""
+
+#: ../../how-to/unittest.rst:48
+msgid ":ref:`Test selection options <select-tests>` using ``-k`` and ``-m`` flags;"
+msgstr ""
+
+#: ../../how-to/unittest.rst:49
+msgid ":ref:`maxfail`;"
+msgstr ""
+
+#: ../../how-to/unittest.rst:50
+msgid ":ref:`--pdb <pdb-option>` command-line option for debugging on test failures (see :ref:`note <pdb-unittest-note>` below);"
+msgstr ""
+
+#: ../../how-to/unittest.rst:52
+msgid "Distribute tests to multiple CPUs using the :pypi:`pytest-xdist` plugin;"
+msgstr ""
+
+#: ../../how-to/unittest.rst:53
+msgid "Use :ref:`plain assert-statements <assert>` instead of ``self.assert*`` functions (:pypi:`unittest2pytest` is immensely helpful in this);"
+msgstr ""
+
+#: ../../how-to/unittest.rst:58
+msgid "pytest features in ``unittest.TestCase`` subclasses"
+msgstr ""
+
+#: ../../how-to/unittest.rst:60
+msgid "The following pytest features work in ``unittest.TestCase`` subclasses:"
+msgstr ""
+
+#: ../../how-to/unittest.rst:62
+msgid ":ref:`Marks <mark>`: :ref:`skip <skip>`, :ref:`skipif <skipif>`, :ref:`xfail <xfail>`;"
+msgstr ""
+
+#: ../../how-to/unittest.rst:63
+msgid ":ref:`Auto-use fixtures <mixing-fixtures>`;"
+msgstr ""
+
+#: ../../how-to/unittest.rst:65
+msgid "The following pytest features **do not** work, and probably never will due to different design philosophies:"
+msgstr ""
+
+#: ../../how-to/unittest.rst:68
+msgid ":ref:`Fixtures <fixture>` (except for ``autouse`` fixtures, see :ref:`below <mixing-fixtures>`);"
+msgstr ""
+
+#: ../../how-to/unittest.rst:69
+msgid ":ref:`Parametrization <parametrize>`;"
+msgstr ""
+
+#: ../../how-to/unittest.rst:70
+msgid ":ref:`Custom hooks <writing-plugins>`;"
+msgstr ""
+
+#: ../../how-to/unittest.rst:73
+msgid "Third party plugins may or may not work well, depending on the plugin and the test suite."
+msgstr ""
+
+#: ../../how-to/unittest.rst:78
+msgid "Mixing pytest fixtures into ``unittest.TestCase`` subclasses using marks"
+msgstr ""
+
+#: ../../how-to/unittest.rst:80
+msgid "Running your unittest with ``pytest`` allows you to use its :ref:`fixture mechanism <fixture>` with ``unittest.TestCase`` style tests.  Assuming you have at least skimmed the pytest fixture features, let's jump-start into an example that integrates a pytest ``db_class`` fixture, setting up a class-cached database object, and then reference it from a unittest-style test:"
+msgstr ""
+
+#: ../../how-to/unittest.rst:105
+msgid "This defines a fixture function ``db_class`` which - if used - is called once for each test class and which sets the class-level ``db`` attribute to a ``DummyDB`` instance.  The fixture function achieves this by receiving a special ``request`` object which gives access to :ref:`the requesting test context <request-context>` such as the ``cls`` attribute, denoting the class from which the fixture is used.  This architecture de-couples fixture writing from actual test code and allows reuse of the fixture by a minimal reference, the fixture name.  So let's write an actual ``unittest.TestCase`` class using our fixture definition:"
+msgstr ""
+
+#: ../../how-to/unittest.rst:134
+msgid "The ``@pytest.mark.usefixtures(\"db_class\")`` class-decorator makes sure that the pytest fixture function ``db_class`` is called once per class. Due to the deliberately failing assert statements, we can take a look at the ``self.db`` values in the traceback:"
+msgstr ""
+
+#: ../../how-to/unittest.rst:176
+msgid "This default pytest traceback shows that the two test methods share the same ``self.db`` instance which was our intention when writing the class-scoped fixture function above."
+msgstr ""
+
+#: ../../how-to/unittest.rst:182
+msgid "Using autouse fixtures and accessing other fixtures"
+msgstr ""
+
+#: ../../how-to/unittest.rst:184
+msgid "Although it's usually better to explicitly declare use of fixtures you need for a given test, you may sometimes want to have fixtures that are automatically used in a given context.  After all, the traditional style of unittest-setup mandates the use of this implicit fixture writing and chances are, you are used to it or like it."
+msgstr ""
+
+#: ../../how-to/unittest.rst:190
+msgid "You can flag fixture functions with ``@pytest.fixture(autouse=True)`` and define the fixture function in the context where you want it used. Let's look at an ``initdir`` fixture which makes all test methods of a ``TestCase`` class execute in a temporary directory with a pre-initialized ``samplefile.ini``.  Our ``initdir`` fixture itself uses the pytest builtin :fixture:`tmp_path` fixture to delegate the creation of a per-test temporary directory:"
+msgstr ""
+
+#: ../../how-to/unittest.rst:217
+msgid "Due to the ``autouse`` flag the ``initdir`` fixture function will be used for all methods of the class where it is defined.  This is a shortcut for using a ``@pytest.mark.usefixtures(\"initdir\")`` marker on the class like in the previous example."
+msgstr ""
+
+#: ../../how-to/unittest.rst:222
+msgid "Running this test module ...:"
+msgstr ""
+
+#: ../../how-to/unittest.rst:230
+msgid "... gives us one passed test because the ``initdir`` fixture function was executed ahead of the ``test_method``."
+msgstr ""
+
+#: ../../how-to/unittest.rst:235
+msgid "``unittest.TestCase`` methods cannot directly receive fixture arguments as implementing that is likely to inflict on the ability to run general unittest.TestCase test suites."
+msgstr ""
+
+#: ../../how-to/unittest.rst:239
+msgid "The above ``usefixtures`` and ``autouse`` examples should help to mix in pytest fixtures into unittest suites."
+msgstr ""
+
+#: ../../how-to/unittest.rst:242
+msgid "You can also gradually move away from subclassing from ``unittest.TestCase`` to *plain asserts* and then start to benefit from the full pytest feature set step by step."
+msgstr ""
+
+#: ../../how-to/unittest.rst:249
+msgid "Due to architectural differences between the two frameworks, setup and teardown for ``unittest``-based tests is performed during the ``call`` phase of testing instead of in ``pytest``'s standard ``setup`` and ``teardown`` stages. This can be important to understand in some situations, particularly when reasoning about errors. For example, if a ``unittest``-based suite exhibits errors during setup, ``pytest`` will report no errors during its ``setup`` phase and will instead raise the error during ``call``."
+msgstr ""
+

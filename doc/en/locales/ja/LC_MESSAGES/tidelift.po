@@ -1,0 +1,98 @@
+# SOME DESCRIPTIVE TITLE.
+# Copyright (C) 2015, holger krekel and pytest-dev team
+# This file is distributed under the same license as the pytest package.
+# FIRST AUTHOR <EMAIL@ADDRESS>, 2025.
+#
+#, fuzzy
+msgid ""
+msgstr ""
+"Project-Id-Version: pytest 0.1.dev16209\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2025-02-05 00:52+0900\n"
+"PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
+"Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
+"Language: ja\n"
+"Language-Team: ja <LL@li.org>\n"
+"Plural-Forms: nplurals=1; plural=0;\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=utf-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Generated-By: Babel 2.17.0\n"
+
+#: ../../tidelift.rst:2
+msgid "pytest for enterprise"
+msgstr ""
+
+#: ../../tidelift.rst:4
+msgid "`Tidelift`_ is working with the maintainers of pytest and thousands of other open source projects to deliver commercial support and maintenance for the open source dependencies you use to build your applications. Save time, reduce risk, and improve code health, while paying the maintainers of the exact dependencies you use."
+msgstr ""
+
+#: ../../tidelift.rst:9
+msgid "`Get more details <https://tidelift.com/subscription/pkg/pypi-pytest?utm_source=pypi-pytest&utm_medium=referral&utm_campaign=enterprise>`_"
+msgstr ""
+
+#: ../../tidelift.rst:11
+msgid "The Tidelift Subscription is a managed open source subscription for application dependencies covering millions of open source projects across JavaScript, Python, Java, PHP, Ruby, .NET, and more."
+msgstr ""
+
+#: ../../tidelift.rst:13
+msgid "Your subscription includes:"
+msgstr ""
+
+#: ../../tidelift.rst:15
+msgid "**Security updates**"
+msgstr ""
+
+#: ../../tidelift.rst:17
+msgid "Tidelift's security response team coordinates patches for new breaking security vulnerabilities and alerts immediately through a private channel, so your software supply chain is always secure."
+msgstr ""
+
+#: ../../tidelift.rst:19
+msgid "**Licensing verification and indemnification**"
+msgstr ""
+
+#: ../../tidelift.rst:21
+#, python-format
+msgid "Tidelift verifies license information to enable easy policy enforcement and adds intellectual property indemnification to cover creators and users in case something goes wrong. You always have a 100% up-to-date bill of materials for your dependencies to share with your legal team, customers, or partners."
+msgstr ""
+
+#: ../../tidelift.rst:23
+msgid "**Maintenance and code improvement**"
+msgstr ""
+
+#: ../../tidelift.rst:25
+msgid "Tidelift ensures the software you rely on keeps working as long as you need it to work. Your managed dependencies are actively maintained and we recruit additional maintainers where required."
+msgstr ""
+
+#: ../../tidelift.rst:27
+msgid "**Package selection and version guidance**"
+msgstr ""
+
+#: ../../tidelift.rst:29
+msgid "Tidelift helps you choose the best open source packages from the start—and then guide you through updates to stay on the best releases as new issues arise."
+msgstr ""
+
+#: ../../tidelift.rst:31
+msgid "**Roadmap input**"
+msgstr ""
+
+#: ../../tidelift.rst:33
+msgid "Take a seat at the table with the creators behind the software you use. Tidelift's participating maintainers earn more income as their software is used by more subscribers, so they're interested in knowing what you need."
+msgstr ""
+
+#: ../../tidelift.rst:35
+msgid "**Tooling and cloud integration**"
+msgstr ""
+
+#: ../../tidelift.rst:37
+msgid "Tidelift works with GitHub, GitLab, BitBucket, and every cloud platform (and other deployment targets, too)."
+msgstr ""
+
+#: ../../tidelift.rst:39
+msgid "The end result? All of the capabilities you expect from commercial-grade software, for the full breadth of open source you use. That means less time grappling with esoteric open source trivia, and more time building your own applications—and your business."
+msgstr ""
+
+#: ../../tidelift.rst:43
+msgid "`Request a demo <https://tidelift.com/subscription/request-a-demo?utm_source=pypi-pytest&utm_medium=referral&utm_campaign=enterprise>`_"
+msgstr ""
+

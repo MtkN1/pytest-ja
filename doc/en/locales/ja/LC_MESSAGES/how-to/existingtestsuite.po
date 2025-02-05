@@ -1,0 +1,53 @@
+# SOME DESCRIPTIVE TITLE.
+# Copyright (C) 2015, holger krekel and pytest-dev team
+# This file is distributed under the same license as the pytest package.
+# FIRST AUTHOR <EMAIL@ADDRESS>, 2025.
+#
+#, fuzzy
+msgid ""
+msgstr ""
+"Project-Id-Version: pytest 0.1.dev16209\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2025-02-05 00:52+0900\n"
+"PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
+"Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
+"Language: ja\n"
+"Language-Team: ja <LL@li.org>\n"
+"Plural-Forms: nplurals=1; plural=0;\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=utf-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Generated-By: Babel 2.17.0\n"
+
+#: ../../how-to/existingtestsuite.rst:4
+msgid "How to use pytest with an existing test suite"
+msgstr ""
+
+#: ../../how-to/existingtestsuite.rst:6
+msgid "Pytest can be used with most existing test suites, but its behavior differs from other test runners such as Python's default unittest framework."
+msgstr ""
+
+#: ../../how-to/existingtestsuite.rst:10
+msgid "Before using this section you will want to :ref:`install pytest <getstarted>`."
+msgstr ""
+
+#: ../../how-to/existingtestsuite.rst:13
+msgid "Running an existing test suite with pytest"
+msgstr ""
+
+#: ../../how-to/existingtestsuite.rst:15
+msgid "Say you want to contribute to an existing repository somewhere. After pulling the code into your development space using some flavor of version control and (optionally) setting up a virtualenv you will want to run:"
+msgstr ""
+
+#: ../../how-to/existingtestsuite.rst:26
+msgid "in your project root.  This will set up a symlink to your code in site-packages, allowing you to edit your code while your tests run against it as if it were installed."
+msgstr ""
+
+#: ../../how-to/existingtestsuite.rst:30
+msgid "Setting up your project in development mode lets you avoid having to reinstall every time you want to run your tests, and is less brittle than mucking about with sys.path to point your tests at local code."
+msgstr ""
+
+#: ../../how-to/existingtestsuite.rst:34
+msgid "Also consider using :ref:`tox <use tox>`."
+msgstr ""
+

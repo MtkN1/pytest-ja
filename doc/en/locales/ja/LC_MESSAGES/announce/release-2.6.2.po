@@ -1,0 +1,90 @@
+# SOME DESCRIPTIVE TITLE.
+# Copyright (C) 2015, holger krekel and pytest-dev team
+# This file is distributed under the same license as the pytest package.
+# FIRST AUTHOR <EMAIL@ADDRESS>, 2025.
+#
+#, fuzzy
+msgid ""
+msgstr ""
+"Project-Id-Version: pytest 0.1.dev16209\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2025-02-05 00:52+0900\n"
+"PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
+"Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
+"Language: ja\n"
+"Language-Team: ja <LL@li.org>\n"
+"Plural-Forms: nplurals=1; plural=0;\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=utf-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Generated-By: Babel 2.17.0\n"
+
+#: ../../announce/release-2.6.2.rst:2
+msgid "pytest-2.6.2: few fixes and cx_freeze support"
+msgstr ""
+
+#: ../../announce/release-2.6.2.rst:4
+msgid "pytest is a mature Python testing tool with more than 1100 tests against itself, passing on many different interpreters and platforms. This release is drop-in compatible to 2.5.2 and 2.6.X.  It also brings support for including pytest with cx_freeze or similar freezing tools into your single-file app distribution.  For details see the CHANGELOG below."
+msgstr ""
+
+#: ../../announce/release-2.6.2.rst:11
+msgid "See docs at:"
+msgstr ""
+
+#: ../../announce/release-2.6.2.rst:13
+msgid "http://pytest.org"
+msgstr ""
+
+#: ../../announce/release-2.6.2.rst:15
+msgid "As usual, you can upgrade from pypi via::"
+msgstr ""
+
+#: ../../announce/release-2.6.2.rst:19
+msgid "Thanks to all who contributed, among them:"
+msgstr ""
+
+#: ../../announce/release-2.6.2.rst:21
+msgid "Floris Bruynooghe Benjamin Peterson Bruno Oliveira"
+msgstr ""
+
+#: ../../announce/release-2.6.2.rst:25
+msgid "have fun, holger krekel"
+msgstr ""
+
+#: ../../announce/release-2.6.2.rst:29
+msgid "2.6.2"
+msgstr ""
+
+#: ../../announce/release-2.6.2.rst:31
+msgid "Added function pytest.freeze_includes(), which makes it easy to embed pytest into executables using tools like cx_freeze. See docs for examples and rationale. Thanks Bruno Oliveira."
+msgstr ""
+
+#: ../../announce/release-2.6.2.rst:35
+msgid "Improve assertion rewriting cache invalidation precision."
+msgstr ""
+
+#: ../../announce/release-2.6.2.rst:37
+msgid "fixed issue561: adapt autouse fixture example for python3."
+msgstr ""
+
+#: ../../announce/release-2.6.2.rst:39
+#, python-brace-format
+msgid "fixed issue453: assertion rewriting issue with __repr__ containing \"\\n{\", \"\\n}\" and \"\\n~\"."
+msgstr ""
+
+#: ../../announce/release-2.6.2.rst:42
+msgid "fix issue560: correctly display code if an \"else:\" or \"finally:\" is followed by statements on the same line."
+msgstr ""
+
+#: ../../announce/release-2.6.2.rst:45
+msgid "Fix example in monkeypatch documentation, thanks t-8ch."
+msgstr ""
+
+#: ../../announce/release-2.6.2.rst:47
+msgid "fix issue572: correct tmpdir doc example for python3."
+msgstr ""
+
+#: ../../announce/release-2.6.2.rst:49
+msgid "Do not mark as universal wheel because Python 2.6 is different from other builds due to the extra argparse dependency.  Fixes issue566. Thanks sontek."
+msgstr ""
+

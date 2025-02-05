@@ -1,0 +1,217 @@
+# SOME DESCRIPTIVE TITLE.
+# Copyright (C) 2015, holger krekel and pytest-dev team
+# This file is distributed under the same license as the pytest package.
+# FIRST AUTHOR <EMAIL@ADDRESS>, 2025.
+#
+#, fuzzy
+msgid ""
+msgstr ""
+"Project-Id-Version: pytest 0.1.dev16209\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2025-02-05 00:52+0900\n"
+"PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
+"Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
+"Language: ja\n"
+"Language-Team: ja <LL@li.org>\n"
+"Plural-Forms: nplurals=1; plural=0;\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=utf-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Generated-By: Babel 2.17.0\n"
+
+#: ../../how-to/doctest.rst:4
+msgid "How to run doctests"
+msgstr ""
+
+#: ../../how-to/doctest.rst:6
+msgid "By default, all files matching the ``test*.txt`` pattern will be run through the python standard :mod:`doctest` module.  You can change the pattern by issuing:"
+msgstr ""
+
+#: ../../how-to/doctest.rst:14
+msgid "on the command line. ``--doctest-glob`` can be given multiple times in the command-line."
+msgstr ""
+
+#: ../../how-to/doctest.rst:16
+msgid "If you then have a text file like this:"
+msgstr ""
+
+#: ../../how-to/doctest.rst:27
+msgid "then you can just invoke ``pytest`` directly:"
+msgstr ""
+
+#: ../../how-to/doctest.rst:41
+msgid "By default, pytest will collect ``test*.txt`` files looking for doctest directives, but you can pass additional globs using the ``--doctest-glob`` option (multi-allowed)."
+msgstr ""
+
+#: ../../how-to/doctest.rst:44
+msgid "In addition to text files, you can also execute doctests directly from docstrings of your classes and functions, including from test modules:"
+msgstr ""
+
+#: ../../how-to/doctest.rst:70
+msgid "You can make these changes permanent in your project by putting them into a pytest.ini file like this:"
+msgstr ""
+
+#: ../../how-to/doctest.rst:81
+msgid "Encoding"
+msgstr ""
+
+#: ../../how-to/doctest.rst:83
+msgid "The default encoding is **UTF-8**, but you can specify the encoding that will be used for those doctest files using the ``doctest_encoding`` ini option:"
+msgstr ""
+
+#: ../../how-to/doctest.rst:96
+msgid "Using 'doctest' options"
+msgstr ""
+
+#: ../../how-to/doctest.rst:98
+msgid "Python's standard :mod:`doctest` module provides some :ref:`options <python:option-flags-and-directives>` to configure the strictness of doctest tests. In pytest, you can enable those flags using the configuration file."
+msgstr ""
+
+#: ../../how-to/doctest.rst:102
+msgid "For example, to make pytest ignore trailing whitespaces and ignore lengthy exception stack traces you can just write:"
+msgstr ""
+
+#: ../../how-to/doctest.rst:110
+msgid "Alternatively, options can be enabled by an inline comment in the doc test itself:"
+msgstr ""
+
+#: ../../how-to/doctest.rst:119
+msgid "pytest also introduces new options:"
+msgstr ""
+
+#: ../../how-to/doctest.rst:121
+msgid "``ALLOW_UNICODE``: when enabled, the ``u`` prefix is stripped from unicode strings in expected doctest output. This allows doctests to run in Python 2 and Python 3 unchanged."
+msgstr ""
+
+#: ../../how-to/doctest.rst:125
+msgid "``ALLOW_BYTES``: similarly, the ``b`` prefix is stripped from byte strings in expected doctest output."
+msgstr ""
+
+#: ../../how-to/doctest.rst:128
+msgid "``NUMBER``: when enabled, floating-point numbers only need to match as far as the precision you have written in the expected doctest output. The numbers are compared using :func:`pytest.approx` with relative tolerance equal to the precision. For example, the following output would only need to match to 2 decimal places when comparing ``3.14`` to ``pytest.approx(math.pi, rel=10**-2)``::"
+msgstr ""
+
+#: ../../how-to/doctest.rst:138
+msgid "If you wrote ``3.1416`` then the actual output would need to match to approximately 4 decimal places; and so on."
+msgstr ""
+
+#: ../../how-to/doctest.rst:141
+msgid "This avoids false positives caused by limited floating-point precision, like this::"
+msgstr ""
+
+#: ../../how-to/doctest.rst:149
+msgid "``NUMBER`` also supports lists of floating-point numbers -- in fact, it matches floating-point numbers appearing anywhere in the output, even inside a string! This means that it may not be appropriate to enable globally in ``doctest_optionflags`` in your configuration file."
+msgstr ""
+
+#: ../../how-to/doctest.rst:158
+msgid "Continue on failure"
+msgstr ""
+
+#: ../../how-to/doctest.rst:160
+msgid "By default, pytest would report only the first failure for a given doctest. If you want to continue the test even when you have failures, do:"
+msgstr ""
+
+#: ../../how-to/doctest.rst:169
+msgid "Output format"
+msgstr ""
+
+#: ../../how-to/doctest.rst:171
+msgid "You can change the diff output format on failure for your doctests by using one of standard doctest modules format in options (see :data:`python:doctest.REPORT_UDIFF`, :data:`python:doctest.REPORT_CDIFF`, :data:`python:doctest.REPORT_NDIFF`, :data:`python:doctest.REPORT_ONLY_FIRST_FAILURE`):"
+msgstr ""
+
+#: ../../how-to/doctest.rst:186
+msgid "pytest-specific features"
+msgstr ""
+
+#: ../../how-to/doctest.rst:188
+msgid "Some features are provided to make writing doctests easier or with better integration with your existing test suite. Keep in mind however that by using those features you will make your doctests incompatible with the standard ``doctests`` module."
+msgstr ""
+
+#: ../../how-to/doctest.rst:193
+msgid "Using fixtures"
+msgstr ""
+
+#: ../../how-to/doctest.rst:195
+msgid "It is possible to use fixtures using the ``getfixture`` helper:"
+msgstr ""
+
+#: ../../how-to/doctest.rst:204
+msgid "Note that the fixture needs to be defined in a place visible by pytest, for example, a `conftest.py` file or plugin; normal python files containing docstrings are not normally scanned for fixtures unless explicitly configured by :confval:`python_files`."
+msgstr ""
+
+#: ../../how-to/doctest.rst:208
+msgid "Also, the :ref:`usefixtures <usefixtures>` mark and fixtures marked as :ref:`autouse <autouse>` are supported when executing text doctest files."
+msgstr ""
+
+#: ../../how-to/doctest.rst:215
+msgid "'doctest_namespace' fixture"
+msgstr ""
+
+#: ../../how-to/doctest.rst:217
+msgid "The ``doctest_namespace`` fixture can be used to inject items into the namespace in which your doctests run. It is intended to be used within your own fixtures to provide the tests that use them with context."
+msgstr ""
+
+#: ../../how-to/doctest.rst:221
+msgid "``doctest_namespace`` is a standard ``dict`` object into which you place the objects you want to appear in the doctest namespace:"
+msgstr ""
+
+#: ../../how-to/doctest.rst:235
+msgid "which can then be used in your doctests directly:"
+msgstr ""
+
+#: ../../how-to/doctest.rst:247
+msgid "Note that like the normal ``conftest.py``, the fixtures are discovered in the directory tree conftest is in. Meaning that if you put your doctest with your source code, the relevant conftest.py needs to be in the same directory tree. Fixtures will not be discovered in a sibling directory tree!"
+msgstr ""
+
+#: ../../how-to/doctest.rst:252
+msgid "Skipping tests"
+msgstr ""
+
+#: ../../how-to/doctest.rst:254
+msgid "For the same reasons one might want to skip normal tests, it is also possible to skip tests inside doctests."
+msgstr ""
+
+#: ../../how-to/doctest.rst:257
+msgid "To skip a single check inside a doctest you can use the standard :data:`doctest.SKIP` directive:"
+msgstr ""
+
+#: ../../how-to/doctest.rst:271
+msgid "This will skip the first check, but not the second."
+msgstr ""
+
+#: ../../how-to/doctest.rst:273
+msgid "pytest also allows using the standard pytest functions :func:`pytest.skip` and :func:`pytest.xfail` inside doctests, which might be useful because you can then skip/xfail tests based on external conditions:"
+msgstr ""
+
+#: ../../how-to/doctest.rst:287
+msgid "However using those functions is discouraged because it reduces the readability of the docstring."
+msgstr ""
+
+#: ../../how-to/doctest.rst:292
+msgid ":func:`pytest.skip` and :func:`pytest.xfail` behave differently depending if the doctests are in a Python file (in docstrings) or a text file containing doctests intermingled with text:"
+msgstr ""
+
+#: ../../how-to/doctest.rst:296
+msgid "Python modules (docstrings): the functions only act in that specific docstring, letting the other docstrings in the same module execute as normal."
+msgstr ""
+
+#: ../../how-to/doctest.rst:299
+msgid "Text files: the functions will skip/xfail the checks for the rest of the entire file."
+msgstr ""
+
+#: ../../how-to/doctest.rst:304
+msgid "Alternatives"
+msgstr ""
+
+#: ../../how-to/doctest.rst:306
+msgid "While the built-in pytest support provides a good set of functionalities for using doctests, if you use them extensively you might be interested in those external packages which add many more features, and include pytest integration:"
+msgstr ""
+
+#: ../../how-to/doctest.rst:310
+msgid "`pytest-doctestplus <https://github.com/astropy/pytest-doctestplus>`__: provides advanced doctest support and enables the testing of reStructuredText (\".rst\") files."
+msgstr ""
+
+#: ../../how-to/doctest.rst:313
+msgid "`Sybil <https://sybil.readthedocs.io>`__: provides a way to test examples in your documentation by parsing them from the documentation source and evaluating the parsed examples as part of your normal test run."
+msgstr ""
+

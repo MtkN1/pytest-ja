@@ -1,0 +1,57 @@
+# SOME DESCRIPTIVE TITLE.
+# Copyright (C) 2015, holger krekel and pytest-dev team
+# This file is distributed under the same license as the pytest package.
+# FIRST AUTHOR <EMAIL@ADDRESS>, 2025.
+#
+#, fuzzy
+msgid ""
+msgstr ""
+"Project-Id-Version: pytest 0.1.dev16209\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2025-02-05 00:52+0900\n"
+"PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
+"Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
+"Language: ja\n"
+"Language-Team: ja <LL@li.org>\n"
+"Plural-Forms: nplurals=1; plural=0;\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=utf-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Generated-By: Babel 2.17.0\n"
+
+#: ../../example/nonpython.rst:5
+msgid "Working with non-python tests"
+msgstr ""
+
+#: ../../example/nonpython.rst:10
+msgid "A basic example for specifying tests in Yaml files"
+msgstr ""
+
+#: ../../example/nonpython.rst:14
+msgid "Here is an example ``conftest.py`` (extracted from Ali Afshar's special purpose `pytest-yamlwsgi`_ plugin).   This ``conftest.py`` will  collect ``test*.yaml`` files and will execute the yaml-formatted content as custom tests:"
+msgstr ""
+
+#: ../../example/nonpython.rst:19
+msgid "You can create a simple example file:"
+msgstr ""
+
+#: ../../example/nonpython.rst:24
+msgid "and if you installed :pypi:`PyYAML` or a compatible YAML-parser you can now execute the test specification:"
+msgstr ""
+
+#: ../../example/nonpython.rst:48
+msgid "You get one dot for the passing ``sub1: sub1`` check and one failure. Obviously in the above ``conftest.py`` you'll want to implement a more interesting interpretation of the yaml-values.  You can easily write your own domain specific testing language this way."
+msgstr ""
+
+#: ../../example/nonpython.rst:55
+msgid "``repr_failure(excinfo)`` is called for representing test failures. If you create custom collection nodes you can return an error representation string of your choice.  It will be reported as a (red) string."
+msgstr ""
+
+#: ../../example/nonpython.rst:60
+msgid "``reportinfo()`` is used for representing the test location and is also consulted when reporting in ``verbose`` mode:"
+msgstr ""
+
+#: ../../example/nonpython.rst:86
+msgid "While developing your custom test collection and execution it's also interesting to just look at the collection tree:"
+msgstr ""
+

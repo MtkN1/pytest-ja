@@ -1,0 +1,73 @@
+# SOME DESCRIPTIVE TITLE.
+# Copyright (C) 2015, holger krekel and pytest-dev team
+# This file is distributed under the same license as the pytest package.
+# FIRST AUTHOR <EMAIL@ADDRESS>, 2025.
+#
+#, fuzzy
+msgid ""
+msgstr ""
+"Project-Id-Version: pytest 0.1.dev16209\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2025-02-05 00:52+0900\n"
+"PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
+"Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
+"Language: ja\n"
+"Language-Team: ja <LL@li.org>\n"
+"Plural-Forms: nplurals=1; plural=0;\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=utf-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Generated-By: Babel 2.17.0\n"
+
+#: ../../explanation/anatomy.rst:4
+msgid "Anatomy of a test"
+msgstr ""
+
+#: ../../explanation/anatomy.rst:6
+msgid "In the simplest terms, a test is meant to look at the result of a particular behavior, and make sure that result aligns with what you would expect. Behavior is not something that can be empirically measured, which is why writing tests can be challenging."
+msgstr ""
+
+#: ../../explanation/anatomy.rst:11
+msgid "\"Behavior\" is the way in which some system **acts in response** to a particular situation and/or stimuli. But exactly *how* or *why* something is done is not quite as important as *what* was done."
+msgstr ""
+
+#: ../../explanation/anatomy.rst:15
+msgid "You can think of a test as being broken down into four steps:"
+msgstr ""
+
+#: ../../explanation/anatomy.rst:17
+msgid "**Arrange**"
+msgstr ""
+
+#: ../../explanation/anatomy.rst:18
+msgid "**Act**"
+msgstr ""
+
+#: ../../explanation/anatomy.rst:19
+msgid "**Assert**"
+msgstr ""
+
+#: ../../explanation/anatomy.rst:20
+msgid "**Cleanup**"
+msgstr ""
+
+#: ../../explanation/anatomy.rst:22
+msgid "**Arrange** is where we prepare everything for our test. This means pretty much everything except for the \"**act**\". It's lining up the dominoes so that the **act** can do its thing in one, state-changing step. This can mean preparing objects, starting/killing services, entering records into a database, or even things like defining a URL to query, generating some credentials for a user that doesn't exist yet, or just waiting for some process to finish."
+msgstr ""
+
+#: ../../explanation/anatomy.rst:29
+msgid "**Act** is the singular, state-changing action that kicks off the **behavior** we want to test. This behavior is what carries out the changing of the state of the system under test (SUT), and it's the resulting changed state that we can look at to make a judgement about the behavior. This typically takes the form of a function/method call."
+msgstr ""
+
+#: ../../explanation/anatomy.rst:35
+msgid "**Assert** is where we look at that resulting state and check if it looks how we'd expect after the dust has settled. It's where we gather evidence to say the behavior does or does not align with what we expect. The ``assert`` in our test is where we take that measurement/observation and apply our judgement to it. If something should be green, we'd say ``assert thing == \"green\"``."
+msgstr ""
+
+#: ../../explanation/anatomy.rst:41
+msgid "**Cleanup** is where the test picks up after itself, so other tests aren't being accidentally influenced by it."
+msgstr ""
+
+#: ../../explanation/anatomy.rst:44
+msgid "At its core, the test is ultimately the **act** and **assert** steps, with the **arrange** step only providing the context. **Behavior** exists between **act** and **assert**."
+msgstr ""
+

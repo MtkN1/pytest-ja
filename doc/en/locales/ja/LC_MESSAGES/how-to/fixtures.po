@@ -1,0 +1,662 @@
+# SOME DESCRIPTIVE TITLE.
+# Copyright (C) 2015, holger krekel and pytest-dev team
+# This file is distributed under the same license as the pytest package.
+# FIRST AUTHOR <EMAIL@ADDRESS>, 2025.
+#
+#, fuzzy
+msgid ""
+msgstr ""
+"Project-Id-Version: pytest 0.1.dev16209\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2025-02-05 00:52+0900\n"
+"PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
+"Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
+"Language: ja\n"
+"Language-Team: ja <LL@li.org>\n"
+"Plural-Forms: nplurals=1; plural=0;\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=utf-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Generated-By: Babel 2.17.0\n"
+
+#: ../../how-to/fixtures.rst:4
+msgid "How to use fixtures"
+msgstr ""
+
+#: ../../how-to/fixtures.rst:6
+msgid ":ref:`about-fixtures`"
+msgstr ""
+
+#: ../../how-to/fixtures.rst:7
+msgid ":ref:`Fixtures reference <reference-fixtures>`"
+msgstr ""
+
+#: ../../how-to/fixtures.rst:11
+msgid "\"Requesting\" fixtures"
+msgstr ""
+
+#: ../../how-to/fixtures.rst:13
+msgid "At a basic level, test functions request fixtures they require by declaring them as arguments."
+msgstr ""
+
+#: ../../how-to/fixtures.rst:16
+msgid "When pytest goes to run a test, it looks at the parameters in that test function's signature, and then searches for fixtures that have the same names as those parameters. Once pytest finds them, it runs those fixtures, captures what they returned (if anything), and passes those objects into the test function as arguments."
+msgstr ""
+
+#: ../../how-to/fixtures.rst:24
+msgid "Quick example"
+msgstr ""
+
+#: ../../how-to/fixtures.rst:63
+msgid "In this example, ``test_fruit_salad`` \"**requests**\" ``fruit_bowl`` (i.e. ``def test_fruit_salad(fruit_bowl):``), and when pytest sees this, it will execute the ``fruit_bowl`` fixture function and pass the object it returns into ``test_fruit_salad`` as the ``fruit_bowl`` argument."
+msgstr ""
+
+#: ../../how-to/fixtures.rst:68
+msgid "Here's roughly what's happening if we were to do it by hand:"
+msgstr ""
+
+#: ../../how-to/fixtures.rst:91
+msgid "Fixtures can **request** other fixtures"
+msgstr ""
+
+#: ../../how-to/fixtures.rst:93
+msgid "One of pytest's greatest strengths is its extremely flexible fixture system. It allows us to boil down complex requirements for tests into more simple and organized functions, where we only need to have each one describe the things they are dependent on. We'll get more into this further down, but for now, here's a quick example to demonstrate how fixtures can use other fixtures:"
+msgstr ""
+
+#: ../../how-to/fixtures.rst:125
+msgid "Notice that this is the same example from above, but very little changed. The fixtures in pytest **request** fixtures just like tests. All the same **requesting** rules apply to fixtures that do for tests. Here's how this example would work if we did it by hand:"
+msgstr ""
+
+#: ../../how-to/fixtures.rst:153
+msgid "Fixtures are reusable"
+msgstr ""
+
+#: ../../how-to/fixtures.rst:155
+msgid "One of the things that makes pytest's fixture system so powerful, is that it gives us the ability to define a generic setup step that can be reused over and over, just like a normal function would be used. Two different tests can request the same fixture and have pytest give each test their own result from that fixture."
+msgstr ""
+
+#: ../../how-to/fixtures.rst:161
+msgid "This is extremely useful for making sure tests aren't affected by each other. We can use this system to make sure each test gets its own fresh batch of data and is starting from a clean state so it can provide consistent, repeatable results."
+msgstr ""
+
+#: ../../how-to/fixtures.rst:165
+msgid "Here's an example of how this can come in handy:"
+msgstr ""
+
+#: ../../how-to/fixtures.rst:201
+msgid "Each test here is being given its own copy of that ``list`` object, which means the ``order`` fixture is getting executed twice (the same is true for the ``first_entry`` fixture). If we were to do this by hand as well, it would look something like this:"
+msgstr ""
+
+#: ../../how-to/fixtures.rst:241
+msgid "A test/fixture can **request** more than one fixture at a time"
+msgstr ""
+
+#: ../../how-to/fixtures.rst:243
+msgid "Tests and fixtures aren't limited to **requesting** a single fixture at a time. They can request as many as they like. Here's another quick example to demonstrate:"
+msgstr ""
+
+#: ../../how-to/fixtures.rst:285
+msgid "Fixtures can be **requested** more than once per test (return values are cached)"
+msgstr ""
+
+#: ../../how-to/fixtures.rst:287
+msgid "Fixtures can also be **requested** more than once during the same test, and pytest won't execute them again for that test. This means we can **request** fixtures in multiple fixtures that are dependent on them (and even again in the test itself) without those fixtures being executed more than once."
+msgstr ""
+
+#: ../../how-to/fixtures.rst:320
+msgid "If a **requested** fixture was executed once for every time it was **requested** during a test, then this test would fail because both ``append_first`` and ``test_string_only`` would see ``order`` as an empty list (i.e. ``[]``), but since the return value of ``order`` was cached (along with any side effects executing it may have had) after the first time it was called, both the test and ``append_first`` were referencing the same object, and the test saw the effect ``append_first`` had on that object."
+msgstr ""
+
+#: ../../how-to/fixtures.rst:332
+msgid "Autouse fixtures (fixtures you don't have to request)"
+msgstr ""
+
+#: ../../how-to/fixtures.rst:334
+msgid "Sometimes you may want to have a fixture (or even several) that you know all your tests will depend on. \"Autouse\" fixtures are a convenient way to make all tests automatically **request** them. This can cut out a lot of redundant **requests**, and can even provide more advanced fixture usage (more on that further down)."
+msgstr ""
+
+#: ../../how-to/fixtures.rst:340
+msgid "We can make a fixture an autouse fixture by passing in ``autouse=True`` to the fixture's decorator. Here's a simple example for how they can be used:"
+msgstr ""
+
+#: ../../how-to/fixtures.rst:372
+msgid "In this example, the ``append_first`` fixture is an autouse fixture. Because it happens automatically, both tests are affected by it, even though neither test **requested** it. That doesn't mean they *can't* be **requested** though; just that it isn't *necessary*."
+msgstr ""
+
+#: ../../how-to/fixtures.rst:380
+msgid "Scope: sharing fixtures across classes, modules, packages or session"
+msgstr ""
+
+#: ../../how-to/fixtures.rst:384
+msgid "Fixtures requiring network access depend on connectivity and are usually time-expensive to create.  Extending the previous example, we can add a ``scope=\"module\"`` parameter to the :py:func:`@pytest.fixture <pytest.fixture>` invocation to cause a ``smtp_connection`` fixture function, responsible to create a connection to a preexisting SMTP server, to only be invoked once per test *module* (the default is to invoke once per test *function*). Multiple test functions in a test module will thus each receive the same ``smtp_connection`` fixture instance, thus saving time. Possible values for ``scope`` are: ``function``, ``class``, ``module``, ``package`` or ``session``."
+msgstr ""
+
+#: ../../how-to/fixtures.rst:394
+msgid "The next example puts the fixture function into a separate ``conftest.py`` file so that tests from multiple test modules in the directory can access the fixture function:"
+msgstr ""
+
+#: ../../how-to/fixtures.rst:428
+msgid "Here, the ``test_ehlo`` needs the ``smtp_connection`` fixture value.  pytest will discover and call the :py:func:`@pytest.fixture <pytest.fixture>` marked ``smtp_connection`` fixture function.  Running the test looks like this:"
+msgstr ""
+
+#: ../../how-to/fixtures.rst:471
+msgid "You see the two ``assert 0`` failing and more importantly you can also see that the **exactly same** ``smtp_connection`` object was passed into the two test functions because pytest shows the incoming argument values in the traceback.  As a result, the two test functions using ``smtp_connection`` run as quick as a single one because they reuse the same instance."
+msgstr ""
+
+#: ../../how-to/fixtures.rst:477
+msgid "If you decide that you rather want to have a session-scoped ``smtp_connection`` instance, you can simply declare it:"
+msgstr ""
+
+#: ../../how-to/fixtures.rst:490
+msgid "Fixture scopes"
+msgstr ""
+
+#: ../../how-to/fixtures.rst:492
+msgid "Fixtures are created when first requested by a test, and are destroyed based on their ``scope``:"
+msgstr ""
+
+#: ../../how-to/fixtures.rst:494
+msgid "``function``: the default scope, the fixture is destroyed at the end of the test."
+msgstr ""
+
+#: ../../how-to/fixtures.rst:495
+msgid "``class``: the fixture is destroyed during teardown of the last test in the class."
+msgstr ""
+
+#: ../../how-to/fixtures.rst:496
+msgid "``module``: the fixture is destroyed during teardown of the last test in the module."
+msgstr ""
+
+#: ../../how-to/fixtures.rst:497
+msgid "``package``: the fixture is destroyed during teardown of the last test in the package where the fixture is defined, including sub-packages and sub-directories within it."
+msgstr ""
+
+#: ../../how-to/fixtures.rst:498
+msgid "``session``: the fixture is destroyed at the end of the test session."
+msgstr ""
+
+#: ../../how-to/fixtures.rst:502
+msgid "Pytest only caches one instance of a fixture at a time, which means that when using a parametrized fixture, pytest may invoke a fixture more than once in the given scope."
+msgstr ""
+
+#: ../../how-to/fixtures.rst:509
+msgid "Dynamic scope"
+msgstr ""
+
+#: ../../how-to/fixtures.rst:513
+msgid "In some cases, you might want to change the scope of the fixture without changing the code. To do that, pass a callable to ``scope``. The callable must return a string with a valid scope and will be executed only once - during the fixture definition. It will be called with two keyword arguments - ``fixture_name`` as a string and ``config`` with a configuration object."
+msgstr ""
+
+#: ../../how-to/fixtures.rst:518
+msgid "This can be especially useful when dealing with fixtures that need time for setup, like spawning a docker container. You can use the command-line argument to control the scope of the spawned containers for different environments. See the example below."
+msgstr ""
+
+#: ../../how-to/fixtures.rst:539
+msgid "Teardown/Cleanup (AKA Fixture finalization)"
+msgstr ""
+
+#: ../../how-to/fixtures.rst:541
+msgid "When we run our tests, we'll want to make sure they clean up after themselves so they don't mess with any other tests (and also so that we don't leave behind a mountain of test data to bloat the system). Fixtures in pytest offer a very useful teardown system, which allows us to define the specific steps necessary for each fixture to clean up after itself."
+msgstr ""
+
+#: ../../how-to/fixtures.rst:547
+msgid "This system can be leveraged in two ways."
+msgstr ""
+
+#: ../../how-to/fixtures.rst:552
+msgid "1. ``yield`` fixtures (recommended)"
+msgstr ""
+
+#: ../../how-to/fixtures.rst:556
+msgid "\"Yield\" fixtures ``yield`` instead of ``return``. With these fixtures, we can run some code and pass an object back to the requesting fixture/test, just like with the other fixtures. The only differences are:"
+msgstr ""
+
+#: ../../how-to/fixtures.rst:560
+msgid "``return`` is swapped out for ``yield``."
+msgstr ""
+
+#: ../../how-to/fixtures.rst:561
+msgid "Any teardown code for that fixture is placed *after* the ``yield``."
+msgstr ""
+
+#: ../../how-to/fixtures.rst:563
+msgid "Once pytest figures out a linear order for the fixtures, it will run each one up until it returns or yields, and then move on to the next fixture in the list to do the same thing."
+msgstr ""
+
+#: ../../how-to/fixtures.rst:567
+msgid "Once the test is finished, pytest will go back down the list of fixtures, but in the *reverse order*, taking each one that yielded, and running the code inside it that was *after* the ``yield`` statement."
+msgstr ""
+
+#: ../../how-to/fixtures.rst:571
+msgid "As a simple example, consider this basic email module:"
+msgstr ""
+
+#: ../../how-to/fixtures.rst:601
+msgid "Let's say we want to test sending email from one user to another. We'll have to first make each user, then send the email from one user to the other, and finally assert that the other user received that message in their inbox. If we want to clean up after the test runs, we'll likely have to make sure the other user's mailbox is emptied before deleting that user, otherwise the system may complain."
+msgstr ""
+
+#: ../../how-to/fixtures.rst:608 ../../how-to/fixtures.rst:907
+msgid "Here's what that might look like:"
+msgstr ""
+
+#: ../../how-to/fixtures.rst:643
+msgid "Because ``receiving_user`` is the last fixture to run during setup, it's the first to run during teardown."
+msgstr ""
+
+#: ../../how-to/fixtures.rst:646
+msgid "There is a risk that even having the order right on the teardown side of things doesn't guarantee a safe cleanup. That's covered in a bit more detail in :ref:`safe teardowns`."
+msgstr ""
+
+#: ../../how-to/fixtures.rst:657
+msgid "Handling errors for yield fixture"
+msgstr ""
+
+#: ../../how-to/fixtures.rst:659
+msgid "If a yield fixture raises an exception before yielding, pytest won't try to run the teardown code after that yield fixture's ``yield`` statement. But, for every fixture that has already run successfully for that test, pytest will still attempt to tear them down as it normally would."
+msgstr ""
+
+#: ../../how-to/fixtures.rst:665
+msgid "2. Adding finalizers directly"
+msgstr ""
+
+#: ../../how-to/fixtures.rst:667
+msgid "While yield fixtures are considered to be the cleaner and more straightforward option, there is another choice, and that is to add \"finalizer\" functions directly to the test's `request-context`_ object. It brings a similar result as yield fixtures, but requires a bit more verbosity."
+msgstr ""
+
+#: ../../how-to/fixtures.rst:672
+msgid "In order to use this approach, we have to request the `request-context`_ object (just like we would request another fixture) in the fixture we need to add teardown code for, and then pass a callable, containing that teardown code, to its ``addfinalizer`` method."
+msgstr ""
+
+#: ../../how-to/fixtures.rst:677
+msgid "We have to be careful though, because pytest will run that finalizer once it's been added, even if that fixture raises an exception after adding the finalizer. So to make sure we don't run the finalizer code when we wouldn't need to, we would only add the finalizer once the fixture would have done something that we'd need to teardown."
+msgstr ""
+
+#: ../../how-to/fixtures.rst:683
+msgid "Here's how the previous example would look using the ``addfinalizer`` method:"
+msgstr ""
+
+#: ../../how-to/fixtures.rst:732
+msgid "It's a bit longer than yield fixtures and a bit more complex, but it does offer some nuances for when you're in a pinch."
+msgstr ""
+
+#: ../../how-to/fixtures.rst:742
+msgid "Note on finalizer order"
+msgstr ""
+
+#: ../../how-to/fixtures.rst:744
+msgid "Finalizers are executed in a first-in-last-out order. For yield fixtures, the first teardown code to run is from the right-most fixture, i.e. the last test parameter."
+msgstr ""
+
+#: ../../how-to/fixtures.rst:785
+msgid "For finalizers, the first fixture to run is last call to `request.addfinalizer`."
+msgstr ""
+
+#: ../../how-to/fixtures.rst:819
+msgid "This is so because yield fixtures use `addfinalizer` behind the scenes: when the fixture executes, `addfinalizer` registers a function that resumes the generator, which in turn calls the teardown code."
+msgstr ""
+
+#: ../../how-to/fixtures.rst:825
+msgid "Safe teardowns"
+msgstr ""
+
+#: ../../how-to/fixtures.rst:827
+msgid "The fixture system of pytest is *very* powerful, but it's still being run by a computer, so it isn't able to figure out how to safely teardown everything we throw at it. If we aren't careful, an error in the wrong spot might leave stuff from our tests behind, and that can cause further issues pretty quickly."
+msgstr ""
+
+#: ../../how-to/fixtures.rst:832
+msgid "For example, consider the following tests (based off of the mail example from above):"
+msgstr ""
+
+#: ../../how-to/fixtures.rst:860
+msgid "This version is a lot more compact, but it's also harder to read, doesn't have a very descriptive fixture name, and none of the fixtures can be reused easily."
+msgstr ""
+
+#: ../../how-to/fixtures.rst:863
+msgid "There's also a more serious issue, which is that if any of those steps in the setup raise an exception, none of the teardown code will run."
+msgstr ""
+
+#: ../../how-to/fixtures.rst:866
+msgid "One option might be to go with the ``addfinalizer`` method instead of yield fixtures, but that might get pretty complex and difficult to maintain (and it wouldn't be compact anymore)."
+msgstr ""
+
+#: ../../how-to/fixtures.rst:879
+msgid "Safe fixture structure"
+msgstr ""
+
+#: ../../how-to/fixtures.rst:881
+msgid "The safest and simplest fixture structure requires limiting fixtures to only making one state-changing action each, and then bundling them together with their teardown code, as :ref:`the email examples above <yield fixtures>` showed."
+msgstr ""
+
+#: ../../how-to/fixtures.rst:885
+msgid "The chance that a state-changing operation can fail but still modify state is negligible, as most of these operations tend to be `transaction <https://en.wikipedia.org/wiki/Transaction_processing>`_-based (at least at the level of testing where state could be left behind). So if we make sure that any successful state-changing action gets torn down by moving it to a separate fixture function and separating it from other, potentially failing state-changing actions, then our tests will stand the best chance at leaving the test environment the way they found it."
+msgstr ""
+
+#: ../../how-to/fixtures.rst:894
+msgid "For an example, let's say we have a website with a login page, and we have access to an admin API where we can generate users. For our test, we want to:"
+msgstr ""
+
+#: ../../how-to/fixtures.rst:897
+msgid "Create a user through that admin API"
+msgstr ""
+
+#: ../../how-to/fixtures.rst:898
+msgid "Launch a browser using Selenium"
+msgstr ""
+
+#: ../../how-to/fixtures.rst:899
+msgid "Go to the login page of our site"
+msgstr ""
+
+#: ../../how-to/fixtures.rst:900
+msgid "Log in as the user we created"
+msgstr ""
+
+#: ../../how-to/fixtures.rst:901
+msgid "Assert that their name is in the header of the landing page"
+msgstr ""
+
+#: ../../how-to/fixtures.rst:903
+msgid "We wouldn't want to leave that user in the system, nor would we want to leave that browser session running, so we'll want to make sure the fixtures that create those things clean up after themselves."
+msgstr ""
+
+#: ../../how-to/fixtures.rst:911 ../../how-to/fixtures.rst:1005
+msgid "For this example, certain fixtures (i.e. ``base_url`` and ``admin_credentials``) are implied to exist elsewhere. So for now, let's assume they exist, and we're just not looking at them."
+msgstr ""
+
+#: ../../how-to/fixtures.rst:963
+msgid "The way the dependencies are laid out means it's unclear if the ``user`` fixture would execute before the ``driver`` fixture. But that's ok, because those are atomic operations, and so it doesn't matter which one runs first because the sequence of events for the test is still `linearizable <https://en.wikipedia.org/wiki/Linearizability>`_. But what *does* matter is that, no matter which one runs first, if the one raises an exception while the other would not have, neither will have left anything behind. If ``driver`` executes before ``user``, and ``user`` raises an exception, the driver will still quit, and the user was never made. And if ``driver`` was the one to raise the exception, then the driver would never have been started and the user would never have been made."
+msgstr ""
+
+#: ../../how-to/fixtures.rst:985
+msgid "Running multiple ``assert`` statements safely"
+msgstr ""
+
+#: ../../how-to/fixtures.rst:987
+msgid "Sometimes you may want to run multiple asserts after doing all that setup, which makes sense as, in more complex systems, a single action can kick off multiple behaviors. pytest has a convenient way of handling this and it combines a bunch of what we've gone over so far."
+msgstr ""
+
+#: ../../how-to/fixtures.rst:992
+msgid "All that's needed is stepping up to a larger scope, then having the **act** step defined as an autouse fixture, and finally, making sure all the fixtures are targeting that higher level scope."
+msgstr ""
+
+#: ../../how-to/fixtures.rst:996
+msgid "Let's pull :ref:`an example from above <safe fixture structure>`, and tweak it a bit. Let's say that in addition to checking for a welcome message in the header, we also want to check for a sign out button, and a link to the user's profile."
+msgstr ""
+
+#: ../../how-to/fixtures.rst:1000
+msgid "Let's take a look at how we can structure that so we can run multiple asserts without having to repeat all those steps again."
+msgstr ""
+
+#: ../../how-to/fixtures.rst:1065
+msgid "Notice that the methods are only referencing ``self`` in the signature as a formality. No state is tied to the actual test class as it might be in the ``unittest.TestCase`` framework. Everything is managed by the pytest fixture system."
+msgstr ""
+
+#: ../../how-to/fixtures.rst:1070
+msgid "Each method only has to request the fixtures that it actually needs without worrying about order. This is because the **act** fixture is an autouse fixture, and it made sure all the other fixtures executed before it. There's no more changes of state that need to take place, so the tests are free to make as many non-state-changing queries as they want without risking stepping on the toes of the other tests."
+msgstr ""
+
+#: ../../how-to/fixtures.rst:1077
+msgid "The ``login`` fixture is defined inside the class as well, because not every one of the other tests in the module will be expecting a successful login, and the **act** may need to be handled a little differently for another test class. For example, if we wanted to write another test scenario around submitting bad credentials, we could handle it by adding something like this to the test file:"
+msgstr ""
+
+#: ../../how-to/fixtures.rst:1106
+msgid "Fixtures can introspect the requesting test context"
+msgstr ""
+
+#: ../../how-to/fixtures.rst:1108
+msgid "Fixture functions can accept the :py:class:`request <_pytest.fixtures.FixtureRequest>` object to introspect the \"requesting\" test function, class or module context. Further extending the previous ``smtp_connection`` fixture example, let's read an optional server URL from the test module which uses our fixture:"
+msgstr ""
+
+#: ../../how-to/fixtures.rst:1129
+msgid "We use the ``request.module`` attribute to optionally obtain an ``smtpserver`` attribute from the test module.  If we just execute again, nothing much has changed:"
+msgstr ""
+
+#: ../../how-to/fixtures.rst:1143
+msgid "Let's quickly create another test module that actually sets the server URL in its module namespace:"
+msgstr ""
+
+#: ../../how-to/fixtures.rst:1156
+msgid "Running it:"
+msgstr ""
+
+#: ../../how-to/fixtures.rst:1173
+msgid "voila! The ``smtp_connection`` fixture function picked up our mail server name from the module namespace."
+msgstr ""
+
+#: ../../how-to/fixtures.rst:1179
+msgid "Using markers to pass data to fixtures"
+msgstr ""
+
+#: ../../how-to/fixtures.rst:1181
+msgid "Using the :py:class:`request <_pytest.fixtures.FixtureRequest>` object, a fixture can also access markers which are applied to a test function. This can be useful to pass data into a fixture from a test:"
+msgstr ""
+
+#: ../../how-to/fixtures.rst:1210
+msgid "Factories as fixtures"
+msgstr ""
+
+#: ../../how-to/fixtures.rst:1212
+msgid "The \"factory as fixture\" pattern can help in situations where the result of a fixture is needed multiple times in a single test. Instead of returning data directly, the fixture instead returns a function which generates the data. This function can then be called multiple times in the test."
+msgstr ""
+
+#: ../../how-to/fixtures.rst:1217
+msgid "Factories can have parameters as needed:"
+msgstr ""
+
+#: ../../how-to/fixtures.rst:1234
+msgid "If the data created by the factory requires managing, the fixture can take care of that:"
+msgstr ""
+
+#: ../../how-to/fixtures.rst:1262
+msgid "Parametrizing fixtures"
+msgstr ""
+
+#: ../../how-to/fixtures.rst:1264
+msgid "Fixture functions can be parametrized in which case they will be called multiple times, each time executing the set of dependent tests, i.e. the tests that depend on this fixture.  Test functions usually do not need to be aware of their re-running.  Fixture parametrization helps to write exhaustive functional tests for components which themselves can be configured in multiple ways."
+msgstr ""
+
+#: ../../how-to/fixtures.rst:1271
+msgid "Extending the previous example, we can flag the fixture to create two ``smtp_connection`` fixture instances which will cause all tests using the fixture to run twice.  The fixture function gets access to each parameter through the special :py:class:`request <pytest.FixtureRequest>` object:"
+msgstr ""
+
+#: ../../how-to/fixtures.rst:1291
+msgid "The main change is the declaration of ``params`` with :py:func:`@pytest.fixture <pytest.fixture>`, a list of values for each of which the fixture function will execute and can access a value via ``request.param``.  No test function code needs to change. So let's just do another run:"
+msgstr ""
+
+#: ../../how-to/fixtures.rst:1358
+msgid "We see that our two test functions each ran twice, against the different ``smtp_connection`` instances.  Note also, that with the ``mail.python.org`` connection the second test fails in ``test_ehlo`` because a different server string is expected than what arrived."
+msgstr ""
+
+#: ../../how-to/fixtures.rst:1363
+msgid "pytest will build a string that is the test ID for each fixture value in a parametrized fixture, e.g. ``test_ehlo[smtp.gmail.com]`` and ``test_ehlo[mail.python.org]`` in the above examples.  These IDs can be used with ``-k`` to select specific cases to run, and they will also identify the specific case when one is failing.  Running pytest with ``--collect-only`` will show the generated IDs."
+msgstr ""
+
+#: ../../how-to/fixtures.rst:1370
+msgid "Numbers, strings, booleans and ``None`` will have their usual string representation used in the test ID. For other objects, pytest will make a string based on the argument name.  It is possible to customise the string used in a test ID for a certain fixture value by using the ``ids`` keyword argument:"
+msgstr ""
+
+#: ../../how-to/fixtures.rst:1406
+msgid "The above shows how ``ids`` can be either a list of strings to use or a function which will be called with the fixture value and then has to return a string to use.  In the latter case if the function returns ``None`` then pytest's auto-generated ID will be used."
+msgstr ""
+
+#: ../../how-to/fixtures.rst:1411
+msgid "Running the above tests results in the following test IDs being used:"
+msgstr ""
+
+#: ../../how-to/fixtures.rst:1445
+msgid "Using marks with parametrized fixtures"
+msgstr ""
+
+#: ../../how-to/fixtures.rst:1447
+msgid ":func:`pytest.param` can be used to apply marks in values sets of parametrized fixtures in the same way that they can be used with :ref:`@pytest.mark.parametrize <@pytest.mark.parametrize>`."
+msgstr ""
+
+#: ../../how-to/fixtures.rst:1450
+msgid "Example:"
+msgstr ""
+
+#: ../../how-to/fixtures.rst:1466
+msgid "Running this test will *skip* the invocation of ``data_set`` with value ``2``:"
+msgstr ""
+
+#: ../../how-to/fixtures.rst:1486
+msgid "Modularity: using fixtures from a fixture function"
+msgstr ""
+
+#: ../../how-to/fixtures.rst:1488
+msgid "In addition to using fixtures in test functions, fixture functions can use other fixtures themselves.  This contributes to a modular design of your fixtures and allows reuse of framework-specific fixtures across many projects.  As a simple example, we can extend the previous example and instantiate an object ``app`` where we stick the already defined ``smtp_connection`` resource into it:"
+msgstr ""
+
+#: ../../how-to/fixtures.rst:1515
+msgid "Here we declare an ``app`` fixture which receives the previously defined ``smtp_connection`` fixture and instantiates an ``App`` object with it.  Let's run it:"
+msgstr ""
+
+#: ../../how-to/fixtures.rst:1532
+msgid "Due to the parametrization of ``smtp_connection``, the test will run twice with two different ``App`` instances and respective smtp servers.  There is no need for the ``app`` fixture to be aware of the ``smtp_connection`` parametrization because pytest will fully analyse the fixture dependency graph."
+msgstr ""
+
+#: ../../how-to/fixtures.rst:1537
+msgid "Note that the ``app`` fixture has a scope of ``module`` and uses a module-scoped ``smtp_connection`` fixture.  The example would still work if ``smtp_connection`` was cached on a ``session`` scope: it is fine for fixtures to use \"broader\" scoped fixtures but not the other way round: A session-scoped fixture could not use a module-scoped one in a meaningful way."
+msgstr ""
+
+#: ../../how-to/fixtures.rst:1548
+msgid "Automatic grouping of tests by fixture instances"
+msgstr ""
+
+#: ../../how-to/fixtures.rst:1552
+msgid "pytest minimizes the number of active fixtures during test runs. If you have a parametrized fixture, then all the tests using it will first execute with one instance and then finalizers are called before the next fixture instance is created.  Among other things, this eases testing of applications which create and use global state."
+msgstr ""
+
+#: ../../how-to/fixtures.rst:1558
+msgid "The following example uses two parametrized fixtures, one of which is scoped on a per-module basis, and all the functions perform ``print`` calls to show the setup/teardown flow:"
+msgstr ""
+
+#: ../../how-to/fixtures.rst:1596
+msgid "Let's run the tests in verbose mode and with looking at the print-output:"
+msgstr ""
+
+#: ../../how-to/fixtures.rst:1642
+msgid "You can see that the parametrized module-scoped ``modarg`` resource caused an ordering of test execution that lead to the fewest possible \"active\" resources. The finalizer for the ``mod1`` parametrized resource was executed before the ``mod2`` resource was setup."
+msgstr ""
+
+#: ../../how-to/fixtures.rst:1647
+msgid "In particular notice that test_0 is completely independent and finishes first. Then test_1 is executed with ``mod1``, then test_2 with ``mod1``, then test_1 with ``mod2`` and finally test_2 with ``mod2``."
+msgstr ""
+
+#: ../../how-to/fixtures.rst:1651
+msgid "The ``otherarg`` parametrized resource (having function scope) was set up before and teared down after every test that used it."
+msgstr ""
+
+#: ../../how-to/fixtures.rst:1658
+msgid "Use fixtures in classes and modules with ``usefixtures``"
+msgstr ""
+
+#: ../../how-to/fixtures.rst:1662
+msgid "Sometimes test functions do not directly need access to a fixture object. For example, tests may require to operate with an empty directory as the current working directory but otherwise do not care for the concrete directory.  Here is how you can use the standard :mod:`tempfile` and pytest fixtures to achieve it.  We separate the creation of the fixture into a :file:`conftest.py` file:"
+msgstr ""
+
+#: ../../how-to/fixtures.rst:1688
+msgid "and declare its use in a test module via a ``usefixtures`` marker:"
+msgstr ""
+
+#: ../../how-to/fixtures.rst:1708
+msgid "Due to the ``usefixtures`` marker, the ``cleandir`` fixture will be required for the execution of each test method, just as if you specified a \"cleandir\" function argument to each of them.  Let's run it to verify our fixture is activated and the tests pass:"
+msgstr ""
+
+#: ../../how-to/fixtures.rst:1719
+msgid "You can specify multiple fixtures like this:"
+msgstr ""
+
+#: ../../how-to/fixtures.rst:1726
+msgid "and you may specify fixture usage at the test module level using :globalvar:`pytestmark`:"
+msgstr ""
+
+#: ../../how-to/fixtures.rst:1733
+msgid "It is also possible to put fixtures required by all tests in your project into an ini-file:"
+msgstr ""
+
+#: ../../how-to/fixtures.rst:1745
+msgid "Note this mark has no effect in **fixture functions**. For example, this **will not work as expected**:"
+msgstr ""
+
+#: ../../how-to/fixtures.rst:1754
+msgid "This generates a deprecation warning, and will become an error in Pytest 8."
+msgstr ""
+
+#: ../../how-to/fixtures.rst:1759
+msgid "Overriding fixtures on various levels"
+msgstr ""
+
+#: ../../how-to/fixtures.rst:1761
+msgid "In relatively large test suite, you most likely need to ``override`` a ``global`` or ``root`` fixture with a ``locally`` defined one, keeping the test code readable and maintainable."
+msgstr ""
+
+#: ../../how-to/fixtures.rst:1765
+msgid "Override a fixture on a folder (conftest) level"
+msgstr ""
+
+#: ../../how-to/fixtures.rst:1767 ../../how-to/fixtures.rst:1806
+#: ../../how-to/fixtures.rst:1847 ../../how-to/fixtures.rst:1883
+msgid "Given the tests file structure is:"
+msgstr ""
+
+#: ../../how-to/fixtures.rst:1799
+msgid "As you can see, a fixture with the same name can be overridden for certain test folder level. Note that the ``base`` or ``super`` fixture can be accessed from the ``overriding`` fixture easily - used in the example above."
+msgstr ""
+
+#: ../../how-to/fixtures.rst:1804
+msgid "Override a fixture on a test module level"
+msgstr ""
+
+#: ../../how-to/fixtures.rst:1841
+msgid "In the example above, a fixture with the same name can be overridden for certain test module."
+msgstr ""
+
+#: ../../how-to/fixtures.rst:1845
+msgid "Override a fixture with direct test parametrization"
+msgstr ""
+
+#: ../../how-to/fixtures.rst:1876
+msgid "In the example above, a fixture value is overridden by the test parameter value. Note that the value of the fixture can be overridden this way even if the test doesn't use it directly (doesn't mention it in the function prototype)."
+msgstr ""
+
+#: ../../how-to/fixtures.rst:1881
+msgid "Override a parametrized fixture with non-parametrized one and vice versa"
+msgstr ""
+
+#: ../../how-to/fixtures.rst:1926
+msgid "In the example above, a parametrized fixture is overridden with a non-parametrized version, and a non-parametrized fixture is overridden with a parametrized version for certain test module. The same applies for the test folder level obviously."
+msgstr ""
+
+#: ../../how-to/fixtures.rst:1932
+msgid "Using fixtures from other projects"
+msgstr ""
+
+#: ../../how-to/fixtures.rst:1934
+msgid "Usually projects that provide pytest support will use :ref:`entry points <pip-installable plugins>`, so just installing those projects into an environment will make those fixtures available for use."
+msgstr ""
+
+#: ../../how-to/fixtures.rst:1937
+msgid "In case you want to use fixtures from a project that does not use entry points, you can define :globalvar:`pytest_plugins` in your top ``conftest.py`` file to register that module as a plugin."
+msgstr ""
+
+#: ../../how-to/fixtures.rst:1941
+msgid "Suppose you have some fixtures in ``mylibrary.fixtures`` and you want to reuse them into your ``app/tests`` directory."
+msgstr ""
+
+#: ../../how-to/fixtures.rst:1944
+msgid "All you need to do is to define :globalvar:`pytest_plugins` in ``app/tests/conftest.py`` pointing to that module."
+msgstr ""
+
+#: ../../how-to/fixtures.rst:1951
+msgid "This effectively registers ``mylibrary.fixtures`` as a plugin, making all its fixtures and hooks available to tests in ``app/tests``."
+msgstr ""
+
+#: ../../how-to/fixtures.rst:1956
+msgid "Sometimes users will *import* fixtures from other projects for use, however this is not recommended: importing fixtures into a module will register them in pytest as *defined* in that module."
+msgstr ""
+
+#: ../../how-to/fixtures.rst:1960
+msgid "This has minor consequences, such as appearing multiple times in ``pytest --help``, but it is not **recommended** because this behavior might change/stop working in future versions."
+msgstr ""
+

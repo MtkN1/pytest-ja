@@ -1,0 +1,245 @@
+# SOME DESCRIPTIVE TITLE.
+# Copyright (C) 2015, holger krekel and pytest-dev team
+# This file is distributed under the same license as the pytest package.
+# FIRST AUTHOR <EMAIL@ADDRESS>, 2025.
+#
+#, fuzzy
+msgid ""
+msgstr ""
+"Project-Id-Version: pytest 0.1.dev16209\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2025-02-05 00:52+0900\n"
+"PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
+"Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
+"Language: ja\n"
+"Language-Team: ja <LL@li.org>\n"
+"Plural-Forms: nplurals=1; plural=0;\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=utf-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Generated-By: Babel 2.17.0\n"
+
+#: ../../announce/release-6.0.0rc1.rst:2
+msgid "pytest-6.0.0rc1"
+msgstr ""
+
+#: ../../announce/release-6.0.0rc1.rst:4
+msgid "pytest 6.0.0rc1 has just been released to PyPI."
+msgstr ""
+
+#: ../../announce/release-6.0.0rc1.rst:6
+msgid "This is a bug-fix release, being a drop-in replacement. To upgrade::"
+msgstr ""
+
+#: ../../announce/release-6.0.0rc1.rst:10
+msgid "The full changelog is available at https://docs.pytest.org/en/latest/changelog.html."
+msgstr ""
+
+#: ../../announce/release-6.0.0rc1.rst:12
+msgid "Thanks to all who contributed to this release, among them:"
+msgstr ""
+
+#: ../../announce/release-6.0.0rc1.rst:14
+msgid "Alfredo Deza"
+msgstr ""
+
+#: ../../announce/release-6.0.0rc1.rst:15
+msgid "Andreas Maier"
+msgstr ""
+
+#: ../../announce/release-6.0.0rc1.rst:16
+msgid "Andrew"
+msgstr ""
+
+#: ../../announce/release-6.0.0rc1.rst:17
+msgid "Anthony Sottile"
+msgstr ""
+
+#: ../../announce/release-6.0.0rc1.rst:18
+msgid "ArtyomKaltovich"
+msgstr ""
+
+#: ../../announce/release-6.0.0rc1.rst:19
+msgid "Bruno Oliveira"
+msgstr ""
+
+#: ../../announce/release-6.0.0rc1.rst:20
+msgid "Claire Cecil"
+msgstr ""
+
+#: ../../announce/release-6.0.0rc1.rst:21
+msgid "Curt J. Sampson"
+msgstr ""
+
+#: ../../announce/release-6.0.0rc1.rst:22
+msgid "Daniel"
+msgstr ""
+
+#: ../../announce/release-6.0.0rc1.rst:23
+msgid "Daniel Hahler"
+msgstr ""
+
+#: ../../announce/release-6.0.0rc1.rst:24
+msgid "Danny Sepler"
+msgstr ""
+
+#: ../../announce/release-6.0.0rc1.rst:25
+msgid "David Diaz Barquero"
+msgstr ""
+
+#: ../../announce/release-6.0.0rc1.rst:26
+msgid "Fabio Zadrozny"
+msgstr ""
+
+#: ../../announce/release-6.0.0rc1.rst:27
+msgid "Felix Nieuwenhuizen"
+msgstr ""
+
+#: ../../announce/release-6.0.0rc1.rst:28
+msgid "Florian Bruhin"
+msgstr ""
+
+#: ../../announce/release-6.0.0rc1.rst:29
+msgid "Florian Dahlitz"
+msgstr ""
+
+#: ../../announce/release-6.0.0rc1.rst:30
+msgid "Gleb Nikonorov"
+msgstr ""
+
+#: ../../announce/release-6.0.0rc1.rst:31
+msgid "Hugo van Kemenade"
+msgstr ""
+
+#: ../../announce/release-6.0.0rc1.rst:32
+msgid "Hunter Richards"
+msgstr ""
+
+#: ../../announce/release-6.0.0rc1.rst:33
+msgid "Katarzyna Król"
+msgstr ""
+
+#: ../../announce/release-6.0.0rc1.rst:34
+msgid "Katrin Leinweber"
+msgstr ""
+
+#: ../../announce/release-6.0.0rc1.rst:35
+msgid "Keri Volans"
+msgstr ""
+
+#: ../../announce/release-6.0.0rc1.rst:36
+msgid "Lewis Belcher"
+msgstr ""
+
+#: ../../announce/release-6.0.0rc1.rst:37
+msgid "Lukas Geiger"
+msgstr ""
+
+#: ../../announce/release-6.0.0rc1.rst:38
+msgid "Martin Michlmayr"
+msgstr ""
+
+#: ../../announce/release-6.0.0rc1.rst:39
+msgid "Mattwmaster58"
+msgstr ""
+
+#: ../../announce/release-6.0.0rc1.rst:40
+msgid "Maximilian Cosmo Sitter"
+msgstr ""
+
+#: ../../announce/release-6.0.0rc1.rst:41
+msgid "Nikolay Kondratyev"
+msgstr ""
+
+#: ../../announce/release-6.0.0rc1.rst:42
+msgid "Pavel Karateev"
+msgstr ""
+
+#: ../../announce/release-6.0.0rc1.rst:43
+msgid "Paweł Wilczyński"
+msgstr ""
+
+#: ../../announce/release-6.0.0rc1.rst:44
+msgid "Prashant Anand"
+msgstr ""
+
+#: ../../announce/release-6.0.0rc1.rst:45
+msgid "Ram Rachum"
+msgstr ""
+
+#: ../../announce/release-6.0.0rc1.rst:46
+msgid "Ran Benita"
+msgstr ""
+
+#: ../../announce/release-6.0.0rc1.rst:47
+msgid "Ronny Pfannschmidt"
+msgstr ""
+
+#: ../../announce/release-6.0.0rc1.rst:48
+msgid "Ruaridh Williamson"
+msgstr ""
+
+#: ../../announce/release-6.0.0rc1.rst:49
+msgid "Simon K"
+msgstr ""
+
+#: ../../announce/release-6.0.0rc1.rst:50
+msgid "Tim Hoffmann"
+msgstr ""
+
+#: ../../announce/release-6.0.0rc1.rst:51
+msgid "Tor Colvin"
+msgstr ""
+
+#: ../../announce/release-6.0.0rc1.rst:52
+msgid "Vlad-Radz"
+msgstr ""
+
+#: ../../announce/release-6.0.0rc1.rst:53
+msgid "Xinbin Huang"
+msgstr ""
+
+#: ../../announce/release-6.0.0rc1.rst:54
+msgid "Zac Hatfield-Dodds"
+msgstr ""
+
+#: ../../announce/release-6.0.0rc1.rst:55
+msgid "earonesty"
+msgstr ""
+
+#: ../../announce/release-6.0.0rc1.rst:56
+msgid "gaurav dhameeja"
+msgstr ""
+
+#: ../../announce/release-6.0.0rc1.rst:57
+msgid "gdhameeja"
+msgstr ""
+
+#: ../../announce/release-6.0.0rc1.rst:58
+msgid "ibriquem"
+msgstr ""
+
+#: ../../announce/release-6.0.0rc1.rst:59
+msgid "mcsitter"
+msgstr ""
+
+#: ../../announce/release-6.0.0rc1.rst:60
+msgid "piotrhm"
+msgstr ""
+
+#: ../../announce/release-6.0.0rc1.rst:61
+msgid "smarie"
+msgstr ""
+
+#: ../../announce/release-6.0.0rc1.rst:62
+msgid "symonk"
+msgstr ""
+
+#: ../../announce/release-6.0.0rc1.rst:63
+msgid "xuiqzy"
+msgstr ""
+
+#: ../../announce/release-6.0.0rc1.rst:66
+msgid "Happy testing, The pytest Development Team"
+msgstr ""
+

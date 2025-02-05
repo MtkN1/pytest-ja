@@ -1,0 +1,89 @@
+# SOME DESCRIPTIVE TITLE.
+# Copyright (C) 2015, holger krekel and pytest-dev team
+# This file is distributed under the same license as the pytest package.
+# FIRST AUTHOR <EMAIL@ADDRESS>, 2025.
+#
+#, fuzzy
+msgid ""
+msgstr ""
+"Project-Id-Version: pytest 0.1.dev16209\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2025-02-05 00:52+0900\n"
+"PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
+"Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
+"Language: ja\n"
+"Language-Team: ja <LL@li.org>\n"
+"Plural-Forms: nplurals=1; plural=0;\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=utf-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Generated-By: Babel 2.17.0\n"
+
+#: ../../announce/release-2.8.6.rst:2
+msgid "pytest-2.8.6"
+msgstr ""
+
+#: ../../announce/release-2.8.6.rst:4
+msgid "pytest is a mature Python testing tool with more than 1100 tests against itself, passing on many different interpreters and platforms. This release is supposed to be drop-in compatible to 2.8.5."
+msgstr ""
+
+#: ../../announce/release-2.8.6.rst:8
+msgid "See below for the changes and see docs at:"
+msgstr ""
+
+#: ../../announce/release-2.8.6.rst:10
+msgid "http://pytest.org"
+msgstr ""
+
+#: ../../announce/release-2.8.6.rst:12
+msgid "As usual, you can upgrade from pypi via::"
+msgstr ""
+
+#: ../../announce/release-2.8.6.rst:16
+msgid "Thanks to all who contributed to this release, among them:"
+msgstr ""
+
+#: ../../announce/release-2.8.6.rst:18
+msgid "AMiT Kumar Bruno Oliveira Erik M. Bray Florian Bruhin Georgy Dyuldin Jeff Widman Kartik Singhal Loïc Estève Manu Phatak Peter Demin Rick van Hattem Ronny Pfannschmidt Ulrich Petri foxx"
+msgstr ""
+
+#: ../../announce/release-2.8.6.rst:34
+msgid "Happy testing, The py.test Development Team"
+msgstr ""
+
+#: ../../announce/release-2.8.6.rst:39
+msgid "2.8.6 (compared to 2.8.5)"
+msgstr ""
+
+#: ../../announce/release-2.8.6.rst:41
+msgid "fix #1259: allow for double nodeids in junitxml, this was a regression failing plugins combinations like pytest-pep8 + pytest-flakes"
+msgstr ""
+
+#: ../../announce/release-2.8.6.rst:45
+msgid "Workaround for exception that occurs in pyreadline when using ``--pdb`` with standard I/O capture enabled. Thanks Erik M. Bray for the PR."
+msgstr ""
+
+#: ../../announce/release-2.8.6.rst:49
+msgid "fix #900: Better error message in case the target of a ``monkeypatch`` call raises an ``ImportError``."
+msgstr ""
+
+#: ../../announce/release-2.8.6.rst:52
+msgid "fix #1292: monkeypatch calls (setattr, setenv, etc.) are now O(1). Thanks David R. MacIver for the report and Bruno Oliveira for the PR."
+msgstr ""
+
+#: ../../announce/release-2.8.6.rst:55
+msgid "fix #1223: captured stdout and stderr are now properly displayed before entering pdb when ``--pdb`` is used instead of being thrown away. Thanks Cal Leeming for the PR."
+msgstr ""
+
+#: ../../announce/release-2.8.6.rst:59
+msgid "fix #1305: pytest warnings emitted during ``pytest_terminal_summary`` are now properly displayed. Thanks Ionel Maries Cristian for the report and Bruno Oliveira for the PR."
+msgstr ""
+
+#: ../../announce/release-2.8.6.rst:63
+msgid "fix #628: fixed internal UnicodeDecodeError when doctests contain unicode. Thanks Jason R. Coombs for the report and Bruno Oliveira for the PR."
+msgstr ""
+
+#: ../../announce/release-2.8.6.rst:66
+msgid "fix #1334: Add captured stdout to jUnit XML report on setup error. Thanks Georgy Dyuldin for the PR."
+msgstr ""
+

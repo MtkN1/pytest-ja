@@ -1,0 +1,153 @@
+# SOME DESCRIPTIVE TITLE.
+# Copyright (C) 2015, holger krekel and pytest-dev team
+# This file is distributed under the same license as the pytest package.
+# FIRST AUTHOR <EMAIL@ADDRESS>, 2025.
+#
+#, fuzzy
+msgid ""
+msgstr ""
+"Project-Id-Version: pytest 0.1.dev16209\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2025-02-05 00:52+0900\n"
+"PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
+"Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
+"Language: ja\n"
+"Language-Team: ja <LL@li.org>\n"
+"Plural-Forms: nplurals=1; plural=0;\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=utf-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Generated-By: Babel 2.17.0\n"
+
+#: ../../adopt.rst:7
+msgid "April 2015 is \"adopt pytest month\""
+msgstr ""
+
+#: ../../adopt.rst:9
+msgid "Are you an enthusiastic pytest user, the local testing guru in your workplace? Or are you considering using pytest for your open source project, but not sure how to get started? Then you may be interested in \"adopt pytest month\"!"
+msgstr ""
+
+#: ../../adopt.rst:11
+msgid "We will pair experienced pytest users with open source projects, for a month's effort of getting new development teams started with pytest."
+msgstr ""
+
+#: ../../adopt.rst:13
+msgid "In 2015 we are trying this for the first time. In February and March 2015 we will gather volunteers on both sides, in April we will do the work, and in May we will evaluate how it went. This effort is being coordinated by Brianna Laugher. If you have any questions or comments, you can raise them on the `@pytestdotorg twitter account <https://twitter.com/pytestdotorg>`_\\, the :issue:`issue tracker <676>` or the `pytest-dev mailing list`_."
+msgstr ""
+
+#: ../../adopt.rst:20
+msgid "The ideal pytest helper"
+msgstr ""
+
+#: ../../adopt.rst:22
+msgid "will be able to commit 2-4 hours a week to working with their particular project (this might involve joining their mailing list, installing the software and exploring any existing tests, offering advice, writing some example tests)"
+msgstr ""
+
+#: ../../adopt.rst:23
+msgid "feels confident in using pytest (e.g. has explored command line options, knows how to write parametrized tests, has an idea about conftest contents)"
+msgstr ""
+
+#: ../../adopt.rst:24
+msgid "does not need to be an expert in every aspect!"
+msgstr ""
+
+#: ../../adopt.rst:26
+msgid "Pytest helpers, sign up here! (preferably in February, hard deadline 22 March)"
+msgstr ""
+
+#: ../../adopt.rst:31
+msgid "The ideal partner project"
+msgstr ""
+
+#: ../../adopt.rst:33
+msgid "is open source, and predominantly written in Python"
+msgstr ""
+
+#: ../../adopt.rst:34
+msgid "has an automated/documented install process for developers"
+msgstr ""
+
+#: ../../adopt.rst:35
+msgid "has more than one core developer"
+msgstr ""
+
+#: ../../adopt.rst:36
+msgid "has at least one official release (e.g. is available on pypi)"
+msgstr ""
+
+#: ../../adopt.rst:37
+msgid "has the support of the core development team, in trying out pytest adoption"
+msgstr ""
+
+#: ../../adopt.rst:38
+msgid "has no tests... or 100% test coverage... or somewhere in between!"
+msgstr ""
+
+#: ../../adopt.rst:40
+msgid "Partner projects, sign up here! (by 22 March)"
+msgstr ""
+
+#: ../../adopt.rst:45
+msgid "What does it mean to \"adopt pytest\"?"
+msgstr ""
+
+#: ../../adopt.rst:47
+msgid "There can be many different definitions of \"success\". Pytest can run many unittest_ tests by default, so using pytest as your testrunner may be possible from day 1. Job done, right?"
+msgstr ""
+
+#: ../../adopt.rst:49
+msgid "Progressive success might look like:"
+msgstr ""
+
+#: ../../adopt.rst:51
+msgid "tests can be run (by pytest) without errors (there may be failures)"
+msgstr ""
+
+#: ../../adopt.rst:52
+msgid "tests can be run (by pytest) without failures"
+msgstr ""
+
+#: ../../adopt.rst:53
+msgid "test runner is integrated into CI server"
+msgstr ""
+
+#: ../../adopt.rst:54
+msgid "existing tests are rewritten to take advantage of pytest features - this can happen in several iterations, for example:"
+msgstr ""
+
+#: ../../adopt.rst:55
+msgid "changing to native assert_ statements (pycmd_ has a script to help with that, ``pyconvert_unittest.py``)"
+msgstr ""
+
+#: ../../adopt.rst:56
+msgid "changing `setUp/tearDown methods`_ to fixtures_"
+msgstr ""
+
+#: ../../adopt.rst:57
+msgid "adding markers_"
+msgstr ""
+
+#: ../../adopt.rst:58
+msgid "other changes to reduce boilerplate"
+msgstr ""
+
+#: ../../adopt.rst:59
+msgid "assess needs for future tests to be written, e.g. new fixtures, distributed_ testing tweaks"
+msgstr ""
+
+#: ../../adopt.rst:61
+msgid "\"Success\" should also include that the development team feels comfortable with their knowledge of how to use pytest. In fact this is probably more important than anything else. So spending a lot of time on communication, giving examples, etc will probably be important - both in running the tests, and in writing them."
+msgstr ""
+
+#: ../../adopt.rst:63
+msgid "It may be after the month is up, the partner project decides that pytest is not right for it. That's okay - hopefully the pytest team will also learn something about its weaknesses or deficiencies."
+msgstr ""
+
+#: ../../adopt.rst:75
+msgid "Other ways to help"
+msgstr ""
+
+#: ../../adopt.rst:77
+msgid "Promote! Do your favourite open source Python projects use pytest? If not, why not tell them about this page?"
+msgstr ""
+

@@ -1,0 +1,964 @@
+# SOME DESCRIPTIVE TITLE.
+# Copyright (C) 2015, holger krekel and pytest-dev team
+# This file is distributed under the same license as the pytest package.
+# FIRST AUTHOR <EMAIL@ADDRESS>, 2025.
+#
+#, fuzzy
+msgid ""
+msgstr ""
+"Project-Id-Version: pytest 0.1.dev16209\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2025-02-05 00:52+0900\n"
+"PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
+"Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
+"Language: ja\n"
+"Language-Team: ja <LL@li.org>\n"
+"Plural-Forms: nplurals=1; plural=0;\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=utf-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Generated-By: Babel 2.17.0\n"
+
+#: ../../deprecations.rst:4
+msgid "Deprecations and Removals"
+msgstr ""
+
+#: ../../deprecations.rst:6
+msgid "This page lists all pytest features that are currently deprecated or have been removed in past major releases. The objective is to give users a clear rationale why a certain feature has been removed, and what alternatives should be used instead."
+msgstr ""
+
+#: ../../deprecations.rst:12
+msgid "Deprecated Features"
+msgstr ""
+
+#: ../../deprecations.rst:14
+msgid "Below is a complete list of all pytest features which are considered deprecated. Using those features will issue :class:`~pytest.PytestWarning` or subclasses, which can be filtered using :ref:`standard warning filters <warnings>`."
+msgstr ""
+
+#: ../../deprecations.rst:21
+msgid "``pytest.importorskip`` default behavior regarding :class:`ImportError`"
+msgstr ""
+
+#: ../../deprecations.rst:25
+msgid "Traditionally :func:`pytest.importorskip` will capture :class:`ImportError`, with the original intent being to skip tests where a dependent module is not installed, for example testing with different dependencies."
+msgstr ""
+
+#: ../../deprecations.rst:28
+msgid "However some packages might be installed in the system, but are not importable due to some other issue, for example, a compilation error or a broken installation. In those cases :func:`pytest.importorskip` would still silently skip the test, but more often than not users would like to see the unexpected error so the underlying issue can be fixed."
+msgstr ""
+
+#: ../../deprecations.rst:33
+msgid "In ``8.2`` the ``exc_type`` parameter has been added, giving users the ability of passing :class:`ModuleNotFoundError` to skip tests only if the module cannot really be found, and not because of some other error."
+msgstr ""
+
+#: ../../deprecations.rst:36
+msgid "Catching only :class:`ModuleNotFoundError` by default (and letting other errors propagate) would be the best solution, however for backward compatibility, pytest will keep the existing behavior but raise an warning if:"
+msgstr ""
+
+#: ../../deprecations.rst:39
+msgid "The captured exception is of type :class:`ImportError`, and:"
+msgstr ""
+
+#: ../../deprecations.rst:40
+msgid "The user does not pass ``exc_type`` explicitly."
+msgstr ""
+
+#: ../../deprecations.rst:42
+msgid "If the import attempt raises :class:`ModuleNotFoundError` (the usual case), then the module is skipped and no warning is emitted."
+msgstr ""
+
+#: ../../deprecations.rst:45
+msgid "This way, the usual cases will keep working the same way, while unexpected errors will now issue a warning, with users being able to suppress the warning by passing ``exc_type=ImportError`` explicitly."
+msgstr ""
+
+#: ../../deprecations.rst:48
+msgid "In ``9.0``, the warning will turn into an error, and in ``9.1`` :func:`pytest.importorskip` will only capture :class:`ModuleNotFoundError` by default and no warnings will be issued anymore -- but users can still capture :class:`ImportError` by passing it to ``exc_type``."
+msgstr ""
+
+#: ../../deprecations.rst:56
+msgid "``fspath`` argument for Node constructors replaced with ``pathlib.Path``"
+msgstr ""
+
+#: ../../deprecations.rst:60
+msgid "In order to support the transition from ``py.path.local`` to :mod:`pathlib`, the ``fspath`` argument to :class:`~_pytest.nodes.Node` constructors like :func:`pytest.Function.from_parent()` and :func:`pytest.Class.from_parent()` is now deprecated."
+msgstr ""
+
+#: ../../deprecations.rst:65
+msgid "Plugins which construct nodes should pass the ``path`` argument, of type :class:`pathlib.Path`, instead of the ``fspath`` argument."
+msgstr ""
+
+#: ../../deprecations.rst:68
+msgid "Plugins which implement custom items and collectors are encouraged to replace ``fspath`` parameters (``py.path.local``) with ``path`` parameters (``pathlib.Path``), and drop any other usage of the ``py`` library if possible."
+msgstr ""
+
+#: ../../deprecations.rst:72
+msgid "If possible, plugins with custom items should use :ref:`cooperative constructors <uncooperative-constructors-deprecated>` to avoid hardcoding arguments they only pass on to the superclass."
+msgstr ""
+
+#: ../../deprecations.rst:77
+msgid "The name of the :class:`~_pytest.nodes.Node` arguments and attributes (the new attribute being ``path``) is **the opposite** of the situation for hooks, :ref:`outlined below <legacy-path-hooks-deprecated>` (the old argument being ``path``)."
+msgstr ""
+
+#: ../../deprecations.rst:82 ../../deprecations.rst:157
+msgid "This is an unfortunate artifact due to historical reasons, which should be resolved in future versions as we slowly get rid of the :pypi:`py` dependency (see :issue:`9283` for a longer discussion)."
+msgstr ""
+
+#: ../../deprecations.rst:86
+msgid "Due to the ongoing migration of methods like :meth:`~pytest.Item.reportinfo` which still is expected to return a ``py.path.local`` object, nodes still have both ``fspath`` (``py.path.local``) and ``path`` (``pathlib.Path``) attributes, no matter what argument was used in the constructor. We expect to deprecate the ``fspath`` attribute in a future release."
+msgstr ""
+
+#: ../../deprecations.rst:94
+msgid "Configuring hook specs/impls using markers"
+msgstr ""
+
+#: ../../deprecations.rst:96
+msgid "Before pluggy, pytest's plugin library, was its own package and had a clear API, pytest just used ``pytest.mark`` to configure hooks."
+msgstr ""
+
+#: ../../deprecations.rst:99
+msgid "The :py:func:`pytest.hookimpl` and :py:func:`pytest.hookspec` decorators have been available since years and should be used instead."
+msgstr ""
+
+#: ../../deprecations.rst:114
+msgid "should be changed to:"
+msgstr ""
+
+#: ../../deprecations.rst:121
+msgid "Changed ``hookimpl`` attributes:"
+msgstr ""
+
+#: ../../deprecations.rst:123
+msgid "``tryfirst``"
+msgstr ""
+
+#: ../../deprecations.rst:124
+msgid "``trylast``"
+msgstr ""
+
+#: ../../deprecations.rst:125
+msgid "``optionalhook``"
+msgstr ""
+
+#: ../../deprecations.rst:126
+msgid "``hookwrapper``"
+msgstr ""
+
+#: ../../deprecations.rst:128
+msgid "Changed ``hookwrapper`` attributes:"
+msgstr ""
+
+#: ../../deprecations.rst:130
+msgid "``firstresult``"
+msgstr ""
+
+#: ../../deprecations.rst:131
+msgid "``historic``"
+msgstr ""
+
+#: ../../deprecations.rst:137
+msgid "``py.path.local`` arguments for hooks replaced with ``pathlib.Path``"
+msgstr ""
+
+#: ../../deprecations.rst:141
+msgid "In order to support the transition from ``py.path.local`` to :mod:`pathlib`, the following hooks now receive additional arguments:"
+msgstr ""
+
+#: ../../deprecations.rst:143
+msgid ":hook:`pytest_ignore_collect(collection_path: pathlib.Path) <pytest_ignore_collect>` as equivalent to ``path``"
+msgstr ""
+
+#: ../../deprecations.rst:144
+msgid ":hook:`pytest_collect_file(file_path: pathlib.Path) <pytest_collect_file>` as equivalent to ``path``"
+msgstr ""
+
+#: ../../deprecations.rst:145
+msgid ":hook:`pytest_pycollect_makemodule(module_path: pathlib.Path) <pytest_pycollect_makemodule>` as equivalent to ``path``"
+msgstr ""
+
+#: ../../deprecations.rst:146
+msgid ":hook:`pytest_report_header(start_path: pathlib.Path) <pytest_report_header>` as equivalent to ``startdir``"
+msgstr ""
+
+#: ../../deprecations.rst:147
+msgid ":hook:`pytest_report_collectionfinish(start_path: pathlib.Path) <pytest_report_collectionfinish>` as equivalent to ``startdir``"
+msgstr ""
+
+#: ../../deprecations.rst:149
+msgid "The accompanying ``py.path.local`` based paths have been deprecated: plugins which manually invoke those hooks should only pass the new ``pathlib.Path`` arguments, and users should change their hook implementations to use the new ``pathlib.Path`` arguments."
+msgstr ""
+
+#: ../../deprecations.rst:152
+msgid "The name of the :class:`~_pytest.nodes.Node` arguments and attributes, :ref:`outlined above <node-ctor-fspath-deprecation>` (the new attribute being ``path``) is **the opposite** of the situation for hooks (the old argument being ``path``)."
+msgstr ""
+
+#: ../../deprecations.rst:162
+msgid "Directly constructing internal classes"
+msgstr ""
+
+#: ../../deprecations.rst:166
+msgid "Directly constructing the following classes is now deprecated:"
+msgstr ""
+
+#: ../../deprecations.rst:168
+msgid "``_pytest.mark.structures.Mark``"
+msgstr ""
+
+#: ../../deprecations.rst:169
+msgid "``_pytest.mark.structures.MarkDecorator``"
+msgstr ""
+
+#: ../../deprecations.rst:170
+msgid "``_pytest.mark.structures.MarkGenerator``"
+msgstr ""
+
+#: ../../deprecations.rst:171
+msgid "``_pytest.python.Metafunc``"
+msgstr ""
+
+#: ../../deprecations.rst:172
+msgid "``_pytest.runner.CallInfo``"
+msgstr ""
+
+#: ../../deprecations.rst:173
+msgid "``_pytest._code.ExceptionInfo``"
+msgstr ""
+
+#: ../../deprecations.rst:174
+msgid "``_pytest.config.argparsing.Parser``"
+msgstr ""
+
+#: ../../deprecations.rst:175
+msgid "``_pytest.config.argparsing.OptionGroup``"
+msgstr ""
+
+#: ../../deprecations.rst:176
+msgid "``_pytest.pytester.HookRecorder``"
+msgstr ""
+
+#: ../../deprecations.rst:178
+msgid "These constructors have always been considered private, but now issue a deprecation warning, which may become a hard error in pytest 8."
+msgstr ""
+
+#: ../../deprecations.rst:183
+msgid "Diamond inheritance between :class:`pytest.Collector` and :class:`pytest.Item`"
+msgstr ""
+
+#: ../../deprecations.rst:187
+msgid "Defining a custom pytest node type which is both an :class:`~pytest.Item` and a :class:`~pytest.Collector` (e.g. :class:`~pytest.File`) now issues a warning. It was never sanely supported and triggers hard to debug errors."
+msgstr ""
+
+#: ../../deprecations.rst:190
+msgid "Some plugins providing linting/code analysis have been using this as a hack. Instead, a separate collector node should be used, which collects the item. See :ref:`non-python tests` for an example, as well as an `example pr fixing inheritance`_."
+msgstr ""
+
+#: ../../deprecations.rst:200
+msgid "Constructors of custom :class:`~_pytest.nodes.Node` subclasses should take ``**kwargs``"
+msgstr ""
+
+#: ../../deprecations.rst:204
+msgid "If custom subclasses of nodes like :class:`pytest.Item` override the ``__init__`` method, they should take ``**kwargs``. Thus,"
+msgstr ""
+
+#: ../../deprecations.rst:214
+msgid "should be turned into:"
+msgstr ""
+
+#: ../../deprecations.rst:223
+msgid "to avoid hard-coding the arguments pytest can pass to the superclass. See :ref:`non-python tests` for a full example."
+msgstr ""
+
+#: ../../deprecations.rst:226
+msgid "For cases without conflicts, no deprecation warning is emitted. For cases with conflicts (such as :class:`pytest.File` now taking ``path`` instead of ``fspath``, as :ref:`outlined above <node-ctor-fspath-deprecation>`), a deprecation warning is now raised."
+msgstr ""
+
+#: ../../deprecations.rst:232
+msgid "Applying a mark to a fixture function"
+msgstr ""
+
+#: ../../deprecations.rst:236
+msgid "Applying a mark to a fixture function never had any effect, but it is a common user error."
+msgstr ""
+
+#: ../../deprecations.rst:244
+msgid "Users expected in this case that the ``usefixtures`` mark would have its intended effect of using the ``clean_database`` fixture when ``user`` was invoked, when in fact it has no effect at all."
+msgstr ""
+
+#: ../../deprecations.rst:246
+msgid "Now pytest will issue a warning when it encounters this problem, and will raise an error in the future versions."
+msgstr ""
+
+#: ../../deprecations.rst:250
+msgid "Returning non-None value in test functions"
+msgstr ""
+
+#: ../../deprecations.rst:254
+msgid "A :class:`pytest.PytestReturnNotNoneWarning` is now emitted if a test function returns something other than `None`."
+msgstr ""
+
+#: ../../deprecations.rst:256
+msgid "This prevents a common mistake among beginners that expect that returning a `bool` would cause a test to pass or fail, for example:"
+msgstr ""
+
+#: ../../deprecations.rst:271
+msgid "Given that pytest ignores the return value, this might be surprising that it will never fail."
+msgstr ""
+
+#: ../../deprecations.rst:273
+msgid "The proper fix is to change the `return` to an `assert`:"
+msgstr ""
+
+#: ../../deprecations.rst:290
+msgid "The ``yield_fixture`` function/decorator"
+msgstr ""
+
+#: ../../deprecations.rst:294
+msgid "``pytest.yield_fixture`` is a deprecated alias for :func:`pytest.fixture`."
+msgstr ""
+
+#: ../../deprecations.rst:296
+msgid "It has been so for a very long time, so can be search/replaced safely."
+msgstr ""
+
+#: ../../deprecations.rst:300
+msgid "Removed Features and Breaking Changes"
+msgstr ""
+
+#: ../../deprecations.rst:302
+msgid "As stated in our :ref:`backwards-compatibility` policy, deprecated features are removed only in major releases after an appropriate period of deprecation has passed."
+msgstr ""
+
+#: ../../deprecations.rst:305
+msgid "Some breaking changes which could not be deprecated are also listed."
+msgstr ""
+
+#: ../../deprecations.rst:310
+msgid "Support for tests written for nose"
+msgstr ""
+
+#: ../../deprecations.rst:315
+msgid "Support for running tests written for `nose <https://nose.readthedocs.io/en/latest/>`__ is now deprecated."
+msgstr ""
+
+#: ../../deprecations.rst:317
+msgid "``nose`` has been in maintenance mode-only for years, and maintaining the plugin is not trivial as it spills over the code base (see :issue:`9886` for more details)."
+msgstr ""
+
+#: ../../deprecations.rst:321
+msgid "setup/teardown"
+msgstr ""
+
+#: ../../deprecations.rst:323
+msgid "One thing that might catch users by surprise is that plain ``setup`` and ``teardown`` methods are not pytest native, they are in fact part of the ``nose`` support."
+msgstr ""
+
+#: ../../deprecations.rst:342
+msgid "Native pytest support uses ``setup_method`` and ``teardown_method`` (see :ref:`xunit-method-setup`), so the above should be changed to:"
+msgstr ""
+
+#: ../../deprecations.rst:358
+msgid "This is easy to do in an entire code base by doing a simple find/replace."
+msgstr ""
+
+#: ../../deprecations.rst:361
+msgid "@with_setup"
+msgstr ""
+
+#: ../../deprecations.rst:363
+msgid "Code using `@with_setup <with-setup-nose>`_ such as this:"
+msgstr ""
+
+#: ../../deprecations.rst:379
+msgid "Will also need to be ported to a supported pytest style. One way to do it is using a fixture:"
+msgstr ""
+
+#: ../../deprecations.rst:406
+msgid "The ``compat_co_firstlineno`` attribute"
+msgstr ""
+
+#: ../../deprecations.rst:408
+msgid "Nose inspects this attribute on function objects to allow overriding the function's inferred line number. Pytest no longer respects this attribute."
+msgstr ""
+
+#: ../../deprecations.rst:414
+msgid "Passing ``msg=`` to ``pytest.skip``, ``pytest.fail`` or ``pytest.exit``"
+msgstr ""
+
+#: ../../deprecations.rst:419
+msgid "Passing the keyword argument ``msg`` to :func:`pytest.skip`, :func:`pytest.fail` or :func:`pytest.exit` is now deprecated and ``reason`` should be used instead.  This change is to bring consistency between these functions and the ``@pytest.mark.skip`` and ``@pytest.mark.xfail`` markers which already accept a ``reason`` argument."
+msgstr ""
+
+#: ../../deprecations.rst:449
+msgid "The ``pytest.Instance`` collector"
+msgstr ""
+
+#: ../../deprecations.rst:453
+msgid "The ``pytest.Instance`` collector type has been removed."
+msgstr ""
+
+#: ../../deprecations.rst:455
+msgid "Previously, Python test methods were collected as :class:`~pytest.Class` -> ``Instance`` -> :class:`~pytest.Function`. Now :class:`~pytest.Class` collects the test methods directly."
+msgstr ""
+
+#: ../../deprecations.rst:458
+msgid "Most plugins which reference ``Instance`` do so in order to ignore or skip it, using a check such as ``if isinstance(node, Instance): return``. Such plugins should simply remove consideration of ``Instance`` on pytest>=7. However, to keep such uses working, a dummy type has been instanced in ``pytest.Instance`` and ``_pytest.python.Instance``, and importing it emits a deprecation warning. This was removed in pytest 8."
+msgstr ""
+
+#: ../../deprecations.rst:466
+msgid "Using ``pytest.warns(None)``"
+msgstr ""
+
+#: ../../deprecations.rst:471
+msgid ":func:`pytest.warns(None) <pytest.warns>` is now deprecated because it was frequently misused. Its correct usage was checking that the code emits at least one warning of any type - like ``pytest.warns()`` or ``pytest.warns(Warning)``."
+msgstr ""
+
+#: ../../deprecations.rst:475
+msgid "See :ref:`warns use cases` for examples."
+msgstr ""
+
+#: ../../deprecations.rst:479
+msgid "Backward compatibilities in ``Parser.addoption``"
+msgstr ""
+
+#: ../../deprecations.rst:484
+msgid "Several behaviors of :meth:`Parser.addoption <pytest.Parser.addoption>` are now removed in pytest 8 (deprecated since pytest 2.4.0):"
+msgstr ""
+
+#: ../../deprecations.rst:487
+#, python-format
+msgid "``parser.addoption(..., help=\".. %default ..\")`` - use ``%(default)s`` instead."
+msgstr ""
+
+#: ../../deprecations.rst:488
+msgid "``parser.addoption(..., type=\"int/string/float/complex\")`` - use ``type=int`` etc. instead."
+msgstr ""
+
+#: ../../deprecations.rst:492
+msgid "The ``--strict`` command-line option"
+msgstr ""
+
+#: ../../deprecations.rst:497
+msgid "The ``--strict`` command-line option has been deprecated in favor of ``--strict-markers``, which better conveys what the option does."
+msgstr ""
+
+#: ../../deprecations.rst:500
+msgid "We have plans to maybe in the future to reintroduce ``--strict`` and make it an encompassing flag for all strictness related options (``--strict-markers`` and ``--strict-config`` at the moment, more might be introduced in the future)."
+msgstr ""
+
+#: ../../deprecations.rst:508
+msgid "Implementing the ``pytest_cmdline_preparse`` hook"
+msgstr ""
+
+#: ../../deprecations.rst:513
+msgid "Implementing the ``pytest_cmdline_preparse`` hook has been officially deprecated. Implement the :hook:`pytest_load_initial_conftests` hook instead."
+msgstr ""
+
+#: ../../deprecations.rst:530
+msgid "Collection changes in pytest 8"
+msgstr ""
+
+#: ../../deprecations.rst:532
+msgid "Added a new :class:`pytest.Directory` base collection node, which all collector nodes for filesystem directories are expected to subclass. This is analogous to the existing :class:`pytest.File` for file nodes."
+msgstr ""
+
+#: ../../deprecations.rst:535
+msgid "Changed :class:`pytest.Package` to be a subclass of :class:`pytest.Directory`. A ``Package`` represents a filesystem directory which is a Python package, i.e. contains an ``__init__.py`` file."
+msgstr ""
+
+#: ../../deprecations.rst:539
+msgid ":class:`pytest.Package` now only collects files in its own directory; previously it collected recursively. Sub-directories are collected as sub-collector nodes, thus creating a collection tree which mirrors the filesystem hierarchy."
+msgstr ""
+
+#: ../../deprecations.rst:542
+msgid ":attr:`session.name <pytest.Session.name>` is now ``\"\"``; previously it was the rootdir directory name. This matches :attr:`session.nodeid <_pytest.nodes.Node.nodeid>` which has always been `\"\"`."
+msgstr ""
+
+#: ../../deprecations.rst:545
+msgid "Added a new :class:`pytest.Dir` concrete collection node, a subclass of :class:`pytest.Directory`. This node represents a filesystem directory, which is not a :class:`pytest.Package`, i.e. does not contain an ``__init__.py`` file. Similarly to ``Package``, it only collects the files in its own directory, while collecting sub-directories as sub-collector nodes."
+msgstr ""
+
+#: ../../deprecations.rst:551
+msgid "Files and directories are now collected in alphabetical order jointly, unless changed by a plugin. Previously, files were collected before directories."
+msgstr ""
+
+#: ../../deprecations.rst:554
+msgid "The collection tree now contains directories/packages up to the :ref:`rootdir <rootdir>`, for initial arguments that are found within the rootdir. For files outside the rootdir, only the immediate directory/package is collected -- note however that collecting from outside the rootdir is discouraged."
+msgstr ""
+
+#: ../../deprecations.rst:559
+msgid "As an example, given the following filesystem tree::"
+msgstr ""
+
+#: ../../deprecations.rst:575
+msgid "the collection tree, as shown by `pytest --collect-only top/` but with the otherwise-hidden :class:`~pytest.Session` node added for clarity, is now the following::"
+msgstr ""
+
+#: ../../deprecations.rst:595
+msgid "Previously, it was::"
+msgstr ""
+
+#: ../../deprecations.rst:611
+msgid "Code/plugins which rely on a specific shape of the collection tree might need to update."
+msgstr ""
+
+#: ../../deprecations.rst:615
+msgid ":class:`pytest.Package` is no longer a :class:`pytest.Module` or :class:`pytest.File`"
+msgstr ""
+
+#: ../../deprecations.rst:619
+msgid "The ``Package`` collector node designates a Python package, that is, a directory with an `__init__.py` file. Previously ``Package`` was a subtype of ``pytest.Module`` (which represents a single Python module), the module being the `__init__.py` file. This has been deemed a design mistake (see :issue:`11137` and :issue:`7777` for details)."
+msgstr ""
+
+#: ../../deprecations.rst:624
+msgid "The ``path`` property of ``Package`` nodes now points to the package directory instead of the ``__init__.py`` file."
+msgstr ""
+
+#: ../../deprecations.rst:626
+msgid "Note that a ``Module`` node for ``__init__.py`` (which is not a ``Package``) may still exist, if it is picked up during collection (e.g. if you configured :confval:`python_files` to include ``__init__.py`` files)."
+msgstr ""
+
+#: ../../deprecations.rst:631
+msgid "Collecting ``__init__.py`` files no longer collects package"
+msgstr ""
+
+#: ../../deprecations.rst:635
+msgid "Running `pytest pkg/__init__.py` now collects the `pkg/__init__.py` file (module) only. Previously, it collected the entire `pkg` package, including other test files in the directory, but excluding tests in the `__init__.py` file itself (unless :confval:`python_files` was changed to allow `__init__.py` file)."
+msgstr ""
+
+#: ../../deprecations.rst:639
+msgid "To collect the entire package, specify just the directory: `pytest pkg`."
+msgstr ""
+
+#: ../../deprecations.rst:643
+msgid "The ``pytest.collect`` module"
+msgstr ""
+
+#: ../../deprecations.rst:648
+msgid "The ``pytest.collect`` module is no longer part of the public API, all its names should now be imported from ``pytest`` directly instead."
+msgstr ""
+
+#: ../../deprecations.rst:654
+msgid "The ``pytest_warning_captured`` hook"
+msgstr ""
+
+#: ../../deprecations.rst:659
+msgid "This hook has an `item` parameter which cannot be serialized by ``pytest-xdist``."
+msgstr ""
+
+#: ../../deprecations.rst:661
+msgid "Use the ``pytest_warning_recorded`` hook instead, which replaces the ``item`` parameter by a ``nodeid`` parameter."
+msgstr ""
+
+#: ../../deprecations.rst:667
+msgid "The ``pytest._fillfuncargs`` function"
+msgstr ""
+
+#: ../../deprecations.rst:672
+msgid "This function was kept for backward compatibility with an older plugin."
+msgstr ""
+
+#: ../../deprecations.rst:674
+msgid "It's functionality is not meant to be used directly, but if you must replace it, use `function._request._fillfixtures()` instead, though note this is not a public API and may break in the future."
+msgstr ""
+
+#: ../../deprecations.rst:680
+msgid "``--no-print-logs`` command-line option"
+msgstr ""
+
+#: ../../deprecations.rst:686
+msgid "The ``--no-print-logs`` option and ``log_print`` ini setting are removed. If you used them, please use ``--show-capture`` instead."
+msgstr ""
+
+#: ../../deprecations.rst:689
+msgid "A ``--show-capture`` command-line option was added in ``pytest 3.5.0`` which allows to specify how to display captured output when tests fail: ``no``, ``stdout``, ``stderr``, ``log`` or ``all`` (the default)."
+msgstr ""
+
+#: ../../deprecations.rst:696
+msgid "Result log (``--result-log``)"
+msgstr ""
+
+#: ../../deprecations.rst:701
+msgid "The ``--result-log`` option produces a stream of test reports which can be analysed at runtime, but it uses a custom format which requires users to implement their own parser."
+msgstr ""
+
+#: ../../deprecations.rst:705
+msgid "The  `pytest-reportlog <https://github.com/pytest-dev/pytest-reportlog>`__ plugin provides a ``--report-log`` option, a more standard and extensible alternative, producing one JSON object per-line, and should cover the same use cases. Please try it out and provide feedback."
+msgstr ""
+
+#: ../../deprecations.rst:708
+msgid "The ``pytest-reportlog`` plugin might even be merged into the core at some point, depending on the plans for the plugins and number of users using it."
+msgstr ""
+
+#: ../../deprecations.rst:712
+msgid "``pytest_collect_directory`` hook"
+msgstr ""
+
+#: ../../deprecations.rst:716
+msgid "The ``pytest_collect_directory`` hook has not worked properly for years (it was called but the results were ignored). Users may consider using :hook:`pytest_collection_modifyitems` instead."
+msgstr ""
+
+#: ../../deprecations.rst:720
+msgid "TerminalReporter.writer"
+msgstr ""
+
+#: ../../deprecations.rst:724
+msgid "The ``TerminalReporter.writer`` attribute has been deprecated and should no longer be used. This was inadvertently exposed as part of the public API of that plugin and ties it too much with ``py.io.TerminalWriter``."
+msgstr ""
+
+#: ../../deprecations.rst:728
+msgid "Plugins that used ``TerminalReporter.writer`` directly should instead use ``TerminalReporter`` methods that provide the same functionality."
+msgstr ""
+
+#: ../../deprecations.rst:734
+msgid "``junit_family`` default value change to \"xunit2\""
+msgstr ""
+
+#: ../../deprecations.rst:738
+msgid "The default value of ``junit_family`` option will change to ``xunit2`` in pytest 6.0, which is an update of the old ``xunit1`` format and is supported by default in modern tools that manipulate this type of file (for example, Jenkins, Azure Pipelines, etc.)."
+msgstr ""
+
+#: ../../deprecations.rst:742
+msgid "Users are recommended to try the new ``xunit2`` format and see if their tooling that consumes the JUnit XML file supports it."
+msgstr ""
+
+#: ../../deprecations.rst:745
+msgid "To use the new format, update your ``pytest.ini``:"
+msgstr ""
+
+#: ../../deprecations.rst:752
+msgid "If you discover that your tooling does not support the new format, and want to keep using the legacy version, set the option to ``legacy`` instead:"
+msgstr ""
+
+#: ../../deprecations.rst:760
+msgid "By using ``legacy`` you will keep using the legacy/xunit1 format when upgrading to pytest 6.0, where the default format will be ``xunit2``."
+msgstr ""
+
+#: ../../deprecations.rst:763
+msgid "In order to let users know about the transition, pytest will issue a warning in case the ``--junit-xml`` option is given in the command line but ``junit_family`` is not explicitly configured in ``pytest.ini``."
+msgstr ""
+
+#: ../../deprecations.rst:767
+msgid "Services known to support the ``xunit2`` format:"
+msgstr ""
+
+#: ../../deprecations.rst:769
+msgid "`Jenkins <https://www.jenkins.io/>`__ with the `JUnit <https://plugins.jenkins.io/junit>`__ plugin."
+msgstr ""
+
+#: ../../deprecations.rst:770
+msgid "`Azure Pipelines <https://azure.microsoft.com/en-us/services/devops/pipelines>`__."
+msgstr ""
+
+#: ../../deprecations.rst:773
+msgid "Node Construction changed to ``Node.from_parent``"
+msgstr ""
+
+#: ../../deprecations.rst:777
+msgid "The construction of nodes now should use the named constructor ``from_parent``. This limitation in api surface intends to enable better/simpler refactoring of the collection tree."
+msgstr ""
+
+#: ../../deprecations.rst:780
+msgid "This means that instead of :code:`MyItem(name=\"foo\", parent=collector, obj=42)` one now has to invoke :code:`MyItem.from_parent(collector, name=\"foo\")`."
+msgstr ""
+
+#: ../../deprecations.rst:783
+msgid "Plugins that wish to support older versions of pytest and suppress the warning can use `hasattr` to check if `from_parent` exists in that version:"
+msgstr ""
+
+#: ../../deprecations.rst:796
+msgid "Note that ``from_parent`` should only be called with keyword arguments for the parameters."
+msgstr ""
+
+#: ../../deprecations.rst:800
+msgid "``pytest.fixture`` arguments are keyword only"
+msgstr ""
+
+#: ../../deprecations.rst:804
+msgid "Passing arguments to pytest.fixture() as positional arguments has been removed - pass them by keyword instead."
+msgstr ""
+
+#: ../../deprecations.rst:807
+msgid "``funcargnames`` alias for ``fixturenames``"
+msgstr ""
+
+#: ../../deprecations.rst:811
+msgid "The ``FixtureRequest``, ``Metafunc``, and ``Function`` classes track the names of their associated fixtures, with the aptly-named ``fixturenames`` attribute."
+msgstr ""
+
+#: ../../deprecations.rst:814
+msgid "Prior to pytest 2.3, this attribute was named ``funcargnames``, and we have kept that as an alias since.  It is finally due for removal, as it is often confusing in places where we or plugin authors must distinguish between fixture names and names supplied by non-fixture things such as ``pytest.mark.parametrize``."
+msgstr ""
+
+#: ../../deprecations.rst:823
+msgid "``pytest.config`` global"
+msgstr ""
+
+#: ../../deprecations.rst:827
+msgid "The ``pytest.config`` global object is deprecated.  Instead use ``request.config`` (via the ``request`` fixture) or if you are a plugin author use the ``pytest_configure(config)`` hook. Note that many hooks can also access the ``config`` object indirectly, through ``session.config`` or ``item.config`` for example."
+msgstr ""
+
+#: ../../deprecations.rst:836
+msgid "``\"message\"`` parameter of ``pytest.raises``"
+msgstr ""
+
+#: ../../deprecations.rst:840
+msgid "It is a common mistake to think this parameter will match the exception message, while in fact it only serves to provide a custom message in case the ``pytest.raises`` check fails. To prevent users from making this mistake, and because it is believed to be little used, pytest is deprecating it without providing an alternative for the moment."
+msgstr ""
+
+#: ../../deprecations.rst:845
+msgid "If you have a valid use case for this parameter, consider that to obtain the same results you can just call ``pytest.fail`` manually at the end of the ``with`` statement."
+msgstr ""
+
+#: ../../deprecations.rst:848 ../../deprecations.rst:1157
+msgid "For example:"
+msgstr ""
+
+#: ../../deprecations.rst:856 ../../deprecations.rst:889
+#: ../../deprecations.rst:1018 ../../deprecations.rst:1088
+msgid "Becomes:"
+msgstr ""
+
+#: ../../deprecations.rst:865
+msgid "If you still have concerns about this deprecation and future removal, please comment on :issue:`3974`."
+msgstr ""
+
+#: ../../deprecations.rst:872
+msgid "``raises`` / ``warns`` with a string as the second argument"
+msgstr ""
+
+#: ../../deprecations.rst:876
+msgid "Use the context manager form of these instead.  When necessary, invoke ``exec`` directly."
+msgstr ""
+
+#: ../../deprecations.rst:879 ../../deprecations.rst:1010
+#: ../../deprecations.rst:1035
+msgid "Example:"
+msgstr ""
+
+#: ../../deprecations.rst:907
+msgid "Using ``Class`` in custom Collectors"
+msgstr ""
+
+#: ../../deprecations.rst:911
+msgid "Using objects named ``\"Class\"`` as a way to customize the type of nodes that are collected in ``Collector`` subclasses has been deprecated. Users instead should use ``pytest_pycollect_makeitem`` to customize node types during collection."
+msgstr ""
+
+#: ../../deprecations.rst:915
+msgid "This issue should affect only advanced plugins who create new collection types, so if you see this warning message please contact the authors so they can change the code."
+msgstr ""
+
+#: ../../deprecations.rst:922
+msgid "marks in ``pytest.mark.parametrize``"
+msgstr ""
+
+#: ../../deprecations.rst:926
+msgid "Applying marks to values of a ``pytest.mark.parametrize`` call is now deprecated. For example:"
+msgstr ""
+
+#: ../../deprecations.rst:943
+msgid "This code applies the ``pytest.mark.xfail(reason=\"flaky\")`` mark to the ``(6, 36)`` value of the above parametrization call."
+msgstr ""
+
+#: ../../deprecations.rst:946
+msgid "This was considered hard to read and understand, and also its implementation presented problems to the code preventing further internal improvements in the marks architecture."
+msgstr ""
+
+#: ../../deprecations.rst:949
+msgid "To update the code, use ``pytest.param``:"
+msgstr ""
+
+#: ../../deprecations.rst:970
+msgid "``pytest_funcarg__`` prefix"
+msgstr ""
+
+#: ../../deprecations.rst:974
+msgid "In very early pytest versions fixtures could be defined using the ``pytest_funcarg__`` prefix:"
+msgstr ""
+
+#: ../../deprecations.rst:981
+msgid "Switch over to the ``@pytest.fixture`` decorator:"
+msgstr ""
+
+#: ../../deprecations.rst:992
+msgid "[pytest] section in setup.cfg files"
+msgstr ""
+
+#: ../../deprecations.rst:996
+msgid "``[pytest]`` sections in ``setup.cfg`` files should now be named ``[tool:pytest]`` to avoid conflicts with other distutils commands."
+msgstr ""
+
+#: ../../deprecations.rst:1003
+msgid "Metafunc.addcall"
+msgstr ""
+
+#: ../../deprecations.rst:1007
+msgid "``Metafunc.addcall`` was a precursor to the current parametrized mechanism. Users should use :meth:`pytest.Metafunc.parametrize` instead."
+msgstr ""
+
+#: ../../deprecations.rst:1029
+msgid "``cached_setup``"
+msgstr ""
+
+#: ../../deprecations.rst:1033
+msgid "``request.cached_setup`` was the precursor of the setup/teardown mechanism available to fixtures."
+msgstr ""
+
+#: ../../deprecations.rst:1045
+msgid "This should be updated to make use of standard fixture mechanisms:"
+msgstr ""
+
+#: ../../deprecations.rst:1056
+msgid "You can consult :std:doc:`funcarg comparison section in the docs <funcarg_compare>` for more information."
+msgstr ""
+
+#: ../../deprecations.rst:1063
+msgid "pytest_plugins in non-top-level conftest files"
+msgstr ""
+
+#: ../../deprecations.rst:1067
+msgid "Defining :globalvar:`pytest_plugins` is now deprecated in non-top-level conftest.py files because they will activate referenced plugins *globally*, which is surprising because for all other pytest features ``conftest.py`` files are only *active* for tests at or below it."
+msgstr ""
+
+#: ../../deprecations.rst:1075
+msgid "``Config.warn`` and ``Node.warn``"
+msgstr ""
+
+#: ../../deprecations.rst:1079
+msgid "Those methods were part of the internal pytest warnings system, but since ``3.8`` pytest is using the builtin warning system for its own warnings, so those two functions are now deprecated."
+msgstr ""
+
+#: ../../deprecations.rst:1082
+msgid "``Config.warn`` should be replaced by calls to the standard ``warnings.warn``, example:"
+msgstr ""
+
+#: ../../deprecations.rst:1094
+msgid "``Node.warn`` now supports two signatures:"
+msgstr ""
+
+#: ../../deprecations.rst:1096
+msgid "``node.warn(PytestWarning(\"some message\"))``: is now the **recommended** way to call this function. The warning instance must be a PytestWarning or subclass."
+msgstr ""
+
+#: ../../deprecations.rst:1099
+msgid "``node.warn(\"CI\", \"some message\")``: this code/message form has been **removed** and should be converted to the warning instance form above."
+msgstr ""
+
+#: ../../deprecations.rst:1104
+msgid "record_xml_property"
+msgstr ""
+
+#: ../../deprecations.rst:1108
+msgid "The ``record_xml_property`` fixture is now deprecated in favor of the more generic ``record_property``, which can be used by other consumers (for example ``pytest-html``) to obtain custom information about the test run."
+msgstr ""
+
+#: ../../deprecations.rst:1111
+msgid "This is just a matter of renaming the fixture as the API is the same:"
+msgstr ""
+
+#: ../../deprecations.rst:1117
+msgid "Change to:"
+msgstr ""
+
+#: ../../deprecations.rst:1127
+msgid "Passing command-line string to ``pytest.main()``"
+msgstr ""
+
+#: ../../deprecations.rst:1131
+msgid "Passing a command-line string to ``pytest.main()`` is deprecated:"
+msgstr ""
+
+#: ../../deprecations.rst:1137
+msgid "Pass a list instead:"
+msgstr ""
+
+#: ../../deprecations.rst:1144
+msgid "By passing a string, users expect that pytest will interpret that command-line using the shell rules they are working on (for example ``bash`` or ``Powershell``), but this is very hard/impossible to do in a portable way."
+msgstr ""
+
+#: ../../deprecations.rst:1151
+msgid "Calling fixtures directly"
+msgstr ""
+
+#: ../../deprecations.rst:1155
+msgid "Calling a fixture function directly, as opposed to request them in a test function, is deprecated."
+msgstr ""
+
+#: ../../deprecations.rst:1172
+msgid "This is a great source of confusion to new users, which will often call the fixture functions and request them from test functions interchangeably, which breaks the fixture resolution model."
+msgstr ""
+
+#: ../../deprecations.rst:1174
+msgid "In those cases just request the function directly in the dependent fixture:"
+msgstr ""
+
+#: ../../deprecations.rst:1188
+msgid "Alternatively if the fixture function is called multiple times inside a test (making it hard to apply the above pattern) or if you would like to make minimal changes to the code, you can create a fixture which calls the original function together with the ``name`` parameter:"
+msgstr ""
+
+#: ../../deprecations.rst:1206
+msgid "``yield`` tests"
+msgstr ""
+
+#: ../../deprecations.rst:1210
+msgid "pytest supported ``yield``-style tests, where a test function actually ``yield`` functions and values that are then turned into proper test methods. Example:"
+msgstr ""
+
+#: ../../deprecations.rst:1223
+msgid "This would result into two actual test functions being generated."
+msgstr ""
+
+#: ../../deprecations.rst:1225
+msgid "This form of test function doesn't support fixtures properly, and users should switch to ``pytest.mark.parametrize``:"
+msgstr ""
+
+#: ../../deprecations.rst:1236
+msgid "Internal classes accessed through ``Node``"
+msgstr ""
+
+#: ../../deprecations.rst:1240
+msgid "Access of ``Module``, ``Function``, ``Class``, ``Instance``, ``File`` and ``Item`` through ``Node`` instances now issue this warning:"
+msgstr ""
+
+#: ../../deprecations.rst:1247
+msgid "Users should just ``import pytest`` and access those objects using the ``pytest`` module."
+msgstr ""
+
+#: ../../deprecations.rst:1249
+msgid "This has been documented as deprecated for years, but only now we are actually emitting deprecation warnings."
+msgstr ""
+
+#: ../../deprecations.rst:1252
+msgid "``Node.get_marker``"
+msgstr ""
+
+#: ../../deprecations.rst:1256
+msgid "As part of a large :ref:`marker-revamp`, ``_pytest.nodes.Node.get_marker`` is removed. See :ref:`the documentation <update marker code>` on tips on how to update your code."
+msgstr ""
+
+#: ../../deprecations.rst:1261
+msgid "``somefunction.markname``"
+msgstr ""
+
+#: ../../deprecations.rst:1265
+msgid "As part of a large :ref:`marker-revamp` we already deprecated using ``MarkInfo`` the only correct way to get markers of an element is via ``node.iter_markers(name)``."
+msgstr ""
+
+#: ../../deprecations.rst:1272
+msgid "``pytest_namespace``"
+msgstr ""
+
+#: ../../deprecations.rst:1276
+msgid "This hook is deprecated because it greatly complicates the pytest internals regarding configuration and initialization, making some bug fixes and refactorings impossible."
+msgstr ""
+
+#: ../../deprecations.rst:1279
+msgid "Example of usage:"
+msgstr ""
+
+#: ../../deprecations.rst:1290
+msgid "Plugin authors relying on this hook should instead require that users now import the plugin modules directly (with an appropriate public API)."
+msgstr ""
+
+#: ../../deprecations.rst:1292
+msgid "As a stopgap measure, plugin authors may still inject their names into pytest's namespace, usually during ``pytest_configure``:"
+msgstr ""
+

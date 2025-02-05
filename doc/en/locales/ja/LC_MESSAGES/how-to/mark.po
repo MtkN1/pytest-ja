@@ -1,0 +1,105 @@
+# SOME DESCRIPTIVE TITLE.
+# Copyright (C) 2015, holger krekel and pytest-dev team
+# This file is distributed under the same license as the pytest package.
+# FIRST AUTHOR <EMAIL@ADDRESS>, 2025.
+#
+#, fuzzy
+msgid ""
+msgstr ""
+"Project-Id-Version: pytest 0.1.dev16209\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2025-02-05 00:52+0900\n"
+"PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
+"Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
+"Language: ja\n"
+"Language-Team: ja <LL@li.org>\n"
+"Plural-Forms: nplurals=1; plural=0;\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=utf-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Generated-By: Babel 2.17.0\n"
+
+#: ../../how-to/mark.rst:4
+msgid "How to mark test functions with attributes"
+msgstr ""
+
+#: ../../how-to/mark.rst:6
+msgid "By using the ``pytest.mark`` helper you can easily set metadata on your test functions. You can find the full list of builtin markers in the :ref:`API Reference<marks ref>`. Or you can list all the markers, including builtin and custom, using the CLI - :code:`pytest --markers`."
+msgstr ""
+
+#: ../../how-to/mark.rst:11
+msgid "Here are some of the builtin markers:"
+msgstr ""
+
+#: ../../how-to/mark.rst:13
+msgid ":ref:`usefixtures <usefixtures>` - use fixtures on a test function or class"
+msgstr ""
+
+#: ../../how-to/mark.rst:14
+msgid ":ref:`filterwarnings <filterwarnings>` - filter certain warnings of a test function"
+msgstr ""
+
+#: ../../how-to/mark.rst:15
+msgid ":ref:`skip <skip>` - always skip a test function"
+msgstr ""
+
+#: ../../how-to/mark.rst:16
+msgid ":ref:`skipif <skipif>` - skip a test function if a certain condition is met"
+msgstr ""
+
+#: ../../how-to/mark.rst:17
+msgid ":ref:`xfail <xfail>` - produce an \"expected failure\" outcome if a certain condition is met"
+msgstr ""
+
+#: ../../how-to/mark.rst:19
+msgid ":ref:`parametrize <parametrizemark>` - perform multiple calls to the same test function."
+msgstr ""
+
+#: ../../how-to/mark.rst:22
+msgid "It's easy to create custom markers or to apply markers to whole test classes or modules. Those markers can be used by plugins, and also are commonly used to :ref:`select tests <mark run>` on the command-line with the ``-m`` option."
+msgstr ""
+
+#: ../../how-to/mark.rst:26
+msgid "See :ref:`mark examples` for examples which also serve as documentation."
+msgstr ""
+
+#: ../../how-to/mark.rst:30
+msgid "Marks can only be applied to tests, having no effect on :ref:`fixtures <fixtures>`."
+msgstr ""
+
+#: ../../how-to/mark.rst:35
+msgid "Registering marks"
+msgstr ""
+
+#: ../../how-to/mark.rst:37
+msgid "You can register custom marks in your ``pytest.ini`` file like this:"
+msgstr ""
+
+#: ../../how-to/mark.rst:46
+msgid "or in your ``pyproject.toml`` file like this:"
+msgstr ""
+
+#: ../../how-to/mark.rst:56
+msgid "Note that everything past the ``:`` after the mark name is an optional description."
+msgstr ""
+
+#: ../../how-to/mark.rst:58
+msgid "Alternatively, you can register new markers programmatically in a :ref:`pytest_configure <initialization-hooks>` hook:"
+msgstr ""
+
+#: ../../how-to/mark.rst:69
+msgid "Registered marks appear in pytest's help text and do not emit warnings (see the next section). It is recommended that third-party plugins always :ref:`register their markers <registering-markers>`."
+msgstr ""
+
+#: ../../how-to/mark.rst:75
+msgid "Raising errors on unknown marks"
+msgstr ""
+
+#: ../../how-to/mark.rst:77
+msgid "Unregistered marks applied with the ``@pytest.mark.name_of_the_mark`` decorator will always emit a warning in order to avoid silently doing something surprising due to mistyped names. As described in the previous section, you can disable the warning for custom marks by registering them in your ``pytest.ini`` file or using a custom ``pytest_configure`` hook."
+msgstr ""
+
+#: ../../how-to/mark.rst:83
+msgid "When the ``--strict-markers`` command-line flag is passed, any unknown marks applied with the ``@pytest.mark.name_of_the_mark`` decorator will trigger an error. You can enforce this validation in your project by adding ``--strict-markers`` to ``addopts``:"
+msgstr ""
+

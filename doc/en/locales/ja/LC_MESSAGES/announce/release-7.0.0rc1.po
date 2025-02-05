@@ -1,0 +1,249 @@
+# SOME DESCRIPTIVE TITLE.
+# Copyright (C) 2015, holger krekel and pytest-dev team
+# This file is distributed under the same license as the pytest package.
+# FIRST AUTHOR <EMAIL@ADDRESS>, 2025.
+#
+#, fuzzy
+msgid ""
+msgstr ""
+"Project-Id-Version: pytest 0.1.dev16209\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2025-02-05 00:52+0900\n"
+"PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
+"Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
+"Language: ja\n"
+"Language-Team: ja <LL@li.org>\n"
+"Plural-Forms: nplurals=1; plural=0;\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=utf-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Generated-By: Babel 2.17.0\n"
+
+#: ../../announce/release-7.0.0rc1.rst:2
+msgid "pytest-7.0.0rc1"
+msgstr ""
+
+#: ../../announce/release-7.0.0rc1.rst:4
+msgid "The pytest team is proud to announce the 7.0.0rc1 prerelease!"
+msgstr ""
+
+#: ../../announce/release-7.0.0rc1.rst:6
+msgid "This is a prerelease, not intended for production use, but to test the upcoming features and improvements in order to catch any major problems before the final version is released to the major public."
+msgstr ""
+
+#: ../../announce/release-7.0.0rc1.rst:9
+msgid "We appreciate your help testing this out before the final release, making sure to report any regressions to our issue tracker:"
+msgstr ""
+
+#: ../../announce/release-7.0.0rc1.rst:12
+msgid "https://github.com/pytest-dev/pytest/issues"
+msgstr ""
+
+#: ../../announce/release-7.0.0rc1.rst:14
+msgid "When doing so, please include the string ``[prerelease]`` in the title."
+msgstr ""
+
+#: ../../announce/release-7.0.0rc1.rst:16
+msgid "You can upgrade from PyPI via:"
+msgstr ""
+
+#: ../../announce/release-7.0.0rc1.rst:18
+msgid "pip install pytest==7.0.0rc1"
+msgstr ""
+
+#: ../../announce/release-7.0.0rc1.rst:20
+msgid "Users are encouraged to take a look at the CHANGELOG carefully:"
+msgstr ""
+
+#: ../../announce/release-7.0.0rc1.rst:22
+msgid "https://docs.pytest.org/en/7.0.x/changelog.html"
+msgstr ""
+
+#: ../../announce/release-7.0.0rc1.rst:24
+msgid "Thanks to all the contributors to this release:"
+msgstr ""
+
+#: ../../announce/release-7.0.0rc1.rst:26
+msgid "Adam J. Stewart"
+msgstr ""
+
+#: ../../announce/release-7.0.0rc1.rst:27
+msgid "Alexander King"
+msgstr ""
+
+#: ../../announce/release-7.0.0rc1.rst:28
+msgid "Amin Alaee"
+msgstr ""
+
+#: ../../announce/release-7.0.0rc1.rst:29
+msgid "Andrew Neitsch"
+msgstr ""
+
+#: ../../announce/release-7.0.0rc1.rst:30
+msgid "Anthony Sottile"
+msgstr ""
+
+#: ../../announce/release-7.0.0rc1.rst:31
+msgid "Ben Davies"
+msgstr ""
+
+#: ../../announce/release-7.0.0rc1.rst:32
+msgid "Bernát Gábor"
+msgstr ""
+
+#: ../../announce/release-7.0.0rc1.rst:33
+msgid "Brian Okken"
+msgstr ""
+
+#: ../../announce/release-7.0.0rc1.rst:34
+msgid "Bruno Oliveira"
+msgstr ""
+
+#: ../../announce/release-7.0.0rc1.rst:35
+msgid "Cristian Vera"
+msgstr ""
+
+#: ../../announce/release-7.0.0rc1.rst:36
+msgid "David Szotten"
+msgstr ""
+
+#: ../../announce/release-7.0.0rc1.rst:37
+msgid "Eddie"
+msgstr ""
+
+#: ../../announce/release-7.0.0rc1.rst:38
+msgid "Emmanuel Arias"
+msgstr ""
+
+#: ../../announce/release-7.0.0rc1.rst:39
+msgid "Emmanuel Meric de Bellefon"
+msgstr ""
+
+#: ../../announce/release-7.0.0rc1.rst:40
+msgid "Eric Liu"
+msgstr ""
+
+#: ../../announce/release-7.0.0rc1.rst:41
+msgid "Florian Bruhin"
+msgstr ""
+
+#: ../../announce/release-7.0.0rc1.rst:42
+msgid "GergelyKalmar"
+msgstr ""
+
+#: ../../announce/release-7.0.0rc1.rst:43
+msgid "Graeme Smecher"
+msgstr ""
+
+#: ../../announce/release-7.0.0rc1.rst:44
+msgid "Harshna"
+msgstr ""
+
+#: ../../announce/release-7.0.0rc1.rst:45
+msgid "Hugo van Kemenade"
+msgstr ""
+
+#: ../../announce/release-7.0.0rc1.rst:46
+msgid "Jakub Kulík"
+msgstr ""
+
+#: ../../announce/release-7.0.0rc1.rst:47
+msgid "James Myatt"
+msgstr ""
+
+#: ../../announce/release-7.0.0rc1.rst:48
+msgid "Jeff Rasley"
+msgstr ""
+
+#: ../../announce/release-7.0.0rc1.rst:49
+msgid "Kale Kundert"
+msgstr ""
+
+#: ../../announce/release-7.0.0rc1.rst:50
+msgid "Miro Hrončok"
+msgstr ""
+
+#: ../../announce/release-7.0.0rc1.rst:51
+msgid "Naveen-Pratap"
+msgstr ""
+
+#: ../../announce/release-7.0.0rc1.rst:52
+msgid "Oleg Höfling"
+msgstr ""
+
+#: ../../announce/release-7.0.0rc1.rst:53
+msgid "Ran Benita"
+msgstr ""
+
+#: ../../announce/release-7.0.0rc1.rst:54
+msgid "Ronny Pfannschmidt"
+msgstr ""
+
+#: ../../announce/release-7.0.0rc1.rst:55
+msgid "Simon K"
+msgstr ""
+
+#: ../../announce/release-7.0.0rc1.rst:56
+msgid "Srip"
+msgstr ""
+
+#: ../../announce/release-7.0.0rc1.rst:57
+msgid "Sören Wegener"
+msgstr ""
+
+#: ../../announce/release-7.0.0rc1.rst:58
+msgid "Taneli Hukkinen"
+msgstr ""
+
+#: ../../announce/release-7.0.0rc1.rst:59
+msgid "Terje Runde"
+msgstr ""
+
+#: ../../announce/release-7.0.0rc1.rst:60
+msgid "Thomas Grainger"
+msgstr ""
+
+#: ../../announce/release-7.0.0rc1.rst:61
+msgid "Thomas Hisch"
+msgstr ""
+
+#: ../../announce/release-7.0.0rc1.rst:62
+msgid "William Jamir Silva"
+msgstr ""
+
+#: ../../announce/release-7.0.0rc1.rst:63
+msgid "Zac Hatfield-Dodds"
+msgstr ""
+
+#: ../../announce/release-7.0.0rc1.rst:64
+msgid "andrewdotn"
+msgstr ""
+
+#: ../../announce/release-7.0.0rc1.rst:65
+msgid "denivyruck"
+msgstr ""
+
+#: ../../announce/release-7.0.0rc1.rst:66
+msgid "ericluoliu"
+msgstr ""
+
+#: ../../announce/release-7.0.0rc1.rst:67
+msgid "oleg.hoefling"
+msgstr ""
+
+#: ../../announce/release-7.0.0rc1.rst:68
+msgid "symonk"
+msgstr ""
+
+#: ../../announce/release-7.0.0rc1.rst:69
+msgid "ziebam"
+msgstr ""
+
+#: ../../announce/release-7.0.0rc1.rst:70
+msgid "Éloi Rivard"
+msgstr ""
+
+#: ../../announce/release-7.0.0rc1.rst:73
+msgid "Happy testing, The pytest Development Team"
+msgstr ""
+

@@ -1,0 +1,214 @@
+# SOME DESCRIPTIVE TITLE.
+# Copyright (C) 2015, holger krekel and pytest-dev team
+# This file is distributed under the same license as the pytest package.
+# FIRST AUTHOR <EMAIL@ADDRESS>, 2025.
+#
+#, fuzzy
+msgid ""
+msgstr ""
+"Project-Id-Version: pytest 0.1.dev16209\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2025-02-05 00:52+0900\n"
+"PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
+"Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
+"Language: ja\n"
+"Language-Team: ja <LL@li.org>\n"
+"Plural-Forms: nplurals=1; plural=0;\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=utf-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Generated-By: Babel 2.17.0\n"
+
+#: ../../backwards-compatibility.rst:4
+msgid "Backwards Compatibility Policy"
+msgstr ""
+
+#: ../../backwards-compatibility.rst:8
+msgid "Pytest is an actively evolving project that has been decades in the making. We keep learning about new and better structures to express different details about testing."
+msgstr ""
+
+#: ../../backwards-compatibility.rst:11
+msgid "While we implement those modifications, we try to ensure an easy transition and don't want to impose unnecessary churn on our users and community/plugin authors."
+msgstr ""
+
+#: ../../backwards-compatibility.rst:13
+msgid "As of now, pytest considers multiple types of backward compatibility transitions:"
+msgstr ""
+
+#: ../../backwards-compatibility.rst:15
+msgid "trivial: APIs that trivially translate to the new mechanism and do not cause problematic changes."
+msgstr ""
+
+#: ../../backwards-compatibility.rst:17
+msgid "We try to support those indefinitely while encouraging users to switch to newer or better mechanisms through documentation."
+msgstr ""
+
+#: ../../backwards-compatibility.rst:19
+msgid "transitional: the old and new APIs don't conflict, and we can help users transition by using warnings while supporting both for a prolonged period of time."
+msgstr ""
+
+#: ../../backwards-compatibility.rst:21
+msgid "We will only start the removal of deprecated functionality in major releases (e.g., if we deprecate something in 3.0, we will start to remove it in 4.0), and keep it around for at least two minor releases (e.g., if we deprecate something in 3.9 and 4.0 is the next release, we start to remove it in 5.0, not in 4.0)."
+msgstr ""
+
+#: ../../backwards-compatibility.rst:23
+msgid "A deprecated feature scheduled to be removed in major version X will use the warning class `PytestRemovedInXWarning` (a subclass of :class:`~pytest.PytestDeprecationWarning`)."
+msgstr ""
+
+#: ../../backwards-compatibility.rst:25
+msgid "When the deprecation expires (e.g., 4.0 is released), we won't remove the deprecated functionality immediately but will use the standard warning filters to turn `PytestRemovedInXWarning` (e.g., `PytestRemovedIn4Warning`) into **errors** by default. This approach makes it explicit that removal is imminent and still gives you time to turn the deprecated feature into a warning instead of an error so it can be dealt with in your own time. In the next minor release (e.g., 4.1), the feature will be effectively removed."
+msgstr ""
+
+#: ../../backwards-compatibility.rst:27
+msgid "True breakage should only be considered when a normal transition is unreasonably unsustainable and would offset important developments or features by years. In addition, they should be limited to APIs where the number of actual users is very small (for example, only impacting some plugins) and can be coordinated with the community in advance."
+msgstr ""
+
+#: ../../backwards-compatibility.rst:29
+msgid "Examples for such upcoming changes:"
+msgstr ""
+
+#: ../../backwards-compatibility.rst:31
+msgid "removal of ``pytest_runtest_protocol/nextitem`` - :issue:`895`"
+msgstr ""
+
+#: ../../backwards-compatibility.rst:32
+msgid "rearranging of the node tree to include ``FunctionDefinition``"
+msgstr ""
+
+#: ../../backwards-compatibility.rst:33
+msgid "rearranging of ``SetupState`` :issue:`895`"
+msgstr ""
+
+#: ../../backwards-compatibility.rst:35
+msgid "True breakages must be announced first in an issue containing:"
+msgstr ""
+
+#: ../../backwards-compatibility.rst:37
+msgid "Detailed description of the change"
+msgstr ""
+
+#: ../../backwards-compatibility.rst:38
+msgid "Rationale"
+msgstr ""
+
+#: ../../backwards-compatibility.rst:39
+msgid "Expected impact on users and plugin authors (example in :issue:`895`)"
+msgstr ""
+
+#: ../../backwards-compatibility.rst:41
+msgid "After there's no hard *-1* on the issue it should be followed up by an initial proof-of-concept Pull Request."
+msgstr ""
+
+#: ../../backwards-compatibility.rst:43
+msgid "This POC serves as both a coordination point to assess impact and potential inspiration to come up with a transitional solution after all."
+msgstr ""
+
+#: ../../backwards-compatibility.rst:45
+msgid "After a reasonable amount of time the PR can be merged to base a new major release."
+msgstr ""
+
+#: ../../backwards-compatibility.rst:47
+msgid "For the PR to mature from POC to acceptance, it must contain: * Setup of deprecation errors/warnings that help users fix and port their code. If it is possible to introduce a deprecation period under the current series, before the true breakage, it should be introduced in a separate PR and be part of the current release stream. * Detailed description of the rationale and examples on how to port code in ``doc/en/deprecations.rst``."
+msgstr ""
+
+#: ../../backwards-compatibility.rst:53
+msgid "History"
+msgstr ""
+
+#: ../../backwards-compatibility.rst:57
+msgid "Focus primary on smooth transition - stance (pre 6.0)"
+msgstr ""
+
+#: ../../backwards-compatibility.rst:59
+msgid "Keeping backwards compatibility has a very high priority in the pytest project. Although we have deprecated functionality over the years, most of it is still supported. All deprecations in pytest were done because simpler or more efficient ways of accomplishing the same tasks have emerged, making the old way of doing things unnecessary."
+msgstr ""
+
+#: ../../backwards-compatibility.rst:61
+msgid "With the pytest 3.0 release, we introduced a clear communication scheme for when we will actually remove the old busted joint and politely ask you to use the new hotness instead, while giving you enough time to adjust your tests or raise concerns if there are valid reasons to keep deprecated functionality around."
+msgstr ""
+
+#: ../../backwards-compatibility.rst:63
+msgid "To communicate changes, we issue deprecation warnings using a custom warning hierarchy (see :ref:`internal-warnings`). These warnings may be suppressed using the standard means: ``-W`` command-line flag or ``filterwarnings`` ini options (see :ref:`warnings`), but we suggest to use these sparingly and temporarily, and heed the warnings when possible."
+msgstr ""
+
+#: ../../backwards-compatibility.rst:65
+msgid "We will only start the removal of deprecated functionality in major releases (e.g. if we deprecate something in 3.0, we will start to remove it in 4.0), and keep it around for at least two minor releases (e.g. if we deprecate something in 3.9 and 4.0 is the next release, we start to remove it in 5.0, not in 4.0)."
+msgstr ""
+
+#: ../../backwards-compatibility.rst:67
+msgid "When the deprecation expires (e.g. 4.0 is released), we won't remove the deprecated functionality immediately, but will use the standard warning filters to turn them into **errors** by default. This approach makes it explicit that removal is imminent, and still gives you time to turn the deprecated feature into a warning instead of an error so it can be dealt with in your own time. In the next minor release (e.g. 4.1), the feature will be effectively removed."
+msgstr ""
+
+#: ../../backwards-compatibility.rst:71
+msgid "Deprecation Roadmap"
+msgstr ""
+
+#: ../../backwards-compatibility.rst:73
+msgid "Features currently deprecated and removed in previous releases can be found in :ref:`deprecations`."
+msgstr ""
+
+#: ../../backwards-compatibility.rst:75
+#, python-format
+msgid "We track future deprecation and removal of features using milestones and the `deprecation <https://github.com/pytest-dev/pytest/issues?q=label%3A%22type%3A+deprecation%22>`_ and `removal <https://github.com/pytest-dev/pytest/labels/type%3A%20removal>`_ labels on GitHub."
+msgstr ""
+
+#: ../../backwards-compatibility.rst:79
+msgid "Python version support"
+msgstr ""
+
+#: ../../backwards-compatibility.rst:81
+msgid "Released pytest versions support all Python versions that are actively maintained at the time of the release:"
+msgstr ""
+
+#: ../../backwards-compatibility.rst:84
+msgid "pytest version"
+msgstr ""
+
+#: ../../backwards-compatibility.rst:84
+msgid "min. Python version"
+msgstr ""
+
+#: ../../backwards-compatibility.rst:86
+msgid "8.0+"
+msgstr ""
+
+#: ../../backwards-compatibility.rst:86
+msgid "3.8+"
+msgstr ""
+
+#: ../../backwards-compatibility.rst:87
+msgid "7.1+"
+msgstr ""
+
+#: ../../backwards-compatibility.rst:87
+msgid "3.7+"
+msgstr ""
+
+#: ../../backwards-compatibility.rst:88
+msgid "6.2 - 7.0"
+msgstr ""
+
+#: ../../backwards-compatibility.rst:88
+msgid "3.6+"
+msgstr ""
+
+#: ../../backwards-compatibility.rst:89
+msgid "5.0 - 6.1"
+msgstr ""
+
+#: ../../backwards-compatibility.rst:89
+msgid "3.5+"
+msgstr ""
+
+#: ../../backwards-compatibility.rst:90
+msgid "3.3 - 4.6"
+msgstr ""
+
+#: ../../backwards-compatibility.rst:90
+msgid "2.7, 3.4+"
+msgstr ""
+
+#: ../../backwards-compatibility.rst:93
+msgid "`Status of Python Versions <https://devguide.python.org/versions/>`__."
+msgstr ""
+

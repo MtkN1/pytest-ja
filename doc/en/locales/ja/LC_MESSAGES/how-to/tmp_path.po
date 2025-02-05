@@ -1,0 +1,142 @@
+# SOME DESCRIPTIVE TITLE.
+# Copyright (C) 2015, holger krekel and pytest-dev team
+# This file is distributed under the same license as the pytest package.
+# FIRST AUTHOR <EMAIL@ADDRESS>, 2025.
+#
+#, fuzzy
+msgid ""
+msgstr ""
+"Project-Id-Version: pytest 0.1.dev16209\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2025-02-05 00:52+0900\n"
+"PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
+"Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
+"Language: ja\n"
+"Language-Team: ja <LL@li.org>\n"
+"Plural-Forms: nplurals=1; plural=0;\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=utf-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Generated-By: Babel 2.17.0\n"
+
+#: ../../how-to/tmp_path.rst:6
+msgid "How to use temporary directories and files in tests"
+msgstr ""
+
+#: ../../how-to/tmp_path.rst:9
+msgid "The ``tmp_path`` fixture"
+msgstr ""
+
+#: ../../how-to/tmp_path.rst:11
+msgid "You can use the ``tmp_path`` fixture which will provide a temporary directory unique to each test function."
+msgstr ""
+
+#: ../../how-to/tmp_path.rst:14
+msgid "``tmp_path`` is a :class:`pathlib.Path` object. Here is an example test usage:"
+msgstr ""
+
+#: ../../how-to/tmp_path.rst:31
+msgid "Running this would result in a passed test except for the last ``assert 0`` line which we use to look at values:"
+msgstr ""
+
+#: ../../how-to/tmp_path.rst:64
+msgid "By default, ``pytest`` retains the temporary directory for the last 3 ``pytest`` invocations. Concurrent invocations of the same test function are supported by configuring the base temporary directory to be unique for each concurrent run. See `temporary directory location and retention`_ for details."
+msgstr ""
+
+#: ../../how-to/tmp_path.rst:72
+msgid "The ``tmp_path_factory`` fixture"
+msgstr ""
+
+#: ../../how-to/tmp_path.rst:74
+msgid "The ``tmp_path_factory`` is a session-scoped fixture which can be used to create arbitrary temporary directories from any other fixture or test."
+msgstr ""
+
+#: ../../how-to/tmp_path.rst:77
+msgid "For example, suppose your test suite needs a large image on disk, which is generated procedurally. Instead of computing the same image for each test that uses it into its own ``tmp_path``, you can generate it once per-session to save time:"
+msgstr ""
+
+#: ../../how-to/tmp_path.rst:101
+msgid "See :ref:`tmp_path_factory API <tmp_path_factory factory api>` for details."
+msgstr ""
+
+#: ../../how-to/tmp_path.rst:107
+msgid "The ``tmpdir`` and ``tmpdir_factory`` fixtures"
+msgstr ""
+
+#: ../../how-to/tmp_path.rst:109
+msgid "The ``tmpdir`` and ``tmpdir_factory`` fixtures are similar to ``tmp_path`` and ``tmp_path_factory``, but use/return legacy `py.path.local`_ objects rather than standard :class:`pathlib.Path` objects."
+msgstr ""
+
+#: ../../how-to/tmp_path.rst:114
+msgid "These days, it is preferred to use ``tmp_path`` and ``tmp_path_factory``."
+msgstr ""
+
+#: ../../how-to/tmp_path.rst:116
+msgid "In order to help modernize old code bases, one can run pytest with the legacypath plugin disabled:"
+msgstr ""
+
+#: ../../how-to/tmp_path.rst:123
+msgid "This will trigger errors on tests using the legacy paths. It can also be permanently set as part of the :confval:`addopts` parameter in the config file."
+msgstr ""
+
+#: ../../how-to/tmp_path.rst:127
+msgid "See :fixture:`tmpdir <tmpdir>` :fixture:`tmpdir_factory <tmpdir_factory>` API for details."
+msgstr ""
+
+#: ../../how-to/tmp_path.rst:134
+msgid "Temporary directory location and retention"
+msgstr ""
+
+#: ../../how-to/tmp_path.rst:136
+msgid "The temporary directories, as returned by the :fixture:`tmp_path` and (now deprecated) :fixture:`tmpdir` fixtures, are automatically created under a base temporary directory, in a structure that depends on the ``--basetemp`` option:"
+msgstr ""
+
+#: ../../how-to/tmp_path.rst:141
+msgid "By default (when the ``--basetemp`` option is not set), the temporary directories will follow this template:"
+msgstr ""
+
+#: ../../how-to/tmp_path.rst:148
+msgid "where:"
+msgstr ""
+
+#: ../../how-to/tmp_path.rst:150
+#, python-brace-format
+msgid "``{temproot}`` is the system temporary directory as determined by :py:func:`tempfile.gettempdir`. It can be overridden by the :envvar:`PYTEST_DEBUG_TEMPROOT` environment variable."
+msgstr ""
+
+#: ../../how-to/tmp_path.rst:153
+#, python-brace-format
+msgid "``{user}`` is the user name running the tests,"
+msgstr ""
+
+#: ../../how-to/tmp_path.rst:154
+#, python-brace-format
+msgid "``{num}`` is a number that is incremented with each test suite run"
+msgstr ""
+
+#: ../../how-to/tmp_path.rst:155
+#, python-brace-format
+msgid "``{testname}`` is a sanitized version of :py:attr:`the name of the current test <_pytest.nodes.Node.name>`."
+msgstr ""
+
+#: ../../how-to/tmp_path.rst:157
+#, python-brace-format
+msgid "The auto-incrementing ``{num}`` placeholder provides a basic retention feature and avoids that existing results of previous test runs are blindly removed. By default, the last 3 temporary directories are kept, but this behavior can be configured with :confval:`tmp_path_retention_count` and :confval:`tmp_path_retention_policy`."
+msgstr ""
+
+#: ../../how-to/tmp_path.rst:163
+msgid "When the ``--basetemp`` option is used (e.g. ``pytest --basetemp=mydir``), it will be used directly as base temporary directory:"
+msgstr ""
+
+#: ../../how-to/tmp_path.rst:170
+msgid "Note that there is no retention feature in this case: only the results of the most recent run will be kept."
+msgstr ""
+
+#: ../../how-to/tmp_path.rst:175
+msgid "The directory given to ``--basetemp`` will be cleared blindly before each test run, so make sure to use a directory for that purpose only."
+msgstr ""
+
+#: ../../how-to/tmp_path.rst:178
+msgid "When distributing tests on the local machine using ``pytest-xdist``, care is taken to automatically configure a `basetemp` directory for the sub processes such that all temporary data lands below a single per-test run temporary directory."
+msgstr ""
+

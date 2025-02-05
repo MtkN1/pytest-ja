@@ -1,0 +1,45 @@
+# SOME DESCRIPTIVE TITLE.
+# Copyright (C) 2015, holger krekel and pytest-dev team
+# This file is distributed under the same license as the pytest package.
+# FIRST AUTHOR <EMAIL@ADDRESS>, 2025.
+#
+#, fuzzy
+msgid ""
+msgstr ""
+"Project-Id-Version: pytest 0.1.dev16209\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2025-02-05 00:52+0900\n"
+"PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
+"Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
+"Language: ja\n"
+"Language-Team: ja <LL@li.org>\n"
+"Plural-Forms: nplurals=1; plural=0;\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=utf-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Generated-By: Babel 2.17.0\n"
+
+#: ../../builtin.rst:6
+msgid "Pytest API and builtin fixtures"
+msgstr ""
+
+#: ../../builtin.rst:9
+msgid "Most of the information of this page has been moved over to :ref:`api-reference`."
+msgstr ""
+
+#: ../../builtin.rst:11
+msgid "For information on plugin hooks and objects, see :ref:`plugins`."
+msgstr ""
+
+#: ../../builtin.rst:13
+msgid "For information on the ``pytest.mark`` mechanism, see :ref:`mark`."
+msgstr ""
+
+#: ../../builtin.rst:15
+msgid "For information about fixtures, see :ref:`fixtures`. To see a complete list of available fixtures (add ``-v`` to also see fixtures with leading ``_``), type :"
+msgstr ""
+
+#: ../../builtin.rst:247
+msgid "You can also interactively ask for help, e.g. by typing on the Python interactive prompt something like:"
+msgstr ""
+

@@ -1,0 +1,85 @@
+# SOME DESCRIPTIVE TITLE.
+# Copyright (C) 2015, holger krekel and pytest-dev team
+# This file is distributed under the same license as the pytest package.
+# FIRST AUTHOR <EMAIL@ADDRESS>, 2025.
+#
+#, fuzzy
+msgid ""
+msgstr ""
+"Project-Id-Version: pytest 0.1.dev16209\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2025-02-05 00:52+0900\n"
+"PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
+"Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
+"Language: ja\n"
+"Language-Team: ja <LL@li.org>\n"
+"Plural-Forms: nplurals=1; plural=0;\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=utf-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Generated-By: Babel 2.17.0\n"
+
+#: ../../reference/exit-codes.rst:4
+msgid "Exit codes"
+msgstr ""
+
+#: ../../reference/exit-codes.rst:6
+msgid "Running ``pytest`` can result in six different exit codes:"
+msgstr ""
+
+#: ../../reference/exit-codes.rst
+msgid "Exit code 0"
+msgstr ""
+
+#: ../../reference/exit-codes.rst:8
+msgid "All tests were collected and passed successfully"
+msgstr ""
+
+#: ../../reference/exit-codes.rst
+msgid "Exit code 1"
+msgstr ""
+
+#: ../../reference/exit-codes.rst:9
+msgid "Tests were collected and run but some of the tests failed"
+msgstr ""
+
+#: ../../reference/exit-codes.rst
+msgid "Exit code 2"
+msgstr ""
+
+#: ../../reference/exit-codes.rst:10
+msgid "Test execution was interrupted by the user"
+msgstr ""
+
+#: ../../reference/exit-codes.rst
+msgid "Exit code 3"
+msgstr ""
+
+#: ../../reference/exit-codes.rst:11
+msgid "Internal error happened while executing tests"
+msgstr ""
+
+#: ../../reference/exit-codes.rst
+msgid "Exit code 4"
+msgstr ""
+
+#: ../../reference/exit-codes.rst:12
+msgid "pytest command line usage error"
+msgstr ""
+
+#: ../../reference/exit-codes.rst
+msgid "Exit code 5"
+msgstr ""
+
+#: ../../reference/exit-codes.rst:13
+msgid "No tests were collected"
+msgstr ""
+
+#: ../../reference/exit-codes.rst:15
+msgid "They are represented by the :class:`pytest.ExitCode` enum. The exit codes being a part of the public API can be imported and accessed directly using:"
+msgstr ""
+
+#: ../../reference/exit-codes.rst:23
+msgid "If you would like to customize the exit code in some scenarios, specially when no tests are collected, consider using the `pytest-custom_exit_code <https://github.com/yashtodi94/pytest-custom_exit_code>`__ plugin."
+msgstr ""
+

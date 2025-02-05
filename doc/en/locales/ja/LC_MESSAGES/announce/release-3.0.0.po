@@ -1,0 +1,73 @@
+# SOME DESCRIPTIVE TITLE.
+# Copyright (C) 2015, holger krekel and pytest-dev team
+# This file is distributed under the same license as the pytest package.
+# FIRST AUTHOR <EMAIL@ADDRESS>, 2025.
+#
+#, fuzzy
+msgid ""
+msgstr ""
+"Project-Id-Version: pytest 0.1.dev16209\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2025-02-05 00:52+0900\n"
+"PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
+"Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
+"Language: ja\n"
+"Language-Team: ja <LL@li.org>\n"
+"Plural-Forms: nplurals=1; plural=0;\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=utf-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Generated-By: Babel 2.17.0\n"
+
+#: ../../announce/release-3.0.0.rst:2
+msgid "pytest-3.0.0"
+msgstr ""
+
+#: ../../announce/release-3.0.0.rst:4
+msgid "The pytest team is proud to announce the 3.0.0 release!"
+msgstr ""
+
+#: ../../announce/release-3.0.0.rst:6
+msgid "pytest is a mature Python testing tool with more than 1600 tests against itself, passing on many different interpreters and platforms."
+msgstr ""
+
+#: ../../announce/release-3.0.0.rst:9
+msgid "This release contains a lot of bugs fixes and improvements, and much of the work done on it was possible because of the 2016 Sprint[1], which was funded by an indiegogo campaign which raised over US$12,000 with nearly 100 backers."
+msgstr ""
+
+#: ../../announce/release-3.0.0.rst:14
+msgid "There's a \"What's new in pytest 3.0\" [2] blog post highlighting the major features in this release."
+msgstr ""
+
+#: ../../announce/release-3.0.0.rst:17
+msgid "To see the complete changelog and documentation, please visit:"
+msgstr ""
+
+#: ../../announce/release-3.0.0.rst:19
+msgid "http://docs.pytest.org"
+msgstr ""
+
+#: ../../announce/release-3.0.0.rst:21
+msgid "As usual, you can upgrade from pypi via:"
+msgstr ""
+
+#: ../../announce/release-3.0.0.rst:23
+msgid "pip install -U pytest"
+msgstr ""
+
+#: ../../announce/release-3.0.0.rst:25
+msgid "Thanks to all who contributed to this release, among them:"
+msgstr ""
+
+#: ../../announce/release-3.0.0.rst:27
+msgid "AbdealiJK Ana Ribeiro Antony Lee Brandon W Maister Brianna Laugher Bruno Oliveira Ceridwen Christian Boelsen Daniel Hahler Danielle Jenkins Dave Hunt Diego Russo Dmitry Dygalo Edoardo Batini Eli Boyarski Florian Bruhin Floris Bruynooghe Greg Price Guyzmo HEAD KANGAROO JJ Javi Romero Javier Domingo Cansino Kale Kundert Kalle Bronsen Marius Gedminas Matt Williams Mike Lundy Oliver Bestwalter Omar Kohl Raphael Pierzina RedBeardCode Roberto Polli Romain Dorgueil Roman Bolshakov Ronny Pfannschmidt Stefan Zimmermann Steffen Allner Tareq Alayan Ted Xiao Thomas Grainger Tom Viner TomV Vasily Kuznetsov aostr marscher palaviv satoru taschini"
+msgstr ""
+
+#: ../../announce/release-3.0.0.rst:78
+msgid "Happy testing, The Pytest Development Team"
+msgstr ""
+
+#: ../../announce/release-3.0.0.rst:81
+msgid "[1] http://blog.pytest.org/2016/pytest-development-sprint/ [2] http://blog.pytest.org/2016/whats-new-in-pytest-30/"
+msgstr ""
+

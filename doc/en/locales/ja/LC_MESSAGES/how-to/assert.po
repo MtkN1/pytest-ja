@@ -1,0 +1,297 @@
+# SOME DESCRIPTIVE TITLE.
+# Copyright (C) 2015, holger krekel and pytest-dev team
+# This file is distributed under the same license as the pytest package.
+# FIRST AUTHOR <EMAIL@ADDRESS>, 2025.
+#
+#, fuzzy
+msgid ""
+msgstr ""
+"Project-Id-Version: pytest 0.1.dev16209\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2025-02-05 00:52+0900\n"
+"PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
+"Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
+"Language: ja\n"
+"Language-Team: ja <LL@li.org>\n"
+"Plural-Forms: nplurals=1; plural=0;\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=utf-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Generated-By: Babel 2.17.0\n"
+
+#: ../../how-to/assert.rst:4
+msgid "How to write and report assertions in tests"
+msgstr ""
+
+#: ../../how-to/assert.rst:9
+msgid "Asserting with the ``assert`` statement"
+msgstr ""
+
+#: ../../how-to/assert.rst:11
+msgid "``pytest`` allows you to use the standard Python ``assert`` for verifying expectations and values in Python tests.  For example, you can write the following:"
+msgstr ""
+
+#: ../../how-to/assert.rst:25
+msgid "to assert that your function returns a certain value. If this assertion fails you will see the return value of the function call:"
+msgstr ""
+
+#: ../../how-to/assert.rst:51
+msgid "``pytest`` has support for showing the values of the most common subexpressions including calls, attributes, comparisons, and binary and unary operators. (See :ref:`tbreportdemo`).  This allows you to use the idiomatic python constructs without boilerplate code while not losing introspection information."
+msgstr ""
+
+#: ../../how-to/assert.rst:57
+msgid "If a message is specified with the assertion like this:"
+msgstr ""
+
+#: ../../how-to/assert.rst:63
+msgid "it is printed alongside the assertion introspection in the traceback."
+msgstr ""
+
+#: ../../how-to/assert.rst:65
+msgid "See :ref:`assert-details` for more information on assertion introspection."
+msgstr ""
+
+#: ../../how-to/assert.rst:70
+msgid "Assertions about expected exceptions"
+msgstr ""
+
+#: ../../how-to/assert.rst:72
+msgid "In order to write assertions about raised exceptions, you can use :func:`pytest.raises` as a context manager like this:"
+msgstr ""
+
+#: ../../how-to/assert.rst:84
+msgid "and if you need to have access to the actual exception info you may use:"
+msgstr ""
+
+#: ../../how-to/assert.rst:97
+msgid "``excinfo`` is an :class:`~pytest.ExceptionInfo` instance, which is a wrapper around the actual exception raised.  The main attributes of interest are ``.type``, ``.value`` and ``.traceback``."
+msgstr ""
+
+#: ../../how-to/assert.rst:101
+msgid "Note that ``pytest.raises`` will match the exception type or any subclasses (like the standard ``except`` statement). If you want to check if a block of code is raising an exact exception type, you need to check that explicitly:"
+msgstr ""
+
+#: ../../how-to/assert.rst:115
+msgid "The :func:`pytest.raises` call will succeed, even though the function raises :class:`NotImplementedError`, because :class:`NotImplementedError` is a subclass of :class:`RuntimeError`; however the following `assert` statement will catch the problem."
+msgstr ""
+
+#: ../../how-to/assert.rst:120
+msgid "Matching exception messages"
+msgstr ""
+
+#: ../../how-to/assert.rst:122
+msgid "You can pass a ``match`` keyword parameter to the context-manager to test that a regular expression matches on the string representation of an exception (similar to the ``TestCase.assertRaisesRegex`` method from ``unittest``):"
+msgstr ""
+
+#: ../../how-to/assert.rst:139
+msgid "Notes:"
+msgstr ""
+
+#: ../../how-to/assert.rst:141
+msgid "The ``match`` parameter is matched with the :func:`re.search` function, so in the above example ``match='123'`` would have worked as well."
+msgstr ""
+
+#: ../../how-to/assert.rst:143
+msgid "The ``match`` parameter also matches against `PEP-678 <https://peps.python.org/pep-0678/>`__ ``__notes__``."
+msgstr ""
+
+#: ../../how-to/assert.rst:149
+msgid "Matching exception groups"
+msgstr ""
+
+#: ../../how-to/assert.rst:151
+msgid "You can also use the :func:`excinfo.group_contains() <pytest.ExceptionInfo.group_contains>` method to test for exceptions returned as part of an :class:`ExceptionGroup`:"
+msgstr ""
+
+#: ../../how-to/assert.rst:167
+msgid "The optional ``match`` keyword parameter works the same way as for :func:`pytest.raises`."
+msgstr ""
+
+#: ../../how-to/assert.rst:170
+msgid "By default ``group_contains()`` will recursively search for a matching exception at any level of nested ``ExceptionGroup`` instances. You can specify a ``depth`` keyword parameter if you only want to match an exception at a specific level; exceptions contained directly in the top ``ExceptionGroup`` would match ``depth=1``."
+msgstr ""
+
+#: ../../how-to/assert.rst:198
+msgid "Alternate form (legacy)"
+msgstr ""
+
+#: ../../how-to/assert.rst:200
+msgid "There is an alternate form where you pass a function that will be executed, along ``*args`` and ``**kwargs``, and :func:`pytest.raises` will execute the function with the arguments and assert that the given exception is raised:"
+msgstr ""
+
+#: ../../how-to/assert.rst:213
+msgid "The reporter will provide you with helpful output in case of failures such as *no exception* or *wrong exception*."
+msgstr ""
+
+#: ../../how-to/assert.rst:216
+msgid "This form was the original :func:`pytest.raises` API, developed before the ``with`` statement was added to the Python language. Nowadays, this form is rarely used, with the context-manager form (using ``with``) being considered more readable. Nonetheless, this form is fully supported and not deprecated in any way."
+msgstr ""
+
+#: ../../how-to/assert.rst:222
+msgid "xfail mark and pytest.raises"
+msgstr ""
+
+#: ../../how-to/assert.rst:224
+msgid "It is also possible to specify a ``raises`` argument to :ref:`pytest.mark.xfail <pytest.mark.xfail ref>`, which checks that the test is failing in a more specific way than just having any exception raised:"
+msgstr ""
+
+#: ../../how-to/assert.rst:239
+msgid "This will only \"xfail\" if the test fails by raising ``IndexError`` or subclasses."
+msgstr ""
+
+#: ../../how-to/assert.rst:241
+msgid "Using :ref:`pytest.mark.xfail <pytest.mark.xfail ref>` with the ``raises`` parameter is probably better for something like documenting unfixed bugs (where the test describes what \"should\" happen) or bugs in dependencies."
+msgstr ""
+
+#: ../../how-to/assert.rst:244
+msgid "Using :func:`pytest.raises` is likely to be better for cases where you are testing exceptions your own code is deliberately raising, which is the majority of cases."
+msgstr ""
+
+#: ../../how-to/assert.rst:251
+msgid "Assertions about expected warnings"
+msgstr ""
+
+#: ../../how-to/assert.rst:255
+msgid "You can check that code raises a particular warning using :ref:`pytest.warns <warns>`."
+msgstr ""
+
+#: ../../how-to/assert.rst:262
+msgid "Making use of context-sensitive comparisons"
+msgstr ""
+
+#: ../../how-to/assert.rst:266
+msgid "``pytest`` has rich support for providing context-sensitive information when it encounters comparisons.  For example:"
+msgstr ""
+
+#: ../../how-to/assert.rst:277
+msgid "if you run this module:"
+msgstr ""
+
+#: ../../how-to/assert.rst:309
+msgid "Special comparisons are done for a number of cases:"
+msgstr ""
+
+#: ../../how-to/assert.rst:311
+msgid "comparing long strings: a context diff is shown"
+msgstr ""
+
+#: ../../how-to/assert.rst:312
+msgid "comparing long sequences: first failing indices"
+msgstr ""
+
+#: ../../how-to/assert.rst:313
+msgid "comparing dicts: different entries"
+msgstr ""
+
+#: ../../how-to/assert.rst:315
+msgid "See the :ref:`reporting demo <tbreportdemo>` for many more examples."
+msgstr ""
+
+#: ../../how-to/assert.rst:318
+msgid "Defining your own explanation for failed assertions"
+msgstr ""
+
+#: ../../how-to/assert.rst:320
+msgid "It is possible to add your own detailed explanations by implementing the ``pytest_assertrepr_compare`` hook."
+msgstr ""
+
+#: _pytest.hookspec.pytest_assertrepr_compare:1 of
+msgid "Return explanation for comparisons in failing assert expressions."
+msgstr ""
+
+#: _pytest.hookspec.pytest_assertrepr_compare:3 of
+msgid "Return None for no custom explanation, otherwise return a list of strings. The strings will be joined by newlines but any newlines *in* a string will be escaped. Note that all but the first line will be indented slightly, the intention is for the first line to be a summary."
+msgstr ""
+
+#: ../../how-to/assert.rst
+msgid "Parameters"
+msgstr ""
+
+#: _pytest.hookspec.pytest_assertrepr_compare:8 of
+msgid "The pytest config object."
+msgstr ""
+
+#: _pytest.hookspec.pytest_assertrepr_compare:9 of
+msgid "The operator, e.g. `\"==\"`, `\"!=\"`, `\"not in\"`."
+msgstr ""
+
+#: _pytest.hookspec.pytest_assertrepr_compare:10 of
+msgid "The left operand."
+msgstr ""
+
+#: _pytest.hookspec.pytest_assertrepr_compare:11 of
+msgid "The right operand."
+msgstr ""
+
+#: _pytest.hookspec.pytest_assertrepr_compare:14 of
+msgid "Use in conftest plugins"
+msgstr ""
+
+#: _pytest.hookspec.pytest_assertrepr_compare:16 of
+msgid "Any conftest file can implement this hook. For a given item, only conftest files in the item's directory and its parent directories are consulted."
+msgstr ""
+
+#: ../../how-to/assert.rst:326
+msgid "As an example consider adding the following hook in a :ref:`conftest.py <conftest.py>` file which provides an alternative explanation for ``Foo`` objects:"
+msgstr ""
+
+#: ../../how-to/assert.rst:342
+msgid "now, given this test module:"
+msgstr ""
+
+#: ../../how-to/assert.rst:360
+msgid "you can run the test module and get the custom output defined in the conftest file:"
+msgstr ""
+
+#: ../../how-to/assert.rst:386
+msgid "Assertion introspection details"
+msgstr ""
+
+#: ../../how-to/assert.rst:389
+msgid "Reporting details about a failing assertion is achieved by rewriting assert statements before they are run.  Rewritten assert statements put introspection information into the assertion failure message.  ``pytest`` only rewrites test modules directly discovered by its test collection process, so **asserts in supporting modules which are not themselves test modules will not be rewritten**."
+msgstr ""
+
+#: ../../how-to/assert.rst:395
+msgid "You can manually enable assertion rewriting for an imported module by calling :ref:`register_assert_rewrite <assertion-rewriting>` before you import it (a good place to do that is in your root ``conftest.py``)."
+msgstr ""
+
+#: ../../how-to/assert.rst:399
+msgid "For further information, Benjamin Peterson wrote up `Behind the scenes of pytest's new assertion rewriting <http://pybites.blogspot.com/2011/07/behind-scenes-of-pytests-new-assertion.html>`_."
+msgstr ""
+
+#: ../../how-to/assert.rst:402
+msgid "Assertion rewriting caches files on disk"
+msgstr ""
+
+#: ../../how-to/assert.rst:404
+msgid "``pytest`` will write back the rewritten modules to disk for caching. You can disable this behavior (for example to avoid leaving stale ``.pyc`` files around in projects that move files around a lot) by adding this to the top of your ``conftest.py`` file:"
+msgstr ""
+
+#: ../../how-to/assert.rst:414
+msgid "Note that you still get the benefits of assertion introspection, the only change is that the ``.pyc`` files won't be cached on disk."
+msgstr ""
+
+#: ../../how-to/assert.rst:417
+msgid "Additionally, rewriting will silently skip caching if it cannot write new ``.pyc`` files, i.e. in a read-only filesystem or a zipfile."
+msgstr ""
+
+#: ../../how-to/assert.rst:422
+msgid "Disabling assert rewriting"
+msgstr ""
+
+#: ../../how-to/assert.rst:424
+msgid "``pytest`` rewrites test modules on import by using an import hook to write new ``pyc`` files. Most of the time this works transparently. However, if you are working with the import machinery yourself, the import hook may interfere."
+msgstr ""
+
+#: ../../how-to/assert.rst:429
+msgid "If this is the case you have two options:"
+msgstr ""
+
+#: ../../how-to/assert.rst:431
+msgid "Disable rewriting for a specific module by adding the string ``PYTEST_DONT_REWRITE`` to its docstring."
+msgstr ""
+
+#: ../../how-to/assert.rst:434
+msgid "Disable rewriting for all modules by using ``--assert=plain``."
+msgstr ""
+

@@ -1,0 +1,93 @@
+# SOME DESCRIPTIVE TITLE.
+# Copyright (C) 2015, holger krekel and pytest-dev team
+# This file is distributed under the same license as the pytest package.
+# FIRST AUTHOR <EMAIL@ADDRESS>, 2025.
+#
+#, fuzzy
+msgid ""
+msgstr ""
+"Project-Id-Version: pytest 0.1.dev16209\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2025-02-05 00:52+0900\n"
+"PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
+"Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
+"Language: ja\n"
+"Language-Team: ja <LL@li.org>\n"
+"Plural-Forms: nplurals=1; plural=0;\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=utf-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Generated-By: Babel 2.17.0\n"
+
+#: ../../announce/release-2.8.3.rst:2
+msgid "pytest-2.8.3: bug fixes"
+msgstr ""
+
+#: ../../announce/release-2.8.3.rst:4
+msgid "pytest is a mature Python testing tool with more than 1100 tests against itself, passing on many different interpreters and platforms. This release is supposed to be drop-in compatible to 2.8.2."
+msgstr ""
+
+#: ../../announce/release-2.8.3.rst:8
+msgid "See below for the changes and see docs at:"
+msgstr ""
+
+#: ../../announce/release-2.8.3.rst:10
+msgid "http://pytest.org"
+msgstr ""
+
+#: ../../announce/release-2.8.3.rst:12
+msgid "As usual, you can upgrade from pypi via::"
+msgstr ""
+
+#: ../../announce/release-2.8.3.rst:16
+msgid "Thanks to all who contributed to this release, among them:"
+msgstr ""
+
+#: ../../announce/release-2.8.3.rst:18
+msgid "Bruno Oliveira Florian Bruhin Gabe Hollombe Gabriel Reis Hartmut Goebel John Vandenberg Lee Kamentsky Michael Birtwell Raphael Pierzina Ronny Pfannschmidt William Martin Stewart"
+msgstr ""
+
+#: ../../announce/release-2.8.3.rst:30
+msgid "Happy testing, The py.test Development Team"
+msgstr ""
+
+#: ../../announce/release-2.8.3.rst:35
+msgid "2.8.3 (compared to 2.8.2)"
+msgstr ""
+
+#: ../../announce/release-2.8.3.rst:37
+msgid "fix #1169: add __name__ attribute to testcases in TestCaseFunction to support the @unittest.skip decorator on functions and methods. Thanks Lee Kamentsky for the PR."
+msgstr ""
+
+#: ../../announce/release-2.8.3.rst:41
+msgid "fix #1035: collecting tests if test module level obj has __getattr__(). Thanks Suor for the report and Bruno Oliveira / Tom Viner for the PR."
+msgstr ""
+
+#: ../../announce/release-2.8.3.rst:44
+msgid "fix #331: don't collect tests if their failure cannot be reported correctly e.g. they are a callable instance of a class."
+msgstr ""
+
+#: ../../announce/release-2.8.3.rst:47
+msgid "fix #1133: fixed internal error when filtering tracebacks where one entry belongs to a file which is no longer available. Thanks Bruno Oliveira for the PR."
+msgstr ""
+
+#: ../../announce/release-2.8.3.rst:51
+msgid "enhancement made to highlight in red the name of the failing tests so they stand out in the output. Thanks Gabriel Reis for the PR."
+msgstr ""
+
+#: ../../announce/release-2.8.3.rst:55
+msgid "add more talks to the documentation"
+msgstr ""
+
+#: ../../announce/release-2.8.3.rst:56
+msgid "extend documentation on the --ignore cli option"
+msgstr ""
+
+#: ../../announce/release-2.8.3.rst:57
+msgid "use pytest-runner for setuptools integration"
+msgstr ""
+
+#: ../../announce/release-2.8.3.rst:58
+msgid "minor fixes for interaction with OS X El Capitan system integrity protection (thanks Florian)"
+msgstr ""
+

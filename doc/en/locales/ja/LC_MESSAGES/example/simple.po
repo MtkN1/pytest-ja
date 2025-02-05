@@ -1,0 +1,337 @@
+# SOME DESCRIPTIVE TITLE.
+# Copyright (C) 2015, holger krekel and pytest-dev team
+# This file is distributed under the same license as the pytest package.
+# FIRST AUTHOR <EMAIL@ADDRESS>, 2025.
+#
+#, fuzzy
+msgid ""
+msgstr ""
+"Project-Id-Version: pytest 0.1.dev16209\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2025-02-05 00:52+0900\n"
+"PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
+"Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
+"Language: ja\n"
+"Language-Team: ja <LL@li.org>\n"
+"Plural-Forms: nplurals=1; plural=0;\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=utf-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Generated-By: Babel 2.17.0\n"
+
+#: ../../example/simple.rst:4
+msgid "Basic patterns and examples"
+msgstr ""
+
+#: ../../example/simple.rst:7
+msgid "How to change command line options defaults"
+msgstr ""
+
+#: ../../example/simple.rst:9
+msgid "It can be tedious to type the same series of command line options every time you use ``pytest``.  For example, if you always want to see detailed info on skipped and xfailed tests, as well as have terser \"dot\" progress output, you can write it into a configuration file:"
+msgstr ""
+
+#: ../../example/simple.rst:21
+msgid "Alternatively, you can set a ``PYTEST_ADDOPTS`` environment variable to add command line options while the environment is in use:"
+msgstr ""
+
+#: ../../example/simple.rst:28
+msgid "Here's how the command-line is built in the presence of ``addopts`` or the environment variable:"
+msgstr ""
+
+#: ../../example/simple.rst:34
+msgid "So if the user executes in the command-line:"
+msgstr ""
+
+#: ../../example/simple.rst:40
+msgid "The actual command line executed is:"
+msgstr ""
+
+#: ../../example/simple.rst:46
+msgid "Note that as usual for other command-line applications, in case of conflicting options the last one wins, so the example above will show verbose output because ``-v`` overwrites ``-q``."
+msgstr ""
+
+#: ../../example/simple.rst:53
+msgid "Pass different values to a test function, depending on command line options"
+msgstr ""
+
+#: ../../example/simple.rst:57
+msgid "Suppose we want to write a test that depends on a command line option. Here is a basic pattern to achieve this:"
+msgstr ""
+
+#: ../../example/simple.rst:71
+msgid "For this to work we need to add a command line option and provide the ``cmdopt`` through a :ref:`fixture function <fixture>`:"
+msgstr ""
+
+#: ../../example/simple.rst:90
+msgid "Let's run this without supplying our new option:"
+msgstr ""
+
+#: ../../example/simple.rst:116
+msgid "And now with supplying a command line option:"
+msgstr ""
+
+#: ../../example/simple.rst:142
+msgid "You can see that the command line option arrived in our test."
+msgstr ""
+
+#: ../../example/simple.rst:144
+msgid "We could add simple validation for the input by listing the choices:"
+msgstr ""
+
+#: ../../example/simple.rst:161
+msgid "Now we'll get feedback on a bad argument:"
+msgstr ""
+
+#: ../../example/simple.rst:170
+msgid "If you need to provide more detailed error messages, you can use the ``type`` parameter and raise :exc:`pytest.UsageError`:"
+msgstr ""
+
+#: ../../example/simple.rst:200
+msgid "This completes the basic pattern.  However, one often rather wants to process command line options outside of the test and rather pass in different or more complex objects."
+msgstr ""
+
+#: ../../example/simple.rst:205
+msgid "Dynamically adding command line options"
+msgstr ""
+
+#: ../../example/simple.rst:209
+msgid "Through :confval:`addopts` you can statically add command line options for your project.  You can also dynamically modify the command line arguments before they get processed:"
+msgstr ""
+
+#: ../../example/simple.rst:226
+msgid "If you have the :pypi:`xdist plugin <pytest-xdist>` installed you will now always perform test runs using a number of subprocesses close to your CPU. Running in an empty directory with the above conftest.py:"
+msgstr ""
+
+#: ../../example/simple.rst:244
+msgid "Control skipping of tests according to command line option"
+msgstr ""
+
+#: ../../example/simple.rst:248
+msgid "Here is a ``conftest.py`` file adding a ``--runslow`` command line option to control skipping of ``pytest.mark.slow`` marked tests:"
+msgstr ""
+
+#: ../../example/simple.rst:277
+msgid "We can now write a test module like this:"
+msgstr ""
+
+#: ../../example/simple.rst:293
+msgid "and when running it will see a skipped \"slow\" test:"
+msgstr ""
+
+#: ../../example/simple.rst:309
+msgid "Or run it including the ``slow`` marked test:"
+msgstr ""
+
+#: ../../example/simple.rst:326
+msgid "Writing well integrated assertion helpers"
+msgstr ""
+
+#: ../../example/simple.rst:330
+msgid "If you have a test helper function called from a test you can use the ``pytest.fail`` marker to fail a test with a certain message. The test support function will not show up in the traceback if you set the ``__tracebackhide__`` option somewhere in the helper function. Example:"
+msgstr ""
+
+#: ../../example/simple.rst:351
+msgid "The ``__tracebackhide__`` setting influences ``pytest`` showing of tracebacks: the ``checkconfig`` function will not be shown unless the ``--full-trace`` command line option is specified. Let's run our little function:"
+msgstr ""
+
+#: ../../example/simple.rst:372
+msgid "If you only want to hide certain exceptions, you can set ``__tracebackhide__`` to a callable which gets the ``ExceptionInfo`` object. You can for example use this to make sure unexpected exception types aren't hidden:"
+msgstr ""
+
+#: ../../example/simple.rst:396
+msgid "This will avoid hiding the exception traceback on unrelated exceptions (i.e. bugs in assertion helpers)."
+msgstr ""
+
+#: ../../example/simple.rst:401
+msgid "Detect if running from within a pytest run"
+msgstr ""
+
+#: ../../example/simple.rst:405
+msgid "Usually it is a bad idea to make application code behave differently if called from a test.  But if you absolutely must find out if your application code is running from a test you can do this:"
+msgstr ""
+
+#: ../../example/simple.rst:424
+msgid "Adding info to test report header"
+msgstr ""
+
+#: ../../example/simple.rst:428
+msgid "It's easy to present extra information in a ``pytest`` run:"
+msgstr ""
+
+#: ../../example/simple.rst:438
+msgid "which will add the string to the test header accordingly:"
+msgstr ""
+
+#: ../../example/simple.rst:453
+msgid "It is also possible to return a list of strings which will be considered as several lines of information. You may consider ``config.getoption('verbose')`` in order to display more information if applicable:"
+msgstr ""
+
+#: ../../example/simple.rst:466
+msgid "which will add info only when run with \"--v\":"
+msgstr ""
+
+#: ../../example/simple.rst:481
+msgid "and nothing when run plainly:"
+msgstr ""
+
+#: ../../example/simple.rst:494
+msgid "Profiling test duration"
+msgstr ""
+
+#: ../../example/simple.rst:500
+msgid "If you have a slow running large test suite you might want to find out which tests are the slowest. Let's make an artificial test suite:"
+msgstr ""
+
+#: ../../example/simple.rst:520
+msgid "Now we can profile which test functions execute the slowest:"
+msgstr ""
+
+#: ../../example/simple.rst:539
+msgid "Incremental testing - test steps"
+msgstr ""
+
+#: ../../example/simple.rst:543
+msgid "Sometimes you may have a testing situation which consists of a series of test steps.  If one step fails it makes no sense to execute further steps as they are all expected to fail anyway and their tracebacks add no insight.  Here is a simple ``conftest.py`` file which introduces an ``incremental`` marker which is to be used on classes:"
+msgstr ""
+
+#: ../../example/simple.rst:601
+msgid "These two hook implementations work together to abort incremental-marked tests in a class.  Here is a test module example:"
+msgstr ""
+
+#: ../../example/simple.rst:626
+msgid "If we run this:"
+msgstr ""
+
+#: ../../example/simple.rst:652
+msgid "We'll see that ``test_deletion`` was not executed because ``test_modification`` failed.  It is reported as an \"expected failure\"."
+msgstr ""
+
+#: ../../example/simple.rst:657
+msgid "Package/Directory-level fixtures (setups)"
+msgstr ""
+
+#: ../../example/simple.rst:659
+msgid "If you have nested test directories, you can have per-directory fixture scopes by placing fixture functions in a ``conftest.py`` file in that directory. You can use all types of fixtures including :ref:`autouse fixtures <autouse fixtures>` which are the equivalent of xUnit's setup/teardown concept.  It's however recommended to have explicit fixture references in your tests or test classes rather than relying on implicitly executing setup/teardown functions, especially if they are far away from the actual tests."
+msgstr ""
+
+#: ../../example/simple.rst:667
+msgid "Here is an example for making a ``db`` fixture available in a directory:"
+msgstr ""
+
+#: ../../example/simple.rst:683
+msgid "and then a test module in that directory:"
+msgstr ""
+
+#: ../../example/simple.rst:691
+msgid "another test module:"
+msgstr ""
+
+#: ../../example/simple.rst:699
+msgid "and then a module in a sister directory which will not see the ``db`` fixture:"
+msgstr ""
+
+#: ../../example/simple.rst:708
+msgid "We can run this:"
+msgstr ""
+
+#: ../../example/simple.rst:769
+msgid "The two test modules in the ``a`` directory see the same ``db`` fixture instance while the one test in the sister-directory ``b`` doesn't see it.  We could of course also define a ``db`` fixture in that sister directory's ``conftest.py`` file. Note that each fixture is only instantiated if there is a test actually needing it (unless you use \"autouse\" fixture which are always executed ahead of the first test executing)."
+msgstr ""
+
+#: ../../example/simple.rst:778
+msgid "Post-process test reports / failures"
+msgstr ""
+
+#: ../../example/simple.rst:780
+msgid "If you want to postprocess test reports and need access to the executing environment you can implement a hook that gets called when the test \"report\" object is about to be created.  Here we write out all failing test calls and also access a fixture (if it was used by the test) in case you want to query/look at it during your post processing.  In our case we just write some information out to a ``failures`` file:"
+msgstr ""
+
+#: ../../example/simple.rst:816 ../../example/simple.rst:912
+msgid "if you then have failing tests:"
+msgstr ""
+
+#: ../../example/simple.rst:828
+msgid "and run them:"
+msgstr ""
+
+#: ../../example/simple.rst:862
+msgid "you will have a \"failures\" file which contains the failing test ids:"
+msgstr ""
+
+#: ../../example/simple.rst:871
+msgid "Making test result information available in fixtures"
+msgstr ""
+
+#: ../../example/simple.rst:875
+msgid "If you want to make test result reports available in fixture finalizers here is a little example implemented via a local plugin:"
+msgstr ""
+
+#: ../../example/simple.rst:937
+msgid "and run it:"
+msgstr ""
+
+#: ../../example/simple.rst:983
+msgid "You'll see that the fixture finalizers could use the precise reporting information."
+msgstr ""
+
+#: ../../example/simple.rst:989
+msgid "``PYTEST_CURRENT_TEST`` environment variable"
+msgstr ""
+
+#: ../../example/simple.rst:993
+msgid "Sometimes a test session might get stuck and there might be no easy way to figure out which test got stuck, for example if pytest was run in quiet mode (``-q``) or you don't have access to the console output. This is particularly a problem if the problem happens only sporadically, the famous \"flaky\" kind of tests."
+msgstr ""
+
+#: ../../example/simple.rst:997
+msgid "``pytest`` sets the :envvar:`PYTEST_CURRENT_TEST` environment variable when running tests, which can be inspected by process monitoring utilities or libraries like :pypi:`psutil` to discover which test got stuck if necessary:"
+msgstr ""
+
+#: ../../example/simple.rst:1009
+msgid "During the test session pytest will set ``PYTEST_CURRENT_TEST`` to the current test :ref:`nodeid <nodeids>` and the current stage, which can be ``setup``, ``call``, or ``teardown``."
+msgstr ""
+
+#: ../../example/simple.rst:1013
+msgid "For example, when running a single test function named ``test_foo`` from ``foo_module.py``, ``PYTEST_CURRENT_TEST`` will be set to:"
+msgstr ""
+
+#: ../../example/simple.rst:1016
+msgid "``foo_module.py::test_foo (setup)``"
+msgstr ""
+
+#: ../../example/simple.rst:1017
+msgid "``foo_module.py::test_foo (call)``"
+msgstr ""
+
+#: ../../example/simple.rst:1018
+msgid "``foo_module.py::test_foo (teardown)``"
+msgstr ""
+
+#: ../../example/simple.rst:1020
+msgid "In that order."
+msgstr ""
+
+#: ../../example/simple.rst:1024
+msgid "The contents of ``PYTEST_CURRENT_TEST`` is meant to be human readable and the actual format can be changed between releases (even bug fixes) so it shouldn't be relied on for scripting or automation."
+msgstr ""
+
+#: ../../example/simple.rst:1031
+msgid "Freezing pytest"
+msgstr ""
+
+#: ../../example/simple.rst:1033
+msgid "If you freeze your application using a tool like `PyInstaller <https://pyinstaller.readthedocs.io>`_ in order to distribute it to your end-users, it is a good idea to also package your test runner and run your tests using the frozen application. This way packaging errors such as dependencies not being included into the executable can be detected early while also allowing you to send test files to users so they can run them in their machines, which can be useful to obtain more information about a hard to reproduce bug."
+msgstr ""
+
+#: ../../example/simple.rst:1041
+msgid "Fortunately recent ``PyInstaller`` releases already have a custom hook for pytest, but if you are using another tool to freeze executables such as ``cx_freeze`` or ``py2exe``, you can use ``pytest.freeze_includes()`` to obtain the full list of internal pytest modules. How to configure the tools to find the internal modules varies from tool to tool, however."
+msgstr ""
+
+#: ../../example/simple.rst:1047
+msgid "Instead of freezing the pytest runner as a separate executable, you can make your frozen program work as the pytest runner by some clever argument handling during program startup. This allows you to have a single executable, which is usually more convenient. Please note that the mechanism for plugin discovery used by pytest (:ref:`entry points <pip-installable plugins>`) doesn't work with frozen executables so pytest can't find any third party plugins automatically. To include third party plugins like ``pytest-timeout`` they must be imported explicitly and passed on to pytest.main."
+msgstr ""
+
+#: ../../example/simple.rst:1073
+msgid "This allows you to execute tests using the frozen application with standard ``pytest`` command-line options:"
+msgstr ""
+

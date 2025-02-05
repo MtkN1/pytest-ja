@@ -1,0 +1,161 @@
+# SOME DESCRIPTIVE TITLE.
+# Copyright (C) 2015, holger krekel and pytest-dev team
+# This file is distributed under the same license as the pytest package.
+# FIRST AUTHOR <EMAIL@ADDRESS>, 2025.
+#
+#, fuzzy
+msgid ""
+msgstr ""
+"Project-Id-Version: pytest 0.1.dev16209\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2025-02-05 00:52+0900\n"
+"PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
+"Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
+"Language: ja\n"
+"Language-Team: ja <LL@li.org>\n"
+"Plural-Forms: nplurals=1; plural=0;\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=utf-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Generated-By: Babel 2.17.0\n"
+
+#: ../../announce/release-7.4.0.rst:2
+msgid "pytest-7.4.0"
+msgstr ""
+
+#: ../../announce/release-7.4.0.rst:4
+msgid "The pytest team is proud to announce the 7.4.0 release!"
+msgstr ""
+
+#: ../../announce/release-7.4.0.rst:6
+msgid "This release contains new features, improvements, and bug fixes, the full list of changes is available in the changelog:"
+msgstr ""
+
+#: ../../announce/release-7.4.0.rst:9
+msgid "https://docs.pytest.org/en/stable/changelog.html"
+msgstr ""
+
+#: ../../announce/release-7.4.0.rst:11
+msgid "For complete documentation, please visit:"
+msgstr ""
+
+#: ../../announce/release-7.4.0.rst:13
+msgid "https://docs.pytest.org/en/stable/"
+msgstr ""
+
+#: ../../announce/release-7.4.0.rst:15
+msgid "As usual, you can upgrade from PyPI via:"
+msgstr ""
+
+#: ../../announce/release-7.4.0.rst:17
+msgid "pip install -U pytest"
+msgstr ""
+
+#: ../../announce/release-7.4.0.rst:19
+msgid "Thanks to all of the contributors to this release:"
+msgstr ""
+
+#: ../../announce/release-7.4.0.rst:21
+msgid "Adam J. Stewart"
+msgstr ""
+
+#: ../../announce/release-7.4.0.rst:22
+msgid "Alessio Izzo"
+msgstr ""
+
+#: ../../announce/release-7.4.0.rst:23
+msgid "Alex"
+msgstr ""
+
+#: ../../announce/release-7.4.0.rst:24
+msgid "Alex Lambson"
+msgstr ""
+
+#: ../../announce/release-7.4.0.rst:25
+msgid "Brian Larsen"
+msgstr ""
+
+#: ../../announce/release-7.4.0.rst:26
+msgid "Bruno Oliveira"
+msgstr ""
+
+#: ../../announce/release-7.4.0.rst:27
+msgid "Bryan Ricker"
+msgstr ""
+
+#: ../../announce/release-7.4.0.rst:28
+msgid "Chris Mahoney"
+msgstr ""
+
+#: ../../announce/release-7.4.0.rst:29
+msgid "Facundo Batista"
+msgstr ""
+
+#: ../../announce/release-7.4.0.rst:30
+msgid "Florian Bruhin"
+msgstr ""
+
+#: ../../announce/release-7.4.0.rst:31
+msgid "Jarrett Keifer"
+msgstr ""
+
+#: ../../announce/release-7.4.0.rst:32
+msgid "Kenny Y"
+msgstr ""
+
+#: ../../announce/release-7.4.0.rst:33
+msgid "Miro Hrončok"
+msgstr ""
+
+#: ../../announce/release-7.4.0.rst:34
+msgid "Ran Benita"
+msgstr ""
+
+#: ../../announce/release-7.4.0.rst:35
+msgid "Roberto Aldera"
+msgstr ""
+
+#: ../../announce/release-7.4.0.rst:36
+msgid "Ronny Pfannschmidt"
+msgstr ""
+
+#: ../../announce/release-7.4.0.rst:37
+msgid "Sergey Kim"
+msgstr ""
+
+#: ../../announce/release-7.4.0.rst:38
+msgid "Stefanie Molin"
+msgstr ""
+
+#: ../../announce/release-7.4.0.rst:39
+msgid "Vijay Arora"
+msgstr ""
+
+#: ../../announce/release-7.4.0.rst:40
+msgid "Ville Skyttä"
+msgstr ""
+
+#: ../../announce/release-7.4.0.rst:41
+msgid "Zac Hatfield-Dodds"
+msgstr ""
+
+#: ../../announce/release-7.4.0.rst:42
+msgid "bzoracler"
+msgstr ""
+
+#: ../../announce/release-7.4.0.rst:43
+msgid "leeyueh"
+msgstr ""
+
+#: ../../announce/release-7.4.0.rst:44
+msgid "nondescryptid"
+msgstr ""
+
+#: ../../announce/release-7.4.0.rst:45
+msgid "theirix"
+msgstr ""
+
+#: ../../announce/release-7.4.0.rst:48
+msgid "Happy testing, The pytest Development Team"
+msgstr ""
+

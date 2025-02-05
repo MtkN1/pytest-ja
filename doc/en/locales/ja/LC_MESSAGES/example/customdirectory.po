@@ -1,0 +1,53 @@
+# SOME DESCRIPTIVE TITLE.
+# Copyright (C) 2015, holger krekel and pytest-dev team
+# This file is distributed under the same license as the pytest package.
+# FIRST AUTHOR <EMAIL@ADDRESS>, 2025.
+#
+#, fuzzy
+msgid ""
+msgstr ""
+"Project-Id-Version: pytest 0.1.dev16209\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2025-02-05 00:52+0900\n"
+"PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
+"Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
+"Language: ja\n"
+"Language-Team: ja <LL@li.org>\n"
+"Plural-Forms: nplurals=1; plural=0;\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=utf-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Generated-By: Babel 2.17.0\n"
+
+#: ../../example/customdirectory.rst:4
+msgid "Using a custom directory collector"
+msgstr ""
+
+#: ../../example/customdirectory.rst:6
+msgid "By default, pytest collects directories using :class:`pytest.Package`, for directories with ``__init__.py`` files, and :class:`pytest.Dir` for other directories. If you want to customize how a directory is collected, you can write your own :class:`pytest.Directory` collector, and use :hook:`pytest_collect_directory` to hook it up."
+msgstr ""
+
+#: ../../example/customdirectory.rst:14
+msgid "A basic example for a directory manifest file"
+msgstr ""
+
+#: ../../example/customdirectory.rst:16
+msgid "Suppose you want to customize how collection is done on a per-directory basis. Here is an example ``conftest.py`` plugin that allows directories to contain a ``manifest.json`` file, which defines how the collection should be done for the directory. In this example, only a simple list of files is supported, however you can imagine adding other keys, such as exclusions and globs."
+msgstr ""
+
+#: ../../example/customdirectory.rst:25
+msgid "You can create a ``manifest.json`` file and some test files:"
+msgstr ""
+
+#: ../../example/customdirectory.rst:39
+msgid "An you can now execute the test specification:"
+msgstr ""
+
+#: ../../example/customdirectory.rst:57
+msgid "Notice how ``test_three.py`` was not executed, because it is not listed in the manifest."
+msgstr ""
+
+#: ../../example/customdirectory.rst:59
+msgid "You can verify that your custom collector appears in the collection tree:"
+msgstr ""
+

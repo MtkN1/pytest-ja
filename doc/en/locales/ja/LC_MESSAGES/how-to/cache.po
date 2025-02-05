@@ -1,0 +1,157 @@
+# SOME DESCRIPTIVE TITLE.
+# Copyright (C) 2015, holger krekel and pytest-dev team
+# This file is distributed under the same license as the pytest package.
+# FIRST AUTHOR <EMAIL@ADDRESS>, 2025.
+#
+#, fuzzy
+msgid ""
+msgstr ""
+"Project-Id-Version: pytest 0.1.dev16209\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2025-02-05 00:52+0900\n"
+"PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
+"Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
+"Language: ja\n"
+"Language-Team: ja <LL@li.org>\n"
+"Plural-Forms: nplurals=1; plural=0;\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=utf-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Generated-By: Babel 2.17.0\n"
+
+#: ../../how-to/cache.rst:6
+msgid "How to re-run failed tests and maintain state between test runs"
+msgstr ""
+
+#: ../../how-to/cache.rst:11
+msgid "Usage"
+msgstr ""
+
+#: ../../how-to/cache.rst:13
+msgid "The plugin provides two command line options to rerun failures from the last ``pytest`` invocation:"
+msgstr ""
+
+#: ../../how-to/cache.rst:16
+msgid "``--lf``, ``--last-failed`` - to only re-run the failures."
+msgstr ""
+
+#: ../../how-to/cache.rst:17
+msgid "``--ff``, ``--failed-first`` - to run the failures first and then the rest of the tests."
+msgstr ""
+
+#: ../../how-to/cache.rst:20
+msgid "For cleanup (usually not needed), a ``--cache-clear`` option allows to remove all cross-session cache contents ahead of a test run."
+msgstr ""
+
+#: ../../how-to/cache.rst:23
+msgid "Other plugins may access the `config.cache`_ object to set/get **json encodable** values between ``pytest`` invocations."
+msgstr ""
+
+#: ../../how-to/cache.rst:28
+msgid "This plugin is enabled by default, but can be disabled if needed: see :ref:`cmdunregister` (the internal name for this plugin is ``cacheprovider``)."
+msgstr ""
+
+#: ../../how-to/cache.rst:34
+msgid "Rerunning only failures or failures first"
+msgstr ""
+
+#: ../../how-to/cache.rst:36
+msgid "First, let's create 50 test invocation of which only 2 fail:"
+msgstr ""
+
+#: ../../how-to/cache.rst:49
+msgid "If you run this for the first time you will see two failures:"
+msgstr ""
+
+#: ../../how-to/cache.rst:83
+msgid "If you then run it with ``--lf``:"
+msgstr ""
+
+#: ../../how-to/cache.rst:124
+msgid "You have run only the two failing tests from the last run, while the 48 passing tests have not been run (\"deselected\")."
+msgstr ""
+
+#: ../../how-to/cache.rst:127
+msgid "Now, if you run with the ``--ff`` option, all tests will be run but the first previous failures will be executed first (as can be seen from the series of ``FF`` and dots):"
+msgstr ""
+
+#: ../../how-to/cache.rst:172
+msgid "New ``--nf``, ``--new-first`` options: run new tests first followed by the rest of the tests, in both cases tests are also sorted by the file modified time, with more recent files coming first."
+msgstr ""
+
+#: ../../how-to/cache.rst:177
+msgid "Behavior when no tests failed in the last run"
+msgstr ""
+
+#: ../../how-to/cache.rst:179
+msgid "The ``--lfnf/--last-failed-no-failures`` option governs the behavior of ``--last-failed``. Determines whether to execute tests when there are no previously (known) failures or when no cached ``lastfailed`` data was found."
+msgstr ""
+
+#: ../../how-to/cache.rst:183
+msgid "There are two options:"
+msgstr ""
+
+#: ../../how-to/cache.rst:185
+msgid "``all``:  when there are no known test failures, runs all tests (the full test suite). This is the default."
+msgstr ""
+
+#: ../../how-to/cache.rst:186
+msgid "``none``: when there are no known test failures, just emits a message stating this and exit successfully."
+msgstr ""
+
+#: ../../how-to/cache.rst:188
+msgid "Example:"
+msgstr ""
+
+#: ../../how-to/cache.rst:196
+msgid "The new config.cache object"
+msgstr ""
+
+#: ../../how-to/cache.rst:200
+msgid "Plugins or conftest.py support code can get a cached value using the pytest ``config`` object.  Here is a basic example plugin which implements a :ref:`fixture <fixture>` which re-uses previously created state across pytest invocations:"
+msgstr ""
+
+#: ../../how-to/cache.rst:228
+msgid "If you run this command for the first time, you can see the print statement:"
+msgstr ""
+
+#: ../../how-to/cache.rst:250
+msgid "If you run it a second time, the value will be retrieved from the cache and nothing will be printed:"
+msgstr ""
+
+#: ../../how-to/cache.rst:271
+msgid "See the :fixture:`config.cache fixture <cache>` for more details."
+msgstr ""
+
+#: ../../how-to/cache.rst:275
+msgid "Inspecting Cache content"
+msgstr ""
+
+#: ../../how-to/cache.rst:277
+msgid "You can always peek at the content of the cache using the ``--cache-show`` command line option:"
+msgstr ""
+
+#: ../../how-to/cache.rst:299
+msgid "``--cache-show`` takes an optional argument to specify a glob pattern for filtering:"
+msgstr ""
+
+#: ../../how-to/cache.rst:316
+msgid "Clearing Cache content"
+msgstr ""
+
+#: ../../how-to/cache.rst:318
+msgid "You can instruct pytest to clear all cache files and values by adding the ``--cache-clear`` option like this:"
+msgstr ""
+
+#: ../../how-to/cache.rst:325
+msgid "This is recommended for invocations from Continuous Integration servers where isolation and correctness is more important than speed."
+msgstr ""
+
+#: ../../how-to/cache.rst:333
+msgid "Stepwise"
+msgstr ""
+
+#: ../../how-to/cache.rst:335
+msgid "As an alternative to ``--lf -x``, especially for cases where you expect a large part of the test suite will fail, ``--sw``, ``--stepwise`` allows you to fix them one at a time. The test suite will run until the first failure and then stop. At the next invocation, tests will continue from the last failing test and then run until the next failing test. You may use the ``--stepwise-skip`` option to ignore one failing test and stop the test execution on the second failing test instead. This is useful if you get stuck on a failing test and just want to ignore it until later.  Providing ``--stepwise-skip`` will also enable ``--stepwise`` implicitly."
+msgstr ""
+

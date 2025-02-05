@@ -1,0 +1,89 @@
+# SOME DESCRIPTIVE TITLE.
+# Copyright (C) 2015, holger krekel and pytest-dev team
+# This file is distributed under the same license as the pytest package.
+# FIRST AUTHOR <EMAIL@ADDRESS>, 2025.
+#
+#, fuzzy
+msgid ""
+msgstr ""
+"Project-Id-Version: pytest 0.1.dev16209\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2025-02-05 00:52+0900\n"
+"PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
+"Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
+"Language: ja\n"
+"Language-Team: ja <LL@li.org>\n"
+"Plural-Forms: nplurals=1; plural=0;\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=utf-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Generated-By: Babel 2.17.0\n"
+
+#: ../../announce/release-2.7.2.rst:2
+msgid "pytest-2.7.2: bug fixes"
+msgstr ""
+
+#: ../../announce/release-2.7.2.rst:4
+msgid "pytest is a mature Python testing tool with more than 1100 tests against itself, passing on many different interpreters and platforms. This release is supposed to be drop-in compatible to 2.7.1."
+msgstr ""
+
+#: ../../announce/release-2.7.2.rst:8
+msgid "See below for the changes and see docs at:"
+msgstr ""
+
+#: ../../announce/release-2.7.2.rst:10
+msgid "http://pytest.org"
+msgstr ""
+
+#: ../../announce/release-2.7.2.rst:12
+msgid "As usual, you can upgrade from pypi via::"
+msgstr ""
+
+#: ../../announce/release-2.7.2.rst:16
+msgid "Thanks to all who contributed to this release, among them:"
+msgstr ""
+
+#: ../../announce/release-2.7.2.rst:18
+msgid "Bruno Oliveira Floris Bruynooghe Punyashloka Biswal Aron Curzon Benjamin Peterson Thomas De Schampheleire Edison Gustavo Muenz Holger Krekel"
+msgstr ""
+
+#: ../../announce/release-2.7.2.rst:27
+msgid "Happy testing, The py.test Development Team"
+msgstr ""
+
+#: ../../announce/release-2.7.2.rst:32
+msgid "2.7.2 (compared to 2.7.1)"
+msgstr ""
+
+#: ../../announce/release-2.7.2.rst:34
+msgid "fix issue767: pytest.raises value attribute does not contain the exception instance on Python 2.6. Thanks Eric Siegerman for providing the test case and Bruno Oliveira for PR."
+msgstr ""
+
+#: ../../announce/release-2.7.2.rst:38
+msgid "Automatically create directory for junitxml and results log. Thanks Aron Curzon."
+msgstr ""
+
+#: ../../announce/release-2.7.2.rst:41
+msgid "fix issue713: JUnit XML reports for doctest failures. Thanks Punyashloka Biswal."
+msgstr ""
+
+#: ../../announce/release-2.7.2.rst:44
+msgid "fix issue735: assertion failures on debug versions of Python 3.4+ Thanks Benjamin Peterson."
+msgstr ""
+
+#: ../../announce/release-2.7.2.rst:47
+msgid "fix issue114: skipif marker reports to internal skipping plugin; Thanks Floris Bruynooghe for reporting and Bruno Oliveira for the PR."
+msgstr ""
+
+#: ../../announce/release-2.7.2.rst:50
+msgid "fix issue748: unittest.SkipTest reports to internal pytest unittest plugin. Thanks Thomas De Schampheleire for reporting and Bruno Oliveira for the PR."
+msgstr ""
+
+#: ../../announce/release-2.7.2.rst:53
+msgid "fix issue718: failed to create representation of sets containing unsortable elements in python 2. Thanks Edison Gustavo Muenz"
+msgstr ""
+
+#: ../../announce/release-2.7.2.rst:56
+msgid "fix issue756, fix issue752 (and similar issues): depend on py-1.4.29 which has a refined algorithm for traceback generation."
+msgstr ""
+

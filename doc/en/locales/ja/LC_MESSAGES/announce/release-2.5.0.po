@@ -1,0 +1,201 @@
+# SOME DESCRIPTIVE TITLE.
+# Copyright (C) 2015, holger krekel and pytest-dev team
+# This file is distributed under the same license as the pytest package.
+# FIRST AUTHOR <EMAIL@ADDRESS>, 2025.
+#
+#, fuzzy
+msgid ""
+msgstr ""
+"Project-Id-Version: pytest 0.1.dev16209\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2025-02-05 00:52+0900\n"
+"PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
+"Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
+"Language: ja\n"
+"Language-Team: ja <LL@li.org>\n"
+"Plural-Forms: nplurals=1; plural=0;\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=utf-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Generated-By: Babel 2.17.0\n"
+
+#: ../../announce/release-2.5.0.rst:2
+msgid "pytest-2.5.0: now down to ZERO reported bugs!"
+msgstr ""
+
+#: ../../announce/release-2.5.0.rst:4
+msgid "pytest-2.5.0 is a big fixing release, the result of two community bug fixing days plus numerous additional works from many people and reporters.  The release should be fully compatible to 2.4.2, existing plugins and test suites.  We aim at maintaining this level of ZERO reported bugs because it's no fun if your testing tool has bugs, is it?  Under a condition, though: when submitting a bug report please provide clear information about the circumstances and a simple example which reproduces the problem."
+msgstr ""
+
+#: ../../announce/release-2.5.0.rst:13
+msgid "The issue tracker is of course not empty now.  We have many remaining \"enhancement\" issues which we'll hopefully can tackle in 2014 with your help."
+msgstr ""
+
+#: ../../announce/release-2.5.0.rst:17
+msgid "For those who use older Python versions, please note that pytest is not automatically tested on python2.5 due to virtualenv, setuptools and tox not supporting it anymore.  Manual verification shows that it mostly works fine but it's not going to be part of the automated release process and thus likely to break in the future."
+msgstr ""
+
+#: ../../announce/release-2.5.0.rst:23
+msgid "As usual, current docs are at"
+msgstr ""
+
+#: ../../announce/release-2.5.0.rst:25
+msgid "http://pytest.org"
+msgstr ""
+
+#: ../../announce/release-2.5.0.rst:27
+msgid "and you can upgrade from pypi via::"
+msgstr ""
+
+#: ../../announce/release-2.5.0.rst:31
+msgid "Particular thanks for helping with this release go to Anatoly Bubenkoff, Floris Bruynooghe, Marc Abramowitz, Ralph Schmitt, Ronny Pfannschmidt, Donald Stufft, James Lan, Rob Dennis, Jason R. Coombs, Mathieu Agopian, Virgil Dupras, Bruno Oliveira, Alex Gaynor and others."
+msgstr ""
+
+#: ../../announce/release-2.5.0.rst:36
+msgid "have fun, holger krekel"
+msgstr ""
+
+#: ../../announce/release-2.5.0.rst:41
+msgid "2.5.0"
+msgstr ""
+
+#: ../../announce/release-2.5.0.rst:43
+msgid "dropped python2.5 from automated release testing of pytest itself which means it's probably going to break soon (but still works with this release we believe)."
+msgstr ""
+
+#: ../../announce/release-2.5.0.rst:47
+msgid "simplified and fixed implementation for calling finalizers when parametrized fixtures or function arguments are involved.  finalization is now performed lazily at setup time instead of in the \"teardown phase\". While this might sound odd at first, it helps to ensure that we are correctly handling setup/teardown even in complex code.  User-level code should not be affected unless it's implementing the pytest_runtest_teardown hook and expecting certain fixture instances are torn down within (very unlikely and would have been unreliable anyway)."
+msgstr ""
+
+#: ../../announce/release-2.5.0.rst:56
+msgid "PR90: add --color=yes|no|auto option to force terminal coloring mode (\"auto\" is default).  Thanks Marc Abramowitz."
+msgstr ""
+
+#: ../../announce/release-2.5.0.rst:59
+msgid "fix issue319 - correctly show unicode in assertion errors.  Many thanks to Floris Bruynooghe for the complete PR.  Also means we depend on py>=1.4.19 now."
+msgstr ""
+
+#: ../../announce/release-2.5.0.rst:63
+msgid "fix issue396 - correctly sort and finalize class-scoped parametrized tests independently from number of methods on the class."
+msgstr ""
+
+#: ../../announce/release-2.5.0.rst:66
+msgid "refix issue323 in a better way -- parametrization should now never cause Runtime Recursion errors because the underlying algorithm for re-ordering tests per-scope/per-fixture is not recursive anymore (it was tail-call recursive before which could lead to problems for more than >966 non-function scoped parameters)."
+msgstr ""
+
+#: ../../announce/release-2.5.0.rst:72
+msgid "fix issue290 - there is preliminary support now for parametrizing with repeated same values (sometimes useful to test if calling a second time works as with the first time)."
+msgstr ""
+
+#: ../../announce/release-2.5.0.rst:76
+msgid "close issue240 - document precisely how pytest module importing works, discuss the two common test directory layouts, and how it interacts with PEP420-namespace packages."
+msgstr ""
+
+#: ../../announce/release-2.5.0.rst:80
+msgid "fix issue246 fix finalizer order to be LIFO on independent fixtures depending on a parametrized higher-than-function scoped fixture. (was quite some effort so please bear with the complexity of this sentence :) Thanks Ralph Schmitt for the precise failure example."
+msgstr ""
+
+#: ../../announce/release-2.5.0.rst:85
+msgid "fix issue244 by implementing special index for parameters to only use indices for parametrized test ids"
+msgstr ""
+
+#: ../../announce/release-2.5.0.rst:88
+msgid "fix issue287 by running all finalizers but saving the exception from the first failing finalizer and re-raising it so teardown will still have failed.  We reraise the first failing exception because it might be the cause for other finalizers to fail."
+msgstr ""
+
+#: ../../announce/release-2.5.0.rst:93
+msgid "fix ordering when mock.patch or other standard decorator-wrappings are used with test methods.  This fixes issue346 and should help with random \"xdist\" collection failures.  Thanks to Ronny Pfannschmidt and Donald Stufft for helping to isolate it."
+msgstr ""
+
+#: ../../announce/release-2.5.0.rst:98
+msgid "fix issue357 - special case \"-k\" expressions to allow for filtering with simple strings that are not valid python expressions. Examples: \"-k 1.3\" matches all tests parametrized with 1.3. \"-k None\" filters all tests that have \"None\" in their name and conversely \"-k 'not None'\". Previously these examples would raise syntax errors."
+msgstr ""
+
+#: ../../announce/release-2.5.0.rst:105
+msgid "fix issue384 by removing the trial support code since the unittest compat enhancements allow trial to handle it on its own"
+msgstr ""
+
+#: ../../announce/release-2.5.0.rst:109
+msgid "don't hide an ImportError when importing a plugin produces one. fixes issue375."
+msgstr ""
+
+#: ../../announce/release-2.5.0.rst:112
+msgid "fix issue275 - allow usefixtures and autouse fixtures for running doctest text files."
+msgstr ""
+
+#: ../../announce/release-2.5.0.rst:115
+msgid "fix issue380 by making --resultlog only rely on longrepr instead of the \"reprcrash\" attribute which only exists sometimes."
+msgstr ""
+
+#: ../../announce/release-2.5.0.rst:118
+msgid "address issue122: allow @pytest.fixture(params=iterator) by exploding into a list early on."
+msgstr ""
+
+#: ../../announce/release-2.5.0.rst:121
+msgid "fix pexpect-3.0 compatibility for pytest's own tests. (fixes issue386)"
+msgstr ""
+
+#: ../../announce/release-2.5.0.rst:124
+msgid "allow nested parametrize-value markers, thanks James Lan for the PR."
+msgstr ""
+
+#: ../../announce/release-2.5.0.rst:126
+msgid "fix unicode handling with new monkeypatch.setattr(import_path, value) API.  Thanks Rob Dennis.  Fixes issue371."
+msgstr ""
+
+#: ../../announce/release-2.5.0.rst:129
+msgid "fix unicode handling with junitxml, fixes issue368."
+msgstr ""
+
+#: ../../announce/release-2.5.0.rst:131
+msgid "In assertion rewriting mode on Python 2, fix the detection of coding cookies. See issue #330."
+msgstr ""
+
+#: ../../announce/release-2.5.0.rst:134
+msgid "make \"--runxfail\" turn imperative pytest.xfail calls into no ops (it already did neutralize pytest.mark.xfail markers)"
+msgstr ""
+
+#: ../../announce/release-2.5.0.rst:137
+msgid "refine pytest / pkg_resources interactions: The AssertionRewritingHook PEP302 compliant loader now registers itself with setuptools/pkg_resources properly so that the pkg_resources.resource_stream method works properly. Fixes issue366.  Thanks for the investigations and full PR to Jason R. Coombs."
+msgstr ""
+
+#: ../../announce/release-2.5.0.rst:142
+msgid "pytestconfig fixture is now session-scoped as it is the same object during the whole test run.  Fixes issue370."
+msgstr ""
+
+#: ../../announce/release-2.5.0.rst:145
+msgid "avoid one surprising case of marker malfunction/confusion::"
+msgstr ""
+
+#: ../../announce/release-2.5.0.rst:150
+msgid "would not work correctly because pytest assumes @pytest.mark.some gets a function to be decorated already.  We now at least detect if this arg is a lambda and thus the example will work.  Thanks Alex Gaynor for bringing it up."
+msgstr ""
+
+#: ../../announce/release-2.5.0.rst:155
+msgid "xfail a test on pypy that checks wrong encoding/ascii (pypy does not error out). fixes issue385."
+msgstr ""
+
+#: ../../announce/release-2.5.0.rst:158
+msgid "internally make varnames() deal with classes's __init__, although it's not needed by pytest itself atm.  Also fix caching.  Fixes issue376."
+msgstr ""
+
+#: ../../announce/release-2.5.0.rst:162
+msgid "fix issue221 - handle importing of namespace-package with no __init__.py properly."
+msgstr ""
+
+#: ../../announce/release-2.5.0.rst:165
+msgid "refactor internal FixtureRequest handling to avoid monkeypatching. One of the positive user-facing effects is that the \"request\" object can now be used in closures."
+msgstr ""
+
+#: ../../announce/release-2.5.0.rst:169
+msgid "fixed version comparison in pytest.importskip(modname, minverstring)"
+msgstr ""
+
+#: ../../announce/release-2.5.0.rst:171
+msgid "fix issue377 by clarifying in the nose-compat docs that pytest does not duplicate the unittest-API into the \"plain\" namespace."
+msgstr ""
+
+#: ../../announce/release-2.5.0.rst:174
+msgid "fix verbose reporting for @mock'd test functions"
+msgstr ""
+

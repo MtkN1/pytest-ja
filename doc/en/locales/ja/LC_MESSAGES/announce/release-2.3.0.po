@@ -1,0 +1,221 @@
+# SOME DESCRIPTIVE TITLE.
+# Copyright (C) 2015, holger krekel and pytest-dev team
+# This file is distributed under the same license as the pytest package.
+# FIRST AUTHOR <EMAIL@ADDRESS>, 2025.
+#
+#, fuzzy
+msgid ""
+msgstr ""
+"Project-Id-Version: pytest 0.1.dev16209\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2025-02-05 00:52+0900\n"
+"PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
+"Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
+"Language: ja\n"
+"Language-Team: ja <LL@li.org>\n"
+"Plural-Forms: nplurals=1; plural=0;\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=utf-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Generated-By: Babel 2.17.0\n"
+
+#: ../../announce/release-2.3.0.rst:2
+msgid "pytest-2.3: improved fixtures / better unittest integration"
+msgstr ""
+
+#: ../../announce/release-2.3.0.rst:4
+msgid "pytest-2.3 comes with many major improvements for fixture/funcarg management and parametrized testing in Python.  It is now easier, more efficient and more predictable to re-run the same tests with different fixture instances.  Also, you can directly declare the caching \"scope\" of fixtures so that dependent tests throughout your whole test suite can reuse database or other expensive fixture objects with ease.  Lastly, it's possible for fixture functions (formerly known as funcarg factories) to use other fixtures, allowing for a completely modular and reusable fixture design."
+msgstr ""
+
+#: ../../announce/release-2.3.0.rst:14
+msgid "For detailed info and tutorial-style examples, see:"
+msgstr ""
+
+#: ../../announce/release-2.3.0.rst:16
+msgid "http://pytest.org/en/stable/explanation/fixtures.html"
+msgstr ""
+
+#: ../../announce/release-2.3.0.rst:18
+msgid "Moreover, there is now support for using pytest fixtures/funcargs with unittest-style suites, see here for examples:"
+msgstr ""
+
+#: ../../announce/release-2.3.0.rst:21
+msgid "http://pytest.org/en/stable/how-to/unittest.html"
+msgstr ""
+
+#: ../../announce/release-2.3.0.rst:23
+msgid "Besides, more unittest-test suites are now expected to \"simply work\" with pytest."
+msgstr ""
+
+#: ../../announce/release-2.3.0.rst:26
+msgid "All changes are backward compatible and you should be able to continue to run your test suites and 3rd party plugins that worked with pytest-2.2.4."
+msgstr ""
+
+#: ../../announce/release-2.3.0.rst:30
+msgid "If you are interested in the precise reasoning (including examples) of the pytest-2.3 fixture evolution, please consult http://pytest.org/en/stable/funcarg_compare.html"
+msgstr ""
+
+#: ../../announce/release-2.3.0.rst:34
+msgid "For general info on installation and getting started:"
+msgstr ""
+
+#: ../../announce/release-2.3.0.rst:36
+msgid "http://pytest.org/en/stable/getting-started.html"
+msgstr ""
+
+#: ../../announce/release-2.3.0.rst:38
+msgid "Docs and PDF access as usual at:"
+msgstr ""
+
+#: ../../announce/release-2.3.0.rst:40
+msgid "http://pytest.org"
+msgstr ""
+
+#: ../../announce/release-2.3.0.rst:42
+msgid "and more details for those already in the knowing of pytest can be found in the CHANGELOG below."
+msgstr ""
+
+#: ../../announce/release-2.3.0.rst:45
+msgid "Particular thanks for this release go to Floris Bruynooghe, Alex Okrushko Carl Meyer, Ronny Pfannschmidt, Benjamin Peterson and Alex Gaynor for helping to get the new features right and well integrated.  Ronny and Floris also helped to fix a number of bugs and yet more people helped by providing bug reports."
+msgstr ""
+
+#: ../../announce/release-2.3.0.rst:51
+msgid "have fun, holger krekel"
+msgstr ""
+
+#: ../../announce/release-2.3.0.rst:56
+msgid "Changes between 2.2.4 and 2.3.0"
+msgstr ""
+
+#: ../../announce/release-2.3.0.rst:58
+msgid "fix issue202 - better automatic names for parametrized test functions"
+msgstr ""
+
+#: ../../announce/release-2.3.0.rst:59
+msgid "fix issue139 - introduce @pytest.fixture which allows direct scoping and parametrization of funcarg factories.  Introduce new @pytest.setup marker to allow the writing of setup functions which accept funcargs."
+msgstr ""
+
+#: ../../announce/release-2.3.0.rst:62
+msgid "fix issue198 - conftest fixtures were not found on windows32 in some circumstances with nested directory structures due to path manipulation issues"
+msgstr ""
+
+#: ../../announce/release-2.3.0.rst:64
+msgid "fix issue193 skip test functions with were parametrized with empty parameter sets"
+msgstr ""
+
+#: ../../announce/release-2.3.0.rst:66
+msgid "fix python3.3 compat, mostly reporting bits that previously depended on dict ordering"
+msgstr ""
+
+#: ../../announce/release-2.3.0.rst:68
+msgid "introduce re-ordering of tests by resource and parametrization setup which takes precedence to the usual file-ordering"
+msgstr ""
+
+#: ../../announce/release-2.3.0.rst:70
+msgid "fix issue185 monkeypatching time.time does not cause pytest to fail"
+msgstr ""
+
+#: ../../announce/release-2.3.0.rst:71
+msgid "fix issue172 duplicate call of pytest.setup-decoratored setup_module functions"
+msgstr ""
+
+#: ../../announce/release-2.3.0.rst:73
+msgid "fix junitxml=path construction so that if tests change the current working directory and the path is a relative path it is constructed correctly from the original current working dir."
+msgstr ""
+
+#: ../../announce/release-2.3.0.rst:76
+msgid "fix \"python setup.py test\" example to cause a proper \"errno\" return"
+msgstr ""
+
+#: ../../announce/release-2.3.0.rst:77
+msgid "fix issue165 - fix broken doc links and mention stackoverflow for FAQ"
+msgstr ""
+
+#: ../../announce/release-2.3.0.rst:78
+msgid "catch unicode-issues when writing failure representations to terminal to prevent the whole session from crashing"
+msgstr ""
+
+#: ../../announce/release-2.3.0.rst:80
+msgid "fix xfail/skip confusion: a skip-mark or an imperative pytest.skip will now take precedence before xfail-markers because we can't determine xfail/xpass status in case of a skip. see also: http://stackoverflow.com/questions/11105828/in-py-test-when-i-explicitly-skip-a-test-that-is-marked-as-xfail-how-can-i-get"
+msgstr ""
+
+#: ../../announce/release-2.3.0.rst:85
+msgid "always report installed 3rd party plugins in the header of a test run"
+msgstr ""
+
+#: ../../announce/release-2.3.0.rst:87
+msgid "fix issue160: a failing setup of an xfail-marked tests should be reported as xfail (not xpass)"
+msgstr ""
+
+#: ../../announce/release-2.3.0.rst:90
+msgid "fix issue128: show captured output when capsys/capfd are used"
+msgstr ""
+
+#: ../../announce/release-2.3.0.rst:92
+msgid "fix issue179: properly show the dependency chain of factories"
+msgstr ""
+
+#: ../../announce/release-2.3.0.rst:94
+msgid "pluginmanager.register(...) now raises ValueError if the plugin has been already registered or the name is taken"
+msgstr ""
+
+#: ../../announce/release-2.3.0.rst:97
+msgid "fix issue159: improve https://docs.pytest.org/en/6.0.1/faq.html especially with respect to the \"magic\" history, also mention pytest-django, trial and unittest integration."
+msgstr ""
+
+#: ../../announce/release-2.3.0.rst:101
+msgid "make request.keywords and node.keywords writable.  All descendant collection nodes will see keyword values.  Keywords are dictionaries containing markers and other info."
+msgstr ""
+
+#: ../../announce/release-2.3.0.rst:105
+msgid "fix issue 178: xml binary escapes are now wrapped in py.xml.raw"
+msgstr ""
+
+#: ../../announce/release-2.3.0.rst:107
+msgid "fix issue 176: correctly catch the builtin AssertionError even when we replaced AssertionError with a subclass on the python level"
+msgstr ""
+
+#: ../../announce/release-2.3.0.rst:111
+msgid "factory discovery no longer fails with magic global callables that provide no sane __code__ object (mock.call for example)"
+msgstr ""
+
+#: ../../announce/release-2.3.0.rst:114
+msgid "fix issue 182: testdir.inprocess_run now considers passed plugins"
+msgstr ""
+
+#: ../../announce/release-2.3.0.rst:116
+msgid "fix issue 188: ensure sys.exc_info is clear on python2"
+msgstr ""
+
+#: ../../announce/release-2.3.0.rst:117
+msgid "before calling into a test"
+msgstr ""
+
+#: ../../announce/release-2.3.0.rst:119
+msgid "fix issue 191: add unittest TestCase runTest method support"
+msgstr ""
+
+#: ../../announce/release-2.3.0.rst:120
+msgid "fix issue 156: monkeypatch correctly handles class level descriptors"
+msgstr ""
+
+#: ../../announce/release-2.3.0.rst:122
+msgid "reporting refinements:"
+msgstr ""
+
+#: ../../announce/release-2.3.0.rst:124
+msgid "pytest_report_header now receives a \"startdir\" so that you can use startdir.bestrelpath(yourpath) to show nice relative path"
+msgstr ""
+
+#: ../../announce/release-2.3.0.rst:128
+msgid "allow plugins to implement both pytest_report_header and pytest_sessionstart (sessionstart is invoked first)."
+msgstr ""
+
+#: ../../announce/release-2.3.0.rst:131
+msgid "don't show deselected reason line if there is none"
+msgstr ""
+
+#: ../../announce/release-2.3.0.rst:133
+msgid "py.test -vv will show all of assert comparisons instead of truncating"
+msgstr ""
+

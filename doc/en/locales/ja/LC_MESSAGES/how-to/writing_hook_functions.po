@@ -1,0 +1,249 @@
+# SOME DESCRIPTIVE TITLE.
+# Copyright (C) 2015, holger krekel and pytest-dev team
+# This file is distributed under the same license as the pytest package.
+# FIRST AUTHOR <EMAIL@ADDRESS>, 2025.
+#
+#, fuzzy
+msgid ""
+msgstr ""
+"Project-Id-Version: pytest 0.1.dev16209\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2025-02-05 00:52+0900\n"
+"PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
+"Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
+"Language: ja\n"
+"Language-Team: ja <LL@li.org>\n"
+"Plural-Forms: nplurals=1; plural=0;\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=utf-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Generated-By: Babel 2.17.0\n"
+
+#: ../../how-to/writing_hook_functions.rst:4
+msgid "Writing hook functions"
+msgstr ""
+
+#: ../../how-to/writing_hook_functions.rst:10
+msgid "hook function validation and execution"
+msgstr ""
+
+#: ../../how-to/writing_hook_functions.rst:12
+msgid "pytest calls hook functions from registered plugins for any given hook specification.  Let's look at a typical hook function for the ``pytest_collection_modifyitems(session, config, items)`` hook which pytest calls after collection of all test items is completed."
+msgstr ""
+
+#: ../../how-to/writing_hook_functions.rst:18
+msgid "When we implement a ``pytest_collection_modifyitems`` function in our plugin pytest will during registration verify that you use argument names which match the specification and bail out if not."
+msgstr ""
+
+#: ../../how-to/writing_hook_functions.rst:22
+msgid "Let's look at a possible implementation:"
+msgstr ""
+
+#: ../../how-to/writing_hook_functions.rst:31
+msgid "Here, ``pytest`` will pass in ``config`` (the pytest config object) and ``items`` (the list of collected test items) but will not pass in the ``session`` argument because we didn't list it in the function signature.  This dynamic \"pruning\" of arguments allows ``pytest`` to be \"future-compatible\": we can introduce new hook named parameters without breaking the signatures of existing hook implementations.  It is one of the reasons for the general long-lived compatibility of pytest plugins."
+msgstr ""
+
+#: ../../how-to/writing_hook_functions.rst:39
+msgid "Note that hook functions other than ``pytest_runtest_*`` are not allowed to raise exceptions.  Doing so will break the pytest run."
+msgstr ""
+
+#: ../../how-to/writing_hook_functions.rst:47
+msgid "firstresult: stop at first non-None result"
+msgstr ""
+
+#: ../../how-to/writing_hook_functions.rst:49
+msgid "Most calls to ``pytest`` hooks result in a **list of results** which contains all non-None results of the called hook functions."
+msgstr ""
+
+#: ../../how-to/writing_hook_functions.rst:52
+msgid "Some hook specifications use the ``firstresult=True`` option so that the hook call only executes until the first of N registered functions returns a non-None result which is then taken as result of the overall hook call. The remaining hook functions will not be called in this case."
+msgstr ""
+
+#: ../../how-to/writing_hook_functions.rst:60
+msgid "hook wrappers: executing around other hooks"
+msgstr ""
+
+#: ../../how-to/writing_hook_functions.rst:62
+msgid "pytest plugins can implement hook wrappers which wrap the execution of other hook implementations.  A hook wrapper is a generator function which yields exactly once. When pytest invokes hooks it first executes hook wrappers and passes the same arguments as to the regular hooks."
+msgstr ""
+
+#: ../../how-to/writing_hook_functions.rst:67
+msgid "At the yield point of the hook wrapper pytest will execute the next hook implementations and return their result to the yield point, or will propagate an exception if they raised."
+msgstr ""
+
+#: ../../how-to/writing_hook_functions.rst:71
+msgid "Here is an example definition of a hook wrapper:"
+msgstr ""
+
+#: ../../how-to/writing_hook_functions.rst:90
+msgid "The hook wrapper needs to return a result for the hook, or raise an exception."
+msgstr ""
+
+#: ../../how-to/writing_hook_functions.rst:92
+msgid "In many cases, the wrapper only needs to perform tracing or other side effects around the actual hook implementations, in which case it can return the result value of the ``yield``. The simplest (though useless) hook wrapper is ``return (yield)``."
+msgstr ""
+
+#: ../../how-to/writing_hook_functions.rst:97
+msgid "In other cases, the wrapper wants the adjust or adapt the result, in which case it can return a new value. If the result of the underlying hook is a mutable object, the wrapper may modify that result, but it's probably better to avoid it."
+msgstr ""
+
+#: ../../how-to/writing_hook_functions.rst:101
+msgid "If the hook implementation failed with an exception, the wrapper can handle that exception using a ``try-catch-finally`` around the ``yield``, by propagating it, suppressing it, or raising a different exception entirely."
+msgstr ""
+
+#: ../../how-to/writing_hook_functions.rst:105
+msgid "For more information, consult the :ref:`pluggy documentation about hook wrappers <pluggy:hookwrappers>`."
+msgstr ""
+
+#: ../../how-to/writing_hook_functions.rst:111
+msgid "Hook function ordering / call example"
+msgstr ""
+
+#: ../../how-to/writing_hook_functions.rst:113
+msgid "For any given hook specification there may be more than one implementation and we thus generally view ``hook`` execution as a ``1:N`` function call where ``N`` is the number of registered functions. There are ways to influence if a hook implementation comes before or after others, i.e.  the position in the ``N``-sized list of functions:"
+msgstr ""
+
+#: ../../how-to/writing_hook_functions.rst:145
+msgid "Here is the order of execution:"
+msgstr ""
+
+#: ../../how-to/writing_hook_functions.rst:147
+msgid "Plugin3's pytest_collection_modifyitems called until the yield point because it is a hook wrapper."
+msgstr ""
+
+#: ../../how-to/writing_hook_functions.rst:150
+msgid "Plugin1's pytest_collection_modifyitems is called because it is marked with ``tryfirst=True``."
+msgstr ""
+
+#: ../../how-to/writing_hook_functions.rst:153
+msgid "Plugin2's pytest_collection_modifyitems is called because it is marked with ``trylast=True`` (but even without this mark it would come after Plugin1)."
+msgstr ""
+
+#: ../../how-to/writing_hook_functions.rst:157
+msgid "Plugin3's pytest_collection_modifyitems then executing the code after the yield point.  The yield receives the result from calling the non-wrappers, or raises an exception if the non-wrappers raised."
+msgstr ""
+
+#: ../../how-to/writing_hook_functions.rst:161
+msgid "It's possible to use ``tryfirst`` and ``trylast`` also on hook wrappers in which case it will influence the ordering of hook wrappers among each other."
+msgstr ""
+
+#: ../../how-to/writing_hook_functions.rst:167
+msgid "Declaring new hooks"
+msgstr ""
+
+#: ../../how-to/writing_hook_functions.rst:171
+msgid "This is a quick overview on how to add new hooks and how they work in general, but a more complete overview can be found in `the pluggy documentation <https://pluggy.readthedocs.io/en/latest/>`__."
+msgstr ""
+
+#: ../../how-to/writing_hook_functions.rst:174
+msgid "Plugins and ``conftest.py`` files may declare new hooks that can then be implemented by other plugins in order to alter behaviour or interact with the new plugin:"
+msgstr ""
+
+#: _pytest.hookspec.pytest_addhooks:1 of
+msgid "Called at plugin registration time to allow adding new hooks via a call to :func:`pluginmanager.add_hookspecs(module_or_class, prefix) <pytest.PytestPluginManager.add_hookspecs>`."
+msgstr ""
+
+#: ../../how-to/writing_hook_functions.rst
+msgid "Parameters"
+msgstr ""
+
+#: _pytest.hookspec.pytest_addhooks:4 of
+msgid "The pytest plugin manager."
+msgstr ""
+
+#: _pytest.hookspec.pytest_addhooks:7 of
+msgid "This hook is incompatible with hook wrappers."
+msgstr ""
+
+#: _pytest.hookspec.pytest_addhooks:10 of
+msgid "Use in conftest plugins"
+msgstr ""
+
+#: _pytest.hookspec.pytest_addhooks:12 of
+msgid "If a conftest plugin implements this hook, it will be called immediately when the conftest is registered."
+msgstr ""
+
+#: ../../how-to/writing_hook_functions.rst:181
+msgid "Hooks are usually declared as do-nothing functions that contain only documentation describing when the hook will be called and what return values are expected. The names of the functions must start with `pytest_` otherwise pytest won't recognize them."
+msgstr ""
+
+#: ../../how-to/writing_hook_functions.rst:185
+msgid "Here's an example. Let's assume this code is in the ``sample_hook.py`` module."
+msgstr ""
+
+#: ../../how-to/writing_hook_functions.rst:194
+msgid "To register the hooks with pytest they need to be structured in their own module or class. This class or module can then be passed to the ``pluginmanager`` using the ``pytest_addhooks`` function (which itself is a hook exposed by pytest)."
+msgstr ""
+
+#: ../../how-to/writing_hook_functions.rst:206
+msgid "For a real world example, see `newhooks.py`_ from `xdist <https://github.com/pytest-dev/pytest-xdist>`_."
+msgstr ""
+
+#: ../../how-to/writing_hook_functions.rst:210
+msgid "Hooks may be called both from fixtures or from other hooks. In both cases, hooks are called through the ``hook`` object, available in the ``config`` object. Most hooks receive a ``config`` object directly, while fixtures may use the ``pytestconfig`` fixture which provides the same object."
+msgstr ""
+
+#: ../../how-to/writing_hook_functions.rst:223
+msgid "Hooks receive parameters using only keyword arguments."
+msgstr ""
+
+#: ../../how-to/writing_hook_functions.rst:225
+msgid "Now your hook is ready to be used. To register a function at the hook, other plugins or users must now simply define the function ``pytest_my_hook`` with the correct signature in their ``conftest.py``."
+msgstr ""
+
+#: ../../how-to/writing_hook_functions.rst:228
+msgid "Example:"
+msgstr ""
+
+#: ../../how-to/writing_hook_functions.rst:243
+msgid "Using hooks in pytest_addoption"
+msgstr ""
+
+#: ../../how-to/writing_hook_functions.rst:245
+msgid "Occasionally, it is necessary to change the way in which command line options are defined by one plugin based on hooks in another plugin. For example, a plugin may expose a command line option for which another plugin needs to define the default value. The pluginmanager can be used to install and use hooks to accomplish this. The plugin would define and add the hooks and use pytest_addoption as follows:"
+msgstr ""
+
+#: ../../how-to/writing_hook_functions.rst:282
+msgid "The conftest.py that is using myplugin would simply define the hook as follows:"
+msgstr ""
+
+#: ../../how-to/writing_hook_functions.rst:291
+msgid "Optionally using hooks from 3rd party plugins"
+msgstr ""
+
+#: ../../how-to/writing_hook_functions.rst:293
+msgid "Using new hooks from plugins as explained above might be a little tricky because of the standard :ref:`validation mechanism <validation>`: if you depend on a plugin that is not installed, validation will fail and the error message will not make much sense to your users."
+msgstr ""
+
+#: ../../how-to/writing_hook_functions.rst:298
+msgid "One approach is to defer the hook implementation to a new plugin instead of declaring the hook functions directly in your plugin module, for example:"
+msgstr ""
+
+#: ../../how-to/writing_hook_functions.rst:317
+msgid "This has the added benefit of allowing you to conditionally install hooks depending on which plugins are installed."
+msgstr ""
+
+#: ../../how-to/writing_hook_functions.rst:323
+msgid "Storing data on items across hook functions"
+msgstr ""
+
+#: ../../how-to/writing_hook_functions.rst:325
+msgid "Plugins often need to store data on :class:`~pytest.Item`\\s in one hook implementation, and access it in another. One common solution is to just assign some private attribute directly on the item, but type-checkers like mypy frown upon this, and it may also cause conflicts with other plugins. So pytest offers a better way to do this, :attr:`item.stash <_pytest.nodes.Node.stash>`."
+msgstr ""
+
+#: ../../how-to/writing_hook_functions.rst:331
+msgid "To use the \"stash\" in your plugins, first create \"stash keys\" somewhere at the top level of your plugin:"
+msgstr ""
+
+#: ../../how-to/writing_hook_functions.rst:339
+msgid "then use the keys to stash your data at some point:"
+msgstr ""
+
+#: ../../how-to/writing_hook_functions.rst:347
+msgid "and retrieve them at another point:"
+msgstr ""
+
+#: ../../how-to/writing_hook_functions.rst:356
+msgid "Stashes are available on all node types (like :class:`~pytest.Class`, :class:`~pytest.Session`) and also on :class:`~pytest.Config`, if needed."
+msgstr ""
+

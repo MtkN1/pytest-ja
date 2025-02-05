@@ -1,0 +1,73 @@
+# SOME DESCRIPTIVE TITLE.
+# Copyright (C) 2015, holger krekel and pytest-dev team
+# This file is distributed under the same license as the pytest package.
+# FIRST AUTHOR <EMAIL@ADDRESS>, 2025.
+#
+#, fuzzy
+msgid ""
+msgstr ""
+"Project-Id-Version: pytest 0.1.dev16209\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2025-02-05 00:52+0900\n"
+"PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
+"Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
+"Language: ja\n"
+"Language-Team: ja <LL@li.org>\n"
+"Plural-Forms: nplurals=1; plural=0;\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=utf-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Generated-By: Babel 2.17.0\n"
+
+#: ../../announce/release-2.1.2.rst:2
+msgid "py.test 2.1.2: bug fixes and fixes for jython"
+msgstr ""
+
+#: ../../announce/release-2.1.2.rst:4
+msgid "pytest-2.1.2 is a minor backward compatible maintenance release of the popular py.test testing tool.  pytest is commonly used for unit, functional- and integration testing.  See extensive docs with examples here:"
+msgstr ""
+
+#: ../../announce/release-2.1.2.rst:9
+msgid "http://pytest.org/"
+msgstr ""
+
+#: ../../announce/release-2.1.2.rst:11
+msgid "Most bug fixes address remaining issues with the perfected assertions introduced in the 2.1 series - many thanks to the bug reporters and to Benjamin Peterson for helping to fix them.  pytest should also work better with Jython-2.5.1 (and Jython trunk)."
+msgstr ""
+
+#: ../../announce/release-2.1.2.rst:16
+msgid "If you want to install or upgrade pytest, just type one of::"
+msgstr ""
+
+#: ../../announce/release-2.1.2.rst:21
+msgid "best, holger krekel / https://merlinux.eu/"
+msgstr ""
+
+#: ../../announce/release-2.1.2.rst:25
+msgid "Changes between 2.1.1 and 2.1.2"
+msgstr ""
+
+#: ../../announce/release-2.1.2.rst:27
+msgid "fix assertion rewriting on files with windows newlines on some Python versions"
+msgstr ""
+
+#: ../../announce/release-2.1.2.rst:28
+msgid "refine test discovery by package/module name (--pyargs), thanks Florian Mayer"
+msgstr ""
+
+#: ../../announce/release-2.1.2.rst:29
+msgid "fix issue69 / assertion rewriting fixed on some boolean operations"
+msgstr ""
+
+#: ../../announce/release-2.1.2.rst:30
+msgid "fix issue68 / packages now work with assertion rewriting"
+msgstr ""
+
+#: ../../announce/release-2.1.2.rst:31
+msgid "fix issue66: use different assertion rewriting caches when the -O option is passed"
+msgstr ""
+
+#: ../../announce/release-2.1.2.rst:32
+msgid "don't try assertion rewriting on Jython, use reinterp"
+msgstr ""
+

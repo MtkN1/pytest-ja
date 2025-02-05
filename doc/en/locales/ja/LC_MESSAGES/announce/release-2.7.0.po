@@ -1,0 +1,130 @@
+# SOME DESCRIPTIVE TITLE.
+# Copyright (C) 2015, holger krekel and pytest-dev team
+# This file is distributed under the same license as the pytest package.
+# FIRST AUTHOR <EMAIL@ADDRESS>, 2025.
+#
+#, fuzzy
+msgid ""
+msgstr ""
+"Project-Id-Version: pytest 0.1.dev16209\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2025-02-05 00:52+0900\n"
+"PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
+"Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
+"Language: ja\n"
+"Language-Team: ja <LL@li.org>\n"
+"Plural-Forms: nplurals=1; plural=0;\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=utf-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Generated-By: Babel 2.17.0\n"
+
+#: ../../announce/release-2.7.0.rst:2
+msgid "pytest-2.7.0: fixes, features, speed improvements"
+msgstr ""
+
+#: ../../announce/release-2.7.0.rst:4
+msgid "pytest is a mature Python testing tool with more than 1100 tests against itself, passing on many different interpreters and platforms. This release is supposed to be drop-in compatible to 2.6.X."
+msgstr ""
+
+#: ../../announce/release-2.7.0.rst:8
+msgid "See below for the changes and see docs at:"
+msgstr ""
+
+#: ../../announce/release-2.7.0.rst:10
+msgid "http://pytest.org"
+msgstr ""
+
+#: ../../announce/release-2.7.0.rst:12
+msgid "As usual, you can upgrade from pypi via::"
+msgstr ""
+
+#: ../../announce/release-2.7.0.rst:16
+msgid "Thanks to all who contributed, among them:"
+msgstr ""
+
+#: ../../announce/release-2.7.0.rst:18
+msgid "Anatoly Bubenkoff Floris Bruynooghe Brianna Laugher Eric Siegerman Daniel Hahler Charles Cloud Tom Viner Holger Peters Ldiary Translations almarklein"
+msgstr ""
+
+#: ../../announce/release-2.7.0.rst:29
+msgid "have fun, holger krekel"
+msgstr ""
+
+#: ../../announce/release-2.7.0.rst:33
+msgid "2.7.0 (compared to 2.6.4)"
+msgstr ""
+
+#: ../../announce/release-2.7.0.rst:35
+msgid "fix issue435: make reload() work when assert rewriting is active. Thanks Daniel Hahler."
+msgstr ""
+
+#: ../../announce/release-2.7.0.rst:38
+msgid "fix issue616: conftest.py files and their contained fixtures are now properly considered for visibility, independently from the exact current working directory and test arguments that are used. Many thanks to Eric Siegerman and his PR235 which contains systematic tests for conftest visibility and now passes. This change also introduces the concept of a ``rootdir`` which is printed as a new pytest header and documented in the pytest customize web page."
+msgstr ""
+
+#: ../../announce/release-2.7.0.rst:47
+msgid "change reporting of \"diverted\" tests, i.e. tests that are collected in one file but actually come from another (e.g. when tests in a test class come from a base class in a different file).  We now show the nodeid and indicate via a postfix the other file."
+msgstr ""
+
+#: ../../announce/release-2.7.0.rst:52
+msgid "add ability to set command line options by environment variable PYTEST_ADDOPTS."
+msgstr ""
+
+#: ../../announce/release-2.7.0.rst:54
+msgid "added documentation on the new pytest-dev teams on bitbucket and github.  See https://pytest.org/en/stable/contributing.html . Thanks to Anatoly for pushing and initial work on this."
+msgstr ""
+
+#: ../../announce/release-2.7.0.rst:58
+msgid "fix issue650: new option ``--doctest-ignore-import-errors`` which will turn import errors in doctests into skips.  Thanks Charles Cloud for the complete PR."
+msgstr ""
+
+#: ../../announce/release-2.7.0.rst:62
+msgid "fix issue655: work around different ways that cause python2/3 to leak sys.exc_info into fixtures/tests causing failures in 3rd party code"
+msgstr ""
+
+#: ../../announce/release-2.7.0.rst:65
+#, python-format
+msgid "fix issue615: assertion rewriting did not correctly escape % signs when formatting boolean operations, which tripped over mixing booleans with modulo operators.  Thanks to Tom Viner for the report, triaging and fix."
+msgstr ""
+
+#: ../../announce/release-2.7.0.rst:70
+msgid "implement issue351: add ability to specify parametrize ids as a callable to generate custom test ids.  Thanks Brianna Laugher for the idea and implementation."
+msgstr ""
+
+#: ../../announce/release-2.7.0.rst:74
+msgid "introduce and document new hookwrapper mechanism useful for plugins which want to wrap the execution of certain hooks for their purposes. This supersedes the undocumented ``__multicall__`` protocol which pytest itself and some external plugins use.  Note that pytest-2.8 is scheduled to drop supporting the old ``__multicall__`` and only support the hookwrapper protocol."
+msgstr ""
+
+#: ../../announce/release-2.7.0.rst:81
+msgid "majorly speed up invocation of plugin hooks"
+msgstr ""
+
+#: ../../announce/release-2.7.0.rst:83
+msgid "use hookwrapper mechanism in builtin pytest plugins."
+msgstr ""
+
+#: ../../announce/release-2.7.0.rst:85
+msgid "add a doctest ini option for doctest flags, thanks Holger Peters."
+msgstr ""
+
+#: ../../announce/release-2.7.0.rst:87
+msgid "add note to docs that if you want to mark a parameter and the parameter is a callable, you also need to pass in a reason to disambiguate it from the \"decorator\" case.  Thanks Tom Viner."
+msgstr ""
+
+#: ../../announce/release-2.7.0.rst:91
+msgid "\"python_classes\" and \"python_functions\" options now support glob-patterns for test discovery, as discussed in issue600. Thanks Ldiary Translations."
+msgstr ""
+
+#: ../../announce/release-2.7.0.rst:94
+msgid "allow to override parametrized fixtures with non-parametrized ones and vice versa (bubenkoff)."
+msgstr ""
+
+#: ../../announce/release-2.7.0.rst:96
+msgid "fix issue463: raise specific error for 'parameterize' misspelling (pfctdayelise)."
+msgstr ""
+
+#: ../../announce/release-2.7.0.rst:98
+msgid "On failure, the ``sys.last_value``, ``sys.last_type`` and ``sys.last_traceback`` are set, so that a user can inspect the error via postmortem debugging (almarklein)."
+msgstr ""
+

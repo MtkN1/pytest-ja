@@ -1,0 +1,177 @@
+# SOME DESCRIPTIVE TITLE.
+# Copyright (C) 2015, holger krekel and pytest-dev team
+# This file is distributed under the same license as the pytest package.
+# FIRST AUTHOR <EMAIL@ADDRESS>, 2025.
+#
+#, fuzzy
+msgid ""
+msgstr ""
+"Project-Id-Version: pytest 0.1.dev16209\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2025-02-05 00:52+0900\n"
+"PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
+"Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
+"Language: ja\n"
+"Language-Team: ja <LL@li.org>\n"
+"Plural-Forms: nplurals=1; plural=0;\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=utf-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Generated-By: Babel 2.17.0\n"
+
+#: ../../funcarg_compare.rst:6
+msgid "pytest-2.3: reasoning for fixture/funcarg evolution"
+msgstr ""
+
+#: ../../funcarg_compare.rst:8
+msgid "**Target audience**: Reading this document requires basic knowledge of python testing, xUnit setup methods and the (previous) basic pytest funcarg mechanism, see :ref:`historical funcargs and pytest.funcargs`. If you are new to pytest, then you can simply ignore this section and read the other sections."
+msgstr ""
+
+#: ../../funcarg_compare.rst:15
+msgid "Shortcomings of the previous ``pytest_funcarg__`` mechanism"
+msgstr ""
+
+#: ../../funcarg_compare.rst:17
+msgid "The pre pytest-2.3 funcarg mechanism calls a factory each time a funcarg for a test function is required.  If a factory wants to reuse a resource across different scopes, it often used the ``request.cached_setup()`` helper to manage caching of resources.  Here is a basic example how we could implement a per-session Database object:"
+msgstr ""
+
+#: ../../funcarg_compare.rst:40
+msgid "There are several limitations and difficulties with this approach:"
+msgstr ""
+
+#: ../../funcarg_compare.rst:42
+msgid "Scoping funcarg resource creation is not straight forward, instead one must understand the intricate cached_setup() method mechanics."
+msgstr ""
+
+#: ../../funcarg_compare.rst:45
+msgid "parametrizing the \"db\" resource is not straight forward: you need to apply a \"parametrize\" decorator or implement a :hook:`pytest_generate_tests` hook calling :py:func:`~pytest.Metafunc.parametrize` which performs parametrization at the places where the resource is used.  Moreover, you need to modify the factory to use an ``extrakey`` parameter containing ``request.param`` to the ``Request.cached_setup`` call."
+msgstr ""
+
+#: ../../funcarg_compare.rst:54
+msgid "Multiple parametrized session-scoped resources will be active at the same time, making it hard for them to affect global state of the application under test."
+msgstr ""
+
+#: ../../funcarg_compare.rst:58
+msgid "there is no way how you can make use of funcarg factories in xUnit setup methods."
+msgstr ""
+
+#: ../../funcarg_compare.rst:61
+msgid "A non-parametrized fixture function cannot use a parametrized funcarg resource if it isn't stated in the test function signature."
+msgstr ""
+
+#: ../../funcarg_compare.rst:64
+msgid "All of these limitations are addressed with pytest-2.3 and its improved :ref:`fixture mechanism <fixture>`."
+msgstr ""
+
+#: ../../funcarg_compare.rst:69
+msgid "Direct scoping of fixture/funcarg factories"
+msgstr ""
+
+#: ../../funcarg_compare.rst:71
+msgid "Instead of calling cached_setup() with a cache scope, you can use the :ref:`@pytest.fixture <pytest.fixture>` decorator and directly state the scope:"
+msgstr ""
+
+#: ../../funcarg_compare.rst:84
+msgid "This factory implementation does not need to call ``cached_setup()`` anymore because it will only be invoked once per session.  Moreover, the ``request.addfinalizer()`` registers a finalizer according to the specified resource scope on which the factory function is operating."
+msgstr ""
+
+#: ../../funcarg_compare.rst:91
+msgid "Direct parametrization of funcarg resource factories"
+msgstr ""
+
+#: ../../funcarg_compare.rst:93
+msgid "Previously, funcarg factories could not directly cause parametrization. You needed to specify a ``@parametrize`` decorator on your test function or implement a :hook:`pytest_generate_tests` hook to perform parametrization, i.e. calling a test multiple times with different value sets.  pytest-2.3 introduces a decorator for use on the factory itself:"
+msgstr ""
+
+#: ../../funcarg_compare.rst:104
+msgid "Here the factory will be invoked twice (with the respective \"mysql\" and \"pg\" values set as ``request.param`` attributes) and all of the tests requiring \"db\" will run twice as well.  The \"mysql\" and \"pg\" values will also be used for reporting the test-invocation variants."
+msgstr ""
+
+#: ../../funcarg_compare.rst:109
+msgid "This new way of parametrizing funcarg factories should in many cases allow to reuse already written factories because effectively ``request.param`` was already used when test functions/classes were parametrized via :py:func:`metafunc.parametrize(indirect=True) <pytest.Metafunc.parametrize>` calls."
+msgstr ""
+
+#: ../../funcarg_compare.rst:115
+msgid "Of course it's perfectly fine to combine parametrization and scoping:"
+msgstr ""
+
+#: ../../funcarg_compare.rst:128
+msgid "This would execute all tests requiring the per-session \"db\" resource twice, receiving the values created by the two respective invocations to the factory function."
+msgstr ""
+
+#: ../../funcarg_compare.rst:134
+msgid "No ``pytest_funcarg__`` prefix when using @fixture decorator"
+msgstr ""
+
+#: ../../funcarg_compare.rst:136
+msgid "When using the ``@fixture`` decorator the name of the function denotes the name under which the resource can be accessed as a function argument:"
+msgstr ""
+
+#: ../../funcarg_compare.rst:145
+msgid "The name under which the funcarg resource can be requested is ``db``."
+msgstr ""
+
+#: ../../funcarg_compare.rst:147
+msgid "You can still use the \"old\" non-decorator way of specifying funcarg factories aka:"
+msgstr ""
+
+#: ../../funcarg_compare.rst:155
+msgid "But it is then not possible to define scoping and parametrization. It is thus recommended to use the factory decorator."
+msgstr ""
+
+#: ../../funcarg_compare.rst:160
+msgid "solving per-session setup / autouse fixtures"
+msgstr ""
+
+#: ../../funcarg_compare.rst:162
+msgid "pytest for a long time offered a pytest_configure and a pytest_sessionstart hook which are often used to setup global resources.  This suffers from several problems:"
+msgstr ""
+
+#: ../../funcarg_compare.rst:166
+msgid "in distributed testing the managing process would setup test resources that are never needed because it only coordinates the test run activities of the worker processes."
+msgstr ""
+
+#: ../../funcarg_compare.rst:170
+msgid "if you only perform a collection (with \"--collect-only\") resource-setup will still be executed."
+msgstr ""
+
+#: ../../funcarg_compare.rst:173
+msgid "If a pytest_sessionstart is contained in some subdirectories conftest.py file, it will not be called.  This stems from the fact that this hook is actually used for reporting, in particular the test-header with platform/custom information."
+msgstr ""
+
+#: ../../funcarg_compare.rst:178
+msgid "Moreover, it was not easy to define a scoped setup from plugins or conftest files other than to implement a ``pytest_runtest_setup()`` hook and caring for scoping/caching yourself.  And it's virtually impossible to do this with parametrization as ``pytest_runtest_setup()`` is called during test execution and parametrization happens at collection time."
+msgstr ""
+
+#: ../../funcarg_compare.rst:184
+msgid "It follows that pytest_configure/session/runtest_setup are often not appropriate for implementing common fixture needs.  Therefore, pytest-2.3 introduces :ref:`autouse fixtures` which fully integrate with the generic :ref:`fixture mechanism <fixture>` and obsolete many prior uses of pytest hooks."
+msgstr ""
+
+#: ../../funcarg_compare.rst:191
+msgid "funcargs/fixture discovery now happens at collection time"
+msgstr ""
+
+#: ../../funcarg_compare.rst:193
+msgid "Since pytest-2.3, discovery of fixture/funcarg factories are taken care of at collection time.  This is more efficient especially for large test suites. Moreover, a call to \"pytest --collect-only\" should be able to in the future show a lot of setup-information and thus presents a nice method to get an overview of fixture management in your project."
+msgstr ""
+
+#: ../../funcarg_compare.rst:204
+msgid "Conclusion and compatibility notes"
+msgstr ""
+
+#: ../../funcarg_compare.rst:206
+msgid "**funcargs** were originally introduced to pytest-2.0.  In pytest-2.3 the mechanism was extended and refined and is now described as fixtures:"
+msgstr ""
+
+#: ../../funcarg_compare.rst:210
+msgid "previously funcarg factories were specified with a special ``pytest_funcarg__NAME`` prefix instead of using the ``@pytest.fixture`` decorator."
+msgstr ""
+
+#: ../../funcarg_compare.rst:214
+msgid "Factories received a ``request`` object which managed caching through ``request.cached_setup()`` calls and allowed using other funcargs via ``request.getfuncargvalue()`` calls.  These intricate APIs made it hard to do proper parametrization and implement resource caching. The new :py:func:`pytest.fixture` decorator allows to declare the scope and let pytest figure things out for you."
+msgstr ""
+
+#: ../../funcarg_compare.rst:221
+msgid "if you used parametrization and funcarg factories which made use of ``request.cached_setup()`` it is recommended to invest a few minutes and simplify your fixture function code to use the :ref:`@pytest.fixture` decorator instead.  This will also allow to take advantage of the automatic per-resource grouping of tests."
+msgstr ""
+

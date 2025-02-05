@@ -1,0 +1,93 @@
+# SOME DESCRIPTIVE TITLE.
+# Copyright (C) 2015, holger krekel and pytest-dev team
+# This file is distributed under the same license as the pytest package.
+# FIRST AUTHOR <EMAIL@ADDRESS>, 2025.
+#
+#, fuzzy
+msgid ""
+msgstr ""
+"Project-Id-Version: pytest 0.1.dev16209\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2025-02-05 00:52+0900\n"
+"PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
+"Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
+"Language: ja\n"
+"Language-Team: ja <LL@li.org>\n"
+"Plural-Forms: nplurals=1; plural=0;\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=utf-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Generated-By: Babel 2.17.0\n"
+
+#: ../../announce/release-2.5.2.rst:2
+msgid "pytest-2.5.2: fixes"
+msgstr ""
+
+#: ../../announce/release-2.5.2.rst:4
+msgid "pytest is a mature Python testing tool with more than 1000 tests against itself, passing on many different interpreters and platforms."
+msgstr ""
+
+#: ../../announce/release-2.5.2.rst:7
+msgid "The 2.5.2 release fixes a few bugs with two maybe-bugs remaining and actively being worked on (and waiting for the bug reporter's input). We also have a new contribution guide thanks to Piotr Banaszkiewicz and others."
+msgstr ""
+
+#: ../../announce/release-2.5.2.rst:12
+msgid "See docs at:"
+msgstr ""
+
+#: ../../announce/release-2.5.2.rst:14
+msgid "http://pytest.org"
+msgstr ""
+
+#: ../../announce/release-2.5.2.rst:16
+msgid "As usual, you can upgrade from pypi via::"
+msgstr ""
+
+#: ../../announce/release-2.5.2.rst:20
+msgid "Thanks to the following people who contributed to this release:"
+msgstr ""
+
+#: ../../announce/release-2.5.2.rst:22
+msgid "Anatoly Bubenkov Ronny Pfannschmidt Floris Bruynooghe Bruno Oliveira Andreas Pelme Jurko Gospodnetić Piotr Banaszkiewicz Simon Liedtke lakka Lukasz Balcerzak Philippe Muller Daniel Hahler"
+msgstr ""
+
+#: ../../announce/release-2.5.2.rst:35
+msgid "have fun, holger krekel"
+msgstr ""
+
+#: ../../announce/release-2.5.2.rst:39
+msgid "2.5.2"
+msgstr ""
+
+#: ../../announce/release-2.5.2.rst:41
+msgid "fix issue409 -- better interoperate with cx_freeze by not trying to import from collections.abc which causes problems for py27/cx_freeze.  Thanks Wolfgang L. for reporting and tracking it down."
+msgstr ""
+
+#: ../../announce/release-2.5.2.rst:45
+msgid "fixed docs and code to use \"pytest\" instead of \"py.test\" almost everywhere. Thanks Jurko Gospodnetic for the complete PR."
+msgstr ""
+
+#: ../../announce/release-2.5.2.rst:48
+msgid "fix issue425: mention at end of \"py.test -h\" that --markers and --fixtures work according to specified test path (or current dir)"
+msgstr ""
+
+#: ../../announce/release-2.5.2.rst:51
+msgid "fix issue413: exceptions with unicode attributes are now printed correctly also on python2 and with pytest-xdist runs. (the fix requires py-1.4.20)"
+msgstr ""
+
+#: ../../announce/release-2.5.2.rst:55
+msgid "copy, cleanup and integrate py.io capture from pylib 1.4.20.dev2 (rev 13d9af95547e)"
+msgstr ""
+
+#: ../../announce/release-2.5.2.rst:58
+msgid "address issue416: clarify docs as to conftest.py loading semantics"
+msgstr ""
+
+#: ../../announce/release-2.5.2.rst:60
+msgid "fix issue429: comparing byte strings with non-ascii chars in assert expressions now work better.  Thanks Floris Bruynooghe."
+msgstr ""
+
+#: ../../announce/release-2.5.2.rst:63
+msgid "make capfd/capsys.capture private, its unused and shouldn't be exposed"
+msgstr ""
+

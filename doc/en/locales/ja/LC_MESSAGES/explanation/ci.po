@@ -1,0 +1,77 @@
+# SOME DESCRIPTIVE TITLE.
+# Copyright (C) 2015, holger krekel and pytest-dev team
+# This file is distributed under the same license as the pytest package.
+# FIRST AUTHOR <EMAIL@ADDRESS>, 2025.
+#
+#, fuzzy
+msgid ""
+msgstr ""
+"Project-Id-Version: pytest 0.1.dev16209\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2025-02-05 00:52+0900\n"
+"PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
+"Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
+"Language: ja\n"
+"Language-Team: ja <LL@li.org>\n"
+"Plural-Forms: nplurals=1; plural=0;\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=utf-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Generated-By: Babel 2.17.0\n"
+
+#: ../../explanation/ci.rst:4
+msgid "CI Pipelines"
+msgstr ""
+
+#: ../../explanation/ci.rst:7
+msgid "Rationale"
+msgstr ""
+
+#: ../../explanation/ci.rst:9
+msgid "The goal of testing in a CI pipeline is different from testing locally. Indeed, you can quickly edit some code and run your tests again on your computer, but it is not possible with CI pipeline. They run on a separate server and are triggered by specific actions."
+msgstr ""
+
+#: ../../explanation/ci.rst:14
+msgid "From that observation, pytest can detect when it is in a CI environment and adapt some of its behaviours."
+msgstr ""
+
+#: ../../explanation/ci.rst:18
+msgid "How CI is detected"
+msgstr ""
+
+#: ../../explanation/ci.rst:20
+msgid "Pytest knows it is in a CI environment when either one of these environment variables are set, regardless of their value:"
+msgstr ""
+
+#: ../../explanation/ci.rst:23
+msgid "`CI`: used by many CI systems."
+msgstr ""
+
+#: ../../explanation/ci.rst:24
+msgid "`BUILD_NUMBER`: used by Jenkins."
+msgstr ""
+
+#: ../../explanation/ci.rst:27
+msgid "Effects on CI"
+msgstr ""
+
+#: ../../explanation/ci.rst:29
+msgid "For now, the effects on pytest of being in a CI environment are limited."
+msgstr ""
+
+#: ../../explanation/ci.rst:31
+msgid "When a CI environment is detected, the output of the short test summary info is no longer truncated to the terminal size i.e. the entire message will be shown."
+msgstr ""
+
+#: ../../explanation/ci.rst:47
+msgid "Running this locally, without any extra options, will output:"
+msgstr ""
+
+#: ../../explanation/ci.rst:56
+msgid "*(Note the truncated text)*"
+msgstr ""
+
+#: ../../explanation/ci.rst:59
+msgid "While running this on CI will output:"
+msgstr ""
+

@@ -1,0 +1,157 @@
+# SOME DESCRIPTIVE TITLE.
+# Copyright (C) 2015, holger krekel and pytest-dev team
+# This file is distributed under the same license as the pytest package.
+# FIRST AUTHOR <EMAIL@ADDRESS>, 2025.
+#
+#, fuzzy
+msgid ""
+msgstr ""
+"Project-Id-Version: pytest 0.1.dev16209\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2025-02-05 00:52+0900\n"
+"PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
+"Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
+"Language: ja\n"
+"Language-Team: ja <LL@li.org>\n"
+"Plural-Forms: nplurals=1; plural=0;\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=utf-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Generated-By: Babel 2.17.0\n"
+
+#: ../../announce/release-2.9.0.rst:2
+msgid "pytest-2.9.0"
+msgstr ""
+
+#: ../../announce/release-2.9.0.rst:4
+msgid "pytest is a mature Python testing tool with more than 1100 tests against itself, passing on many different interpreters and platforms."
+msgstr ""
+
+#: ../../announce/release-2.9.0.rst:7
+msgid "See below for the changes and see docs at:"
+msgstr ""
+
+#: ../../announce/release-2.9.0.rst:9
+msgid "http://pytest.org"
+msgstr ""
+
+#: ../../announce/release-2.9.0.rst:11
+msgid "As usual, you can upgrade from pypi via::"
+msgstr ""
+
+#: ../../announce/release-2.9.0.rst:15
+msgid "Thanks to all who contributed to this release, among them:"
+msgstr ""
+
+#: ../../announce/release-2.9.0.rst:17
+msgid "Anatoly Bubenkov Bruno Oliveira Buck Golemon David Vierra Florian Bruhin Galaczi Endre Georgy Dyuldin Lukas Bednar Luke Murphy Marcin Biernat Matt Williams Michael Aquilina Raphael Pierzina Ronny Pfannschmidt Ryan Wooden Tiemo Kieft TomV holger krekel jab"
+msgstr ""
+
+#: ../../announce/release-2.9.0.rst:38
+msgid "Happy testing, The py.test Development Team"
+msgstr ""
+
+#: ../../announce/release-2.9.0.rst:43
+msgid "2.9.0 (compared to 2.8.7)"
+msgstr ""
+
+#: ../../announce/release-2.9.0.rst:45
+msgid "**New Features**"
+msgstr ""
+
+#: ../../announce/release-2.9.0.rst:47
+msgid "New ``pytest.mark.skip`` mark, which unconditionally skips marked tests. Thanks :user:`MichaelAquilina` for the complete PR (:pr:`1040`)."
+msgstr ""
+
+#: ../../announce/release-2.9.0.rst:50
+msgid "``--doctest-glob`` may now be passed multiple times in the command-line. Thanks :user:`jab` and :user:`nicoddemus` for the PR."
+msgstr ""
+
+#: ../../announce/release-2.9.0.rst:53
+msgid "New ``-rp`` and ``-rP`` reporting options give the summary and full output of passing tests, respectively. Thanks to :user:`codewarrior0` for the PR."
+msgstr ""
+
+#: ../../announce/release-2.9.0.rst:56
+msgid "``pytest.mark.xfail`` now has a ``strict`` option which makes ``XPASS`` tests to fail the test suite, defaulting to ``False``. There's also a ``xfail_strict`` ini option that can be used to configure it project-wise. Thanks :user:`rabbbit` for the request and :user:`nicoddemus` for the PR (:issue:`1355`)."
+msgstr ""
+
+#: ../../announce/release-2.9.0.rst:61
+msgid "``Parser.addini`` now supports options of type ``bool``. Thanks :user:`nicoddemus` for the PR."
+msgstr ""
+
+#: ../../announce/release-2.9.0.rst:64
+msgid "New ``ALLOW_BYTES`` doctest option strips ``b`` prefixes from byte strings in doctest output (similar to ``ALLOW_UNICODE``). Thanks :user:`jaraco` for the request and :user:`nicoddemus` for the PR (:issue:`1287`)."
+msgstr ""
+
+#: ../../announce/release-2.9.0.rst:68
+msgid "give a hint on KeyboardInterrupt to use the --fulltrace option to show the errors, this fixes :issue:`1366`. Thanks to :user:`hpk42` for the report and :user:`RonnyPfannschmidt` for the PR."
+msgstr ""
+
+#: ../../announce/release-2.9.0.rst:72
+msgid "catch IndexError exceptions when getting exception source location. This fixes pytest internal error for dynamically generated code (fixtures and tests) where source lines are fake by intention"
+msgstr ""
+
+#: ../../announce/release-2.9.0.rst:76
+msgid "**Changes**"
+msgstr ""
+
+#: ../../announce/release-2.9.0.rst:78
+msgid "**Important**: `py.code <https://pylib.readthedocs.io/en/stable/code.html>`_ has been merged into the ``pytest`` repository as ``pytest._code``. This decision was made because ``py.code`` had very few uses outside ``pytest`` and the fact that it was in a different repository made it difficult to fix bugs on its code in a timely manner. The team hopes with this to be able to better refactor out and improve that code. This change shouldn't affect users, but it is useful to let users aware if they encounter any strange behavior."
+msgstr ""
+
+#: ../../announce/release-2.9.0.rst:87
+msgid "Keep in mind that the code for ``pytest._code`` is **private** and **experimental**, so you definitely should not import it explicitly!"
+msgstr ""
+
+#: ../../announce/release-2.9.0.rst:90
+msgid "Please note that the original ``py.code`` is still available in `pylib <https://pylib.readthedocs.io/en/stable/>`_."
+msgstr ""
+
+#: ../../announce/release-2.9.0.rst:93
+msgid "``pytest_enter_pdb`` now optionally receives the pytest config object. Thanks :user:`nicoddemus` for the PR."
+msgstr ""
+
+#: ../../announce/release-2.9.0.rst:96
+msgid "Removed code and documentation for Python 2.5 or lower versions, including removal of the obsolete ``_pytest.assertion.oldinterpret`` module. Thanks :user:`nicoddemus` for the PR (:issue:`1226`)."
+msgstr ""
+
+#: ../../announce/release-2.9.0.rst:100
+msgid "Comparisons now always show up in full when ``CI`` or ``BUILD_NUMBER`` is found in the environment, even when -vv isn't used. Thanks :user:`The-Compiler` for the PR."
+msgstr ""
+
+#: ../../announce/release-2.9.0.rst:104
+msgid "``--lf`` and ``--ff`` now support long names: ``--last-failed`` and ``--failed-first`` respectively. Thanks :user:`MichaelAquilina` for the PR."
+msgstr ""
+
+#: ../../announce/release-2.9.0.rst:108
+msgid "Added expected exceptions to pytest.raises fail message"
+msgstr ""
+
+#: ../../announce/release-2.9.0.rst:110
+msgid "Collection only displays progress (\"collecting X items\") when in a terminal. This avoids cluttering the output when using ``--color=yes`` to obtain colors in CI integrations systems (:issue:`1397`)."
+msgstr ""
+
+#: ../../announce/release-2.9.0.rst:114
+msgid "**Bug Fixes**"
+msgstr ""
+
+#: ../../announce/release-2.9.0.rst:116
+msgid "The ``-s`` and ``-c`` options should now work under ``xdist``; ``Config.fromdictargs`` now represents its input much more faithfully. Thanks to :user:`bukzor` for the complete PR (:issue:`680`)."
+msgstr ""
+
+#: ../../announce/release-2.9.0.rst:120
+msgid "Fix (:issue:`1290`): support Python 3.5's ``@`` operator in assertion rewriting. Thanks :user:`Shinkenjoe` for report with test case and :user:`tomviner` for the PR."
+msgstr ""
+
+#: ../../announce/release-2.9.0.rst:123
+msgid "Fix formatting utf-8 explanation messages (:issue:`1379`). Thanks :user:`biern` for the PR."
+msgstr ""
+
+#: ../../announce/release-2.9.0.rst:126
+msgid "Fix `traceback style docs`_ to describe all of the available options (auto/long/short/line/native/no), with ``auto`` being the default since v2.6. Thanks :user:`hackebrot` for the PR."
+msgstr ""
+
+#: ../../announce/release-2.9.0.rst:130
+msgid "Fix (:issue:`1422`): junit record_xml_property doesn't allow multiple records with same name."
+msgstr ""
+

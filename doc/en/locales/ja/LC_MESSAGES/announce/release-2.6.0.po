@@ -1,0 +1,205 @@
+# SOME DESCRIPTIVE TITLE.
+# Copyright (C) 2015, holger krekel and pytest-dev team
+# This file is distributed under the same license as the pytest package.
+# FIRST AUTHOR <EMAIL@ADDRESS>, 2025.
+#
+#, fuzzy
+msgid ""
+msgstr ""
+"Project-Id-Version: pytest 0.1.dev16209\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2025-02-05 00:52+0900\n"
+"PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
+"Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
+"Language: ja\n"
+"Language-Team: ja <LL@li.org>\n"
+"Plural-Forms: nplurals=1; plural=0;\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=utf-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Generated-By: Babel 2.17.0\n"
+
+#: ../../announce/release-2.6.0.rst:2
+msgid "pytest-2.6.0: shorter tracebacks, new warning system, test runner compat"
+msgstr ""
+
+#: ../../announce/release-2.6.0.rst:4
+msgid "pytest is a mature Python testing tool with more than 1000 tests against itself, passing on many different interpreters and platforms."
+msgstr ""
+
+#: ../../announce/release-2.6.0.rst:7
+msgid "The 2.6.0 release should be drop-in backward compatible to 2.5.2 and fixes a number of bugs and brings some new features, mainly:"
+msgstr ""
+
+#: ../../announce/release-2.6.0.rst:10
+msgid "shorter tracebacks by default: only the first (test function) entry and the last (failure location) entry are shown, the ones between only in \"short\" format.  Use ``--tb=long`` to get back the old behaviour of showing \"long\" entries everywhere."
+msgstr ""
+
+#: ../../announce/release-2.6.0.rst:15
+msgid "a new warning system which reports oddities during collection and execution.  For example, ignoring collecting Test* classes with an ``__init__`` now produces a warning."
+msgstr ""
+
+#: ../../announce/release-2.6.0.rst:19
+msgid "various improvements to nose/mock/unittest integration"
+msgstr ""
+
+#: ../../announce/release-2.6.0.rst:21
+msgid "Note also that 2.6.0 departs with the \"zero reported bugs\" policy because it has been too hard to keep up with it, unfortunately. Instead we are for now rather bound to work on \"upvoted\" issues in the https://bitbucket.org/pytest-dev/pytest/issues?status=new&status=open&sort=-votes issue tracker."
+msgstr ""
+
+#: ../../announce/release-2.6.0.rst:27
+msgid "See docs at:"
+msgstr ""
+
+#: ../../announce/release-2.6.0.rst:29
+msgid "http://pytest.org"
+msgstr ""
+
+#: ../../announce/release-2.6.0.rst:31
+msgid "As usual, you can upgrade from pypi via::"
+msgstr ""
+
+#: ../../announce/release-2.6.0.rst:35
+msgid "Thanks to all who contributed, among them:"
+msgstr ""
+
+#: ../../announce/release-2.6.0.rst:37
+msgid "Benjamin Peterson Jurko Gospodnetić Floris Bruynooghe Marc Abramowitz Marc Schlaich Trevor Bekolay Bruno Oliveira Alex Groenholm"
+msgstr ""
+
+#: ../../announce/release-2.6.0.rst:46
+msgid "have fun, holger krekel"
+msgstr ""
+
+#: ../../announce/release-2.6.0.rst:50
+msgid "2.6.0"
+msgstr ""
+
+#: ../../announce/release-2.6.0.rst:52
+msgid "fix issue537: Avoid importing old assertion reinterpretation code by default. Thanks Benjamin Peterson."
+msgstr ""
+
+#: ../../announce/release-2.6.0.rst:55
+msgid "fix issue364: shorten and enhance tracebacks representation by default. The new \"--tb=auto\" option (default) will only display long tracebacks for the first and last entry.  You can get the old behaviour of printing all entries as long entries with \"--tb=long\".  Also short entries by default are now printed very similarly to \"--tb=native\" ones."
+msgstr ""
+
+#: ../../announce/release-2.6.0.rst:61
+msgid "fix issue514: teach assertion reinterpretation about private class attributes Thanks Benjamin Peterson."
+msgstr ""
+
+#: ../../announce/release-2.6.0.rst:64
+msgid "change -v output to include full node IDs of tests.  Users can copy a node ID from a test run, including line number, and use it as a positional argument in order to run only a single test."
+msgstr ""
+
+#: ../../announce/release-2.6.0.rst:68
+msgid "fix issue 475: fail early and comprehensible if calling pytest.raises with wrong exception type."
+msgstr ""
+
+#: ../../announce/release-2.6.0.rst:71
+msgid "fix issue516: tell in getting-started about current dependencies."
+msgstr ""
+
+#: ../../announce/release-2.6.0.rst:73
+msgid "cleanup setup.py a bit and specify supported versions. Thanks Jurko Gospodnetic for the PR."
+msgstr ""
+
+#: ../../announce/release-2.6.0.rst:76
+msgid "change XPASS colour to yellow rather than red when tests are run with -v."
+msgstr ""
+
+#: ../../announce/release-2.6.0.rst:79
+msgid "fix issue473: work around mock putting an unbound method into a class dict when double-patching."
+msgstr ""
+
+#: ../../announce/release-2.6.0.rst:82
+msgid "fix issue498: if a fixture finalizer fails, make sure that the fixture is still invalidated."
+msgstr ""
+
+#: ../../announce/release-2.6.0.rst:85
+msgid "fix issue453: the result of the pytest_assertrepr_compare hook now gets it's newlines escaped so that format_exception does not blow up."
+msgstr ""
+
+#: ../../announce/release-2.6.0.rst:88
+msgid "internal new warning system: pytest will now produce warnings when it detects oddities in your test collection or execution. Warnings are ultimately sent to a new pytest_logwarning hook which is currently only implemented by the terminal plugin which displays warnings in the summary line and shows more details when -rw (report on warnings) is specified."
+msgstr ""
+
+#: ../../announce/release-2.6.0.rst:95
+msgid "change skips into warnings for test classes with an __init__ and callables in test modules which look like a test but are not functions."
+msgstr ""
+
+#: ../../announce/release-2.6.0.rst:98
+msgid "fix issue436: improved finding of initial conftest files from command line arguments by using the result of parse_known_args rather than the previous flaky heuristics.  Thanks Marc Abramowitz for tests and initial fixing approaches in this area."
+msgstr ""
+
+#: ../../announce/release-2.6.0.rst:103
+msgid "fix issue #479: properly handle nose/unittest(2) SkipTest exceptions during collection/loading of test modules.  Thanks to Marc Schlaich for the complete PR."
+msgstr ""
+
+#: ../../announce/release-2.6.0.rst:107
+msgid "fix issue490: include pytest_load_initial_conftests in documentation and improve docstring."
+msgstr ""
+
+#: ../../announce/release-2.6.0.rst:110
+msgid "fix issue472: clarify that ``pytest.config.getvalue()`` cannot work if it's triggered ahead of command line parsing."
+msgstr ""
+
+#: ../../announce/release-2.6.0.rst:113
+msgid "merge PR123: improved integration with mock.patch decorator on tests."
+msgstr ""
+
+#: ../../announce/release-2.6.0.rst:115
+msgid "fix issue412: messing with stdout/stderr FD-level streams is now captured without crashes."
+msgstr ""
+
+#: ../../announce/release-2.6.0.rst:118
+msgid "fix issue483: trial/py33 works now properly.  Thanks Daniel Grana for PR."
+msgstr ""
+
+#: ../../announce/release-2.6.0.rst:120
+msgid "improve example for pytest integration with \"python setup.py test\" which now has a generic \"-a\" or \"--pytest-args\" option where you can pass additional options as a quoted string.  Thanks Trevor Bekolay."
+msgstr ""
+
+#: ../../announce/release-2.6.0.rst:124
+msgid "simplified internal capturing mechanism and made it more robust against tests or setups changing FD1/FD2, also better integrated now with pytest.pdb() in single tests."
+msgstr ""
+
+#: ../../announce/release-2.6.0.rst:128
+msgid "improvements to pytest's own test-suite leakage detection, courtesy of PRs from Marc Abramowitz"
+msgstr ""
+
+#: ../../announce/release-2.6.0.rst:131
+msgid "fix issue492: avoid leak in test_writeorg.  Thanks Marc Abramowitz."
+msgstr ""
+
+#: ../../announce/release-2.6.0.rst:133
+msgid "fix issue493: don't run tests in doc directory with ``python setup.py test`` (use tox -e doctesting for that)"
+msgstr ""
+
+#: ../../announce/release-2.6.0.rst:136
+msgid "fix issue486: better reporting and handling of early conftest loading failures"
+msgstr ""
+
+#: ../../announce/release-2.6.0.rst:138
+msgid "some cleanup and simplification of internal conftest handling."
+msgstr ""
+
+#: ../../announce/release-2.6.0.rst:140
+msgid "work a bit harder to break reference cycles when catching exceptions. Thanks Jurko Gospodnetic."
+msgstr ""
+
+#: ../../announce/release-2.6.0.rst:143
+msgid "fix issue443: fix skip examples to use proper comparison.  Thanks Alex Groenholm."
+msgstr ""
+
+#: ../../announce/release-2.6.0.rst:146
+msgid "support nose-style ``__test__`` attribute on modules, classes and functions, including unittest-style Classes.  If set to False, the test will not be collected."
+msgstr ""
+
+#: ../../announce/release-2.6.0.rst:150
+msgid "fix issue512: show \"<notset>\" for arguments which might not be set in monkeypatch plugin.  Improves output in documentation."
+msgstr ""
+
+#: ../../announce/release-2.6.0.rst:153
+msgid "avoid importing \"py.test\" (an old alias module for \"pytest\")"
+msgstr ""
+

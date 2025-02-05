@@ -1,0 +1,173 @@
+# SOME DESCRIPTIVE TITLE.
+# Copyright (C) 2015, holger krekel and pytest-dev team
+# This file is distributed under the same license as the pytest package.
+# FIRST AUTHOR <EMAIL@ADDRESS>, 2025.
+#
+#, fuzzy
+msgid ""
+msgstr ""
+"Project-Id-Version: pytest 0.1.dev16209\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2025-02-05 00:52+0900\n"
+"PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
+"Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
+"Language: ja\n"
+"Language-Team: ja <LL@li.org>\n"
+"Plural-Forms: nplurals=1; plural=0;\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=utf-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Generated-By: Babel 2.17.0\n"
+
+#: ../../announce/release-2.0.0.rst:2
+msgid "py.test 2.0.0: asserts++, unittest++, reporting++, config++, docs++"
+msgstr ""
+
+#: ../../announce/release-2.0.0.rst:4
+msgid "Welcome to pytest-2.0.0, a major new release of \"py.test\", the rapid easy Python testing tool.  There are many new features and enhancements, see below for summary and detailed lists.  A lot of long-deprecated code has been removed, resulting in a much smaller and cleaner implementation.  See the new docs with examples here:"
+msgstr ""
+
+#: ../../announce/release-2.0.0.rst:10
+msgid "http://pytest.org/en/stable/index.html"
+msgstr ""
+
+#: ../../announce/release-2.0.0.rst:12
+msgid "A note on packaging: pytest used to part of the \"py\" distribution up until version py-1.3.4 but this has changed now:  pytest-2.0.0 only contains py.test related code and is expected to be backward-compatible to existing test code. If you want to install pytest, just type one of::"
+msgstr ""
+
+#: ../../announce/release-2.0.0.rst:20
+msgid "Many thanks to all issue reporters and people asking questions or complaining.  Particular thanks to Floris Bruynooghe and Ronny Pfannschmidt for their great coding contributions and many others for feedback and help."
+msgstr ""
+
+#: ../../announce/release-2.0.0.rst:24
+msgid "best, holger krekel"
+msgstr ""
+
+#: ../../announce/release-2.0.0.rst:29
+msgid "New Features"
+msgstr ""
+
+#: ../../announce/release-2.0.0.rst:31
+msgid "new invocations through Python interpreter and from Python::"
+msgstr ""
+
+#: ../../announce/release-2.0.0.rst:35
+msgid "or from a python program::"
+msgstr ""
+
+#: ../../announce/release-2.0.0.rst:39
+msgid "see http://pytest.org/en/stable/how-to/usage.html for details."
+msgstr ""
+
+#: ../../announce/release-2.0.0.rst:41
+msgid "new and better reporting information in assert expressions if comparing lists, sequences or strings."
+msgstr ""
+
+#: ../../announce/release-2.0.0.rst:44
+msgid "see http://pytest.org/en/stable/how-to/assert.html#newreport"
+msgstr ""
+
+#: ../../announce/release-2.0.0.rst:46
+msgid "new configuration through ini-files (setup.cfg or tox.ini recognized), for example::"
+msgstr ""
+
+#: ../../announce/release-2.0.0.rst:53
+msgid "see http://pytest.org/en/stable/reference/customize.html"
+msgstr ""
+
+#: ../../announce/release-2.0.0.rst:55
+msgid "improved standard unittest support.  In general py.test should now better be able to run custom unittest.TestCases like twisted trial or Django based TestCases.  Also you can now run the tests of an installed 'unittest' package with py.test::"
+msgstr ""
+
+#: ../../announce/release-2.0.0.rst:62
+msgid "new \"-q\" option which decreases verbosity and prints a more nose/unittest-style \"dot\" output."
+msgstr ""
+
+#: ../../announce/release-2.0.0.rst:65
+msgid "many, many, more detailed improvements details"
+msgstr ""
+
+#: ../../announce/release-2.0.0.rst:68
+msgid "Fixes"
+msgstr ""
+
+#: ../../announce/release-2.0.0.rst:70
+msgid "fix issue126 - introduce py.test.set_trace() to trace execution via PDB during the running of tests even if capturing is ongoing."
+msgstr ""
+
+#: ../../announce/release-2.0.0.rst:72
+msgid "fix issue124 - make reporting more resilient against tests opening files on filedescriptor 1 (stdout)."
+msgstr ""
+
+#: ../../announce/release-2.0.0.rst:74
+msgid "fix issue109 - sibling conftest.py files will not be loaded. (and Directory collectors cannot be customized anymore from a Directory's conftest.py - this needs to happen at least one level up)."
+msgstr ""
+
+#: ../../announce/release-2.0.0.rst:77
+msgid "fix issue88 (finding custom test nodes from command line arg)"
+msgstr ""
+
+#: ../../announce/release-2.0.0.rst:78
+msgid "fix issue93 stdout/stderr is captured while importing conftest.py"
+msgstr ""
+
+#: ../../announce/release-2.0.0.rst:79
+msgid "fix bug: unittest collected functions now also can have \"pytestmark\" applied at class/module level"
+msgstr ""
+
+#: ../../announce/release-2.0.0.rst:83
+msgid "Important Notes"
+msgstr ""
+
+#: ../../announce/release-2.0.0.rst:85
+msgid "The usual way in pre-2.0 times to use py.test in python code was to import \"py\" and then e.g. use \"py.test.raises\" for the helper. This remains valid and is not planned to be deprecated.  However, in most examples and internal code you'll find \"import pytest\" and \"pytest.raises\" used as the recommended default way."
+msgstr ""
+
+#: ../../announce/release-2.0.0.rst:91
+msgid "pytest now first performs collection of the complete test suite before running any test. This changes for example the semantics of when pytest_collectstart/pytest_collectreport are called.  Some plugins may need upgrading."
+msgstr ""
+
+#: ../../announce/release-2.0.0.rst:96
+msgid "The pytest package consists of a 400 LOC core.py and about 20 builtin plugins, summing up to roughly 5000 LOCs, including docstrings. To be fair, it also uses generic code from the \"pylib\", and the new \"py\" package to help with filesystem and introspection/code manipulation."
+msgstr ""
+
+#: ../../announce/release-2.0.0.rst:102
+msgid "(Incompatible) Removals"
+msgstr ""
+
+#: ../../announce/release-2.0.0.rst:104
+msgid "py.test.config is now only available if you are in a test run."
+msgstr ""
+
+#: ../../announce/release-2.0.0.rst:106
+msgid "the following (mostly already deprecated) functionality was removed:"
+msgstr ""
+
+#: ../../announce/release-2.0.0.rst:108
+msgid "removed support for Module/Class/... collection node definitions in conftest.py files.  They will cause nothing special."
+msgstr ""
+
+#: ../../announce/release-2.0.0.rst:110
+msgid "removed support for calling the pre-1.0 collection API of \"run()\" and \"join\""
+msgstr ""
+
+#: ../../announce/release-2.0.0.rst:111
+msgid "removed reading option values from conftest.py files or env variables. This can now be done much, much, better and easier through the ini-file mechanism and the \"addopts\" entry in particular."
+msgstr ""
+
+#: ../../announce/release-2.0.0.rst:114
+msgid "removed the \"disabled\" attribute in test classes.  Use the skipping and pytestmark mechanism to skip or xfail a test class."
+msgstr ""
+
+#: ../../announce/release-2.0.0.rst:117
+msgid "py.test.collect.Directory does not exist anymore and it is not possible to provide an own \"Directory\" object. If you have used this and don't know what to do, get in contact.  We'll figure something out."
+msgstr ""
+
+#: ../../announce/release-2.0.0.rst:122
+msgid "Note that pytest_collect_directory() is still called but any return value will be ignored.  This allows to keep old code working that performed for example \"py.test.skip()\" in collect() to prevent recursion into directory trees if a certain dependency or command line option is missing."
+msgstr ""
+
+#: ../../announce/release-2.0.0.rst:129
+msgid "see :ref:`changelog` for more detailed changes."
+msgstr ""
+

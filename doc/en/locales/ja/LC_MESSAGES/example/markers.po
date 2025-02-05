@@ -1,0 +1,289 @@
+# SOME DESCRIPTIVE TITLE.
+# Copyright (C) 2015, holger krekel and pytest-dev team
+# This file is distributed under the same license as the pytest package.
+# FIRST AUTHOR <EMAIL@ADDRESS>, 2025.
+#
+#, fuzzy
+msgid ""
+msgstr ""
+"Project-Id-Version: pytest 0.1.dev16209\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2025-02-05 00:52+0900\n"
+"PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
+"Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
+"Language: ja\n"
+"Language-Team: ja <LL@li.org>\n"
+"Plural-Forms: nplurals=1; plural=0;\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=utf-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Generated-By: Babel 2.17.0\n"
+
+#: ../../example/markers.rst:5
+msgid "Working with custom markers"
+msgstr ""
+
+#: ../../example/markers.rst:7
+msgid "Here are some examples using the :ref:`mark` mechanism."
+msgstr ""
+
+#: ../../example/markers.rst:12
+msgid "Marking test functions and selecting them for a run"
+msgstr ""
+
+#: ../../example/markers.rst:14
+msgid "You can \"mark\" a test function with custom metadata like this:"
+msgstr ""
+
+#: ../../example/markers.rst:44
+msgid "You can then restrict a test run to only run tests marked with ``webtest``:"
+msgstr ""
+
+#: ../../example/markers.rst:59
+msgid "Or the inverse, running all tests except the webtest ones:"
+msgstr ""
+
+#: ../../example/markers.rst:78
+msgid "Additionally, you can restrict a test run to only run tests matching one or multiple marker keyword arguments, e.g. to run only tests marked with ``device`` and the specific ``serial=\"123\"``:"
+msgstr ""
+
+#: ../../example/markers.rst:94
+msgid "Only keyword argument matching is supported in marker expressions."
+msgstr ""
+
+#: ../../example/markers.rst:96
+msgid "Only :class:`int`, (unescaped) :class:`str`, :class:`bool` & :data:`None` values are supported in marker expressions."
+msgstr ""
+
+#: ../../example/markers.rst:99
+msgid "Selecting tests based on their node ID"
+msgstr ""
+
+#: ../../example/markers.rst:101
+msgid "You can provide one or more :ref:`node IDs <node-id>` as positional arguments to select only specified tests. This makes it easy to select tests based on their module, class, method, or function name:"
+msgstr ""
+
+#: ../../example/markers.rst:118
+msgid "You can also select on the class:"
+msgstr ""
+
+#: ../../example/markers.rst:133
+msgid "Or select multiple nodes:"
+msgstr ""
+
+#: ../../example/markers.rst:153
+msgid "Node IDs are of the form ``module.py::class::method`` or ``module.py::function``.  Node IDs control which tests are collected, so ``module.py::class`` will select all test methods on the class.  Nodes are also created for each parameter of a parametrized fixture or test, so selecting a parametrized test must include the parameter value, e.g. ``module.py::function[param]``."
+msgstr ""
+
+#: ../../example/markers.rst:161
+msgid "Node IDs for failing tests are displayed in the test summary info when running pytest with the ``-rf`` option.  You can also construct Node IDs from the output of ``pytest --collect-only``."
+msgstr ""
+
+#: ../../example/markers.rst:166
+msgid "Using ``-k expr`` to select tests based on their name"
+msgstr ""
+
+#: ../../example/markers.rst:170
+msgid "You can use the ``-k`` command line option to specify an expression which implements a substring match on the test names instead of the exact match on markers that ``-m`` provides.  This makes it easy to select tests based on their names:"
+msgstr ""
+
+#: ../../example/markers.rst:177
+msgid "The expression matching is now case-insensitive."
+msgstr ""
+
+#: ../../example/markers.rst:192
+msgid "And you can also run all tests except the ones that match the keyword:"
+msgstr ""
+
+#: ../../example/markers.rst:209
+msgid "Or to select \"http\" and \"quick\" tests:"
+msgstr ""
+
+#: ../../example/markers.rst:225
+msgid "You can use ``and``, ``or``, ``not`` and parentheses."
+msgstr ""
+
+#: ../../example/markers.rst:228
+msgid "In addition to the test's name, ``-k`` also matches the names of the test's parents (usually, the name of the file and class it's in), attributes set on the test function, markers applied to it or its parents and any :attr:`extra keywords <_pytest.nodes.Node.extra_keyword_matches>` explicitly added to it or its parents."
+msgstr ""
+
+#: ../../example/markers.rst:234
+msgid "Registering markers"
+msgstr ""
+
+#: ../../example/markers.rst:240
+msgid "Registering markers for your test suite is simple:"
+msgstr ""
+
+#: ../../example/markers.rst:250
+msgid "Multiple custom markers can be registered, by defining each one in its own line, as shown in above example."
+msgstr ""
+
+#: ../../example/markers.rst:252
+msgid "You can ask which markers exist for your test suite - the list includes our just defined ``webtest`` and ``slow`` markers:"
+msgstr ""
+
+#: ../../example/markers.rst:278
+msgid "For an example on how to add and work with markers from a plugin, see :ref:`adding a custom marker from a plugin`."
+msgstr ""
+
+#: ../../example/markers.rst:283
+msgid "It is recommended to explicitly register markers so that:"
+msgstr ""
+
+#: ../../example/markers.rst:285
+msgid "There is one place in your test suite defining your markers"
+msgstr ""
+
+#: ../../example/markers.rst:287
+msgid "Asking for existing markers via ``pytest --markers`` gives good output"
+msgstr ""
+
+#: ../../example/markers.rst:289
+msgid "Typos in function markers are treated as an error if you use the ``--strict-markers`` option."
+msgstr ""
+
+#: ../../example/markers.rst:295
+msgid "Marking whole classes or modules"
+msgstr ""
+
+#: ../../example/markers.rst:297
+msgid "You may use ``pytest.mark`` decorators with classes to apply markers to all of its test methods:"
+msgstr ""
+
+#: ../../example/markers.rst:314
+msgid "This is equivalent to directly applying the decorator to the two test functions."
+msgstr ""
+
+#: ../../example/markers.rst:317
+msgid "To apply marks at the module level, use the :globalvar:`pytestmark` global variable::"
+msgstr ""
+
+#: ../../example/markers.rst:322
+msgid "or multiple markers::"
+msgstr ""
+
+#: ../../example/markers.rst:327
+msgid "Due to legacy reasons, before class decorators were introduced, it is possible to set the :globalvar:`pytestmark` attribute on a test class like this:"
+msgstr ""
+
+#: ../../example/markers.rst:341
+msgid "Marking individual tests when using parametrize"
+msgstr ""
+
+#: ../../example/markers.rst:343
+msgid "When using parametrize, applying a mark will make it apply to each individual test. However it is also possible to apply a marker to an individual test instance:"
+msgstr ""
+
+#: ../../example/markers.rst:359
+msgid "In this example the mark \"foo\" will apply to each of the three tests, whereas the \"bar\" mark is only applied to the second test. Skip and xfail marks can also be applied in this way, see :ref:`skip/xfail with parametrize`."
+msgstr ""
+
+#: ../../example/markers.rst:366
+msgid "Custom marker and command line option to control test runs"
+msgstr ""
+
+#: ../../example/markers.rst:370
+msgid "Plugins can provide custom markers and implement specific behaviour based on it. This is a self-contained example which adds a command line option and a parametrized test function marker to run tests specified via named environments:"
+msgstr ""
+
+#: ../../example/markers.rst:404
+msgid "A test file using this local plugin:"
+msgstr ""
+
+#: ../../example/markers.rst:417
+msgid "and an example invocations specifying a different environment than what the test needs:"
+msgstr ""
+
+#: ../../example/markers.rst:432
+msgid "and here is one that specifies exactly the environment needed:"
+msgstr ""
+
+#: ../../example/markers.rst:446
+msgid "The ``--markers`` option always gives you a list of available markers:"
+msgstr ""
+
+#: ../../example/markers.rst:473
+msgid "Passing a callable to custom markers"
+msgstr ""
+
+#: ../../example/markers.rst:477
+msgid "Below is the config file that will be used in the next examples:"
+msgstr ""
+
+#: ../../example/markers.rst:490
+msgid "A custom marker can have its argument set, i.e. ``args`` and ``kwargs`` properties, defined by either invoking it as a callable or using ``pytest.mark.MARKER_NAME.with_args``. These two methods achieve the same effect most of the time."
+msgstr ""
+
+#: ../../example/markers.rst:492
+msgid "However, if there is a callable as the single positional argument with no keyword arguments, using the ``pytest.mark.MARKER_NAME(c)`` will not pass ``c`` as a positional argument but decorate ``c`` with the custom marker (see :ref:`MarkDecorator <mark>`). Fortunately, ``pytest.mark.MARKER_NAME.with_args`` comes to the rescue:"
+msgstr ""
+
+#: ../../example/markers.rst:508
+msgid "The output is as follows:"
+msgstr ""
+
+#: ../../example/markers.rst:517
+msgid "We can see that the custom marker has its argument set extended with the function ``hello_world``. This is the key difference between creating a custom marker as a callable, which invokes ``__call__`` behind the scenes, and using ``with_args``."
+msgstr ""
+
+#: ../../example/markers.rst:521
+msgid "Reading markers which were set from multiple places"
+msgstr ""
+
+#: ../../example/markers.rst:527
+msgid "If you are heavily using markers in your test suite you may encounter the case where a marker is applied several times to a test function.  From plugin code you can read over all such settings.  Example:"
+msgstr ""
+
+#: ../../example/markers.rst:544
+msgid "Here we have the marker \"glob\" applied three times to the same test function.  From a conftest file we can read it like this:"
+msgstr ""
+
+#: ../../example/markers.rst:558
+msgid "Let's run this without capturing output and see what we get:"
+msgstr ""
+
+#: ../../example/markers.rst:570
+msgid "Marking platform specific tests with pytest"
+msgstr ""
+
+#: ../../example/markers.rst:574
+msgid "Consider you have a test suite which marks tests for particular platforms, namely ``pytest.mark.darwin``, ``pytest.mark.win32`` etc. and you also have tests that run on all platforms and have no specific marker.  If you now want to have a way to only run the tests for your particular platform, you could use the following plugin:"
+msgstr ""
+
+#: ../../example/markers.rst:597
+msgid "then tests will be skipped if they were specified for a different platform. Let's do a little test file to show how this looks like:"
+msgstr ""
+
+#: ../../example/markers.rst:625
+msgid "then you will see two tests skipped and two executed tests as expected:"
+msgstr ""
+
+#: ../../example/markers.rst:641
+msgid "Note that if you specify a platform via the marker-command line option like this:"
+msgstr ""
+
+#: ../../example/markers.rst:655
+msgid "then the unmarked-tests will not be run.  It is thus a way to restrict the run to the specific tests."
+msgstr ""
+
+#: ../../example/markers.rst:658
+msgid "Automatically adding markers based on test names"
+msgstr ""
+
+#: ../../example/markers.rst:662
+msgid "If you have a test suite where test function names indicate a certain type of test, you can implement a hook that automatically defines markers so that you can use the ``-m`` option with it. Let's look at this test module:"
+msgstr ""
+
+#: ../../example/markers.rst:687
+msgid "We want to dynamically define two markers and can do it in a ``conftest.py`` plugin:"
+msgstr ""
+
+#: ../../example/markers.rst:704
+msgid "We can now use the ``-m option`` to select one set:"
+msgstr ""
+
+#: ../../example/markers.rst:730
+msgid "or to select both \"event\" and \"interface\" tests:"
+msgstr ""
+

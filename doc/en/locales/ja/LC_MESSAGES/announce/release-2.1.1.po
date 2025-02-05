@@ -1,0 +1,89 @@
+# SOME DESCRIPTIVE TITLE.
+# Copyright (C) 2015, holger krekel and pytest-dev team
+# This file is distributed under the same license as the pytest package.
+# FIRST AUTHOR <EMAIL@ADDRESS>, 2025.
+#
+#, fuzzy
+msgid ""
+msgstr ""
+"Project-Id-Version: pytest 0.1.dev16209\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2025-02-05 00:52+0900\n"
+"PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
+"Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
+"Language: ja\n"
+"Language-Team: ja <LL@li.org>\n"
+"Plural-Forms: nplurals=1; plural=0;\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=utf-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Generated-By: Babel 2.17.0\n"
+
+#: ../../announce/release-2.1.1.rst:2
+msgid "py.test 2.1.1: assertion fixes and improved junitxml output"
+msgstr ""
+
+#: ../../announce/release-2.1.1.rst:4
+msgid "pytest-2.1.1 is a backward compatible maintenance release of the popular py.test testing tool.  See extensive docs with examples here:"
+msgstr ""
+
+#: ../../announce/release-2.1.1.rst:7
+msgid "http://pytest.org/"
+msgstr ""
+
+#: ../../announce/release-2.1.1.rst:9
+msgid "Most bug fixes address remaining issues with the perfected assertions introduced with 2.1.0 - many thanks to the bug reporters and to Benjamin Peterson for helping to fix them.  Also, junitxml output now produces system-out/err tags which lead to better displays of tracebacks with Jenkins."
+msgstr ""
+
+#: ../../announce/release-2.1.1.rst:14
+msgid "Also a quick note to package maintainers and others interested: there now is a \"pytest\" man page which can be generated with \"make man\" in doc/."
+msgstr ""
+
+#: ../../announce/release-2.1.1.rst:17
+msgid "If you want to install or upgrade pytest, just type one of::"
+msgstr ""
+
+#: ../../announce/release-2.1.1.rst:22
+msgid "best, holger krekel / https://merlinux.eu/"
+msgstr ""
+
+#: ../../announce/release-2.1.1.rst:26
+msgid "Changes between 2.1.0 and 2.1.1"
+msgstr ""
+
+#: ../../announce/release-2.1.1.rst:28
+msgid "fix issue64 / pytest.set_trace now works within pytest_generate_tests hooks"
+msgstr ""
+
+#: ../../announce/release-2.1.1.rst:29
+msgid "fix issue60 / fix error conditions involving the creation of __pycache__"
+msgstr ""
+
+#: ../../announce/release-2.1.1.rst:30
+msgid "fix issue63 / assertion rewriting on inserts involving strings containing '%'"
+msgstr ""
+
+#: ../../announce/release-2.1.1.rst:31
+msgid "fix assertion rewriting on calls with a ** arg"
+msgstr ""
+
+#: ../../announce/release-2.1.1.rst:32
+msgid "don't cache rewritten modules if bytecode generation is disabled"
+msgstr ""
+
+#: ../../announce/release-2.1.1.rst:33
+msgid "fix assertion rewriting in read-only directories"
+msgstr ""
+
+#: ../../announce/release-2.1.1.rst:34
+msgid "fix issue59: provide system-out/err tags for junitxml output"
+msgstr ""
+
+#: ../../announce/release-2.1.1.rst:35
+msgid "fix issue61: assertion rewriting on boolean operations with 3 or more operands"
+msgstr ""
+
+#: ../../announce/release-2.1.1.rst:36
+msgid "you can now build a man page with \"cd doc ; make man\""
+msgstr ""
+
