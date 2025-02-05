@@ -121,7 +121,7 @@ msgstr "フィクスチャのデコレータに ``autouse=True`` を渡すこと
 
 #: ../../how-to/fixtures.rst:372
 msgid "In this example, the ``append_first`` fixture is an autouse fixture. Because it happens automatically, both tests are affected by it, even though neither test **requested** it. That doesn't mean they *can't* be **requested** though; just that it isn't *necessary*."
-msgstr "この例では、``append_first`` フィクスチャは自動使用フィクスチャです。自動的に発生するため、どちらのテストもそれによって影響を受けますが、どちらのテストもそれを **リクエスト** していません。それは **リクエスト** できないという意味ではなく、単に*必要ではない*ということです。"
+msgstr "この例では、``append_first`` フィクスチャは自動使用フィクスチャです。自動的に発生するため、どちらのテストもそれによって影響を受けますが、どちらのテストもそれを **リクエスト** していません。それは **リクエスト** できないという意味ではなく、単に *必要ではない* ということです。"
 
 #: ../../how-to/fixtures.rst:380
 msgid "Scope: sharing fixtures across classes, modules, packages or session"
@@ -129,7 +129,7 @@ msgstr "スコープ：クラス、モジュール、パッケージ、または
 
 #: ../../how-to/fixtures.rst:384
 msgid "Fixtures requiring network access depend on connectivity and are usually time-expensive to create.  Extending the previous example, we can add a ``scope=\"module\"`` parameter to the :py:func:`@pytest.fixture <pytest.fixture>` invocation to cause a ``smtp_connection`` fixture function, responsible to create a connection to a preexisting SMTP server, to only be invoked once per test *module* (the default is to invoke once per test *function*). Multiple test functions in a test module will thus each receive the same ``smtp_connection`` fixture instance, thus saving time. Possible values for ``scope`` are: ``function``, ``class``, ``module``, ``package`` or ``session``."
-msgstr "ネットワークアクセスを必要とするフィクスチャは接続性に依存し、通常、作成に時間がかかります。前の例を拡張して、:py:func:`@pytest.fixture <pytest.fixture>` 呼び出しに ``scope=\"module\"`` パラメータを追加することで、既存の SMTP サーバーへの接続を作成する ``smtp_connection`` フィクスチャ関数がテスト*モジュール*ごとに1回だけ呼び出されるようにします（デフォルトではテスト*関数*ごとに1回呼び出されます）。テストモジュール内の複数のテスト関数は、それぞれ同じ ``smtp_connection`` フィクスチャインスタンスを受け取るため、時間を節約できます。``scope`` の可能な値は、``function``、``class``、``module``、``package``、または ``session`` です。"
+msgstr "ネットワークアクセスを必要とするフィクスチャは接続性に依存し、通常、作成に時間がかかります。前の例を拡張して、:py:func:`@pytest.fixture <pytest.fixture>` 呼び出しに ``scope=\"module\"`` パラメータを追加することで、既存の SMTP サーバーへの接続を作成する ``smtp_connection`` フィクスチャ関数がテスト *モジュール* ごとに1回だけ呼び出されるようにします（デフォルトではテスト *関数* ごとに1回呼び出されます）。テストモジュール内の複数のテスト関数は、それぞれ同じ ``smtp_connection`` フィクスチャインスタンスを受け取るため、時間を節約できます。``scope`` の可能な値は、``function``、``class``、``module``、``package``、または ``session`` です。"
 
 #: ../../how-to/fixtures.rst:394
 msgid "The next example puts the fixture function into a separate ``conftest.py`` file so that tests from multiple test modules in the directory can access the fixture function:"
@@ -217,7 +217,7 @@ msgstr "``return`` は ``yield`` に置き換えられます。"
 
 #: ../../how-to/fixtures.rst:561
 msgid "Any teardown code for that fixture is placed *after* the ``yield``."
-msgstr "そのフィクスチャの後片付けコードは ``yield`` の*後*に配置されます。"
+msgstr "そのフィクスチャの後片付けコードは ``yield`` の *後* に配置されます。"
 
 #: ../../how-to/fixtures.rst:563
 msgid "Once pytest figures out a linear order for the fixtures, it will run each one up until it returns or yields, and then move on to the next fixture in the list to do the same thing."
@@ -225,7 +225,7 @@ msgstr "pytest がフィクスチャの線形順序を把握すると、それ�
 
 #: ../../how-to/fixtures.rst:567
 msgid "Once the test is finished, pytest will go back down the list of fixtures, but in the *reverse order*, taking each one that yielded, and running the code inside it that was *after* the ``yield`` statement."
-msgstr "テストが終了すると、pytest はフィクスチャのリストを*逆順*に戻り、``yield`` された各フィクスチャを取り、その中の ``yield`` ステートメントの*後*にあるコードを実行します。"
+msgstr "テストが終了すると、pytest はフィクスチャのリストを*逆順*に戻り、``yield`` された各フィクスチャを取り、その中の ``yield`` ステートメントの *後* にあるコードを実行します。"
 
 #: ../../how-to/fixtures.rst:571
 msgid "As a simple example, consider this basic email module:"
@@ -301,7 +301,7 @@ msgstr "安全な後片付け"
 
 #: ../../how-to/fixtures.rst:827
 msgid "The fixture system of pytest is *very* powerful, but it's still being run by a computer, so it isn't able to figure out how to safely teardown everything we throw at it. If we aren't careful, an error in the wrong spot might leave stuff from our tests behind, and that can cause further issues pretty quickly."
-msgstr "pytest のフィクスチャシステムは*非常に*強力ですが、それでもコンピュータによって実行されているため、投げかけたすべてのものを安全に後片付けする方法を見つけることはできません。注意しないと、間違った場所でのエラーがテストの残骸を残し、それがさらに問題を引き起こす可能性があります。"
+msgstr "pytest のフィクスチャシステムは *非常に* 強力ですが、それでもコンピュータによって実行されているため、投げかけたすべてのものを安全に後片付けする方法を見つけることはできません。注意しないと、間違った場所でのエラーがテストの残骸を残し、それがさらに問題を引き起こす可能性があります。"
 
 #: ../../how-to/fixtures.rst:832
 msgid "For example, consider the following tests (based off of the mail example from above):"
@@ -497,7 +497,7 @@ msgstr "例："
 
 #: ../../how-to/fixtures.rst:1466
 msgid "Running this test will *skip* the invocation of ``data_set`` with value ``2``:"
-msgstr "このテストを実行すると、値 ``2`` で ``data_set`` の呼び出しが*スキップ*されます："
+msgstr "このテストを実行すると、値 ``2`` で ``data_set`` の呼び出しが *スキップ* されます："
 
 #: ../../how-to/fixtures.rst:1486
 msgid "Modularity: using fixtures from a fixture function"
@@ -654,7 +654,7 @@ msgstr "これにより、``mylibrary.fixtures`` がプラグインとして効�
 
 #: ../../how-to/fixtures.rst:1956
 msgid "Sometimes users will *import* fixtures from other projects for use, however this is not recommended: importing fixtures into a module will register them in pytest as *defined* in that module."
-msgstr "ユーザーが他のプロジェクトからフィクスチャを*インポート*して使用することがありますが、これは推奨されません。フィクスチャをモジュールにインポートすると、そのモジュールで*定義*されたものとして pytest に登録されます。"
+msgstr "ユーザーが他のプロジェクトからフィクスチャを *インポート* して使用することがありますが、これは推奨されません。フィクスチャをモジュールにインポートすると、そのモジュールで *定義* されたものとして pytest に登録されます。"
 
 #: ../../how-to/fixtures.rst:1960
 msgid "This has minor consequences, such as appearing multiple times in ``pytest --help``, but it is not **recommended** because this behavior might change/stop working in future versions."

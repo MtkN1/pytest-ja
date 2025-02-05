@@ -53,7 +53,7 @@ msgstr "**キーワード式でテストを実行する**"
 
 #: ../../how-to/usage.rst:41
 msgid "This will run tests which contain names that match the given *string expression* (case-insensitive), which can include Python operators that use filenames, class names and function names as variables. The example above will run ``TestMyClass.test_something``  but not ``TestMyClass.test_method_simple``. Use ``\"\"`` instead of ``''`` in expression when running this on Windows"
-msgstr "これにより、指定された*文字列式*（大文字小文字を区別しない）に一致する名前を含むテストが実行されます。これには、ファイル名、クラス名、および関数名を変数として使用する Python 演算子を含めることができます。上記の例では、``TestMyClass.test_something`` は実行されますが、``TestMyClass.test_method_simple`` は実行されません。Windows でこれを実行する場合は、式内で ``''`` の代わりに ``\"\"`` を使用してください。"
+msgstr "これにより、指定された *文字列式* （大文字小文字を区別しない）に一致する名前を含むテストが実行されます。これには、ファイル名、クラス名、および関数名を変数として使用する Python 演算子を含めることができます。上記の例では、``TestMyClass.test_something`` は実行されますが、``TestMyClass.test_method_simple`` は実行されません。Windows でこれを実行する場合は、式内で ``''`` の代わりに ``\"\"`` を使用してください。"
 
 #: ../../how-to/usage.rst:48
 msgid "**Run tests by collection arguments**"
