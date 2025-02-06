@@ -117,19 +117,19 @@ msgstr "ドキュメント"
 
 #: ../../index.rst:114
 msgid ":ref:`Get started <get-started>` - install pytest and grasp its basics in just twenty minutes"
-msgstr ":ref:`Get started <get-started>` - pytest をインストールし、わずか 20 分で基本を把握します"
+msgstr ":ref:`はじめに <get-started>` - pytest をインストールし、わずか 20 分で基本を把握します"
 
 #: ../../index.rst:115
 msgid ":ref:`How-to guides <how-to>` - step-by-step guides, covering a vast range of use-cases and needs"
-msgstr ":ref:`How-to guides <how-to>` - 幅広いユースケースとニーズをカバーするステップバイステップガイド"
+msgstr ":ref:`ハウツー <how-to>` - 幅広いユースケースとニーズをカバーするステップバイステップガイド"
 
 #: ../../index.rst:116
 msgid ":ref:`Reference guides <reference>` - includes the complete pytest API reference, lists of plugins and more"
-msgstr ":ref:`Reference guides <reference>` - 完全な pytest API リファレンス、プラグインのリストなどを含みます"
+msgstr ":ref:`リファレンス <reference>` - 完全な pytest API リファレンス、プラグインのリストなどを含みます"
 
 #: ../../index.rst:117
 msgid ":ref:`Explanation <explanation>` - background, discussion of key topics, answers to higher-level questions"
-msgstr ":ref:`Explanation <explanation>` - 背景、主要なトピックの議論、高度な質問への回答"
+msgstr ":ref:`コンセプト <explanation>` - 背景、主要なトピックの議論、高度な質問への回答"
 
 #: ../../index.rst:121
 msgid "Bugs/Requests"
