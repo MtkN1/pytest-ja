@@ -1,0 +1,261 @@
+# SOME DESCRIPTIVE TITLE.
+# Copyright (C) 2015, holger krekel and pytest-dev team
+# This file is distributed under the same license as the pytest package.
+# FIRST AUTHOR <EMAIL@ADDRESS>, 2025.
+#
+#, fuzzy
+msgid ""
+msgstr ""
+"Project-Id-Version: pytest 0.1.dev16209\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2025-02-05 00:52+0900\n"
+"PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
+"Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
+"Language: ja\n"
+"Language-Team: ja <LL@li.org>\n"
+"Plural-Forms: nplurals=1; plural=0;\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=utf-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Generated-By: Babel 2.17.0\n"
+
+#: ../../announce/release-7.0.0.rst:2
+msgid "pytest-7.0.0"
+msgstr ""
+
+#: ../../announce/release-7.0.0.rst:4
+msgid "The pytest team is proud to announce the 7.0.0 release!"
+msgstr ""
+
+#: ../../announce/release-7.0.0.rst:6
+msgid "This release contains new features, improvements, bug fixes, and breaking changes, so users are encouraged to take a look at the CHANGELOG carefully:"
+msgstr ""
+
+#: ../../announce/release-7.0.0.rst:9
+msgid "https://docs.pytest.org/en/stable/changelog.html"
+msgstr ""
+
+#: ../../announce/release-7.0.0.rst:11
+msgid "For complete documentation, please visit:"
+msgstr ""
+
+#: ../../announce/release-7.0.0.rst:13
+msgid "https://docs.pytest.org/en/stable/"
+msgstr ""
+
+#: ../../announce/release-7.0.0.rst:15
+msgid "As usual, you can upgrade from PyPI via:"
+msgstr ""
+
+#: ../../announce/release-7.0.0.rst:17
+msgid "pip install -U pytest"
+msgstr ""
+
+#: ../../announce/release-7.0.0.rst:19
+msgid "Thanks to all of the contributors to this release:"
+msgstr ""
+
+#: ../../announce/release-7.0.0.rst:21
+msgid "Adam J. Stewart"
+msgstr ""
+
+#: ../../announce/release-7.0.0.rst:22
+msgid "Alexander King"
+msgstr ""
+
+#: ../../announce/release-7.0.0.rst:23
+msgid "Amin Alaee"
+msgstr ""
+
+#: ../../announce/release-7.0.0.rst:24
+msgid "Andrew Neitsch"
+msgstr ""
+
+#: ../../announce/release-7.0.0.rst:25
+msgid "Anthony Sottile"
+msgstr ""
+
+#: ../../announce/release-7.0.0.rst:26
+msgid "Ben Davies"
+msgstr ""
+
+#: ../../announce/release-7.0.0.rst:27
+msgid "Bernát Gábor"
+msgstr ""
+
+#: ../../announce/release-7.0.0.rst:28
+msgid "Brian Okken"
+msgstr ""
+
+#: ../../announce/release-7.0.0.rst:29
+msgid "Bruno Oliveira"
+msgstr ""
+
+#: ../../announce/release-7.0.0.rst:30
+msgid "Cristian Vera"
+msgstr ""
+
+#: ../../announce/release-7.0.0.rst:31
+msgid "Dan Alvizu"
+msgstr ""
+
+#: ../../announce/release-7.0.0.rst:32
+msgid "David Szotten"
+msgstr ""
+
+#: ../../announce/release-7.0.0.rst:33
+msgid "Eddie"
+msgstr ""
+
+#: ../../announce/release-7.0.0.rst:34
+msgid "Emmanuel Arias"
+msgstr ""
+
+#: ../../announce/release-7.0.0.rst:35
+msgid "Emmanuel Meric de Bellefon"
+msgstr ""
+
+#: ../../announce/release-7.0.0.rst:36
+msgid "Eric Liu"
+msgstr ""
+
+#: ../../announce/release-7.0.0.rst:37
+msgid "Florian Bruhin"
+msgstr ""
+
+#: ../../announce/release-7.0.0.rst:38
+msgid "GergelyKalmar"
+msgstr ""
+
+#: ../../announce/release-7.0.0.rst:39
+msgid "Graeme Smecher"
+msgstr ""
+
+#: ../../announce/release-7.0.0.rst:40
+msgid "Harshna"
+msgstr ""
+
+#: ../../announce/release-7.0.0.rst:41
+msgid "Hugo van Kemenade"
+msgstr ""
+
+#: ../../announce/release-7.0.0.rst:42
+msgid "Jakub Kulík"
+msgstr ""
+
+#: ../../announce/release-7.0.0.rst:43
+msgid "James Myatt"
+msgstr ""
+
+#: ../../announce/release-7.0.0.rst:44
+msgid "Jeff Rasley"
+msgstr ""
+
+#: ../../announce/release-7.0.0.rst:45
+msgid "Kale Kundert"
+msgstr ""
+
+#: ../../announce/release-7.0.0.rst:46
+msgid "Kian Meng, Ang"
+msgstr ""
+
+#: ../../announce/release-7.0.0.rst:47
+msgid "Miro Hrončok"
+msgstr ""
+
+#: ../../announce/release-7.0.0.rst:48
+msgid "Naveen-Pratap"
+msgstr ""
+
+#: ../../announce/release-7.0.0.rst:49
+msgid "Oleg Höfling"
+msgstr ""
+
+#: ../../announce/release-7.0.0.rst:50
+msgid "Olga Matoula"
+msgstr ""
+
+#: ../../announce/release-7.0.0.rst:51
+msgid "Ran Benita"
+msgstr ""
+
+#: ../../announce/release-7.0.0.rst:52
+msgid "Ronny Pfannschmidt"
+msgstr ""
+
+#: ../../announce/release-7.0.0.rst:53
+msgid "Simon K"
+msgstr ""
+
+#: ../../announce/release-7.0.0.rst:54
+msgid "Srip"
+msgstr ""
+
+#: ../../announce/release-7.0.0.rst:55
+msgid "Sören Wegener"
+msgstr ""
+
+#: ../../announce/release-7.0.0.rst:56
+msgid "Taneli Hukkinen"
+msgstr ""
+
+#: ../../announce/release-7.0.0.rst:57
+msgid "Terje Runde"
+msgstr ""
+
+#: ../../announce/release-7.0.0.rst:58
+msgid "Thomas Grainger"
+msgstr ""
+
+#: ../../announce/release-7.0.0.rst:59
+msgid "Thomas Hisch"
+msgstr ""
+
+#: ../../announce/release-7.0.0.rst:60
+msgid "William Jamir Silva"
+msgstr ""
+
+#: ../../announce/release-7.0.0.rst:61
+msgid "Yuval Shimon"
+msgstr ""
+
+#: ../../announce/release-7.0.0.rst:62
+msgid "Zac Hatfield-Dodds"
+msgstr ""
+
+#: ../../announce/release-7.0.0.rst:63
+msgid "andrewdotn"
+msgstr ""
+
+#: ../../announce/release-7.0.0.rst:64
+msgid "denivyruck"
+msgstr ""
+
+#: ../../announce/release-7.0.0.rst:65
+msgid "ericluoliu"
+msgstr ""
+
+#: ../../announce/release-7.0.0.rst:66
+msgid "oleg.hoefling"
+msgstr ""
+
+#: ../../announce/release-7.0.0.rst:67
+msgid "symonk"
+msgstr ""
+
+#: ../../announce/release-7.0.0.rst:68
+msgid "ziebam"
+msgstr ""
+
+#: ../../announce/release-7.0.0.rst:69
+msgid "Éloi Rivard"
+msgstr ""
+
+#: ../../announce/release-7.0.0.rst:70
+msgid "Éric"
+msgstr ""
+
+#: ../../announce/release-7.0.0.rst:73
+msgid "Happy testing, The pytest Development Team"
+msgstr ""
+

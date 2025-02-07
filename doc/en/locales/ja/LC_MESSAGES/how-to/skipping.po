@@ -1,0 +1,288 @@
+# SOME DESCRIPTIVE TITLE.
+# Copyright (C) 2015, holger krekel and pytest-dev team
+# This file is distributed under the same license as the pytest package.
+# FIRST AUTHOR <EMAIL@ADDRESS>, 2025.
+#
+#, fuzzy
+msgid ""
+msgstr ""
+"Project-Id-Version: pytest 0.1.dev16209\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2025-02-05 00:52+0900\n"
+"PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
+"Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
+"Language: ja\n"
+"Language-Team: ja <LL@li.org>\n"
+"Plural-Forms: nplurals=1; plural=0;\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=utf-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Generated-By: Babel 2.17.0\n"
+
+#: ../../how-to/skipping.rst:6
+msgid "How to use skip and xfail to deal with tests that cannot succeed"
+msgstr "成功しないテストを処理するために skip と xfail を使用する方法"
+
+#: ../../how-to/skipping.rst:8
+msgid "You can mark test functions that cannot be run on certain platforms or that you expect to fail so pytest can deal with them accordingly and present a summary of the test session, while keeping the test suite *green*."
+msgstr "特定のプラットフォームで実行できない、または失敗すると予想されるテスト関数にマークを付けることができます。 これにより、pytest はそれらを適切に処理し、テストスイートを *グリーン* のままにしながら、テストセッションの概要を表示できます。"
+
+#: ../../how-to/skipping.rst:12
+msgid "A **skip** means that you expect your test to pass only if some conditions are met, otherwise pytest should skip running the test altogether. Common examples are skipping windows-only tests on non-windows platforms, or skipping tests that depend on an external resource which is not available at the moment (for example a database)."
+msgstr "**skip** とは、いくつかの条件が満たされた場合にのみテストが合格すると予想されることを意味します。 そうでなければ、pytest はテストの実行を完全にスキップする必要があります。 一般的な例としては、非 Windows プラットフォームでの Windows 専用テストのスキップや、現在利用できない外部リソース (たとえばデータベース) に依存するテストのスキップがあります。"
+
+#: ../../how-to/skipping.rst:17
+msgid "An **xfail** means that you expect a test to fail for some reason. A common example is a test for a feature not yet implemented, or a bug not yet fixed. When a test passes despite being expected to fail (marked with ``pytest.mark.xfail``), it's an **xpass** and will be reported in the test summary."
+msgstr "**xfail** とは、何らかの理由でテストが失敗すると予想されることを意味します。 一般的な例としては、まだ実装されていない機能のテストや、まだ修正されていないバグのテストがあります。 失敗すると予想されるにもかかわらずテストが合格した場合 (``pytest.mark.xfail`` でマークされている) 、それは **xpass** であり、テストの概要に報告されます。"
+
+#: ../../how-to/skipping.rst:22
+msgid "``pytest`` counts and lists *skip* and *xfail* tests separately. Detailed information about skipped/xfailed tests is not shown by default to avoid cluttering the output.  You can use the ``-r`` option to see details corresponding to the \"short\" letters shown in the test progress:"
+msgstr "``pytest`` は *skip* および *xfail* テストを個別にカウントおよびリストします。 スキップされた/xfail されたテストの詳細情報は、出力が乱雑になるのを避けるためにデフォルトでは表示されません。 ``-r`` オプションを使用して、テストの進行状況に表示される「短い」文字に対応する詳細を表示できます:"
+
+#: ../../how-to/skipping.rst:31
+msgid "More details on the ``-r`` option can be found by running ``pytest -h``."
+msgstr "``-r`` オプションの詳細については、``pytest -h`` を実行して確認できます。"
+
+#: ../../how-to/skipping.rst:33
+msgid "(See :ref:`how to change command line options defaults`)"
+msgstr " (:ref:`コマンドラインオプションのデフォルトを変更する方法` を参照) "
+
+#: ../../how-to/skipping.rst:40
+msgid "Skipping test functions"
+msgstr "テスト関数のスキップ"
+
+#: ../../how-to/skipping.rst:44
+msgid "The simplest way to skip a test function is to mark it with the ``skip`` decorator which may be passed an optional ``reason``:"
+msgstr "テスト関数をスキップする最も簡単な方法は、オプションの ``reason`` を渡すことができる ``skip`` デコレータでマークすることです:"
+
+#: ../../how-to/skipping.rst:53
+msgid "Alternatively, it is also possible to skip imperatively during test execution or setup by calling the ``pytest.skip(reason)`` function:"
+msgstr "または、``pytest.skip(reason)`` 関数を呼び出して、テストの実行中またはセットアップ中に命令的にスキップすることも可能です:"
+
+#: ../../how-to/skipping.rst:62
+msgid "The imperative method is useful when it is not possible to evaluate the skip condition during import time."
+msgstr "命令的な方法は、インポート時にスキップ条件を評価できない場合に便利です。"
+
+#: ../../how-to/skipping.rst:65
+msgid "It is also possible to skip the whole module using ``pytest.skip(reason, allow_module_level=True)`` at the module level:"
+msgstr "モジュールレベルで ``pytest.skip(reason, allow_module_level=True)`` を使用してモジュール全体をスキップすることも可能です:"
+
+#: ../../how-to/skipping.rst:78
+msgid "**Reference**: :ref:`pytest.mark.skip ref`"
+msgstr "**リファレンス**: :ref:`pytest.mark.skip ref`"
+
+#: ../../how-to/skipping.rst:81
+msgid "``skipif``"
+msgstr "``skipif``"
+
+#: ../../how-to/skipping.rst:85
+msgid "If you wish to skip something conditionally then you can use ``skipif`` instead. Here is an example of marking a test function to be skipped when run on an interpreter earlier than Python3.10:"
+msgstr "条件付きで何かをスキップしたい場合は、代わりに ``skipif`` を使用できます。 次に、Python3.10 より前のインタープリタで実行されたときにスキップされるようにテスト関数にマークを付ける例を示します:"
+
+#: ../../how-to/skipping.rst:97
+msgid "If the condition evaluates to ``True`` during collection, the test function will be skipped, with the specified reason appearing in the summary when using ``-rs``."
+msgstr "コレクション中に条件が ``True`` と評価されると、テスト関数はスキップされ、``-rs`` を使用したときに指定された理由が概要に表示されます。"
+
+#: ../../how-to/skipping.rst:100
+msgid "You can share ``skipif`` markers between modules.  Consider this test module:"
+msgstr "``skipif`` マーカーをモジュール間で共有できます。 このテストモジュールを考えてみましょう:"
+
+#: ../../how-to/skipping.rst:115
+msgid "You can import the marker and reuse it in another test module:"
+msgstr "マーカーをインポートして別のテストモジュールで再利用できます:"
+
+#: ../../how-to/skipping.rst:126
+msgid "For larger test suites it's usually a good idea to have one file where you define the markers which you then consistently apply throughout your test suite."
+msgstr "大規模なテストスイートの場合、マーカーを定義し、それをテストスイート全体で一貫して適用するファイルを 1 つ用意するのが通常は良い考えです。"
+
+#: ../../how-to/skipping.rst:130
+msgid "Alternatively, you can use :ref:`condition strings <string conditions>` instead of booleans, but they can't be shared between modules easily so they are supported mainly for backward compatibility reasons."
+msgstr "または、ブール値の代わりに :ref:`condition strings <string conditions>` を使用できますが、モジュール間で簡単に共有できないため、主に後方互換性の理由でサポートされています。"
+
+#: ../../how-to/skipping.rst:134
+msgid "**Reference**: :ref:`pytest.mark.skipif ref`"
+msgstr "**リファレンス**: :ref:`pytest.mark.skipif ref`"
+
+#: ../../how-to/skipping.rst:138
+msgid "Skip all test functions of a class or module"
+msgstr "クラスまたはモジュールのすべてのテスト関数をスキップする"
+
+#: ../../how-to/skipping.rst:140
+msgid "You can use the ``skipif`` marker (as any other marker) on classes:"
+msgstr "クラスに ``skipif`` マーカー (他のマーカーと同様) を使用できます:"
+
+#: ../../how-to/skipping.rst:149
+msgid "If the condition is ``True``, this marker will produce a skip result for each of the test methods of that class."
+msgstr "条件が ``True`` の場合、このマーカーはそのクラスの各テストメソッドに対してスキップ結果を生成します。"
+
+#: ../../how-to/skipping.rst:152
+msgid "If you want to skip all test functions of a module, you may use the :globalvar:`pytestmark` global:"
+msgstr "モジュールのすべてのテスト関数をスキップする場合は、:globalvar:`pytestmark` グローバルを使用できます:"
+
+#: ../../how-to/skipping.rst:160
+msgid "If multiple ``skipif`` decorators are applied to a test function, it will be skipped if any of the skip conditions is true."
+msgstr "複数の ``skipif`` デコレータがテスト関数に適用されている場合、スキップ条件のいずれかが true であればスキップされます。"
+
+#: ../../how-to/skipping.rst:167
+msgid "Skipping files or directories"
+msgstr "ファイルやディレクトリのスキップ"
+
+#: ../../how-to/skipping.rst:169
+msgid "Sometimes you may need to skip an entire file or directory, for example if the tests rely on Python version-specific features or contain code that you do not wish pytest to run. In this case, you must exclude the files and directories from collection. Refer to :ref:`customizing-test-collection` for more information."
+msgstr "テストが Python バージョン固有の機能に依存している場合や、pytest に実行させたくないコードが含まれている場合など、ファイルやディレクトリ全体をスキップする必要がある場合があります。 この場合、ファイルとディレクトリをコレクションから除外する必要があります。 詳細については、:ref:`customizing-test-collection` を参照してください。"
+
+#: ../../how-to/skipping.rst:177
+msgid "Skipping on a missing import dependency"
+msgstr "インポート依存関係が欠落している場合のスキップ"
+
+#: ../../how-to/skipping.rst:179
+msgid "You can skip tests on a missing import by using :ref:`pytest.importorskip ref` at module level, within a test, or test setup function."
+msgstr "モジュールレベル、テスト内、またはテストセットアップ関数で :ref:`pytest.importorskip ref` を使用して、インポートが欠落しているテストをスキップできます。"
+
+#: ../../how-to/skipping.rst:186
+msgid "If ``docutils`` cannot be imported here, this will lead to a skip outcome of the test. You can also skip based on the version number of a library:"
+msgstr "ここで ``docutils`` をインポートできない場合、これはテストのスキップ結果につながります。 ライブラリのバージョン番号に基づいてスキップすることもできます:"
+
+#: ../../how-to/skipping.rst:193
+msgid "The version will be read from the specified module's ``__version__`` attribute."
+msgstr "バージョンは、指定されたモジュールの ``__version__`` 属性から読み取られます。"
+
+#: ../../how-to/skipping.rst:197
+msgid "Summary"
+msgstr "概要"
+
+#: ../../how-to/skipping.rst:199
+msgid "Here's a quick guide on how to skip tests in a module in different situations:"
+msgstr "さまざまな状況でモジュール内のテストをスキップする方法に関する簡単なガイドを次に示します:"
+
+#: ../../how-to/skipping.rst:201
+msgid "Skip all tests in a module unconditionally:"
+msgstr "モジュール内のすべてのテストを無条件にスキップする:"
+
+#: ../../how-to/skipping.rst:207
+msgid "Skip all tests in a module based on some condition:"
+msgstr "特定の条件に基づいてモジュール内のすべてのテストをスキップする:"
+
+#: ../../how-to/skipping.rst:213
+msgid "Skip all tests in a module if some import is missing:"
+msgstr "インポートが欠落している場合は、モジュール内のすべてのテストをスキップする:"
+
+#: ../../how-to/skipping.rst:223
+msgid "XFail: mark test functions as expected to fail"
+msgstr "XFail: テスト関数が失敗すると予想されることをマークする"
+
+#: ../../how-to/skipping.rst:225
+msgid "You can use the ``xfail`` marker to indicate that you expect a test to fail:"
+msgstr "テストが失敗すると予想されることを示すために ``xfail`` マーカーを使用できます:"
+
+#: ../../how-to/skipping.rst:233
+msgid "This test will run but no traceback will be reported when it fails. Instead, terminal reporting will list it in the \"expected to fail\" (``XFAIL``) or \"unexpectedly passing\" (``XPASS``) sections."
+msgstr "このテストは実行されますが、失敗した場合にトレースバックは報告されません。 代わりに、ターミナルレポートには「失敗することが予想される」 (``XFAIL``) または「予期せず合格する」 (``XPASS``) セクションにリストされます。"
+
+#: ../../how-to/skipping.rst:237
+msgid "Alternatively, you can also mark a test as ``XFAIL`` from within the test or its setup function imperatively:"
+msgstr "または、テスト内またはそのセットアップ関数から命令的にテストを ``XFAIL`` としてマークすることもできます:"
+
+#: ../../how-to/skipping.rst:254
+msgid "These two examples illustrate situations where you don't want to check for a condition at the module level, which is when a condition would otherwise be evaluated for marks."
+msgstr "これらの 2 つの例は、モジュールレベルで条件をチェックしたくない状況を示しています。 これは、条件がマークのために評価される場合です。"
+
+#: ../../how-to/skipping.rst:257
+msgid "This will make ``test_function`` ``XFAIL``. Note that no other code is executed after the :func:`pytest.xfail` call, differently from the marker. That's because it is implemented internally by raising a known exception."
+msgstr "これにより、``test_function`` が ``XFAIL`` になります。 :func:`pytest.xfail` 呼び出しの後に他のコードは実行されないことに注意してください。 これは、既知の例外を発生させることによって内部的に実装されているためです。"
+
+#: ../../how-to/skipping.rst:261
+msgid "**Reference**: :ref:`pytest.mark.xfail ref`"
+msgstr "**リファレンス**: :ref:`pytest.mark.xfail ref`"
+
+#: ../../how-to/skipping.rst:265
+msgid "``condition`` parameter"
+msgstr "``condition`` パラメータ"
+
+#: ../../how-to/skipping.rst:267
+msgid "If a test is only expected to fail under a certain condition, you can pass that condition as the first parameter:"
+msgstr "テストが特定の条件下でのみ失敗すると予想される場合、その条件を最初のパラメータとして渡すことができます:"
+
+#: ../../how-to/skipping.rst:275
+msgid "Note that you have to pass a reason as well (see the parameter description at :ref:`pytest.mark.xfail ref`)."
+msgstr "理由も渡す必要があることに注意してください (パラメータの説明については :ref:`pytest.mark.xfail ref` を参照) 。"
+
+#: ../../how-to/skipping.rst:279
+msgid "``reason`` parameter"
+msgstr "``reason`` パラメータ"
+
+#: ../../how-to/skipping.rst:281
+msgid "You can specify the motive of an expected failure with the ``reason`` parameter:"
+msgstr "``reason`` パラメータを使用して、予想される失敗の動機を指定できます:"
+
+#: ../../how-to/skipping.rst:290
+msgid "``raises`` parameter"
+msgstr "``raises`` パラメータ"
+
+#: ../../how-to/skipping.rst:292
+msgid "If you want to be more specific as to why the test is failing, you can specify a single exception, or a tuple of exceptions, in the ``raises`` argument."
+msgstr "テストが失敗する理由をより具体的にしたい場合は、``raises`` 引数に単一の例外または例外のタプルを指定できます。"
+
+#: ../../how-to/skipping.rst:300
+msgid "Then the test will be reported as a regular failure if it fails with an exception not mentioned in ``raises``."
+msgstr "次に、``raises`` に記載されていない例外で失敗した場合、テストは通常の失敗として報告されます。"
+
+#: ../../how-to/skipping.rst:304
+msgid "``run`` parameter"
+msgstr "``run`` パラメータ"
+
+#: ../../how-to/skipping.rst:306
+msgid "If a test should be marked as xfail and reported as such but should not be even executed, use the ``run`` parameter as ``False``:"
+msgstr "テストが xfail としてマークされ、そのように報告されるべきだが、実行さえされるべきでない場合は、``run`` パラメータを ``False`` として使用します:"
+
+#: ../../how-to/skipping.rst:314
+msgid "This is specially useful for xfailing tests that are crashing the interpreter and should be investigated later."
+msgstr "これは、インタープリタをクラッシュさせる xfail テストに特に役立ち、後で調査する必要があります。"
+
+#: ../../how-to/skipping.rst:320
+msgid "``strict`` parameter"
+msgstr "``strict`` パラメータ"
+
+#: ../../how-to/skipping.rst:322
+msgid "Both ``XFAIL`` and ``XPASS`` don't fail the test suite by default. You can change this by setting the ``strict`` keyword-only parameter to ``True``:"
+msgstr "``XFAIL`` と ``XPASS`` の両方は、デフォルトではテストスイートに失敗しません。 ``strict`` キーワード専用パラメータを ``True`` に設定することで、これを変更できます:"
+
+#: ../../how-to/skipping.rst:331
+msgid "This will make ``XPASS`` (\"unexpectedly passing\") results from this test to fail the test suite."
+msgstr "これにより、このテストからの ``XPASS`` (「予期せず合格」) 結果がテストスイートに失敗するようになります。"
+
+#: ../../how-to/skipping.rst:333
+msgid "You can change the default value of the ``strict`` parameter using the ``xfail_strict`` ini option:"
+msgstr "``xfail_strict`` ini オプションを使用して、``strict`` パラメータのデフォルト値を変更できます:"
+
+#: ../../how-to/skipping.rst:343
+msgid "Ignoring xfail"
+msgstr "xfail を無視する"
+
+#: ../../how-to/skipping.rst:345
+msgid "By specifying on the commandline:"
+msgstr "コマンドラインで指定することにより:"
+
+#: ../../how-to/skipping.rst:351
+msgid "you can force the running and reporting of an ``xfail`` marked test as if it weren't marked at all. This also causes :func:`pytest.xfail` to produce no effect."
+msgstr "マークされていないかのように、``xfail`` マークされたテストの実行と報告を強制できます。 これにより、:func:`pytest.xfail` も効果がなくなります。"
+
+#: ../../how-to/skipping.rst:355
+msgid "Examples"
+msgstr "例"
+
+#: ../../how-to/skipping.rst:357
+msgid "Here is a simple test file with the several usages:"
+msgstr "いくつかの使用法を示す簡単なテストファイルを次に示します:"
+
+#: ../../how-to/skipping.rst:361
+msgid "Running it with the report-on-xfail option gives this output:"
+msgstr "report-on-xfail オプションを使用して実行すると、次の出力が得られます:"
+
+#: ../../how-to/skipping.rst:395
+msgid "Skip/xfail with parametrize"
+msgstr "parametrize を使用した skip/xfail"
+
+#: ../../how-to/skipping.rst:397
+msgid "It is possible to apply markers like skip and xfail to individual test instances when using parametrize:"
+msgstr "parametrize を使用する場合、個々のテストインスタンスに skip や xfail のようなマーカーを適用することが可能です:"

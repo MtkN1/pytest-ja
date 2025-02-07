@@ -1,0 +1,77 @@
+# SOME DESCRIPTIVE TITLE.
+# Copyright (C) 2015, holger krekel and pytest-dev team
+# This file is distributed under the same license as the pytest package.
+# FIRST AUTHOR <EMAIL@ADDRESS>, 2025.
+#
+#, fuzzy
+msgid ""
+msgstr ""
+"Project-Id-Version: pytest 0.1.dev16209\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2025-02-05 00:52+0900\n"
+"PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
+"Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
+"Language: ja\n"
+"Language-Team: ja <LL@li.org>\n"
+"Plural-Forms: nplurals=1; plural=0;\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=utf-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Generated-By: Babel 2.17.0\n"
+
+#: ../../announce/release-2.5.1.rst:2
+msgid "pytest-2.5.1: fixes and new home page styling"
+msgstr ""
+
+#: ../../announce/release-2.5.1.rst:4
+msgid "pytest is a mature Python testing tool with more than 1000 tests against itself, passing on many different interpreters and platforms."
+msgstr ""
+
+#: ../../announce/release-2.5.1.rst:7
+msgid "The 2.5.1 release maintains the \"zero-reported-bugs\" promise by fixing the three bugs reported since the last release a few days ago.  It also features a new home page styling implemented by Tobias Bieniek, based on the flask theme from Armin Ronacher:"
+msgstr ""
+
+#: ../../announce/release-2.5.1.rst:12
+msgid "http://pytest.org"
+msgstr ""
+
+#: ../../announce/release-2.5.1.rst:14
+msgid "If you have anything more to improve styling and docs, we'd be very happy to merge further pull requests."
+msgstr ""
+
+#: ../../announce/release-2.5.1.rst:17
+msgid "On the coding side, the release also contains a little enhancement to fixture decorators allowing to directly influence generation of test ids, thanks to Floris Bruynooghe.  Other thanks for helping with this release go to Anatoly Bubenkoff and Ronny Pfannschmidt."
+msgstr ""
+
+#: ../../announce/release-2.5.1.rst:22
+msgid "As usual, you can upgrade from pypi via::"
+msgstr ""
+
+#: ../../announce/release-2.5.1.rst:26
+msgid "have fun and a nice remaining \"bug-free\" time of the year :) holger krekel"
+msgstr ""
+
+#: ../../announce/release-2.5.1.rst:30
+msgid "2.5.1"
+msgstr ""
+
+#: ../../announce/release-2.5.1.rst:32
+msgid "merge new documentation styling PR from Tobias Bieniek."
+msgstr ""
+
+#: ../../announce/release-2.5.1.rst:34
+msgid "fix issue403: allow parametrize of multiple same-name functions within a collection node.  Thanks Andreas Kloeckner and Alex Gaynor for reporting and analysis."
+msgstr ""
+
+#: ../../announce/release-2.5.1.rst:38
+msgid "Allow parameterized fixtures to specify the ID of the parameters by adding an ids argument to pytest.fixture() and pytest.yield_fixture(). Thanks Floris Bruynooghe."
+msgstr ""
+
+#: ../../announce/release-2.5.1.rst:42
+msgid "fix issue404 by always using the binary xml escape in the junitxml plugin.  Thanks Ronny Pfannschmidt."
+msgstr ""
+
+#: ../../announce/release-2.5.1.rst:45
+msgid "fix issue407: fix addoption docstring to point to argparse instead of optparse. Thanks Daniel D. Wright."
+msgstr ""
+

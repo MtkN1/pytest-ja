@@ -1,0 +1,77 @@
+# SOME DESCRIPTIVE TITLE.
+# Copyright (C) 2015, holger krekel and pytest-dev team
+# This file is distributed under the same license as the pytest package.
+# FIRST AUTHOR <EMAIL@ADDRESS>, 2025.
+#
+#, fuzzy
+msgid ""
+msgstr ""
+"Project-Id-Version: pytest 0.1.dev16209\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2025-02-05 00:52+0900\n"
+"PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
+"Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
+"Language: ja\n"
+"Language-Team: ja <LL@li.org>\n"
+"Plural-Forms: nplurals=1; plural=0;\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=utf-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Generated-By: Babel 2.17.0\n"
+
+#: ../../announce/release-2.3.1.rst:2
+msgid "pytest-2.3.1: fix regression with factory functions"
+msgstr ""
+
+#: ../../announce/release-2.3.1.rst:4
+msgid "pytest-2.3.1 is a quick follow-up release:"
+msgstr ""
+
+#: ../../announce/release-2.3.1.rst:6
+msgid "fix issue202 - regression with fixture functions/funcarg factories: using \"self\" is now safe again and works as in 2.2.4.  Thanks to Eduard Schettino for the quick bug report."
+msgstr ""
+
+#: ../../announce/release-2.3.1.rst:10
+msgid "disable pexpect pytest self tests on Freebsd - thanks Koob for the quick reporting"
+msgstr ""
+
+#: ../../announce/release-2.3.1.rst:13
+msgid "fix/improve interactive docs with --markers"
+msgstr ""
+
+#: ../../announce/release-2.3.1.rst:15
+msgid "See"
+msgstr ""
+
+#: ../../announce/release-2.3.1.rst:17
+msgid "http://pytest.org/"
+msgstr ""
+
+#: ../../announce/release-2.3.1.rst:19
+msgid "for general information.  To install or upgrade pytest:"
+msgstr ""
+
+#: ../../announce/release-2.3.1.rst:21
+msgid "pip install -U pytest # or easy_install -U pytest"
+msgstr ""
+
+#: ../../announce/release-2.3.1.rst:24
+msgid "best, holger krekel"
+msgstr ""
+
+#: ../../announce/release-2.3.1.rst:29
+msgid "Changes between 2.3.0 and 2.3.1"
+msgstr ""
+
+#: ../../announce/release-2.3.1.rst:31
+msgid "fix issue202 - fix regression: using \"self\" from fixture functions now works as expected (it's the same \"self\" instance that a test method which uses the fixture sees)"
+msgstr ""
+
+#: ../../announce/release-2.3.1.rst:35
+msgid "skip pexpect using tests (test_pdb.py mostly) on freebsd* systems due to pexpect not supporting it properly (hanging)"
+msgstr ""
+
+#: ../../announce/release-2.3.1.rst:38
+msgid "link to web pages from --markers output which provides help for pytest.mark.* usage."
+msgstr ""
+

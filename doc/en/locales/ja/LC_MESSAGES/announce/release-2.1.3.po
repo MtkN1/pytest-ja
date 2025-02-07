@@ -1,0 +1,73 @@
+# SOME DESCRIPTIVE TITLE.
+# Copyright (C) 2015, holger krekel and pytest-dev team
+# This file is distributed under the same license as the pytest package.
+# FIRST AUTHOR <EMAIL@ADDRESS>, 2025.
+#
+#, fuzzy
+msgid ""
+msgstr ""
+"Project-Id-Version: pytest 0.1.dev16209\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2025-02-05 00:52+0900\n"
+"PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
+"Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
+"Language: ja\n"
+"Language-Team: ja <LL@li.org>\n"
+"Plural-Forms: nplurals=1; plural=0;\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=utf-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Generated-By: Babel 2.17.0\n"
+
+#: ../../announce/release-2.1.3.rst:2
+msgid "py.test 2.1.3: just some more fixes"
+msgstr ""
+
+#: ../../announce/release-2.1.3.rst:4
+msgid "pytest-2.1.3 is a minor backward compatible maintenance release of the popular py.test testing tool.  It is commonly used for unit, functional- and integration testing.  See extensive docs with examples here:"
+msgstr ""
+
+#: ../../announce/release-2.1.3.rst:8
+msgid "http://pytest.org/"
+msgstr ""
+
+#: ../../announce/release-2.1.3.rst:10
+msgid "The release contains another fix to the perfected assertions introduced with the 2.1 series as well as the new possibility to customize reporting for assertion expressions on a per-directory level."
+msgstr ""
+
+#: ../../announce/release-2.1.3.rst:14
+msgid "If you want to install or upgrade pytest, just type one of::"
+msgstr ""
+
+#: ../../announce/release-2.1.3.rst:19
+msgid "Thanks to the bug reporters and to Ronny Pfannschmidt, Benjamin Peterson and Floris Bruynooghe who implemented the fixes."
+msgstr ""
+
+#: ../../announce/release-2.1.3.rst:22
+msgid "best, holger krekel"
+msgstr ""
+
+#: ../../announce/release-2.1.3.rst:26
+msgid "Changes between 2.1.2 and 2.1.3"
+msgstr ""
+
+#: ../../announce/release-2.1.3.rst:28
+msgid "fix issue79: assertion rewriting failed on some comparisons in boolops,"
+msgstr ""
+
+#: ../../announce/release-2.1.3.rst:29
+msgid "correctly handle zero length arguments (a la pytest '')"
+msgstr ""
+
+#: ../../announce/release-2.1.3.rst:30
+msgid "fix issue67 / junitxml now contains correct test durations"
+msgstr ""
+
+#: ../../announce/release-2.1.3.rst:31
+msgid "fix issue75 / skipping test failure on jython"
+msgstr ""
+
+#: ../../announce/release-2.1.3.rst:32
+msgid "fix issue77 / Allow assertrepr_compare hook to apply to a subset of tests"
+msgstr ""
+

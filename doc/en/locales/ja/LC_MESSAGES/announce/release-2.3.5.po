@@ -1,0 +1,173 @@
+# SOME DESCRIPTIVE TITLE.
+# Copyright (C) 2015, holger krekel and pytest-dev team
+# This file is distributed under the same license as the pytest package.
+# FIRST AUTHOR <EMAIL@ADDRESS>, 2025.
+#
+#, fuzzy
+msgid ""
+msgstr ""
+"Project-Id-Version: pytest 0.1.dev16209\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2025-02-05 00:52+0900\n"
+"PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
+"Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
+"Language: ja\n"
+"Language-Team: ja <LL@li.org>\n"
+"Plural-Forms: nplurals=1; plural=0;\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=utf-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Generated-By: Babel 2.17.0\n"
+
+#: ../../announce/release-2.3.5.rst:2
+msgid "pytest-2.3.5: bug fixes and little improvements"
+msgstr ""
+
+#: ../../announce/release-2.3.5.rst:4
+msgid "pytest-2.3.5 is a maintenance release with many bug fixes and little improvements.  See the changelog below for details.  No backward compatibility issues are foreseen and all plugins which worked with the prior version are expected to work unmodified.   Speaking of which, a few interesting new plugins saw the light last month:"
+msgstr ""
+
+#: ../../announce/release-2.3.5.rst:10
+msgid "pytest-instafail: show failure information while tests are running"
+msgstr ""
+
+#: ../../announce/release-2.3.5.rst:11
+msgid "pytest-qt: testing of GUI applications written with QT/Pyside"
+msgstr ""
+
+#: ../../announce/release-2.3.5.rst:12
+msgid "pytest-xprocess: managing external processes across test runs"
+msgstr ""
+
+#: ../../announce/release-2.3.5.rst:13
+msgid "pytest-random: randomize test ordering"
+msgstr ""
+
+#: ../../announce/release-2.3.5.rst:15
+msgid "And several others like pytest-django saw maintenance releases. For a more complete list, check out https://pypi.org/search/?q=pytest"
+msgstr ""
+
+#: ../../announce/release-2.3.5.rst:19
+msgid "For general information see:"
+msgstr ""
+
+#: ../../announce/release-2.3.5.rst:21
+msgid "http://pytest.org/"
+msgstr ""
+
+#: ../../announce/release-2.3.5.rst:23
+msgid "To install or upgrade pytest:"
+msgstr ""
+
+#: ../../announce/release-2.3.5.rst:25
+msgid "pip install -U pytest # or easy_install -U pytest"
+msgstr ""
+
+#: ../../announce/release-2.3.5.rst:28
+msgid "Particular thanks to Floris, Ronny, Benjamin and the many bug reporters and fix providers."
+msgstr ""
+
+#: ../../announce/release-2.3.5.rst:31
+msgid "may the fixtures be with you, holger krekel"
+msgstr ""
+
+#: ../../announce/release-2.3.5.rst:36
+msgid "Changes between 2.3.4 and 2.3.5"
+msgstr ""
+
+#: ../../announce/release-2.3.5.rst:38
+msgid "never consider a fixture function for test function collection"
+msgstr ""
+
+#: ../../announce/release-2.3.5.rst:40
+msgid "allow re-running of test items / helps to fix pytest-reruntests plugin and also help to keep less fixture/resource references alive"
+msgstr ""
+
+#: ../../announce/release-2.3.5.rst:43
+msgid "put captured stdout/stderr into junitxml output even for passing tests (thanks Adam Goucher)"
+msgstr ""
+
+#: ../../announce/release-2.3.5.rst:46
+msgid "Issue 265 - integrate nose setup/teardown with setupstate so it doesn't try to teardown if it did not setup"
+msgstr ""
+
+#: ../../announce/release-2.3.5.rst:49
+msgid "issue 271 - don't write junitxml on worker nodes"
+msgstr ""
+
+#: ../../announce/release-2.3.5.rst:51
+msgid "Issue 274 - don't try to show full doctest example when doctest does not know the example location"
+msgstr ""
+
+#: ../../announce/release-2.3.5.rst:54
+msgid "issue 280 - disable assertion rewriting on buggy CPython 2.6.0"
+msgstr ""
+
+#: ../../announce/release-2.3.5.rst:56
+msgid "inject \"getfixture()\" helper to retrieve fixtures from doctests, thanks Andreas Zeidler"
+msgstr ""
+
+#: ../../announce/release-2.3.5.rst:59
+msgid "issue 259 - when assertion rewriting, be consistent with the default source encoding of ASCII on Python 2"
+msgstr ""
+
+#: ../../announce/release-2.3.5.rst:62
+msgid "issue 251 - report a skip instead of ignoring classes with init"
+msgstr ""
+
+#: ../../announce/release-2.3.5.rst:64
+msgid "issue250 unicode/str mixes in parametrization names and values now works"
+msgstr ""
+
+#: ../../announce/release-2.3.5.rst:66
+msgid "issue257, assertion-triggered compilation of source ending in a comment line doesn't blow up in python2.5 (fixed through py>=1.4.13.dev6)"
+msgstr ""
+
+#: ../../announce/release-2.3.5.rst:69
+msgid "fix --genscript option to generate standalone scripts that also work with python3.3 (importer ordering)"
+msgstr ""
+
+#: ../../announce/release-2.3.5.rst:72
+msgid "issue171 - in assertion rewriting, show the repr of some global variables"
+msgstr ""
+
+#: ../../announce/release-2.3.5.rst:75
+msgid "fix option help for \"-k\""
+msgstr ""
+
+#: ../../announce/release-2.3.5.rst:77
+msgid "move long description of distribution into README.rst"
+msgstr ""
+
+#: ../../announce/release-2.3.5.rst:79
+msgid "improve docstring for metafunc.parametrize()"
+msgstr ""
+
+#: ../../announce/release-2.3.5.rst:81
+msgid "fix bug where using capsys with pytest.set_trace() in a test function would break when looking at capsys.readouterr()"
+msgstr ""
+
+#: ../../announce/release-2.3.5.rst:84
+msgid "allow to specify prefixes starting with \"_\" when customizing python_functions test discovery. (thanks Graham Horler)"
+msgstr ""
+
+#: ../../announce/release-2.3.5.rst:87
+msgid "improve PYTEST_DEBUG tracing output by putting extra data on a new lines with additional indent"
+msgstr ""
+
+#: ../../announce/release-2.3.5.rst:90
+msgid "ensure OutcomeExceptions like skip/fail have initialized exception attributes"
+msgstr ""
+
+#: ../../announce/release-2.3.5.rst:92
+msgid "issue 260 - don't use nose special setup on plain unittest cases"
+msgstr ""
+
+#: ../../announce/release-2.3.5.rst:94
+msgid "fix issue134 - print the collect errors that prevent running specified test items"
+msgstr ""
+
+#: ../../announce/release-2.3.5.rst:96
+msgid "fix issue266 - accept unicode in MarkEvaluator expressions"
+msgstr ""
+

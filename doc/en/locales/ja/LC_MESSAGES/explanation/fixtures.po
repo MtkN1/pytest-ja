@@ -1,0 +1,141 @@
+# SOME DESCRIPTIVE TITLE.
+# Copyright (C) 2015, holger krekel and pytest-dev team
+# This file is distributed under the same license as the pytest package.
+# FIRST AUTHOR <EMAIL@ADDRESS>, 2025.
+#
+#, fuzzy
+msgid ""
+msgstr ""
+"Project-Id-Version: pytest 0.1.dev16209\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2025-02-05 00:52+0900\n"
+"PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
+"Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
+"Language: ja\n"
+"Language-Team: ja <LL@li.org>\n"
+"Plural-Forms: nplurals=1; plural=0;\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=utf-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Generated-By: Babel 2.17.0\n"
+
+#: ../../explanation/fixtures.rst:4
+msgid "About fixtures"
+msgstr "フィクスチャについて"
+
+#: ../../explanation/fixtures.rst:6
+msgid ":ref:`how-to-fixtures`"
+msgstr ":ref:`how-to-fixtures`"
+
+#: ../../explanation/fixtures.rst:7
+msgid ":ref:`Fixtures reference <reference-fixtures>`"
+msgstr ":ref:`フィクスチャのリファレンス <reference-fixtures>`"
+
+#: ../../explanation/fixtures.rst:9
+msgid "pytest fixtures are designed to be explicit, modular and scalable."
+msgstr "pytest のフィクスチャは、明示的でモジュール化可能でスケーラブルになるように設計されています。"
+
+#: ../../explanation/fixtures.rst:12
+msgid "What fixtures are"
+msgstr "フィクスチャとは"
+
+#: ../../explanation/fixtures.rst:14
+msgid "In testing, a `fixture <https://en.wikipedia.org/wiki/Test_fixture#Software>`_ provides a defined, reliable and consistent context for the tests. This could include environment (for example a database configured with known parameters) or content (such as a dataset)."
+msgstr "テストにおいて、`フィクスチャ <https://en.wikipedia.org/wiki/Test_fixture#Software>`_ はテストのために定義された信頼性の高い一貫したコンテキストを提供します。 これには環境 (既知のパラメーターで設定されたデータベースなど) やコンテンツ (データセットなど) が含まれます。"
+
+#: ../../explanation/fixtures.rst:19
+msgid "Fixtures define the steps and data that constitute the *arrange* phase of a test (see :ref:`test-anatomy`). In pytest, they are functions you define that serve this purpose. They can also be used to define a test's *act* phase; this is a powerful technique for designing more complex tests."
+msgstr "フィクスチャはテストの *arrange* フェーズを構成するステップとデータを定義します (:ref:`test-anatomy` を参照)。 pytest では、この目的のために定義する関数です。 テストの *act* フェーズを定義するためにも使用でき、より複雑なテストを設計するための強力なテクニックです。"
+
+#: ../../explanation/fixtures.rst:24
+msgid "The services, state, or other operating environments set up by fixtures are accessed by test functions through arguments. For each fixture used by a test function there is typically a parameter (named after the fixture) in the test function's definition."
+msgstr "フィクスチャによって設定されたサービス、状態、その他の動作環境は、引数を通してテスト関数からアクセスします。 テスト関数で使用される各フィクスチャには、通常、テスト関数の定義にフィクスチャの名前を付けたパラメーターがあります。"
+
+#: ../../explanation/fixtures.rst:29
+msgid "We can tell pytest that a particular function is a fixture by decorating it with :py:func:`@pytest.fixture <pytest.fixture>`. Here's a simple example of what a fixture in pytest might look like:"
+msgstr "ある関数がフィクスチャであることを pytest に伝えるには、:py:func:`@pytest.fixture <pytest.fixture>` でデコレートします。 以下は pytest におけるフィクスチャの簡単な例です:"
+
+#: ../../explanation/fixtures.rst:59
+msgid "Tests don't have to be limited to a single fixture, either. They can depend on as many fixtures as you want, and fixtures can use other fixtures, as well. This is where pytest's fixture system really shines."
+msgstr "テストは単一のフィクスチャに限定される必要はありません。 必要な数のフィクスチャに依存でき、フィクスチャは他のフィクスチャも使用できます。 これが pytest のフィクスチャシステムの真価が発揮される点です。"
+
+#: ../../explanation/fixtures.rst:65
+msgid "Improvements over xUnit-style setup/teardown functions"
+msgstr "xUnit スタイルのセットアップ/ティアダウン関数からの改善点"
+
+#: ../../explanation/fixtures.rst:67
+msgid "pytest fixtures offer dramatic improvements over the classic xUnit style of setup/teardown functions:"
+msgstr "pytest のフィクスチャは、従来の xUnit スタイルのセットアップ/ティアダウン関数から劇的な改善を提供します:"
+
+#: ../../explanation/fixtures.rst:70
+msgid "fixtures have explicit names and are activated by declaring their use from test functions, modules, classes or whole projects."
+msgstr "フィクスチャには明示的な名前があり、テスト関数、モジュール、クラス、またはプロジェクト全体からその使用を宣言することで有効化されます。"
+
+#: ../../explanation/fixtures.rst:73
+msgid "fixtures are implemented in a modular manner, as each fixture name triggers a *fixture function* which can itself use other fixtures."
+msgstr "フィクスチャはモジュール式に実装され、各フィクスチャ名は他のフィクスチャを使用できる *フィクスチャ関数* をトリガーします。"
+
+#: ../../explanation/fixtures.rst:76
+msgid "fixture management scales from simple unit to complex functional testing, allowing to parametrize fixtures and tests according to configuration and component options, or to reuse fixtures across function, class, module or whole test session scopes."
+msgstr "フィクスチャの管理は単純なユニットから複雑な機能テストまでスケールし、設定やコンポーネントのオプションに応じてフィクスチャとテストをパラメーター化したり、関数、クラス、モジュール、またはテストセッション全体のスコープでフィクスチャを再利用したりできます。"
+
+#: ../../explanation/fixtures.rst:81
+msgid "teardown logic can be easily, and safely managed, no matter how many fixtures are used, without the need to carefully handle errors by hand or micromanage the order that cleanup steps are added."
+msgstr "ティアダウンのロジックは、使用されるフィクスチャの数に関係なく、エラーを手動で慎重に処理したり、クリーンアップステップの追加順序を細かく管理したりする必要なく、簡単かつ安全に管理できます。"
+
+#: ../../explanation/fixtures.rst:85
+msgid "In addition, pytest continues to support :ref:`xunitsetup`.  You can mix both styles, moving incrementally from classic to new style, as you prefer.  You can also start out from existing :ref:`unittest.TestCase style <unittest.TestCase>`."
+msgstr "さらに、pytest は :ref:`xunitsetup` のサポートを継続しています。 好みに応じて、従来のスタイルから新しいスタイルに段階的に移行しながら、両方のスタイルを混在させることができます。 既存の :ref:`unittest.TestCase スタイル <unittest.TestCase>` から始めることもできます。"
+
+#: ../../explanation/fixtures.rst:93
+msgid "Fixture errors"
+msgstr "フィクスチャのエラー"
+
+#: ../../explanation/fixtures.rst:95
+msgid "pytest does its best to put all the fixtures for a given test in a linear order so that it can see which fixture happens first, second, third, and so on. If an earlier fixture has a problem, though, and raises an exception, pytest will stop executing fixtures for that test and mark the test as having an error."
+msgstr "pytest は、与えられたテストのすべてのフィクスチャを直線的な順序で配置し、どのフィクスチャが最初、2 番目、3 番目などに実行されるかを把握しようとします。 ただし、先行するフィクスチャに問題があり例外が発生した場合、pytest はそのテストのフィクスチャの実行を停止し、テストにエラーがあるとマークします。"
+
+#: ../../explanation/fixtures.rst:100
+msgid "When a test is marked as having an error, it doesn't mean the test failed, though. It just means the test couldn't even be attempted because one of the things it depends on had a problem."
+msgstr "テストにエラーがあるとマークされた場合でも、それはテストが失敗したということではありません。 依存するものの 1 つに問題があったため、テストを試みることすらできなかったということを意味します。"
+
+#: ../../explanation/fixtures.rst:104
+msgid "This is one reason why it's a good idea to cut out as many unnecessary dependencies as possible for a given test. That way a problem in something unrelated isn't causing us to have an incomplete picture of what may or may not have issues."
+msgstr "これは、与えられたテストに対して可能な限り不要な依存関係を排除することが良い理由の 1 つです。 そうすることで、無関係なものの問題が、何が問題を抱えているかもしれないという不完全な状況を引き起こすことを防ぎます。"
+
+#: ../../explanation/fixtures.rst:109
+msgid "Here's a quick example to help explain:"
+msgstr "説明に役立つ簡単な例を示します:"
+
+#: ../../explanation/fixtures.rst:140
+msgid "If, for whatever reason, ``order.append(1)`` had a bug and it raises an exception, we wouldn't be able to know if ``order.extend([2])`` or ``order += [3]`` would also have problems. After ``append_first`` throws an exception, pytest won't run any more fixtures for ``test_order``, and it won't even try to run ``test_order`` itself. The only things that would've run would be ``order`` and ``append_first``."
+msgstr "何らかの理由で ``order.append(1)`` にバグがあり例外が発生した場合、``order.extend([2])`` や ``order += [3]`` にも問題があるかどうかを知ることはできません。 ``append_first`` が例外を投げた後、pytest は ``test_order`` のためのフィクスチャをそれ以上実行せず、``test_order`` 自体の実行も試みません。 実行されるのは ``order`` と ``append_first`` だけです。"
+
+#: ../../explanation/fixtures.rst:149
+msgid "Sharing test data"
+msgstr "テストデータの共有"
+
+#: ../../explanation/fixtures.rst:151
+msgid "If you want to make test data from files available to your tests, a good way to do this is by loading these data in a fixture for use by your tests. This makes use of the automatic caching mechanisms of pytest."
+msgstr "ファイルからのテストデータをテストで利用可能にしたい場合、そのデータをフィクスチャにロードしてテストで使用するのが良い方法です。 これにより pytest の自動キャッシュメカニズムを利用できます。"
+
+#: ../../explanation/fixtures.rst:155
+msgid "Another good approach is by adding the data files in the ``tests`` folder. There are also community plugins available to help to manage this aspect of testing, e.g. :pypi:`pytest-datadir` and :pypi:`pytest-datafiles`."
+msgstr "もう 1 つの良いアプローチは、``tests`` フォルダにデータファイルを追加することです。 テストのこの側面の管理を支援するコミュニティプラグインも利用可能です。 例えば :pypi:`pytest-datadir` や :pypi:`pytest-datafiles` などがあります。"
+
+#: ../../explanation/fixtures.rst:162
+msgid "A note about fixture cleanup"
+msgstr "フィクスチャのクリーンアップに関する注意"
+
+#: ../../explanation/fixtures.rst:164
+msgid "pytest does not do any special processing for :data:`SIGTERM <signal.SIGTERM>` and ``SIGQUIT`` signals (:data:`SIGINT <signal.SIGINT>` is handled naturally by the Python runtime via :class:`KeyboardInterrupt`), so fixtures that manage external resources which are important to be cleared when the Python process is terminated (by those signals) might leak resources."
+msgstr "pytest は :data:`SIGTERM <signal.SIGTERM>` と ``SIGQUIT`` シグナルに対して特別な処理を行いません (:data:`SIGINT <signal.SIGINT>` は Python ランタイムによって :class:`KeyboardInterrupt` を介して自然に処理されます)。 そのため、これらのシグナルによって Python プロセスが終了したときにクリアする必要がある外部リソースを管理するフィクスチャでは、リソースがリークする可能性があります。"
+
+#: ../../explanation/fixtures.rst:169
+msgid "The reason pytest does not handle those signals to perform fixture cleanup is that signal handlers are global, and changing them might interfere with the code under execution."
+msgstr "pytest がフィクスチャのクリーンアップを行うためにこれらのシグナルを処理しない理由は、シグナルハンドラーがグローバルであり、それらを変更すると実行中のコードに干渉する可能性があるためです。"
+
+#: ../../explanation/fixtures.rst:172
+msgid "If fixtures in your suite need special care regarding termination in those scenarios, see :issue:`this comment <5243#issuecomment-491522595>` in the issue tracker for a possible workaround."
+msgstr "これらのシナリオで終了に関して特別な注意が必要なフィクスチャがある場合は、issue トラッカーの :issue:`このコメント <5243#issuecomment-491522595>` で可能な回避策を参照してください。"
+

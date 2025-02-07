@@ -1,0 +1,265 @@
+# SOME DESCRIPTIVE TITLE.
+# Copyright (C) 2015, holger krekel and pytest-dev team
+# This file is distributed under the same license as the pytest package.
+# FIRST AUTHOR <EMAIL@ADDRESS>, 2025.
+#
+#, fuzzy
+msgid ""
+msgstr ""
+"Project-Id-Version: pytest 0.1.dev16209\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2025-02-05 00:52+0900\n"
+"PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
+"Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
+"Language: ja\n"
+"Language-Team: ja <LL@li.org>\n"
+"Plural-Forms: nplurals=1; plural=0;\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=utf-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Generated-By: Babel 2.17.0\n"
+
+#: ../../explanation/flaky.rst:3
+msgid "Flaky tests"
+msgstr "不安定なテスト"
+
+#: ../../explanation/flaky.rst:5
+msgid "A \"flaky\" test is one that exhibits intermittent or sporadic failure, that seems to have non-deterministic behaviour. Sometimes it passes, sometimes it fails, and it's not clear why. This page discusses pytest features that can help and other general strategies for identifying, fixing or mitigating them."
+msgstr "「不安定な」テスト (*Flaky tests*) とは、断続的または散発的な失敗を示し、非決定的な動作をするように見えるテストのことです。 時々成功し、時々失敗し、その理由が明確ではありません。 このページでは、pytest の機能や、それらを特定、修正、または軽減するための一般的な戦略について説明します。"
+
+#: ../../explanation/flaky.rst:8
+msgid "Why flaky tests are a problem"
+msgstr "不安定なテストが問題である理由"
+
+#: ../../explanation/flaky.rst:10
+msgid "Flaky tests are particularly troublesome when a continuous integration (CI) server is being used, so that all tests must pass before a new code change can be merged. If the test result is not a reliable signal -- that a test failure means the code change broke the test -- developers can become mistrustful of the test results, which can lead to overlooking genuine failures. It is also a source of wasted time as developers must re-run test suites and investigate spurious failures."
+msgstr "不安定なテストは、継続的インテグレーション (CI) サーバーを使用している場合に特に厄介です。 すべてのテストが合格しなければ、新しいコード変更をマージできません。 テスト結果が信頼できる信号でない場合 (テストの失敗がコード変更によってテストが壊れたことを意味する場合)、開発者はテスト結果を信頼しなくなり、本物の失敗を見逃す可能性があります。 また、開発者がテストスイートを再実行し、偽の失敗を調査する必要があるため、時間の無駄にもなります。"
+
+#: ../../explanation/flaky.rst:14
+msgid "Potential root causes"
+msgstr "潜在的な根本原因"
+
+#: ../../explanation/flaky.rst:17
+msgid "System state"
+msgstr "システムの状態"
+
+#: ../../explanation/flaky.rst:19
+msgid "Broadly speaking, a flaky test indicates that the test relies on some system state that is not being appropriately controlled - the test environment is not sufficiently isolated. Higher level tests are more likely to be flaky as they rely on more state."
+msgstr "広く言えば、不安定なテストは、テストが適切に制御されていないシステムの状態に依存していることを示しています。 テスト環境が十分に隔離されていません。 より高レベルのテストは、より多くの状態に依存するため、不安定になる可能性が高くなります。"
+
+#: ../../explanation/flaky.rst:21
+msgid "Flaky tests sometimes appear when a test suite is run in parallel (such as use of `pytest-xdist`_). This can indicate a test is reliant on test ordering."
+msgstr "不安定なテストは、テストスイートが並行して実行される場合 (例えば `pytest-xdist`_ の使用) に現れることがあります。 これは、テストがテストの順序に依存していることを示している可能性があります。"
+
+#: ../../explanation/flaky.rst:23
+msgid "Perhaps a different test is failing to clean up after itself and leaving behind data which causes the flaky test to fail."
+msgstr "おそらく、別のテストが自分自身の後片付けに失敗し、不安定なテストが失敗する原因となるデータを残している可能性があります。"
+
+#: ../../explanation/flaky.rst:24
+msgid "The flaky test is reliant on data from a previous test that doesn't clean up after itself, and in parallel runs that previous test is not always present"
+msgstr "不安定なテストは、自分自身の後片付けをしない前のテストのデータに依存しており、並行実行ではその前のテストが常に存在するわけではありません。"
+
+#: ../../explanation/flaky.rst:25
+msgid "Tests that modify global state typically cannot be run in parallel."
+msgstr "グローバル状態を変更するテストは、通常、並行して実行することはできません。"
+
+#: ../../explanation/flaky.rst:29
+msgid "Overly strict assertion"
+msgstr "過度に厳しいアサーション"
+
+#: ../../explanation/flaky.rst:31
+msgid "Overly strict assertions can cause problems with floating point comparison as well as timing issues. :func:`pytest.approx` is useful here."
+msgstr "過度に厳しいアサーションは、浮動小数点の比較やタイミングの問題を引き起こす可能性があります。 ここでは :func:`pytest.approx` が役立ちます。"
+
+#: ../../explanation/flaky.rst:34
+msgid "Thread safety"
+msgstr "スレッドセーフ"
+
+#: ../../explanation/flaky.rst:36
+msgid "pytest is single-threaded, executing its tests always in the same thread, sequentially, never spawning any threads itself."
+msgstr "pytest はシングルスレッドであり、常に同じスレッドでテストを順次実行し、自身でスレッドを生成することはありません。"
+
+#: ../../explanation/flaky.rst:38
+msgid "Even in case of plugins which run tests in parallel, for example `pytest-xdist`_, usually work by spawning multiple *processes* and running tests in batches, without using multiple threads."
+msgstr "テストを並行して実行するプラグインの場合でも、例えば `pytest-xdist`_ のように、通常は複数の *プロセス* を生成し、複数のスレッドを使用せずにバッチでテストを実行します。"
+
+#: ../../explanation/flaky.rst:40
+msgid "It is of course possible (and common) for tests and fixtures to spawn threads themselves as part of their testing workflow (for example, a fixture that starts a server thread in the background, or a test which executes production code that spawns threads), but some care must be taken:"
+msgstr "もちろん、テストやフィクスチャがテストワークフローの一環としてスレッドを生成することは可能 (そして一般的) ですが、いくつかの注意が必要です。"
+
+#: ../../explanation/flaky.rst:42
+msgid "Make sure to eventually wait on any spawned threads -- for example at the end of a test, or during the teardown of a fixture."
+msgstr "生成されたスレッドを最終的に待機することを確認してください。 例えば、テストの終了時やフィクスチャのティアダウン時に。"
+
+#: ../../explanation/flaky.rst:43
+msgid "Avoid using primitives provided by pytest (:func:`pytest.warns`, :func:`pytest.raises`, etc) from multiple threads, as they are not thread-safe."
+msgstr "pytest が提供するプリミティブ (:func:`pytest.warns`, :func:`pytest.raises` など) を複数のスレッドから使用することは避けてください。 これらはスレッドセーフではありません。"
+
+#: ../../explanation/flaky.rst:45
+msgid "If your test suite uses threads and your are seeing flaky test results, do not discount the possibility that the test is implicitly using global state in pytest itself."
+msgstr "テストスイートがスレッドを使用しており、不安定なテスト結果が見られる場合、テストが pytest 自体のグローバル状態を暗黙的に使用している可能性を無視しないでください。"
+
+#: ../../explanation/flaky.rst:48
+msgid "Related features"
+msgstr "関連機能"
+
+#: ../../explanation/flaky.rst:51
+msgid "Xfail strict"
+msgstr "Xfail strict"
+
+#: ../../explanation/flaky.rst:53
+msgid ":ref:`pytest.mark.xfail ref` with ``strict=False`` can be used to mark a test so that its failure does not cause the whole build to break. This could be considered like a manual quarantine, and is rather dangerous to use permanently."
+msgstr ":ref:`pytest.mark.xfail ref` を ``strict=False`` で使用すると、テストの失敗がビルド全体の失敗を引き起こさないようにマークできます。 これは手動の隔離のようなものであり、永久に使用するのはかなり危険です。"
+
+#: ../../explanation/flaky.rst:57
+msgid "PYTEST_CURRENT_TEST"
+msgstr "PYTEST_CURRENT_TEST"
+
+#: ../../explanation/flaky.rst:59
+msgid ":envvar:`PYTEST_CURRENT_TEST` may be useful for figuring out \"which test got stuck\". See :ref:`pytest current test env` for more details."
+msgstr ":envvar:`PYTEST_CURRENT_TEST` は「どのテストがスタックしたか」を把握するのに役立つかもしれません。 詳細については :ref:`pytest current test env` を参照してください。"
+
+#: ../../explanation/flaky.rst:64
+msgid "Plugins"
+msgstr "プラグイン"
+
+#: ../../explanation/flaky.rst:66
+msgid "Rerunning any failed tests can mitigate the negative effects of flaky tests by giving them additional chances to pass, so that the overall build does not fail. Several pytest plugins support this:"
+msgstr "失敗したテストを再実行することで、不安定なテストの悪影響を軽減し、全体のビルドが失敗しないようにすることができます。 いくつかの pytest プラグインがこれをサポートしています。"
+
+#: ../../explanation/flaky.rst:68
+msgid "`pytest-rerunfailures <https://github.com/pytest-dev/pytest-rerunfailures>`_"
+msgstr "`pytest-rerunfailures <https://github.com/pytest-dev/pytest-rerunfailures>`_"
+
+#: ../../explanation/flaky.rst:69
+msgid "`pytest-replay <https://github.com/ESSS/pytest-replay>`_: This plugin helps to reproduce locally crashes or flaky tests observed during CI runs."
+msgstr "`pytest-replay <https://github.com/ESSS/pytest-replay>`_: このプラグインは、CI 実行中に観察されたクラッシュや不安定なテストをローカルで再現するのに役立ちます。"
+
+#: ../../explanation/flaky.rst:70
+msgid "`pytest-flakefinder <https://github.com/dropbox/pytest-flakefinder>`_ - `blog post <https://blogs.dropbox.com/tech/2016/03/open-sourcing-pytest-tools/>`_"
+msgstr "`pytest-flakefinder <https://github.com/dropbox/pytest-flakefinder>`_ - `ブログ記事 <https://blogs.dropbox.com/tech/2016/03/open-sourcing-pytest-tools/>`_"
+
+#: ../../explanation/flaky.rst:72
+msgid "Plugins to deliberately randomize tests can help expose tests with state problems:"
+msgstr "意図的にテストをランダム化するプラグインは、状態の問題を持つテストを明らかにするのに役立ちます。"
+
+#: ../../explanation/flaky.rst:74
+msgid "`pytest-random-order <https://github.com/jbasko/pytest-random-order>`_"
+msgstr "`pytest-random-order <https://github.com/jbasko/pytest-random-order>`_"
+
+#: ../../explanation/flaky.rst:75
+msgid "`pytest-randomly <https://github.com/pytest-dev/pytest-randomly>`_"
+msgstr "`pytest-randomly <https://github.com/pytest-dev/pytest-randomly>`_"
+
+#: ../../explanation/flaky.rst:79
+msgid "Other general strategies"
+msgstr "その他の一般的な戦略"
+
+#: ../../explanation/flaky.rst:82
+msgid "Split up test suites"
+msgstr "テストスイートの分割"
+
+#: ../../explanation/flaky.rst:84
+msgid "It can be common to split a single test suite into two, such as unit vs integration, and only use the unit test suite as a CI gate. This also helps keep build times manageable as high level tests tend to be slower. However, it means it does become possible for code that breaks the build to be merged, so extra vigilance is needed for monitoring the integration test results."
+msgstr "単一のテストスイートをユニットと統合のように 2 つに分割し、ユニットテストスイートのみを CI ゲートとして使用することが一般的です。 これにより、高レベルのテストは遅くなる傾向があるため、ビルド時間を管理しやすくなります。 しかし、ビルドを壊すコードがマージされる可能性があるため、統合テストの結果を監視するために追加の警戒が必要です。"
+
+#: ../../explanation/flaky.rst:88
+msgid "Video/screenshot on failure"
+msgstr "失敗時のビデオ/スクリーンショット"
+
+#: ../../explanation/flaky.rst:90
+msgid "For UI tests these are important for understanding what the state of the UI was when the test failed. pytest-splinter can be used with plugins like pytest-bdd and can `save a screenshot on test failure <https://pytest-splinter.readthedocs.io/en/latest/#automatic-screenshots-on-test-failure>`_, which can help to isolate the cause."
+msgstr "UI テストの場合、テストが失敗したときの UI の状態を理解するためにこれらは重要です。 pytest-splinter は pytest-bdd などのプラグインと一緒に使用でき、`テスト失敗時にスクリーンショットを保存 <https://pytest-splinter.readthedocs.io/en/latest/#automatic-screenshots-on-test-failure>`_ でき、原因を特定するのに役立ちます。"
+
+#: ../../explanation/flaky.rst:94
+msgid "Delete or rewrite the test"
+msgstr "テストの削除または書き直し"
+
+#: ../../explanation/flaky.rst:96
+msgid "If the functionality is covered by other tests, perhaps the test can be removed. If not, perhaps it can be rewritten at a lower level which will remove the flakiness or make its source more apparent."
+msgstr "機能が他のテストでカバーされている場合、おそらくそのテストを削除することができます。 そうでない場合、おそらくより低レベルで書き直すことで、不安定さを取り除くか、その原因をより明確にすることができます。"
+
+#: ../../explanation/flaky.rst:100
+msgid "Quarantine"
+msgstr "隔離"
+
+#: ../../explanation/flaky.rst:102
+msgid "Mark Lapierre discusses the `Pros and Cons of Quarantined Tests <https://dev.to/mlapierre/pros-and-cons-of-quarantined-tests-2emj>`_ in a post from 2018."
+msgstr "Mark Lapierre は、2018 年の投稿で `隔離されたテストの長所と短所 <https://dev.to/mlapierre/pros-and-cons-of-quarantined-tests-2emj>`_ について議論しています。"
+
+#: ../../explanation/flaky.rst:107
+msgid "CI tools that rerun on failure"
+msgstr "失敗時に再実行する CI ツール"
+
+#: ../../explanation/flaky.rst:109
+msgid "Azure Pipelines (the Azure cloud CI/CD tool, formerly Visual Studio Team Services or VSTS) has a feature to `identify flaky tests <https://docs.microsoft.com/en-us/previous-versions/azure/devops/2017/dec-11-vsts?view=tfs-2017#identify-flaky-tests>`_ and rerun failed tests."
+msgstr "Azure Pipelines (以前の Visual Studio Team Services または VSTS である Azure クラウド CI/CD ツール) には、不安定なテストを `識別 <https://docs.microsoft.com/en-us/previous-versions/azure/devops/2017/dec-11-vsts?view=tfs-2017#identify-flaky-tests>`_ し、失敗したテストを再実行する機能があります。"
+
+#: ../../explanation/flaky.rst:114
+msgid "Research"
+msgstr "研究"
+
+#: ../../explanation/flaky.rst:116
+msgid "This is a limited list, please submit an issue or pull request to expand it!"
+msgstr "これは限られたリストです。 拡張するために issue または pull request を提出してください！"
+
+#: ../../explanation/flaky.rst:118
+msgid "Gao, Zebao, Yalan Liang, Myra B. Cohen, Atif M. Memon, and Zhen Wang. \"Making system user interactive tests repeatable: When and what should we control?.\" In *Software Engineering (ICSE), 2015 IEEE/ACM 37th IEEE International Conference on*, vol. 1, pp. 55-65. IEEE, 2015.  `PDF <http://www.cs.umd.edu/~atif/pubs/gao-icse15.pdf>`__"
+msgstr "Gao, Zebao, Yalan Liang, Myra B. Cohen, Atif M. Memon, and Zhen Wang. \"システムユーザーインタラクティブテストを再現可能にする: いつ、何を制御すべきか？.\" In *Software Engineering (ICSE), 2015 IEEE/ACM 37th IEEE International Conference on*, vol. 1, pp. 55-65. IEEE, 2015.  `PDF <http://www.cs.umd.edu/~atif/pubs/gao-icse15.pdf>`__"
+
+#: ../../explanation/flaky.rst:119
+msgid "Palomba, Fabio, and Andy Zaidman. \"Does refactoring of test smells induce fixing flaky tests?.\" In *Software Maintenance and Evolution (ICSME), 2017 IEEE International Conference on*, pp. 1-12. IEEE, 2017. `PDF in Google Drive <https://drive.google.com/file/d/10HdcCQiuQVgW3yYUJD-TSTq1NbYEprl0/view>`__"
+msgstr "Palomba, Fabio, and Andy Zaidman. \"テストの臭いのリファクタリングは、不安定なテストの修正を誘発するか？.\" In *Software Maintenance and Evolution (ICSME), 2017 IEEE International Conference on*, pp. 1-12. IEEE, 2017. `Google Drive の PDF <https://drive.google.com/file/d/10HdcCQiuQVgW3yYUJD-TSTq1NbYEprl0/view>`__"
+
+#: ../../explanation/flaky.rst:120
+msgid "Bell, Jonathan, Owolabi Legunsen, Michael Hilton, Lamyaa Eloussi, Tifany Yung, and Darko Marinov. \"DeFlaker: Automatically detecting flaky tests.\" In *Proceedings of the 2018 International Conference on Software Engineering*. 2018. `PDF <https://www.jonbell.net/icse18-deflaker.pdf>`__"
+msgstr "Bell, Jonathan, Owolabi Legunsen, Michael Hilton, Lamyaa Eloussi, Tifany Yung, and Darko Marinov. \"DeFlaker: 不安定なテストの自動検出。 \" In *Proceedings of the 2018 International Conference on Software Engineering*. 2018. `PDF <https://www.jonbell.net/icse18-deflaker.pdf>`__"
+
+#: ../../explanation/flaky.rst:121
+msgid "Dutta, Saikat and Shi, August and Choudhary, Rutvik and Zhang, Zhekun and Jain, Aryaman and Misailovic, Sasa. \"Detecting flaky tests in probabilistic and machine learning applications.\" In *Proceedings of the 29th ACM SIGSOFT International Symposium on Software Testing and Analysis (ISSTA)*, pp. 211-224. ACM, 2020. `PDF <https://www.cs.cornell.edu/~saikatd/papers/flash-issta20.pdf>`__"
+msgstr "Dutta, Saikat and Shi, August and Choudhary, Rutvik and Zhang, Zhekun and Jain, Aryaman and Misailovic, Sasa. \"確率的および機械学習アプリケーションにおける不安定なテストの検出。 \" In *Proceedings of the 29th ACM SIGSOFT International Symposium on Software Testing and Analysis (ISSTA)*, pp. 211-224. ACM, 2020. `PDF <https://www.cs.cornell.edu/~saikatd/papers/flash-issta20.pdf>`__"
+
+#: ../../explanation/flaky.rst:124
+msgid "Resources"
+msgstr "リソース"
+
+#: ../../explanation/flaky.rst:126
+msgid "`Eradicating Non-Determinism in Tests <https://martinfowler.com/articles/nonDeterminism.html>`_ by Martin Fowler, 2011"
+msgstr "`テストにおける非決定性の根絶 <https://martinfowler.com/articles/nonDeterminism.html>`_ by Martin Fowler, 2011"
+
+#: ../../explanation/flaky.rst:127
+msgid "`No more flaky tests on the Go team <https://www.thoughtworks.com/insights/blog/no-more-flaky-tests-go-team>`_ by Pavan Sudarshan, 2012"
+msgstr "`Go チームでの不安定なテストの根絶 <https://www.thoughtworks.com/insights/blog/no-more-flaky-tests-go-team>`_ by Pavan Sudarshan, 2012"
+
+#: ../../explanation/flaky.rst:128
+msgid "`The Build That Cried Broken: Building Trust in your Continuous Integration Tests <https://www.youtube.com/embed/VotJqV4n8ig>`_ talk (video) by `Angie Jones <https://angiejones.tech/>`_ at SeleniumConf Austin 2017"
+msgstr "`壊れたと叫ぶビルド: 継続的インテグレーションテストへの信頼の構築 <https://www.youtube.com/embed/VotJqV4n8ig>`_ 講演 (ビデオ) by `Angie Jones <https://angiejones.tech/>`_ at SeleniumConf Austin 2017"
+
+#: ../../explanation/flaky.rst:129
+msgid "`Test and Code Podcast: Flaky Tests and How to Deal with Them <https://testandcode.com/50>`_ by Brian Okken and Anthony Shaw, 2018"
+msgstr "`Test and Code Podcast: 不安定なテストとその対処方法 <https://testandcode.com/50>`_ by Brian Okken and Anthony Shaw, 2018"
+
+#: ../../explanation/flaky.rst:130
+msgid "Microsoft:"
+msgstr "Microsoft:"
+
+#: ../../explanation/flaky.rst:132
+msgid "`How we approach testing VSTS to enable continuous delivery <https://blogs.msdn.microsoft.com/bharry/2017/06/28/testing-in-a-cloud-delivery-cadence/>`_ by Brian Harry MS, 2017"
+msgstr "`継続的デリバリーを可能にするための VSTS テストへのアプローチ <https://blogs.msdn.microsoft.com/bharry/2017/06/28/testing-in-a-cloud-delivery-cadence/>`_ by Brian Harry MS, 2017"
+
+#: ../../explanation/flaky.rst:133
+msgid "`Eliminating Flaky Tests <https://docs.microsoft.com/en-us/azure/devops/learn/devops-at-microsoft/eliminating-flaky-tests>`_ blog and talk (video) by Munil Shah, 2017"
+msgstr "`不安定なテストの排除 <https://docs.microsoft.com/en-us/azure/devops/learn/devops-at-microsoft/eliminating-flaky-tests>`_ ブログと講演 (ビデオ) by Munil Shah, 2017"
+
+#: ../../explanation/flaky.rst:135
+msgid "Google:"
+msgstr "Google:"
+
+#: ../../explanation/flaky.rst:137
+msgid "`Flaky Tests at Google and How We Mitigate Them <https://testing.googleblog.com/2016/05/flaky-tests-at-google-and-how-we.html>`_ by John Micco, 2016"
+msgstr "`Google における不安定なテストとその軽減方法 <https://testing.googleblog.com/2016/05/flaky-tests-at-google-and-how-we.html>`_ by John Micco, 2016"
+
+#: ../../explanation/flaky.rst:138
+msgid "`Where do Google's flaky tests come from? <https://testing.googleblog.com/2017/04/where-do-our-flaky-tests-come-from.html>`_  by Jeff Listfield, 2017"
+msgstr "`Google の不安定なテストはどこから来るのか？ <https://testing.googleblog.com/2017/04/where-do-our-flaky-tests-come-from.html>`_  by Jeff Listfield, 2017"
+

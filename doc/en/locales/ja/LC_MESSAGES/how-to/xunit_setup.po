@@ -1,0 +1,93 @@
+# SOME DESCRIPTIVE TITLE.
+# Copyright (C) 2015, holger krekel and pytest-dev team
+# This file is distributed under the same license as the pytest package.
+# FIRST AUTHOR <EMAIL@ADDRESS>, 2025.
+#
+#, fuzzy
+msgid ""
+msgstr ""
+"Project-Id-Version: pytest 0.1.dev16209\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2025-02-05 00:52+0900\n"
+"PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
+"Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
+"Language: ja\n"
+"Language-Team: ja <LL@li.org>\n"
+"Plural-Forms: nplurals=1; plural=0;\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=utf-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Generated-By: Babel 2.17.0\n"
+
+#: ../../how-to/xunit_setup.rst:6
+msgid "How to implement xunit-style set-up"
+msgstr "xunitスタイルのセットアップを実装する方法"
+
+#: ../../how-to/xunit_setup.rst:8
+msgid "This section describes a classic and popular way how you can implement fixtures (setup and teardown test state) on a per-module/class/function basis."
+msgstr "このセクションでは、モジュール/クラス/関数ごとにフィクスチャ (テスト状態のセットアップとティアダウン) を実装するための古典的で人気のある方法について説明します。"
+
+#: ../../how-to/xunit_setup.rst:14
+msgid "While these setup/teardown methods are simple and familiar to those coming from a ``unittest`` or ``nose`` background, you may also consider using pytest's more powerful :ref:`fixture mechanism <fixture>` which leverages the concept of dependency injection, allowing for a more modular and more scalable approach for managing test state, especially for larger projects and for functional testing.  You can mix both fixture mechanisms in the same file but test methods of ``unittest.TestCase`` subclasses cannot receive fixture arguments."
+msgstr "これらのセットアップ/ティアダウンメソッドはシンプルで、``unittest`` や ``nose`` の背景を持つ人には馴染み深いものですが、pytest のより強力な :ref:`fixture mechanism <fixture>` を使用することも検討してください。 これは依存性注入の概念を活用し、特に大規模なプロジェクトや機能テストにおいて、テスト状態を管理するためのよりモジュール化され、よりスケーラブルなアプローチを可能にします。 同じファイル内で両方のフィクスチャメカニズムを混在させることができますが、``unittest.TestCase`` サブクラスのテストメソッドはフィクスチャ引数を受け取ることができません。"
+
+#: ../../how-to/xunit_setup.rst:26
+msgid "Module level setup/teardown"
+msgstr "モジュールレベルのセットアップ/ティアダウン"
+
+#: ../../how-to/xunit_setup.rst:28
+msgid "If you have multiple test functions and test classes in a single module you can optionally implement the following fixture methods which will usually be called once for all the functions:"
+msgstr "単一のモジュールに複数のテスト関数とテストクラスがある場合、次のフィクスチャメソッドをオプションで実装できます。 これらは通常、すべての関数に対して一度だけ呼び出されます。"
+
+#: ../../how-to/xunit_setup.rst:43
+msgid "As of pytest-3.0, the ``module`` parameter is optional."
+msgstr "pytest-3.0 以降、``module`` パラメータはオプションです。"
+
+#: ../../how-to/xunit_setup.rst:46
+msgid "Class level setup/teardown"
+msgstr "クラスレベルのセットアップ/ティアダウン"
+
+#: ../../how-to/xunit_setup.rst:48
+msgid "Similarly, the following methods are called at class level before and after all test methods of the class are called:"
+msgstr "同様に、次のメソッドはクラスのすべてのテストメソッドが呼び出される前後にクラスレベルで呼び出されます。"
+
+#: ../../how-to/xunit_setup.rst:69
+msgid "Method and function level setup/teardown"
+msgstr "メソッドおよび関数レベルのセットアップ/ティアダウン"
+
+#: ../../how-to/xunit_setup.rst:71
+msgid "Similarly, the following methods are called around each method invocation:"
+msgstr "同様に、次のメソッドは各メソッド呼び出しの前後に呼び出されます。"
+
+#: ../../how-to/xunit_setup.rst:86
+msgid "As of pytest-3.0, the ``method`` parameter is optional."
+msgstr "pytest-3.0 以降、``method`` パラメータはオプションです。"
+
+#: ../../how-to/xunit_setup.rst:88
+msgid "If you would rather define test functions directly at module level you can also use the following functions to implement fixtures:"
+msgstr "テスト関数をモジュールレベルで直接定義する場合は、次の関数を使用してフィクスチャを実装することもできます。"
+
+#: ../../how-to/xunit_setup.rst:104
+msgid "As of pytest-3.0, the ``function`` parameter is optional."
+msgstr "pytest-3.0 以降、``function`` パラメータはオプションです。"
+
+#: ../../how-to/xunit_setup.rst:106
+msgid "Remarks:"
+msgstr "備考:"
+
+#: ../../how-to/xunit_setup.rst:108
+msgid "It is possible for setup/teardown pairs to be invoked multiple times per testing process."
+msgstr "セットアップ/ティアダウンのペアは、テストプロセスごとに複数回呼び出される可能性があります。"
+
+#: ../../how-to/xunit_setup.rst:111
+msgid "teardown functions are not called if the corresponding setup function existed and failed/was skipped."
+msgstr "対応するセットアップ関数が存在し、失敗またはスキップされた場合、ティアダウン関数は呼び出されません。"
+
+#: ../../how-to/xunit_setup.rst:114
+msgid "Prior to pytest-4.2, xunit-style functions did not obey the scope rules of fixtures, so it was possible, for example, for a ``setup_method`` to be called before a session-scoped autouse fixture."
+msgstr "pytest-4.2 以前は、xunitスタイルの関数はフィクスチャのスコープルールに従わなかったため、例えば、セッションスコープの自動使用フィクスチャの前に ``setup_method`` が呼び出される可能性がありました。"
+
+#: ../../how-to/xunit_setup.rst:118
+msgid "Now the xunit-style functions are integrated with the fixture mechanism and obey the proper scope rules of fixtures involved in the call."
+msgstr "現在、xunitスタイルの関数はフィクスチャメカニズムと統合され、呼び出しに関与するフィクスチャの適切なスコープルールに従います。"
+

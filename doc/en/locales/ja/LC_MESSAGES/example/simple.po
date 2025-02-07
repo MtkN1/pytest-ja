@@ -1,0 +1,337 @@
+# SOME DESCRIPTIVE TITLE.
+# Copyright (C) 2015, holger krekel and pytest-dev team
+# This file is distributed under the same license as the pytest package.
+# FIRST AUTHOR <EMAIL@ADDRESS>, 2025.
+#
+#, fuzzy
+msgid ""
+msgstr ""
+"Project-Id-Version: pytest 0.1.dev16209\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2025-02-05 00:52+0900\n"
+"PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
+"Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
+"Language: ja\n"
+"Language-Team: ja <LL@li.org>\n"
+"Plural-Forms: nplurals=1; plural=0;\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=utf-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Generated-By: Babel 2.17.0\n"
+
+#: ../../example/simple.rst:4
+msgid "Basic patterns and examples"
+msgstr "基本的なパターンと例"
+
+#: ../../example/simple.rst:7
+msgid "How to change command line options defaults"
+msgstr "コマンドラインオプションのデフォルトを変更する方法"
+
+#: ../../example/simple.rst:9
+msgid "It can be tedious to type the same series of command line options every time you use ``pytest``.  For example, if you always want to see detailed info on skipped and xfailed tests, as well as have terser \"dot\" progress output, you can write it into a configuration file:"
+msgstr "``pytest`` を使用するたびに同じ一連のコマンドラインオプションを入力するのは面倒です。 たとえば、スキップされたテストや xfailed テストの詳細情報を常に表示し、簡潔な「ドット」進行出力を表示したい場合は、設定ファイルに書き込むことができます。"
+
+#: ../../example/simple.rst:21
+msgid "Alternatively, you can set a ``PYTEST_ADDOPTS`` environment variable to add command line options while the environment is in use:"
+msgstr "または、環境が使用中にコマンドラインオプションを追加するために ``PYTEST_ADDOPTS`` 環境変数を設定することもできます。"
+
+#: ../../example/simple.rst:28
+msgid "Here's how the command-line is built in the presence of ``addopts`` or the environment variable:"
+msgstr "``addopts`` または環境変数が存在する場合のコマンドラインの構築方法は次のとおりです。"
+
+#: ../../example/simple.rst:34
+msgid "So if the user executes in the command-line:"
+msgstr "したがって、ユーザーがコマンドラインで実行すると:"
+
+#: ../../example/simple.rst:40
+msgid "The actual command line executed is:"
+msgstr "実際に実行されるコマンドラインは次のとおりです:"
+
+#: ../../example/simple.rst:46
+msgid "Note that as usual for other command-line applications, in case of conflicting options the last one wins, so the example above will show verbose output because ``-v`` overwrites ``-q``."
+msgstr "他のコマンドラインアプリケーションと同様に、オプションが競合する場合は最後のものが優先されるため、上記の例では ``-v`` が ``-q`` を上書きするため、詳細な出力が表示されます。"
+
+#: ../../example/simple.rst:53
+msgid "Pass different values to a test function, depending on command line options"
+msgstr "コマンドラインオプションに応じて異なる値をテスト関数に渡す"
+
+#: ../../example/simple.rst:57
+msgid "Suppose we want to write a test that depends on a command line option. Here is a basic pattern to achieve this:"
+msgstr "コマンドラインオプションに依存するテストを書きたいとします。 これを実現するための基本的なパターンは次のとおりです。"
+
+#: ../../example/simple.rst:71
+msgid "For this to work we need to add a command line option and provide the ``cmdopt`` through a :ref:`fixture function <fixture>`:"
+msgstr "これを機能させるには、コマンドラインオプションを追加し、:ref:`fixture function <fixture>` を通じて ``cmdopt`` を提供する必要があります。"
+
+#: ../../example/simple.rst:90
+msgid "Let's run this without supplying our new option:"
+msgstr "新しいオプションを指定せずにこれを実行してみましょう:"
+
+#: ../../example/simple.rst:116
+msgid "And now with supplying a command line option:"
+msgstr "次に、コマンドラインオプションを指定して実行します:"
+
+#: ../../example/simple.rst:142
+msgid "You can see that the command line option arrived in our test."
+msgstr "コマンドラインオプションがテストに到達したことがわかります。"
+
+#: ../../example/simple.rst:144
+msgid "We could add simple validation for the input by listing the choices:"
+msgstr "選択肢をリストアップすることで、入力の簡単な検証を追加できます:"
+
+#: ../../example/simple.rst:161
+msgid "Now we'll get feedback on a bad argument:"
+msgstr "これで、不正な引数に対するフィードバックが得られます:"
+
+#: ../../example/simple.rst:170
+msgid "If you need to provide more detailed error messages, you can use the ``type`` parameter and raise :exc:`pytest.UsageError`:"
+msgstr "より詳細なエラーメッセージを提供する必要がある場合は、``type`` パラメータを使用して :exc:`pytest.UsageError` を発生させることができます。"
+
+#: ../../example/simple.rst:200
+msgid "This completes the basic pattern.  However, one often rather wants to process command line options outside of the test and rather pass in different or more complex objects."
+msgstr "これで基本パターンは完了です。 ただし、多くの場合、テストの外でコマンドラインオプションを処理し、異なるまたはより複雑なオブジェクトを渡したいと考えることがよくあります。"
+
+#: ../../example/simple.rst:205
+msgid "Dynamically adding command line options"
+msgstr "コマンドラインオプションを動的に追加する"
+
+#: ../../example/simple.rst:209
+msgid "Through :confval:`addopts` you can statically add command line options for your project.  You can also dynamically modify the command line arguments before they get processed:"
+msgstr ":confval:`addopts` を通じて、プロジェクトのコマンドラインオプションを静的に追加できます。 また、処理される前にコマンドライン引数を動的に変更することもできます。"
+
+#: ../../example/simple.rst:226
+msgid "If you have the :pypi:`xdist plugin <pytest-xdist>` installed you will now always perform test runs using a number of subprocesses close to your CPU. Running in an empty directory with the above conftest.py:"
+msgstr ":pypi:`xdist plugin <pytest-xdist>` がインストールされている場合、CPU に近い数のサブプロセスを使用してテストを実行します。 上記の conftest.py を使用して空のディレクトリで実行します:"
+
+#: ../../example/simple.rst:244
+msgid "Control skipping of tests according to command line option"
+msgstr "コマンドラインオプションに従ってテストのスキップを制御する"
+
+#: ../../example/simple.rst:248
+msgid "Here is a ``conftest.py`` file adding a ``--runslow`` command line option to control skipping of ``pytest.mark.slow`` marked tests:"
+msgstr "ここに、``pytest.mark.slow`` マークされたテストのスキップを制御するための ``--runslow`` コマンドラインオプションを追加する ``conftest.py`` ファイルがあります:"
+
+#: ../../example/simple.rst:277
+msgid "We can now write a test module like this:"
+msgstr "次のようにテストモジュールを書くことができます:"
+
+#: ../../example/simple.rst:293
+msgid "and when running it will see a skipped \"slow\" test:"
+msgstr "実行すると、スキップされた「遅い」テストが表示されます:"
+
+#: ../../example/simple.rst:309
+msgid "Or run it including the ``slow`` marked test:"
+msgstr "または、``slow`` マークされたテストを含めて実行します:"
+
+#: ../../example/simple.rst:326
+msgid "Writing well integrated assertion helpers"
+msgstr "統合されたアサーションヘルパーの作成"
+
+#: ../../example/simple.rst:330
+msgid "If you have a test helper function called from a test you can use the ``pytest.fail`` marker to fail a test with a certain message. The test support function will not show up in the traceback if you set the ``__tracebackhide__`` option somewhere in the helper function. Example:"
+msgstr "テストから呼び出されるテストヘルパー関数がある場合、``pytest.fail`` マーカーを使用して特定のメッセージでテストを失敗させることができます。 ヘルパー関数のどこかに ``__tracebackhide__`` オプションを設定すると、テストサポート関数はトレースバックに表示されません。 例:"
+
+#: ../../example/simple.rst:351
+msgid "The ``__tracebackhide__`` setting influences ``pytest`` showing of tracebacks: the ``checkconfig`` function will not be shown unless the ``--full-trace`` command line option is specified. Let's run our little function:"
+msgstr "``__tracebackhide__`` 設定は、``pytest`` のトレースバック表示に影響します: ``--full-trace`` コマンドラインオプションが指定されない限り、``checkconfig`` 関数は表示されません。 小さな関数を実行してみましょう:"
+
+#: ../../example/simple.rst:372
+msgid "If you only want to hide certain exceptions, you can set ``__tracebackhide__`` to a callable which gets the ``ExceptionInfo`` object. You can for example use this to make sure unexpected exception types aren't hidden:"
+msgstr "特定の例外のみを非表示にしたい場合は、``__tracebackhide__`` を ``ExceptionInfo`` オブジェクトを取得する呼び出し可能なものに設定できます。 たとえば、予期しない例外タイプが非表示にならないようにするためにこれを使用できます:"
+
+#: ../../example/simple.rst:396
+msgid "This will avoid hiding the exception traceback on unrelated exceptions (i.e. bugs in assertion helpers)."
+msgstr "これにより、無関係な例外 (つまり、アサーションヘルパーのバグ) で例外トレースバックが非表示になるのを防ぎます。"
+
+#: ../../example/simple.rst:401
+msgid "Detect if running from within a pytest run"
+msgstr "pytest 実行内から実行されているかどうかを検出する"
+
+#: ../../example/simple.rst:405
+msgid "Usually it is a bad idea to make application code behave differently if called from a test.  But if you absolutely must find out if your application code is running from a test you can do this:"
+msgstr "通常、テストから呼び出された場合にアプリケーションコードの動作を変更するのは良くない考えです。 ただし、アプリケーションコードがテストから実行されているかどうかを絶対に確認する必要がある場合は、次のようにします:"
+
+#: ../../example/simple.rst:424
+msgid "Adding info to test report header"
+msgstr "テストレポートヘッダーに情報を追加する"
+
+#: ../../example/simple.rst:428
+msgid "It's easy to present extra information in a ``pytest`` run:"
+msgstr "``pytest`` 実行で追加情報を表示するのは簡単です:"
+
+#: ../../example/simple.rst:438
+msgid "which will add the string to the test header accordingly:"
+msgstr "これにより、文字列がテストヘッダーに適宜追加されます:"
+
+#: ../../example/simple.rst:453
+msgid "It is also possible to return a list of strings which will be considered as several lines of information. You may consider ``config.getoption('verbose')`` in order to display more information if applicable:"
+msgstr "複数行の情報として扱われる文字列のリストを返すことも可能です。 適用可能な場合は、``config.getoption('verbose')`` を考慮して、より多くの情報を表示することができます:"
+
+#: ../../example/simple.rst:466
+msgid "which will add info only when run with \"--v\":"
+msgstr "これにより、\"--v\" で実行した場合にのみ情報が追加されます:"
+
+#: ../../example/simple.rst:481
+msgid "and nothing when run plainly:"
+msgstr "通常の実行では何も表示されません:"
+
+#: ../../example/simple.rst:494
+msgid "Profiling test duration"
+msgstr "テストの実行時間をプロファイリングする"
+
+#: ../../example/simple.rst:500
+msgid "If you have a slow running large test suite you might want to find out which tests are the slowest. Let's make an artificial test suite:"
+msgstr "実行が遅い大規模なテストスイートがある場合、どのテストが最も遅いかを確認したいかもしれません。 人工的なテストスイートを作成してみましょう:"
+
+#: ../../example/simple.rst:520
+msgid "Now we can profile which test functions execute the slowest:"
+msgstr "これで、どのテスト関数が最も遅く実行されるかをプロファイリングできます:"
+
+#: ../../example/simple.rst:539
+msgid "Incremental testing - test steps"
+msgstr "インクリメンタルテスト - テストステップ"
+
+#: ../../example/simple.rst:543
+msgid "Sometimes you may have a testing situation which consists of a series of test steps.  If one step fails it makes no sense to execute further steps as they are all expected to fail anyway and their tracebacks add no insight.  Here is a simple ``conftest.py`` file which introduces an ``incremental`` marker which is to be used on classes:"
+msgstr "一連のテストステップで構成されるテスト状況があるかもしれません。 1つのステップが失敗すると、他のステップもすべて失敗することが予想されるため、さらにステップを実行する意味はありませんし、そのトレースバックは何の洞察も与えません。 ここに、クラスで使用する ``incremental`` マーカーを導入するシンプルな ``conftest.py`` ファイルがあります:"
+
+#: ../../example/simple.rst:601
+msgid "These two hook implementations work together to abort incremental-marked tests in a class.  Here is a test module example:"
+msgstr "これらの2つのフック実装は連携して、クラス内のインクリメンタルマークされたテストを中止します。 ここにテストモジュールの例があります:"
+
+#: ../../example/simple.rst:626
+msgid "If we run this:"
+msgstr "これを実行すると:"
+
+#: ../../example/simple.rst:652
+msgid "We'll see that ``test_deletion`` was not executed because ``test_modification`` failed.  It is reported as an \"expected failure\"."
+msgstr "``test_modification`` が失敗したため、``test_deletion`` が実行されなかったことがわかります。 これは「予想される失敗」として報告されます。"
+
+#: ../../example/simple.rst:657
+msgid "Package/Directory-level fixtures (setups)"
+msgstr "パッケージ/ディレクトリレベルのフィクスチャ (セットアップ) "
+
+#: ../../example/simple.rst:659
+msgid "If you have nested test directories, you can have per-directory fixture scopes by placing fixture functions in a ``conftest.py`` file in that directory. You can use all types of fixtures including :ref:`autouse fixtures <autouse fixtures>` which are the equivalent of xUnit's setup/teardown concept.  It's however recommended to have explicit fixture references in your tests or test classes rather than relying on implicitly executing setup/teardown functions, especially if they are far away from the actual tests."
+msgstr "ネストされたテストディレクトリがある場合、そのディレクトリに ``conftest.py`` ファイルを配置することで、ディレクトリごとのフィクスチャスコープを持つことができます。 xUnit のセットアップ/ティアダウンの概念に相当する :ref:`autouse fixtures <autouse fixtures>` を含むすべてのタイプのフィクスチャを使用できます。 ただし、特に実際のテストから遠く離れている場合は、暗黙的にセットアップ/ティアダウン関数を実行するのではなく、テストやテストクラスで明示的なフィクスチャ参照を持つことをお勧めします。"
+
+#: ../../example/simple.rst:667
+msgid "Here is an example for making a ``db`` fixture available in a directory:"
+msgstr "ディレクトリで ``db`` フィクスチャを利用可能にする例は次のとおりです:"
+
+#: ../../example/simple.rst:683
+msgid "and then a test module in that directory:"
+msgstr "次に、そのディレクトリ内のテストモジュール:"
+
+#: ../../example/simple.rst:691
+msgid "another test module:"
+msgstr "別のテストモジュール:"
+
+#: ../../example/simple.rst:699
+msgid "and then a module in a sister directory which will not see the ``db`` fixture:"
+msgstr "次に、``db`` フィクスチャが見えない姉妹ディレクトリ内のモジュール:"
+
+#: ../../example/simple.rst:708
+msgid "We can run this:"
+msgstr "これを実行できます:"
+
+#: ../../example/simple.rst:769
+msgid "The two test modules in the ``a`` directory see the same ``db`` fixture instance while the one test in the sister-directory ``b`` doesn't see it.  We could of course also define a ``db`` fixture in that sister directory's ``conftest.py`` file. Note that each fixture is only instantiated if there is a test actually needing it (unless you use \"autouse\" fixture which are always executed ahead of the first test executing)."
+msgstr "``a`` ディレクトリ内の2つのテストモジュールは同じ ``db`` フィクスチャインスタンスを参照しますが、姉妹ディレクトリ ``b`` 内の1つのテストはそれを参照しません。 もちろん、姉妹ディレクトリの ``conftest.py`` ファイルに ``db`` フィクスチャを定義することもできます。 各フィクスチャは、実際に必要なテストがある場合にのみインスタンス化されることに注意してください (「autouse」フィクスチャを使用しない限り、最初のテスト実行の前に常に実行されます) 。"
+
+#: ../../example/simple.rst:778
+msgid "Post-process test reports / failures"
+msgstr "テストレポート/失敗の後処理"
+
+#: ../../example/simple.rst:780
+msgid "If you want to postprocess test reports and need access to the executing environment you can implement a hook that gets called when the test \"report\" object is about to be created.  Here we write out all failing test calls and also access a fixture (if it was used by the test) in case you want to query/look at it during your post processing.  In our case we just write some information out to a ``failures`` file:"
+msgstr "テストレポートを後処理したい場合や、実行環境にアクセスする必要がある場合は、テスト「レポート」オブジェクトが作成される直前に呼び出されるフックを実装できます。 ここでは、すべての失敗したテスト呼び出しを書き出し、テストで使用された場合にはフィクスチャにもアクセスします。 後処理中にそれを照会/確認したい場合に備えて、情報を「failures」ファイルに書き出します。"
+
+#: ../../example/simple.rst:816 ../../example/simple.rst:912
+msgid "if you then have failing tests:"
+msgstr "その後、失敗したテストがある場合："
+
+#: ../../example/simple.rst:828
+msgid "and run them:"
+msgstr "それらを実行します："
+
+#: ../../example/simple.rst:862
+msgid "you will have a \"failures\" file which contains the failing test ids:"
+msgstr "失敗したテストIDを含む「failures」ファイルが作成されます："
+
+#: ../../example/simple.rst:871
+msgid "Making test result information available in fixtures"
+msgstr "フィクスチャでテスト結果情報を利用可能にする"
+
+#: ../../example/simple.rst:875
+msgid "If you want to make test result reports available in fixture finalizers here is a little example implemented via a local plugin:"
+msgstr "フィクスチャのファイナライザでテスト結果レポートを利用可能にしたい場合は、ローカルプラグインを介して実装された小さな例を示します："
+
+#: ../../example/simple.rst:937
+msgid "and run it:"
+msgstr "それを実行します："
+
+#: ../../example/simple.rst:983
+msgid "You'll see that the fixture finalizers could use the precise reporting information."
+msgstr "フィクスチャのファイナライザが正確なレポート情報を使用できることがわかります。"
+
+#: ../../example/simple.rst:989
+msgid "``PYTEST_CURRENT_TEST`` environment variable"
+msgstr "``PYTEST_CURRENT_TEST`` 環境変数"
+
+#: ../../example/simple.rst:993
+msgid "Sometimes a test session might get stuck and there might be no easy way to figure out which test got stuck, for example if pytest was run in quiet mode (``-q``) or you don't have access to the console output. This is particularly a problem if the problem happens only sporadically, the famous \"flaky\" kind of tests."
+msgstr "テストセッションがスタックすることがあり、どのテストがスタックしたのかを簡単に把握する方法がない場合があります。 例えば、pytestが静かなモード (``-q``) で実行された場合や、コンソール出力にアクセスできない場合です。 これは特に、問題が断続的にしか発生しない場合、有名な「不安定な」テストの種類で問題になります。"
+
+#: ../../example/simple.rst:997
+msgid "``pytest`` sets the :envvar:`PYTEST_CURRENT_TEST` environment variable when running tests, which can be inspected by process monitoring utilities or libraries like :pypi:`psutil` to discover which test got stuck if necessary:"
+msgstr "``pytest`` はテストを実行する際に :envvar:`PYTEST_CURRENT_TEST` 環境変数を設定します。 これにより、必要に応じてプロセス監視ユーティリティや :pypi:`psutil` のようなライブラリを使用して、どのテストがスタックしたかを確認できます："
+
+#: ../../example/simple.rst:1009
+msgid "During the test session pytest will set ``PYTEST_CURRENT_TEST`` to the current test :ref:`nodeid <nodeids>` and the current stage, which can be ``setup``, ``call``, or ``teardown``."
+msgstr "テストセッション中、pytestは ``PYTEST_CURRENT_TEST`` を現在のテスト :ref:`nodeid <nodeids>` と現在のステージ (``setup``、``call``、または ``teardown``) に設定します。"
+
+#: ../../example/simple.rst:1013
+msgid "For example, when running a single test function named ``test_foo`` from ``foo_module.py``, ``PYTEST_CURRENT_TEST`` will be set to:"
+msgstr "例えば、``foo_module.py`` から ``test_foo`` という名前の単一のテスト関数を実行する場合、``PYTEST_CURRENT_TEST`` は次のように設定されます："
+
+#: ../../example/simple.rst:1016
+msgid "``foo_module.py::test_foo (setup)``"
+msgstr "``foo_module.py::test_foo (setup)``"
+
+#: ../../example/simple.rst:1017
+msgid "``foo_module.py::test_foo (call)``"
+msgstr "``foo_module.py::test_foo (call)``"
+
+#: ../../example/simple.rst:1018
+msgid "``foo_module.py::test_foo (teardown)``"
+msgstr "``foo_module.py::test_foo (teardown)``"
+
+#: ../../example/simple.rst:1020
+msgid "In that order."
+msgstr "その順序で。"
+
+#: ../../example/simple.rst:1024
+msgid "The contents of ``PYTEST_CURRENT_TEST`` is meant to be human readable and the actual format can be changed between releases (even bug fixes) so it shouldn't be relied on for scripting or automation."
+msgstr "``PYTEST_CURRENT_TEST`` の内容は人間が読める形式を意図しており、リリース間 (バグ修正を含む) で実際の形式が変更される可能性があるため、スクリプトや自動化には依存しないでください。"
+
+#: ../../example/simple.rst:1031
+msgid "Freezing pytest"
+msgstr "pytestのフリーズ"
+
+#: ../../example/simple.rst:1033
+msgid "If you freeze your application using a tool like `PyInstaller <https://pyinstaller.readthedocs.io>`_ in order to distribute it to your end-users, it is a good idea to also package your test runner and run your tests using the frozen application. This way packaging errors such as dependencies not being included into the executable can be detected early while also allowing you to send test files to users so they can run them in their machines, which can be useful to obtain more information about a hard to reproduce bug."
+msgstr "エンドユーザーに配布するために `PyInstaller <https://pyinstaller.readthedocs.io>`_ のようなツールを使用してアプリケーションをフリーズする場合、テストランナーもパッケージ化し、フローズンアプリケーションを使用してテストを実行することをお勧めします。 これにより、依存関係が実行可能ファイルに含まれていないなどのパッケージングエラーを早期に検出できるだけでなく、ユーザーにテストファイルを送信して自分のマシンで実行してもらうことができ、再現が難しいバグに関する情報を取得するのに役立ちます。"
+
+#: ../../example/simple.rst:1041
+msgid "Fortunately recent ``PyInstaller`` releases already have a custom hook for pytest, but if you are using another tool to freeze executables such as ``cx_freeze`` or ``py2exe``, you can use ``pytest.freeze_includes()`` to obtain the full list of internal pytest modules. How to configure the tools to find the internal modules varies from tool to tool, however."
+msgstr "幸いなことに、最近の ``PyInstaller`` リリースにはすでにpytest用のカスタムフックがありますが、``cx_freeze`` や ``py2exe`` などの他のツールを使用して実行可能ファイルをフリーズする場合は、``pytest.freeze_includes()`` を使用して内部pytestモジュールの完全なリストを取得できます。 ただし、ツールごとに内部モジュールを見つけるための設定方法は異なります。"
+
+#: ../../example/simple.rst:1047
+msgid "Instead of freezing the pytest runner as a separate executable, you can make your frozen program work as the pytest runner by some clever argument handling during program startup. This allows you to have a single executable, which is usually more convenient. Please note that the mechanism for plugin discovery used by pytest (:ref:`entry points <pip-installable plugins>`) doesn't work with frozen executables so pytest can't find any third party plugins automatically. To include third party plugins like ``pytest-timeout`` they must be imported explicitly and passed on to pytest.main."
+msgstr "pytestランナーを別の実行可能ファイルとしてフリーズする代わりに、プログラムの起動時に巧妙な引数処理を行うことで、フローズンプログラムをpytestランナーとして機能させることができます。 これにより、通常はより便利な単一の実行可能ファイルを持つことができます。 ただし、pytestが使用するプラグイン検出メカニズム (:ref:`entry points <pip-installable plugins>`) はフローズン実行可能ファイルでは機能しないため、pytestはサードパーティプラグインを自動的に見つけることができません。 ``pytest-timeout`` のようなサードパーティプラグインを含めるには、それらを明示的にインポートし、pytest.mainに渡す必要があります。"
+
+#: ../../example/simple.rst:1073
+msgid "This allows you to execute tests using the frozen application with standard ``pytest`` command-line options:"
+msgstr "これにより、標準の ``pytest`` コマンドラインオプションを使用してフローズンアプリケーションを使用してテストを実行できます："
+

@@ -1,0 +1,269 @@
+# SOME DESCRIPTIVE TITLE.
+# Copyright (C) 2015, holger krekel and pytest-dev team
+# This file is distributed under the same license as the pytest package.
+# FIRST AUTHOR <EMAIL@ADDRESS>, 2025.
+#
+#, fuzzy
+msgid ""
+msgstr ""
+"Project-Id-Version: pytest 0.1.dev16209\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2025-02-05 00:52+0900\n"
+"PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
+"Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
+"Language: ja\n"
+"Language-Team: ja <LL@li.org>\n"
+"Plural-Forms: nplurals=1; plural=0;\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=utf-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Generated-By: Babel 2.17.0\n"
+
+#: ../../explanation/goodpractices.rst:5
+msgid "Good Integration Practices"
+msgstr "統合のための良い習慣"
+
+#: ../../explanation/goodpractices.rst:8
+msgid "Install package with pip"
+msgstr "pip でパッケージをインストール"
+
+#: ../../explanation/goodpractices.rst:10
+msgid "For development, we recommend you use :mod:`venv` for virtual environments and :doc:`pip:index` for installing your application and any dependencies, as well as the ``pytest`` package itself. This ensures your code and dependencies are isolated from your system Python installation."
+msgstr "開発では、仮想環境に :mod:`venv` を使用し、アプリケーションや依存関係、および ``pytest`` パッケージ自体のインストールには :doc:`pip:index` を使用することをお勧めします。 これにより、コードと依存関係がシステムの Python インストールから分離されます。"
+
+#: ../../explanation/goodpractices.rst:15
+msgid "Create a ``pyproject.toml`` file in the root of your repository as described in :doc:`packaging:tutorials/packaging-projects`. The first few lines should look like this:"
+msgstr ":doc:`packaging:tutorials/packaging-projects` に記載されているように、リポジトリのルートに ``pyproject.toml`` ファイルを作成します。 最初の数行は次のようになります:"
+
+#: ../../explanation/goodpractices.rst:29
+msgid "where ``PACKAGENAME`` and ``PACKAGEVERSION`` are the name and version of your package respectively."
+msgstr "ここで、``PACKAGENAME`` と ``PACKAGEVERSION`` はそれぞれパッケージの名前とバージョンです。"
+
+#: ../../explanation/goodpractices.rst:31
+msgid "You can then install your package in \"editable\" mode by running from the same directory:"
+msgstr "次に、同じディレクトリから実行して「編集可能」モードでパッケージをインストールできます:"
+
+#: ../../explanation/goodpractices.rst:37
+msgid "which lets you change your source code (both tests and application) and rerun tests at will."
+msgstr "これにより、ソースコード (テストとアプリケーションの両方) を変更して、必要に応じてテストを再実行できます。"
+
+#: ../../explanation/goodpractices.rst:43
+msgid "Conventions for Python test discovery"
+msgstr "Python テストの発見に関する規則"
+
+#: ../../explanation/goodpractices.rst:45
+msgid "``pytest`` implements the following standard test discovery:"
+msgstr "``pytest`` は次の標準的なテストの発見を実装します:"
+
+#: ../../explanation/goodpractices.rst:47
+msgid "If no arguments are specified then collection starts from :confval:`testpaths` (if configured) or the current directory. Alternatively, command line arguments can be used in any combination of directories, file names or node ids."
+msgstr "引数が指定されていない場合、収集は :confval:`testpaths` (設定されている場合) または現在のディレクトリから開始されます。 あるいは、コマンドライン引数でディレクトリ、ファイル名、ノード ID の任意の組み合わせを使用できます。"
+
+#: ../../explanation/goodpractices.rst:50
+msgid "Recurse into directories, unless they match :confval:`norecursedirs`."
+msgstr ":confval:`norecursedirs` に一致しない限り、ディレクトリを再帰的に検索します。"
+
+#: ../../explanation/goodpractices.rst:51
+msgid "In those directories, search for ``test_*.py`` or ``*_test.py`` files, imported by their `test package name`_."
+msgstr "それらのディレクトリで `test package name`_ でインポートされる ``test_*.py`` または ``*_test.py`` ファイルを検索します。"
+
+#: ../../explanation/goodpractices.rst:52
+msgid "From those files, collect test items:"
+msgstr "これらのファイルからテスト項目を収集します:"
+
+#: ../../explanation/goodpractices.rst:54
+msgid "``test`` prefixed test functions or methods outside of class."
+msgstr "クラスの外部にある ``test`` で始まるテスト関数またはメソッド。"
+
+#: ../../explanation/goodpractices.rst:55
+msgid "``test`` prefixed test functions or methods inside ``Test`` prefixed test classes (without an ``__init__`` method). Methods decorated with ``@staticmethod`` and ``@classmethods`` are also considered."
+msgstr "``Test`` で始まるテストクラス内の ``test`` で始まるテスト関数またはメソッド (``__init__`` メソッドなし)。 ``@staticmethod`` と ``@classmethods`` で装飾されたメソッドも対象となります。"
+
+#: ../../explanation/goodpractices.rst:57
+msgid "For examples of how to customize your test discovery :doc:`/example/pythoncollection`."
+msgstr "テストの発見をカスタマイズする方法の例については :doc:`/example/pythoncollection` を参照してください。"
+
+#: ../../explanation/goodpractices.rst:59
+msgid "Within Python modules, ``pytest`` also discovers tests using the standard :ref:`unittest.TestCase <unittest.TestCase>` subclassing technique."
+msgstr "Python モジュール内では、``pytest`` は標準の :ref:`unittest.TestCase <unittest.TestCase>` サブクラス化技法を使用してテストを発見します。"
+
+#: ../../explanation/goodpractices.rst:66
+msgid "Choosing a test layout"
+msgstr "テストのレイアウトを選択"
+
+#: ../../explanation/goodpractices.rst:68
+msgid "``pytest`` supports two common test layouts:"
+msgstr "``pytest`` は 2 つの一般的なテストレイアウトをサポートしています:"
+
+#: ../../explanation/goodpractices.rst:71
+msgid "Tests outside application code"
+msgstr "アプリケーションコードの外部にテストを配置"
+
+#: ../../explanation/goodpractices.rst:73
+msgid "Putting tests into an extra directory outside your actual application code might be useful if you have many functional tests or for other reasons want to keep tests separate from actual application code (often a good idea):"
+msgstr "実際のアプリケーションコードの外部の別のディレクトリにテストを配置することは、多くの機能テストがある場合や、その他の理由で実際のアプリケーションコードとテストを分離しておきたい場合に便利です (多くの場合良い考えです)。"
+
+#: ../../explanation/goodpractices.rst:90
+msgid "This has the following benefits:"
+msgstr "これには次のような利点があります:"
+
+#: ../../explanation/goodpractices.rst:92
+msgid "Your tests can run against an installed version after executing ``pip install .``."
+msgstr "``pip install .`` を実行後、インストールされたバージョンに対してテストを実行できます。"
+
+#: ../../explanation/goodpractices.rst:93
+msgid "Your tests can run against the local copy with an editable install after executing ``pip install --editable .``."
+msgstr "``pip install --editable .`` を実行後、編集可能なインストールでローカルコピーに対してテストを実行できます。"
+
+#: ../../explanation/goodpractices.rst:95
+msgid "For new projects, we recommend to use ``importlib`` :ref:`import mode <import-modes>` (see which-import-mode_ for a detailed explanation). To this end, add the following to your ``pyproject.toml``:"
+msgstr "新しいプロジェクトでは、``importlib`` の :ref:`import mode <import-modes>` を使用することを推奨します (詳しくは which-import-mode_ を参照してください)。 そのためには、``pyproject.toml`` に次のように追加してください:"
+
+#: ../../explanation/goodpractices.rst:108
+msgid "Generally, but especially if you use the default import mode ``prepend``, it is **strongly** suggested to use a ``src`` layout. Here, your application root package resides in a sub-directory of your root, i.e. ``src/mypkg/`` instead of ``mypkg``."
+msgstr "一般的に、特にデフォルトのインポートモード ``prepend`` を使用している場合は、``src`` レイアウトを **強く** 推奨します。 ここでは、アプリケーションのルートパッケージはルートのサブディレクトリ (``mypkg`` ではなく ``src/mypkg/``) に配置されます。"
+
+#: ../../explanation/goodpractices.rst:113
+msgid "This layout prevents a lot of common pitfalls and has many benefits, which are better explained in this excellent `blog post`_ by Ionel Cristian Mărieș."
+msgstr "このレイアウトは、多くの一般的な落とし穴を防ぎ、多くの利点があります。 それらは Ionel Cristian Mărieș による優れた `blog post`_ でさらに詳しく説明されています。"
+
+#: ../../explanation/goodpractices.rst:120
+msgid "If you do not use an editable install and use the ``src`` layout as above you need to extend the Python's search path for module files to execute the tests against the local copy directly. You can do it in an ad-hoc manner by setting the ``PYTHONPATH`` environment variable:"
+msgstr "編集可能インストールを使用せず、上記のように ``src`` レイアウトを使用している場合は、ローカルコピーに対して直接テストを実行するために、Python のモジュール検索パスを拡張する必要があります。 これは ``PYTHONPATH`` 環境変数を設定することでアドホックに行えます:"
+
+#: ../../explanation/goodpractices.rst:128
+msgid "or in a permanent manner by using the :confval:`pythonpath` configuration variable and adding the following to your ``pyproject.toml``:"
+msgstr "あるいは、:confval:`pythonpath` の設定変数を使用し、``pyproject.toml`` に次のように追加することで恒久的に設定できます:"
+
+#: ../../explanation/goodpractices.rst:138
+msgid "If you do not use an editable install and not use the ``src`` layout (``mypkg`` directly in the root directory) you can rely on the fact that Python by default puts the current directory in ``sys.path`` to import your package and run ``python -m pytest`` to execute the tests against the local copy directly."
+msgstr "編集可能インストールと ``src`` レイアウトを使用しない場合 (ルートディレクトリに ``mypkg`` を直接配置) は、Python がデフォルトで現在のディレクトリを ``sys.path`` に入れることを利用して、``python -m pytest`` を実行し、ローカルコピーに対して直接テストを実行できます。"
+
+#: ../../explanation/goodpractices.rst:142
+msgid "See :ref:`pytest vs python -m pytest` for more information about the difference between calling ``pytest`` and ``python -m pytest``."
+msgstr "``pytest`` と ``python -m pytest`` を呼び出す違いの詳細については :ref:`pytest vs python -m pytest` を参照してください。"
+
+#: ../../explanation/goodpractices.rst:146
+msgid "Tests as part of application code"
+msgstr "アプリケーションコードの一部としてのテスト"
+
+#: ../../explanation/goodpractices.rst:148
+msgid "Inlining test directories into your application package is useful if you have direct relation between tests and application modules and want to distribute them along with your application:"
+msgstr "アプリケーションパッケージにテストディレクトリを組み込むことは、テストとアプリケーションモジュールが直接的に関連しており、アプリケーションと一緒に配布したい場合に便利です:"
+
+#: ../../explanation/goodpractices.rst:165
+msgid "In this scheme, it is easy to run your tests using the ``--pyargs`` option:"
+msgstr "この方式では、``--pyargs`` オプションを使用してテストを簡単に実行できます:"
+
+#: ../../explanation/goodpractices.rst:171
+msgid "``pytest`` will discover where ``mypkg`` is installed and collect tests from there."
+msgstr "``pytest`` は ``mypkg`` がインストールされている場所を検出し、そこからテストを収集します。"
+
+#: ../../explanation/goodpractices.rst:173
+msgid "Note that this layout also works in conjunction with the ``src`` layout mentioned in the previous section."
+msgstr "このレイアウトは、前のセクションで言及されている ``src`` レイアウトとも併用できます。"
+
+#: ../../explanation/goodpractices.rst:178
+msgid "You can use namespace packages (PEP420) for your application but pytest will still perform `test package name`_ discovery based on the presence of ``__init__.py`` files.  If you use one of the two recommended file system layouts above but leave away the ``__init__.py`` files from your directories, it should just work.  From \"inlined tests\", however, you will need to use absolute imports for getting at your application code."
+msgstr "アプリケーションに名前空間パッケージ (PEP420) を使用できますが、pytest は依然として ``__init__.py`` ファイルの有無に基づいて `test package name`_ の発見を行います。 上記の 2 つの推奨レイアウトのいずれかを使用してディレクトリから ``__init__.py`` を省略した場合でも動作するはずです。 ただし、「組み込みテスト」ではアプリケーションコードにアクセスするために絶対インポートが必要になります。"
+
+#: ../../explanation/goodpractices.rst:190
+msgid "In ``prepend`` and ``append`` import-modes, if pytest finds a ``\"a/b/test_module.py\"`` test file while recursing into the filesystem it determines the import name as follows:"
+msgstr "``prepend`` および ``append`` インポートモードでは、pytest がファイルシステムを再帰的に検索する際に \"a/b/test_module.py\" というテストファイルを見つけると、次のようにインポート名を決定します:"
+
+#: ../../explanation/goodpractices.rst:194
+msgid "determine ``basedir``: this is the first \"upward\" (towards the root) directory not containing an ``__init__.py``.  If e.g. both ``a`` and ``b`` contain an ``__init__.py`` file then the parent directory of ``a`` will become the ``basedir``."
+msgstr "``basedir`` を決定する: これは最初に「上向き」(ルート方向) に移動して ``__init__.py`` が存在しないディレクトリです。 例えば、``a`` と ``b`` の両方に ``__init__.py`` が含まれている場合は、``a`` の親ディレクトリが ``basedir`` になります。"
+
+#: ../../explanation/goodpractices.rst:199
+msgid "perform ``sys.path.insert(0, basedir)`` to make the test module importable under the fully qualified import name."
+msgstr "テストモジュールを完全修飾インポート名でインポートできるようにするために、``sys.path.insert(0, basedir)`` を実行します。"
+
+#: ../../explanation/goodpractices.rst:202
+msgid "``import a.b.test_module`` where the path is determined by converting path separators ``/`` into \".\" characters.  This means you must follow the convention of having directory and file names map directly to the import names."
+msgstr "パス区切り ``/`` をピリオド ``.`` に変換し、``import a.b.test_module`` を行います。 これはディレクトリ名やファイル名をインポート名に直接対応させる規則に従う必要があることを意味します。"
+
+#: ../../explanation/goodpractices.rst:207
+msgid "The reason for this somewhat evolved importing technique is that in larger projects multiple test modules might import from each other and thus deriving a canonical import name helps to avoid surprises such as a test module getting imported twice."
+msgstr "この少し複雑なインポート手法を用いている理由は、大規模なプロジェクトでは複数のテストモジュールが互いにインポートし合う可能性があり、正規のインポート名を導くことによってテストモジュールが 2 回インポートされるといった問題を回避するのに役立つためです。"
+
+#: ../../explanation/goodpractices.rst:212
+msgid "With ``--import-mode=importlib`` things are less convoluted because pytest doesn't need to change ``sys.path``, making things much less surprising."
+msgstr "``--import-mode=importlib`` を使用すると、pytest が ``sys.path`` を変更する必要がないため、状況がはるかに単純になり、予期しない事態が起こりにくくなります。"
+
+#: ../../explanation/goodpractices.rst:220
+msgid "Choosing an import mode"
+msgstr "インポートモードの選択"
+
+#: ../../explanation/goodpractices.rst:222
+msgid "For historical reasons, pytest defaults to the ``prepend`` :ref:`import mode <import-modes>` instead of the ``importlib`` import mode we recommend for new projects. The reason lies in the way the ``prepend`` mode works:"
+msgstr "歴史的な理由から、pytest は新しいプロジェクトに推奨している ``importlib`` インポートモードではなく、デフォルトで ``prepend`` :ref:`import mode <import-modes>` を使用します。 その理由は ``prepend`` モードの動作にあります:"
+
+#: ../../explanation/goodpractices.rst:226
+msgid "Since there are no packages to derive a full package name from, ``pytest`` will import your test files as *top-level* modules. The test files in the first example (:ref:`src layout <src-layout>`) would be imported as ``test_app`` and ``test_view`` top-level modules by adding ``tests/`` to ``sys.path``."
+msgstr "フルパッケージ名を導くパッケージがないため、``pytest`` はテストファイルをトップレベルモジュールとしてインポートします。 最初の例 (:ref:`src layout <src-layout>`) にあるテストファイルは、``tests/`` を ``sys.path`` に追加することで、``test_app`` と ``test_view`` というトップレベルモジュールとしてインポートされます。"
+
+#: ../../explanation/goodpractices.rst:231
+msgid "This results in a drawback compared to the import mode ``importlib``: your test files must have **unique names**."
+msgstr "これは ``importlib`` インポートモードに比べて不利な点をもたらします。 つまり、テストファイルの名前を **一意** である必要があります。"
+
+#: ../../explanation/goodpractices.rst:234
+msgid "If you need to have test modules with the same name, as a workaround you might add ``__init__.py`` files to your ``tests`` folder and subfolders, changing them to packages:"
+msgstr "同名のテストモジュールを必要とする場合、回避策として ``tests`` フォルダとそのサブフォルダに ``__init__.py`` ファイルを追加して、それらをパッケージとして扱うことができます:"
+
+#: ../../explanation/goodpractices.rst:252
+msgid "Now pytest will load the modules as ``tests.foo.test_view`` and ``tests.bar.test_view``, allowing you to have modules with the same name. But now this introduces a subtle problem: in order to load the test modules from the ``tests`` directory, pytest prepends the root of the repository to ``sys.path``, which adds the side-effect that now ``mypkg`` is also importable."
+msgstr "これにより、pytest はそれらのモジュールを ``tests.foo.test_view`` および ``tests.bar.test_view`` として読み込み、同じ名前のモジュールを使用できます。 しかし、ここで微妙な問題が発生します。 ``tests`` ディレクトリからテストモジュールを読み込むために、pytest はリポジトリのルートを ``sys.path`` の先頭に追加し、その副作用として ``mypkg`` もインポート可能になってしまうのです。"
+
+#: ../../explanation/goodpractices.rst:259
+msgid "This is problematic if you are using a tool like tox_ to test your package in a virtual environment, because you want to test the *installed* version of your package, not the local code from the repository."
+msgstr "tox_ のようなツールを使用して仮想環境でパッケージをテストしている場合、リポジトリのローカルコードではなく、**インストールされた** バージョンのパッケージをテストしたいので、これは問題となります。"
+
+#: ../../explanation/goodpractices.rst:263
+msgid "The ``importlib`` import mode does not have any of the drawbacks above, because ``sys.path`` is not changed when importing test modules."
+msgstr "``importlib`` インポートモードは、テストモジュールをインポートする際に ``sys.path`` を変更しないため、上記の問題は一切発生しません。"
+
+#: ../../explanation/goodpractices.rst:272
+msgid "tox"
+msgstr "tox"
+
+#: ../../explanation/goodpractices.rst:274
+msgid "Once you are done with your work and want to make sure that your actual package passes all tests you may want to look into :doc:`tox <tox:index>`, the virtualenv test automation tool. ``tox`` helps you to setup virtualenv environments with pre-defined dependencies and then executing a pre-configured test command with options.  It will run tests against the installed package and not against your source code checkout, helping to detect packaging glitches."
+msgstr "作業が完了し、実際のパッケージがすべてのテストに合格していることを確認したい場合は、仮想環境テスト自動化ツールである :doc:`tox <tox:index>` を調べてみることをお勧めします。 ``tox`` は、事前に定義された依存関係を持つ仮想環境を設定し、事前に構成されたテストコマンドをオプション付きで実行するのに役立ちます。 インストールされたパッケージに対してテストを実行し、ソースコードのチェックアウトに対してテストを実行しないため、パッケージングの問題を検出するのに役立ちます。"
+
+#: ../../explanation/goodpractices.rst:284
+msgid "Do not run via setuptools"
+msgstr "setuptools を介して実行しない"
+
+#: ../../explanation/goodpractices.rst:286
+msgid "Integration with setuptools is **not recommended**, i.e. you should not be using ``python setup.py test`` or ``pytest-runner``, and may stop working in the future."
+msgstr "setuptools との統合は **推奨されていません**。 つまり、``python setup.py test`` や ``pytest-runner`` を使用してはいけませんし、将来的には動作しなくなる可能性があります。"
+
+#: ../../explanation/goodpractices.rst:290
+msgid "This is deprecated since it depends on deprecated features of setuptools and relies on features that break security mechanisms in pip. For example 'setup_requires' and 'tests_require' bypass ``pip --require-hashes``. For more information and migration instructions, see the `pytest-runner notice <https://github.com/pytest-dev/pytest-runner#deprecation-notice>`_. See also `pypa/setuptools#1684 <https://github.com/pypa/setuptools/issues/1684>`_."
+msgstr "これは、setuptools の非推奨機能に依存しており、pip のセキュリティメカニズムを破壊する機能に依存しているため、非推奨とされています。 たとえば、 'setup_requires' と 'tests_require' は ``pip --require-hashes`` をバイパスします。 詳細と移行手順については、`pytest-runner notice <https://github.com/pytest-dev/pytest-runner#deprecation-notice>`_ を参照してください。 `pypa/setuptools#1684 <https://github.com/pypa/setuptools/issues/1684>`_ も参照してください。"
+
+#: ../../explanation/goodpractices.rst:297
+msgid "setuptools intends to `remove the test command <https://github.com/pypa/setuptools/issues/931>`_."
+msgstr "setuptools は `テストコマンドを削除する予定です <https://github.com/pypa/setuptools/issues/931>`_。"
+
+#: ../../explanation/goodpractices.rst:301
+msgid "Checking with flake8-pytest-style"
+msgstr "flake8-pytest-style でのチェック"
+
+#: ../../explanation/goodpractices.rst:303
+msgid "In order to ensure that pytest is being used correctly in your project, it can be helpful to use the `flake8-pytest-style <https://github.com/m-burst/flake8-pytest-style>`_ flake8 plugin."
+msgstr "プロジェクトで pytest が正しく使用されていることを確認するために、`flake8-pytest-style <https://github.com/m-burst/flake8-pytest-style>`_ flake8 プラグインを使用すると便利です。"
+
+#: ../../explanation/goodpractices.rst:306
+msgid "flake8-pytest-style checks for common mistakes and coding style violations in pytest code, such as incorrect use of fixtures, test function names, and markers. By using this plugin, you can catch these errors early in the development process and ensure that your pytest code is consistent and easy to maintain."
+msgstr "flake8-pytest-style は、フィクスチャ、テスト関数名、マーカーの誤った使用など、pytest コードの一般的な間違いやコーディングスタイルの違反をチェックします。 このプラグインを使用することで、これらのエラーを開発プロセスの早い段階で検出し、pytest コードが一貫しており、メンテナンスしやすいことを確認できます。"
+
+#: ../../explanation/goodpractices.rst:311
+msgid "A list of the lints detected by flake8-pytest-style can be found on its `PyPI page <https://pypi.org/project/flake8-pytest-style/>`_."
+msgstr "flake8-pytest-style によって検出されるリントのリストは、その `PyPI ページ <https://pypi.org/project/flake8-pytest-style/>`_ にあります。"
+
+#: ../../explanation/goodpractices.rst:315
+msgid "flake8-pytest-style is not an official pytest project. Some of the rules enforce certain style choices, such as using `@pytest.fixture()` over `@pytest.fixture`, but you can configure the plugin to fit your preferred style."
+msgstr "flake8-pytest-style は公式の pytest プロジェクトではありません。 一部のルールは、 ``@pytest.fixture`` よりも ``@pytest.fixture()`` を使用するなど、特定のスタイルの選択を強制しますが、プラグインを設定して好みのスタイルに合わせることができます。"
+

@@ -1,0 +1,297 @@
+# SOME DESCRIPTIVE TITLE.
+# Copyright (C) 2015, holger krekel and pytest-dev team
+# This file is distributed under the same license as the pytest package.
+# FIRST AUTHOR <EMAIL@ADDRESS>, 2025.
+#
+#, fuzzy
+msgid ""
+msgstr ""
+"Project-Id-Version: pytest 0.1.dev16209\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2025-02-05 00:52+0900\n"
+"PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
+"Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
+"Language: ja\n"
+"Language-Team: ja <LL@li.org>\n"
+"Plural-Forms: nplurals=1; plural=0;\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=utf-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Generated-By: Babel 2.17.0\n"
+
+#: ../../how-to/assert.rst:4
+msgid "How to write and report assertions in tests"
+msgstr "テストでアサーションを記述および報告する方法"
+
+#: ../../how-to/assert.rst:9
+msgid "Asserting with the ``assert`` statement"
+msgstr "``assert`` ステートメントによるアサーション"
+
+#: ../../how-to/assert.rst:11
+msgid "``pytest`` allows you to use the standard Python ``assert`` for verifying expectations and values in Python tests.  For example, you can write the following:"
+msgstr "``pytest`` を使用すると、Python テストで期待値や値を検証するために標準の Python ``assert`` を使用できます。 例えば、次のように記述できます:"
+
+#: ../../how-to/assert.rst:25
+msgid "to assert that your function returns a certain value. If this assertion fails you will see the return value of the function call:"
+msgstr "関数が特定の値を返すことをアサートします。 このアサーションが失敗すると、関数呼び出しの戻り値が表示されます:"
+
+#: ../../how-to/assert.rst:51
+msgid "``pytest`` has support for showing the values of the most common subexpressions including calls, attributes, comparisons, and binary and unary operators. (See :ref:`tbreportdemo`).  This allows you to use the idiomatic python constructs without boilerplate code while not losing introspection information."
+msgstr "``pytest`` は、呼び出し、属性、比較、および二項演算子と単項演算子を含む最も一般的な部分式の値を表示するサポートを提供します (:ref:`tbreportdemo` を参照) 。 これにより、ボイラープレートコードを使用せずに慣用的な Python 構文を使用しながら、イントロスペクション情報を失うことはありません。"
+
+#: ../../how-to/assert.rst:57
+msgid "If a message is specified with the assertion like this:"
+msgstr "このようにアサーションにメッセージが指定されている場合:"
+
+#: ../../how-to/assert.rst:63
+msgid "it is printed alongside the assertion introspection in the traceback."
+msgstr "それはトレースバックのアサーションイントロスペクションと一緒に印刷されます。"
+
+#: ../../how-to/assert.rst:65
+msgid "See :ref:`assert-details` for more information on assertion introspection."
+msgstr "アサーションイントロスペクションの詳細については :ref:`assert-details` を参照してください。"
+
+#: ../../how-to/assert.rst:70
+msgid "Assertions about expected exceptions"
+msgstr "予期される例外に関するアサーション"
+
+#: ../../how-to/assert.rst:72
+msgid "In order to write assertions about raised exceptions, you can use :func:`pytest.raises` as a context manager like this:"
+msgstr "発生した例外に関するアサーションを記述するために、次のように :func:`pytest.raises` をコンテキストマネージャとして使用できます:"
+
+#: ../../how-to/assert.rst:84
+msgid "and if you need to have access to the actual exception info you may use:"
+msgstr "実際の例外情報にアクセスする必要がある場合は、次のように使用できます:"
+
+#: ../../how-to/assert.rst:97
+msgid "``excinfo`` is an :class:`~pytest.ExceptionInfo` instance, which is a wrapper around the actual exception raised.  The main attributes of interest are ``.type``, ``.value`` and ``.traceback``."
+msgstr "``excinfo`` は :class:`~pytest.ExceptionInfo` インスタンスであり、実際に発生した例外のラッパーです。 主な関心のある属性は ``.type``、``.value``、および ``.traceback`` です。"
+
+#: ../../how-to/assert.rst:101
+msgid "Note that ``pytest.raises`` will match the exception type or any subclasses (like the standard ``except`` statement). If you want to check if a block of code is raising an exact exception type, you need to check that explicitly:"
+msgstr "``pytest.raises`` は例外タイプまたはそのサブクラス (標準の ``except`` ステートメントのように) に一致することに注意してください。 コードブロックが正確な例外タイプを発生させているかどうかを確認する場合は、それを明示的に確認する必要があります:"
+
+#: ../../how-to/assert.rst:115
+msgid "The :func:`pytest.raises` call will succeed, even though the function raises :class:`NotImplementedError`, because :class:`NotImplementedError` is a subclass of :class:`RuntimeError`; however the following `assert` statement will catch the problem."
+msgstr ":func:`pytest.raises` の呼び出しは成功しますが、関数が :class:`NotImplementedError` を発生させるため、:class:`NotImplementedError` は :class:`RuntimeError` のサブクラスです。 ただし、次の `assert` ステートメントは問題をキャッチします。"
+
+#: ../../how-to/assert.rst:120
+msgid "Matching exception messages"
+msgstr "例外メッセージの一致"
+
+#: ../../how-to/assert.rst:122
+msgid "You can pass a ``match`` keyword parameter to the context-manager to test that a regular expression matches on the string representation of an exception (similar to the ``TestCase.assertRaisesRegex`` method from ``unittest``):"
+msgstr "コンテキストマネージャに ``match`` キーワードパラメータを渡して、正規表現が例外の文字列表現に一致するかどうかをテストできます (``unittest`` の ``TestCase.assertRaisesRegex`` メソッドに似ています) :"
+
+#: ../../how-to/assert.rst:139
+msgid "Notes:"
+msgstr "注意:"
+
+#: ../../how-to/assert.rst:141
+msgid "The ``match`` parameter is matched with the :func:`re.search` function, so in the above example ``match='123'`` would have worked as well."
+msgstr "``match`` パラメータは :func:`re.search` 関数と一致するため、上記の例では ``match='123'`` も機能します。"
+
+#: ../../how-to/assert.rst:143
+msgid "The ``match`` parameter also matches against `PEP-678 <https://peps.python.org/pep-0678/>`__ ``__notes__``."
+msgstr "``match`` パラメータは `PEP-678 <https://peps.python.org/pep-0678/>`__ ``__notes__`` にも一致します。"
+
+#: ../../how-to/assert.rst:149
+msgid "Matching exception groups"
+msgstr "例外グループの一致"
+
+#: ../../how-to/assert.rst:151
+msgid "You can also use the :func:`excinfo.group_contains() <pytest.ExceptionInfo.group_contains>` method to test for exceptions returned as part of an :class:`ExceptionGroup`:"
+msgstr ":func:`excinfo.group_contains() <pytest.ExceptionInfo.group_contains>` メソッドを使用して、:class:`ExceptionGroup` の一部として返される例外をテストすることもできます:"
+
+#: ../../how-to/assert.rst:167
+msgid "The optional ``match`` keyword parameter works the same way as for :func:`pytest.raises`."
+msgstr "オプションの ``match`` キーワードパラメータは、:func:`pytest.raises` と同じように機能します。"
+
+#: ../../how-to/assert.rst:170
+msgid "By default ``group_contains()`` will recursively search for a matching exception at any level of nested ``ExceptionGroup`` instances. You can specify a ``depth`` keyword parameter if you only want to match an exception at a specific level; exceptions contained directly in the top ``ExceptionGroup`` would match ``depth=1``."
+msgstr "デフォルトでは、``group_contains()`` はネストされた ``ExceptionGroup`` インスタンスの任意のレベルで一致する例外を再帰的に検索します。 特定のレベルでのみ例外を一致させたい場合は、``depth`` キーワードパラメータを指定できます。 最上位の ``ExceptionGroup`` に直接含まれる例外は ``depth=1`` と一致します。"
+
+#: ../../how-to/assert.rst:198
+msgid "Alternate form (legacy)"
+msgstr "代替形式 (レガシー) "
+
+#: ../../how-to/assert.rst:200
+msgid "There is an alternate form where you pass a function that will be executed, along ``*args`` and ``**kwargs``, and :func:`pytest.raises` will execute the function with the arguments and assert that the given exception is raised:"
+msgstr "実行される関数を ``*args`` および ``**kwargs`` とともに渡し、:func:`pytest.raises` が引数で関数を実行し、指定された例外が発生することをアサートする代替形式があります:"
+
+#: ../../how-to/assert.rst:213
+msgid "The reporter will provide you with helpful output in case of failures such as *no exception* or *wrong exception*."
+msgstr "レポーターは、*例外なし* や *間違った例外* などの失敗の場合に役立つ出力を提供します。"
+
+#: ../../how-to/assert.rst:216
+msgid "This form was the original :func:`pytest.raises` API, developed before the ``with`` statement was added to the Python language. Nowadays, this form is rarely used, with the context-manager form (using ``with``) being considered more readable. Nonetheless, this form is fully supported and not deprecated in any way."
+msgstr "この形式は、Python 言語に ``with`` ステートメントが追加される前に開発された元の :func:`pytest.raises` API でした。 現在では、この形式はほとんど使用されておらず、コンテキストマネージャ形式 (``with`` を使用) がより読みやすいと考えられています。 それにもかかわらず、この形式は完全にサポートされており、非推奨ではありません。"
+
+#: ../../how-to/assert.rst:222
+msgid "xfail mark and pytest.raises"
+msgstr "xfail マークと pytest.raises"
+
+#: ../../how-to/assert.rst:224
+msgid "It is also possible to specify a ``raises`` argument to :ref:`pytest.mark.xfail <pytest.mark.xfail ref>`, which checks that the test is failing in a more specific way than just having any exception raised:"
+msgstr ":ref:`pytest.mark.xfail <pytest.mark.xfail ref>` に ``raises`` 引数を指定することも可能で、これにより、テストが単に例外を発生させるだけでなく、より具体的な方法で失敗していることを確認できます:"
+
+#: ../../how-to/assert.rst:239
+msgid "This will only \"xfail\" if the test fails by raising ``IndexError`` or subclasses."
+msgstr "これは、テストが ``IndexError`` またはそのサブクラスを発生させることによって失敗した場合にのみ \"xfail\" します。"
+
+#: ../../how-to/assert.rst:241
+msgid "Using :ref:`pytest.mark.xfail <pytest.mark.xfail ref>` with the ``raises`` parameter is probably better for something like documenting unfixed bugs (where the test describes what \"should\" happen) or bugs in dependencies."
+msgstr "``raises`` パラメータを使用した :ref:`pytest.mark.xfail <pytest.mark.xfail ref>` の使用は、おそらく未修正のバグ (テストが「起こるべきこと」を説明する場合) や依存関係のバグを文書化するようなものに適しています。"
+
+#: ../../how-to/assert.rst:244
+msgid "Using :func:`pytest.raises` is likely to be better for cases where you are testing exceptions your own code is deliberately raising, which is the majority of cases."
+msgstr ":func:`pytest.raises` を使用する方が、自分のコードが意図的に発生させている例外をテストする場合 (ほとんどの場合) に適している可能性があります。"
+
+#: ../../how-to/assert.rst:251
+msgid "Assertions about expected warnings"
+msgstr "予期される警告に関するアサーション"
+
+#: ../../how-to/assert.rst:255
+msgid "You can check that code raises a particular warning using :ref:`pytest.warns <warns>`."
+msgstr ":ref:`pytest.warns <warns>` を使用して、コードが特定の警告を発生させることを確認できます。"
+
+#: ../../how-to/assert.rst:262
+msgid "Making use of context-sensitive comparisons"
+msgstr "コンテキストに応じた比較の利用"
+
+#: ../../how-to/assert.rst:266
+msgid "``pytest`` has rich support for providing context-sensitive information when it encounters comparisons.  For example:"
+msgstr "``pytest`` は、比較に遭遇したときにコンテキストに応じた情報を提供するための豊富なサポートを提供します。 例えば:"
+
+#: ../../how-to/assert.rst:277
+msgid "if you run this module:"
+msgstr "このモジュールを実行すると:"
+
+#: ../../how-to/assert.rst:309
+msgid "Special comparisons are done for a number of cases:"
+msgstr "特別な比較は、いくつかのケースで行われます:"
+
+#: ../../how-to/assert.rst:311
+msgid "comparing long strings: a context diff is shown"
+msgstr "長い文字列の比較: コンテキスト差分が表示されます"
+
+#: ../../how-to/assert.rst:312
+msgid "comparing long sequences: first failing indices"
+msgstr "長いシーケンスの比較: 最初の失敗インデックス"
+
+#: ../../how-to/assert.rst:313
+msgid "comparing dicts: different entries"
+msgstr "辞書の比較: 異なるエントリ"
+
+#: ../../how-to/assert.rst:315
+msgid "See the :ref:`reporting demo <tbreportdemo>` for many more examples."
+msgstr "さらに多くの例については、:ref:`reporting demo <tbreportdemo>` を参照してください。"
+
+#: ../../how-to/assert.rst:318
+msgid "Defining your own explanation for failed assertions"
+msgstr "失敗したアサーションのための独自の説明を定義する"
+
+#: ../../how-to/assert.rst:320
+msgid "It is possible to add your own detailed explanations by implementing the ``pytest_assertrepr_compare`` hook."
+msgstr "``pytest_assertrepr_compare`` フックを実装することで、独自の詳細な説明を追加することができます。"
+
+#: _pytest.hookspec.pytest_assertrepr_compare:1 of
+msgid "Return explanation for comparisons in failing assert expressions."
+msgstr "失敗したアサーション式の比較に対する説明を返します。"
+
+#: _pytest.hookspec.pytest_assertrepr_compare:3 of
+msgid "Return None for no custom explanation, otherwise return a list of strings. The strings will be joined by newlines but any newlines *in* a string will be escaped. Note that all but the first line will be indented slightly, the intention is for the first line to be a summary."
+msgstr "カスタム説明がない場合は None を返し、それ以外の場合は文字列のリストを返します。 文字列は改行で結合されますが、文字列内の改行はエスケープされます。 最初の行以外はすべて少しインデントされることに注意してください。 最初の行は要約の意図です。"
+
+#: ../../how-to/assert.rst
+msgid "Parameters"
+msgstr "パラメータ"
+
+#: _pytest.hookspec.pytest_assertrepr_compare:8 of
+msgid "The pytest config object."
+msgstr "pytest の設定オブジェクト。"
+
+#: _pytest.hookspec.pytest_assertrepr_compare:9 of
+msgid "The operator, e.g. `\"==\"`, `\"!=\"`, `\"not in\"`."
+msgstr "演算子、例: `\"==\"`、`\"!=\"`、`\"not in\"`。"
+
+#: _pytest.hookspec.pytest_assertrepr_compare:10 of
+msgid "The left operand."
+msgstr "左オペランド。"
+
+#: _pytest.hookspec.pytest_assertrepr_compare:11 of
+msgid "The right operand."
+msgstr "右オペランド。"
+
+#: _pytest.hookspec.pytest_assertrepr_compare:14 of
+msgid "Use in conftest plugins"
+msgstr "conftest プラグインで使用"
+
+#: _pytest.hookspec.pytest_assertrepr_compare:16 of
+msgid "Any conftest file can implement this hook. For a given item, only conftest files in the item's directory and its parent directories are consulted."
+msgstr "任意の conftest ファイルがこのフックを実装できます。 特定のアイテムに対しては、そのアイテムのディレクトリおよび親ディレクトリ内の conftest ファイルのみが参照されます。"
+
+#: ../../how-to/assert.rst:326
+msgid "As an example consider adding the following hook in a :ref:`conftest.py <conftest.py>` file which provides an alternative explanation for ``Foo`` objects:"
+msgstr "例として、``Foo`` オブジェクトの代替説明を提供する :ref:`conftest.py <conftest.py>` ファイルに次のフックを追加することを検討してください:"
+
+#: ../../how-to/assert.rst:342
+msgid "now, given this test module:"
+msgstr "次に、このテストモジュールを考えます:"
+
+#: ../../how-to/assert.rst:360
+msgid "you can run the test module and get the custom output defined in the conftest file:"
+msgstr "テストモジュールを実行して、conftest ファイルに定義されたカスタム出力を取得できます:"
+
+#: ../../how-to/assert.rst:386
+msgid "Assertion introspection details"
+msgstr "アサーションイントロスペクションの詳細"
+
+#: ../../how-to/assert.rst:389
+msgid "Reporting details about a failing assertion is achieved by rewriting assert statements before they are run.  Rewritten assert statements put introspection information into the assertion failure message.  ``pytest`` only rewrites test modules directly discovered by its test collection process, so **asserts in supporting modules which are not themselves test modules will not be rewritten**."
+msgstr "失敗したアサーションに関する詳細を報告するには、アサーションステートメントを実行する前に書き換えます。 書き換えられたアサーションステートメントは、アサーション失敗メッセージにイントロスペクション情報を入れます。 ``pytest`` はテスト収集プロセスによって直接検出されたテストモジュールのみを書き換えるため、**テストモジュール自体ではないサポートモジュールのアサーションは書き換えられません**。"
+
+#: ../../how-to/assert.rst:395
+msgid "You can manually enable assertion rewriting for an imported module by calling :ref:`register_assert_rewrite <assertion-rewriting>` before you import it (a good place to do that is in your root ``conftest.py``)."
+msgstr "インポートする前に :ref:`register_assert_rewrite <assertion-rewriting>` を呼び出すことで、インポートされたモジュールのアサーション書き換えを手動で有効にできます (それを行うのに適した場所は、ルートの ``conftest.py`` です) 。"
+
+#: ../../how-to/assert.rst:399
+msgid "For further information, Benjamin Peterson wrote up `Behind the scenes of pytest's new assertion rewriting <http://pybites.blogspot.com/2011/07/behind-scenes-of-pytests-new-assertion.html>`_."
+msgstr "詳細については、Benjamin Peterson が書いた `pytest の新しいアサーション書き換えの舞台裏 <http://pybites.blogspot.com/2011/07/behind-scenes-of-pytests-new-assertion.html>`_ を参照してください。"
+
+#: ../../how-to/assert.rst:402
+msgid "Assertion rewriting caches files on disk"
+msgstr "アサーション書き換えはディスク上にファイルをキャッシュします"
+
+#: ../../how-to/assert.rst:404
+msgid "``pytest`` will write back the rewritten modules to disk for caching. You can disable this behavior (for example to avoid leaving stale ``.pyc`` files around in projects that move files around a lot) by adding this to the top of your ``conftest.py`` file:"
+msgstr "``pytest`` は、書き換えられたモジュールをキャッシュのためにディスクに書き戻します。 この動作を無効にするには (たとえば、ファイルを頻繁に移動するプロジェクトで古い ``.pyc`` ファイルを残さないようにするため) 、これを ``conftest.py`` ファイルの先頭に追加します:"
+
+#: ../../how-to/assert.rst:414
+msgid "Note that you still get the benefits of assertion introspection, the only change is that the ``.pyc`` files won't be cached on disk."
+msgstr "アサーションイントロスペクションの利点は引き続き得られますが、唯一の変更点は ``.pyc`` ファイルがディスクにキャッシュされないことです。"
+
+#: ../../how-to/assert.rst:417
+msgid "Additionally, rewriting will silently skip caching if it cannot write new ``.pyc`` files, i.e. in a read-only filesystem or a zipfile."
+msgstr "さらに、新しい ``.pyc`` ファイルを書き込めない場合 (読み取り専用ファイルシステムや zip ファイル内など) 、書き換えはキャッシュを静かにスキップします。"
+
+#: ../../how-to/assert.rst:422
+msgid "Disabling assert rewriting"
+msgstr "アサーション書き換えの無効化"
+
+#: ../../how-to/assert.rst:424
+msgid "``pytest`` rewrites test modules on import by using an import hook to write new ``pyc`` files. Most of the time this works transparently. However, if you are working with the import machinery yourself, the import hook may interfere."
+msgstr "``pytest`` は、新しい ``pyc`` ファイルを書き込むためにインポートフックを使用してインポート時にテストモジュールを書き換えます。 ほとんどの場合、これは透過的に機能します。 ただし、インポート機構を自分で操作している場合、インポートフックが干渉する可能性があります。"
+
+#: ../../how-to/assert.rst:429
+msgid "If this is the case you have two options:"
+msgstr "この場合、2 つのオプションがあります:"
+
+#: ../../how-to/assert.rst:431
+msgid "Disable rewriting for a specific module by adding the string ``PYTEST_DONT_REWRITE`` to its docstring."
+msgstr "特定のモジュールの書き換えを無効にするには、そのドキュメント文字列に ``PYTEST_DONT_REWRITE`` という文字列を追加します。"
+
+#: ../../how-to/assert.rst:434
+msgid "Disable rewriting for all modules by using ``--assert=plain``."
+msgstr "すべてのモジュールの書き換えを無効にするには、``--assert=plain`` を使用します。"
+

@@ -1,0 +1,85 @@
+# SOME DESCRIPTIVE TITLE.
+# Copyright (C) 2015, holger krekel and pytest-dev team
+# This file is distributed under the same license as the pytest package.
+# FIRST AUTHOR <EMAIL@ADDRESS>, 2025.
+#
+#, fuzzy
+msgid ""
+msgstr ""
+"Project-Id-Version: pytest 0.1.dev16209\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2025-02-05 00:52+0900\n"
+"PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
+"Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
+"Language: ja\n"
+"Language-Team: ja <LL@li.org>\n"
+"Plural-Forms: nplurals=1; plural=0;\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=utf-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Generated-By: Babel 2.17.0\n"
+
+#: ../../announce/release-2.3.4.rst:2
+msgid "pytest-2.3.4: stabilization, more flexible selection via \"-k expr\""
+msgstr ""
+
+#: ../../announce/release-2.3.4.rst:4
+msgid "pytest-2.3.4 is a small stabilization release of the py.test tool which offers uebersimple assertions, scalable fixture mechanisms and deep customization for testing with Python.  This release comes with the following fixes and features:"
+msgstr ""
+
+#: ../../announce/release-2.3.4.rst:9
+msgid "make \"-k\" option accept an expressions the same as with \"-m\" so that one can write: -k \"name1 or name2\" etc.  This is a slight usage incompatibility if you used special syntax like \"TestClass.test_method\" which you now need to write as -k \"TestClass and test_method\" to match a certain method in a certain test class."
+msgstr ""
+
+#: ../../announce/release-2.3.4.rst:14
+msgid "allow to dynamically define markers via item.keywords[...]=assignment integrating with \"-m\" option"
+msgstr ""
+
+#: ../../announce/release-2.3.4.rst:16
+msgid "yielded test functions will now have autouse-fixtures active but cannot accept fixtures as funcargs - it's anyway recommended to rather use the post-2.0 parametrize features instead of yield, see: http://pytest.org/en/stable/example/how-to/parametrize.html"
+msgstr ""
+
+#: ../../announce/release-2.3.4.rst:20
+msgid "fix autouse-issue where autouse-fixtures would not be discovered if defined in an a/conftest.py file and tests in a/tests/test_some.py"
+msgstr ""
+
+#: ../../announce/release-2.3.4.rst:22
+msgid "fix issue226 - LIFO ordering for fixture teardowns"
+msgstr ""
+
+#: ../../announce/release-2.3.4.rst:23
+msgid "fix issue224 - invocations with >256 char arguments now work"
+msgstr ""
+
+#: ../../announce/release-2.3.4.rst:24
+msgid "fix issue91 - add/discuss package/directory level setups in example"
+msgstr ""
+
+#: ../../announce/release-2.3.4.rst:25
+msgid "fixes related to autouse discovery and calling"
+msgstr ""
+
+#: ../../announce/release-2.3.4.rst:27
+msgid "Thanks in particular to Thomas Waldmann for spotting and reporting issues."
+msgstr ""
+
+#: ../../announce/release-2.3.4.rst:29
+msgid "See"
+msgstr ""
+
+#: ../../announce/release-2.3.4.rst:31
+msgid "http://pytest.org/"
+msgstr ""
+
+#: ../../announce/release-2.3.4.rst:33
+msgid "for general information.  To install or upgrade pytest:"
+msgstr ""
+
+#: ../../announce/release-2.3.4.rst:35
+msgid "pip install -U pytest # or easy_install -U pytest"
+msgstr ""
+
+#: ../../announce/release-2.3.4.rst:38
+msgid "best, holger krekel"
+msgstr ""
+

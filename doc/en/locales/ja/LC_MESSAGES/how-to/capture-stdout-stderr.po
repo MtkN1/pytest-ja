@@ -1,0 +1,108 @@
+# SOME DESCRIPTIVE TITLE.
+# Copyright (C) 2015, holger krekel and pytest-dev team
+# This file is distributed under the same license as the pytest package.
+# FIRST AUTHOR <EMAIL@ADDRESS>, 2025.
+#
+#, fuzzy
+msgid ""
+msgstr ""
+"Project-Id-Version: pytest 0.1.dev16209\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2025-02-05 00:52+0900\n"
+"PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
+"Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
+"Language: ja\n"
+"Language-Team: ja <LL@li.org>\n"
+"Plural-Forms: nplurals=1; plural=0;\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=utf-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Generated-By: Babel 2.17.0\n"
+
+#: ../../how-to/capture-stdout-stderr.rst:5
+msgid "How to capture stdout/stderr output"
+msgstr "stdout/stderr 出力をキャプチャする方法"
+
+#: ../../how-to/capture-stdout-stderr.rst:8
+msgid "Default stdout/stderr/stdin capturing behaviour"
+msgstr "デフォルトの stdout/stderr/stdin キャプチャ動作"
+
+#: ../../how-to/capture-stdout-stderr.rst:10
+msgid "During test execution any output sent to ``stdout`` and ``stderr`` is captured.  If a test or a setup method fails its according captured output will usually be shown along with the failure traceback. (this behavior can be configured by the ``--show-capture`` command-line option)."
+msgstr "テスト実行中に ``stdout`` および ``stderr`` に送信された出力はすべてキャプチャされます。 テストまたはセットアップメソッドが失敗した場合、そのキャプチャされた出力は通常、失敗のトレースバックと共に表示されます (この動作は ``--show-capture`` コマンドラインオプションで構成できます) 。"
+
+#: ../../how-to/capture-stdout-stderr.rst:15
+msgid "In addition, ``stdin`` is set to a \"null\" object which will fail on attempts to read from it because it is rarely desired to wait for interactive input when running automated tests."
+msgstr "さらに、``stdin`` は「null」オブジェクトに設定されており、自動テストを実行する際にインタラクティブな入力を待つことはほとんどないため、読み取りを試みると失敗します。"
+
+#: ../../how-to/capture-stdout-stderr.rst:19
+msgid "By default capturing is done by intercepting writes to low level file descriptors.  This allows to capture output from simple print statements as well as output from a subprocess started by a test."
+msgstr "デフォルトでは、低レベルのファイルディスクリプタへの書き込みをインターセプトすることでキャプチャが行われます。 これにより、単純な print 文からの出力や、テストによって開始されたサブプロセスからの出力をキャプチャできます。"
+
+#: ../../how-to/capture-stdout-stderr.rst:27
+msgid "Setting capturing methods or disabling capturing"
+msgstr "キャプチャ方法の設定またはキャプチャの無効化"
+
+#: ../../how-to/capture-stdout-stderr.rst:29
+msgid "There are three ways in which ``pytest`` can perform capturing:"
+msgstr "``pytest`` がキャプチャを実行する方法は 3 つあります:"
+
+#: ../../how-to/capture-stdout-stderr.rst:31
+msgid "``fd`` (file descriptor) level capturing (default): All writes going to the operating system file descriptors 1 and 2 will be captured."
+msgstr "``fd`` (ファイルディスクリプタ) レベルのキャプチャ (デフォルト) : オペレーティングシステムのファイルディスクリプタ 1 および 2 に送られるすべての書き込みがキャプチャされます。"
+
+#: ../../how-to/capture-stdout-stderr.rst:34
+msgid "``sys`` level capturing: Only writes to Python files ``sys.stdout`` and ``sys.stderr`` will be captured.  No capturing of writes to filedescriptors is performed."
+msgstr "``sys`` レベルのキャプチャ: Python ファイル ``sys.stdout`` および ``sys.stderr`` への書き込みのみがキャプチャされます。 ファイルディスクリプタへの書き込みのキャプチャは行われません。"
+
+#: ../../how-to/capture-stdout-stderr.rst:38
+msgid "``tee-sys`` capturing: Python writes to ``sys.stdout`` and ``sys.stderr`` will be captured, however the writes will also be passed-through to the actual ``sys.stdout`` and ``sys.stderr``. This allows output to be 'live printed' and captured for plugin use, such as junitxml (new in pytest 5.4)."
+msgstr "``tee-sys`` キャプチャ: Python の ``sys.stdout`` および ``sys.stderr`` への書き込みがキャプチャされますが、書き込みは実際の ``sys.stdout`` および ``sys.stderr`` にもパススルーされます。 これにより、出力が「ライブ印刷」され、junitxml などのプラグインで使用するためにキャプチャされます (pytest 5.4 の新機能) 。"
+
+#: ../../how-to/capture-stdout-stderr.rst:45
+msgid "You can influence output capturing mechanisms from the command line:"
+msgstr "コマンドラインから出力キャプチャメカニズムに影響を与えることができます:"
+
+#: ../../how-to/capture-stdout-stderr.rst:58
+msgid "Using print statements for debugging"
+msgstr "デバッグのために print 文を使用する"
+
+#: ../../how-to/capture-stdout-stderr.rst:60
+msgid "One primary benefit of the default capturing of stdout/stderr output is that you can use print statements for debugging:"
+msgstr "stdout/stderr 出力のデフォルトキャプチャの主な利点の 1 つは、print 文をデバッグに使用できることです:"
+
+#: ../../how-to/capture-stdout-stderr.rst:79
+msgid "and running this module will show you precisely the output of the failing function and hide the other one:"
+msgstr "このモジュールを実行すると、失敗した関数の出力が正確に表示され、他の関数は非表示になります:"
+
+#: ../../how-to/capture-stdout-stderr.rst:107
+msgid "Accessing captured output from a test function"
+msgstr "テスト関数からキャプチャされた出力にアクセスする"
+
+#: ../../how-to/capture-stdout-stderr.rst:109
+msgid "The :fixture:`capsys`, :fixture:`capsysbinary`, :fixture:`capfd`, and :fixture:`capfdbinary` fixtures allow access to ``stdout``/``stderr`` output created during test execution."
+msgstr ":fixture:`capsys`、:fixture:`capsysbinary`、:fixture:`capfd`、および :fixture:`capfdbinary` フィクスチャを使用すると、テスト実行中に作成された ``stdout``/``stderr`` 出力にアクセスできます。"
+
+#: ../../how-to/capture-stdout-stderr.rst:112
+msgid "Here is an example test function that performs some output related checks:"
+msgstr "出力に関連するいくつかのチェックを実行するサンプルテスト関数を次に示します:"
+
+#: ../../how-to/capture-stdout-stderr.rst:126
+msgid "The ``readouterr()`` call snapshots the output so far - and capturing will be continued.  After the test function finishes the original streams will be restored.  Using :fixture:`capsys` this way frees your test from having to care about setting/resetting output streams and also interacts well with pytest's own per-test capturing."
+msgstr "``readouterr()`` 呼び出しはこれまでの出力をスナップショットし、キャプチャは続行されます。 テスト関数が終了すると、元のストリームが復元されます。 この方法で :fixture:`capsys` を使用すると、出力ストリームの設定/リセットを気にする必要がなくなり、pytest 独自のテストごとのキャプチャとも良好に連携します。"
+
+#: ../../how-to/capture-stdout-stderr.rst:134
+msgid "The return value from ``readouterr`` changed to a ``namedtuple`` with two attributes, ``out`` and ``err``."
+msgstr "``readouterr`` の戻り値は、``out`` と ``err`` の 2 つの属性を持つ ``namedtuple`` に変更されました。"
+
+#: ../../how-to/capture-stdout-stderr.rst:136
+msgid "If the code under test writes non-textual data (``bytes``), you can capture this using the :fixture:`capsysbinary` fixture which instead returns ``bytes`` from the ``readouterr`` method."
+msgstr "テスト対象のコードが非テキストデータ (``bytes``) を書き込む場合、:fixture:`capsysbinary` フィクスチャを使用してこれをキャプチャできます。 これは ``readouterr`` メソッドから ``bytes`` を返します。"
+
+#: ../../how-to/capture-stdout-stderr.rst:140
+msgid "If you want to capture at the file descriptor level you can use the :fixture:`capfd` fixture which offers the exact same interface but allows to also capture output from libraries or subprocesses that directly write to operating system level output streams (FD1 and FD2). Similarly to :fixture:`capsysbinary`, :fixture:`capfdbinary` can be used to capture ``bytes`` at the file descriptor level."
+msgstr "ファイルディスクリプタレベルでキャプチャしたい場合は、:fixture:`capfd` フィクスチャを使用できます。 これはまったく同じインターフェースを提供しますが、オペレーティングシステムレベルの出力ストリーム (FD1 および FD2) に直接書き込むライブラリやサブプロセスからの出力もキャプチャできます。 :fixture:`capsysbinary` と同様に、:fixture:`capfdbinary` を使用してファイルディスクリプタレベルで ``bytes`` をキャプチャできます。"
+
+#: ../../how-to/capture-stdout-stderr.rst:148
+msgid "To temporarily disable capture within a test, the capture fixtures have a ``disabled()`` method that can be used as a context manager, disabling capture inside the ``with`` block:"
+msgstr "テスト内で一時的にキャプチャを無効にするには、キャプチャフィクスチャに ``disabled()`` メソッドがあり、これをコンテキストマネージャとして使用して ``with`` ブロック内のキャプチャを無効にできます:"

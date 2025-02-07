@@ -1,0 +1,364 @@
+# SOME DESCRIPTIVE TITLE.
+# Copyright (C) 2015, holger krekel and pytest-dev team
+# This file is distributed under the same license as the pytest package.
+# FIRST AUTHOR <EMAIL@ADDRESS>, 2025.
+#
+#, fuzzy
+msgid ""
+msgstr ""
+"Project-Id-Version: pytest 0.1.dev16209\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2025-02-05 00:52+0900\n"
+"PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
+"Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
+"Language: ja\n"
+"Language-Team: ja <LL@li.org>\n"
+"Plural-Forms: nplurals=1; plural=0;\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=utf-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Generated-By: Babel 2.17.0\n"
+
+#: ../../how-to/output.rst:4
+msgid "Managing pytest's output"
+msgstr "pytest の出力を管理する"
+
+#: ../../how-to/output.rst:9
+msgid "Modifying Python traceback printing"
+msgstr "Python トレースバックの印刷を変更する"
+
+#: ../../how-to/output.rst:11
+msgid "Examples for modifying traceback printing:"
+msgstr "トレースバック印刷を変更する例:"
+
+#: ../../how-to/output.rst:33
+msgid "The ``--full-trace`` causes very long traces to be printed on error (longer than ``--tb=long``). It also ensures that a stack trace is printed on **KeyboardInterrupt** (Ctrl+C). This is very useful if the tests are taking too long and you interrupt them with Ctrl+C to find out where the tests are *hanging*. By default no output will be shown (because KeyboardInterrupt is caught by pytest). By using this option you make sure a trace is shown."
+msgstr "``--full-trace`` は、エラー時に非常に長いトレースを印刷します (``--tb=long`` よりも長い) 。 また、**KeyboardInterrupt** (Ctrl+C) でスタックトレースが印刷されることを保証します。 これは、テストに時間がかかりすぎて Ctrl+C で中断し、テストがどこで *ハング* しているかを確認する場合に非常に便利です。 デフォルトでは、出力は表示されません (KeyboardInterrupt は pytest によってキャッチされるため) 。 このオプションを使用すると、トレースが表示されることを確認できます。"
+
+#: ../../how-to/output.rst:43
+msgid "Verbosity"
+msgstr "冗長性"
+
+#: ../../how-to/output.rst:45
+msgid "Examples for modifying printing verbosity:"
+msgstr "印刷の冗長性を変更する例:"
+
+#: ../../how-to/output.rst:55
+msgid "The ``-v`` flag controls the verbosity of pytest output in various aspects: test session progress, assertion details when tests fail, fixtures details with ``--fixtures``, etc."
+msgstr "``-v`` フラグは、pytest 出力の冗長性をさまざまな側面で制御します: テストセッションの進行状況、テストが失敗したときのアサーションの詳細、``--fixtures`` を使用したフィクスチャの詳細など。"
+
+#: ../../how-to/output.rst:60
+msgid "Consider this simple file:"
+msgstr "この簡単なファイルを考えてみましょう:"
+
+#: ../../how-to/output.rst:85
+msgid "Executing pytest normally gives us this output (we are skipping the header to focus on the rest):"
+msgstr "通常、pytest を実行すると次の出力が得られます (ヘッダーをスキップして残りに焦点を当てています) :"
+
+#: ../../how-to/output.rst:138
+msgid "Notice that:"
+msgstr "次に注意してください:"
+
+#: ../../how-to/output.rst:140
+msgid "Each test inside the file is shown by a single character in the output: ``.`` for passing, ``F`` for failure."
+msgstr "ファイル内の各テストは、出力で単一の文字で表示されます: 合格の場合は ``.``、失敗の場合は ``F``。"
+
+#: ../../how-to/output.rst:141
+msgid "``test_words_fail`` failed, and we are shown a short summary indicating the index 2 of the two lists differ."
+msgstr "``test_words_fail`` が失敗し、2 つのリストのインデックス 2 が異なることを示す短い要約が表示されます。"
+
+#: ../../how-to/output.rst:142
+msgid "``test_numbers_fail`` failed, and we are shown a summary of left/right differences on dictionary items. Identical items are omitted."
+msgstr "``test_numbers_fail`` が失敗し、辞書アイテムの左右の違いの要約が表示されます。 同一のアイテムは省略されます。"
+
+#: ../../how-to/output.rst:143
+msgid "``test_long_text_fail`` failed, and the right hand side of the ``in`` statement is truncated using ``...``` because it is longer than an internal threshold (240 characters currently)."
+msgstr "``test_long_text_fail`` が失敗し、``in`` ステートメントの右側が内部しきい値 (現在は 240 文字) よりも長いため、``...``` を使用して切り捨てられます。"
+
+#: ../../how-to/output.rst:146
+msgid "Now we can increase pytest's verbosity:"
+msgstr "次に、pytest の冗長性を高めることができます:"
+
+#: ../../how-to/output.rst:210 ../../how-to/output.rst:340
+msgid "Notice now that:"
+msgstr "次に注意してください:"
+
+#: ../../how-to/output.rst:212 ../../how-to/output.rst:342
+msgid "Each test inside the file gets its own line in the output."
+msgstr "ファイル内の各テストは、出力で独自の行を取得します。"
+
+#: ../../how-to/output.rst:213
+msgid "``test_words_fail`` now shows the two failing lists in full, in addition to which index differs."
+msgstr "``test_words_fail`` は、インデックスが異なることに加えて、失敗した 2 つのリストを完全に表示します。"
+
+#: ../../how-to/output.rst:214
+msgid "``test_numbers_fail`` now shows a text diff of the two dictionaries, truncated."
+msgstr "``test_numbers_fail`` は、2 つの辞書のテキスト差分を切り捨てて表示します。"
+
+#: ../../how-to/output.rst:215
+msgid "``test_long_text_fail`` no longer truncates the right hand side of the ``in`` statement, because the internal threshold for truncation is larger now (2400 characters currently)."
+msgstr "``test_long_text_fail`` は、切り捨ての内部しきい値が現在は大きいため (現在は 2400 文字) 、``in`` ステートメントの右側を切り捨てなくなりました。"
+
+#: ../../how-to/output.rst:218
+msgid "Now if we increase verbosity even more:"
+msgstr "次に、さらに冗長性を高めると:"
+
+#: ../../how-to/output.rst:343
+msgid "``test_words_fail`` gives the same output as before in this case."
+msgstr "``test_words_fail`` は、この場合、以前と同じ出力を提供します。"
+
+#: ../../how-to/output.rst:344
+msgid "``test_numbers_fail`` now shows a full text diff of the two dictionaries."
+msgstr "``test_numbers_fail`` は、2 つの辞書の完全なテキスト差分を表示します。"
+
+#: ../../how-to/output.rst:345
+msgid "``test_long_text_fail`` also doesn't truncate on the right hand side as before, but now pytest won't truncate any text at all, regardless of its size."
+msgstr "``test_long_text_fail`` も以前のように右側を切り捨てませんが、現在 pytest はサイズに関係なくテキストをまったく切り捨てません。"
+
+#: ../../how-to/output.rst:348
+msgid "Those were examples of how verbosity affects normal test session output, but verbosity also is used in other situations, for example you are shown even fixtures that start with ``_`` if you use ``pytest --fixtures -v``."
+msgstr "これらは、冗長性が通常のテストセッション出力にどのように影響するかの例でしたが、冗長性は他の状況でも使用されます。 たとえば、``pytest --fixtures -v`` を使用すると、``_`` で始まるフィクスチャも表示されます。"
+
+#: ../../how-to/output.rst:351
+msgid "Using higher verbosity levels (``-vvv``, ``-vvvv``, ...) is supported, but has no effect in pytest itself at the moment, however some plugins might make use of higher verbosity."
+msgstr "より高い冗長性レベル (``-vvv``、``-vvvv`` など) の使用はサポートされていますが、現在のところ pytest 自体には影響はありませんが、一部のプラグインはより高い冗長性を利用する場合があります。"
+
+#: ../../how-to/output.rst:357
+msgid "Fine-grained verbosity"
+msgstr "細かい冗長性"
+
+#: ../../how-to/output.rst:359
+msgid "In addition to specifying the application wide verbosity level, it is possible to control specific aspects independently. This is done by setting a verbosity level in the configuration file for the specific aspect of the output."
+msgstr "アプリケーション全体の冗長性レベルを指定することに加えて、特定の側面を独立して制御することも可能です。 これは、出力の特定の側面に対して構成ファイルに冗長性レベルを設定することで行われます。"
+
+#: ../../how-to/output.rst:362
+msgid ":confval:`verbosity_assertions`: Controls how verbose the assertion output should be when pytest is executed. Running ``pytest --no-header`` with a value of ``2`` would have the same output as the previous example, but each test inside the file is shown by a single character in the output."
+msgstr ":confval:`verbosity_assertions`: pytest が実行されるときにアサーション出力の冗長性を制御します。 値が ``2`` の ``pytest --no-header`` を実行すると、前の例と同じ出力が得られますが、ファイル内の各テストは出力で単一の文字で表示されます。"
+
+#: ../../how-to/output.rst:366
+msgid ":confval:`verbosity_test_cases`: Controls how verbose the test execution output should be when pytest is executed. Running ``pytest --no-header`` with a value of ``2`` would have the same output as the first verbosity example, but each test inside the file gets its own line in the output."
+msgstr ":confval:`verbosity_test_cases`: pytest が実行されるときにテスト実行出力の冗長性を制御します。 値が ``2`` の ``pytest --no-header`` を実行すると、最初の冗長性の例と同じ出力が得られますが、ファイル内の各テストは出力で独自の行を取得します。"
+
+#: ../../how-to/output.rst:373
+msgid "Producing a detailed summary report"
+msgstr "詳細なサマリーレポートの作成"
+
+#: ../../how-to/output.rst:375
+msgid "The ``-r`` flag can be used to display a \"short test summary info\" at the end of the test session, making it easy in large test suites to get a clear picture of all failures, skips, xfails, etc."
+msgstr "``-r`` フラグを使用して、テストセッションの最後に「短いテストサマリー情報」を表示できます。 これにより、大規模なテストスイートで、すべての失敗、スキップ、xfail などの明確な概要を簡単に把握できます。"
+
+#: ../../how-to/output.rst:378
+msgid "It defaults to ``fE`` to list failures and errors."
+msgstr "デフォルトでは、失敗とエラーをリストするために ``fE`` になります。"
+
+#: ../../how-to/output.rst:382
+msgid "Example:"
+msgstr "例:"
+
+#: ../../how-to/output.rst:456
+msgid "The ``-r`` options accepts a number of characters after it, with ``a`` used above meaning \"all except passes\"."
+msgstr "``-r`` オプションは、その後にいくつかの文字を受け入れます。 上記の ``a`` は「合格を除くすべて」を意味します。"
+
+#: ../../how-to/output.rst:459
+msgid "Here is the full list of available characters that can be used:"
+msgstr "使用できる文字の完全なリストは次のとおりです:"
+
+#: ../../how-to/output.rst:461
+msgid "``f`` - failed"
+msgstr "``f`` - failed"
+
+#: ../../how-to/output.rst:462
+msgid "``E`` - error"
+msgstr "``E`` - error"
+
+#: ../../how-to/output.rst:463
+msgid "``s`` - skipped"
+msgstr "``s`` - skipped"
+
+#: ../../how-to/output.rst:464
+msgid "``x`` - xfailed"
+msgstr "``x`` - xfailed"
+
+#: ../../how-to/output.rst:465
+msgid "``X`` - xpassed"
+msgstr "``X`` - xpassed"
+
+#: ../../how-to/output.rst:466
+msgid "``p`` - passed"
+msgstr "``p`` - passed"
+
+#: ../../how-to/output.rst:467
+msgid "``P`` - passed with output"
+msgstr "``P`` - 出力付きで passed"
+
+#: ../../how-to/output.rst:469
+msgid "Special characters for (de)selection of groups:"
+msgstr "グループの (非) 選択のための特殊文字:"
+
+#: ../../how-to/output.rst:471
+msgid "``a`` - all except ``pP``"
+msgstr "``a`` - ``pP`` を除くすべて"
+
+#: ../../how-to/output.rst:472
+msgid "``A`` - all"
+msgstr "``A`` - すべて"
+
+#: ../../how-to/output.rst:473
+msgid "``N`` - none, this can be used to display nothing (since ``fE`` is the default)"
+msgstr "``N`` - なし、これは何も表示しないために使用できます (``fE`` がデフォルトであるため) "
+
+#: ../../how-to/output.rst:475
+msgid "More than one character can be used, so for example to only see failed and skipped tests, you can execute:"
+msgstr "複数の文字を使用できます。 たとえば、失敗したテストとスキップされたテストのみを表示するには、次のように実行できます:"
+
+#: ../../how-to/output.rst:509
+msgid "Using ``p`` lists the passing tests, whilst ``P`` adds an extra section \"PASSES\" with those tests that passed but had captured output:"
+msgstr "``p`` を使用すると、合格したテストがリストされ、``P`` は、合格したが出力がキャプチャされたテストに「PASSES」という追加セクションを追加します:"
+
+#: ../../how-to/output.rst:549
+msgid "By default, parametrized variants of skipped tests are grouped together if they share the same skip reason. You can use ``--no-fold-skipped`` to print each skipped test separately."
+msgstr "デフォルトでは、スキップされたテストのパラメータ化されたバリアントは、同じスキップ理由を共有している場合に一緒にグループ化されます。 ``--no-fold-skipped`` を使用して、スキップされた各テストを個別に印刷できます。"
+
+#: ../../how-to/output.rst:553
+msgid "Creating resultlog format files"
+msgstr "resultlog 形式のファイルを作成する"
+
+#: ../../how-to/output.rst:555
+msgid "To create plain-text machine-readable result files you can issue:"
+msgstr "プレーンテキストの機械可読の結果ファイルを作成するには、次のコマンドを発行できます:"
+
+#: ../../how-to/output.rst:561
+msgid "and look at the content at the ``path`` location.  Such files are used e.g. by the `PyPy-test`_ web page to show test results over several revisions."
+msgstr "そして、``path`` の場所にあるコンテンツを確認します。 このようなファイルは、たとえば `PyPy-test`_ ウェブページで使用され、いくつかのリビジョンにわたるテスト結果を表示します。"
+
+#: ../../how-to/output.rst:566
+msgid "This option is rarely used and is scheduled for removal in pytest 6.0."
+msgstr "このオプションはめったに使用されず、pytest 6.0 で削除される予定です。"
+
+#: ../../how-to/output.rst:568
+msgid "If you use this option, consider using the new `pytest-reportlog <https://github.com/pytest-dev/pytest-reportlog>`__ plugin instead."
+msgstr "このオプションを使用する場合は、新しい `pytest-reportlog <https://github.com/pytest-dev/pytest-reportlog>`__ プラグインの使用を検討してください。"
+
+#: ../../how-to/output.rst:570
+msgid "See :ref:`the deprecation docs <resultlog deprecated>` for more information."
+msgstr "詳細については、:ref:`the deprecation docs <resultlog deprecated>` を参照してください。"
+
+#: ../../how-to/output.rst:577
+msgid "Creating JUnitXML format files"
+msgstr "JUnitXML 形式のファイルを作成する"
+
+#: ../../how-to/output.rst:579
+msgid "To create result files which can be read by Jenkins_ or other Continuous integration servers, use this invocation:"
+msgstr "Jenkins_ や他の継続的インテグレーションサーバーで読み取ることができる結果ファイルを作成するには、この呼び出しを使用します:"
+
+#: ../../how-to/output.rst:586
+msgid "to create an XML file at ``path``."
+msgstr "``path`` に XML ファイルを作成します。"
+
+#: ../../how-to/output.rst:590
+msgid "To set the name of the root test suite xml item, you can configure the ``junit_suite_name`` option in your config file:"
+msgstr "ルートテストスイート XML アイテムの名前を設定するには、構成ファイルで ``junit_suite_name`` オプションを構成できます:"
+
+#: ../../how-to/output.rst:599
+msgid "JUnit XML specification seems to indicate that ``\"time\"`` attribute should report total test execution times, including setup and teardown (`1 <http://windyroad.com.au/dl/Open%20Source/JUnit.xsd>`_, `2 <https://www.ibm.com/support/knowledgecenter/en/SSQ2R2_14.1.0/com.ibm.rsar.analysis.codereview.cobol.doc/topics/cac_useresults_junit.html>`_). It is the default pytest behavior. To report just call durations instead, configure the ``junit_duration_report`` option like this:"
+msgstr "JUnit XML 仕様では、``\"time\"`` 属性はセットアップとテアダウンを含む総テスト実行時間を報告する必要があることを示しているようです (`1 <http://windyroad.com.au/dl/Open%20Source/JUnit.xsd>`_、`2 <https://www.ibm.com/support/knowledgecenter/en/SSQ2R2_14.1.0/com.ibm.rsar.analysis.codereview.cobol.doc/topics/cac_useresults_junit.html>`_)。 これはデフォルトの pytest の動作です。 代わりに呼び出し時間のみを報告するには、次のように ``junit_duration_report`` オプションを構成します:"
+
+#: ../../how-to/output.rst:614
+msgid "record_property"
+msgstr "record_property"
+
+#: ../../how-to/output.rst:616
+msgid "If you want to log additional information for a test, you can use the ``record_property`` fixture:"
+msgstr "テストの追加情報を記録したい場合は、``record_property`` フィクスチャを使用できます:"
+
+#: ../../how-to/output.rst:625
+msgid "This will add an extra property ``example_key=\"1\"`` to the generated ``testcase`` tag:"
+msgstr "これにより、生成された ``testcase`` タグに追加のプロパティ ``example_key=\"1\"`` が追加されます:"
+
+#: ../../how-to/output.rst:636
+msgid "Alternatively, you can integrate this functionality with custom markers:"
+msgstr "または、この機能をカスタムマーカーと統合できます:"
+
+#: ../../how-to/output.rst:649
+msgid "And in your tests:"
+msgstr "そして、あなたのテストで:"
+
+#: ../../how-to/output.rst:661
+msgid "Will result in:"
+msgstr "次のようになります:"
+
+#: ../../how-to/output.rst:673 ../../how-to/output.rst:737
+msgid "Please note that using this feature will break schema verifications for the latest JUnitXML schema. This might be a problem when used with some CI servers."
+msgstr "この機能を使用すると、最新の JUnitXML スキーマのスキーマ検証が壊れることに注意してください。 これは、一部の CI サーバーで使用する場合に問題になる可能性があります。"
+
+#: ../../how-to/output.rst:678
+msgid "record_xml_attribute"
+msgstr "record_xml_attribute"
+
+#: ../../how-to/output.rst:680
+msgid "To add an additional xml attribute to a testcase element, you can use ``record_xml_attribute`` fixture. This can also be used to override existing values:"
+msgstr "testcase 要素に追加の XML 属性を追加するには、``record_xml_attribute`` フィクスチャを使用できます。 これを使用して既存の値を上書きすることもできます:"
+
+#: ../../how-to/output.rst:691
+msgid "Unlike ``record_property``, this will not add a new child element. Instead, this will add an attribute ``assertions=\"REQ-1234\"`` inside the generated ``testcase`` tag and override the default ``classname`` with ``\"classname=custom_classname\"``:"
+msgstr "``record_property`` とは異なり、これにより新しい子要素は追加されません。 代わりに、生成された ``testcase`` タグ内に属性 ``assertions=\"REQ-1234\"`` を追加し、デフォルトの ``classname`` を ``\"classname=custom_classname\"`` で上書きします:"
+
+#: ../../how-to/output.rst:705
+msgid "``record_xml_attribute`` is an experimental feature, and its interface might be replaced by something more powerful and general in future versions. The functionality per-se will be kept, however."
+msgstr "``record_xml_attribute`` は実験的な機能であり、そのインターフェースは将来のバージョンでより強力で一般的なものに置き換えられる可能性があります。 ただし、機能自体は保持されます。"
+
+#: ../../how-to/output.rst:709
+msgid "Using this over ``record_xml_property`` can help when using ci tools to parse the xml report. However, some parsers are quite strict about the elements and attributes that are allowed. Many tools use an xsd schema (like the example below) to validate incoming xml. Make sure you are using attribute names that are allowed by your parser."
+msgstr "これを ``record_xml_property`` の代わりに使用すると、CI ツールを使用して XML レポートを解析する際に役立ちます。 ただし、一部のパーサーは、許可される要素と属性について非常に厳格です。 多くのツールは、受信 XML を検証するために xsd スキーマ (以下の例のようなもの) を使用します。 パーサーで許可されている属性名を使用していることを確認してください。"
+
+#: ../../how-to/output.rst:714
+msgid "Below is the Scheme used by Jenkins to validate the XML report:"
+msgstr "以下は、Jenkins が XML レポートを検証するために使用するスキームです:"
+
+#: ../../how-to/output.rst:743
+msgid "record_testsuite_property"
+msgstr "record_testsuite_property"
+
+#: ../../how-to/output.rst:747
+msgid "If you want to add a properties node at the test-suite level, which may contains properties that are relevant to all tests, you can use the ``record_testsuite_property`` session-scoped fixture:"
+msgstr "すべてのテストに関連するプロパティを含む可能性のあるプロパティノードをテストスイートレベルで追加する場合は、``record_testsuite_property`` セッションスコープのフィクスチャを使用できます:"
+
+#: ../../how-to/output.rst:750
+msgid "The ``record_testsuite_property`` session-scoped fixture can be used to add properties relevant to all tests."
+msgstr "``record_testsuite_property`` セッションスコープのフィクスチャを使用して、すべてのテストに関連するプロパティを追加できます。"
+
+#: ../../how-to/output.rst:768
+msgid "The fixture is a callable which receives ``name`` and ``value`` of a ``<property>`` tag added at the test-suite level of the generated xml:"
+msgstr "フィクスチャは、生成された XML のテストスイートレベルに追加された ``<property>`` タグの ``name`` と ``value`` を受け取る呼び出し可能なものです:"
+
+#: ../../how-to/output.rst:781
+msgid "``name`` must be a string, ``value`` will be converted to a string and properly xml-escaped."
+msgstr "``name`` は文字列である必要があり、``value`` は文字列に変換され、適切に XML エスケープされます。"
+
+#: ../../how-to/output.rst:783
+msgid "The generated XML is compatible with the latest ``xunit`` standard, contrary to `record_property`_ and `record_xml_attribute`_."
+msgstr "生成された XML は、`record_property`_ および `record_xml_attribute`_ とは異なり、最新の ``xunit`` 標準と互換性があります。"
+
+#: ../../how-to/output.rst:788
+msgid "Sending test report to an online pastebin service"
+msgstr "テストレポートをオンラインの pastebin サービスに送信する"
+
+#: ../../how-to/output.rst:790
+msgid "**Creating a URL for each test failure**:"
+msgstr "**各テスト失敗のための URL を作成する**:"
+
+#: ../../how-to/output.rst:796
+msgid "This will submit test run information to a remote Paste service and provide a URL for each failure.  You may select tests as usual or add for example ``-x`` if you only want to send one particular failure."
+msgstr "これにより、テスト実行情報がリモートの Paste サービスに送信され、各失敗に対して URL が提供されます。 通常どおりテストを選択するか、特定の失敗のみを送信する場合は、たとえば ``-x`` を追加できます。"
+
+#: ../../how-to/output.rst:800
+msgid "**Creating a URL for a whole test session log**:"
+msgstr "**テストセッション全体のログの URL を作成する**:"
+
+#: ../../how-to/output.rst:806
+msgid "Currently only pasting to the https://bpaste.net/ service is implemented."
+msgstr "現在、https://bpaste.net/ サービスへの貼り付けのみが実装されています。"
+
+#: ../../how-to/output.rst:810
+msgid "If creating the URL fails for any reason, a warning is generated instead of failing the entire test suite."
+msgstr "何らかの理由で URL の作成に失敗した場合、テストスイート全体が失敗するのではなく、警告が生成されます。"

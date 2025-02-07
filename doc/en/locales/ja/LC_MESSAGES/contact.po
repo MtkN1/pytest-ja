@@ -1,0 +1,109 @@
+# SOME DESCRIPTIVE TITLE.
+# Copyright (C) 2015, holger krekel and pytest-dev team
+# This file is distributed under the same license as the pytest package.
+# FIRST AUTHOR <EMAIL@ADDRESS>, 2025.
+#
+#, fuzzy
+msgid ""
+msgstr ""
+"Project-Id-Version: pytest 0.1.dev16209\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2025-02-05 00:52+0900\n"
+"PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
+"Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
+"Language: ja\n"
+"Language-Team: ja <LL@li.org>\n"
+"Plural-Forms: nplurals=1; plural=0;\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=utf-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Generated-By: Babel 2.17.0\n"
+
+#: ../../contact.rst:6
+msgid "Contact channels"
+msgstr ""
+
+#: ../../contact.rst:9
+msgid "Web"
+msgstr ""
+
+#: ../../contact.rst:11
+msgid "`pytest issue tracker`_ to report bugs or suggest features."
+msgstr ""
+
+#: ../../contact.rst:12
+msgid "`pytest discussions`_ at GitHub for general questions."
+msgstr ""
+
+#: ../../contact.rst:13
+msgid "`pytest on stackoverflow.com <http://stackoverflow.com/search?q=pytest>`_ to post precise questions with the tag ``pytest``.  New questions will usually be seen by pytest users or developers and answered quickly."
+msgstr ""
+
+#: ../../contact.rst:18
+msgid "Chat"
+msgstr ""
+
+#: ../../contact.rst:20
+msgid "`pytest discord server <https://discord.com/invite/pytest-dev>`_ for pytest development visibility and general assistance."
+msgstr ""
+
+#: ../../contact.rst:22
+msgid "``#pytest`` `on irc.libera.chat <ircs://irc.libera.chat:6697/#pytest>`_ IRC channel for random questions (using an IRC client, or `via webchat <https://web.libera.chat/#pytest>`_)"
+msgstr ""
+
+#: ../../contact.rst:25
+msgid "``#pytest`` `on Matrix <https://matrix.to/#/#pytest:matrix.org>`_."
+msgstr ""
+
+#: ../../contact.rst:28
+msgid "Mail"
+msgstr ""
+
+#: ../../contact.rst:30
+msgid "`Testing In Python`_: a mailing list for Python testing tools and discussion."
+msgstr ""
+
+#: ../../contact.rst:31
+msgid "`pytest-dev at python.org`_ a mailing list for pytest specific announcements and discussions."
+msgstr ""
+
+#: ../../contact.rst:32
+msgid "Mail to `core@pytest.org <mailto:core@pytest.org>`_ for topics that cannot be discussed in public. Mails sent there will be distributed among the members in the pytest core team, who can also be contacted individually:"
+msgstr ""
+
+#: ../../contact.rst:36
+msgid "Bruno Oliveira (:user:`nicoddemus`, `bruno@pytest.org <mailto:bruno@pytest.org>`_)"
+msgstr ""
+
+#: ../../contact.rst:37
+msgid "Florian Bruhin (:user:`The-Compiler`, `florian@pytest.org <mailto:florian@pytest.org>`_)"
+msgstr ""
+
+#: ../../contact.rst:38
+msgid "Pierre Sassoulas (:user:`Pierre-Sassoulas`, `pierre@pytest.org <mailto:pierre@pytest.org>`_)"
+msgstr ""
+
+#: ../../contact.rst:39
+msgid "Ran Benita (:user:`bluetech`, `ran@pytest.org <mailto:ran@pytest.org>`_)"
+msgstr ""
+
+#: ../../contact.rst:40
+msgid "Ronny Pfannschmidt (:user:`RonnyPfannschmidt`, `ronny@pytest.org <mailto:ronny@pytest.org>`_)"
+msgstr ""
+
+#: ../../contact.rst:41
+msgid "Zac Hatfield-Dodds (:user:`Zac-HD`, `zac@pytest.org <mailto:zac@pytest.org>`_)"
+msgstr ""
+
+#: ../../contact.rst:44
+msgid "Other"
+msgstr ""
+
+#: ../../contact.rst:46
+msgid "The :doc:`contribution guide <contributing>` for help on submitting pull requests to GitHub."
+msgstr ""
+
+#: ../../contact.rst:48
+msgid "Florian Bruhin (:user:`The-Compiler`) offers pytest professional teaching and consulting via `Bruhin Software <https://bruhin.software>`_."
+msgstr ""
+

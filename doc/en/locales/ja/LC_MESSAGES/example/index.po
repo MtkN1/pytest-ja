@@ -1,0 +1,57 @@
+# SOME DESCRIPTIVE TITLE.
+# Copyright (C) 2015, holger krekel and pytest-dev team
+# This file is distributed under the same license as the pytest package.
+# FIRST AUTHOR <EMAIL@ADDRESS>, 2025.
+#
+#, fuzzy
+msgid ""
+msgstr ""
+"Project-Id-Version: pytest 0.1.dev16209\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2025-02-05 00:52+0900\n"
+"PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
+"Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
+"Language: ja\n"
+"Language-Team: ja <LL@li.org>\n"
+"Plural-Forms: nplurals=1; plural=0;\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=utf-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Generated-By: Babel 2.17.0\n"
+
+#: ../../example/index.rst:5
+msgid "Examples and customization tricks"
+msgstr "例とカスタマイズのコツ"
+
+#: ../../example/index.rst:7
+msgid "Here is a (growing) list of examples. :ref:`Contact <contact>` us if you need more examples or have questions. Also take a look at the :ref:`comprehensive documentation <toc>` which contains many example snippets as well.  Also, `pytest on stackoverflow.com <http://stackoverflow.com/search?q=pytest>`_ often comes with example answers."
+msgstr "ここに (増え続ける) 例のリストがあります。 さらに例が必要な場合や質問がある場合は、:ref:`Contact <contact>` までご連絡ください。 また、多くの例のスニペットを含む :ref:`comprehensive documentation <toc>` もご覧ください。 また、`stackoverflow.com <http://stackoverflow.com/search?q=pytest>`_ の pytest にはしばしば例の回答が含まれています。"
+
+#: ../../example/index.rst:14
+msgid "For basic examples, see"
+msgstr "基本的な例については、以下を参照してください"
+
+#: ../../example/index.rst:16
+msgid ":ref:`get-started` for basic introductory examples"
+msgstr "基本的な入門例については、:ref:`get-started` を参照してください"
+
+#: ../../example/index.rst:17
+msgid ":ref:`assert` for basic assertion examples"
+msgstr "基本的なアサーションの例については、:ref:`assert` を参照してください"
+
+#: ../../example/index.rst:18
+msgid ":ref:`Fixtures <fixtures>` for basic fixture/setup examples"
+msgstr "基本的なフィクスチャ/セットアップの例については、:ref:`Fixtures <fixtures>` を参照してください"
+
+#: ../../example/index.rst:19
+msgid ":ref:`parametrize` for basic test function parametrization"
+msgstr "基本的なテスト関数のパラメータ化については、:ref:`parametrize` を参照してください"
+
+#: ../../example/index.rst:20
+msgid ":ref:`unittest` for basic unittest integration"
+msgstr "基本的なユニットテストの統合については、:ref:`unittest` を参照してください"
+
+#: ../../example/index.rst:22
+msgid "The following examples aim at various use cases you might encounter."
+msgstr "以下の例は、あなたが遭遇するかもしれないさまざまなユースケースを対象としています。"
+

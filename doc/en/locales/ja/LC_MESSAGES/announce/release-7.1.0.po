@@ -1,0 +1,157 @@
+# SOME DESCRIPTIVE TITLE.
+# Copyright (C) 2015, holger krekel and pytest-dev team
+# This file is distributed under the same license as the pytest package.
+# FIRST AUTHOR <EMAIL@ADDRESS>, 2025.
+#
+#, fuzzy
+msgid ""
+msgstr ""
+"Project-Id-Version: pytest 0.1.dev16209\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2025-02-05 00:52+0900\n"
+"PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
+"Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
+"Language: ja\n"
+"Language-Team: ja <LL@li.org>\n"
+"Plural-Forms: nplurals=1; plural=0;\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=utf-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Generated-By: Babel 2.17.0\n"
+
+#: ../../announce/release-7.1.0.rst:2
+msgid "pytest-7.1.0"
+msgstr ""
+
+#: ../../announce/release-7.1.0.rst:4
+msgid "The pytest team is proud to announce the 7.1.0 release!"
+msgstr ""
+
+#: ../../announce/release-7.1.0.rst:6
+msgid "This release contains new features, improvements, and bug fixes, the full list of changes is available in the changelog:"
+msgstr ""
+
+#: ../../announce/release-7.1.0.rst:9
+msgid "https://docs.pytest.org/en/stable/changelog.html"
+msgstr ""
+
+#: ../../announce/release-7.1.0.rst:11
+msgid "For complete documentation, please visit:"
+msgstr ""
+
+#: ../../announce/release-7.1.0.rst:13
+msgid "https://docs.pytest.org/en/stable/"
+msgstr ""
+
+#: ../../announce/release-7.1.0.rst:15
+msgid "As usual, you can upgrade from PyPI via:"
+msgstr ""
+
+#: ../../announce/release-7.1.0.rst:17
+msgid "pip install -U pytest"
+msgstr ""
+
+#: ../../announce/release-7.1.0.rst:19
+msgid "Thanks to all of the contributors to this release:"
+msgstr ""
+
+#: ../../announce/release-7.1.0.rst:21
+msgid "Akuli"
+msgstr ""
+
+#: ../../announce/release-7.1.0.rst:22
+msgid "Andrew Svetlov"
+msgstr ""
+
+#: ../../announce/release-7.1.0.rst:23
+msgid "Anthony Sottile"
+msgstr ""
+
+#: ../../announce/release-7.1.0.rst:24
+msgid "Brett Holman"
+msgstr ""
+
+#: ../../announce/release-7.1.0.rst:25
+msgid "Bruno Oliveira"
+msgstr ""
+
+#: ../../announce/release-7.1.0.rst:26
+msgid "Chris NeJame"
+msgstr ""
+
+#: ../../announce/release-7.1.0.rst:27
+msgid "Dan Alvizu"
+msgstr ""
+
+#: ../../announce/release-7.1.0.rst:28
+msgid "Elijah DeLee"
+msgstr ""
+
+#: ../../announce/release-7.1.0.rst:29
+msgid "Emmanuel Arias"
+msgstr ""
+
+#: ../../announce/release-7.1.0.rst:30
+msgid "Fabian Egli"
+msgstr ""
+
+#: ../../announce/release-7.1.0.rst:31
+msgid "Florian Bruhin"
+msgstr ""
+
+#: ../../announce/release-7.1.0.rst:32
+msgid "Gabor Szabo"
+msgstr ""
+
+#: ../../announce/release-7.1.0.rst:33
+msgid "Hasan Ramezani"
+msgstr ""
+
+#: ../../announce/release-7.1.0.rst:34
+msgid "Hugo van Kemenade"
+msgstr ""
+
+#: ../../announce/release-7.1.0.rst:35
+msgid "Kian Meng, Ang"
+msgstr ""
+
+#: ../../announce/release-7.1.0.rst:36
+msgid "Kojo Idrissa"
+msgstr ""
+
+#: ../../announce/release-7.1.0.rst:37
+msgid "Masaru Tsuchiyama"
+msgstr ""
+
+#: ../../announce/release-7.1.0.rst:38
+msgid "Olga Matoula"
+msgstr ""
+
+#: ../../announce/release-7.1.0.rst:39
+msgid "Lim"
+msgstr ""
+
+#: ../../announce/release-7.1.0.rst:40
+msgid "Ran Benita"
+msgstr ""
+
+#: ../../announce/release-7.1.0.rst:41
+msgid "Tobias Deiminger"
+msgstr ""
+
+#: ../../announce/release-7.1.0.rst:42
+msgid "Yuval Shimon"
+msgstr ""
+
+#: ../../announce/release-7.1.0.rst:43
+msgid "eduardo naufel schettino"
+msgstr ""
+
+#: ../../announce/release-7.1.0.rst:44
+msgid "Éric"
+msgstr ""
+
+#: ../../announce/release-7.1.0.rst:47
+msgid "Happy testing, The pytest Development Team"
+msgstr ""
+

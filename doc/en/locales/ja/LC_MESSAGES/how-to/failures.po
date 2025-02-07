@@ -1,0 +1,160 @@
+# SOME DESCRIPTIVE TITLE.
+# Copyright (C) 2015, holger krekel and pytest-dev team
+# This file is distributed under the same license as the pytest package.
+# FIRST AUTHOR <EMAIL@ADDRESS>, 2025.
+#
+#, fuzzy
+msgid ""
+msgstr ""
+"Project-Id-Version: pytest 0.1.dev16209\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2025-02-05 00:52+0900\n"
+"PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
+"Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
+"Language: ja\n"
+"Language-Team: ja <LL@li.org>\n"
+"Plural-Forms: nplurals=1; plural=0;\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=utf-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Generated-By: Babel 2.17.0\n"
+
+#: ../../how-to/failures.rst:4
+msgid "How to handle test failures"
+msgstr "テストの失敗を処理する方法"
+
+#: ../../how-to/failures.rst:9
+msgid "Stopping after the first (or N) failures"
+msgstr "最初の (または N) 回の失敗後に停止する"
+
+#: ../../how-to/failures.rst:11
+msgid "To stop the testing process after the first (N) failures:"
+msgstr "最初の (N) 回の失敗後にテストプロセスを停止するには:"
+
+#: ../../how-to/failures.rst:22
+msgid "Using :doc:`python:library/pdb` with pytest"
+msgstr "pytest で :doc:`python:library/pdb` を使用する"
+
+#: ../../how-to/failures.rst:25
+msgid "Dropping to :doc:`pdb <python:library/pdb>` on failures"
+msgstr "失敗時に :doc:`pdb <python:library/pdb>` に移行する"
+
+#: ../../how-to/failures.rst:27
+msgid "Python comes with a builtin Python debugger called :doc:`pdb <python:library/pdb>`.  ``pytest`` allows one to drop into the :doc:`pdb <python:library/pdb>` prompt via a command line option:"
+msgstr "Python には :doc:`pdb <python:library/pdb>` という組み込みの Python デバッガーが付属しています。 ``pytest`` は、コマンドラインオプションを介して :doc:`pdb <python:library/pdb>` プロンプトに移行することを可能にします:"
+
+#: ../../how-to/failures.rst:34
+msgid "This will invoke the Python debugger on every failure (or KeyboardInterrupt). Often you might only want to do this for the first failing test to understand a certain failure situation:"
+msgstr "これにより、すべての失敗 (または KeyboardInterrupt) で Python デバッガーが呼び出されます。 多くの場合、特定の失敗状況を理解するために、最初の失敗したテストに対してのみこれを行いたい場合があります:"
+
+#: ../../how-to/failures.rst:43
+msgid "Note that on any failure the exception information is stored on ``sys.last_value``, ``sys.last_type`` and ``sys.last_traceback``. In interactive use, this allows one to drop into postmortem debugging with any debug tool. One can also manually access the exception information, for example::"
+msgstr "失敗時には、例外情報が ``sys.last_value``、``sys.last_type``、``sys.last_traceback`` に保存されることに注意してください。 インタラクティブな使用では、これにより任意のデバッグツールを使用してポストモーテムデバッグに移行できます。 例外情報に手動でアクセスすることもできます。 例えば::"
+
+#: ../../how-to/failures.rst:59
+msgid "Dropping to :doc:`pdb <python:library/pdb>` at the start of a test"
+msgstr "テストの開始時に :doc:`pdb <python:library/pdb>` に移行する"
+
+#: ../../how-to/failures.rst:61
+msgid "``pytest`` allows one to drop into the :doc:`pdb <python:library/pdb>` prompt immediately at the start of each test via a command line option:"
+msgstr "``pytest`` は、コマンドラインオプションを介して各テストの開始時にすぐに :doc:`pdb <python:library/pdb>` プロンプトに移行することを可能にします:"
+
+#: ../../how-to/failures.rst:67
+msgid "This will invoke the Python debugger at the start of every test."
+msgstr "これにより、すべてのテストの開始時に Python デバッガーが呼び出されます。"
+
+#: ../../how-to/failures.rst:72
+msgid "Setting breakpoints"
+msgstr "ブレークポイントの設定"
+
+#: ../../how-to/failures.rst:76
+msgid "To set a breakpoint in your code use the native Python ``import pdb;pdb.set_trace()`` call in your code and pytest automatically disables its output capture for that test:"
+msgstr "コードにブレークポイントを設定するには、コード内でネイティブの Python ``import pdb;pdb.set_trace()`` 呼び出しを使用し、pytest はそのテストの出力キャプチャを自動的に無効にします:"
+
+#: ../../how-to/failures.rst:79
+msgid "Output capture in other tests is not affected."
+msgstr "他のテストの出力キャプチャには影響しません。"
+
+#: ../../how-to/failures.rst:80
+msgid "Any prior test output that has already been captured and will be processed as such."
+msgstr "既にキャプチャされた以前のテスト出力は、そのまま処理されます。"
+
+#: ../../how-to/failures.rst:82
+msgid "Output capture gets resumed when ending the debugger session (via the ``continue`` command)."
+msgstr "デバッガーセッションを終了すると (``continue`` コマンドを介して) 、出力キャプチャが再開されます。"
+
+#: ../../how-to/failures.rst:89
+msgid "Using the builtin breakpoint function"
+msgstr "組み込みのブレークポイント関数の使用"
+
+#: ../../how-to/failures.rst:91
+msgid "Python 3.7 introduces a builtin ``breakpoint()`` function. Pytest supports the use of ``breakpoint()`` with the following behaviours:"
+msgstr "Python 3.7 では、組み込みの ``breakpoint()`` 関数が導入されました。 Pytest は、次の動作で ``breakpoint()`` の使用をサポートします:"
+
+#: ../../how-to/failures.rst:94
+msgid "When ``breakpoint()`` is called and ``PYTHONBREAKPOINT`` is set to the default value, pytest will use the custom internal PDB trace UI instead of the system default ``Pdb``."
+msgstr "``breakpoint()`` が呼び出され、``PYTHONBREAKPOINT`` がデフォルト値に設定されている場合、pytest はシステムデフォルトの ``Pdb`` の代わりにカスタム内部 PDB トレース UI を使用します。"
+
+#: ../../how-to/failures.rst:95
+msgid "When tests are complete, the system will default back to the system ``Pdb`` trace UI."
+msgstr "テストが完了すると、システムはシステムの ``Pdb`` トレース UI に戻ります。"
+
+#: ../../how-to/failures.rst:96
+msgid "With ``--pdb`` passed to pytest, the custom internal Pdb trace UI is used with both ``breakpoint()`` and failed tests/unhandled exceptions."
+msgstr "``--pdb`` が pytest に渡されると、カスタム内部 Pdb トレース UI が ``breakpoint()`` と失敗したテスト/未処理の例外の両方で使用されます。"
+
+#: ../../how-to/failures.rst:97
+msgid "``--pdbcls`` can be used to specify a custom debugger class."
+msgstr "``--pdbcls`` を使用してカスタムデバッガークラスを指定できます。"
+
+#: ../../how-to/failures.rst:103
+msgid "Fault Handler"
+msgstr "フォールトハンドラー"
+
+#: ../../how-to/failures.rst:107
+msgid "The :mod:`faulthandler` standard module can be used to dump Python tracebacks on a segfault or after a timeout."
+msgstr ":mod:`faulthandler` 標準モジュールを使用して、セグメンテーションフォールト時やタイムアウト後に Python トレースバックをダンプできます。"
+
+#: ../../how-to/failures.rst:110
+msgid "The module is automatically enabled for pytest runs, unless the ``-p no:faulthandler`` is given on the command-line."
+msgstr "コマンドラインで ``-p no:faulthandler`` が指定されない限り、モジュールは pytest 実行時に自動的に有効になります。"
+
+#: ../../how-to/failures.rst:113
+msgid "Also the :confval:`faulthandler_timeout=X<faulthandler_timeout>` configuration option can be used to dump the traceback of all threads if a test takes longer than ``X`` seconds to finish (not available on Windows)."
+msgstr "また、テストが終了するまでに ``X`` 秒以上かかる場合、:confval:`faulthandler_timeout=X<faulthandler_timeout>` 構成オプションを使用してすべてのスレッドのトレースバックをダンプできます (Windows では使用できません) 。"
+
+#: ../../how-to/failures.rst:119
+msgid "This functionality has been integrated from the external `pytest-faulthandler <https://github.com/pytest-dev/pytest-faulthandler>`__ plugin, with two small differences:"
+msgstr "この機能は、外部の `pytest-faulthandler <https://github.com/pytest-dev/pytest-faulthandler>`__ プラグインから統合されており、2 つの小さな違いがあります:"
+
+#: ../../how-to/failures.rst:123
+msgid "To disable it, use ``-p no:faulthandler`` instead of ``--no-faulthandler``: the former can be used with any plugin, so it saves one option."
+msgstr "これを無効にするには、``--no-faulthandler`` の代わりに ``-p no:faulthandler`` を使用します。 前者は任意のプラグインで使用できるため、1 つのオプションを節約できます。"
+
+#: ../../how-to/failures.rst:126
+msgid "The ``--faulthandler-timeout`` command-line option has become the :confval:`faulthandler_timeout` configuration option. It can still be configured from the command-line using ``-o faulthandler_timeout=X``."
+msgstr "``--faulthandler-timeout`` コマンドラインオプションは :confval:`faulthandler_timeout` 構成オプションになりました。 コマンドラインから ``-o faulthandler_timeout=X`` を使用して構成することもできます。"
+
+#: ../../how-to/failures.rst:134
+msgid "Warning about unraisable exceptions and unhandled thread exceptions"
+msgstr "発生しない例外と未処理のスレッド例外に関する警告"
+
+#: ../../how-to/failures.rst:138
+msgid "Unhandled exceptions are exceptions that are raised in a situation in which they cannot propagate to a caller. The most common case is an exception raised in a :meth:`__del__ <object.__del__>` implementation."
+msgstr "未処理の例外は、呼び出し元に伝播できない状況で発生する例外です。 最も一般的なケースは、:meth:`__del__ <object.__del__>` 実装で発生する例外です。"
+
+#: ../../how-to/failures.rst:142
+msgid "Unhandled thread exceptions are exceptions raised in a :class:`~threading.Thread` but not handled, causing the thread to terminate uncleanly."
+msgstr "未処理のスレッド例外は、:class:`~threading.Thread` で発生するが処理されない例外であり、スレッドが不正に終了する原因となります。"
+
+#: ../../how-to/failures.rst:145
+msgid "Both types of exceptions are normally considered bugs, but may go unnoticed because they don't cause the program itself to crash. Pytest detects these conditions and issues a warning that is visible in the test run summary."
+msgstr "両方のタイプの例外は通常バグと見なされますが、プログラム自体がクラッシュしないため見逃されることがあります。 Pytest はこれらの条件を検出し、テスト実行の概要に表示される警告を発行します。"
+
+#: ../../how-to/failures.rst:149
+msgid "The plugins are automatically enabled for pytest runs, unless the ``-p no:unraisableexception`` (for unraisable exceptions) and ``-p no:threadexception`` (for thread exceptions) options are given on the command-line."
+msgstr "コマンドラインで ``-p no:unraisableexception`` (発生しない例外用) および ``-p no:threadexception`` (スレッド例外用) オプションが指定されない限り、プラグインは pytest 実行時に自動的に有効になります。"
+
+#: ../../how-to/failures.rst:154
+msgid "The warnings may be silenced selectively using the :ref:`pytest.mark.filterwarnings ref` mark. The warning categories are :class:`pytest.PytestUnraisableExceptionWarning` and :class:`pytest.PytestUnhandledThreadExceptionWarning`."
+msgstr "警告は、:ref:`pytest.mark.filterwarnings ref` マークを使用して選択的に無効にすることができます。 警告カテゴリは :class:`pytest.PytestUnraisableExceptionWarning` および :class:`pytest.PytestUnhandledThreadExceptionWarning` です。"

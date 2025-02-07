@@ -1,0 +1,49 @@
+# SOME DESCRIPTIVE TITLE.
+# Copyright (C) 2015, holger krekel and pytest-dev team
+# This file is distributed under the same license as the pytest package.
+# FIRST AUTHOR <EMAIL@ADDRESS>, 2025.
+#
+#, fuzzy
+msgid ""
+msgstr ""
+"Project-Id-Version: pytest 0.1.dev16209\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2025-02-05 00:52+0900\n"
+"PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
+"Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
+"Language: ja\n"
+"Language-Team: ja <LL@li.org>\n"
+"Plural-Forms: nplurals=1; plural=0;\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=utf-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Generated-By: Babel 2.17.0\n"
+
+#: ../../sponsor.rst:2
+msgid "Sponsor"
+msgstr "スポンサー"
+
+#: ../../sponsor.rst:4
+msgid "pytest is maintained by a team of volunteers from all around the world in their free time. While we work on pytest because we love the project and use it daily at our daily jobs, monetary compensation when possible is welcome to justify time away from friends, family and personal time."
+msgstr "pytest は、世界中のボランティアチームによって自由時間に維持されています。 私たちはこのプロジェクトが好きで、日常の仕事でも毎日使用しているため pytest に取り組んでいますが、可能であれば金銭的な補償を受けることで、友人や家族、個人の時間から離れることを正当化できます。"
+
+#: ../../sponsor.rst:8
+msgid "Money is also used to fund local sprints, merchandising (stickers to distribute in conferences for example) and every few years a large sprint involving all members."
+msgstr "資金は、ローカルスプリント、マーチャンダイジング（例えば、会議で配布するステッカー）および数年ごとに全メンバーが参加する大規模なスプリントの資金にも使用されます。"
+
+#: ../../sponsor.rst:12
+msgid "OpenCollective"
+msgstr "オープンコレクティブ"
+
+#: ../../sponsor.rst:14
+msgid "`Open Collective`_ is an online funding platform for open and transparent communities. It provide tools to raise money and share your finances in full transparency."
+msgstr "`Open Collective`_ は、オープンで透明なコミュニティのためのオンライン資金調達プラットフォームです。 資金を調達し、財務を完全に透明に共有するためのツールを提供します。"
+
+#: ../../sponsor.rst:17
+msgid "It is the platform of choice for individuals and companies that want to make one-time or monthly donations directly to the project."
+msgstr "これは、プロジェクトに直接一度または毎月の寄付を行いたい個人や企業にとって最適なプラットフォームです。"
+
+#: ../../sponsor.rst:20
+msgid "See more details in the `pytest collective`_."
+msgstr "`pytest collective`_ の詳細をご覧ください。"
+

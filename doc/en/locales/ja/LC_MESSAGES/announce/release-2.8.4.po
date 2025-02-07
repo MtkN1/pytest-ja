@@ -1,0 +1,81 @@
+# SOME DESCRIPTIVE TITLE.
+# Copyright (C) 2015, holger krekel and pytest-dev team
+# This file is distributed under the same license as the pytest package.
+# FIRST AUTHOR <EMAIL@ADDRESS>, 2025.
+#
+#, fuzzy
+msgid ""
+msgstr ""
+"Project-Id-Version: pytest 0.1.dev16209\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2025-02-05 00:52+0900\n"
+"PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
+"Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
+"Language: ja\n"
+"Language-Team: ja <LL@li.org>\n"
+"Plural-Forms: nplurals=1; plural=0;\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=utf-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Generated-By: Babel 2.17.0\n"
+
+#: ../../announce/release-2.8.4.rst:2
+msgid "pytest-2.8.4"
+msgstr ""
+
+#: ../../announce/release-2.8.4.rst:4
+msgid "pytest is a mature Python testing tool with more than 1100 tests against itself, passing on many different interpreters and platforms. This release is supposed to be drop-in compatible to 2.8.2."
+msgstr ""
+
+#: ../../announce/release-2.8.4.rst:8
+msgid "See below for the changes and see docs at:"
+msgstr ""
+
+#: ../../announce/release-2.8.4.rst:10
+msgid "http://pytest.org"
+msgstr ""
+
+#: ../../announce/release-2.8.4.rst:12
+msgid "As usual, you can upgrade from pypi via::"
+msgstr ""
+
+#: ../../announce/release-2.8.4.rst:16
+msgid "Thanks to all who contributed to this release, among them:"
+msgstr ""
+
+#: ../../announce/release-2.8.4.rst:18
+msgid "Bruno Oliveira Florian Bruhin Jeff Widman Mehdy Khoshnoody Nicholas Chammas Ronny Pfannschmidt Tim Chan"
+msgstr ""
+
+#: ../../announce/release-2.8.4.rst:27
+msgid "Happy testing, The py.test Development Team"
+msgstr ""
+
+#: ../../announce/release-2.8.4.rst:32
+msgid "2.8.4 (compared to 2.8.3)"
+msgstr ""
+
+#: ../../announce/release-2.8.4.rst:34
+msgid "fix #1190: ``deprecated_call()`` now works when the deprecated function has been already called by another test in the same module. Thanks Mikhail Chernykh for the report and Bruno Oliveira for the PR."
+msgstr ""
+
+#: ../../announce/release-2.8.4.rst:39
+msgid "fix #1198: ``--pastebin`` option now works on Python 3. Thanks Mehdy Khoshnoody for the PR."
+msgstr ""
+
+#: ../../announce/release-2.8.4.rst:42
+msgid "fix #1219: ``--pastebin`` now works correctly when captured output contains non-ascii characters. Thanks Bruno Oliveira for the PR."
+msgstr ""
+
+#: ../../announce/release-2.8.4.rst:45
+msgid "fix #1204: another error when collecting with a nasty __getattr__(). Thanks Florian Bruhin for the PR."
+msgstr ""
+
+#: ../../announce/release-2.8.4.rst:48
+msgid "fix the summary printed when no tests did run. Thanks Florian Bruhin for the PR."
+msgstr ""
+
+#: ../../announce/release-2.8.4.rst:51
+msgid "a number of documentation modernizations wrt good practices. Thanks Bruno Oliveira for the PR."
+msgstr ""
+

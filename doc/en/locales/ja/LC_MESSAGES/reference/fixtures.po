@@ -1,0 +1,421 @@
+# SOME DESCRIPTIVE TITLE.
+# Copyright (C) 2015, holger krekel and pytest-dev team
+# This file is distributed under the same license as the pytest package.
+# FIRST AUTHOR <EMAIL@ADDRESS>, 2025.
+#
+#, fuzzy
+msgid ""
+msgstr ""
+"Project-Id-Version: pytest 0.1.dev16209\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2025-02-05 00:52+0900\n"
+"PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
+"Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
+"Language: ja\n"
+"Language-Team: ja <LL@li.org>\n"
+"Plural-Forms: nplurals=1; plural=0;\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=utf-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Generated-By: Babel 2.17.0\n"
+
+#: ../../reference/fixtures.rst:9
+msgid "Fixtures reference"
+msgstr "フィクスチャのリファレンス"
+
+#: ../../reference/fixtures.rst:11
+msgid ":ref:`about-fixtures`"
+msgstr ":ref:`フィクスチャについて <about-fixtures>`"
+
+#: ../../reference/fixtures.rst:12
+msgid ":ref:`how-to-fixtures`"
+msgstr ":ref:`フィクスチャの使い方 <how-to-fixtures>`"
+
+#: ../../reference/fixtures.rst:18
+msgid "Built-in fixtures"
+msgstr "組み込みフィクスチャ"
+
+#: ../../reference/fixtures.rst:20
+msgid ":ref:`Fixtures <fixtures-api>` are defined using the :ref:`@pytest.fixture <pytest.fixture-api>` decorator. Pytest has several useful built-in fixtures:"
+msgstr ":ref:`フィクスチャ <fixtures-api>` は :ref:`@pytest.fixture <pytest.fixture-api>` デコレータを使用して定義されます。 Pytest にはいくつかの便利な組み込みフィクスチャがあります:"
+
+#: ../../reference/fixtures.rst:23
+msgid ":fixture:`capfd`"
+msgstr ":fixture:`capfd`"
+
+#: ../../reference/fixtures.rst:24
+msgid "Capture, as text, output to file descriptors ``1`` and ``2``."
+msgstr "ファイルディスクリプタ 1 と 2 に出力されるテキストをキャプチャします。"
+
+#: ../../reference/fixtures.rst:26
+msgid ":fixture:`capfdbinary`"
+msgstr ":fixture:`capfdbinary`"
+
+#: ../../reference/fixtures.rst:27
+msgid "Capture, as bytes, output to file descriptors ``1`` and ``2``."
+msgstr "ファイルディスクリプタ 1 と 2 に出力されるバイトをキャプチャします。"
+
+#: ../../reference/fixtures.rst:29
+msgid ":fixture:`caplog`"
+msgstr ":fixture:`caplog`"
+
+#: ../../reference/fixtures.rst:30
+msgid "Control logging and access log entries."
+msgstr "ログの制御とログエントリへのアクセス。"
+
+#: ../../reference/fixtures.rst:32
+msgid ":fixture:`capsys`"
+msgstr ":fixture:`capsys`"
+
+#: ../../reference/fixtures.rst:33
+msgid "Capture, as text, output to ``sys.stdout`` and ``sys.stderr``."
+msgstr "sys.stdout と sys.stderr に出力されるテキストをキャプチャします。"
+
+#: ../../reference/fixtures.rst:35
+msgid ":fixture:`capsysbinary`"
+msgstr ":fixture:`capsysbinary`"
+
+#: ../../reference/fixtures.rst:36
+msgid "Capture, as bytes, output to ``sys.stdout`` and ``sys.stderr``."
+msgstr "sys.stdout と sys.stderr に出力されるバイトをキャプチャします。"
+
+#: ../../reference/fixtures.rst:38
+msgid ":fixture:`cache`"
+msgstr ":fixture:`cache`"
+
+#: ../../reference/fixtures.rst:39
+msgid "Store and retrieve values across pytest runs."
+msgstr "pytest の実行間で値を保存および取得します。"
+
+#: ../../reference/fixtures.rst:41
+msgid ":fixture:`doctest_namespace`"
+msgstr ":fixture:`doctest_namespace`"
+
+#: ../../reference/fixtures.rst:42
+msgid "Provide a dict injected into the doctests namespace."
+msgstr "doctest の名前空間に挿入される dict を提供します。"
+
+#: ../../reference/fixtures.rst:44
+msgid ":fixture:`monkeypatch`"
+msgstr ":fixture:`monkeypatch`"
+
+#: ../../reference/fixtures.rst:45
+msgid "Temporarily modify classes, functions, dictionaries, ``os.environ``, and other objects."
+msgstr "クラス、関数、辞書、os.environ などのオブジェクトを一時的に変更します。"
+
+#: ../../reference/fixtures.rst:48
+msgid ":fixture:`pytestconfig`"
+msgstr ":fixture:`pytestconfig`"
+
+#: ../../reference/fixtures.rst:49
+msgid "Access to configuration values, pluginmanager and plugin hooks."
+msgstr "設定値、pluginmanager、およびプラグインフックへのアクセス。"
+
+#: ../../reference/fixtures.rst:51
+msgid ":fixture:`record_property`"
+msgstr ":fixture:`record_property`"
+
+#: ../../reference/fixtures.rst:52
+msgid "Add extra properties to the test."
+msgstr "テストに追加のプロパティを追加します。"
+
+#: ../../reference/fixtures.rst:54
+msgid ":fixture:`record_testsuite_property`"
+msgstr ":fixture:`record_testsuite_property`"
+
+#: ../../reference/fixtures.rst:55
+msgid "Add extra properties to the test suite."
+msgstr "テストスイートに追加のプロパティを追加します。"
+
+#: ../../reference/fixtures.rst:57
+msgid ":fixture:`recwarn`"
+msgstr ":fixture:`recwarn`"
+
+#: ../../reference/fixtures.rst:58
+msgid "Record warnings emitted by test functions."
+msgstr "テスト関数によって発行された警告を記録します。"
+
+#: ../../reference/fixtures.rst:60
+msgid ":fixture:`request`"
+msgstr ":fixture:`request`"
+
+#: ../../reference/fixtures.rst:61
+msgid "Provide information on the executing test function."
+msgstr "実行中のテスト関数に関する情報を提供します。"
+
+#: ../../reference/fixtures.rst:63
+msgid ":fixture:`testdir`"
+msgstr ":fixture:`testdir`"
+
+#: ../../reference/fixtures.rst:64
+msgid "Provide a temporary test directory to aid in running, and testing, pytest plugins."
+msgstr "pytest プラグインの実行とテストを支援するための一時的なテストディレクトリを提供します。"
+
+#: ../../reference/fixtures.rst:67
+msgid ":fixture:`tmp_path`"
+msgstr ":fixture:`tmp_path`"
+
+#: ../../reference/fixtures.rst:68
+msgid "Provide a :class:`pathlib.Path` object to a temporary directory which is unique to each test function."
+msgstr "各テスト関数に固有の一時ディレクトリへの :class:`pathlib.Path` オブジェクトを提供します。"
+
+#: ../../reference/fixtures.rst:71
+msgid ":fixture:`tmp_path_factory`"
+msgstr ":fixture:`tmp_path_factory`"
+
+#: ../../reference/fixtures.rst:72
+msgid "Make session-scoped temporary directories and return :class:`pathlib.Path` objects."
+msgstr "セッションスコープの一時ディレクトリを作成し、:class:`pathlib.Path` オブジェクトを返します。"
+
+#: ../../reference/fixtures.rst:75
+msgid ":fixture:`tmpdir`"
+msgstr ":fixture:`tmpdir`"
+
+#: ../../reference/fixtures.rst:76
+msgid "Provide a `py.path.local <https://py.readthedocs.io/en/latest/path.html>`_ object to a temporary directory which is unique to each test function; replaced by :fixture:`tmp_path`."
+msgstr "各テスト関数に固有の一時ディレクトリへの py.path.local オブジェクトを提供します。 :fixture:`tmp_path` に置き換えられました。"
+
+#: ../../reference/fixtures.rst:80
+msgid ":fixture:`tmpdir_factory`"
+msgstr ":fixture:`tmpdir_factory`"
+
+#: ../../reference/fixtures.rst:81
+msgid "Make session-scoped temporary directories and return ``py.path.local`` objects; replaced by :fixture:`tmp_path_factory`."
+msgstr "セッションスコープの一時ディレクトリを作成し、py.path.local オブジェクトを返します。 :fixture:`tmp_path_factory` に置き換えられました。"
+
+#: ../../reference/fixtures.rst:90
+msgid "Fixture availability"
+msgstr "フィクスチャの利用可能性"
+
+#: ../../reference/fixtures.rst:92
+msgid "Fixture availability is determined from the perspective of the test. A fixture is only available for tests to request if they are in the scope that fixture is defined in. If a fixture is defined inside a class, it can only be requested by tests inside that class. But if a fixture is defined inside the global scope of the module, then every test in that module, even if it's defined inside a class, can request it."
+msgstr "フィクスチャの利用可能性はテストの視点から決定されます。 フィクスチャは、そのフィクスチャが定義されているスコープ内にある場合にのみ、テストでリクエストできます。 フィクスチャがクラス内に定義されている場合、そのクラス内のテストでのみリクエストできます。 しかし、フィクスチャがモジュールのグローバルスコープ内に定義されている場合、そのモジュール内のすべてのテスト (クラス内に定義されている場合でも) でリクエストできます。"
+
+#: ../../reference/fixtures.rst:99
+msgid "Similarly, a test can also only be affected by an autouse fixture if that test is in the same scope that autouse fixture is defined in (see :ref:`autouse order`)."
+msgstr "同様に、テストはそのテストが定義されているスコープ内にある場合にのみ、自動使用フィクスチャの影響を受けることができます (:ref:`autouse order` を参照)。"
+
+#: ../../reference/fixtures.rst:103
+msgid "A fixture can also request any other fixture, no matter where it's defined, so long as the test requesting them can see all fixtures involved."
+msgstr "フィクスチャは、テストが関与するすべてのフィクスチャを参照できる限り、どこに定義されていても他のフィクスチャをリクエストできます。"
+
+#: ../../reference/fixtures.rst:106
+msgid "For example, here's a test file with a fixture (``outer``) that requests a fixture (``inner``) from a scope it wasn't defined in:"
+msgstr "例えば、スコープ外のフィクスチャ (inner) をリクエストするフィクスチャ (outer) を含むテストファイルは次のようになります:"
+
+#: ../../reference/fixtures.rst:111
+msgid "From the tests' perspectives, they have no problem seeing each of the fixtures they're dependent on:"
+msgstr "テストの視点から見ると、依存している各フィクスチャを問題なく参照できます:"
+
+#: ../../reference/fixtures.rst:117
+msgid "So when they run, ``outer`` will have no problem finding ``inner``, because pytest searched from the tests' perspectives."
+msgstr "したがって、テストが実行されるとき、pytest はテストの視点から検索するため、outer は inner を問題なく見つけることができます。"
+
+#: ../../reference/fixtures.rst:121
+msgid "The scope a fixture is defined in has no bearing on the order it will be instantiated in: the order is mandated by the logic described :ref:`here <fixture order>`."
+msgstr "フィクスチャが定義されているスコープは、そのインスタンス化の順序には影響しません。 順序は :ref:`こちら <fixture order>` で説明されているロジックによって決定されます"
+
+#: ../../reference/fixtures.rst:126
+msgid "``conftest.py``: sharing fixtures across multiple files"
+msgstr "conftest.py: 複数のファイル間でフィクスチャを共有する"
+
+#: ../../reference/fixtures.rst:128
+msgid "The ``conftest.py`` file serves as a means of providing fixtures for an entire directory. Fixtures defined in a ``conftest.py`` can be used by any test in that package without needing to import them (pytest will automatically discover them)."
+msgstr "conftest.py ファイルは、ディレクトリ全体にフィクスチャを提供する手段として機能します。 conftest.py に定義されたフィクスチャは、そのパッケージ内の任意のテストでインポートすることなく使用できます (pytest が自動的にそれらを検出します)。"
+
+#: ../../reference/fixtures.rst:133
+msgid "You can have multiple nested directories/packages containing your tests, and each directory can have its own ``conftest.py`` with its own fixtures, adding on to the ones provided by the ``conftest.py`` files in parent directories."
+msgstr "複数のネストされたディレクトリ/パッケージにテストを含めることができ、各ディレクトリには独自のフィクスチャを持つ独自の conftest.py を持つことができ、親ディレクトリの conftest.py ファイルによって提供されるフィクスチャに追加されます。"
+
+#: ../../reference/fixtures.rst:137
+msgid "For example, given a test file structure like this:"
+msgstr "例えば、次のようなテストファイル構造がある場合:"
+
+#: ../../reference/fixtures.rst:189
+msgid "The boundaries of the scopes can be visualized like this:"
+msgstr "スコープの境界は次のように視覚化できます:"
+
+#: ../../reference/fixtures.rst:194
+msgid "The directories become their own sort of scope where fixtures that are defined in a ``conftest.py`` file in that directory become available for that whole scope."
+msgstr "ディレクトリはそれ自体がスコープの一種となり、そのディレクトリ内の ``conftest.py`` ファイルに定義されたフィクスチャがそのスコープ全体で利用可能になります。"
+
+#: ../../reference/fixtures.rst:198
+msgid "Tests are allowed to search upward (stepping outside a circle) for fixtures, but can never go down (stepping inside a circle) to continue their search. So ``tests/subpackage/test_subpackage.py::test_order`` would be able to find the ``innermost`` fixture defined in ``tests/subpackage/test_subpackage.py``, but the one defined in ``tests/test_top.py`` would be unavailable to it because it would have to step down a level (step inside a circle) to find it."
+msgstr "テストはフィクスチャを探すために上方向 (円の外側) に検索することが許可されていますが、下方向 (円の内側) に検索を続けることはできません。 したがって、``tests/subpackage/test_subpackage.py::test_order`` は ``tests/subpackage/test_subpackage.py`` に定義された ``innermost`` フィクスチャを見つけることができますが、``tests/test_top.py`` に定義されたフィクスチャは見つけることができません。"
+
+#: ../../reference/fixtures.rst:205
+msgid "The first fixture the test finds is the one that will be used, so :ref:`fixtures can be overridden <override fixtures>` if you need to change or extend what one does for a particular scope."
+msgstr "テストが最初に見つけたフィクスチャが使用されるため、特定のスコープに対してフィクスチャを変更または拡張する必要がある場合は、:ref:`フィクスチャをオーバーライドする <override fixtures>` ことができます。"
+
+#: ../../reference/fixtures.rst:209
+msgid "You can also use the ``conftest.py`` file to implement :ref:`local per-directory plugins <conftest.py plugins>`."
+msgstr "また、``conftest.py`` ファイルを使用して :ref:`ローカルなディレクトリごとのプラグイン <conftest.py plugins>` を実装することもできます。"
+
+#: ../../reference/fixtures.rst:213
+msgid "Fixtures from third-party plugins"
+msgstr "サードパーティプラグインからのフィクスチャ"
+
+#: ../../reference/fixtures.rst:215
+msgid "Fixtures don't have to be defined in this structure to be available for tests, though. They can also be provided by third-party plugins that are installed, and this is how many pytest plugins operate. As long as those plugins are installed, the fixtures they provide can be requested from anywhere in your test suite."
+msgstr "ただし、フィクスチャはこの構造で定義されていなくてもテストで利用可能です。 サードパーティプラグインによって提供されることもあり、多くの pytest プラグインがこの方法で動作します。 これらのプラグインがインストールされている限り、それらが提供するフィクスチャはテストスイートのどこからでもリクエストできます。"
+
+#: ../../reference/fixtures.rst:220
+msgid "Because they're provided from outside the structure of your test suite, third-party plugins don't really provide a scope like `conftest.py` files and the directories in your test suite do. As a result, pytest will search for fixtures stepping out through scopes as explained previously, only reaching fixtures defined in plugins *last*."
+msgstr "これらのフィクスチャはテストスイートの構造外から提供されるため、サードパーティプラグインは `conftest.py` ファイルやテストスイート内のディレクトリのようなスコープを実際には提供しません。 その結果、pytest は前述のようにスコープを通じてフィクスチャを検索し、最後にプラグインに定義されたフィクスチャに到達します。"
+
+#: ../../reference/fixtures.rst:226
+msgid "For example, given the following file structure:"
+msgstr "例えば、次のファイル構造があるとします:"
+
+#: ../../reference/fixtures.rst:263
+msgid "If ``plugin_a`` is installed and provides the fixture ``a_fix``, and ``plugin_b`` is installed and provides the fixture ``b_fix``, then this is what the test's search for fixtures would look like:"
+msgstr "``plugin_a`` がインストールされていて ``a_fix`` フィクスチャを提供し、``plugin_b`` がインストールされていて ``b_fix`` フィクスチャを提供している場合、テストのフィクスチャ検索は次のようになります:"
+
+#: ../../reference/fixtures.rst:270
+msgid "pytest will only search for ``a_fix`` and ``b_fix`` in the plugins after searching for them first in the scopes inside ``tests/``."
+msgstr "pytest は最初に ``tests/`` 内のスコープで ``a_fix`` と ``b_fix`` を検索し、その後にプラグインで検索します。"
+
+#: ../../reference/fixtures.rst:285
+msgid "Fixture instantiation order"
+msgstr "フィクスチャのインスタンス化順序"
+
+#: ../../reference/fixtures.rst:287
+msgid "When pytest wants to execute a test, once it knows what fixtures will be executed, it has to figure out the order they'll be executed in. To do this, it considers 3 factors:"
+msgstr "pytest がテストを実行しようとするとき、どのフィクスチャが実行されるかがわかると、それらが実行される順序を決定する必要があります。 これを行うために、pytest は次の3つの要素を考慮します:"
+
+#: ../../reference/fixtures.rst:291
+msgid "scope"
+msgstr "スコープ"
+
+#: ../../reference/fixtures.rst:292
+msgid "dependencies"
+msgstr "依存関係"
+
+#: ../../reference/fixtures.rst:293
+msgid "autouse"
+msgstr "自動使用"
+
+#: ../../reference/fixtures.rst:295
+msgid "Names of fixtures or tests, where they're defined, the order they're defined in, and the order fixtures are requested in have no bearing on execution order beyond coincidence. While pytest will try to make sure coincidences like these stay consistent from run to run, it's not something that should be depended on. If you want to control the order, it's safest to rely on these 3 things and make sure dependencies are clearly established."
+msgstr "フィクスチャやテストの名前、それらが定義されている場所、定義されている順序、フィクスチャがリクエストされる順序は、偶然以外の実行順序には影響しません。 pytest はこれらの偶然が実行ごとに一貫していることを確認しようとしますが、それに依存するべきではありません。 順序を制御したい場合は、これらの3つの要素に依存し、依存関係が明確に確立されていることを確認するのが最も安全です。"
+
+#: ../../reference/fixtures.rst:303
+msgid "Higher-scoped fixtures are executed first"
+msgstr "高スコープのフィクスチャが最初に実行される"
+
+#: ../../reference/fixtures.rst:305
+msgid "Within a function request for fixtures, those of higher-scopes (such as ``session``) are executed before lower-scoped fixtures (such as ``function`` or ``class``)."
+msgstr "フィクションリクエスト内では、高スコープ (例えば ``session``) のフィクスチャが低スコープ (例えば ``function`` や ``class``) のフィクスチャよりも先に実行されます。"
+
+#: ../../reference/fixtures.rst:309
+msgid "Here's an example:"
+msgstr "例を示します:"
+
+#: ../../reference/fixtures.rst:313
+msgid "The test will pass because the larger scoped fixtures are executing first."
+msgstr "テストは、より大きなスコープのフィクスチャが最初に実行されるため、成功します。"
+
+#: ../../reference/fixtures.rst:315
+msgid "The order breaks down to this:"
+msgstr "順序は次のようになります:"
+
+#: ../../reference/fixtures.rst:321
+msgid "Fixtures of the same order execute based on dependencies"
+msgstr "同じ順序のフィクスチャは依存関係に基づいて実行される"
+
+#: ../../reference/fixtures.rst:323
+msgid "When a fixture requests another fixture, the other fixture is executed first. So if fixture ``a`` requests fixture ``b``, fixture ``b`` will execute first, because ``a`` depends on ``b`` and can't operate without it. Even if ``a`` doesn't need the result of ``b``, it can still request ``b`` if it needs to make sure it is executed after ``b``."
+msgstr "フィクスチャが他のフィクスチャをリクエストすると、そのフィクスチャが最初に実行されます。 したがって、フィクスチャ ``a`` がフィクスチャ ``b`` をリクエストすると、フィクスチャ ``b`` が最初に実行されます。 なぜなら、``a`` は ``b`` に依存しており、``b`` なしでは動作できないからです。 ``a`` が ``b`` の結果を必要としない場合でも、``b`` の後に実行される必要がある場合は ``b`` をリクエストできます。"
+
+#: ../../reference/fixtures.rst:329
+msgid "For example:"
+msgstr "例えば:"
+
+#: ../../reference/fixtures.rst:333
+msgid "If we map out what depends on what, we get something that looks like this:"
+msgstr "依存関係をマッピングすると、次のようになります:"
+
+#: ../../reference/fixtures.rst:338
+msgid "The rules provided by each fixture (as to what fixture(s) each one has to come after) are comprehensive enough that it can be flattened to this:"
+msgstr "各フィクスチャが従うべきルール (各フィクスチャがどのフィクスチャの後に来る必要があるか) は包括的であり、次のようにフラット化できます:"
+
+#: ../../reference/fixtures.rst:344
+msgid "Enough information has to be provided through these requests in order for pytest to be able to figure out a clear, linear chain of dependencies, and as a result, an order of operations for a given test. If there's any ambiguity, and the order of operations can be interpreted more than one way, you should assume pytest could go with any one of those interpretations at any point."
+msgstr "pytest が明確で線形な依存関係のチェーンを把握できるようにするために、これらのリクエストを通じて十分な情報が提供される必要があります。 曖昧さがあり、操作の順序が複数の方法で解釈できる場合、pytest はその時点で任意の解釈を選択する可能性があると考えるべきです。"
+
+#: ../../reference/fixtures.rst:350
+msgid "For example, if ``d`` didn't request ``c``, i.e.the graph would look like this:"
+msgstr "例えば、``d`` が ``c`` をリクエストしなかった場合、グラフは次のようになります:"
+
+#: ../../reference/fixtures.rst:355
+msgid "Because nothing requested ``c`` other than ``g``, and ``g`` also requests ``f``, it's now unclear if ``c`` should go before/after ``f``, ``e``, or ``d``. The only rules that were set for ``c`` is that it must execute after ``b`` and before ``g``."
+msgstr "``c`` をリクエストしたのは ``g`` だけであり、``g`` は ``f`` もリクエストしているため、``c`` が ``f``、``e``、または ``d`` の前後のどこに配置されるべきかが不明確です。 ``c`` に設定された唯一のルールは、``b`` の後、``g`` の前に実行される必要があるということです。"
+
+#: ../../reference/fixtures.rst:360
+msgid "pytest doesn't know where ``c`` should go in the case, so it should be assumed that it could go anywhere between ``g`` and ``b``."
+msgstr "pytest はこの場合、``c`` がどこに配置されるべきかを知らないため、``b`` と ``g`` の間のどこにでも配置される可能性があると考えるべきです。"
+
+#: ../../reference/fixtures.rst:363
+msgid "This isn't necessarily bad, but it's something to keep in mind. If the order they execute in could affect the behavior a test is targeting, or could otherwise influence the result of a test, then the order should be defined explicitly in a way that allows pytest to linearize/\"flatten\" that order."
+msgstr "これは必ずしも悪いことではありませんが、覚えておくべきことです。 実行順序がテストのターゲットとなる動作に影響を与える可能性がある場合、またはテストの結果に影響を与える可能性がある場合は、その順序を明確に定義し、pytest がその順序を線形化/「フラット化」できるようにする必要があります。"
+
+#: ../../reference/fixtures.rst:371
+msgid "Autouse fixtures are executed first within their scope"
+msgstr "自動使用フィクスチャはそのスコープ内で最初に実行される"
+
+#: ../../reference/fixtures.rst:373
+msgid "Autouse fixtures are assumed to apply to every test that could reference them, so they are executed before other fixtures in that scope. Fixtures that are requested by autouse fixtures effectively become autouse fixtures themselves for the tests that the real autouse fixture applies to."
+msgstr "自動使用フィクスチャは、それを参照できるすべてのテストに適用されると見なされるため、そのスコープ内の他のフィクスチャよりも先に実行されます。 自動使用フィクスチャによってリクエストされたフィクスチャは、実際の自動使用フィクスチャが適用されるテストに対して自動使用フィクスチャ自体になります。"
+
+#: ../../reference/fixtures.rst:378
+msgid "So if fixture ``a`` is autouse and fixture ``b`` is not, but fixture ``a`` requests fixture ``b``, then fixture ``b`` will effectively be an autouse fixture as well, but only for the tests that ``a`` applies to."
+msgstr "したがって、フィクスチャ ``a`` が自動使用であり、フィクスチャ ``b`` がそうでない場合でも、フィクスチャ ``a`` がフィクスチャ ``b`` をリクエストすると、フィクスチャ ``b`` は実質的に自動使用フィクスチャとなりますが、``a`` が適用されるテストに対してのみです。"
+
+#: ../../reference/fixtures.rst:382
+msgid "In the last example, the graph became unclear if ``d`` didn't request ``c``. But if ``c`` was autouse, then ``b`` and ``a`` would effectively also be autouse because ``c`` depends on them. As a result, they would all be shifted above non-autouse fixtures within that scope."
+msgstr "前の例では、``d`` が ``c`` をリクエストしなかった場合、グラフは不明確になりました。 しかし、``c`` が自動使用であれば、``b`` と ``a`` も実質的に自動使用となります。 なぜなら、``c`` がそれらに依存しているからです。 その結果、それらはそのスコープ内の非自動使用フィクスチャの上にシフトされます。"
+
+#: ../../reference/fixtures.rst:387
+msgid "So if the test file looked like this:"
+msgstr "したがって、テストファイルが次のようになっている場合:"
+
+#: ../../reference/fixtures.rst:391
+msgid "the graph would look like this:"
+msgstr "グラフは次のようになります:"
+
+#: ../../reference/fixtures.rst:396
+msgid "Because ``c`` can now be put above ``d`` in the graph, pytest can once again linearize the graph to this:"
+msgstr "``c`` がグラフ内で ``d`` の上に配置できるようになったため、pytest は再びグラフを次のように線形化できます:"
+
+#: ../../reference/fixtures.rst:402
+msgid "In this example, ``c`` makes ``b`` and ``a`` effectively autouse fixtures as well."
+msgstr "この例では、``c`` が ``b`` と ``a`` を実質的に自動使用フィクスチャにします。"
+
+#: ../../reference/fixtures.rst:405
+msgid "Be careful with autouse, though, as an autouse fixture will automatically execute for every test that can reach it, even if they don't request it. For example, consider this file:"
+msgstr "ただし、自動使用には注意が必要です。 自動使用フィクスチャは、それを参照できるすべてのテストに対して自動的に実行されます。 たとえそれらがリクエストされていなくてもです。 例えば、次のファイルを考えてみてください:"
+
+#: ../../reference/fixtures.rst:411
+msgid "Even though nothing in ``TestClassWithoutC1Request`` is requesting ``c1``, it still is executed for the tests inside it anyway:"
+msgstr "``TestClassWithoutC1Request`` 内のテストは何も ``c1`` をリクエストしていないにもかかわらず、それでも実行されます:"
+
+#: ../../reference/fixtures.rst:417
+msgid "But just because one autouse fixture requested a non-autouse fixture, that doesn't mean the non-autouse fixture becomes an autouse fixture for all contexts that it can apply to. It only effectively becomes an autouse fixture for the contexts the real autouse fixture (the one that requested the non-autouse fixture) can apply to."
+msgstr "ただし、1つの自動使用フィクスチャが非自動使用フィクスチャをリクエストしたからといって、その非自動使用フィクスチャがそれが適用されるすべてのコンテキストに対して自動使用フィクスチャになるわけではありません。 それは、実際の自動使用フィクスチャ (非自動使用フィクスチャをリクエストしたもの) が適用されるコンテキストに対してのみ実質的に自動使用フィクスチャになります。"
+
+#: ../../reference/fixtures.rst:423
+msgid "For example, take a look at this test file:"
+msgstr "例えば、次のテストファイルを見てみましょう:"
+
+#: ../../reference/fixtures.rst:427
+msgid "It would break down to something like this:"
+msgstr "次のように分解されます:"
+
+#: ../../reference/fixtures.rst:432
+msgid "For ``test_req`` and ``test_no_req`` inside ``TestClassWithAutouse``, ``c3`` effectively makes ``c2`` an autouse fixture, which is why ``c2`` and ``c3`` are executed for both tests, despite not being requested, and why ``c2`` and ``c3`` are executed before ``c1`` for ``test_req``."
+msgstr "``TestClassWithAutouse`` 内の ``test_req`` と ``test_no_req`` に対して、``c3`` は ``c2`` を実質的に自動使用フィクスチャにします。 これが、``c2`` と ``c3`` がリクエストされていないにもかかわらず両方のテストで実行される理由であり、``test_req`` に対して ``c1`` の前に ``c2`` と ``c3`` が実行される理由です。"
+
+#: ../../reference/fixtures.rst:437
+msgid "If this made ``c2`` an *actual* autouse fixture, then ``c2`` would also execute for the tests inside ``TestClassWithoutAutouse``, since they can reference ``c2`` if they wanted to. But it doesn't, because from the perspective of the ``TestClassWithoutAutouse`` tests, ``c2`` isn't an autouse fixture, since they can't see ``c3``."
+msgstr "これが ``c2`` を *実際の* 自動使用フィクスチャにした場合、``TestClassWithoutAutouse`` 内のテストに対しても ``c2`` が実行されます。 なぜなら、それらが ``c2`` を参照できるからです。 しかし、そうではありません。 なぜなら、``TestClassWithoutAutouse`` のテストの観点からは、``c2`` は自動使用フィクスチャではないからです。 なぜなら、それらは ``c3`` を見ることができないからです。"
+

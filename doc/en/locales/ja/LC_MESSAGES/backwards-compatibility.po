@@ -1,0 +1,214 @@
+# SOME DESCRIPTIVE TITLE.
+# Copyright (C) 2015, holger krekel and pytest-dev team
+# This file is distributed under the same license as the pytest package.
+# FIRST AUTHOR <EMAIL@ADDRESS>, 2025.
+#
+#, fuzzy
+msgid ""
+msgstr ""
+"Project-Id-Version: pytest 0.1.dev16209\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2025-02-05 00:52+0900\n"
+"PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
+"Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
+"Language: ja\n"
+"Language-Team: ja <LL@li.org>\n"
+"Plural-Forms: nplurals=1; plural=0;\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=utf-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Generated-By: Babel 2.17.0\n"
+
+#: ../../backwards-compatibility.rst:4
+msgid "Backwards Compatibility Policy"
+msgstr "後方互換性ポリシー"
+
+#: ../../backwards-compatibility.rst:8
+msgid "Pytest is an actively evolving project that has been decades in the making. We keep learning about new and better structures to express different details about testing."
+msgstr "Pytest は、数十年にわたって作られてきた積極的に進化しているプロジェクトです。 私たちは、テストに関するさまざまな詳細を表現するための新しく、より良い構造について学び続けています。"
+
+#: ../../backwards-compatibility.rst:11
+msgid "While we implement those modifications, we try to ensure an easy transition and don't want to impose unnecessary churn on our users and community/plugin authors."
+msgstr "これらの変更を実装する際には、スムーズな移行を確保し、ユーザーやコミュニティ/プラグイン作成者に不必要な混乱を与えないように努めています。"
+
+#: ../../backwards-compatibility.rst:13
+msgid "As of now, pytest considers multiple types of backward compatibility transitions:"
+msgstr "現在、pytest は複数の種類の後方互換性の移行を考慮しています。"
+
+#: ../../backwards-compatibility.rst:15
+msgid "trivial: APIs that trivially translate to the new mechanism and do not cause problematic changes."
+msgstr "些細なもの: 新しいメカニズムに簡単に変換され、問題のある変更を引き起こさない API。"
+
+#: ../../backwards-compatibility.rst:17
+msgid "We try to support those indefinitely while encouraging users to switch to newer or better mechanisms through documentation."
+msgstr "私たちは、ユーザーがドキュメントを通じて新しい、またはより良いメカニズムに切り替えることを奨励しながら、それらを無期限にサポートしようとしています。"
+
+#: ../../backwards-compatibility.rst:19
+msgid "transitional: the old and new APIs don't conflict, and we can help users transition by using warnings while supporting both for a prolonged period of time."
+msgstr "移行期間: 古い API と新しい API が競合せず、両方を長期間サポートしながら警告を使用してユーザーの移行を支援できます。"
+
+#: ../../backwards-compatibility.rst:21
+msgid "We will only start the removal of deprecated functionality in major releases (e.g., if we deprecate something in 3.0, we will start to remove it in 4.0), and keep it around for at least two minor releases (e.g., if we deprecate something in 3.9 and 4.0 is the next release, we start to remove it in 5.0, not in 4.0)."
+msgstr "非推奨の機能の削除はメジャーリリースでのみ開始し (例: 3.0 で非推奨にしたものは 4.0 で削除を開始)、少なくとも 2 回のマイナーリリースの間は保持します (例: 3.9 で非推奨にしたものは次のリリースが 4.0 であっても 5.0 で削除を開始し、4.0 では削除しません)。"
+
+#: ../../backwards-compatibility.rst:23
+msgid "A deprecated feature scheduled to be removed in major version X will use the warning class `PytestRemovedInXWarning` (a subclass of :class:`~pytest.PytestDeprecationWarning`)."
+msgstr "メジャーバージョン X で削除予定の非推奨機能は、警告クラス `PytestRemovedInXWarning` (:class:`~pytest.PytestDeprecationWarning` のサブクラス) を使用します。"
+
+#: ../../backwards-compatibility.rst:25
+msgid "When the deprecation expires (e.g., 4.0 is released), we won't remove the deprecated functionality immediately but will use the standard warning filters to turn `PytestRemovedInXWarning` (e.g., `PytestRemovedIn4Warning`) into **errors** by default. This approach makes it explicit that removal is imminent and still gives you time to turn the deprecated feature into a warning instead of an error so it can be dealt with in your own time. In the next minor release (e.g., 4.1), the feature will be effectively removed."
+msgstr "非推奨期間が終了したとき (例: 4.0 がリリースされたとき)、非推奨機能をすぐに削除するのではなく、標準の警告フィルタを使用して `PytestRemovedInXWarning` (例: `PytestRemovedIn4Warning`) をデフォルトで **エラー** に変えます。 このアプローチにより、削除が差し迫っていることが明示され、非推奨機能をエラーではなく警告に変える時間が与えられます。 次のマイナーリリース (例: 4.1) で、その機能は実質的に削除されます。"
+
+#: ../../backwards-compatibility.rst:27
+msgid "True breakage should only be considered when a normal transition is unreasonably unsustainable and would offset important developments or features by years. In addition, they should be limited to APIs where the number of actual users is very small (for example, only impacting some plugins) and can be coordinated with the community in advance."
+msgstr "通常の移行が不合理に持続不可能であり、重要な開発や機能を数年遅らせる場合にのみ、真の破損を考慮する必要があります。 さらに、実際のユーザー数が非常に少ない API (例えば、一部のプラグインにのみ影響するもの) に限定され、事前にコミュニティと調整できる必要があります。"
+
+#: ../../backwards-compatibility.rst:29
+msgid "Examples for such upcoming changes:"
+msgstr "このような今後の変更の例:"
+
+#: ../../backwards-compatibility.rst:31
+msgid "removal of ``pytest_runtest_protocol/nextitem`` - :issue:`895`"
+msgstr "``pytest_runtest_protocol/nextitem`` の削除 - :issue:`895`"
+
+#: ../../backwards-compatibility.rst:32
+msgid "rearranging of the node tree to include ``FunctionDefinition``"
+msgstr "``FunctionDefinition`` を含むようにノードツリーの再配置"
+
+#: ../../backwards-compatibility.rst:33
+msgid "rearranging of ``SetupState`` :issue:`895`"
+msgstr "``SetupState`` の再配置 :issue:`895`"
+
+#: ../../backwards-compatibility.rst:35
+msgid "True breakages must be announced first in an issue containing:"
+msgstr "真の破損は、まず次の内容を含む issue で発表する必要があります:"
+
+#: ../../backwards-compatibility.rst:37
+msgid "Detailed description of the change"
+msgstr "変更の詳細な説明"
+
+#: ../../backwards-compatibility.rst:38
+msgid "Rationale"
+msgstr "根拠"
+
+#: ../../backwards-compatibility.rst:39
+msgid "Expected impact on users and plugin authors (example in :issue:`895`)"
+msgstr "ユーザーおよびプラグイン作成者への予想される影響 (:issue:`895` の例)"
+
+#: ../../backwards-compatibility.rst:41
+msgid "After there's no hard *-1* on the issue it should be followed up by an initial proof-of-concept Pull Request."
+msgstr "issue に対して強い反対 (*-1*) がない場合、最初の概念実証プルリクエストを続ける必要があります。"
+
+#: ../../backwards-compatibility.rst:43
+msgid "This POC serves as both a coordination point to assess impact and potential inspiration to come up with a transitional solution after all."
+msgstr "この POC は、影響を評価し、最終的に移行ソリューションを考案するための調整ポイントとして機能します。"
+
+#: ../../backwards-compatibility.rst:45
+msgid "After a reasonable amount of time the PR can be merged to base a new major release."
+msgstr "合理的な期間の後、PR をマージして新しいメジャーリリースの基礎とすることができます。"
+
+#: ../../backwards-compatibility.rst:47
+msgid "For the PR to mature from POC to acceptance, it must contain: * Setup of deprecation errors/warnings that help users fix and port their code. If it is possible to introduce a deprecation period under the current series, before the true breakage, it should be introduced in a separate PR and be part of the current release stream. * Detailed description of the rationale and examples on how to port code in ``doc/en/deprecations.rst``."
+msgstr "PR が POC から受け入れに成熟するためには、次の内容を含む必要があります: * ユーザーがコードを修正および移植するのに役立つ非推奨エラー/警告の設定。 現在のシリーズの下で非推奨期間を導入できる場合は、真の破損の前に別の PR で導入し、現在のリリースストリームの一部とする必要があります。 * ``doc/en/deprecations.rst`` にコードを移植する方法の根拠と例の詳細な説明。"
+
+#: ../../backwards-compatibility.rst:53
+msgid "History"
+msgstr "歴史"
+
+#: ../../backwards-compatibility.rst:57
+msgid "Focus primary on smooth transition - stance (pre 6.0)"
+msgstr "スムーズな移行に主眼を置く - 姿勢 (6.0 以前)"
+
+#: ../../backwards-compatibility.rst:59
+msgid "Keeping backwards compatibility has a very high priority in the pytest project. Although we have deprecated functionality over the years, most of it is still supported. All deprecations in pytest were done because simpler or more efficient ways of accomplishing the same tasks have emerged, making the old way of doing things unnecessary."
+msgstr "後方互換性を維持することは、pytest プロジェクトにおいて非常に高い優先事項です。 長年にわたって非推奨の機能がありましたが、そのほとんどはまだサポートされています。 pytest のすべての非推奨は、同じタスクを達成するためのより簡単で効率的な方法が出現し、古い方法が不要になったために行われました。"
+
+#: ../../backwards-compatibility.rst:61
+msgid "With the pytest 3.0 release, we introduced a clear communication scheme for when we will actually remove the old busted joint and politely ask you to use the new hotness instead, while giving you enough time to adjust your tests or raise concerns if there are valid reasons to keep deprecated functionality around."
+msgstr "pytest 3.0 のリリースにより、古い壊れた部分を実際に削除し、新しいホットなものを使用するように丁寧にお願いするための明確なコミュニケーションスキームを導入しました。 また、テストを調整する時間を十分に与えたり、非推奨の機能を保持する正当な理由がある場合は懸念を提起する時間を与えたりします。"
+
+#: ../../backwards-compatibility.rst:63
+msgid "To communicate changes, we issue deprecation warnings using a custom warning hierarchy (see :ref:`internal-warnings`). These warnings may be suppressed using the standard means: ``-W`` command-line flag or ``filterwarnings`` ini options (see :ref:`warnings`), but we suggest to use these sparingly and temporarily, and heed the warnings when possible."
+msgstr "変更を伝えるために、カスタム警告階層を使用して非推奨警告を発行します (:ref:`internal-warnings` を参照)。 これらの警告は、標準の手段で抑制できます: ``-W`` コマンドラインフラグまたは ``filterwarnings`` ini オプション (参照 :ref:`warnings`) ですが、これらを節約的かつ一時的に使用し、可能な限り警告に従うことをお勧めします。"
+
+#: ../../backwards-compatibility.rst:65
+msgid "We will only start the removal of deprecated functionality in major releases (e.g. if we deprecate something in 3.0, we will start to remove it in 4.0), and keep it around for at least two minor releases (e.g. if we deprecate something in 3.9 and 4.0 is the next release, we start to remove it in 5.0, not in 4.0)."
+msgstr "非推奨の機能の削除はメジャーリリースでのみ開始し (例: 3.0 で非推奨にしたものは 4.0 で削除を開始)、少なくとも 2 回のマイナーリリースの間は保持します (例: 3.9 で非推奨にしたものは次のリリースが 4.0 であっても 5.0 で削除を開始し、4.0 では削除しません)。"
+
+#: ../../backwards-compatibility.rst:67
+msgid "When the deprecation expires (e.g. 4.0 is released), we won't remove the deprecated functionality immediately, but will use the standard warning filters to turn them into **errors** by default. This approach makes it explicit that removal is imminent, and still gives you time to turn the deprecated feature into a warning instead of an error so it can be dealt with in your own time. In the next minor release (e.g. 4.1), the feature will be effectively removed."
+msgstr "非推奨期間が終了したとき (例: 4.0 がリリースされたとき)、非推奨機能をすぐに削除するのではなく、標準の警告フィルタを使用してそれらをデフォルトで **エラー** に変えます。 このアプローチにより、削除が差し迫っていることが明示され、非推奨機能をエラーではなく警告に変える時間が与えられます。 次のマイナーリリース (例: 4.1) で、その機能は実質的に削除されます。"
+
+#: ../../backwards-compatibility.rst:71
+msgid "Deprecation Roadmap"
+msgstr "非推奨ロードマップ"
+
+#: ../../backwards-compatibility.rst:73
+msgid "Features currently deprecated and removed in previous releases can be found in :ref:`deprecations`."
+msgstr "現在非推奨となっている機能および以前のリリースで削除された機能は、:ref:`deprecations` にあります。"
+
+#: ../../backwards-compatibility.rst:75
+#, python-format
+msgid "We track future deprecation and removal of features using milestones and the `deprecation <https://github.com/pytest-dev/pytest/issues?q=label%3A%22type%3A+deprecation%22>`_ and `removal <https://github.com/pytest-dev/pytest/labels/type%3A%20removal>`_ labels on GitHub."
+msgstr "マイルストーンおよび GitHub 上の `deprecation <https://github.com/pytest-dev/pytest/issues?q=label%3A%22type%3A+deprecation%22>`_ および `removal <https://github.com/pytest-dev/pytest/labels/type%3A%20removal>`_ ラベルを使用して、将来の非推奨および機能の削除を追跡します。"
+
+#: ../../backwards-compatibility.rst:79
+msgid "Python version support"
+msgstr "Python バージョンのサポート"
+
+#: ../../backwards-compatibility.rst:81
+msgid "Released pytest versions support all Python versions that are actively maintained at the time of the release:"
+msgstr "リリースされた pytest バージョンは、リリース時に積極的にメンテナンスされているすべての Python バージョンをサポートします:"
+
+#: ../../backwards-compatibility.rst:84
+msgid "pytest version"
+msgstr "pytest バージョン"
+
+#: ../../backwards-compatibility.rst:84
+msgid "min. Python version"
+msgstr "最小 Python バージョン"
+
+#: ../../backwards-compatibility.rst:86
+msgid "8.0+"
+msgstr "8.0+"
+
+#: ../../backwards-compatibility.rst:86
+msgid "3.8+"
+msgstr "3.8+"
+
+#: ../../backwards-compatibility.rst:87
+msgid "7.1+"
+msgstr "7.1+"
+
+#: ../../backwards-compatibility.rst:87
+msgid "3.7+"
+msgstr "3.7+"
+
+#: ../../backwards-compatibility.rst:88
+msgid "6.2 - 7.0"
+msgstr "6.2 - 7.0"
+
+#: ../../backwards-compatibility.rst:88
+msgid "3.6+"
+msgstr "3.6+"
+
+#: ../../backwards-compatibility.rst:89
+msgid "5.0 - 6.1"
+msgstr "5.0 - 6.1"
+
+#: ../../backwards-compatibility.rst:89
+msgid "3.5+"
+msgstr "3.5+"
+
+#: ../../backwards-compatibility.rst:90
+msgid "3.3 - 4.6"
+msgstr "3.3 - 4.6"
+
+#: ../../backwards-compatibility.rst:90
+msgid "2.7, 3.4+"
+msgstr "2.7, 3.4+"
+
+#: ../../backwards-compatibility.rst:93
+msgid "`Status of Python Versions <https://devguide.python.org/versions/>`__."
+msgstr "`Python バージョンのステータス <https://devguide.python.org/versions/>`__。"
+

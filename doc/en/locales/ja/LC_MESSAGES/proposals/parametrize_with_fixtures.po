@@ -1,0 +1,133 @@
+# SOME DESCRIPTIVE TITLE.
+# Copyright (C) 2015, holger krekel and pytest-dev team
+# This file is distributed under the same license as the pytest package.
+# FIRST AUTHOR <EMAIL@ADDRESS>, 2025.
+#
+#, fuzzy
+msgid ""
+msgstr ""
+"Project-Id-Version: pytest 0.1.dev16209\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2025-02-05 00:52+0900\n"
+"PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
+"Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
+"Language: ja\n"
+"Language-Team: ja <LL@li.org>\n"
+"Plural-Forms: nplurals=1; plural=0;\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=utf-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Generated-By: Babel 2.17.0\n"
+
+#: ../../proposals/parametrize_with_fixtures.rst:5
+msgid "PROPOSAL: Parametrize with fixtures"
+msgstr ""
+
+#: ../../proposals/parametrize_with_fixtures.rst:9
+msgid "This document outlines a proposal around using fixtures as input of parametrized tests or fixtures."
+msgstr ""
+
+#: ../../proposals/parametrize_with_fixtures.rst:13
+msgid "Problem"
+msgstr ""
+
+#: ../../proposals/parametrize_with_fixtures.rst:15
+msgid "As a user I have functional tests that I would like to run against various scenarios."
+msgstr ""
+
+#: ../../proposals/parametrize_with_fixtures.rst:18
+msgid "In this particular example we want to generate a new project based on a cookiecutter template. We want to test default values but also data that emulates user input."
+msgstr ""
+
+#: ../../proposals/parametrize_with_fixtures.rst:22
+msgid "use default values"
+msgstr ""
+
+#: ../../proposals/parametrize_with_fixtures.rst:24
+msgid "emulate user input"
+msgstr ""
+
+#: ../../proposals/parametrize_with_fixtures.rst:26
+msgid "specify 'author'"
+msgstr ""
+
+#: ../../proposals/parametrize_with_fixtures.rst:28
+msgid "specify 'project_slug'"
+msgstr ""
+
+#: ../../proposals/parametrize_with_fixtures.rst:30
+msgid "specify 'author' and 'project_slug'"
+msgstr ""
+
+#: ../../proposals/parametrize_with_fixtures.rst:32
+msgid "This is how a functional test could look like:"
+msgstr ""
+
+#: ../../proposals/parametrize_with_fixtures.rst:75
+msgid "Issues"
+msgstr ""
+
+#: ../../proposals/parametrize_with_fixtures.rst:77
+msgid "By using ``request.getfuncargvalue()`` we rely on actual fixture function execution to know what fixtures are involved, due to its dynamic nature"
+msgstr ""
+
+#: ../../proposals/parametrize_with_fixtures.rst:79
+msgid "More importantly, ``request.getfuncargvalue()`` cannot be combined with parametrized fixtures, such as ``extra_context``"
+msgstr ""
+
+#: ../../proposals/parametrize_with_fixtures.rst:81
+msgid "This is very inconvenient if you wish to extend an existing test suite by certain parameters for fixtures that are already used by tests"
+msgstr ""
+
+#: ../../proposals/parametrize_with_fixtures.rst:84
+msgid "pytest version 3.0 reports an error if you try to run above code::"
+msgstr ""
+
+#: ../../proposals/parametrize_with_fixtures.rst:93
+msgid "Proposed solution"
+msgstr ""
+
+#: ../../proposals/parametrize_with_fixtures.rst:95
+msgid "A new function that can be used in modules can be used to dynamically define fixtures from existing ones."
+msgstr ""
+
+#: ../../proposals/parametrize_with_fixtures.rst:104
+msgid "The new fixture ``context`` inherits the scope from the used fixtures and yield the following values."
+msgstr ""
+
+#: ../../proposals/parametrize_with_fixtures.rst:107
+#, python-brace-format
+msgid "``{}``"
+msgstr ""
+
+#: ../../proposals/parametrize_with_fixtures.rst:109
+#, python-brace-format
+msgid "``{'author': 'alice'}``"
+msgstr ""
+
+#: ../../proposals/parametrize_with_fixtures.rst:111
+#, python-brace-format
+msgid "``{'project_slug': 'helloworld'}``"
+msgstr ""
+
+#: ../../proposals/parametrize_with_fixtures.rst:113
+#, python-brace-format
+msgid "``{'author': 'bob', 'project_slug': 'foobar'}``"
+msgstr ""
+
+#: ../../proposals/parametrize_with_fixtures.rst:116
+msgid "Alternative approach"
+msgstr ""
+
+#: ../../proposals/parametrize_with_fixtures.rst:118
+msgid "A new helper function named ``fixture_request`` would tell pytest to yield all parameters marked as a fixture."
+msgstr ""
+
+#: ../../proposals/parametrize_with_fixtures.rst:123
+msgid "The :pypi:`pytest-lazy-fixture` plugin implements a very similar solution to the proposal below, make sure to check it out."
+msgstr ""
+
+#: ../../proposals/parametrize_with_fixtures.rst:146
+msgid "The same helper can be used in combination with ``pytest.mark.parametrize``."
+msgstr ""
+

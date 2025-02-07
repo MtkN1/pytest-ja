@@ -1,0 +1,85 @@
+# SOME DESCRIPTIVE TITLE.
+# Copyright (C) 2015, holger krekel and pytest-dev team
+# This file is distributed under the same license as the pytest package.
+# FIRST AUTHOR <EMAIL@ADDRESS>, 2025.
+#
+#, fuzzy
+msgid ""
+msgstr ""
+"Project-Id-Version: pytest 0.1.dev16209\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2025-02-05 00:52+0900\n"
+"PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
+"Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
+"Language: ja\n"
+"Language-Team: ja <LL@li.org>\n"
+"Plural-Forms: nplurals=1; plural=0;\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=utf-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Generated-By: Babel 2.17.0\n"
+
+#: ../../announce/release-2.9.1.rst:2
+msgid "pytest-2.9.1"
+msgstr ""
+
+#: ../../announce/release-2.9.1.rst:4
+msgid "pytest is a mature Python testing tool with more than 1100 tests against itself, passing on many different interpreters and platforms."
+msgstr ""
+
+#: ../../announce/release-2.9.1.rst:7
+msgid "See below for the changes and see docs at:"
+msgstr ""
+
+#: ../../announce/release-2.9.1.rst:9
+msgid "http://pytest.org"
+msgstr ""
+
+#: ../../announce/release-2.9.1.rst:11
+msgid "As usual, you can upgrade from pypi via::"
+msgstr ""
+
+#: ../../announce/release-2.9.1.rst:15
+msgid "Thanks to all who contributed to this release, among them:"
+msgstr ""
+
+#: ../../announce/release-2.9.1.rst:17
+msgid "Bruno Oliveira Daniel Hahler Dmitry Malinovsky Florian Bruhin Floris Bruynooghe Matt Bachmann Ronny Pfannschmidt TomV Vladimir Bolshakov Zearin palaviv"
+msgstr ""
+
+#: ../../announce/release-2.9.1.rst:30
+msgid "Happy testing, The py.test Development Team"
+msgstr ""
+
+#: ../../announce/release-2.9.1.rst:35
+msgid "2.9.1 (compared to 2.9.0)"
+msgstr ""
+
+#: ../../announce/release-2.9.1.rst:37
+msgid "**Bug Fixes**"
+msgstr ""
+
+#: ../../announce/release-2.9.1.rst:39
+msgid "Improve error message when a plugin fails to load. Thanks :user:`nicoddemus` for the PR."
+msgstr ""
+
+#: ../../announce/release-2.9.1.rst:42
+msgid "Fix (:issue:`1178`): ``pytest.fail`` with non-ascii characters raises an internal pytest error. Thanks :user:`nicoddemus` for the PR."
+msgstr ""
+
+#: ../../announce/release-2.9.1.rst:46
+msgid "Fix (:issue:`469`): junit parses report.nodeid incorrectly, when params IDs contain ``::``. Thanks :user:`tomviner` for the PR (:pr:`1431`)."
+msgstr ""
+
+#: ../../announce/release-2.9.1.rst:49
+msgid "Fix (:issue:`578`): SyntaxErrors containing non-ascii lines at the point of failure generated an internal py.test error. Thanks :user:`asottile` for the report and :user:`nicoddemus` for the PR."
+msgstr ""
+
+#: ../../announce/release-2.9.1.rst:54
+msgid "Fix (:issue:`1437`): When passing in a bytestring regex pattern to parameterize attempt to decode it as utf-8 ignoring errors."
+msgstr ""
+
+#: ../../announce/release-2.9.1.rst:57
+msgid "Fix (:issue:`649`): parametrized test nodes cannot be specified to run on the command line."
+msgstr ""
+

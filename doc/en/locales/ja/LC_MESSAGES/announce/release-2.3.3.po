@@ -1,0 +1,109 @@
+# SOME DESCRIPTIVE TITLE.
+# Copyright (C) 2015, holger krekel and pytest-dev team
+# This file is distributed under the same license as the pytest package.
+# FIRST AUTHOR <EMAIL@ADDRESS>, 2025.
+#
+#, fuzzy
+msgid ""
+msgstr ""
+"Project-Id-Version: pytest 0.1.dev16209\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2025-02-05 00:52+0900\n"
+"PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
+"Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
+"Language: ja\n"
+"Language-Team: ja <LL@li.org>\n"
+"Plural-Forms: nplurals=1; plural=0;\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=utf-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Generated-By: Babel 2.17.0\n"
+
+#: ../../announce/release-2.3.3.rst:2
+msgid "pytest-2.3.3: integration fixes, py24 support, ``*/**`` shown in traceback"
+msgstr ""
+
+#: ../../announce/release-2.3.3.rst:4
+msgid "pytest-2.3.3 is another stabilization release of the py.test tool which offers uebersimple assertions, scalable fixture mechanisms and deep customization for testing with Python.  Particularly, this release provides:"
+msgstr ""
+
+#: ../../announce/release-2.3.3.rst:9
+msgid "integration fixes and improvements related to flask, numpy, nose, unittest, mock"
+msgstr ""
+
+#: ../../announce/release-2.3.3.rst:12
+msgid "makes pytest work on py24 again (yes, people sometimes still need to use it)"
+msgstr ""
+
+#: ../../announce/release-2.3.3.rst:14
+msgid "show ``*,**`` args in pytest tracebacks"
+msgstr ""
+
+#: ../../announce/release-2.3.3.rst:16
+msgid "Thanks to Manuel Jacob, Thomas Waldmann, Ronny Pfannschmidt, Pavel Repin and Andreas Taumoefolau for providing patches and all for the issues."
+msgstr ""
+
+#: ../../announce/release-2.3.3.rst:19
+msgid "See"
+msgstr ""
+
+#: ../../announce/release-2.3.3.rst:21
+msgid "http://pytest.org/"
+msgstr ""
+
+#: ../../announce/release-2.3.3.rst:23
+msgid "for general information.  To install or upgrade pytest:"
+msgstr ""
+
+#: ../../announce/release-2.3.3.rst:25
+msgid "pip install -U pytest # or easy_install -U pytest"
+msgstr ""
+
+#: ../../announce/release-2.3.3.rst:28
+msgid "best, holger krekel"
+msgstr ""
+
+#: ../../announce/release-2.3.3.rst:32
+msgid "Changes between 2.3.2 and 2.3.3"
+msgstr ""
+
+#: ../../announce/release-2.3.3.rst:34
+msgid "fix issue214 - parse modules that contain special objects like e. g. flask's request object which blows up on getattr access if no request is active. thanks Thomas Waldmann."
+msgstr ""
+
+#: ../../announce/release-2.3.3.rst:38
+msgid "fix issue213 - allow to parametrize with values like numpy arrays that do not support an __eq__ operator"
+msgstr ""
+
+#: ../../announce/release-2.3.3.rst:41
+msgid "fix issue215 - split test_python.org into multiple files"
+msgstr ""
+
+#: ../../announce/release-2.3.3.rst:43
+msgid "fix issue148 - @unittest.skip on classes is now recognized and avoids calling setUpClass/tearDownClass, thanks Pavel Repin"
+msgstr ""
+
+#: ../../announce/release-2.3.3.rst:46
+msgid "fix issue209 - reintroduce python2.4 support by depending on newer pylib which re-introduced statement-finding for pre-AST interpreters"
+msgstr ""
+
+#: ../../announce/release-2.3.3.rst:49
+msgid "nose support: only call setup if it's a callable, thanks Andrew Taumoefolau"
+msgstr ""
+
+#: ../../announce/release-2.3.3.rst:52
+msgid "fix issue219 - add py2.4-3.3 classifiers to TROVE list"
+msgstr ""
+
+#: ../../announce/release-2.3.3.rst:54
+msgid "in tracebacks *,** arg values are now shown next to normal arguments (thanks Manuel Jacob)"
+msgstr ""
+
+#: ../../announce/release-2.3.3.rst:57
+msgid "fix issue217 - support mock.patch with pytest's fixtures - note that you need either mock-1.0.1 or the python3.3 builtin unittest.mock."
+msgstr ""
+
+#: ../../announce/release-2.3.3.rst:60
+msgid "fix issue127 - improve documentation for pytest_addoption() and add a ``config.getoption(name)`` helper function for consistency."
+msgstr ""
+

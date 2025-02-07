@@ -1,0 +1,245 @@
+# SOME DESCRIPTIVE TITLE.
+# Copyright (C) 2015, holger krekel and pytest-dev team
+# This file is distributed under the same license as the pytest package.
+# FIRST AUTHOR <EMAIL@ADDRESS>, 2025.
+#
+#, fuzzy
+msgid ""
+msgstr ""
+"Project-Id-Version: pytest 0.1.dev16209\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2025-02-05 00:52+0900\n"
+"PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
+"Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
+"Language: ja\n"
+"Language-Team: ja <LL@li.org>\n"
+"Plural-Forms: nplurals=1; plural=0;\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=utf-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Generated-By: Babel 2.17.0\n"
+
+#: ../../reference/customize.rst:2
+msgid "Configuration"
+msgstr "設定"
+
+#: ../../reference/customize.rst:5
+msgid "Command line options and configuration file settings"
+msgstr "コマンドラインオプションと設定ファイルの設定"
+
+#: ../../reference/customize.rst:7
+msgid "You can get help on command line options and values in INI-style configurations files by using the general help option:"
+msgstr "一般的なヘルプオプションを使用して、コマンドラインオプションと INI スタイルの設定ファイルの値に関するヘルプを取得できます:"
+
+#: ../../reference/customize.rst:14
+msgid "This will display command line and configuration file settings which were registered by installed plugins."
+msgstr "これにより、インストールされたプラグインによって登録されたコマンドラインおよび設定ファイルの設定が表示されます。"
+
+#: ../../reference/customize.rst:20
+msgid "Configuration file formats"
+msgstr "設定ファイル形式"
+
+#: ../../reference/customize.rst:22
+msgid "Many :ref:`pytest settings <ini options ref>` can be set in a *configuration file*, which by convention resides in the root directory of your repository."
+msgstr "多くの :ref:`pytest 設定 <ini options ref>` は *設定ファイル* に設定できます。 これは慣例としてリポジトリのルートディレクトリに配置されます。"
+
+#: ../../reference/customize.rst:25
+msgid "A quick example of the configuration files supported by pytest:"
+msgstr "pytest がサポートする設定ファイルの簡単な例:"
+
+#: ../../reference/customize.rst:28
+msgid "pytest.ini"
+msgstr "pytest.ini"
+
+#: ../../reference/customize.rst:30
+msgid "``pytest.ini`` files take precedence over other files, even when empty."
+msgstr "``pytest.ini`` ファイルは、空の場合でも他のファイルより優先されます。"
+
+#: ../../reference/customize.rst:32
+msgid "Alternatively, the hidden version ``.pytest.ini`` can be used."
+msgstr "また、隠しバージョンの ``.pytest.ini`` を使用することもできます。"
+
+#: ../../reference/customize.rst:46
+msgid "pyproject.toml"
+msgstr "pyproject.toml"
+
+#: ../../reference/customize.rst:50
+msgid "``pyproject.toml`` are considered for configuration when they contain a ``tool.pytest.ini_options`` table."
+msgstr "``pyproject.toml`` は、``tool.pytest.ini_options`` テーブルを含む場合に設定として考慮されます。"
+
+#: ../../reference/customize.rst:65
+msgid "One might wonder why ``[tool.pytest.ini_options]`` instead of ``[tool.pytest]`` as is the case with other tools."
+msgstr "他のツールと同様に ``[tool.pytest]`` ではなく、なぜ ``[tool.pytest.ini_options]`` なのか疑問に思うかもしれません。"
+
+#: ../../reference/customize.rst:68
+msgid "The reason is that the pytest team intends to fully utilize the rich TOML data format for configuration in the future, reserving the ``[tool.pytest]`` table for that. The ``ini_options`` table is being used, for now, as a bridge between the existing ``.ini`` configuration system and the future configuration format."
+msgstr "その理由は、pytest チームが将来的に設定のために豊富な TOML データ形式を完全に活用することを意図しており、そのために ``[tool.pytest]`` テーブルを予約しているからです。 ``ini_options`` テーブルは、現在の ``.ini`` 設定システムと将来の設定形式との間の橋渡しとして使用されています。"
+
+#: ../../reference/customize.rst:74
+msgid "tox.ini"
+msgstr "tox.ini"
+
+#: ../../reference/customize.rst:76
+msgid "``tox.ini`` files are the configuration files of the `tox <https://tox.readthedocs.io>`__ project, and can also be used to hold pytest configuration if they have a ``[pytest]`` section."
+msgstr "``tox.ini`` ファイルは `tox <https://tox.readthedocs.io>`__ プロジェクトの設定ファイルであり、``[pytest]`` セクションがある場合には pytest の設定を保持するためにも使用できます。"
+
+#: ../../reference/customize.rst:91
+msgid "setup.cfg"
+msgstr "setup.cfg"
+
+#: ../../reference/customize.rst:93
+msgid "``setup.cfg`` files are general purpose configuration files, used originally by ``distutils`` (now deprecated) and :std:doc:`setuptools <setuptools:userguide/declarative_config>`, and can also be used to hold pytest configuration if they have a ``[tool:pytest]`` section."
+msgstr "``setup.cfg`` ファイルは汎用設定ファイルであり、元々は ``distutils`` (現在は非推奨) および :std:doc:`setuptools <setuptools:userguide/declarative_config>` によって使用されていました。 また、``[tool:pytest]`` セクションがある場合には pytest の設定を保持するためにも使用できます。"
+
+#: ../../reference/customize.rst:108
+msgid "Usage of ``setup.cfg`` is not recommended unless for very simple use cases. ``.cfg`` files use a different parser than ``pytest.ini`` and ``tox.ini`` which might cause hard to track down problems. When possible, it is recommended to use the latter files, or ``pyproject.toml``, to hold your pytest configuration."
+msgstr "非常に単純な使用例を除いて、``setup.cfg`` の使用は推奨されません。 ``.cfg`` ファイルは ``pytest.ini`` および ``tox.ini`` とは異なるパーサーを使用するため、追跡が困難な問題を引き起こす可能性があります。 可能な場合は、後者のファイルまたは ``pyproject.toml`` を使用して pytest の設定を保持することをお勧めします。"
+
+#: ../../reference/customize.rst:119
+msgid "Initialization: determining rootdir and configfile"
+msgstr "初期化: rootdir と configfile の決定"
+
+#: ../../reference/customize.rst:121
+msgid "pytest determines a ``rootdir`` for each test run which depends on the command line arguments (specified test files, paths) and on the existence of configuration files.  The determined ``rootdir`` and ``configfile`` are printed as part of the pytest header during startup."
+msgstr "pytest は、コマンドライン引数 (指定されたテストファイル、パス) と設定ファイルの存在に基づいて、各テスト実行の ``rootdir`` を決定します。 決定された ``rootdir`` と ``configfile`` は、起動時に pytest ヘッダーの一部として印刷されます。"
+
+#: ../../reference/customize.rst:126
+msgid "Here's a summary what ``pytest`` uses ``rootdir`` for:"
+msgstr "``pytest`` が ``rootdir`` を使用する目的の概要は次のとおりです:"
+
+#: ../../reference/customize.rst:128
+msgid "Construct *nodeids* during collection; each test is assigned a unique *nodeid* which is rooted at the ``rootdir`` and takes into account the full path, class name, function name and parametrization (if any)."
+msgstr "収集中に *nodeids* を構築します。 各テストには一意の *nodeid* が割り当てられ、``rootdir`` をルートとし、フルパス、クラス名、関数名、およびパラメータ化 (ある場合) を考慮します。"
+
+#: ../../reference/customize.rst:132
+msgid "Is used by plugins as a stable location to store project/test run specific information; for example, the internal :ref:`cache <cache>` plugin creates a ``.pytest_cache`` subdirectory in ``rootdir`` to store its cross-test run state."
+msgstr "プラグインによってプロジェクト/テスト実行固有の情報を保存するための安定した場所として使用されます。 たとえば、内部の :ref:`cache <cache>` プラグインは、``rootdir`` に ``.pytest_cache`` サブディレクトリを作成して、テスト実行間の状態を保存します。"
+
+#: ../../reference/customize.rst:136
+msgid "``rootdir`` is **NOT** used to modify ``sys.path``/``PYTHONPATH`` or influence how modules are imported. See :ref:`pythonpath` for more details."
+msgstr "``rootdir`` は ``sys.path``/``PYTHONPATH`` を変更したり、モジュールのインポート方法に影響を与えたりするためには使用されません。 詳細については :ref:`pythonpath` を参照してください。"
+
+#: ../../reference/customize.rst:139
+msgid "The ``--rootdir=path`` command-line option can be used to force a specific directory. Note that contrary to other command-line options, ``--rootdir`` cannot be used with :confval:`addopts` inside ``pytest.ini`` because the ``rootdir`` is used to *find* ``pytest.ini`` already."
+msgstr "``--rootdir=path`` コマンドラインオプションを使用して特定のディレクトリを強制することができます。 他のコマンドラインオプションとは異なり、``--rootdir`` は ``pytest.ini`` 内の :confval:`addopts` で使用することはできません。 なぜなら、``rootdir`` はすでに ``pytest.ini`` を *見つける* ために使用されているからです。"
+
+#: ../../reference/customize.rst:145
+msgid "Finding the ``rootdir``"
+msgstr "``rootdir`` の検索"
+
+#: ../../reference/customize.rst:147
+msgid "Here is the algorithm which finds the rootdir from ``args``:"
+msgstr "ここに ``args`` から rootdir を見つけるアルゴリズムがあります:"
+
+#: ../../reference/customize.rst:149
+msgid "If ``-c`` is passed in the command-line, use that as configuration file, and its directory as ``rootdir``."
+msgstr "コマンドラインで ``-c`` が渡された場合、それを設定ファイルとして使用し、そのディレクトリを ``rootdir`` とします。"
+
+#: ../../reference/customize.rst:151
+msgid "Determine the common ancestor directory for the specified ``args`` that are recognised as paths that exist in the file system. If no such paths are found, the common ancestor directory is set to the current working directory."
+msgstr "ファイルシステムに存在するパスとして認識される指定された ``args`` の共通の祖先ディレクトリを決定します。 そのようなパスが見つからない場合、共通の祖先ディレクトリは現在の作業ディレクトリに設定されます。"
+
+#: ../../reference/customize.rst:155
+msgid "Look for ``pytest.ini``, ``pyproject.toml``, ``tox.ini``, and ``setup.cfg`` files in the ancestor directory and upwards.  If one is matched, it becomes the ``configfile`` and its directory becomes the ``rootdir``."
+msgstr "祖先ディレクトリおよびその上位ディレクトリで ``pytest.ini``, ``pyproject.toml``, ``tox.ini``, および ``setup.cfg`` ファイルを探します。 1 つが一致した場合、それが ``configfile`` となり、そのディレクトリが ``rootdir`` になります。"
+
+#: ../../reference/customize.rst:159
+msgid "If no configuration file was found, look for ``setup.py`` upwards from the common ancestor directory to determine the ``rootdir``."
+msgstr "設定ファイルが見つからなかった場合、共通の祖先ディレクトリから上位に向かって ``setup.py`` を探し、``rootdir`` を決定します。"
+
+#: ../../reference/customize.rst:162
+msgid "If no ``setup.py`` was found, look for ``pytest.ini``, ``pyproject.toml``, ``tox.ini``, and ``setup.cfg`` in each of the specified ``args`` and upwards. If one is matched, it becomes the ``configfile`` and its directory becomes the ``rootdir``."
+msgstr "``setup.py`` が見つからなかった場合、指定された ``args`` のそれぞれおよびその上位ディレクトリで ``pytest.ini``, ``pyproject.toml``, ``tox.ini``, および ``setup.cfg`` を探します。 1 つが一致した場合、それが ``configfile`` となり、そのディレクトリが ``rootdir`` になります。"
+
+#: ../../reference/customize.rst:166
+msgid "If no ``configfile`` was found and no configuration argument is passed, use the already determined common ancestor as root directory. This allows the use of pytest in structures that are not part of a package and don't have any particular configuration file."
+msgstr "``configfile`` が見つからず、設定引数が渡されなかった場合、すでに決定された共通の祖先をルートディレクトリとして使用します。 これにより、パッケージの一部ではなく、特定の設定ファイルを持たない構造で pytest を使用することができます。"
+
+#: ../../reference/customize.rst:170
+msgid "If no ``args`` are given, pytest collects test below the current working directory and also starts determining the ``rootdir`` from there."
+msgstr "``args`` が指定されていない場合、pytest は現在の作業ディレクトリ以下のテストを収集し、そこから ``rootdir`` の決定を開始します。"
+
+#: ../../reference/customize.rst:173
+msgid "Files will only be matched for configuration if:"
+msgstr "ファイルは次の場合にのみ設定に一致します:"
+
+#: ../../reference/customize.rst:175
+msgid "``pytest.ini``: will always match and take precedence, even if empty."
+msgstr "``pytest.ini``: 常に一致し、空の場合でも優先されます。"
+
+#: ../../reference/customize.rst:176
+msgid "``pyproject.toml``: contains a ``[tool.pytest.ini_options]`` table."
+msgstr "``pyproject.toml``: ``[tool.pytest.ini_options]`` テーブルを含む。"
+
+#: ../../reference/customize.rst:177
+msgid "``tox.ini``: contains a ``[pytest]`` section."
+msgstr "``tox.ini``: ``[pytest]`` セクションを含む。"
+
+#: ../../reference/customize.rst:178
+msgid "``setup.cfg``: contains a ``[tool:pytest]`` section."
+msgstr "``setup.cfg``: ``[tool:pytest]`` セクションを含む。"
+
+#: ../../reference/customize.rst:180
+msgid "Finally, a ``pyproject.toml`` file will be considered the ``configfile`` if no other match was found, in this case even if it does not contain a ``[tool.pytest.ini_options]`` table (this was added in ``8.1``)."
+msgstr "最後に、他に一致するものが見つからなかった場合、``pyproject.toml`` ファイルが ``configfile`` と見なされます。 この場合、``[tool.pytest.ini_options]`` テーブルを含まない場合でも (これは ``8.1`` で追加されました)。"
+
+#: ../../reference/customize.rst:183
+msgid "The files are considered in the order above. Options from multiple ``configfiles`` candidates are never merged - the first match wins."
+msgstr "ファイルは上記の順序で考慮されます。 複数の ``configfiles`` 候補からのオプションは決してマージされません - 最初の一致が勝ちます。"
+
+#: ../../reference/customize.rst:186
+msgid "The configuration file also determines the value of the ``rootpath``."
+msgstr "設定ファイルは ``rootpath`` の値も決定します。"
+
+#: ../../reference/customize.rst:188
+msgid "The :class:`Config <pytest.Config>` object (accessible via hooks or through the :fixture:`pytestconfig` fixture) will subsequently carry these attributes:"
+msgstr ":class:`Config <pytest.Config>` オブジェクト (フックを介して、または :fixture:`pytestconfig` フィクスチャを介してアクセス可能) は、次の属性を持ちます:"
+
+#: ../../reference/customize.rst:191
+msgid ":attr:`config.rootpath <pytest.Config.rootpath>`: the determined root directory, guaranteed to exist. It is used as a reference directory for constructing test addresses (\"nodeids\") and can be used also by plugins for storing per-testrun information."
+msgstr ":attr:`config.rootpath <pytest.Config.rootpath>`: 決定されたルートディレクトリで、存在が保証されています。 テストアドレス (\"nodeids\") を構築するための参照ディレクトリとして使用され、プラグインによってテスト実行ごとの情報を保存するためにも使用できます。"
+
+#: ../../reference/customize.rst:195
+msgid ":attr:`config.inipath <pytest.Config.inipath>`: the determined ``configfile``, may be ``None`` (it is named ``inipath`` for historical reasons)."
+msgstr ":attr:`config.inipath <pytest.Config.inipath>`: 決定された ``configfile`` で、``None`` である場合があります (歴史的な理由から ``inipath`` と名付けられています)。"
+
+#: ../../reference/customize.rst:198
+msgid "The ``config.rootpath`` and ``config.inipath`` properties. They are :class:`pathlib.Path` versions of the older ``config.rootdir`` and ``config.inifile``, which have type ``py.path.local``, and still exist for backward compatibility."
+msgstr "``config.rootpath`` および ``config.inipath`` プロパティ。 これらは古い ``config.rootdir`` および ``config.inifile`` の :class:`pathlib.Path` バージョンであり、型 ``py.path.local`` を持ち、後方互換性のためにまだ存在しています。"
+
+#: ../../reference/customize.rst:205
+msgid "Example:"
+msgstr "例:"
+
+#: ../../reference/customize.rst:211
+msgid "will determine the common ancestor as ``path`` and then check for configuration files as follows:"
+msgstr "共通の祖先を ``path`` として決定し、次のように設定ファイルをチェックします:"
+
+#: ../../reference/customize.rst:232
+msgid "Custom pytest plugin commandline arguments may include a path, as in ``pytest --log-output ../../test.log args``. Then ``args`` is mandatory, otherwise pytest uses the folder of test.log for rootdir determination (see also :issue:`1435`). A dot ``.`` for referencing to the current working directory is also possible."
+msgstr "カスタム pytest プラグインのコマンドライン引数には、``pytest --log-output ../../test.log args`` のようにパスを含めることができます。 この場合、``args`` は必須です。 そうでない場合、pytest は rootdir の決定に test.log のフォルダーを使用します ( :issue:`1435` も参照してください)。 現在の作業ディレクトリを参照するためのドット ``.`` も可能です。"
+
+#: ../../reference/customize.rst:245
+msgid "Builtin configuration file options"
+msgstr "組み込み設定ファイルオプション"
+
+#: ../../reference/customize.rst:247
+msgid "For the full list of options consult the :ref:`reference documentation <ini options ref>`."
+msgstr "オプションの完全なリストについては、:ref:`リファレンスドキュメント <ini options ref>` を参照してください。"
+
+#: ../../reference/customize.rst:250
+msgid "Syntax highlighting theme customization"
+msgstr "構文強調テーマのカスタマイズ"
+
+#: ../../reference/customize.rst:252
+msgid "The syntax highlighting themes used by pytest can be customized using two environment variables:"
+msgstr "pytest で使用される構文強調テーマは、2 つの環境変数を使用してカスタマイズできます:"
+
+#: ../../reference/customize.rst:254
+msgid ":envvar:`PYTEST_THEME` sets a `pygment style <https://pygments.org/docs/styles/>`_ to use."
+msgstr ":envvar:`PYTEST_THEME` は使用する `pygment スタイル <https://pygments.org/docs/styles/>`_ を設定します。"
+
+#: ../../reference/customize.rst:255
+msgid ":envvar:`PYTEST_THEME_MODE` sets this style to *light* or *dark*."
+msgstr ":envvar:`PYTEST_THEME_MODE` はこのスタイルを *light* または *dark* に設定します。"
+

@@ -1,0 +1,691 @@
+# SOME DESCRIPTIVE TITLE.
+# Copyright (C) 2015, holger krekel and pytest-dev team
+# This file is distributed under the same license as the pytest package.
+# FIRST AUTHOR <EMAIL@ADDRESS>, 2025.
+#
+#, fuzzy
+msgid ""
+msgstr ""
+"Project-Id-Version: pytest 0.1.dev16209\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2025-02-05 00:52+0900\n"
+"PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
+"Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
+"Language: ja\n"
+"Language-Team: ja <LL@li.org>\n"
+"Plural-Forms: nplurals=1; plural=0;\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=utf-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Generated-By: Babel 2.17.0\n"
+
+#: ../../../../CONTRIBUTING.rst:3
+msgid "Contributing"
+msgstr "コントリビューティング"
+
+#: ../../../../CONTRIBUTING.rst:5
+msgid "Contributions are highly welcomed and appreciated.  Every little bit of help counts, so do not hesitate!"
+msgstr "貢献は大歓迎であり、感謝されます。 どんな小さな助けでも役に立つので、ためらわないでください！"
+
+#: ../../../../CONTRIBUTING.rst:12
+msgid "Feature requests and feedback"
+msgstr "機能リクエストとフィードバック"
+
+#: ../../../../CONTRIBUTING.rst:14
+msgid "Do you like pytest?  Share some love on Twitter or in your blog posts!"
+msgstr "pytest が好きですか？ Twitter やブログ投稿で愛を共有してください！"
+
+#: ../../../../CONTRIBUTING.rst:16
+msgid "We'd also like to hear about your propositions and suggestions.  Feel free to `submit them as issues <https://github.com/pytest-dev/pytest/issues>`_ and:"
+msgstr "あなたの提案や提案についても聞きたいです。 気軽に `問題として提出してください <https://github.com/pytest-dev/pytest/issues>`_ と："
+
+#: ../../../../CONTRIBUTING.rst:19
+msgid "Explain in detail how they should work."
+msgstr "それらがどのように機能するかを詳細に説明してください。"
+
+#: ../../../../CONTRIBUTING.rst:20
+msgid "Keep the scope as narrow as possible.  This will make it easier to implement."
+msgstr "範囲をできるだけ狭く保ちます。 これにより、実装が容易になります。"
+
+#: ../../../../CONTRIBUTING.rst:26
+msgid "Report bugs"
+msgstr "バグを報告する"
+
+#: ../../../../CONTRIBUTING.rst:28
+msgid "Report bugs for pytest in the `issue tracker <https://github.com/pytest-dev/pytest/issues>`_."
+msgstr "pytest のバグを `issue tracker <https://github.com/pytest-dev/pytest/issues>`_ に報告してください。"
+
+#: ../../../../CONTRIBUTING.rst:30
+msgid "If you are reporting a bug, please include:"
+msgstr "バグを報告する場合は、次の情報を含めてください："
+
+#: ../../../../CONTRIBUTING.rst:32
+msgid "Your operating system name and version."
+msgstr "オペレーティングシステムの名前とバージョン。"
+
+#: ../../../../CONTRIBUTING.rst:33
+msgid "Any details about your local setup that might be helpful in troubleshooting, specifically the Python interpreter version, installed libraries, and pytest version."
+msgstr "トラブルシューティングに役立つ可能性のあるローカル設定の詳細、特に Python インタープリターのバージョン、インストールされているライブラリ、および pytest のバージョン。"
+
+#: ../../../../CONTRIBUTING.rst:36
+msgid "Detailed steps to reproduce the bug."
+msgstr "バグを再現するための詳細な手順。"
+
+#: ../../../../CONTRIBUTING.rst:38
+msgid "If you can write a demonstration test that currently fails but should pass (xfail), that is a very useful commit to make as well, even if you cannot fix the bug itself."
+msgstr "現在失敗しているが合格するはずのデモンストレーションテスト（xfail）を書くことができる場合、それは非常に有用なコミットです。 バグ自体を修正できなくても。"
+
+#: ../../../../CONTRIBUTING.rst:46
+msgid "Fix bugs"
+msgstr "バグを修正する"
+
+#: ../../../../CONTRIBUTING.rst:48
+#, python-format
+msgid "Look through the `GitHub issues for bugs <https://github.com/pytest-dev/pytest/labels/type:%20bug>`_. See also the `\"good first issue\" issues <https://github.com/pytest-dev/pytest/labels/good%20first%20issue>`_ that are friendly to new contributors."
+msgstr "`GitHub issues for bugs <https://github.com/pytest-dev/pytest/labels/type:%20bug>`_ を確認してください。 新しい貢献者に優しい `\"good first issue\" issues <https://github.com/pytest-dev/pytest/labels/good%20first%20issue>`_ も参照してください。"
+
+#: ../../../../CONTRIBUTING.rst:52
+msgid ":ref:`Talk <contact>` to developers to find out how you can fix specific bugs. To indicate that you are going to work on a particular issue, add a comment to that effect on the specific issue."
+msgstr ":ref:`Talk <contact>` して、特定のバグをどのように修正できるかを開発者に確認してください。 特定の問題に取り組むことを示すために、その問題にその旨のコメントを追加してください。"
+
+#: ../../../../CONTRIBUTING.rst:55
+msgid "Don't forget to check the issue trackers of your favourite plugins, too!"
+msgstr "お気に入りのプラグインの issue tracker も忘れずにチェックしてください！"
+
+#: ../../../../CONTRIBUTING.rst:60
+msgid "Implement features"
+msgstr "機能を実装する"
+
+#: ../../../../CONTRIBUTING.rst:62
+#, python-format
+msgid "Look through the `GitHub issues for enhancements <https://github.com/pytest-dev/pytest/labels/type:%20enhancement>`_."
+msgstr "`GitHub issues for enhancements <https://github.com/pytest-dev/pytest/labels/type:%20enhancement>`_ を確認してください。"
+
+#: ../../../../CONTRIBUTING.rst:64
+msgid ":ref:`Talk <contact>` to developers to find out how you can implement specific features."
+msgstr ":ref:`Talk <contact>` して、特定の機能をどのように実装できるかを開発者に確認してください。"
+
+#: ../../../../CONTRIBUTING.rst:68
+msgid "Write documentation"
+msgstr "ドキュメントを書く"
+
+#: ../../../../CONTRIBUTING.rst:70
+msgid "Pytest could always use more documentation.  What exactly is needed?"
+msgstr "Pytest は常により多くのドキュメントを必要としています。 具体的に何が必要ですか？"
+
+#: ../../../../CONTRIBUTING.rst:72
+msgid "More complementary documentation.  Have you perhaps found something unclear?"
+msgstr "より補完的なドキュメント。 何か不明な点がありましたか？"
+
+#: ../../../../CONTRIBUTING.rst:73
+msgid "Documentation translations.  We currently have only English."
+msgstr "ドキュメントの翻訳。 現在、英語のみです。"
+
+#: ../../../../CONTRIBUTING.rst:74
+msgid "Docstrings.  There can never be too many of them."
+msgstr "Docstrings。 いくらあっても多すぎることはありません。"
+
+#: ../../../../CONTRIBUTING.rst:75
+msgid "Blog posts, articles and such -- they're all very appreciated."
+msgstr "ブログ投稿、記事など -- すべて非常に感謝されます。"
+
+#: ../../../../CONTRIBUTING.rst:77
+msgid "You can also edit documentation files directly in the GitHub web interface, without using a local copy.  This can be convenient for small fixes."
+msgstr "ローカルコピーを使用せずに、GitHub の Web インターフェースでドキュメントファイルを直接編集することもできます。 これは小さな修正に便利です。"
+
+#: ../../../../CONTRIBUTING.rst:81
+msgid "Build the documentation locally with the following command:"
+msgstr "次のコマンドを使用してローカルでドキュメントをビルドします："
+
+#: ../../../../CONTRIBUTING.rst:87
+msgid "The built documentation should be available in ``doc/en/_build/html``, where 'en' refers to the documentation language."
+msgstr "ビルドされたドキュメントは ``doc/en/_build/html`` にあるはずです。 ここで 'en' はドキュメントの言語を指します。"
+
+#: ../../../../CONTRIBUTING.rst:90
+msgid "Pytest has an API reference which in large part is `generated automatically <https://www.sphinx-doc.org/en/master/usage/extensions/autodoc.html>`_ from the docstrings of the documented items. Pytest uses the `Sphinx docstring format <https://sphinx-rtd-tutorial.readthedocs.io/en/latest/docstrings.html>`_. For example:"
+msgstr "Pytest には API リファレンスがあり、その大部分はドキュメント化された項目の docstring から `自動的に生成されます <https://www.sphinx-doc.org/en/master/usage/extensions/autodoc.html>`_。 Pytest は `Sphinx docstring format <https://sphinx-rtd-tutorial.readthedocs.io/en/latest/docstrings.html>`_ を使用します。 例えば："
+
+#: ../../../../CONTRIBUTING.rst:125
+msgid "Submitting Plugins to pytest-dev"
+msgstr "pytest-dev へのプラグインの提出"
+
+#: ../../../../CONTRIBUTING.rst:127
+msgid "Development of the pytest core, support code, and some plugins happens in repositories living under the ``pytest-dev`` organisations:"
+msgstr "pytest コア、サポートコード、および一部のプラグインの開発は、``pytest-dev`` 組織の下にあるリポジトリで行われます："
+
+#: ../../../../CONTRIBUTING.rst:130
+msgid "`pytest-dev on GitHub <https://github.com/pytest-dev>`_"
+msgstr "`GitHub 上の pytest-dev <https://github.com/pytest-dev>`_"
+
+#: ../../../../CONTRIBUTING.rst:132
+msgid "All pytest-dev Contributors team members have write access to all contained repositories.  Pytest core and plugins are generally developed using `pull requests`_ to respective repositories."
+msgstr "すべての pytest-dev コントリビューターチームのメンバーは、含まれるすべてのリポジトリに書き込みアクセス権を持っています。 pytest コアおよびプラグインは、一般的にそれぞれのリポジトリへの `プルリクエスト`_ を使用して開発されます。"
+
+#: ../../../../CONTRIBUTING.rst:136
+msgid "The objectives of the ``pytest-dev`` organisation are:"
+msgstr "``pytest-dev`` 組織の目的は："
+
+#: ../../../../CONTRIBUTING.rst:138
+msgid "Having a central location for popular pytest plugins"
+msgstr "人気のある pytest プラグインの中央場所を持つこと"
+
+#: ../../../../CONTRIBUTING.rst:139
+msgid "Sharing some of the maintenance responsibility (in case a maintainer no longer wishes to maintain a plugin)"
+msgstr "メンテナンスの責任を共有すること（メンテナーがプラグインのメンテナンスを希望しなくなった場合）"
+
+#: ../../../../CONTRIBUTING.rst:142
+msgid "You can submit your plugin by subscribing to the `pytest-dev mail list <https://mail.python.org/mailman/listinfo/pytest-dev>`_ and writing a mail pointing to your existing pytest plugin repository which must have the following:"
+msgstr "`pytest-dev メーリングリスト <https://mail.python.org/mailman/listinfo/pytest-dev>`_ に登録し、次の要件を満たす既存の pytest プラグインリポジトリを指すメールを書いてプラグインを提出できます："
+
+#: ../../../../CONTRIBUTING.rst:147
+msgid "PyPI presence with packaging metadata that contains a ``pytest-`` prefixed name, version number, authors, short and long description."
+msgstr "``pytest-`` プレフィックス付きの名前、バージョン番号、著者、短い説明と長い説明を含むパッケージングメタデータを持つ PyPI プレゼンス。"
+
+#: ../../../../CONTRIBUTING.rst:150
+msgid "a  `tox configuration <https://tox.readthedocs.io/en/latest/config.html#configuration-discovery>`_ for running tests using `tox <https://tox.readthedocs.io>`_."
+msgstr "`tox <https://tox.readthedocs.io>`_ を使用してテストを実行するための `tox configuration <https://tox.readthedocs.io/en/latest/config.html#configuration-discovery>`_。"
+
+#: ../../../../CONTRIBUTING.rst:153
+msgid "a ``README`` describing how to use the plugin and on which platforms it runs."
+msgstr "プラグインの使用方法と実行されるプラットフォームを説明する ``README``。"
+
+#: ../../../../CONTRIBUTING.rst:156
+msgid "a ``LICENSE`` file containing the licensing information, with matching info in its packaging metadata."
+msgstr "ライセンス情報を含む ``LICENSE`` ファイル、およびそのパッケージングメタデータに一致する情報。"
+
+#: ../../../../CONTRIBUTING.rst:159
+msgid "an issue tracker for bug reports and enhancement requests."
+msgstr "バグ報告と機能強化リクエストのための issue tracker。"
+
+#: ../../../../CONTRIBUTING.rst:161
+msgid "a `changelog <https://keepachangelog.com/>`_."
+msgstr "`changelog <https://keepachangelog.com/>`_。"
+
+#: ../../../../CONTRIBUTING.rst:163
+msgid "If no contributor strongly objects and two agree, the repository can then be transferred to the ``pytest-dev`` organisation."
+msgstr "強く反対するコントリビューターがいない場合、2 人が同意すれば、リポジトリを ``pytest-dev`` 組織に転送できます。"
+
+#: ../../../../CONTRIBUTING.rst:166
+msgid "Here's a rundown of how a repository transfer usually proceeds (using a repository named ``joedoe/pytest-xyz`` as example):"
+msgstr "リポジトリ転送が通常どのように進行するかの概要を次に示します（``joedoe/pytest-xyz`` という名前のリポジトリを例として使用）："
+
+#: ../../../../CONTRIBUTING.rst:169
+msgid "``joedoe`` transfers repository ownership to ``pytest-dev`` administrator ``calvin``."
+msgstr "``joedoe`` はリポジトリの所有権を ``pytest-dev`` 管理者 ``calvin`` に転送します。"
+
+#: ../../../../CONTRIBUTING.rst:170
+msgid "``calvin`` creates ``pytest-xyz-admin`` and ``pytest-xyz-developers`` teams, inviting ``joedoe`` to both as **maintainer**."
+msgstr "``calvin`` は ``pytest-xyz-admin`` および ``pytest-xyz-developers`` チームを作成し、``joedoe`` を **メンテナー** として両方に招待します。"
+
+#: ../../../../CONTRIBUTING.rst:171
+msgid "``calvin`` transfers repository to ``pytest-dev`` and configures team access:"
+msgstr "``calvin`` はリポジトリを ``pytest-dev`` に転送し、チームアクセスを構成します："
+
+#: ../../../../CONTRIBUTING.rst:173
+msgid "``pytest-xyz-admin`` **admin** access;"
+msgstr "``pytest-xyz-admin`` **管理者** アクセス；"
+
+#: ../../../../CONTRIBUTING.rst:174
+msgid "``pytest-xyz-developers`` **write** access;"
+msgstr "``pytest-xyz-developers`` **書き込み** アクセス；"
+
+#: ../../../../CONTRIBUTING.rst:176
+msgid "The ``pytest-dev/Contributors`` team has write access to all projects, and every project administrator is in it. We recommend that each plugin has at least three people who have the right to release to PyPI."
+msgstr "``pytest-dev/Contributors`` チームはすべてのプロジェクトに書き込みアクセス権を持っており、すべてのプロジェクト管理者が含まれています。 各プラグインには、PyPI にリリースする権利を持つ少なくとも 3 人の人がいることをお勧めします。"
+
+#: ../../../../CONTRIBUTING.rst:180
+msgid "Repository owners can rest assured that no ``pytest-dev`` administrator will ever make releases of your repository or take ownership in any way, except in rare cases where someone becomes unresponsive after months of contact attempts. As stated, the objective is to share maintenance and avoid \"plugin-abandon\"."
+msgstr "リポジトリの所有者は、数か月間の連絡試行の後に誰かが応答しなくなるというまれなケースを除いて、``pytest-dev`` 管理者がリポジトリのリリースを行ったり、所有権を取得したりすることは決してないことを安心できます。 述べたように、目的はメンテナンスを共有し、「プラグイン放棄」を避けることです。"
+
+#: ../../../../CONTRIBUTING.rst:190
+msgid "Preparing Pull Requests"
+msgstr "プルリクエストの準備"
+
+#: ../../../../CONTRIBUTING.rst:193
+msgid "Short version"
+msgstr "短いバージョン"
+
+#: ../../../../CONTRIBUTING.rst:195
+msgid "Fork the repository."
+msgstr "リポジトリをフォークします。"
+
+#: ../../../../CONTRIBUTING.rst:196
+msgid "Fetch tags from upstream if necessary (if you cloned only main `git fetch --tags https://github.com/pytest-dev/pytest`)."
+msgstr "必要に応じて、上流からタグをフェッチします（メインのみをクローンした場合 `git fetch --tags https://github.com/pytest-dev/pytest`）。"
+
+#: ../../../../CONTRIBUTING.rst:197
+msgid "Enable and install `pre-commit <https://pre-commit.com>`_ to ensure style-guides and code checks are followed."
+msgstr "スタイルガイドとコードチェックが遵守されるようにするために、`pre-commit <https://pre-commit.com>`_ を有効にしてインストールします。"
+
+#: ../../../../CONTRIBUTING.rst:198
+msgid "Follow `PEP-8 <https://www.python.org/dev/peps/pep-0008/>`_ for naming."
+msgstr "命名には `PEP-8 <https://www.python.org/dev/peps/pep-0008/>`_ に従います。"
+
+#: ../../../../CONTRIBUTING.rst:199
+msgid "Tests are run using ``tox``::"
+msgstr "テストは ``tox`` を使用して実行されます::"
+
+#: ../../../../CONTRIBUTING.rst:203
+msgid "The test environments above are usually enough to cover most cases locally."
+msgstr "上記のテスト環境は、通常、ほとんどのケースをローカルでカバーするのに十分です。"
+
+#: ../../../../CONTRIBUTING.rst:205
+msgid "Write a ``changelog`` entry: ``changelog/2574.bugfix.rst``, use issue id number and one of ``feature``, ``improvement``, ``bugfix``, ``doc``, ``deprecation``, ``breaking``, ``vendor`` or ``trivial`` for the issue type."
+msgstr "``changelog`` エントリを書きます： ``changelog/2574.bugfix.rst``、問題 ID 番号と ``feature``、``improvement``、``bugfix``、``doc``、``deprecation``、``breaking``、``vendor`` または ``trivial`` のいずれかを問題タイプとして使用します。"
+
+#: ../../../../CONTRIBUTING.rst:210
+msgid "Unless your change is a trivial or a documentation fix (e.g., a typo or reword of a small section) please add yourself to the ``AUTHORS`` file, in alphabetical order."
+msgstr "変更が些細なものであるか、ドキュメントの修正 (例えば、誤字や小さなセクションの言い換え) である場合を除き、アルファベット順で ``AUTHORS`` ファイルに自分を追加してください。"
+
+#: ../../../../CONTRIBUTING.rst:215
+msgid "Long version"
+msgstr "長いバージョン"
+
+#: ../../../../CONTRIBUTING.rst:217
+msgid "What is a \"pull request\"?  It informs the project's core developers about the changes you want to review and merge.  Pull requests are stored on `GitHub servers <https://github.com/pytest-dev/pytest/pulls>`_. Once you send a pull request, we can discuss its potential modifications and even add more commits to it later on. There's an excellent tutorial on how Pull Requests work in the `GitHub Help Center <https://docs.github.com/en/pull-requests/collaborating-with-pull-requests/proposing-changes-to-your-work-with-pull-requests/about-pull-requests>`_."
+msgstr "\"プルリクエスト\" とは何ですか？ プロジェクトのコア開発者にレビューとマージを希望する変更を通知します。 プルリクエストは `GitHub サーバー <https://github.com/pytest-dev/pytest/pulls>`_ に保存されます。 プルリクエストを送信すると、その変更の潜在的な修正について議論し、後でさらにコミットを追加することもできます。 プルリクエストの仕組みについては、`GitHub ヘルプセンター <https://docs.github.com/en/pull-requests/collaborating-with-pull-requests/proposing-changes-to-your-work-with-pull-requests/about-pull-requests>`_ に優れたチュートリアルがあります。"
+
+#: ../../../../CONTRIBUTING.rst:225
+msgid "Here is a simple overview, with pytest-specific bits:"
+msgstr "ここに、pytest に特有の部分を含む簡単な概要があります："
+
+#: ../../../../CONTRIBUTING.rst:227
+msgid "Fork the `pytest GitHub repository <https://github.com/pytest-dev/pytest>`__.  It's fine to use ``pytest`` as your fork repository name because it will live under your user."
+msgstr "`pytest GitHub リポジトリ <https://github.com/pytest-dev/pytest>`__ をフォークします。 フォークリポジトリ名として ``pytest`` を使用しても問題ありません。 これはあなたのユーザーの下に存在するためです。"
+
+#: ../../../../CONTRIBUTING.rst:232
+msgid "Clone your fork locally using `git <https://git-scm.com/>`_ and create a branch::"
+msgstr "`git <https://git-scm.com/>`_ を使用してフォークをローカルにクローンし、ブランチを作成します::"
+
+#: ../../../../CONTRIBUTING.rst:241
+msgid "Given we have \"major.minor.micro\" version numbers, bug fixes will usually be released in micro releases whereas features will be released in minor releases and incompatible changes in major releases."
+msgstr "\"major.minor.micro\" バージョン番号がある場合、バグ修正は通常マイクロリリースでリリースされ、機能はマイナーリリースでリリースされ、互換性のない変更はメジャーリリースでリリースされます。"
+
+#: ../../../../CONTRIBUTING.rst:245
+msgid "You will need the tags to test locally, so be sure you have the tags from the main repository. If you suspect you don't, set the main repository as upstream and fetch the tags::"
+msgstr "ローカルでテストするにはタグが必要なので、メインリポジトリからタグを取得していることを確認してください。 取得していないと思われる場合は、メインリポジトリをアップストリームとして設定し、タグをフェッチします::"
+
+#: ../../../../CONTRIBUTING.rst:250
+msgid "If you need some help with Git, follow this quick start guide: https://git.wiki.kernel.org/index.php/QuickStart"
+msgstr "Git に関するヘルプが必要な場合は、このクイックスタートガイドに従ってください：https://git.wiki.kernel.org/index.php/QuickStart"
+
+#: ../../../../CONTRIBUTING.rst:253
+msgid "Install `pre-commit <https://pre-commit.com>`_ and its hook on the pytest repo::"
+msgstr "`pre-commit <https://pre-commit.com>`_ をインストールし、pytest リポジトリにフックします::"
+
+#: ../../../../CONTRIBUTING.rst:258
+msgid "Afterwards ``pre-commit`` will run whenever you commit."
+msgstr "その後、``pre-commit`` はコミットするたびに実行されます。"
+
+#: ../../../../CONTRIBUTING.rst:260
+msgid "https://pre-commit.com/ is a framework for managing and maintaining multi-language pre-commit hooks to ensure code-style and code formatting is consistent."
+msgstr "https://pre-commit.com/ は、コードスタイルとコードフォーマットの一貫性を確保するために、複数の言語の pre-commit フックを管理および維持するためのフレームワークです。"
+
+#: ../../../../CONTRIBUTING.rst:263
+msgid "Install tox"
+msgstr "tox をインストールします"
+
+#: ../../../../CONTRIBUTING.rst:265
+msgid "Tox is used to run all the tests and will automatically setup virtualenvs to run the tests in. (will implicitly use https://virtualenv.pypa.io/en/latest/)::"
+msgstr "Tox はすべてのテストを実行するために使用され、テストを実行するための virtualenvs を自動的に設定します。 (暗黙的に https://virtualenv.pypa.io/en/latest/ を使用します)::"
+
+#: ../../../../CONTRIBUTING.rst:271
+msgid "Run all the tests"
+msgstr "すべてのテストを実行します"
+
+#: ../../../../CONTRIBUTING.rst:273
+msgid "You need to have Python 3.8 or later available in your system.  Now running tests is as simple as issuing this command::"
+msgstr "システムに Python 3.8 以降がインストールされている必要があります。 テストを実行するのは次のコマンドを発行するだけで簡単です::"
+
+#: ../../../../CONTRIBUTING.rst:278
+msgid "This command will run tests via the \"tox\" tool against Python 3.9 and also perform \"lint\" coding-style checks."
+msgstr "このコマンドは、\"tox\" ツールを使用して Python 3.9 に対してテストを実行し、\"lint\" コーディングスタイルチェックも実行します。"
+
+#: ../../../../CONTRIBUTING.rst:281
+msgid "You can now edit your local working copy and run the tests again as necessary. Please follow `PEP-8 <https://www.python.org/dev/peps/pep-0008/>`_ for naming."
+msgstr "これで、ローカルの作業コピーを編集し、必要に応じて再度テストを実行できます。 命名には `PEP-8 <https://www.python.org/dev/peps/pep-0008/>`_ に従ってください。"
+
+#: ../../../../CONTRIBUTING.rst:283
+msgid "You can pass different options to ``tox``. For example, to run tests on Python 3.9 and pass options to pytest (e.g. enter pdb on failure) to pytest you can do::"
+msgstr "``tox`` に異なるオプションを渡すことができます。 例えば、Python 3.9 でテストを実行し、pytest にオプションを渡す (例えば、失敗時に pdb に入る) には次のようにします::"
+
+#: ../../../../CONTRIBUTING.rst:288
+msgid "Or to only run tests in a particular test module on Python 3.9::"
+msgstr "または、特定のテストモジュールでのみ Python 3.9 でテストを実行するには次のようにします::"
+
+#: ../../../../CONTRIBUTING.rst:293
+msgid "When committing, ``pre-commit`` will re-format the files if necessary."
+msgstr "コミット時に、必要に応じて ``pre-commit`` がファイルを再フォーマットします。"
+
+#: ../../../../CONTRIBUTING.rst:295
+msgid "If instead of using ``tox`` you prefer to run the tests directly, then we suggest to create a virtual environment and use an editable install with the ``dev`` extra::"
+msgstr "``tox`` を使用する代わりにテストを直接実行することを好む場合は、仮想環境を作成し、``dev`` エクストラを使用して編集可能なインストールを行うことをお勧めします::"
+
+#: ../../../../CONTRIBUTING.rst:303
+msgid "Afterwards, you can edit the files and run pytest normally::"
+msgstr "その後、ファイルを編集して通常通り pytest を実行できます::"
+
+#: ../../../../CONTRIBUTING.rst:307
+msgid "Create a new changelog entry in ``changelog``. The file should be named ``<issueid>.<type>.rst``, where *issueid* is the number of the issue related to the change and *type* is one of ``feature``, ``improvement``, ``bugfix``, ``doc``, ``deprecation``, ``breaking``, ``vendor`` or ``trivial``. You may skip creating the changelog entry if the change doesn't affect the documented behaviour of pytest."
+msgstr "``changelog`` に新しい変更履歴エントリを作成します。 ファイル名は ``<issueid>.<type>.rst`` とし、*issueid* は変更に関連する問題の番号で、*type* は ``feature``, ``improvement``, ``bugfix``, ``doc``, ``deprecation``, ``breaking``, ``vendor`` または ``trivial`` のいずれかです。 変更が pytest の文書化された動作に影響を与えない場合は、変更履歴エントリの作成を省略できます。"
+
+#: ../../../../CONTRIBUTING.rst:313
+msgid "Add yourself to ``AUTHORS`` file if not there yet, in alphabetical order."
+msgstr "まだ追加されていない場合は、アルファベット順で ``AUTHORS`` ファイルに自分を追加してください。"
+
+#: ../../../../CONTRIBUTING.rst:315
+msgid "Commit and push once your tests pass and you are happy with your change(s)::"
+msgstr "テストが通り、変更に満足したら、コミットしてプッシュします::"
+
+#: ../../../../CONTRIBUTING.rst:320
+msgid "Finally, submit a pull request through the GitHub website using this data::"
+msgstr "最後に、次のデータを使用して GitHub ウェブサイトを通じてプルリクエストを送信します::"
+
+#: ../../../../CONTRIBUTING.rst:330
+msgid "Writing Tests"
+msgstr "テストの作成"
+
+#: ../../../../CONTRIBUTING.rst:332
+msgid "Writing tests for plugins or for pytest itself is often done using the `pytester fixture <https://docs.pytest.org/en/stable/reference/reference.html#pytester>`_, as a \"black-box\" test."
+msgstr "プラグインや pytest 自体のテストを作成する場合、しばしば `pytester fixture <https://docs.pytest.org/en/stable/reference/reference.html#pytester>`_ を使用して \"ブラックボックス\" テストとして行います。"
+
+#: ../../../../CONTRIBUTING.rst:334
+msgid "For example, to ensure a simple test passes you can write:"
+msgstr "例えば、簡単なテストが通ることを確認するために次のように書くことができます："
+
+#: ../../../../CONTRIBUTING.rst:349
+msgid "Alternatively, it is possible to make checks based on the actual output of the termal using *glob-like* expressions:"
+msgstr "また、*glob-like* 式を使用してターミナルの実際の出力に基づいてチェックを行うことも可能です："
+
+#: ../../../../CONTRIBUTING.rst:364
+msgid "When choosing a file where to write a new test, take a look at the existing files and see if there's one file which looks like a good fit. For example, a regression test about a bug in the ``--lf`` option should go into ``test_cacheprovider.py``, given that this option is implemented in ``cacheprovider.py``. If in doubt, go ahead and open a PR with your best guess and we can discuss this over the code."
+msgstr "新しいテストを書くファイルを選ぶ際には、既存のファイルを見て、適していると思われるファイルがあるかどうかを確認してください。 例えば、``--lf`` オプションのバグに関する回帰テストは、``cacheprovider.py`` に実装されているため、``test_cacheprovider.py`` に入れるべきです。 疑問がある場合は、最善の推測で PR を開き、コードを通じてこれを議論することができます。"
+
+#: ../../../../CONTRIBUTING.rst:370
+msgid "Joining the Development Team"
+msgstr "開発チームに参加する"
+
+#: ../../../../CONTRIBUTING.rst:372
+msgid "Anyone who has successfully seen through a pull request which did not require any extra work from the development team to merge will themselves gain commit access if they so wish (if we forget to ask please send a friendly reminder).  This does not mean there is any change in your contribution workflow: everyone goes through the same pull-request-and-review process and no-one merges their own pull requests unless already approved.  It does however mean you can participate in the development process more fully since you can merge pull requests from other contributors yourself after having reviewed them."
+msgstr "開発チームからの追加作業を必要とせずにプルリクエストを完了させた人は、希望すればコミットアクセスを得ることができます (忘れていた場合は、友好的なリマインダーを送ってください)。 これは、あなたの貢献ワークフローに変更があることを意味するものではありません。 全員が同じプルリクエストとレビューのプロセスを経ており、承認されない限り、自分のプルリクエストをマージすることはありません。 ただし、レビュー後に他の貢献者からのプルリクエストを自分でマージできるため、開発プロセスにより完全に参加できるようになります。"
+
+#: ../../../../CONTRIBUTING.rst:384
+msgid "Merge/squash guidelines"
+msgstr "マージ/スクワッシュのガイドライン"
+
+#: ../../../../CONTRIBUTING.rst:386
+msgid "When a PR is approved and ready to be integrated to the ``main`` branch, one has the option to *merge* the commits unchanged, or *squash* all the commits into a single commit."
+msgstr "PR が承認され、``main`` ブランチに統合する準備が整ったら、コミットを変更せずに *マージ* するか、すべてのコミットを単一のコミットに *スクワッシュ* するオプションがあります。"
+
+#: ../../../../CONTRIBUTING.rst:388
+msgid "Here are some guidelines on how to proceed, based on examples of a single PR commit history:"
+msgstr "単一の PR コミット履歴の例に基づいて、進め方に関するいくつかのガイドラインを示します："
+
+#: ../../../../CONTRIBUTING.rst:390
+msgid "Miscellaneous commits:"
+msgstr "その他のコミット："
+
+#: ../../../../CONTRIBUTING.rst:392 ../../../../CONTRIBUTING.rst:404
+msgid "``Implement X``"
+msgstr "``X を実装``"
+
+#: ../../../../CONTRIBUTING.rst:393
+msgid "``Fix test_a``"
+msgstr "``test_a を修正``"
+
+#: ../../../../CONTRIBUTING.rst:394 ../../../../CONTRIBUTING.rst:405
+msgid "``Add myself to AUTHORS``"
+msgstr "``自分を AUTHORS に追加``"
+
+#: ../../../../CONTRIBUTING.rst:395
+msgid "``fixup! Fix test_a``"
+msgstr "``修正！test_a を修正``"
+
+#: ../../../../CONTRIBUTING.rst:396 ../../../../CONTRIBUTING.rst:398
+msgid "``Update tests/test_integration.py``"
+msgstr "``tests/test_integration.py を更新``"
+
+#: ../../../../CONTRIBUTING.rst:397
+msgid "``Merge origin/main into PR branch``"
+msgstr "``origin/main を PR ブランチにマージ``"
+
+#: ../../../../CONTRIBUTING.rst:400
+msgid "In this case, prefer to use the **Squash** merge strategy: the commit history is a bit messy (not in a derogatory way, often one just commits changes because they know the changes will eventually be squashed together), so squashing everything into a single commit is best. You must clean up the commit message, making sure it contains useful details."
+msgstr "この場合、**スクワッシュ** マージ戦略を使用することをお勧めします：コミット履歴が少し乱雑です (軽蔑的な意味ではなく、変更が最終的に一緒にスクワッシュされることを知っているため、しばしば変更をコミットするだけです)、したがって、すべてを単一のコミットにスクワッシュするのが最善です。 コミットメッセージを整理し、有用な詳細が含まれていることを確認する必要があります。"
+
+#: ../../../../CONTRIBUTING.rst:402
+msgid "Separate commits related to the same topic:"
+msgstr "同じトピックに関連する個別のコミット："
+
+#: ../../../../CONTRIBUTING.rst:406
+msgid "``Update CHANGELOG for X``"
+msgstr "``X のために CHANGELOG を更新``"
+
+#: ../../../../CONTRIBUTING.rst:408
+msgid "In this case, prefer to use the **Squash** merge strategy: while the commit history is not \"messy\" as in the example above, the individual commits do not bring much value overall, specially when looking at the changes a few months/years down the line."
+msgstr "この場合、**スクワッシュ** マージ戦略を使用することをお勧めします：上記の例のようにコミット履歴が「乱雑」ではありませんが、個々のコミットは全体としてあまり価値をもたらしません。 特に数か月/数年後に変更を見た場合です。"
+
+#: ../../../../CONTRIBUTING.rst:410
+msgid "Separate commits, each with their own topic (refactorings, renames, etc), but still have a larger topic/purpose."
+msgstr "それぞれのトピック (リファクタリング、リネームなど) を持つ個別のコミットですが、依然として大きなトピック/目的があります。"
+
+#: ../../../../CONTRIBUTING.rst:412
+msgid "``Refactor class X in preparation for feature Y``"
+msgstr "``機能 Y の準備のためにクラス X をリファクタリングする``"
+
+#: ../../../../CONTRIBUTING.rst:413
+msgid "``Remove unused method``"
+msgstr "``未使用のメソッドを削除する``"
+
+#: ../../../../CONTRIBUTING.rst:414
+msgid "``Implement feature Y``"
+msgstr "``機能 Y を実装する``"
+
+#: ../../../../CONTRIBUTING.rst:416
+msgid "In this case, prefer to use the **Merge** strategy: each commit is valuable on its own, even if they serve a common topic overall. Looking at the history later, it is useful to have the removal of the unused method separately on its own commit, along with more information (such as how it became unused in the first place)."
+msgstr "この場合、**マージ** 戦略を使用することをお勧めします。 各コミットはそれ自体で価値があり、全体として共通のトピックに役立つ場合でもです。 後で履歴を確認するときに、未使用のメソッドの削除を個別のコミットとして持つことは、そのメソッドが最初に未使用になった経緯などの追加情報とともに役立ちます。"
+
+#: ../../../../CONTRIBUTING.rst:418
+msgid "Separate commits, each with their own topic, but without a larger topic/purpose other than improve the code base (using more modern techniques, improve typing, removing clutter, etc)."
+msgstr "それぞれのトピックを持つ個別のコミットですが、コードベースの改善 (より現代的な技術の使用、型の改善、不要なものの削除など) 以外の大きなトピック/目的はありません。"
+
+#: ../../../../CONTRIBUTING.rst:420
+msgid "``Improve internal names in X``"
+msgstr "``X の内部名を改善する``"
+
+#: ../../../../CONTRIBUTING.rst:421
+msgid "``Add type annotations to Y``"
+msgstr "``Y に型注釈を追加する``"
+
+#: ../../../../CONTRIBUTING.rst:422
+msgid "``Remove unnecessary dict access``"
+msgstr "``不要な辞書アクセスを削除する``"
+
+#: ../../../../CONTRIBUTING.rst:423
+msgid "``Remove unreachable code due to EOL Python``"
+msgstr "``Python の EOL により到達不能なコードを削除する``"
+
+#: ../../../../CONTRIBUTING.rst:425
+msgid "In this case, prefer to use the **Merge** strategy: each commit is valuable on its own, and the information on each is valuable in the long term."
+msgstr "この場合、**マージ** 戦略を使用することをお勧めします。 各コミットはそれ自体で価値があり、それぞれの情報は長期的に価値があります。"
+
+#: ../../../../CONTRIBUTING.rst:428
+msgid "As mentioned, those are overall guidelines, not rules cast in stone. This topic was discussed in `#12633 <https://github.com/pytest-dev/pytest/discussions/12633>`_."
+msgstr "前述のように、これらは全体的なガイドラインであり、絶対的なルールではありません。 このトピックは `#12633 <https://github.com/pytest-dev/pytest/discussions/12633>`_ で議論されました。"
+
+#: ../../../../CONTRIBUTING.rst:431
+msgid "*Backport PRs* (as those created automatically from a ``backport`` label) should always be **squashed**, as they preserve the original PR author."
+msgstr "*バックポート PR* (``backport`` ラベルから自動的に作成されるもの) は常に **スクワッシュ** されるべきです。 これにより、元の PR の作成者が保持されます。"
+
+#: ../../../../CONTRIBUTING.rst:435
+msgid "Backporting bug fixes for the next patch release"
+msgstr "次のパッチリリースのためのバグ修正のバックポート"
+
+#: ../../../../CONTRIBUTING.rst:437
+msgid "Pytest makes a feature release every few weeks or months. In between, patch releases are made to the previous feature release, containing bug fixes only. The bug fixes usually fix regressions, but may be any change that should reach users before the next feature release."
+msgstr "Pytest は数週間または数か月ごとに機能リリースを行います。 その間に、前の機能リリースに対してパッチリリースが行われ、バグ修正のみが含まれます。 バグ修正は通常、リグレッションを修正しますが、次の機能リリース前にユーザーに届くべき変更である場合もあります。"
+
+#: ../../../../CONTRIBUTING.rst:442
+msgid "Suppose for example that the latest release was 1.2.3, and you want to include a bug fix in 1.2.4 (check https://github.com/pytest-dev/pytest/releases for the actual latest release). The procedure for this is:"
+msgstr "例えば、最新リリースが 1.2.3 であり、1.2.4 にバグ修正を含めたいとします (実際の最新リリースについては https://github.com/pytest-dev/pytest/releases を確認してください)。 この手順は次のとおりです。"
+
+#: ../../../../CONTRIBUTING.rst:446
+msgid "First, make sure the bug is fixed in the ``main`` branch, with a regular pull request, as described above. An exception to this is if the bug fix is not applicable to ``main`` anymore."
+msgstr "まず、上記のように通常のプルリクエストでバグが ``main`` ブランチで修正されていることを確認してください。 これに対する例外は、バグ修正が ``main`` に適用されなくなった場合です。"
+
+#: ../../../../CONTRIBUTING.rst:450
+msgid "Automatic method:"
+msgstr "自動方法："
+
+#: ../../../../CONTRIBUTING.rst:452
+msgid "Add a ``backport 1.2.x`` label to the PR you want to backport. This will create a backport PR against the ``1.2.x`` branch."
+msgstr "バックポートしたい PR に ``backport 1.2.x`` ラベルを追加します。 これにより、``1.2.x`` ブランチに対するバックポート PR が作成されます。"
+
+#: ../../../../CONTRIBUTING.rst:455
+msgid "Manual method:"
+msgstr "手動方法："
+
+#: ../../../../CONTRIBUTING.rst:457
+msgid "``git checkout origin/1.2.x -b backport-XXXX`` # use the main PR number here"
+msgstr "``git checkout origin/1.2.x -b backport-XXXX`` # ここにメイン PR 番号を使用します"
+
+#: ../../../../CONTRIBUTING.rst:459
+msgid "Locate the merge commit on the PR, in the *merged* message, for example:"
+msgstr "PR のマージコミットを *merged* メッセージで見つけます。 例えば："
+
+#: ../../../../CONTRIBUTING.rst:461
+msgid "nicoddemus merged commit 0f8b462 into pytest-dev:main"
+msgstr "nicoddemus がコミット 0f8b462 を pytest-dev:main にマージしました"
+
+#: ../../../../CONTRIBUTING.rst:463
+msgid "``git cherry-pick -x -m1 REVISION`` # use the revision you found above (``0f8b462``)."
+msgstr "``git cherry-pick -x -m1 REVISION`` # 上記で見つけたリビジョン (``0f8b462``) を使用します。"
+
+#: ../../../../CONTRIBUTING.rst:465
+msgid "Open a PR targeting ``1.2.x``:"
+msgstr "``1.2.x`` をターゲットにした PR を開きます："
+
+#: ../../../../CONTRIBUTING.rst:467
+msgid "Prefix the message with ``[1.2.x]``."
+msgstr "メッセージの先頭に ``[1.2.x]`` を付けます。"
+
+#: ../../../../CONTRIBUTING.rst:468
+msgid "Delete the PR body, it usually contains a duplicate commit message."
+msgstr "PR 本文を削除します。 通常、重複するコミットメッセージが含まれています。"
+
+#: ../../../../CONTRIBUTING.rst:472
+msgid "Who does the backporting"
+msgstr "誰がバックポートを行うか"
+
+#: ../../../../CONTRIBUTING.rst:474
+msgid "As mentioned above, bugs should first be fixed on ``main`` (except in rare occasions that a bug only happens in a previous release). So, who should do the backport procedure described above?"
+msgstr "前述のように、バグはまず ``main`` で修正されるべきです (バグが以前のリリースでのみ発生する稀な場合を除く)。 では、上記のバックポート手順を誰が行うべきでしょうか？"
+
+#: ../../../../CONTRIBUTING.rst:478
+msgid "If the bug was fixed by a core developer, it is the main responsibility of that core developer to do the backport."
+msgstr "バグがコア開発者によって修正された場合、そのコア開発者がバックポートを行う主な責任があります。"
+
+#: ../../../../CONTRIBUTING.rst:480
+msgid "However, often the merge is done by another maintainer, in which case it is nice of them to do the backport procedure if they have the time."
+msgstr "しかし、多くの場合、マージは別のメンテナーによって行われ、その場合、時間があればバックポート手順を行うのが良いでしょう。"
+
+#: ../../../../CONTRIBUTING.rst:482
+msgid "For bugs submitted by non-maintainers, it is expected that a core developer will to do the backport, normally the one that merged the PR on ``main``."
+msgstr "非メンテナーによって提出されたバグについては、通常、``main`` で PR をマージしたコア開発者がバックポートを行うことが期待されます。"
+
+#: ../../../../CONTRIBUTING.rst:484
+msgid "If a non-maintainers notices a bug which is fixed on ``main`` but has not been backported (due to maintainers forgetting to apply the *needs backport* label, or just plain missing it), they are also welcome to open a PR with the backport. The procedure is simple and really helps with the maintenance of the project."
+msgstr "非メンテナーが ``main`` で修正されたがバックポートされていないバグに気付いた場合 (メンテナーが *needs backport* ラベルを適用するのを忘れた、または単に見逃したため)、バックポート付きの PR を開くことも歓迎されます。 この手順は簡単で、プロジェクトのメンテナンスに非常に役立ちます。"
+
+#: ../../../../CONTRIBUTING.rst:489
+msgid "All the above are not rules, but merely some guidelines/suggestions on what we should expect about backports."
+msgstr "上記のすべてはルールではなく、バックポートについて期待すべきことに関するガイドライン/提案に過ぎません。"
+
+#: ../../../../CONTRIBUTING.rst:492
+msgid "Backports should be **squashed** (rather than **merged**), as doing so preserves the original PR author correctly."
+msgstr "バックポートは **マージ** ではなく **スクワッシュ** されるべきです。 これにより、元の PR の作成者が正しく保持されます。"
+
+#: ../../../../CONTRIBUTING.rst:495
+msgid "Handling stale issues/PRs"
+msgstr "古い問題/PR の処理"
+
+#: ../../../../CONTRIBUTING.rst:497
+msgid "Stale issues/PRs are those where pytest contributors have asked for questions/changes and the authors didn't get around to answer/implement them yet after a somewhat long time, or the discussion simply died because people seemed to lose interest."
+msgstr "古い問題/PR とは、pytest の貢献者が質問/変更を求めたが、著者が長い間それに答えたり実装したりしなかったもの、または人々が興味を失ったために議論が単に終わったものです。"
+
+#: ../../../../CONTRIBUTING.rst:501
+msgid "There are many reasons why people don't answer questions or implement requested changes: they might get busy, lose interest, or just forget about it, but the fact is that this is very common in open source software."
+msgstr "人々が質問に答えたり、要求された変更を実装したりしない理由はたくさんあります。 忙しくなったり、興味を失ったり、単に忘れてしまったりするかもしれませんが、事実としてこれはオープンソースソフトウェアでは非常に一般的です。"
+
+#: ../../../../CONTRIBUTING.rst:505
+msgid "The pytest team really appreciates every issue and pull request, but being a high-volume project with many issues and pull requests being submitted daily, we try to reduce the number of stale issues and PRs by regularly closing them. When an issue/pull request is closed in this manner, it is by no means a dismissal of the topic being tackled by the issue/pull request, but it is just a way for us to clear up the queue and make the maintainers' work more manageable. Submitters can always reopen the issue/pull request in their own time later if it makes sense."
+msgstr "pytest チームはすべての問題とプルリクエストに本当に感謝していますが、毎日多くの問題とプルリクエストが提出される大量プロジェクトであるため、定期的にそれらを閉じることで古い問題と PR の数を減らそうとしています。 この方法で問題/プルリクエストが閉じられるとき、それは問題/プルリクエストが取り組んでいるトピックの却下を意味するものではなく、単にキューをクリアし、メンテナーの作業をより管理しやすくする方法です。 提出者は、後で自分の時間で問題/プルリクエストを再開することが常にできます。"
+
+#: ../../../../CONTRIBUTING.rst:513
+msgid "When to close"
+msgstr "いつ閉じるか"
+
+#: ../../../../CONTRIBUTING.rst:515
+msgid "Here are a few general rules the maintainers use deciding when to close issues/PRs because of lack of inactivity:"
+msgstr "メンテナーが非活動のために問題/PR を閉じる時期を決定するために使用するいくつかの一般的なルールを以下に示します："
+
+#: ../../../../CONTRIBUTING.rst:518
+msgid "Issues labeled ``question`` or ``needs information``: closed after 14 days inactive."
+msgstr "``question`` または ``needs information`` ラベルが付いた問題：14 日間非活動後に閉じられます。"
+
+#: ../../../../CONTRIBUTING.rst:519
+msgid "Issues labeled ``proposal``: closed after six months inactive."
+msgstr "``proposal`` ラベルが付いた問題：6 か月間非活動後に閉じられます。"
+
+#: ../../../../CONTRIBUTING.rst:520
+msgid "Pull requests: after one month, consider pinging the author, update linked issue, or consider closing. For pull requests which are nearly finished, the team should consider finishing it up and merging it."
+msgstr "プルリクエスト：1 か月後、著者に ping を送信する、リンクされた問題を更新する、または閉じることを検討します。 ほぼ完了しているプルリクエストについては、チームはそれを完了してマージすることを検討する必要があります。"
+
+#: ../../../../CONTRIBUTING.rst:522
+msgid "The above are **not hard rules**, but merely **guidelines**, and can be (and often are!) reviewed on a case-by-case basis."
+msgstr "上記は **厳格なルールではなく**、単なる **ガイドライン** であり、ケースバイケースで (そしてしばしば) 見直されることがあります。"
+
+#: ../../../../CONTRIBUTING.rst:525
+msgid "Closing pull requests"
+msgstr "プルリクエストを閉じる"
+
+#: ../../../../CONTRIBUTING.rst:527
+msgid "When closing a Pull Request, it needs to be acknowledging the time, effort, and interest demonstrated by the person which submitted it. As mentioned previously, it is not the intent of the team to dismiss a stalled pull request entirely but to merely to clear up our queue, so a message like the one below is warranted when closing a pull request that went stale:"
+msgstr "プルリクエストを閉じるときは、それを提出した人が示した時間、労力、および関心を認識する必要があります。 前述のように、チームの意図は停滞したプルリクエストを完全に却下することではなく、単にキューをクリアすることです。 そのため、古くなったプルリクエストを閉じるときは、以下のようなメッセージが正当化されます："
+
+#: ../../../../CONTRIBUTING.rst:529
+msgid "Hi <contributor>,"
+msgstr "こんにちは <contributor>、"
+
+#: ../../../../CONTRIBUTING.rst:531
+msgid "First of all, we would like to thank you for your time and effort on working on this, the pytest team deeply appreciates it."
+msgstr "まず最初に、この作業に費やした時間と労力に感謝します。 pytest チームはそれを深く感謝しています。"
+
+#: ../../../../CONTRIBUTING.rst:533
+msgid "We noticed it has been awhile since you have updated this PR, however. pytest is a high activity project, with many issues/PRs being opened daily, so it is hard for us maintainers to track which PRs are ready for merging, for review, or need more attention."
+msgstr "しかし、この PR を更新してからしばらく経っていることに気付きました。 pytest は高活動プロジェクトであり、毎日多くの問題/PR が開かれているため、どの PR がマージの準備ができているか、レビューが必要か、またはさらに注意が必要かを追跡するのはメンテナーにとって難しいです。"
+
+#: ../../../../CONTRIBUTING.rst:535
+msgid "So for those reasons we, think it is best to close the PR for now, but with the only intention to clean up our queue, it is by no means a rejection of your changes. We still encourage you to re-open this PR (it is just a click of a button away) when you are ready to get back to it."
+msgstr "したがって、これらの理由から、キューをクリーンアップするために一時的に PR を閉じるのが最善だと考えていますが、これはあなたの変更を拒否するものではありません。 準備ができたら、この PR を再開することをお勧めします (ボタンをクリックするだけです)。"
+
+#: ../../../../CONTRIBUTING.rst:537
+msgid "Again we appreciate your time for working on this, and hope you might get back to this at a later time!"
+msgstr "再度、この作業に費やした時間に感謝し、後でこれに戻ることを願っています！"
+
+#: ../../../../CONTRIBUTING.rst:539
+msgid "<bye>"
+msgstr "<さようなら>"
+
+#: ../../../../CONTRIBUTING.rst:542
+msgid "Closing issues"
+msgstr "問題を閉じる"
+
+#: ../../../../CONTRIBUTING.rst:544
+msgid "When a pull request is submitted to fix an issue, add text like ``closes #XYZW`` to the PR description and/or commits (where ``XYZW`` is the issue number). See the `GitHub docs <https://help.github.com/en/github/managing-your-work-on-github/linking-a-pull-request-to-an-issue#linking-a-pull-request-to-an-issue-using-a-keyword>`_ for more information."
+msgstr "問題を修正するためにプルリクエストが提出された場合、PR の説明および/またはコミットに ``closes #XYZW`` のようなテキストを追加します (``XYZW`` は問題番号です)。 詳細については、`GitHub docs <https://help.github.com/en/github/managing-your-work-on-github/linking-a-pull-request-to-an-issue#linking-a-pull-request-to-an-issue-using-a-keyword>`_ を参照してください。"
+
+#: ../../../../CONTRIBUTING.rst:546
+msgid "When an issue is due to user error (e.g. misunderstanding of a functionality), please politely explain to the user why the issue raised is really a non-issue and ask them to close the issue if they have no further questions. If the original requester is unresponsive, the issue will be handled as described in the section `Handling stale issues/PRs`_ above."
+msgstr "問題がユーザーエラー (例：機能の誤解) による場合、ユーザーに対して問題が実際には問題ではない理由を丁寧に説明し、追加の質問がない場合は問題を閉じるように依頼してください。 元のリクエスターが応答しない場合、問題は上記の `古い問題/PR の処理`_ セクションで説明されているように処理されます。"
+
